@@ -62,11 +62,25 @@ L.TopoJSON = L.GeoJSON.extend({
         });
     }
 
-    var map = L.map('map').setView([53.85, -2.7], 11);
-
     var topoLayer = new L.TopoJSON(window.topo, {
         style: style,
         onEachFeature: onEachFeature
     });
-    topoLayer.addTo(map);
+
+    var osm = new L.TileLayer(
+        "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            minZoom: 11,
+            maxZoom: 18,
+            attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+        }
+    );
+
+    var map = L.map('map', {
+        center: [53.85, -2.7],
+        zoom: 11,
+        layers: [osm, topoLayer],
+        minZoom: 11,
+        maxZoom: 18,
+        maxBounds: topoLayer.getBounds()
+    });
 }())
