@@ -20,9 +20,7 @@ L.TopoJSON = L.GeoJSON.extend({
     }
 
     function style(feature) {
-        var d = window.data.filter(function(item) {
-            return feature.properties.LSOA11CD === item.LSOA11CD;
-        })[0];
+        var d = window.data[feature.properties.LSOA11CD];
         return {
             fillColor: getColor(d["Index of Multiple Deprivation (IMD) Score"]),
             weight: 2,
@@ -49,11 +47,11 @@ L.TopoJSON = L.GeoJSON.extend({
     }
 
     function resetHighlight(e) {
-        L.geoJson.resetStyle(e.target);
+        topoLayer.resetStyle(e.target);
     }
 
     function printName(e) {
-        console.log(e.target.feature.properties["Index of Multiple Deprivation (IMD) Score"]);
+        console.log(window.data[e.target.feature.properties.LSOA11CD]);
     }
 
     function onEachFeature(feature, layer) {
@@ -64,7 +62,7 @@ L.TopoJSON = L.GeoJSON.extend({
         });
     }
 
-    var map = L.map('map').setView([53.8, -2.7], 9);
+    var map = L.map('map').setView([53.85, -2.7], 11);
 
     var topoLayer = new L.TopoJSON(window.topo, {
         style: style,
