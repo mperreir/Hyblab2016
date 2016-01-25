@@ -14,6 +14,17 @@ L.TopoJSON = L.GeoJSON.extend({
 
 
 (function() {
+
+    // Utility variable for mapping postcode to LSOA11CD
+    var PCD_LSOA11CD_mapper = function(){
+        var mapper = {};
+        for (var LSOA11CD in window.data) {
+            mapper[window.data.LSOA11CD.PCD7.substring(0,3)] = LSOA11CD;
+        }
+        return mapper;
+    }();
+
+    // Convert HSV to RGB
     function HSVtoRGB(h, s, v) {
         var r, g, b, i, f, p, q, t;
         if (arguments.length === 1) {
@@ -38,8 +49,8 @@ L.TopoJSON = L.GeoJSON.extend({
             b: Math.round(b * 255)
         };
     }
-
-    function rgbToHex(r, g, b) {
+    // Convert RGB to HEX
+    function RGBtoHEX(r, g, b) {
         return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     }
 
@@ -48,7 +59,7 @@ L.TopoJSON = L.GeoJSON.extend({
         //return "#" + ("0" + Math.trunc(score)).slice(-6);
         score = (1 - (score - 4) / 67) / 6;
         var rgb = HSVtoRGB(score, 1, 1);
-        return rgbToHex(rgb.r, rgb.g, rgb.b);
+        return RGBtoHEX(rgb.r, rgb.g, rgb.b);
     }
 
     function style(feature) {
