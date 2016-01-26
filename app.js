@@ -21,7 +21,7 @@ L.TopoJSON = L.GeoJSON.extend({
         employment: "Employment",
         education: "Education, Skills and Training",
         health: "Health Deprivation and Disability",
-        barriers: "Barriers to Housing and Services",
+        housing: "Barriers to Housing and Services",
         environment: "Living Environment"
     };
 
@@ -220,14 +220,14 @@ L.TopoJSON = L.GeoJSON.extend({
             sliderListenersAdded = true;
         }
         else if (props !== undefined) {
-            var income = window.data[props["LSOA11CD"]]["income"];
-            var employment = window.data[props["LSOA11CD"]]["employment"];
-            var education = window.data[props["LSOA11CD"]]["education"];
-            var health = window.data[props["LSOA11CD"]]["health"];
-            var crime = window.data[props["LSOA11CD"]]["crime"];
-            var housing = window.data[props["LSOA11CD"]]["housing"];
-            var environment = window.data[props["LSOA11CD"]]["environment"];
-            document.getElementById("idm").innerHTML =
+            var income = window.data[props["LSOA11CD"]]["income"]["rank"];
+            var employment = window.data[props["LSOA11CD"]]["employment"]["rank"];
+            var education = window.data[props["LSOA11CD"]]["education"]["rank"];
+            var health = window.data[props["LSOA11CD"]]["health"]["rank"];
+            var crime = window.data[props["LSOA11CD"]]["crime"]["rank"];
+            var housing = window.data[props["LSOA11CD"]]["housing"]["rank"];
+            var environment = window.data[props["LSOA11CD"]]["environment"]["rank"];
+            var idm =
                     income * document.getElementById("income").value +
                     employment * document.getElementById("employment").value +
                     education * document.getElementById("education").value +
@@ -235,6 +235,8 @@ L.TopoJSON = L.GeoJSON.extend({
                     crime * document.getElementById("crime").value +
                     housing * document.getElementById("housing").value +
                     environment * document.getElementById("environment").value;
+            console.log(housing);
+            document.getElementById("idm").innerHTML = idm.toString();
         }
     }
 
