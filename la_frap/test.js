@@ -21,7 +21,8 @@ window.addEventListener('load', function () {
 	                       .attr("cx", function (d) {return d.x;})
 	                       .attr("cy", function (d) {return d.y;})
 	                       .attr("r", function (d) {return d.r; })
-	                       .style("fill",function (d) {return d.c;});
+	                       .style("fill",function (d) {return d.c;})
+	                       .on("click", function () {alert("a malibu")});
 
 	
 

@@ -1,0 +1,47 @@
+<html>
+		<head>
+                <title>Jvectormap</title>
+
+
+
+                <script src="jquery-1.12.0.min.js"></script>
+                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+               
+                <script src="jquery.vmap.js"></script>
+
+                <script src="map_pays_de_la_loire.js"></script>
+
+                <script>
+	  				$(document).ready(function() {
+	  					$('#map').vectorMap({
+	  						map:'pays_de_la_loire'
+	  					});
+	  					$('#jqvmap1_FR-44').click(function(){
+	  						alert("Loire Atlantique");
+	  					});
+	  					$('#jqvmap1_FR-72').click(function(){
+	  						alert("Sarthe");
+	  					});
+	  					$('#jqvmap1_FR-85').click(function(){
+	  						alert("Vendée");
+	  					});
+	  					$('#jqvmap1_FR-49').click(function(){
+	  						alert("Maine et Loire");
+	  					});
+	  					$('#jqvmap1_FR-53').click(function(){
+	  						alert("Mayenne");
+	  					});
+	  				});
+				</script>
+        </head>
+        <body>
+
+        	<div id="map" style="width:500px;height:400px"></div>
+
+
+
+
+
+        </body>
+</html>
