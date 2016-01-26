@@ -99,7 +99,7 @@ L.TopoJSON = L.GeoJSON.extend({
     function style(feature) {
         var d = window.data[feature.properties.LSOA11CD];
         return {
-            fillColor: getColor(d["Index of Multiple Deprivation (IMD) Score"]),
+            fillColor: getColor(d["IMD"]["raw"]),
             weight: 2,
             opacity: 1,
             color: 'white',
@@ -221,23 +221,7 @@ L.TopoJSON = L.GeoJSON.extend({
             sliderListenersAdded = true;
         }
         else if (props !== undefined) {
-            var income = window.data[props["LSOA11CD"]]["income"]["rank"];
-            var employment = window.data[props["LSOA11CD"]]["employment"]["rank"];
-            var education = window.data[props["LSOA11CD"]]["education"]["rank"];
-            var health = window.data[props["LSOA11CD"]]["health"]["rank"];
-            var crime = window.data[props["LSOA11CD"]]["crime"]["rank"];
-            var housing = window.data[props["LSOA11CD"]]["housing"]["rank"];
-            var environment = window.data[props["LSOA11CD"]]["environment"]["rank"];
-            var idm =
-                    income * document.getElementById("income").value/1000.0 +
-                    employment * document.getElementById("employment").value/1000.0 +
-                    education * document.getElementById("education").value/1000.0 +
-                    health * document.getElementById("health").value/1000.0 +
-                    crime * document.getElementById("crime").value/1000.0 +
-                    housing * document.getElementById("housing").value/1000.0 +
-                    environment * document.getElementById("environment").value/1000.0;
-            console.log(document.getElementById("income").value);
-            document.getElementById("idm").innerHTML = idm.toString();
+            document.getElementById("idm").innerHTML = calculateIMD();
         }
     }
 
