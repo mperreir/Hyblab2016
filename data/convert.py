@@ -2,6 +2,31 @@
 
 import json
 import csv
+from collections import defaultdict
+
+INDICATORS = {
+    "Crime": "crime",
+    "Index of Multiple Deprivation (IMD)": "IMD",
+    "Income": "income",
+    "Employment": "employment",
+    "Education, Skills and Training": "education",
+    "Health Deprivation and Disability": "health",
+    "Barriers to Housing and Services": "barriers",
+    "Living Environment": "environment"
+}
+
+SUFFIXES = {
+    " Rank (where 1 is most deprived)": "rank",
+    " Decile (where 1 is most deprived 10% of LSOAs)": "decile",
+    " Score": "raw"
+}
+
+TO_COPY = [
+    "Longitude",
+    "Latitude",
+    "LSOA11CD",
+    "MSOA11CD"
+]
 
 def convert_numbers(d):
     try:
@@ -22,7 +47,17 @@ def main():
         raw_data = list(csv.DictReader(f))
 
     data = {row["LSOA11CD"]: filter_row(row) for row in raw_data}
-    lsoas = data.keys()
+    data = defaultdict(dict)
+    for row in raw_data:
+        lsoa11cd = row["LSOA11CD"]
+        for long_id, short_id in INDICATORS.items():
+            data[lsoa11cd][short_id] = {
+                short_suffixe: row[long_id + long_suffixe]
+                for long_suffixe, short_suffixe
+                in SUFFIXES.items()
+            }
+        for key in TO_COPY:
+            data[lsoa11cd][key] = row[key]
 
     for lsoa11cd, lsoa in data.items():
         lsoa["PCD7s"] = [
