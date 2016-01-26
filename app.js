@@ -96,7 +96,7 @@ L.TopoJSON = L.GeoJSON.extend({
     }
 
     function resetHighlight(e) {
-        topoLayer.resetStyle(e.target);
+        topoLsoaLayer.resetStyle(e.target);
         info.update();
     }
 
@@ -112,7 +112,7 @@ L.TopoJSON = L.GeoJSON.extend({
         });
     }
 
-    var topoLayer = new L.TopoJSON(window.topo, {
+    var topoLsoaLayer = new L.TopoJSON(window.topo_lsoa, {
         style: style,
         onEachFeature: onEachFeature
     });
@@ -128,16 +128,16 @@ L.TopoJSON = L.GeoJSON.extend({
     var map = L.map('map', {
         center: [53.85, -2.7],
         zoom: 11,
-        layers: [osm, topoLayer],
+        layers: [osm, topoLsoaLayer],
         minZoom: 11,
         maxZoom: 18,
-        maxBounds: topoLayer.getBounds()
+        maxBounds: topoLsoaLayer.getBounds()
     });
 
     L.control.layers({
         "Map": osm
     }, {
-        "LSOA": topoLayer
+        "LSOA": topoLsoaLayer
     }).addTo(map);
     L.control.scale().addTo(map);
 
