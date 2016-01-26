@@ -13,8 +13,15 @@ body {
     border-radius: 5px;
 }
 .info h4 {
-    margin: 0 0 5px;
+    margin: 0 5px 5px 0;
     color: #777;
+    float: left;
+    clear: right;
+}
+.info h5 {
+    margin: 0 5px 5px 0;
+    color: #777;
+    float: left;
 }
 
 .row {
@@ -22,16 +29,16 @@ body {
 }
 
 .sliderset {
-    float: right;
-    width: 220px;
+    width: 300px;
 }
 
 .sliderset label {
-    text-align: right;
+    color: #777;
 }
 
 .sliderset input {
     float: right;
+    width: 200px;
 }
 
 .red {

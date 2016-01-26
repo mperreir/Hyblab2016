@@ -177,8 +177,9 @@ L.TopoJSON = L.GeoJSON.extend({
         this._div = L.DomUtil.create('div', 'info');
         var info = L.control();
         this._div.innerHTML =
-            '<h4>Index of Multiple Deprivation Score:</h4>' +
-            '<div id="idm"></div>' +
+            '<h4>Index of Multiple Deprivation Score</h4>' +
+            '<h4 id="idm"></h4> <br/>' +
+            '<h5>How would you weight these factors ?</h5>' +
             '<div class="sliderset">' +
             '   <div class="row"></div><label>Income</label><input id="income" type="range" min="0" max="1000" value="225" class="slider red"/><br/>' +
             '   <div class="row"></div><label>Employment</label><input id="employment" type="range" min="0" max="1000" value="225" class="slider orange"/><br/>' +
@@ -222,7 +223,7 @@ L.TopoJSON = L.GeoJSON.extend({
             sliderListenersAdded = true;
         }
         else if (props !== undefined) {
-            document.getElementById("idm").innerHTML = calculateIMD(props["LSOA11CD"]);
+            document.getElementById("idm").innerHTML = ": " + calculateIMD(props["LSOA11CD"]).toFixed(1) + "%";
         }
     }
 
