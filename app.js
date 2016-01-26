@@ -14,15 +14,16 @@ L.TopoJSON = L.GeoJSON.extend({
 
 
 (function() {
+    var NUMBER_LSOA = 32,844;
 
     // Utility variable for mapping postcode to LSOA11CD
-    var PCD_LSOA11CD_mapper = function(){
+    function PCD_LSOA11CD_mapper(){
         var mapper = {};
         for (var LSOA11CD in window.data) {
             mapper[window.data.LSOA11CD.PCD7] = LSOA11CD;
         }
         return mapper;
-    };
+    }
 
     function PCDtoLSOA11CD(PCD) {
         return mapper[PCD];
@@ -64,6 +65,10 @@ L.TopoJSON = L.GeoJSON.extend({
         score = (1 - (score - 4) / 67) / 6;
         var rgb = HSVtoRGB(score, 1, 1);
         return RGBtoHEX(rgb.r, rgb.g, rgb.b);
+    }
+
+    function calculateIMD(data) {
+
     }
 
     function style(feature) {
