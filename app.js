@@ -91,10 +91,13 @@ L.TopoJSON = L.GeoJSON.extend({
         if (!L.Browser.ie && !L.Browser.opera) {
             layer.bringToFront();
         }
+
+        info.update(e.target.feature.properties);
     }
 
     function resetHighlight(e) {
         topoLayer.resetStyle(e.target);
+        info.update();
     }
 
     function printName(e) {
@@ -137,4 +140,20 @@ L.TopoJSON = L.GeoJSON.extend({
         "LSOA": topoLayer
     }).addTo(map);
     L.control.scale().addTo(map);
+
+    var info = L.control();
+
+    info.onAdd = function(map) {
+        this._div = L.DomUtil.create('div', 'info');
+        this.update();
+        return this._div;
+    }
+
+    info.update = function(props) {
+        this._div.innerHTML =
+            '<h4>Index of Multiple Deprivation (IMD) Score:</h4> <br/>' +
+             props["Index of Multiple Deprivation (IMD) Score"];
+    }
+
+    info.addTo(map);
 }())
