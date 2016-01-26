@@ -221,7 +221,7 @@ L.TopoJSON = L.GeoJSON.extend({
             sliderListenersAdded = true;
         }
         else if (props !== undefined) {
-            document.getElementById("idm").innerHTML = calculateIMD();
+            document.getElementById("idm").innerHTML = calculateIMD(props["LSOA11CD"]);
         }
     }
 
