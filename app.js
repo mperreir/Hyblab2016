@@ -130,4 +130,11 @@ L.TopoJSON = L.GeoJSON.extend({
         maxZoom: 18,
         maxBounds: topoLayer.getBounds()
     });
+
+    L.control.layers({
+        "Map": osm
+    }, {
+        "LSOA": topoLayer
+    }).addTo(map);
+    L.control.scale().addTo(map);
 }())
