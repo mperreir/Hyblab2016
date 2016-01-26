@@ -150,9 +150,11 @@ L.TopoJSON = L.GeoJSON.extend({
     }
 
     info.update = function(props) {
-        this._div.innerHTML =
-            '<h4>Index of Multiple Deprivation (IMD) Score:</h4> <br/>' +
-             props["Index of Multiple Deprivation (IMD) Score"];
+        if (props !== undefined) {
+            this._div.innerHTML =
+                '<h4>Index of Multiple Deprivation (IMD) Score:</h4> <br/>' +
+                window.data[props["LSOA11CD"]]["Index of Multiple Deprivation (IMD) Score"];
+        }
     }
 
     info.addTo(map);
