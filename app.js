@@ -97,7 +97,6 @@ L.TopoJSON = L.GeoJSON.extend({
 
     function resetHighlight(e) {
         topoLayer.resetStyle(e.target);
-        info.update();
     }
 
     function printName(e) {
@@ -146,8 +145,11 @@ L.TopoJSON = L.GeoJSON.extend({
     info.onAdd = function(map) {
         this._div = L.DomUtil.create('div', 'info');
         this.update();
+        this._div.addEventListener('mousemove', function(e) {
+            e.stopPropagation();
+        });
         return this._div;
-    }
+    };
 
     info.update = function(props) {
         if (props !== undefined) {
@@ -156,16 +158,13 @@ L.TopoJSON = L.GeoJSON.extend({
                 window.data[props["LSOA11CD"]]["Index of Multiple Deprivation (IMD) Score"] + '<br/>' +
                 '<div class="sliderset">' +
                 '   <input type="range" class="slider red"/><br/>' +
-                '   <input type="range"  class="slider orange"/><br/>' +
+                '   <input type="range" class="slider orange"/><br/>' +
                 '   <input type="range" class="slider yellow"/><br/>' +
                 '   <input type="range" class="slider green"/><br/>' +
                 '   <input type="range" class="slider blue"/><br/>' +
                 '   <input type="range" class="slider indigo"/><br/>' +
                 '   <input type="range" class="slider purple"/><br/>' +
                 '</div>'
-        }
-        else {
-            this._div.innerHTML = '';
         }
     }
 
