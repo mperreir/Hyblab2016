@@ -145,31 +145,18 @@ L.TopoJSON = L.GeoJSON.extend({
     info.onAdd = function(map) {
         this._div = L.DomUtil.create('div', 'info');
         var info = L.control();
-
-        info.onAdd = function(map) {
-            this._div = L.DomUtil.create('div', 'info');
-            this.update();
-            this._div.addEventListener('mousemove', function(e) {
-                e.stopPropagation();
-            });
-            return this._div;
-        };
-
-        info.update = function(props) {
-            if (props !== undefined) {
-                this._div.innerHTML =
-                    '<h4>Index of Multiple Deprivation Score:</h4> <br/>' +
-                    '<div class="sliderset">' +
-                    '   <div class="row"></div><label>Income</label><input type="range" min="0" max="100" value="22.5" class="slider red"/><br/>' +
-                    '   <div class="row"></div><label>Enployment</label><input type="range" min="0" max="100" value="22.5" class="slider orange"/><br/>' +
-                    '   <div class="row"></div><label>Education</label><input type="range" min="0" max="100" value="13.5" class="slider yellow"/><br/>' +
-                    '   <div class="row"></div><label>Health</label><input type="range" min="0" max="100" value="13.5" class="slider green"/><br/>' +
-                    '   <div class="row"></div><label>Crime</label><input type="range" min="0" max="100" value="9.3" class="slider blue"/><br/>' +
-                    '   <div class="row"></div><label>Housing</label><input type="range" min="0" max="100" value="9.3" class="slider indigo"/><br/>' +
-                    '   <div class="row"></div><label>Environment</label><input type="range" min="0" max="100" value="9.3" class="slider purple"/><br/>' +
-                    '</div>'
-            }
-        }
+        this._div.innerHTML =
+            '<h4>Index of Multiple Deprivation Score:</h4>' +
+            '<div id="idm"></div>' +
+            '<div class="sliderset">' +
+            '   <div class="row"></div><label>Income</label><input type="range" min="0" max="100" value="22.5" class="slider red"/><br/>' +
+            '   <div class="row"></div><label>Enployment</label><input type="range" min="0" max="100" value="22.5" class="slider orange"/><br/>' +
+            '   <div class="row"></div><label>Education</label><input type="range" min="0" max="100" value="13.5" class="slider yellow"/><br/>' +
+            '   <div class="row"></div><label>Health</label><input type="range" min="0" max="100" value="13.5" class="slider green"/><br/>' +
+            '   <div class="row"></div><label>Crime</label><input type="range" min="0" max="100" value="9.3" class="slider blue"/><br/>' +
+            '   <div class="row"></div><label>Housing</label><input type="range" min="0" max="100" value="9.3" class="slider indigo"/><br/>' +
+            '   <div class="row"></div><label>Environment</label><input type="range" min="0" max="100" value="9.3" class="slider purple"/><br/>' +
+            '</div>'
         this.update();
         this._div.addEventListener('mousemove', function(e) {
             e.stopPropagation();
@@ -181,12 +168,13 @@ L.TopoJSON = L.GeoJSON.extend({
         if (props !== undefined) {
             /*
             var income = window.data[props["LSOA11CD"]]["income"];
-            var income = window.data[props["LSOA11CD"]];
-            var income = window.data[props["LSOA11CD"]];
-            var income = window.data[props["LSOA11CD"]];
-            var income = window.data[props["LSOA11CD"]];
-            var income = window.data[props["LSOA11CD"]];
-            var income = window.data[props["LSOA11CD"]];*/
+            var enployment = window.data[props["LSOA11CD"]]["enpolyment"];
+            var education = window.data[props["LSOA11CD"]]["education"];
+            var health = window.data[props["LSOA11CD"]]["health"];
+            var crime = window.data[props["LSOA11CD"]]["crime"];
+            var housing = window.data[props["LSOA11CD"]]["housing"];
+            var environment = window.data[props["LSOA11CD"]]["environment"];
+            */
         }
     }
 
