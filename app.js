@@ -196,27 +196,28 @@ L.TopoJSON = L.GeoJSON.extend({
     };
 
     info.update = function(props) {
+
         if (sliderListenersAdded == false) {
             document.getElementById("income").addEventListener('change', function(e) {
-                info.update();
+                info.update(props)
             });
             document.getElementById("employment").addEventListener('change', function(e) {
-                info.update();
+                info.update(props);
             });
             document.getElementById("education").addEventListener('change', function(e) {
-                info.update();
+                info.update(props);
             });
             document.getElementById("health").addEventListener('change', function(e) {
-                info.update();
+                info.update(props);
             });
             document.getElementById("crime").addEventListener('change', function(e) {
-                info.update();
+                info.update(props);
             });
             document.getElementById("housing").addEventListener('change', function(e) {
-                info.update();
+                info.update(props);
             });
             document.getElementById("environment").addEventListener('change', function(e) {
-                info.update();
+                info.update(props);
             });
             sliderListenersAdded = true;
         }
