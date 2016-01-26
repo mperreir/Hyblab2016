@@ -118,7 +118,7 @@ L.TopoJSON = L.GeoJSON.extend({
     });
 
     var osm = new L.TileLayer(
-        "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
             minZoom: 11,
             maxZoom: 18,
             attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
