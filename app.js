@@ -14,7 +14,7 @@ L.TopoJSON = L.GeoJSON.extend({
 
 
 (function() {
-    var NUMBER_LSOA = 32,844;
+    var NUMBER_LSOA = 32.844;
 
     // Utility variable for mapping postcode to LSOA11CD
     function PCD_LSOA11CD_mapper(){
@@ -147,6 +147,7 @@ L.TopoJSON = L.GeoJSON.extend({
 
     var info = L.control();
 
+    var sliderListenersAdded = false;
     info.onAdd = function(map) {
         this._div = L.DomUtil.create('div', 'info');
         var info = L.control();
@@ -155,30 +156,30 @@ L.TopoJSON = L.GeoJSON.extend({
             '<div id="idm"></div>' +
             '<div class="sliderset">' +
             '   <div class="row"></div><label>Income</label><input id="income" type="range" min="0" max="100" value="22.5" class="slider red"/><br/>' +
-            '   <div class="row"></div><label>Enployment</label><input id="enployment" type="range" min="0" max="100" value="22.5" class="slider orange"/><br/>' +
+            '   <div class="row"></div><label>Employment</label><input id="employment" type="range" min="0" max="100" value="22.5" class="slider orange"/><br/>' +
             '   <div class="row"></div><label>Education</label><input id="education" type="range" min="0" max="100" value="13.5" class="slider yellow"/><br/>' +
             '   <div class="row"></div><label>Health</label><input id="health" type="range" min="0" max="100" value="13.5" class="slider green"/><br/>' +
             '   <div class="row"></div><label>Crime</label><input id="crime" type="range" min="0" max="100" value="9.3" class="slider blue"/><br/>' +
             '   <div class="row"></div><label>Housing</label><input id="housing" type="range" min="0" max="100" value="9.3" class="slider indigo"/><br/>' +
             '   <div class="row"></div><label>Environment</label><input id="environment" type="range" min="0" max="100" value="9.3" class="slider purple"/><br/>' +
             '</div>';
-        this.update();
         this._div.addEventListener('mousemove', function(e) {
             e.stopPropagation();
         });
 
-        document.getElementById("income").addEventListener('click', function(e) {
-            this.addEventListener('mousemove', function(event) {
-                console.log("HELLLOE WORRRRRLD");
-            })
-        });
         return this._div;
     };
 
     info.update = function(props) {
-        if (props !== undefined) {
+        if (sliderListenersAdded == false) {
+            document.getElementById("income").addEventListener('change', function(e) {
+
+            });
+            sliderListenersAdded = true;
+        }
+        else if (props !== undefined) {
             var income = window.data[props["LSOA11CD"]]["income"];
-            var enployment = window.data[props["LSOA11CD"]]["enpolyment"];
+            var employment = window.data[props["LSOA11CD"]]["employment"];
             var education = window.data[props["LSOA11CD"]]["education"];
             var health = window.data[props["LSOA11CD"]]["health"];
             var crime = window.data[props["LSOA11CD"]]["crime"];
@@ -186,7 +187,7 @@ L.TopoJSON = L.GeoJSON.extend({
             var environment = window.data[props["LSOA11CD"]]["environment"];
             document.getElementById("idm").innerHTML =
                     income * document.getElementById("income").value +
-                    enployment * document.getElementById("income").value +
+                    employment * document.getElementById("employment").value +
                     education * document.getElementById("education").value +
                     health * document.getElementById("health").value +
                     crime * document.getElementById("crime").value +
