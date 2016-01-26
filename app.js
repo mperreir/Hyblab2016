@@ -21,7 +21,7 @@ L.TopoJSON = L.GeoJSON.extend({
         employment: "Employment",
         education: "Education, Skills and Training",
         health: "Health Deprivation and Disability",
-        barriers: "Barriers to Housing and Services",
+        housing: "Barriers to Housing and Services",
         environment: "Living Environment"
     };
 
