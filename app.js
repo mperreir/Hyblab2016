@@ -22,7 +22,11 @@ L.TopoJSON = L.GeoJSON.extend({
             mapper[window.data.LSOA11CD.PCD7.substring(0,3)] = LSOA11CD;
         }
         return mapper;
-    }();
+    };
+
+    function PCDtoLSOA11CD(PCD) {
+        return mapper[PCD.substring(0,3)];
+    }
 
     // Convert HSV to RGB
     function HSVtoRGB(h, s, v) {
