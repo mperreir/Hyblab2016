@@ -1,16 +1,16 @@
-# Descriptif du projet
+﻿# Descriptif du projet
 
-Média :
+Média : Région Pays de la loire
 
-Sujet :
+Sujet : Les énergies dans la région Pays de la loire
 
-Equipe :
+Equipe : PolyGreen 
 
 Patricipants :
-- AGR :
-- Polytech :  
-- SciencesCom :
+- AGR : Carine Guillaud, Claire
+- Polytech : Elouarn Lainé, Frédéric Llorca, Antony Lecoq 
+- SciencesCom : Coline Bourdier, Margaux Lefaix, Laura Ferrero
 
-# Installation
+# Installation 
 
 # Informations complémentaires
