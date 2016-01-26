@@ -14,7 +14,16 @@ L.TopoJSON = L.GeoJSON.extend({
 
 
 (function() {
-    var NUMBER_LSOA = 32,844;
+    var NUMBER_LSOA = 32844;
+    var INDICATORS = {
+        crime: "Crime",
+        income: "Income",
+        employment: "Employment",
+        education: "Education, Skills and Training",
+        health: "Health Deprivation and Disability",
+        barriers: "Barriers to Housing and Services",
+        environment: "Living Environment"
+    };
 
     // Utility variable for mapping postcode to LSOA11CD
     function PCD_LSOA11CD_mapper(){
@@ -67,8 +76,23 @@ L.TopoJSON = L.GeoJSON.extend({
         return RGBtoHEX(rgb.r, rgb.g, rgb.b);
     }
 
-    function calculateIMD(data) {
+    function expTransform(rank) {
+        return -23 * Math.log(1 - rank / NUMBER_LSOA * (
+            1 - Math.exp(-100/23)
+        ))
+    }
 
+    window.calculateIMD = function(lsoa11cd) {
+        var sum = 1;
+        return Object.keys(INDICATORS).map(function(id) {
+            var val = document.getElementById(id).value;
+            sum += val;
+            return window.data[lsoa11cd][id] * val;
+        }).map(function(val) {
+            return val / sum;
+        }).reduce(function(a, b) {
+            return a + b;
+        });
     }
 
     function style(feature) {
