@@ -156,10 +156,16 @@ L.TopoJSON = L.GeoJSON.extend({
             '   <div class="row"></div><label>Crime</label><input id="crime" type="range" min="0" max="100" value="9.3" class="slider blue"/><br/>' +
             '   <div class="row"></div><label>Housing</label><input id="housing" type="range" min="0" max="100" value="9.3" class="slider indigo"/><br/>' +
             '   <div class="row"></div><label>Environment</label><input id="environment" type="range" min="0" max="100" value="9.3" class="slider purple"/><br/>' +
-            '</div>'
+            '</div>';
         this.update();
         this._div.addEventListener('mousemove', function(e) {
             e.stopPropagation();
+        });
+
+        document.getElementById("income").addEventListener('click', function(e) {
+            this.addEventListener('mousemove', function(event) {
+                console.log("HELLLOE WORRRRRLD");
+            })
         });
         return this._div;
     };
