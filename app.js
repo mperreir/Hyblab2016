@@ -155,14 +155,17 @@ L.TopoJSON = L.GeoJSON.extend({
                 '<h4>Index of Multiple Deprivation (IMD) Score:</h4> <br/>' +
                 window.data[props["LSOA11CD"]]["Index of Multiple Deprivation (IMD) Score"] + '<br/>' +
                 '<div class="sliderset">' +
-                '   <div class="slider red"></div>' +
-                '   <div class="slider orange"></div>' +
-                '   <div class="slider yellow"></div>' +
-                '   <div class="slider green"></div>' +
-                '   <div class="slider blue"></div>' +
-                '   <div class="slider indigo"></div>' +
-                '   <div class="slider purple"></div>' +
+                '   <input type="range" class="slider red"/><br/>' +
+                '   <input type="range"  class="slider orange"/><br/>' +
+                '   <input type="range" class="slider yellow"/><br/>' +
+                '   <input type="range" class="slider green"/><br/>' +
+                '   <input type="range" class="slider blue"/><br/>' +
+                '   <input type="range" class="slider indigo"/><br/>' +
+                '   <input type="range" class="slider purple"/><br/>' +
                 '</div>'
+        }
+        else {
+            this._div.innerHTML = '';
         }
     }
 
