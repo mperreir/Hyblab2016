@@ -19,13 +19,13 @@ L.TopoJSON = L.GeoJSON.extend({
     var PCD_LSOA11CD_mapper = function(){
         var mapper = {};
         for (var LSOA11CD in window.data) {
-            mapper[window.data.LSOA11CD.PCD7.substring(0,3)] = LSOA11CD;
+            mapper[window.data.LSOA11CD.PCD7] = LSOA11CD;
         }
         return mapper;
     };
 
     function PCDtoLSOA11CD(PCD) {
-        return mapper[PCD.substring(0,3)];
+        return mapper[PCD];
     }
 
     // Convert HSV to RGB
@@ -153,7 +153,16 @@ L.TopoJSON = L.GeoJSON.extend({
         if (props !== undefined) {
             this._div.innerHTML =
                 '<h4>Index of Multiple Deprivation (IMD) Score:</h4> <br/>' +
-                window.data[props["LSOA11CD"]]["Index of Multiple Deprivation (IMD) Score"];
+                window.data[props["LSOA11CD"]]["Index of Multiple Deprivation (IMD) Score"] + '<br/>' +
+                '<div class="sliderset">' +
+                '   <div class="slider red"></div>' +
+                '   <div class="slider orange"></div>' +
+                '   <div class="slider yellow"></div>' +
+                '   <div class="slider green"></div>' +
+                '   <div class="slider blue"></div>' +
+                '   <div class="slider indigo"></div>' +
+                '   <div class="slider purple"></div>' +
+                '</div>'
         }
     }
 
