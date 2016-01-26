@@ -149,13 +149,13 @@ L.TopoJSON = L.GeoJSON.extend({
             '<h4>Index of Multiple Deprivation Score:</h4>' +
             '<div id="idm"></div>' +
             '<div class="sliderset">' +
-            '   <div class="row"></div><label>Income</label><input type="range" min="0" max="100" value="22.5" class="slider red"/><br/>' +
-            '   <div class="row"></div><label>Enployment</label><input type="range" min="0" max="100" value="22.5" class="slider orange"/><br/>' +
-            '   <div class="row"></div><label>Education</label><input type="range" min="0" max="100" value="13.5" class="slider yellow"/><br/>' +
-            '   <div class="row"></div><label>Health</label><input type="range" min="0" max="100" value="13.5" class="slider green"/><br/>' +
-            '   <div class="row"></div><label>Crime</label><input type="range" min="0" max="100" value="9.3" class="slider blue"/><br/>' +
-            '   <div class="row"></div><label>Housing</label><input type="range" min="0" max="100" value="9.3" class="slider indigo"/><br/>' +
-            '   <div class="row"></div><label>Environment</label><input type="range" min="0" max="100" value="9.3" class="slider purple"/><br/>' +
+            '   <div class="row"></div><label>Income</label><input id="income" type="range" min="0" max="100" value="22.5" class="slider red"/><br/>' +
+            '   <div class="row"></div><label>Enployment</label><input id="enployment" type="range" min="0" max="100" value="22.5" class="slider orange"/><br/>' +
+            '   <div class="row"></div><label>Education</label><input id="education" type="range" min="0" max="100" value="13.5" class="slider yellow"/><br/>' +
+            '   <div class="row"></div><label>Health</label><input id="health" type="range" min="0" max="100" value="13.5" class="slider green"/><br/>' +
+            '   <div class="row"></div><label>Crime</label><input id="crime" type="range" min="0" max="100" value="9.3" class="slider blue"/><br/>' +
+            '   <div class="row"></div><label>Housing</label><input id="housing" type="range" min="0" max="100" value="9.3" class="slider indigo"/><br/>' +
+            '   <div class="row"></div><label>Environment</label><input id="environment" type="range" min="0" max="100" value="9.3" class="slider purple"/><br/>' +
             '</div>'
         this.update();
         this._div.addEventListener('mousemove', function(e) {
@@ -166,7 +166,6 @@ L.TopoJSON = L.GeoJSON.extend({
 
     info.update = function(props) {
         if (props !== undefined) {
-            /*
             var income = window.data[props["LSOA11CD"]]["income"];
             var enployment = window.data[props["LSOA11CD"]]["enpolyment"];
             var education = window.data[props["LSOA11CD"]]["education"];
@@ -174,7 +173,14 @@ L.TopoJSON = L.GeoJSON.extend({
             var crime = window.data[props["LSOA11CD"]]["crime"];
             var housing = window.data[props["LSOA11CD"]]["housing"];
             var environment = window.data[props["LSOA11CD"]]["environment"];
-            */
+            document.getElementById("idm").innerHTML =
+                    income * document.getElementById("income").value +
+                    enployment * document.getElementById("income").value +
+                    education * document.getElementById("education").value +
+                    health * document.getElementById("health").value +
+                    crime * document.getElementById("crime").value +
+                    housing * document.getElementById("housing").value +
+                    environment * document.getElementById("environment").value;
         }
     }
 
