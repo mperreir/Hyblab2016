@@ -144,6 +144,33 @@ L.TopoJSON = L.GeoJSON.extend({
 
     info.onAdd = function(map) {
         this._div = L.DomUtil.create('div', 'info');
+        var info = L.control();
+
+        info.onAdd = function(map) {
+            this._div = L.DomUtil.create('div', 'info');
+            this.update();
+            this._div.addEventListener('mousemove', function(e) {
+                e.stopPropagation();
+            });
+            return this._div;
+        };
+
+        info.update = function(props) {
+            if (props !== undefined) {
+                this._div.innerHTML =
+                    '<h4>Index of Multiple Deprivation Score:</h4> <br/>' +
+                    window.data[props["LSOA11CD"]]["Index of Multiple Deprivation (IMD) Score"] + '<br/>' +
+                    '<div class="sliderset">' +
+                    '   <div class="row"></div><label>Income</label><input type="range" class="slider red"/><br/>' +
+                    '   <div class="row"></div><label>Enployment</label><input type="range" class="slider orange"/><br/>' +
+                    '   <div class="row"></div><label>Education</label><input type="range" class="slider yellow"/><br/>' +
+                    '   <div class="row"></div><label>Health</label><input type="range" class="slider green"/><br/>' +
+                    '   <div class="row"></div><label>Crime</label><input type="range" class="slider blue"/><br/>' +
+                    '   <div class="row"></div><label>Housing</label><input type="range" class="slider indigo"/><br/>' +
+                    '   <div class="row"></div><label>Environment</label><input type="range" class="slider purple"/><br/>' +
+                    '</div>'
+            }
+        }
         this.update();
         this._div.addEventListener('mousemove', function(e) {
             e.stopPropagation();
@@ -153,18 +180,7 @@ L.TopoJSON = L.GeoJSON.extend({
 
     info.update = function(props) {
         if (props !== undefined) {
-            this._div.innerHTML =
-                '<h4>Index of Multiple Deprivation (IMD) Score:</h4> <br/>' +
-                window.data[props["LSOA11CD"]]["Index of Multiple Deprivation (IMD) Score"] + '<br/>' +
-                '<div class="sliderset">' +
-                '   <input type="range" class="slider red"/><br/>' +
-                '   <input type="range" class="slider orange"/><br/>' +
-                '   <input type="range" class="slider yellow"/><br/>' +
-                '   <input type="range" class="slider green"/><br/>' +
-                '   <input type="range" class="slider blue"/><br/>' +
-                '   <input type="range" class="slider indigo"/><br/>' +
-                '   <input type="range" class="slider purple"/><br/>' +
-                '</div>'
+
         }
     }
 

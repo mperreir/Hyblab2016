@@ -17,8 +17,21 @@ body {
     color: #777;
 }
 
-.sliderset {
+.row {
+    clear: both;
+}
 
+.sliderset {
+    float: right;
+    width: 220px;
+}
+
+.sliderset label {
+    text-align: right;
+}
+
+.sliderset input {
+    float: right;
 }
 
 .red {
