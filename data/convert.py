@@ -11,7 +11,7 @@ INDICATORS = {
     "Employment": "employment",
     "Education, Skills and Training": "education",
     "Health Deprivation and Disability": "health",
-    "Barriers to Housing and Services": "barriers",
+    "Barriers to Housing and Services": "housing",
     "Living Environment": "environment"
 }
 

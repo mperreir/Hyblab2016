@@ -14,6 +14,7 @@ L.TopoJSON = L.GeoJSON.extend({
 
 
 (function() {
+    "use strict";
     var NUMBER_LSOA = 32844;
     var INDICATORS = {
         crime: "Crime",
@@ -85,9 +86,9 @@ L.TopoJSON = L.GeoJSON.extend({
     window.calculateIMD = function(lsoa11cd) {
         var sum = 1;
         return Object.keys(INDICATORS).map(function(id) {
-            var val = document.getElementById(id).value;
+            var val = Number.parseFloat(document.getElementById(id).value);
             sum += val;
-            return window.data[lsoa11cd][id] * val;
+            return expTransform(window.data[lsoa11cd][id].rank) * val;
         }).map(function(val) {
             return val / sum;
         }).reduce(function(a, b) {
