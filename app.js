@@ -14,6 +14,7 @@ L.TopoJSON = L.GeoJSON.extend({
 
 
 (function() {
+    "use strict";
     var NUMBER_LSOA = 32844;
     var INDICATORS = {
         crime: "Crime",
