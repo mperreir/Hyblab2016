@@ -94,18 +94,32 @@ L.TopoJSON = L.GeoJSON.extend({
         }).reduce(function(a, b) {
             return a + b;
         });
-    }
+    };
 
+    var hasInitializedStyle = false;
     function style(feature) {
-        var d = window.data[feature.properties.LSOA11CD];
-        return {
-            fillColor: getColor(d["IMD"]["raw"]),
-            weight: 2,
-            opacity: 1,
-            color: 'white',
-            dashArray: '3',
-            fillOpacity: 0.7
-        };
+        if (!hasInitializedStyle) {
+            var d = window.data[feature.properties.LSOA11CD];
+            return {
+                fillColor: getColor(d["IMD"]["raw"]),
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7
+            };
+        }
+        else {
+            return {
+                fillColor: getColor(calculateIMD(feature.properties.LSOA11CD)),
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7
+            };
+        }
+
     }
 
     function highlightFeature(e) {
@@ -200,32 +214,56 @@ L.TopoJSON = L.GeoJSON.extend({
 
         if (sliderListenersAdded == false) {
             document.getElementById("income").addEventListener('change', function(e) {
-                info.update(props)
+                info.update(props);
+                topoLsoaLayer.eachLayer(function(layer){
+                    topoLsoaLayer.resetStyle(layer);
+                });
             });
             document.getElementById("employment").addEventListener('change', function(e) {
                 info.update(props);
+                topoLsoaLayer.eachLayer(function(layer){
+                    topoLsoaLayer.resetStyle(layer);
+                });
             });
             document.getElementById("education").addEventListener('change', function(e) {
                 info.update(props);
+                topoLsoaLayer.eachLayer(function(layer){
+                    topoLsoaLayer.resetStyle(layer);
+                });
             });
             document.getElementById("health").addEventListener('change', function(e) {
                 info.update(props);
+                topoLsoaLayer.eachLayer(function(layer){
+                    topoLsoaLayer.resetStyle(layer);
+                });
             });
             document.getElementById("crime").addEventListener('change', function(e) {
                 info.update(props);
+                topoLsoaLayer.eachLayer(function(layer){
+                    topoLsoaLayer.resetStyle(layer);
+                });
             });
             document.getElementById("housing").addEventListener('change', function(e) {
                 info.update(props);
+                topoLsoaLayer.eachLayer(function(layer){
+                    topoLsoaLayer.resetStyle(layer);
+                });
             });
             document.getElementById("environment").addEventListener('change', function(e) {
                 info.update(props);
+                topoLsoaLayer.eachLayer(function(layer){
+                    topoLsoaLayer.resetStyle(layer);
+                });
             });
             sliderListenersAdded = true;
+            hasInitializedStyle = true;
         }
         else if (props !== undefined) {
             document.getElementById("idm").innerHTML = ": " + calculateIMD(props["LSOA11CD"]).toFixed(1) + "%";
         }
-    }
+    };
 
     info.addTo(map);
+
+
 }())
