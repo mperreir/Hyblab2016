@@ -1,15 +1,15 @@
 # Descriptif du projet
 
-Média :
+Média : Ouest France
 
-Sujet :
+Sujet : Les français et la voiture
 
-Equipe :
+Equipe : K2000
 
-Patricipants :
-- AGR :
-- Polytech :  
-- SciencesCom :
+Participants :
+- AGR : Hatt Gaël, Luna Florent
+- Polytech : Brisseau Aurélien, Lin Shen, Garnier Romain
+- SciencesCom : Rousseau Charlène, Musset Baptiste, Puyhardy Cécile
 
 # Installation
 
