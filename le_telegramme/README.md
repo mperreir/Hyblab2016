@@ -13,7 +13,10 @@ Patricipants :
 
 # Installation
 
--node server.js à la racine du projet
--aller à 127.0.0.1:8080/le_telegramme/index2.html
+> * A la racine du projet : **npm install express**
+> * Toujours à la racine du projet :  **node server.js**
+> * Dans votre navigateur aller à l'adresse suivante :
+	**127.0.0.1:8080/le_telegramme/index2.html**
 
 # Informations complémentaires
+
