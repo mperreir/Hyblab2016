@@ -6,6 +6,8 @@
   "repository": "",
   "author": "",
   "dependencies": {
-    "express": "^4.13.3"
+    "d3": "^3.5.13",
+    "express": "^4.13.3",
+    "webpack": "^2.0.5-beta"
   }
 }
