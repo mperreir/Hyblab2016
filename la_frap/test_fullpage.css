@@ -1,0 +1,138 @@
+/*Reset CSS
+ *------------------------------------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+/*Custom CSS
+------------------------------------------*/
+
+body{
+	font-family: Open Sans;
+	color: #179fae;
+}		
+
+h1{
+	font-size: 6em;
+}
+
+p{
+	font-size: 14px;
+}
+
+.heading{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+
+.section{
+	background-color: #f1f1f1;
+
+}
+
+/* Section 0
+ * --------------------------------------- */
+#section0{
+
+}
+
+#section0 h1{
+
+}
+
+#section0 p{
+
+}
+
+/* Section 1
+ * --------------------------------------- */
+.content1{
+
+}
+
+#section1{
+
+}
+#section1 h1{
+
+}
+#section1 p{
+
+}
+
+#infodpt {
+	visibility: hidden;
+	width:150px;
+	height:200px;
+	margin-top: 0px;
+	margin-left: 5px;
+	border:hidden;
+	font-weight: bold;	
+	display:inline-block;
+	position:absolute;
+}
+
+#map {
+	display:inline-block;
+	float:left;
+}
+
+div.tooltip{
+	visibility: hidden;
+	position:absolute;
+	width:150px;
+	height:200px;
+	background-color: white;
+	border:solid;
+}
+
+p.titre{
+	font-weight: bold;	
+	font-size:20px;
+}
+
+div.jqvmap-label{
+	visibility: hidden;
+}

@@ -25,10 +25,5 @@ window.addEventListener('load', function () {
 	                       .on("click", function () {alert("a malibu")});
 
 	
-
-	body.getElementById(0).addEventListener('click', function (d){d.r *= 2});
-	body.getElementById(1).addEventListener('click', function (d){d.r *= 2});
-	body.getElementById(2).addEventListener('click', function (d){d.r *= 2});
-
 });
 

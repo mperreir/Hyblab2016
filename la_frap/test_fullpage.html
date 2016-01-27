@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>fullPage.js - Pure Javascript version</title>
+		<meta name="author" content="Alvaro Trigo Lopez" />
+		<meta name="description" content="fullPage plugin by Alvaro Trigo. Pure javascript version of full screen slider." />
+		<meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple,pure,javascript,slider,hijacking" />
+		<meta name="Resource-type" content="Document" />
+
+
+		<link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+		<link rel="stylesheet" type="text/css" href="test_fullpage.css">
+
+
+
+        <script src="jquery-1.12.0.min.js"></script>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <script src="d3.min.js"></script>
+
+        <script src="jquery.vmap.js"></script>
+
+        <script src="jquerysvg/jquery.svg.js"></script>
+
+        <script src="map_pays_de_la_loire.js"></script>		
+
+		<script>
+			$(document).ready(function() {
+				$('#map').vectorMap({
+					map:'pays_de_la_loire',
+				});
+				$('#map').css("background-color","rgba(0,0,0,0)");
+
+				
+			});
+		</script>
+
+		<script>
+			window.addEventListener('load', function () {
+				
+				
+                var map = document.getElementById('map');
+                map.firstChild.setAttribute("id", "pdll");
+                var markersContainer = d3.select("#pdll").append("g");
+
+                var pdll = document.getElementById('pdll');
+                pdll.firstChild.setAttribute("id", "carte");
+                pdll.firstChild.nextSibling.setAttribute("id", "points");
+
+				document.getElementById("carte").setAttribute("transform","scale(2), translate(-140,-190)");
+
+				var jsonDptInfo = [
+					{"n":"Sarthe","r":5,"a":6,"s":4,"b":62,"sc":9},				
+					{"n":"Loire Atlantique","r":3,"a":4,"s":3,"b":58,"sc":5},
+					{"n":"Vendee","r":4,"a":2,"s":6,"b":53,"sc":2},
+					{"n":"Maine et Loire","r":2,"a":4,"s":2,"b":65,"sc":0},
+					{"n":"Mayenne","r":8,"a":3,"s":5,"b":50,"sc":7},
+
+				]
+
+				var dpt = d3.select("#carte").selectAll("path")
+										  .data(jsonDptInfo);
+				var info = d3.select("#infodpt");
+				
+				dpt.on('click', function (d){
+						info.style("visibility" ,"visible");
+					info.html("<p class='titre'>" + d.n + "</p><p>Radios : " + d.r + "</p><p>Antennes : " + d.a + "</p><p>Salaries : " + d.s + "</p><p>Benevoles : " + d.b + "</p><p>Service Civique : " + d.sc + "</p>");
+				});
+
+
+
+				var jsonMarker = [
+					{"x":360,"y":180,"r":3.5,"c":"red","texte":"Radio 1"},
+					{"x":220,"y":242,"r":3.5,"c":"red","texte":"Radio 2"}
+				]
+
+				var markers = markersContainer.selectAll("circle")
+													.data(jsonMarker)
+													.enter()
+													.append("circle");
+
+				var div = d3.select("body")
+							.append("div")
+							.attr("class", "tooltip");
+
+				var markerAttributes = markers
+                       .attr("cx", function (d) {return d.x;})
+                       .attr("cy", function (d) {return d.y;})
+                       .attr("r", function (d) {return d.r; })
+                       .style("fill",function (d) {return d.c;})
+                       .on("mouseover", function (d){
+                       		div.html(d.texte)
+                       		   .style("left",(d3.event.pageX) + "px")
+                       		   .style("top",(d3.event.pageY+10) + "px")
+                       		   .style("visibility","visible");
+                       })
+                       .on("mouseout", function (d){
+                       		div.style("visibility","hidden");
+                       });
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="fullpage">
+			<div class="section " id="section0">
+				<div class="heading">
+					<h1>LES RADIOS LOCALES</h1>
+					<p>Radios associatives</p>
+				</div>
+			</div>
+			<div class="section " id="section1">
+				<div class="content1">
+					<p id="map" style="width:500px;height:400px"></p>
+        			<p id="infodpt"></p>		
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+		<script type="text/javascript" src="javascript.fullPage.js"></script>
+		<script type="text/javascript">
+			fullpage.initialize('#fullpage', {
+				anchors: ['firstPage', 'secondPage'],
+				menu: '#menu',
+				css3:true
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -23,3 +23,12 @@ div.tooltip{
 	background-color: white;
 	border:solid;
 }
+
+p.titre{
+	font-weight: bold;	
+	font-size:20px;
+}
+
+div.jqvmap-label{
+	visibility: hidden;
+}

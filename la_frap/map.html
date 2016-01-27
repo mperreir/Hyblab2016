@@ -25,50 +25,13 @@
 	  					});
 	  					$('#map').css("background-color","rgba(0,0,0,0.3)");
 
-
-	  					$('#jqvmap1_FR-44').click(function(){
-	  						$('#infodpt').css("visibility" ,"hidden");
-	  						$('#infodpt').text("Infos sur la Loire Atlantique");
-	  						$('#infodpt').css("visibility" ,"visible");
-	  						$('#infodpt').css("border-style" ,"solid");
-
-	  					});
-	  					$('#jqvmap1_FR-72').click(function(){
-	  						$('#infodpt').css("visibility" ,"hidden");
-	  						$('#infodpt').text("Infos sur la Sarthe");
-	  						$('#infodpt').css("visibility" ,"visible");
-	  						$('#infodpt').css("border-style" ,"solid");
-
-	  					});
-	  					$('#jqvmap1_FR-85').click(function(){
-	  						$('#infodpt').css("visibility" ,"hidden");
-	  						$('#infodpt').text("Infos sur la Vendée");
-	  						$('#infodpt').css("visibility" ,"visible");
-	  						$('#infodpt').css("border-style" ,"solid");
-
-	  					});
-	  					$('#jqvmap1_FR-49').click(function(){
-	  						$('#infodpt').css("visibility" ,"hidden");
-	  						$('#infodpt').text("Infos sur le Maine et Loire");
-	  						$('#infodpt').css("visibility" ,"visible");
-	  						$('#infodpt').css("border-style" ,"solid");
-
-	  					});
-	  					$('#jqvmap1_FR-53').click(function(){
-	  						$('#infodpt').css("visibility" ,"hidden");
-	  						$('#infodpt').text("Infos sur la Mayenne");
-	  						$('#infodpt').css("visibility" ,"visible");
-	  						$('#infodpt').css("border-style" ,"solid");
-
-	  					});
+	  					
 	  				});
 				</script>
 
 				<script>
 					window.addEventListener('load', function () {
 						
-
-
 						
 		                var map = document.getElementById('map');
 		                map.firstChild.setAttribute("id", "pdll");
@@ -80,6 +43,23 @@
 
 						document.getElementById("carte").setAttribute("transform","scale(2), translate(-140,-190)");
 
+						var jsonDptInfo = [
+							{"n":"Sarthe","r":5,"a":6,"s":4,"b":62,"sc":9},				
+							{"n":"Loire Atlantique","r":3,"a":4,"s":3,"b":58,"sc":5},
+							{"n":"Vendee","r":4,"a":2,"s":6,"b":53,"sc":2},
+							{"n":"Maine et Loire","r":2,"a":4,"s":2,"b":65,"sc":0},
+							{"n":"Mayenne","r":8,"a":3,"s":5,"b":50,"sc":7},
+
+						]
+
+						var dpt = d3.select("#carte").selectAll("path")
+												  .data(jsonDptInfo);
+						var info = d3.select("#infodpt");
+						
+						dpt.on('click', function (d){
+	  						info.style("visibility" ,"visible");
+							info.html("<p class='titre'>" + d.n + "</p><p>Radios : " + d.r + "</p><p>Antennes : " + d.a + "</p><p>Salaries : " + d.s + "</p><p>Benevoles : " + d.b + "</p><p>Service Civique : " + d.sc + "</p>");
+						});
 
 
 
@@ -93,7 +73,9 @@
 															.enter()
 															.append("circle");
 
-						var div = d3.select("body").append("div").attr("class", "tooltip");
+						var div = d3.select("body")
+									.append("div")
+									.attr("class", "tooltip");
 
 						var markerAttributes = markers
 		                       .attr("cx", function (d) {return d.x;})
@@ -102,14 +84,24 @@
 		                       .style("fill",function (d) {return d.c;})
 		                       .on("mouseover", function (d){
 		                       		div.html(d.texte)
-		                       		.style("left",(d3.event.pageX) + "px")
-		                       		.style("top",(d3.event.pageY+10) + "px")
-		                       		.style("visibility","visible");
+		                       		   .style("left",(d3.event.pageX) + "px")
+		                       		   .style("top",(d3.event.pageY+10) + "px")
+		                       		   .style("visibility","visible");
 		                       })
 		                       .on("mouseout", function (d){
 		                       		div.style("visibility","hidden");
 		                       });
 					});
+				</script>
+
+				<script>
+					var jsonData = [{"x":}]
+
+					var graphContainer = d3.select("body").append("svg")
+														  .attr("width",400)
+														  .attr("height",400);
+
+					var 
 				</script>
 
 
