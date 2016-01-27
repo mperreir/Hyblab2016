@@ -56,6 +56,8 @@ STATS = (function() {
     }
 }());
 
+
+
 (function() {
     "use strict";
     var NUMBER_LSOA = 32844;
@@ -68,6 +70,48 @@ STATS = (function() {
         housing: "Barriers to Housing and Services",
         environment: "Living Environment"
     };
+
+    function meanLSOAs(indicator, LSOAs) {
+        var count = 0;
+        var result = LSOAs
+                .map(function (lsoa11cd) {
+                    count += 1;
+                    return window.data[lsoa11cd][indicator].raw;
+                }).reduce(function (a, b) {
+                    return a + b;
+                }) / count;
+        return result;
+    }
+
+    // Utility variable for storing MSOA's properties
+    var MSOA = {};
+    (function() {
+        var g = topo_msoa.objects.E07000123.geometries;
+        for (var i in g) {
+            MSOA[g[i].properties.MSOA11CD] = { "LSOAs" : [] };
+        }
+    }());
+    (function() {
+        for (var LSOA11CD in window.data) {
+            var MSOA11CD = window.data[LSOA11CD]["MSOA11CD"];
+            MSOA[MSOA11CD]["LSOAs"].push(LSOA11CD);
+        }
+    }());
+    (function(){
+        for (var MSOA11CD in MSOA) {
+            var count = 0;
+            MSOA[MSOA11CD]["IMD"] = MSOA[MSOA11CD]["LSOAs"]
+                    .map(function (lsoa11cd) {
+                        count += 1;
+                        return window.data[lsoa11cd]["IMD"]["raw"];
+                    }).reduce(function (a, b) {
+                        return a + b;
+                    }) / count;
+            for (var indicator in INDICATORS) {
+                MSOA[MSOA11CD][indicator] = meanLSOAs(indicator, MSOA[MSOA11CD]["LSOAs"]);
+            }
+        }
+    }());
 
     // Utility variable for mapping postcode to LSOA11CD
     function PCD_LSOA11CD_mapper(){
@@ -115,7 +159,7 @@ STATS = (function() {
     function getColor(score) {
         //score = (score - 4) / 67 * 0xfffff;
         //return "#" + ("0" + Math.trunc(score)).slice(-6);
-        score = (1 - (score - 4) / 67) / 6;
+        score = (1 - score / 100) / 6;
         var rgb = HSVtoRGB(score, 1, 1);
         return RGBtoHEX(rgb.r, rgb.g, rgb.b);
     }
@@ -139,8 +183,15 @@ STATS = (function() {
         });
     };
 
+    window.calculateMsoaIMD = function(msoa11cd) {
+        var LSOAs = MSOA[msoa11cd]["LSOAs"];
+        return LSOAs
+            .map(calculateIMD)
+            .reduce(function(a, b){return a + b;}) / LSOAs.length;
+    };
+
     var hasInitializedStyle = false;
-    function style(feature) {
+    function LsoaStyle(feature) {
         if (!hasInitializedStyle) {
             var d = window.data[feature.properties.LSOA11CD];
             return {
@@ -162,7 +213,29 @@ STATS = (function() {
                 fillOpacity: 0.7
             };
         }
+    }
 
+    function MsoaStyle(feature) {
+        if (!hasInitializedStyle) {
+            return {
+                fillColor: getColor(MSOA[feature.properties.MSOA11CD]["IMD"]),
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7
+            };
+        }
+        else {
+            return {
+                fillColor: getColor(calculateMsoaIMD(feature.properties.MSOA11CD)),
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7
+            };
+        }
     }
 
     function highlightFeature(e) {
@@ -182,49 +255,69 @@ STATS = (function() {
         info.update(e.target.feature.properties);
     }
 
-    function resetHighlight(e) {
+    function LsoaResetHighlight(e) {
         topoLsoaLayer.resetStyle(e.target);
     }
 
-    function printName(e) {
+    function MsoaResetHighlight(e) {
+        topoMsoaLayer.resetStyle(e.target);
+    }
+
+    function LsoaPrintName(e) {
         console.log(window.data[e.target.feature.properties.LSOA11CD]);
     }
 
-    function onEachFeature(feature, layer) {
+    function MsoaPrintName(e) {
+        console.log(window.data[e.target.feature.properties.MSOA11CD]);
+    }
+
+    function LsoaOnEachFeature(feature, layer) {
         layer.on({
             mouseover: highlightFeature,
-            mouseout: resetHighlight,
-            click: printName
+            mouseout: LsoaResetHighlight,
+            click: LsoaPrintName
+        });
+    }
+
+    function MsoaOnEachFeature(feature, layer) {
+        layer.on({
+            mouseover: highlightFeature,
+            mouseout: MsoaResetHighlight,
+            click: MsoaPrintName
         });
     }
 
     var topoLsoaLayer = new L.TopoJSON(window.topo_lsoa, {
-        style: style,
-        onEachFeature: onEachFeature
+        style: LsoaStyle,
+        onEachFeature: LsoaOnEachFeature
     });
 
+    var topoMsoaLayer = new L.TopoJSON(window.topo_msoa, {
+        style: MsoaStyle,
+        onEachFeature: MsoaOnEachFeature
+    });
+    /*
     var osm = new L.TileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
             minZoom: 11,
             maxZoom: 18,
             attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
         }
-    );
+    );*/
 
     var map = L.map('map', {
         center: [53.85, -2.7],
         zoom: 11,
-        layers: [osm, topoLsoaLayer],
+        layers: [topoMsoaLayer], // Only Add default layers here
         minZoom: 11,
         maxZoom: 18,
-        maxBounds: topoLsoaLayer.getBounds()
+        maxBounds: topoMsoaLayer.getBounds()
     });
 
-    L.control.layers({
-        "Map": osm
-    }, {
-        "LSOA": topoLsoaLayer
-    }).addTo(map);
+    L.control.layers(
+        //{ "Map": osm },
+        { "MSOA": topoMsoaLayer, "LSOA": topoLsoaLayer }
+    ).addTo(map);
     L.control.scale().addTo(map);
 
     var info = L.control();
@@ -258,14 +351,20 @@ STATS = (function() {
         if (sliderListenersAdded == false) {
             document.getElementById("income").addEventListener('change', function(e) {
                 info.update(props);
-                topoLsoaLayer.eachLayer(function(layer){
+                topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
+                });
+                topoMsoaLayer.eachLayer(function(layer) {
+                    topoMsoaLayer.resetStyle(layer);
                 });
             });
             document.getElementById("employment").addEventListener('change', function(e) {
                 info.update(props);
-                topoLsoaLayer.eachLayer(function(layer){
+                topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
+                });
+                topoMsoaLayer.eachLayer(function(layer) {
+                    topoMsoaLayer.resetStyle(layer);
                 });
             });
             document.getElementById("education").addEventListener('change', function(e) {
@@ -273,11 +372,17 @@ STATS = (function() {
                 topoLsoaLayer.eachLayer(function(layer){
                     topoLsoaLayer.resetStyle(layer);
                 });
+                topoMsoaLayer.eachLayer(function(layer) {
+                    topoMsoaLayer.resetStyle(layer);
+                });
             });
             document.getElementById("health").addEventListener('change', function(e) {
                 info.update(props);
                 topoLsoaLayer.eachLayer(function(layer){
                     topoLsoaLayer.resetStyle(layer);
+                });
+                topoMsoaLayer.eachLayer(function(layer) {
+                    topoMsoaLayer.resetStyle(layer);
                 });
             });
             document.getElementById("crime").addEventListener('change', function(e) {
@@ -285,11 +390,17 @@ STATS = (function() {
                 topoLsoaLayer.eachLayer(function(layer){
                     topoLsoaLayer.resetStyle(layer);
                 });
+                topoMsoaLayer.eachLayer(function(layer) {
+                    topoMsoaLayer.resetStyle(layer);
+                });
             });
             document.getElementById("housing").addEventListener('change', function(e) {
                 info.update(props);
                 topoLsoaLayer.eachLayer(function(layer){
                     topoLsoaLayer.resetStyle(layer);
+                });
+                topoMsoaLayer.eachLayer(function(layer) {
+                    topoMsoaLayer.resetStyle(layer);
                 });
             });
             document.getElementById("environment").addEventListener('change', function(e) {
@@ -297,16 +408,23 @@ STATS = (function() {
                 topoLsoaLayer.eachLayer(function(layer){
                     topoLsoaLayer.resetStyle(layer);
                 });
+                topoMsoaLayer.eachLayer(function(layer) {
+                    topoMsoaLayer.resetStyle(layer);
+                });
             });
             sliderListenersAdded = true;
             hasInitializedStyle = true;
         }
         else if (props !== undefined) {
-            document.getElementById("idm").innerHTML = ": " + calculateIMD(props["LSOA11CD"]).toFixed(1) + "%";
+            if (props.hasOwnProperty("LSOA11CD"))
+                document.getElementById("idm").innerHTML = ": " + calculateIMD(props["LSOA11CD"]).toFixed(1) + "%";
+            else {
+                document.getElementById("idm").innerHTML = ": " + calculateMsoaIMD(props["MSOA11CD"]).toFixed(1) + "%";
+            }
         }
     };
 
     info.addTo(map);
 
 
-}())
+}());
