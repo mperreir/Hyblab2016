@@ -1,0 +1,15 @@
+.DS_Store
+.idea
+_scratch
+node_modules
+test/data
+dist/OSMBuildings
+
+src/Shaders.min.js
+lib/GLX.debug.js
+
+# backup files
+*~
+
+# JavaScript source maps
+*.js.map 

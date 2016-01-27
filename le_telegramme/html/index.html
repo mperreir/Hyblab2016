@@ -1,30 +1,148 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+<html>
+<head>
+  <title>OSM Buildings</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="OSMBuildings/OSMBuildings.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="OSMBuildings/OSMBuildings.js"></script>
+</head>
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-      <h1>Hyblab 2016</h1>
-    </header>
+<body>
+<div id="map"></div>
 
-    <!-- Le contenu du site -->
-    <p>replace this content by your web app !</p>
+<div class="control tilt">
+  <button class="dec">&#8601;</button>
+  <button class="inc">&#8599;</button>
+</div>
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2016</p>
-    </footer>
-    </div>
-  </body>
+<div class="control rotation">
+  <button class="inc">&#8630;</button>
+  <button class="dec">&#8631;</button>
+</div>
+
+<div class="control zoom">
+  <button class="dec">-</button>
+  <button class="inc">+</button>
+</div>
+
+<script>
+  //Moteur de la carte (rotations/zoom/...)
+  var map = new GLMap('map', {
+    position: { latitude:48.4082, longitude:-4.4982 },
+    zoom: 16,
+    minZoom: 05,
+    maxZoom: 20,
+    state: true // stores map position/rotation in url
+  });
+
+  //Création de la carte interactive
+  var osmb = new OSMBuildings({
+    baseURL: './OSMBuildings',
+    minZoom: 10,
+    maxZoom: 22,
+    attribution: '© 3D <a href="http://osmbuildings.org/copyright/">OSM Buildings</a>'
+  }).addTo(map);
+
+  //Ajout de couches sur la carte (à partir des données stockées en ligne et streamé au fur à a mesures de la navigation de l'utilisateur)
+  osmb.addMapTiles(
+    'http://{s}.tiles.mapbox.com/v3/osmbuildings.kbpalbpk/{z}/{x}/{y}.png',
+    {
+      attribution: '© Data <a href="http://openstreetmap.org/copyright/">OpenStreetMap</a> · © Map <a href="http://mapbox.com">MapBox</a>'
+    }
+  );
+                                                                          
+  osmb.addGeoJSONTiles('http://{s}.data.osmbuildings.org/0.2/anonymous/tile/{z}/{x}/{y}.json');
+
+  //***************************************************************************
+  //Coloriage du pointeur on hover
+
+  map.on('pointermove', function(e) {
+    var id = osmb.getTarget(e.x, e.y, function(id) {
+      if (id) {
+        document.body.style.cursor = 'pointer';
+        osmb.highlight(id, '#f08000');
+      } else {
+        document.body.style.cursor = 'default';
+        osmb.highlight(null);
+      }
+    });
+  });
+
+  //***************************************************************************
+  //Boutons de controle de la carte
+
+  var controlButtons = document.querySelectorAll('.control button');
+
+  for (var i = 0, il = controlButtons.length; i < il; i++) {
+    controlButtons[i].addEventListener('click', function(e) {
+      var button = this;
+      var parentClassList = button.parentNode.classList;
+      var direction = button.classList.contains('inc') ? 1 : -1;
+      var increment;
+      var property;
+
+      if (parentClassList.contains('tilt')) {
+        property = 'Tilt';
+        increment = direction*10;
+      }
+      if (parentClassList.contains('rotation')) {
+        property = 'Rotation';
+        increment = direction*10;
+      }
+      if (parentClassList.contains('zoom')) {
+        property = 'Zoom';
+        increment = direction*1;
+      }
+      if (property) {
+        map['set'+ property](map['get'+ property]()+increment);
+      }
+    });
+  }
+
+
+var obj = osmb.addGeoJSON(geojson);
+
+  /*
+   * ## Key codes for object positioning ##
+   * Cursor keys: move
+   * +/- : scale
+   * w/s : elevate
+   * a/d : rotate
+   *
+   * Pressing Alt the same time accelerates
+   */
+  document.addEventListener('keydown', function(e) {
+    var transInc = e.altKey ? 0.0002 : 0.00002;
+    var scaleInc = e.altKey ? 0.1 : 0.01;
+    var rotaInc = e.altKey ? 10 : 1;
+    var eleInc = e.altKey ? 10 : 1;
+
+    switch (e.which) {
+      case 37: obj.position.longitude -= transInc; break;
+      case 39: obj.position.longitude += transInc; break;
+      case 38: obj.position.latitude += transInc; break;
+      case 40: obj.position.latitude -= transInc; break;
+      case 187: obj.scale += scaleInc; break;
+      case 189: obj.scale -= scaleInc; break;
+      case 65: obj.rotation += rotaInc; break;
+      case 68: obj.rotation -= rotaInc; break;
+      case 87: obj.elevation += eleInc; break;
+      case 83: obj.elevation -= eleInc; break;
+      default: return;
+    }
+    console.log(JSON.stringify({
+      position:{
+        latitude:parseFloat(obj.position.latitude.toFixed(5)),
+        longitude:parseFloat(obj.position.longitude.toFixed(5))
+      },
+      elevation:parseFloat(obj.elevation.toFixed(2)),
+      scale:parseFloat(obj.scale.toFixed(2)),
+      rotation:parseInt(obj.rotation, 10)
+    }));
+  });
+
+</script>
+</body>
 </html>
