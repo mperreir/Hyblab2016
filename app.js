@@ -140,16 +140,19 @@ STATS = (function() {
     }());
 
     // Utility variable for mapping postcode to LSOA11CD
-    function PCD_LSOA11CD_mapper(){
+    var PCD_LSOA11CD_mapper = function () {
         var mapper = {};
         for (var LSOA11CD in window.data) {
-            mapper[window.data.LSOA11CD.PCD7] = LSOA11CD;
+            for (var pcd in window.data[LSOA11CD]["PCD7s"]) {
+                pcd = window.data[LSOA11CD]["PCD7s"][pcd].replace(/ /g, '');
+                mapper[pcd] = LSOA11CD;
+            }
         }
         return mapper;
-    }
+    }();
 
     function PCDtoLSOA11CD(PCD) {
-        return mapper[PCD];
+        return PCD_LSOA11CD_mapper[PCD];
     }
 
     // Convert HSV to RGB
@@ -266,8 +269,7 @@ STATS = (function() {
         layer.setStyle({
             weight: 5,
             color: '#fff',
-            opacity: 1,
-            fillOpacity: 0.7
+            opacity: 1
         });
 
         if (!L.Browser.ie && !L.Browser.opera) {
@@ -410,6 +412,7 @@ STATS = (function() {
             e.stopPropagation();
         });
 
+        //console.log(this._div);
         return this._div;
     };
 
@@ -492,4 +495,56 @@ STATS = (function() {
     };
 
     info.addTo(map);
+
+    var searchbar = L.control();
+    searchbar.onAdd = function(map) {
+        this._div = L.DomUtil.create('div', 'searchbar');
+        this._div.innerHTML = '';
+
+        this._input = L.DomUtil.create('input', '');
+
+        this._input.setAttribute('type', 'text');
+        this._input.setAttribute('id', 'searchbox');
+        this._input.setAttribute('placeholder', 'TRY YOUR POSTCODE HERE :)');
+        this._input.setAttribute('maxlength', 8);
+
+
+        this._div.appendChild(this._input);
+
+
+
+        return this._div;
+    };
+    searchbar.configEventListener = function() {
+        var input = document.getElementById("searchbox");
+        var keypressEventListener = function(e) {
+            var pcd = input.value.replace(/ /g, '');
+            if (pcd.length === 6) {
+                pcd = pcd.toUpperCase();
+                var lsoa11cd = PCDtoLSOA11CD(pcd);
+                for (var layer in topoLsoaLayer["_layers"]) {
+                    if (topoLsoaLayer["_layers"][layer].feature.properties.LSOA11CD === lsoa11cd) {
+                        map.fitBounds(topoLsoaLayer["_layers"][layer].getBounds());
+                        topoLsoaLayer["_layers"][layer].setStyle({
+                            weight: 5,
+                            color: '#fff',
+                            opacity: 1
+                        });
+                        popup
+                            .setLatLng(topoLsoaLayer["_layers"][layer].getBounds().getCenter())
+                            .setContent(topoLsoaLayer["_layers"][layer].feature.properties.LSOA11NM)
+                            .openOn(map);
+                    }
+                }
+            }
+        };
+        input.addEventListener('focus', function(focusEvent) {
+            input.addEventListener('keyup', keypressEventListener);
+        });
+        input.addEventListener('focusout', function(focusoutEvent) {
+            input.removeEventListener('keyup', keypressEventListener);
+        });
+    };
+    searchbar.addTo(map);
+    searchbar.configEventListener();
 }());

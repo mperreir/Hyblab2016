@@ -7,6 +7,26 @@ body {
 .leaflet-popup-pane {
     pointer-events: none;
 }
+.searchbar {
+    position: fixed;
+    top: 0;
+    left: 34%;
+}
+#searchbox {
+    border: 1px solid #CCC;
+    -webkit-box-shadow: 0 1px 1px #ddd inset;
+    -moz-box-shadow: 0 1px 1px #ddd inset;
+    box-shadow: 0 1px 1px #ddd inset;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #999;
+    font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
+    height: 20px;
+    padding: 10px;
+    width: 430px;
+    opacity: 1;
+}
 .info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
@@ -29,10 +49,11 @@ body {
 
 .row {
     clear: both;
+    margin: 8px 0;
 }
 
 .sliderset {
-    width: 300px;
+    width: 320px;
 }
 
 .sliderset label {
