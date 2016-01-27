@@ -71,6 +71,32 @@ STATS = (function() {
         environment: "Living Environment"
     };
 
+    // Utility variable storing the max & min value of each indicator and IMD as well
+    var LSOA_Limits = (function() {
+         var result = {};
+         result["IMD"] = {min:100, max:0};
+         for (var indicator in INDICATORS) {
+             result[indicator] = {min:100, max:0};
+         }
+         for (var lsoa11cd in window.data) {
+             for (var indicator in INDICATORS) {
+                 if (result[indicator].max < window.data[lsoa11cd][indicator]["raw"]) {
+                     result[indicator].max = window.data[lsoa11cd][indicator]["raw"];
+                 }
+                 if (result[indicator].min > window.data[lsoa11cd][indicator]["raw"]) {
+                     result[indicator].min = window.data[lsoa11cd][indicator]["raw"];
+                 }
+             }
+             if (result["IMD"].max < window.data[lsoa11cd]["IMD"]["raw"]) {
+                 result["IMD"].max = window.data[lsoa11cd]["IMD"]["raw"];
+             }
+             if (result["IMD"].min > window.data[lsoa11cd]["IMD"]["raw"]) {
+                 result["IMD"].min = window.data[lsoa11cd]["IMD"]["raw"];
+             }
+         }
+        return result;
+    }());
+
     function meanLSOAs(indicator, LSOAs) {
         var count = 0;
         var result = LSOAs
@@ -159,7 +185,7 @@ STATS = (function() {
     function getColor(score) {
         //score = (score - 4) / 67 * 0xfffff;
         //return "#" + ("0" + Math.trunc(score)).slice(-6);
-        score = (1 - score / 100) / 6;
+        score = (1 - ((score - LSOA_Limits["IMD"].min) / (LSOA_Limits["IMD"].max - LSOA_Limits["IMD"].min))) / 6.0;
         var rgb = HSVtoRGB(score, 1, 1);
         return RGBtoHEX(rgb.r, rgb.g, rgb.b);
     }
@@ -197,9 +223,8 @@ STATS = (function() {
             return {
                 fillColor: getColor(d["IMD"]["raw"]),
                 weight: 2,
-                opacity: 1,
-                color: 'white',
-                dashArray: '3',
+                opacity: 0.5,
+                color: 'black',
                 fillOpacity: 0.7
             };
         }
@@ -207,9 +232,8 @@ STATS = (function() {
             return {
                 fillColor: getColor(calculateIMD(feature.properties.LSOA11CD)),
                 weight: 2,
-                opacity: 1,
-                color: 'white',
-                dashArray: '3',
+                opacity: 0.5,
+                color: 'black',
                 fillOpacity: 0.7
             };
         }
@@ -219,20 +243,18 @@ STATS = (function() {
         if (!hasInitializedStyle) {
             return {
                 fillColor: getColor(MSOA[feature.properties.MSOA11CD]["IMD"]),
-                weight: 2,
-                opacity: 1,
-                color: 'white',
-                dashArray: '3',
+                weight: 1,
+                opacity: 0.5,
+                color: 'black',
                 fillOpacity: 0.7
             };
         }
         else {
             return {
                 fillColor: getColor(calculateMsoaIMD(feature.properties.MSOA11CD)),
-                weight: 2,
-                opacity: 1,
-                color: 'white',
-                dashArray: '3',
+                weight: 1,
+                opacity: 0.5,
+                color: 'black',
                 fillOpacity: 0.7
             };
         }
@@ -243,8 +265,8 @@ STATS = (function() {
 
         layer.setStyle({
             weight: 5,
-            color: '#666',
-            dashArray: '',
+            color: '#fff',
+            opacity: 1,
             fillOpacity: 0.7
         });
 
@@ -253,29 +275,50 @@ STATS = (function() {
         }
 
         info.update(e.target.feature.properties);
+
+        var NM;
+        if (e.target.feature.properties.hasOwnProperty("LSOA11NM")) {
+            NM = e.target.feature.properties["LSOA11NM"];
+        }
+        else {
+            NM = e.target.feature.properties["MSOA11NM"];
+        }
+
+        popup
+            .setLatLng(e.latlng)
+            .setContent(NM)
+            .openOn(map);
     }
 
     function LsoaResetHighlight(e) {
         topoLsoaLayer.resetStyle(e.target);
+        //map.closePopup(popup);
     }
 
     function MsoaResetHighlight(e) {
         topoMsoaLayer.resetStyle(e.target);
+        //map.closePopup(popup);
     }
 
-    function LsoaPrintName(e) {
+    function updatePopup(e) {
+        popup.setLatLng(e.latlng);
+    }
+
+    function OnLsoaClick(e) {
         console.log(window.data[e.target.feature.properties.LSOA11CD]);
+        map.fitBounds(e.target.getBounds());
     }
 
-    function MsoaPrintName(e) {
-        console.log(window.data[e.target.feature.properties.MSOA11CD]);
+    function OnMsoaClick(e) {
+        map.fitBounds(e.target.getBounds());
     }
 
     function LsoaOnEachFeature(feature, layer) {
         layer.on({
             mouseover: highlightFeature,
             mouseout: LsoaResetHighlight,
-            click: LsoaPrintName
+            mousemove: updatePopup,
+            click: OnLsoaClick
         });
     }
 
@@ -283,9 +326,14 @@ STATS = (function() {
         layer.on({
             mouseover: highlightFeature,
             mouseout: MsoaResetHighlight,
-            click: MsoaPrintName
+            mousemove: updatePopup,
+            click: OnMsoaClick
         });
     }
+
+    var popup = L.popup({
+        closeButton: false
+    });
 
     var topoLsoaLayer = new L.TopoJSON(window.topo_lsoa, {
         style: LsoaStyle,
@@ -296,28 +344,47 @@ STATS = (function() {
         style: MsoaStyle,
         onEachFeature: MsoaOnEachFeature
     });
-    /*
+
     var osm = new L.TileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
             minZoom: 11,
             maxZoom: 18,
             attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
         }
-    );*/
+    );
 
     var map = L.map('map', {
         center: [53.85, -2.7],
         zoom: 11,
-        layers: [topoMsoaLayer], // Only Add default layers here
+        layers: [osm, topoMsoaLayer], // Only Add default layers here
         minZoom: 11,
-        maxZoom: 18,
+        maxZoom: 16,
         maxBounds: topoMsoaLayer.getBounds()
     });
 
+    map.on('zoomend', function(e) {
+        if (map.getZoom() >= 13) {
+            map.addLayer(topoLsoaLayer);
+            map.removeLayer(topoMsoaLayer);
+        }
+        else {
+            map.addLayer(topoMsoaLayer);
+            map.removeLayer(topoLsoaLayer);
+        }
+    });
+
+    topoLsoaLayer.on('mouseout', function(e) {
+        map.closePopup(popup);
+    });
+
+    topoMsoaLayer.on('mouseout', function(e) {
+        map.closePopup(popup);
+    });
+    /*
     L.control.layers(
-        //{ "Map": osm },
+        { "Map": osm },
         { "MSOA": topoMsoaLayer, "LSOA": topoLsoaLayer }
-    ).addTo(map);
+    ).addTo(map);*/
     L.control.scale().addTo(map);
 
     var info = L.control();
@@ -329,7 +396,7 @@ STATS = (function() {
         this._div.innerHTML =
             '<h4>Index of Multiple Deprivation Score</h4>' +
             '<h4 id="idm"></h4> <br/>' +
-            '<h5>How would you weight these factors ?</h5>' +
+            '<h5>How much does each of the following matters to you ?</h5>' +
             '<div class="sliderset">' +
             '   <div class="row"></div><label>Income</label><input id="income" type="range" min="0" max="1000" value="225" class="slider red"/><br/>' +
             '   <div class="row"></div><label>Employment</label><input id="employment" type="range" min="0" max="1000" value="225" class="slider orange"/><br/>' +
@@ -425,6 +492,4 @@ STATS = (function() {
     };
 
     info.addTo(map);
-
-
 }());

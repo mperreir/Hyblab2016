@@ -4,6 +4,9 @@ body {
 #map {
     height: 100vh;
 }
+.leaflet-popup-pane {
+    pointer-events: none;
+}
 .info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
