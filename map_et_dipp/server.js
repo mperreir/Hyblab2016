@@ -14,3 +14,9 @@ app.use(express.static(path.join(__dirname, 'html')));
 // server and visiting http(s)://127.0.0.1:8080/name_of_you_project/ (if on a local server)
 // or more generally: http(s)://server_name:port/name_of_you_project/
 module.exports = app;
+
+
+// run server
+app.listen(8080, function(){
+  console.log('\nExpress server listening on port 8080');
+});
