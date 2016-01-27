@@ -3,45 +3,126 @@
                 <title>Jvectormap</title>
 
 
+				<link rel="stylesheet" type="text/css" href="style.css">
 
                 <script src="jquery-1.12.0.min.js"></script>
+
                 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-               
+                <script src="d3.min.js"></script>
+
                 <script src="jquery.vmap.js"></script>
 
+                <script src="jquerysvg/jquery.svg.js"></script>
+
                 <script src="map_pays_de_la_loire.js"></script>
+
 
                 <script>
 	  				$(document).ready(function() {
 	  					$('#map').vectorMap({
-	  						map:'pays_de_la_loire'
+	  						map:'pays_de_la_loire',
 	  					});
+	  					$('#map').css("background-color","rgba(0,0,0,0.3)");
+
+
 	  					$('#jqvmap1_FR-44').click(function(){
-	  						alert("Loire Atlantique");
+	  						$('#infodpt').css("visibility" ,"hidden");
+	  						$('#infodpt').text("Infos sur la Loire Atlantique");
+	  						$('#infodpt').css("visibility" ,"visible");
+	  						$('#infodpt').css("border-style" ,"solid");
+
 	  					});
 	  					$('#jqvmap1_FR-72').click(function(){
-	  						alert("Sarthe");
+	  						$('#infodpt').css("visibility" ,"hidden");
+	  						$('#infodpt').text("Infos sur la Sarthe");
+	  						$('#infodpt').css("visibility" ,"visible");
+	  						$('#infodpt').css("border-style" ,"solid");
+
 	  					});
 	  					$('#jqvmap1_FR-85').click(function(){
-	  						alert("Vendée");
+	  						$('#infodpt').css("visibility" ,"hidden");
+	  						$('#infodpt').text("Infos sur la Vendée");
+	  						$('#infodpt').css("visibility" ,"visible");
+	  						$('#infodpt').css("border-style" ,"solid");
+
 	  					});
 	  					$('#jqvmap1_FR-49').click(function(){
-	  						alert("Maine et Loire");
+	  						$('#infodpt').css("visibility" ,"hidden");
+	  						$('#infodpt').text("Infos sur le Maine et Loire");
+	  						$('#infodpt').css("visibility" ,"visible");
+	  						$('#infodpt').css("border-style" ,"solid");
+
 	  					});
 	  					$('#jqvmap1_FR-53').click(function(){
-	  						alert("Mayenne");
+	  						$('#infodpt').css("visibility" ,"hidden");
+	  						$('#infodpt').text("Infos sur la Mayenne");
+	  						$('#infodpt').css("visibility" ,"visible");
+	  						$('#infodpt').css("border-style" ,"solid");
+
 	  					});
 	  				});
 				</script>
+
+				<script>
+					window.addEventListener('load', function () {
+						
+
+
+						
+		                var map = document.getElementById('map');
+		                map.firstChild.setAttribute("id", "pdll");
+		                var markersContainer = d3.select("#pdll").append("g");
+
+		                var pdll = document.getElementById('pdll');
+		                pdll.firstChild.setAttribute("id", "carte");
+		                pdll.firstChild.nextSibling.setAttribute("id", "points");
+
+						document.getElementById("carte").setAttribute("transform","scale(2), translate(-140,-190)");
+
+
+
+
+						var jsonMarker = [
+							{"x":360,"y":180,"r":3.5,"c":"red","texte":"Radio 1"},
+							{"x":220,"y":242,"r":3.5,"c":"red","texte":"Radio 2"}
+						]
+
+						var markers = markersContainer.selectAll("circle")
+															.data(jsonMarker)
+															.enter()
+															.append("circle");
+
+						var div = d3.select("body").append("div").attr("class", "tooltip");
+
+						var markerAttributes = markers
+		                       .attr("cx", function (d) {return d.x;})
+		                       .attr("cy", function (d) {return d.y;})
+		                       .attr("r", function (d) {return d.r; })
+		                       .style("fill",function (d) {return d.c;})
+		                       .on("mouseover", function (d){
+		                       		div.html(d.texte)
+		                       		.style("left",(d3.event.pageX) + "px")
+		                       		.style("top",(d3.event.pageY+10) + "px")
+		                       		.style("visibility","visible");
+		                       })
+		                       .on("mouseout", function (d){
+		                       		div.style("visibility","hidden");
+		                       });
+					});
+				</script>
+
+
         </head>
         <body>
 
-        	<div id="map" style="width:500px;height:400px"></div>
+        	<p id="map" style="width:500px;height:400px"></p>
+        	<p id="infodpt"></p>
 
+			<script>
+				window.addEventListener('load', function () {
 
-
-
-
+				});
+			</script>
         </body>
 </html>
