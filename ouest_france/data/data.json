@@ -1,428 +1,461 @@
 {
-	"menage":{
-		"mono" :{
-			"1990":{
-				"val": null,
-				"pourcentage": 50.5,
-			},
-			"2000":{
-				"val": null,
-				"pourcentage": 50.7,
-			},
-			"2006":{
-				"val": null,
-				"pourcentage": 46.3,
-			},
-			"2007":{
-				"val": null,
-				"pourcentage": 46.6,
-			},
-			"2008":{
-				"val": null,
-				"pourcentage": 46.9,
-			},
-			"2009":{
-				"val": null,
-				"pourcentage": 47.5,
-			},
-			"2010":{
-				"val": null,
-				"pourcentage": 47.6,
-			},
-			"2011":{
-				"val": null,
-				"pourcentage": 48.2,
-			},
-			"2012":{
-				"val": null,
-				"pourcentage": 48.1,
-			},
-			"2013":{
-				"val": null,
-				"pourcentage": 48.3,
-			},
-			"2014":{
-				"val": null,
-				"pourcentage": 48.8,
-			}
-		},
-		"biPlus":{
-			"1990":{
-				"val": null,
-				"pourcentage": 26.3,
-			},
-			"2000":{
-				"val": null,
-				"pourcentage": 29.6,
-			},
-			"2006":{
-				"val": null,
-				"pourcentage": 35.7,
-			},
-			"2007":{
-				"val": null,
-				"pourcentage": 35.8,
-			},
-			"2008":{
-				"val": null,
-				"pourcentage": 35.8,
-			},
-			"2009":{
-				"val": null,
-				"pourcentage": 35.7,
-			},
-			"2010":{
-				"val": null,
-				"pourcentage": 35.9,
-			},
-			"2011":{
-				"val": null,
-				"pourcentage": 35.3,
-			},
-			"2012":{
-				"val": null,
-				"pourcentage": 35.2,
-			},
-			"2013":{
-				"val": null,
-				"pourcentage": 34.9,
-			},
-			"2014":{
-				"val": null,
-				"pourcentage": 34.0,
-			}
-		},
-		"none":{
-			"1990":{
-				"val": null,
-				"pourcentage": 23.2,
-			},
-			"2000":{
-				"val": null,
-				"pourcentage": 19.7,
-			},
-			"2006":{
-				"val": null,
-				"pourcentage": 18.0,
-			},
-			"2007":{
-				"val": null,
-				"pourcentage": 17.6,
-			},
-			"2008":{
-				"val": null,
-				"pourcentage": 17.3,
-			},
-			"2009":{
-				"val": null,
-				"pourcentage": 16.8,
-			},
-			"2010":{
-				"val": null,
-				"pourcentage": 16.5,
-			},
-			"2011":{
-				"val": null,
-				"pourcentage": 16.5,
-			},
-			"2012":{
-				"val": null,
-				"pourcentage": 16.7,
-			},
-			"2013":{
-				"val": null,
-				"pourcentage": 16.9,
-			},
-			"2014":{
-				"val": null,
-				"pourcentage": 17.2,
-			}
-		}
-	},
-	"detention":{
-		"1990":{
-			"val": 3.7,
-			"pourcentage": null,
-		},
-		"2000":{
-			"val": 4.4,
-			"pourcentage": null,
-		},
-		"2006":{
-			"val": 4.9,
-			"pourcentage": null,
-		},
-		"2007":{
-			"val": 4.9,
-			"pourcentage": null,
-		},
-		"2008":{
-			"val": 4.9,
-			"pourcentage": null,
-		},
-		"2009":{
-			"val": 4.9,
-			"pourcentage": null,
-		},
-		"2010":{
-			"val": 5.0,
-			"pourcentage": null,
-		},
-		"2011":{
-			"val": 5.1,
-			"pourcentage": null,
-		},
-		"2012":{
-			"val": 5.2,
-			"pourcentage": null,
-		},
-		"2013":{
-			"val": 5.3,
-			"pourcentage": null,
-		},
-		"2014":{
-			"val": 5.4,
-			"pourcentage": null,
-		}
-	},
-	"carburant":{
-		"diesel":{
-			"2009":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2010":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2011":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2012":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2013":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2014":{
-				"val": ,
-				"pourcentage": ,
-			}
-		},
-		"essence":{
-			"2009":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2010":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2011":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2012":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2013":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2014":{
-				"val": ,
-				"pourcentage": ,
-			}
-		},
-		"superethanol":{
-			"2009":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2010":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2011":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2012":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2013":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2014":{
-				"val": ,
-				"pourcentage": ,
-			}
-		},
-		"electricite":{
-			"2009":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2010":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2011":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2012":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2013":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2014":{
-				"val": ,
-				"pourcentage": ,
-			}
-		},
-		"hybride":{
-			"2009":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2010":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2011":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2012":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2013":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2014":{
-				"val": ,
-				"pourcentage": ,
-			}
-		},
-		"bicarburant":{
-			"2009":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2010":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2011":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2012":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2013":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2014":{
-				"val": ,
-				"pourcentage": ,
-			}
-		},
-		"gpl":{
-			"2009":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2010":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2011":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2012":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2013":{
-				"val": ,
-				"pourcentage": ,
-			},
-			"2014":{
-				"val": ,
-				"pourcentage": ,
-			}
-		}	
-	},
-	"achat":{
-		"neuf":{
-			"2010":{
-				"val": 2251669,
-				"pourcentage": 29.48,
-			},
-			"2011":{
-				"val": 2204229,
-				"pourcentage": 28.83,
-			},
-			"2012":{
-				"val": 1898760,
-				"pourcentage": 26.12,
-			},
-			"2013":{
-				"val": 1790456,
-				"pourcentage": 25.19,
-			},
-			"2014":{
-				"val": 1795885,
-				"pourcentage": 24.80,
-			},
-			"2015":{
-				"val": 1917226,
-				"pourcentage": 25.63,
-			}
-		},
-		"occasion":{
-			"2010":{
-				"val": 5386007,
-				"pourcentage": 70.52,
-			},
-			"2011":{
-				"val": 5440856,
-				"pourcentage": 71.17,
-			},
-			"2012":{
-				"val": 5371599,
-				"pourcentage": 73.88,
-			},
-			"2013":{
-				"val": 5317717,
-				"pourcentage": 74.81,
-			},
-			"2014":{
-				"val": 5446131,
-				"pourcentage": 75.20,
-			},
-			"2015":{
-				"val": 5562082,
-				"pourcentage": 74.37,
-			}
-		}
-	}
-
-
+  "menage": {
+    "years": [
+      "1990",
+      "2000",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014"
+    ],
+    "data": {
+      "mono": {
+        "1990": {
+          "val": null,
+          "pourcentage": 50.5
+        },
+        "2000": {
+          "val": null,
+          "pourcentage": 50.7
+        },
+        "2006": {
+          "val": null,
+          "pourcentage": 46.3
+        },
+        "2007": {
+          "val": null,
+          "pourcentage": 46.6
+        },
+        "2008": {
+          "val": null,
+          "pourcentage": 46.9
+        },
+        "2009": {
+          "val": null,
+          "pourcentage": 47.5
+        },
+        "2010": {
+          "val": null,
+          "pourcentage": 47.6
+        },
+        "2011": {
+          "val": null,
+          "pourcentage": 48.2
+        },
+        "2012": {
+          "val": null,
+          "pourcentage": 48.1
+        },
+        "2013": {
+          "val": null,
+          "pourcentage": 48.3
+        },
+        "2014": {
+          "val": null,
+          "pourcentage": 48.8
+        }
+      },
+      "biPlus": {
+        "1990": {
+          "val": null,
+          "pourcentage": 26.3
+        },
+        "2000": {
+          "val": null,
+          "pourcentage": 29.6
+        },
+        "2006": {
+          "val": null,
+          "pourcentage": 35.7
+        },
+        "2007": {
+          "val": null,
+          "pourcentage": 35.8
+        },
+        "2008": {
+          "val": null,
+          "pourcentage": 35.8
+        },
+        "2009": {
+          "val": null,
+          "pourcentage": 35.7
+        },
+        "2010": {
+          "val": null,
+          "pourcentage": 35.9
+        },
+        "2011": {
+          "val": null,
+          "pourcentage": 35.3
+        },
+        "2012": {
+          "val": null,
+          "pourcentage": 35.2
+        },
+        "2013": {
+          "val": null,
+          "pourcentage": 34.9
+        },
+        "2014": {
+          "val": null,
+          "pourcentage": 34
+        }
+      },
+      "none": {
+        "1990": {
+          "val": null,
+          "pourcentage": 23.2
+        },
+        "2000": {
+          "val": null,
+          "pourcentage": 19.7
+        },
+        "2006": {
+          "val": null,
+          "pourcentage": 18
+        },
+        "2007": {
+          "val": null,
+          "pourcentage": 17.6
+        },
+        "2008": {
+          "val": null,
+          "pourcentage": 17.3
+        },
+        "2009": {
+          "val": null,
+          "pourcentage": 16.8
+        },
+        "2010": {
+          "val": null,
+          "pourcentage": 16.5
+        },
+        "2011": {
+          "val": null,
+          "pourcentage": 16.5
+        },
+        "2012": {
+          "val": null,
+          "pourcentage": 16.7
+        },
+        "2013": {
+          "val": null,
+          "pourcentage": 16.9
+        },
+        "2014": {
+          "val": null,
+          "pourcentage": 17.2
+        }
+      },
+      "detention": {
+        "1990": {
+          "val": 3.7,
+          "pourcentage": null
+        },
+        "2000": {
+          "val": 4.4,
+          "pourcentage": null
+        },
+        "2006": {
+          "val": 4.9,
+          "pourcentage": null
+        },
+        "2007": {
+          "val": 4.9,
+          "pourcentage": null
+        },
+        "2008": {
+          "val": 4.9,
+          "pourcentage": null
+        },
+        "2009": {
+          "val": 4.9,
+          "pourcentage": null
+        },
+        "2010": {
+          "val": 5,
+          "pourcentage": null
+        },
+        "2011": {
+          "val": 5.1,
+          "pourcentage": null
+        },
+        "2012": {
+          "val": 5.2,
+          "pourcentage": null
+        },
+        "2013": {
+          "val": 5.3,
+          "pourcentage": null
+        },
+        "2014": {
+          "val": 5.4,
+          "pourcentage": null
+        }
+      }
+    }
+  },
+  "carburant": {
+    "years": [
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014"
+    ],
+    "data": {
+      "diesel": {
+        "2009": {
+          "val": 1628495,
+          "pourcentage": 70.73075496463235
+        },
+        "2010": {
+          "val": 1593173,
+          "pourcentage": 70.75536136830361
+        },
+        "2011": {
+          "val": 1595803,
+          "pourcentage": 72.39848216627031
+        },
+        "2012": {
+          "val": 1383313,
+          "pourcentage": 72.8536857045801
+        },
+        "2013": {
+          "val": 1199689,
+          "pourcentage": 67.00484961610232
+        },
+        "2014": {
+          "val": 1146658,
+          "pourcentage": 63.84986407671842
+        }
+      },
+      "essence": {
+        "2009": {
+          "val": 635542,
+          "pourcentage": 27.60362510890876
+        },
+        "2010": {
+          "val": 567857,
+          "pourcentage": 25.219437713619797
+        },
+        "2011": {
+          "val": 573520,
+          "pourcentage": 26.01948830275375
+        },
+        "2012": {
+          "val": 471255,
+          "pourcentage": 24.81915781656928
+        },
+        "2013": {
+          "val": 532109,
+          "pourcentage": 29.719271848266164
+        },
+        "2014": {
+          "val": 592927,
+          "pourcentage": 33.01621613193858
+        }
+      },
+      "bicarburant": {
+        "2009": {
+          "val": 25166,
+          "pourcentage": 1.0930400028492182
+        },
+        "2010": {
+          "val": 75710,
+          "pourcentage": 3.3624022056576823
+        },
+        "2011": {
+          "val": 12020,
+          "pourcentage": 0.5453240504238738
+        },
+        "2012": {
+          "val": 2052,
+          "pourcentage": 0.10807081482339745
+        },
+        "2013": {
+          "val": 2834,
+          "pourcentage": 0.15828414181678246
+        },
+        "2014": {
+          "val": 2296,
+          "pourcentage": 0.12784918251139005
+        }
+      },
+      "electricite": {
+        "2009": {
+          "val": 12,
+          "pourcentage": 0.0005211984437014471
+        },
+        "2010": {
+          "val": 184,
+          "pourcentage": 0.00817173432625827
+        },
+        "2011": {
+          "val": 2630,
+          "pourcentage": 0.11931799106612213
+        },
+        "2012": {
+          "val": 5663,
+          "pourcentage": 0.2982480625462474
+        },
+        "2013": {
+          "val": 8779,
+          "pourcentage": 0.4903233877944719
+        },
+        "2014": {
+          "val": 10561,
+          "pourcentage": 0.588072829487278
+        }
+      },
+      "hybride": {
+        "2009": {
+          "val": 9873,
+          "pourcentage": 0.4288160195553656
+        },
+        "2010": {
+          "val": 9655,
+          "pourcentage": 0.428793994130563
+        },
+        "2011": {
+          "val": 13641,
+          "pourcentage": 0.6188656715334494
+        },
+        "2012": {
+          "val": 29120,
+          "pourcentage": 1.5336365144528914
+        },
+        "2013": {
+          "val": 46785,
+          "pourcentage": 2.6130287843677378
+        },
+        "2014": {
+          "val": 43143,
+          "pourcentage": 2.4023507321815774
+        }
+      },
+      "gaz": {
+        "2009": {
+          "val": 48,
+          "pourcentage": 0.0020847937748057883
+        },
+        "2010": {
+          "val": 37,
+          "pourcentage": 0.0016432291851714996
+        },
+        "2011": {
+          "val": 24,
+          "pourcentage": 0.0010888333785501639
+        },
+        "2012": {
+          "val": 11,
+          "pourcentage": 0.0005793269800474522
+        },
+        "2013": {
+          "val": 15,
+          "pourcentage": 0.0008377777442666681
+        },
+        "2014": {
+          "val": 27,
+          "pourcentage": 0.001503452930229761
+        }
+      },
+      "superethanol": {
+        "2009": {
+          "val": 3250,
+          "pourcentage": 0.14115791183580859
+        },
+        "2010": {
+          "val": 5048,
+          "pourcentage": 0.22418975477691166
+        },
+        "2011": {
+          "val": 6556,
+          "pourcentage": 0.2974329845739531
+        },
+        "2012": {
+          "val": 7341,
+          "pourcentage": 0.38662176004803145
+        },
+        "2013": {
+          "val": 240,
+          "pourcentage": 0.01340444390826669
+        },
+        "2014": {
+          "val": 254,
+          "pourcentage": 0.014143594232531826
+        }
+      }
+    }
+  },
+  "achat": {
+    "years": [
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015"
+    ],
+    "data": {
+      "neuf": {
+        "2010": {
+          "val": 2251669,
+          "pourcentage": 29.481075133325895
+        },
+        "2011": {
+          "val": 2204229,
+          "pourcentage": 28.831975053253167
+        },
+        "2012": {
+          "val": 1898760,
+          "pourcentage": 26.116454496951253
+        },
+        "2013": {
+          "val": 1790456,
+          "pourcentage": 25.188694760242893
+        },
+        "2014": {
+          "val": 1795885,
+          "pourcentage": 24.798136320052315
+        },
+        "2015": {
+          "val": 1917226,
+          "pourcentage": 25.633735099557338
+        }
+      },
+      "occasion": {
+        "2010": {
+          "val": 5386007,
+          "pourcentage": 70.5189248666741
+        },
+        "2011": {
+          "val": 5440856,
+          "pourcentage": 71.16802494674684
+        },
+        "2012": {
+          "val": 5371599,
+          "pourcentage": 73.88354550304875
+        },
+        "2013": {
+          "val": 5317717,
+          "pourcentage": 74.8113052397571
+        },
+        "2014": {
+          "val": 5446131,
+          "pourcentage": 75.20186367994768
+        },
+        "2015": {
+          "val": 5562082,
+          "pourcentage": 74.36626490044266
+        }
+      }
+    }
+  }
 }
