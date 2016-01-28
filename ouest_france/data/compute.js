@@ -13,7 +13,7 @@ fs.readFile('./data.json', 'utf8', function(err,data){
 
 			compute(donnees.carburant);
 			compute(donnees.achat);
-			fs.writeFile('./data.json', JSON.stringify(donnees, null, 2), function(err){
+			fs.writeFile('./data.json', JSON.stringify(donnees, null, 4), function(err){
 				if(err) throw err;
 				else console.log("Saved!");
 			})			
