@@ -604,16 +604,6 @@ function rotatePoint(xToRotate, yTORotate, xCenter, yCenter, angle) {
 }
 
 
-//DESSIN des lignes des distances depuis nantes
-/*
-var lines = svg.selectAll("line").data(produits).enter().append("line").attr("x1",width/2).attr("y1",height/2).attr("x2",function(d,i){
-	var lex = d.distMax*Math.cos((360/produits.length)*i)+(width/2);
-	return lex;
-}).attr("y2",function(d,i){
-	var ley = d.distMax*Math.sin((360/produits.length)*i)+(height/2);
-	return ley;
-}).attr("stroke-width",2).attr("stroke","black");
-*/
 
 var groupes = svg.selectAll("g").data(produits).enter();
 
@@ -637,7 +627,51 @@ var lignes = groupes.append("line").attr("x1", function(d, i) {
 	var y = (height/2);
 	var angle = 360 * i / produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("stroke-width",2).attr("stroke","black");
+}).attr("stroke-width",2).attr("stroke","yellow");
+
+var lignesMoyenne = groupes.append("line").attr("x1", function(d, i) {
+	var x = (width/2) - nantesRadius;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+}).attr("y1", function(d, i) {
+	var x = (width/2) - nantesRadius;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+}).attr("x2",function(d,i){
+	var x = (width/2) - nantesRadius - d.distanceMoyenne;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+}).attr("y2",function(d,i){
+	var x = (width/2) - nantesRadius - d.distanceMoyenne;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+}).attr("stroke-width",2).attr("stroke","green");
+
+var lignesMin = groupes.append("line").attr("x1", function(d, i) {
+	var x = (width/2) - nantesRadius;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+}).attr("y1", function(d, i) {
+	var x = (width/2) - nantesRadius;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+}).attr("x2",function(d,i){
+	var x = (width/2) - nantesRadius - d.distMin;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+}).attr("y2",function(d,i){
+	var x = (width/2) - nantesRadius - d.distMin;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+}).attr("stroke-width",2).attr("stroke","red");
 
 var pointsMax = groupes.append("circle").attr("cx", function(d, i) {
     var x = (width/2) - nantesRadius - d.distMax;
