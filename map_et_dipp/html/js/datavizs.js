@@ -527,10 +527,10 @@ var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "
 
 
 var jardinJoseph = {
-    "printemps": {"total": 180369, "racines": 12850, "poids_haricots": 10934, "choux": 8760 "epinards_salades": 19851 "courges": 77400 "tomates": 35314 "aromatiques": 1260 "fruits": 11600 "autres": 2400},
-    "été": {"total": 118850, "racines": 7200, "poids_haricots": 5466, "choux": 0,"epinards_salades": 6671,"courges": 0,"tomates": 88286,"aromatiques": 1267,"fruits": 2695,"autres": 7265}, 
-    "automne": {"total": 22208, "racines": 0, "poids_haricots": 0, "choux": 2920,"epinards_salades": 0,"courges": 0,"tomates": 0,"aromatiques": 1273,"fruits": 15715,"autres": 2300},
-    "hiver": {"total": 16153, "racines": 0, "poids_haricots": 0, "choux": 2920,"epinards_salades": 13233,"courges": 0,"tomates": 0,"aromatiques": 0,"fruits": 0,"autres": 0}
+    "printemps": {"total": 180369, "racines": 12850, "poids_haricots": 10934, "choux": 8760, "epinards_salades": 19851, "courges": 77400, "tomates": 35314, "aromatiques": 1260, "fruits": 11600, "autres": 2400},
+    "été": {"total": 118850, "racines": 7200, "poids_haricots": 5466, "choux": 0, "epinards_salades": 6671, "courges": 0, "tomates": 88286, "aromatiques": 1267, "fruits": 2695, "autres": 7265}, 
+    "automne": {"total": 22208, "racines": 0, "poids_haricots": 0, "choux": 2920, "epinards_salades": 0, "courges": 0, "tomates": 0, "aromatiques": 1273, "fruits": 15715, "autres": 2300},
+    "hiver": {"total": 16153, "racines": 0, "poids_haricots": 0, "choux": 2920, "epinards_salades": 13233, "courges": 0, "tomates": 0, "aromatiques": 0, "fruits": 0, "autres": 0}
 };
 
 
@@ -584,10 +584,15 @@ produits.forEach(function(p)
 });
 
 
+var svgJoseph = d3.select("#legumesJoseph").append("svg").attr("width", 500).attr("height", 500);
+
+
+
+
 var nantesRadius = [50];
 var width = 500;
 var height = 500;
-var svg = d3.select("#legumesJoseph").append("svg").attr("width",width).attr("height",height);
+var svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("height",height);
 
 //DESSIN du cercle représentant nantes
 svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", width/2).attr("cy",height/2).attr("r",50).attr("fill","teal");
