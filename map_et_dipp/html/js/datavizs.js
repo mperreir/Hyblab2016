@@ -509,21 +509,21 @@ var dataset = [{"NomAmap":"AMAP de Petit-Mars","NomExploitation":"Alain OLIER","
 {"NomAmap":"Les Amis des Amaps de la Prime","NomExploitation":"Vergers du Moulin des Noues","CommuneExploitation":"Maisdon-sur-Sèvre","LATProd":-1.494443,"LONGProd":47.757252,"LONGAMAP":47.20803480000001,"LATAMAP":-1.5963603000000148,"Distance":null,"Produits":"Volailles et œufs"},
 {"NomAmap":"Les GUMES","NomExploitation":"Vergers du Moulin des Noues","CommuneExploitation":"Maisdon-sur-Sèvre","LATProd":-1.39767,"LONGProd":47.102522,"LONGAMAP":47.2074016,"LATAMAP":-1.5086939000000257,"Distance":null,"Produits":"Volailles et œufs"}];
 
-var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit":"Fruits", "distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Volailles et œufs","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Viticulture","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Galettes-Crêpes","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Pain","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Tisanes","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Huile","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Paysans boulangers","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Sel","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Céréales et farines","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Plantes aromatiques","distanceMoyenne":9999, "distMin":9999, "distMax":0}];
+var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":20},
+  {"produit":"Fruits", "distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":40},
+  {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":60},
+  {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":80},
+  {"produit": "Volailles et œufs","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":100},
+  {"produit": "Viticulture","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":120},
+  {"produit": "Galettes-Crêpes","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":140},
+  {"produit": "Pain","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":160},
+  {"produit": "Tisanes","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":180},
+  {"produit": "Huile","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":200},
+  {"produit": "Paysans boulangers","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":220},
+  {"produit": "Sel","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":240},
+  {"produit": "Céréales et farines","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":260},
+  {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":280},
+  {"produit": "Plantes aromatiques","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":300}];
 
 function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
   var R = 6371; // Radius of the earth in km
@@ -594,10 +594,11 @@ var height = 500;
 var svg = d3.select("#legumesJoseph").append("svg").attr("width",width).attr("height",height);
 svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", width/2).attr("cy",height/2).attr("r",50).attr("fill","teal");
 svg.selectAll("line").data(produits).enter().append("line").attr("x1",width/2).attr("y1",height/2).attr("x2",function(d){
-	//r cos teta
-	return d.distMax*Math.cos(45);
+	var lex = d.distMax*Math.cos(d.angle);
+	return lex;
 }).attr("y2",function(d){
-	return d.distMax*Math.sin(45);
+	var ley = d.distMax*Math.sin(d.angle);
+	return ley;
 }).attr("stroke-width",2).attr("stroke","teal");
 
 
