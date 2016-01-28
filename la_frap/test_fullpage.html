@@ -3,11 +3,10 @@
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>fullPage.js - Pure Javascript version</title>
-		<meta name="author" content="Alvaro Trigo Lopez" />
-		<meta name="description" content="fullPage plugin by Alvaro Trigo. Pure javascript version of full screen slider." />
-		<meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple,pure,javascript,slider,hijacking" />
-		<meta name="Resource-type" content="Document" />
+		<title>Radios associatives - Pays de la Loire</title>
+		<meta name="author" content="Radio Stars" />
+		<meta name="description" content="Presentation des radios associatives de la FRAP" />
+
 
 
 		<link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
@@ -26,16 +25,19 @@
 
         <script src="jquerysvg/jquery.svg.js"></script>
 
-        <script src="map_pays_de_la_loire.js"></script>		
+        <script src="map_pays_de_la_loire2.js"></script>		
 
 		<script>
-			$(document).ready(function() {
-				$('#map').vectorMap({
-					map:'pays_de_la_loire',
-				});
-				$('#map').css("background-color","rgba(0,0,0,0)");
+			window.addEventListener('load', function () {
 
-				
+				$(document).ready(function() {
+					$('#map').vectorMap({
+						map:'pays_de_la_loire2',
+					});
+					$('#map').css("background-color","rgba(0,0,0,0)");
+
+					
+				});
 			});
 		</script>
 
@@ -51,7 +53,7 @@
                 pdll.firstChild.setAttribute("id", "carte");
                 pdll.firstChild.nextSibling.setAttribute("id", "points");
 
-				document.getElementById("carte").setAttribute("transform","scale(2), translate(-140,-190)");
+				/*document.getElementById("carte").setAttribute("transform","scale(2), translate(-140,-190)");*/
 
 				var jsonDptInfo = [
 					{"n":"Sarthe","r":5,"a":6,"s":4,"b":62,"sc":9},				
@@ -74,8 +76,10 @@
 
 
 				var jsonMarker = [
-					{"x":360,"y":180,"r":3.5,"c":"red","texte":"Radio 1"},
-					{"x":220,"y":242,"r":3.5,"c":"red","texte":"Radio 2"}
+					{"x":560,"y":180,"r":3.5,"c":"red","texte":"Radio 1"},
+					{"x":450,"y":282,"r":3.5,"c":"red","texte":"Radio 2"},
+					{"x":200,"y":300,"r":3.5,"c":"red","texte":"Radio 3"}
+
 				]
 
 				var markers = markersContainer.selectAll("circle")
@@ -115,7 +119,8 @@
 			</div>
 			<div class="section " id="section1">
 				<div class="content1">
-					<p id="map" style="width:500px;height:400px"></p>
+
+					<p id="map" style="width:841.89px;height:595.28px"></p>
         			<p id="infodpt"></p>		
 
 				</div>

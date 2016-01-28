@@ -44,12 +44,28 @@ abbr,acronym { border: 0;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Custom CSS
 ------------------------------------------*/
 
 body{
 	font-family: Open Sans;
-	color: #179fae;
+	color: #000000;
 }		
 
 h1{
@@ -68,13 +84,14 @@ p{
 }
 
 .section{
-	background-color: #f1f1f1;
+	background-color: #a5f8b4;
 
 }
 
 /* Section 0
  * --------------------------------------- */
 #section0{
+	background-color: #f1f1f1;
 
 }
 
