@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 
 import json
+import math
 import csv
 from collections import defaultdict
+
+NUMBER_LSOA = 32844;
 
 INDICATORS = {
     "Crime": "crime",
@@ -35,12 +38,25 @@ def convert_numbers(d):
                 d[key] = float(value)
             except Exception:
                 pass
-            convert_numbers(d[key])
+
+            try:
+                convert_numbers(d[key])
+            except Exception:
+                pass
     except Exception:
         pass
 
 def filter_row(row):
     return row
+
+def calculate_exp(data):
+    for v in data.values():
+        for short_id in INDICATORS.values():
+            v[short_id]["exp"] = (
+                -23 * math.log(1 - v[short_id]["rank"] / NUMBER_LSOA * (
+                    1 - math.exp(-100 / 23))
+                )
+            )
 
 def main():
     with open('IMD_Preston_Complete.csv', newline='') as f:
@@ -93,6 +109,8 @@ def main():
         }
 
     convert_numbers(data)
+
+    calculate_exp(data)
 
     with open('data.json', 'w') as f:
         f.write("window.data = ")
