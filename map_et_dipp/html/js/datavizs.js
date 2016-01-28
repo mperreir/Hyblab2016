@@ -513,17 +513,8 @@ var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "
   {"produit":"Fruits", "distanceMoyenne":9999, "distMin":9999, "distMax":0},
   {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0},
   {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Volailles et œufs","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Viticulture","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Galettes-Crêpes","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Pain","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Tisanes","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Huile","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Paysans boulangers","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Sel","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Céréales et farines","distanceMoyenne":9999, "distMin":9999, "distMax":0},
   {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Plantes aromatiques","distanceMoyenne":9999, "distMin":9999, "distMax":0}];
+  {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0}];
 
 
 var jardinJoseph = {
@@ -562,12 +553,15 @@ var s=-1;
 var qte = -1;
 var moy = -1;
 
+var lesp = [];
+
 produits.forEach(function(p)
 {
 	s = 0;
 	qte = 0;
 	moy = 0;
 	dataset.forEach(function(d){
+		
 		if(d.Produits == p.produit)
 		{
 			if(d.Distance < p.distMin)
