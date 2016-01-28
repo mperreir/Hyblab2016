@@ -533,7 +533,17 @@ var jardinJoseph = {
     "hiver": {"total": 16153, "racines": 0, "poids_haricots": 0, "choux": 2920, "epinards_salades": 13233, "courges": 0, "tomates": 0, "aromatiques": 0, "fruits": 0, "autres": 0}
 };
 
-
+var couleursProduits = {
+    "racines": "#ffee00", 
+    "poids_haricots": "#02365", 
+    "choux": "#11aabb", 
+    "epinards_salades": "#aa22bb", 
+    "courges": "#9900dd", 
+    "tomates": "#dd99cc", 
+    "aromatiques": "#cc66bb", 
+    "fruits": "#aaee33", 
+    "autres": "#332211"
+}
 
 
 
@@ -585,6 +595,23 @@ produits.forEach(function(p)
 
 
 var svgJoseph = d3.select("#legumesJoseph").append("svg").attr("width", 500).attr("height", 500);
+var rectangles = svgJoseph.selectAll("rect").data(jardinJoseph["printemps"]).enter().append("rect").attr("x", function(d,i){
+	return i*20;
+}).attr("y",function(d){return height-(d.distanceMoyenne);}).attr("width",19).attr("height",function(d){
+	return d.distanceMoyenne;
+}).attr("fill", function(d){
+	return "rgb(" + couleursProduits[d.] + ")";
+});
+
+
+svg.selectAll("text").data(produits).enter().append("text").text(function(d){
+	return d.produit+d.distanceMoyenne
+}).attr("x", function(d,i){
+	return i*20;
+}).attr("y", function(d){
+	return height-d.distanceMoyenne;
+}).attr("font-size","11px").attr("fill","white");
+
 
 
 
@@ -756,20 +783,3 @@ var lines = svg.selectAll("line").data(produits).enter().append("line").attr("x1
 }).attr("stroke-width",2).attr("stroke","black");
 */
 
-
-
-
-svg.selectAll("rect").data(produits).enter().append("rect").attr("x", function(d,i){
-	return i*20;
-}).attr("y",function(d){return height-(d.distanceMoyenne);}).attr("width",19).attr("height",function(d){
-	return d.distanceMoyenne;
-}).attr("fill", function(d){
-	return "rgb(0,"+(d.distanceMoyenne*10)+",0)";
-});
-svg.selectAll("text").data(produits).enter().append("text").text(function(d){
-	return d.produit+d.distanceMoyenne
-}).attr("x", function(d,i){
-	return i*20;
-}).attr("y", function(d){
-	return height-d.distanceMoyenne;
-}).attr("font-size","11px").attr("fill","white");
