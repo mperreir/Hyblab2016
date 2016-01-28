@@ -509,21 +509,21 @@ var dataset = [{"NomAmap":"AMAP de Petit-Mars","NomExploitation":"Alain OLIER","
 {"NomAmap":"Les Amis des Amaps de la Prime","NomExploitation":"Vergers du Moulin des Noues","CommuneExploitation":"Maisdon-sur-Sèvre","LATProd":-1.494443,"LONGProd":47.757252,"LONGAMAP":47.20803480000001,"LATAMAP":-1.5963603000000148,"Distance":null,"Produits":"Volailles et œufs"},
 {"NomAmap":"Les GUMES","NomExploitation":"Vergers du Moulin des Noues","CommuneExploitation":"Maisdon-sur-Sèvre","LATProd":-1.39767,"LONGProd":47.102522,"LONGAMAP":47.2074016,"LATAMAP":-1.5086939000000257,"Distance":null,"Produits":"Volailles et œufs"}];
 
-var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":20},
-  {"produit":"Fruits", "distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":40},
-  {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":60},
-  {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":80},
-  {"produit": "Volailles et œufs","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":100},
-  {"produit": "Viticulture","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":120},
-  {"produit": "Galettes-Crêpes","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":140},
-  {"produit": "Pain","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":160},
-  {"produit": "Tisanes","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":180},
-  {"produit": "Huile","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":200},
-  {"produit": "Paysans boulangers","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":220},
-  {"produit": "Sel","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":240},
-  {"produit": "Céréales et farines","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":260},
-  {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":280},
-  {"produit": "Plantes aromatiques","distanceMoyenne":9999, "distMin":9999, "distMax":0,"angle":300}];
+var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit":"Fruits", "distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Volailles et œufs","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Viticulture","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Galettes-Crêpes","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Pain","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Tisanes","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Huile","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Paysans boulangers","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Sel","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Céréales et farines","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Plantes aromatiques","distanceMoyenne":9999, "distMin":9999, "distMax":0}];
 
 function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
   var R = 6371; // Radius of the earth in km
@@ -571,35 +571,47 @@ produits.forEach(function(p)
 	
 });
 
-/*var svg = d3.select("#legumesJoseph").append("svg").attr("width", 500).attr("height",500);
-var circles = svg.selectAll("circle").data(dataset).enter().append("circle");
 
-circles.attr("cx", function(d,i){
-	return (i*50)+25;
-}).attr("cy", 50/2).attr("r",function(d){return d;}).attr("fill","yellow").attr("stroke","grey").attr("stroke-width",function(d){return d/2;});*/
-/*var w = 500;
-var h = 100;
-var svg = d3.select("#legumesJoseph").append("svg").attr("width",w).attr("height",h);
-svg.selectAll("rect").data(dataset).enter().append("rect").attr("x",function(d,i){
-	return i*20;
-}).attr("y",function(d){return h-(4*d);}).attr("width",19).attr("height",function(d){
-	return d*4;
-}).attr("fill",function(d){
-	return "rgb("+(d*10)+",0,0)";
-});
-*/
 var nantesRadius = [50];
 var width = 500;
 var height = 500;
 var svg = d3.select("#legumesJoseph").append("svg").attr("width",width).attr("height",height);
+
+//DESSIN du cercle représentant nantes
 svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", width/2).attr("cy",height/2).attr("r",50).attr("fill","teal");
-svg.selectAll("line").data(produits).enter().append("line").attr("x1",width/2).attr("y1",height/2).attr("x2",function(d){
-	var lex = d.distMax*Math.cos(d.angle);
+
+
+//DESSIN des lignes des distances depuis nantes
+/*
+var lines = svg.selectAll("line").data(produits).enter().append("line").attr("x1",width/2).attr("y1",height/2).attr("x2",function(d,i){
+	var lex = d.distMax*Math.cos((360/produits.length)*i)+(width/2);
 	return lex;
-}).attr("y2",function(d){
-	var ley = d.distMax*Math.sin(d.angle);
+}).attr("y2",function(d,i){
+	var ley = d.distMax*Math.sin((360/produits.length)*i)+(height/2);
 	return ley;
-}).attr("stroke-width",2).attr("stroke","teal");
+}).attr("stroke-width",2).attr("stroke","black");
+*/
+var lines = svg.selectAll("line").data(produits).enter().append("line").attr("x1", function(d, i) {
+	var x = (width/2) - nantesRadius;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return x;
+	//return x * Math.cos(angle) - y * Math.sin(angle);
+}).attr("y1", function(d, i) {
+	var x = (width/2) - nantesRadius;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return y;
+	//return x * Math.sin(angle) + y * Math.cos(angle);
+}).attr("x2",function(d,i){
+	var lex = d.distMax*Math.cos((360/produits.length)*i)+(width/2);
+	return lex;
+}).attr("y2",function(d,i){
+	var ley = d.distMax*Math.sin((360/produits.length)*i)+(height/2);
+	return ley;
+}).attr("stroke-width",2).attr("stroke","black");
+
+
 
 
 
@@ -617,11 +629,3 @@ svg.selectAll("text").data(produits).enter().append("text").text(function(d){
 }).attr("y", function(d){
 	return height-d.distanceMoyenne;
 }).attr("font-size","11px").attr("fill","white");
-/*
-svg.selectAll("text").data(dataset).enter().append("text").text(function(d){
-	return d;
-}).attr("x",function(d,i){
-	return i*20+3;
-}).attr("y",function(d){
-	return h-(4*d)+15;
-}).attr("font-size","11px").attr("fill","white");*/
