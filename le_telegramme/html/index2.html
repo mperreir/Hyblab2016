@@ -58,6 +58,8 @@
     }
   </style>
   <link rel="stylesheet" href="lib/OSMBuildings/dist/OSMBuildings/OSMBuildings.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="lib/OSMBuildings/dist/OSMBuildings/OSMBuildings.js"></script>
   <script src="lib/tween.js/src/Tween.js"></script>
 </head>
@@ -154,7 +156,44 @@
     } 
     }]};
 
-  var valuesFrom = {latitude: 48.431108484872624, longitude: -4.351628300245521, rotation: 0, zoom: 15, tilt: 10},
+
+
+  /* JSON File loading */
+  $.get('geojson1.geojson', function (data) {
+      alert("Data: " + data + "\nStatus: " + status);
+      var test =  JSON.parse(data);
+
+
+      var valuesFrom = {latitude: 48.431108484872624, longitude: -4.351628300245521, rotation: 0, zoom: 17.3, tilt: 60},
+      valuesTo = {latitude: 48.410756673651527, longitude: -4.457091276180201, rotation: 0, zoom: 15, tilt: 20},
+      animationTime = 10000;
+
+      var tween = new TWEEN.Tween(valuesFrom)
+          .to(valuesTo, animationTime)
+          .onUpdate(function() {
+              // here we call the functions to update the map state
+              map.setPosition({ latitude: this.latitude, longitude: this.longitude });
+              map.setRotation(this.rotation);
+              map.setZoom(this.zoom);
+              map.setTilt(this.tilt);
+          
+              
+          })
+          .start(10000);
+
+      requestAnimationFrame(animate);
+
+      function animate(time) {
+          requestAnimationFrame(animate);
+          TWEEN.update(time);
+      }
+
+      /*osmb.addGeoJSON(geojson2);*/
+      osmb.addGeoJSON(test);
+  });
+
+  /* ANIMATIONS */
+/*  var valuesFrom = {latitude: 48.431108484872624, longitude: -4.351628300245521, rotation: 0, zoom: 15, tilt: 10},
     valuesTo = {latitude: 48.410756673651527, longitude: -4.457091276180201, rotation: -25, zoom: 15, tilt: 10},
     animationTime = 15000;
 
@@ -174,7 +213,7 @@
   function animate(time) {
       requestAnimationFrame(animate);
       TWEEN.update(time);
-  }
+  }*/
 
  // var test = require("test_bat.geojson");
   

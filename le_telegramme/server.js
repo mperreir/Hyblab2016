@@ -8,6 +8,10 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'html')));
 
 // You can then add whatever routing code you need
+app.get('/data/geojson1.geojson', function(req, res){
+		
+});
+
 
 // This module is exported and served by the main server.js located
 // at the root of this set of projects. You can access it by lanching the main
