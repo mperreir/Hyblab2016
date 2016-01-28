@@ -581,6 +581,17 @@ var svg = d3.select("#legumesJoseph").append("svg").attr("width",width).attr("he
 svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", width/2).attr("cy",height/2).attr("r",50).attr("fill","teal");
 
 
+
+
+/**
+ * Retourne le point résultant de la rotation d'un point par rapport à un point central et d'un angle
+ * @param   {number} xToRotate coordonnée x du point sur lequel la rotation est effectuée
+ * @param   {number} yTORotate coordonnée y du point sur lequel la rotation est effectuée
+ * @param   {number} xCenter   coordonnée x du point central de la rotation
+ * @param   {number} yCenter   coordonnée y du point central de la rotation
+ * @param   {number} angle     l'angle de la rotation
+ * @returns {object} objet contenant les coordonnées x et y du point résultant
+ */
 function rotatePoint(xToRotate, yTORotate, xCenter, yCenter, angle) {
     var X = xCenter - xToRotate;
     var Y = yCenter - yTORotate;
@@ -614,8 +625,6 @@ var lines = svg.selectAll("line").data(produits).enter().append("line").attr("x1
 	var angle = 360 * i / produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("x2",function(d,i){
-	var lex = d.distMax*Math.cos((360/produits.length)*i)+(width/2);
-    
 	var x = (width/2) - nantesRadius - d.distMax;
 	var y = (height/2);
 	var angle = 360 * i / produits.length;
