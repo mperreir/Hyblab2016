@@ -502,16 +502,12 @@ STATS = (function() {
         this._div.innerHTML = '';
 
         this._input = L.DomUtil.create('input', '');
-
         this._input.setAttribute('type', 'text');
         this._input.setAttribute('id', 'searchbox');
         this._input.setAttribute('placeholder', 'TRY YOUR POSTCODE HERE :)');
         this._input.setAttribute('maxlength', 8);
 
-
         this._div.appendChild(this._input);
-
-
 
         return this._div;
     };

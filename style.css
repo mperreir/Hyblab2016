@@ -36,13 +36,13 @@ body {
     border-radius: 5px;
 }
 .info h4 {
-    margin: 0 5px 5px 0;
+    margin: 0 5px 10px 0;
     color: #777;
     float: left;
     clear: right;
 }
 .info h5 {
-    margin: 0 5px 5px 0;
+    margin: 0 5px 10px 0;
     color: #777;
     float: left;
 }
