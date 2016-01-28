@@ -1,11 +1,11 @@
 
 
-var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit":"Fruits", "distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0}];
+var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":0},
+  {"produit":"Fruits", "distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":0.5235987755982988},
+  {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":120},
+  {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":180},
+  {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":240},
+  {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":300}];
 
 
 var jardinJoseph = {
@@ -105,87 +105,111 @@ var svgJoseph = d3.select("#legumesJoseph").append("svg").attr("width", 500).att
 
 
 
-var nantesRadius = [50];
+var nantesRadius = [20];
 var width = 500;
 var height = 500;
 var svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("height",height);
 
 //DESSIN du cercle représentant nantes
-svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", width/2).attr("cy",height/2).attr("r",50).attr("fill","teal");
+svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", width/2).attr("cy",height/2).attr("r",nantesRadius).attr("fill","teal");
 
 
 
 var groupes = svg.selectAll("g").data(produits).enter();
 
+var angleActuMax = 0;
+var angleActuMoy = 0;
+var angleActuMin = 0;
 
 // DESSIN DES LIGNES DES DISTANCES
 var lignesMax = groupes.append("line").attr("x1", function(d, i) {
 	var x = (width/2) - nantesRadius;
 	var y = (height/2);
-	//var angle = 360 * i / produits.length;
-	var angle = 60*i;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 }).attr("y1", function(d, i) {
 	var x = (width/2) - nantesRadius;
 	var y = (height/2);
-	var angle = 60 * i;// / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("x2",function(d,i){
 	var x = (width/2) - nantesRadius - d.distMax;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+	var angle = i*(Math.PI*2)/produits.length;
+	d.xmax = rotatePoint(x,y,(width/2), (height/2), angle).x;
+	return d.xmax;
 }).attr("y2",function(d,i){
 	var x = (width/2) - nantesRadius - d.distMax;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+	//var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
+	d.ymax = rotatePoint(x, y, (width/2), (height/2), angle).y;
+	return d.ymax;
 }).attr("stroke-width",2).attr("stroke","yellow");
 
+//##### LIGNES MOYENNES
 var lignesMoyenne = groupes.append("line").attr("x1", function(d, i) {
 	var x = (width/2) - nantesRadius;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 }).attr("y1", function(d, i) {
 	var x = (width/2) - nantesRadius;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("x2",function(d,i){
-	var x = (width/2) - nantesRadius - d.distanceMoyenne;
+var x = (width/2) - nantesRadius - d.distanceMoyenne;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 }).attr("y2",function(d,i){
 	var x = (width/2) - nantesRadius - d.distanceMoyenne;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("stroke-width",2).attr("stroke","green");
 
+
+
+
+
+//##### LIGNES MIN
 var lignesMin = groupes.append("line").attr("x1", function(d, i) {
 	var x = (width/2) - nantesRadius;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 }).attr("y1", function(d, i) {
 	var x = (width/2) - nantesRadius;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("x2",function(d,i){
 	var x = (width/2) - nantesRadius - d.distMin;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 }).attr("y2",function(d,i){
 	var x = (width/2) - nantesRadius - d.distMin;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("stroke-width",2).attr("stroke","red");
 
+
+svg.selectAll("text").data(produits).enter().append("text").text(function(d){
+	return d.produit;
+}).attr("x", function(d,i){
+	return d.xmax;
+}).attr("y", function(d){
+	return d.ymax;
+}).attr("font-size","11px").attr("fill","white");
+
+
+
+// ######### DESSIN DES CERCLES
+/*
 var pointsMax = groupes.append("circle").attr("cx", function(d, i) {
     var x = (width/2) - nantesRadius - d.distMax;
 	var y = (height/2);
@@ -222,12 +246,12 @@ var pointsMoy = groupes.append("circle").attr("cx", function(d, i) {
 	var y = (height/2);
 	var angle = 360 * i / produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("r", 5).attr("fill","green");
+}).attr("r", 5).attr("fill","green");*/
 
 
 
 
-
+/*
 svg.selectAll("rect").data(produits).enter().append("rect").attr("x", function(d,i){
 	return i*20;
 }).attr("y",function(d){return height-(d.distanceMoyenne);}).attr("width",19).attr("height",function(d){
@@ -241,5 +265,5 @@ svg.selectAll("text").data(produits).enter().append("text").text(function(d){
 	return i*20;
 }).attr("y", function(d){
 	return height-d.distanceMoyenne;
-}).attr("font-size","11px").attr("fill","white");
+}).attr("font-size","11px").attr("fill","white");*/
 });
