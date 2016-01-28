@@ -193,18 +193,12 @@ STATS = (function() {
         return RGBtoHEX(rgb.r, rgb.g, rgb.b);
     }
 
-    function expTransform(rank) {
-        return -23 * Math.log(1 - rank / NUMBER_LSOA * (
-            1 - Math.exp(-100/23)
-        ))
-    }
-
     window.calculateIMD = function(lsoa11cd) {
         var sum = 1;
         return Object.keys(INDICATORS).map(function(id) {
             var val = Number.parseFloat(document.getElementById(id).value);
             sum += val;
-            return expTransform(window.data[lsoa11cd][id].rank) * val;
+            return window.data[lsoa11cd][id]["exp"] * val;
         }).map(function(val) {
             return val / sum;
         }).reduce(function(a, b) {
