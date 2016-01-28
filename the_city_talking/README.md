@@ -6,10 +6,13 @@ Sujet :
 
 Equipe :
 
-Patricipants :
-- AGR :
-- Polytech :  
-- SciencesCom :
+Participants :
+* AGR :
+* Polytech :
+	* Gregory Rocchi
+	* Benjamin Deslandes
+	* Andrès Franco
+* SciencesCom :
 
 # Installation
 
@@ -31,7 +34,7 @@ $ node_modules/.bin/webpack --colors --progress --watch
 
 ou si webpack est installé via (npm install -g webpack)
 
-$ webpack --colors --progress --watch 
+$ webpack --colors --progress --watch
 
 (Pour reconstruire le js/scss automatiquement à chaque changement)
 
