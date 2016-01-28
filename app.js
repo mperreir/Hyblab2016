@@ -521,15 +521,15 @@ STATS = (function() {
                 for (var layer in topoLsoaLayer["_layers"]) {
                     if (topoLsoaLayer["_layers"][layer].feature.properties.LSOA11CD === lsoa11cd) {
                         map.fitBounds(topoLsoaLayer["_layers"][layer].getBounds());
+                        popup
+                            .setLatLng(topoLsoaLayer["_layers"][layer].getBounds().getCenter())
+                            .setContent(topoLsoaLayer["_layers"][layer].feature.properties.LSOA11NM)
+                            .openOn(map);
                         topoLsoaLayer["_layers"][layer].setStyle({
                             weight: 5,
                             color: '#fff',
                             opacity: 1
                         });
-                        popup
-                            .setLatLng(topoLsoaLayer["_layers"][layer].getBounds().getCenter())
-                            .setContent(topoLsoaLayer["_layers"][layer].feature.properties.LSOA11NM)
-                            .openOn(map);
                     }
                 }
             }
