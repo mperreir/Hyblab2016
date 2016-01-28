@@ -581,6 +581,18 @@ var svg = d3.select("#legumesJoseph").append("svg").attr("width",width).attr("he
 svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", width/2).attr("cy",height/2).attr("r",50).attr("fill","teal");
 
 
+function rotatePoint(xToRotate, yTORotate, xCenter, yCenter, angle) {
+    var X = xCenter - xToRotate;
+    var Y = yCenter - yTORotate;
+    var xRotate = xCenter + X * Math.cos(angle) - Y * Math.sin(angle);
+    var yRotate = yCenter + X * Math.sin(angle) + Y * Math.cos(angle);
+    return {
+        x: xRotate, 
+        y: yRotate
+    }
+}
+
+
 //DESSIN des lignes des distances depuis nantes
 /*
 var lines = svg.selectAll("line").data(produits).enter().append("line").attr("x1",width/2).attr("y1",height/2).attr("x2",function(d,i){
@@ -595,20 +607,25 @@ var lines = svg.selectAll("line").data(produits).enter().append("line").attr("x1
 	var x = (width/2) - nantesRadius;
 	var y = (height/2);
 	var angle = 360 * i / produits.length;
-	return x;
-	//return x * Math.cos(angle) - y * Math.sin(angle);
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 }).attr("y1", function(d, i) {
 	var x = (width/2) - nantesRadius;
 	var y = (height/2);
 	var angle = 360 * i / produits.length;
-	return y;
-	//return x * Math.sin(angle) + y * Math.cos(angle);
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("x2",function(d,i){
 	var lex = d.distMax*Math.cos((360/produits.length)*i)+(width/2);
-	return lex;
+    
+	var x = (width/2) - nantesRadius - d.distMax;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 }).attr("y2",function(d,i){
 	var ley = d.distMax*Math.sin((360/produits.length)*i)+(height/2);
-	return ley;
+	var x = (width/2) - nantesRadius - d.distMax;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("stroke-width",2).attr("stroke","black");
 
 
