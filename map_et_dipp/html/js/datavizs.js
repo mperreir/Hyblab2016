@@ -57,6 +57,7 @@ function rotatePoint(xToRotate, yTORotate, xCenter, yCenter, angle) {
 }
 
 
+//récupération des données
 var dataset;
 
 $.getJSON('./js/donneesAMAPSProducteurs.js', function(data){ 
@@ -65,7 +66,7 @@ $.getJSON('./js/donneesAMAPSProducteurs.js', function(data){
 
 
 
-
+//établissement des distances min,moy et max entre les amaps/producteurs
 dataset.forEach(function (d) {
 	d.Distance = getDistanceFromLatLonInKm(d.LATProd, d.LONGProd, d.LATAMAP, d.LONGAMAP);
 });
@@ -111,11 +112,6 @@ var svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("hei
 
 //DESSIN du cercle représentant nantes
 svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", width/2).attr("cy",height/2).attr("r",50).attr("fill","teal");
-
-
-
-
-
 
 
 
@@ -228,33 +224,6 @@ var pointsMoy = groupes.append("circle").attr("cx", function(d, i) {
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("r", 5).attr("fill","green");
 
-
-
-
-/*
-var lines = svg.selectAll("line").data(produits).enter().append("line").attr("x1", function(d, i) {
-	var x = (width/2) - nantesRadius;
-	var y = (height/2);
-	var angle = 360 * i / produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).x;
-}).attr("y1", function(d, i) {
-	var x = (width/2) - nantesRadius;
-	var y = (height/2);
-	var angle = 360 * i / produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("x2",function(d,i){
-	var x = (width/2) - nantesRadius - d.distMax;
-	var y = (height/2);
-	var angle = 360 * i / produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).x;
-}).attr("y2",function(d,i){
-	var ley = d.distMax*Math.sin((360/produits.length)*i)+(height/2);
-	var x = (width/2) - nantesRadius - d.distMax;
-	var y = (height/2);
-	var angle = 360 * i / produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("stroke-width",2).attr("stroke","black");
-*/
 
 
 
