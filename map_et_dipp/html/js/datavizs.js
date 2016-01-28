@@ -614,6 +614,73 @@ var lines = svg.selectAll("line").data(produits).enter().append("line").attr("x1
 	return ley;
 }).attr("stroke-width",2).attr("stroke","black");
 */
+
+var groupes = svg.selectAll("g").data(produits).enter();
+
+var lignes = groupes.append("line").attr("x1", function(d, i) {
+	var x = (width/2) - nantesRadius;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+}).attr("y1", function(d, i) {
+	var x = (width/2) - nantesRadius;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+}).attr("x2",function(d,i){
+	var x = (width/2) - nantesRadius - d.distMax;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+}).attr("y2",function(d,i){
+	var x = (width/2) - nantesRadius - d.distMax;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+}).attr("stroke-width",2).attr("stroke","black");
+
+var pointsMax = groupes.append("circle").attr("cx", function(d, i) {
+    var x = (width/2) - nantesRadius - d.distMax;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+}).attr("cy", function(d, i) {
+    var x = (width/2) - nantesRadius - d.distMax;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+}).attr("r", 5).attr("fill","yellow");
+
+
+var pointsMin = groupes.append("circle").attr("cx", function(d, i) {
+    var x = (width/2) - nantesRadius - d.distMin;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+}).attr("cy", function(d, i) {
+    var x = (width/2) - nantesRadius - d.distMin;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+}).attr("r", 5).attr("fill","red");
+
+
+var pointsMoy = groupes.append("circle").attr("cx", function(d, i) {
+    var x = (width/2) - nantesRadius - d.distanceMoyenne;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+}).attr("cy", function(d, i) {
+    var x = (width/2) - nantesRadius - d.distanceMoyenne;
+	var y = (height/2);
+	var angle = 360 * i / produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+}).attr("r", 5).attr("fill","green");
+
+
+
+
+/*
 var lines = svg.selectAll("line").data(produits).enter().append("line").attr("x1", function(d, i) {
 	var x = (width/2) - nantesRadius;
 	var y = (height/2);
@@ -636,7 +703,7 @@ var lines = svg.selectAll("line").data(produits).enter().append("line").attr("x1
 	var angle = 360 * i / produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("stroke-width",2).attr("stroke","black");
-
+*/
 
 
 
