@@ -3,7 +3,15 @@
   <head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
+
+    <!-- set viewport correctly so that the page displays full width on mobiel devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Hyblab 2016</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../libraries/bootstrap/dist/css/bootstrap.css">
+
     <!-- Déclaration de la feuille de style du document-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/javascript.fullPage.css" />
@@ -11,7 +19,7 @@
       <style>
         /* Reset CSS
          * --------------------------------------- */
-        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+        body,div,dl,dt,dd,ul,ol,h1,h2,h3,h4,h5,h6,pre,
         form,fieldset,input,textarea,p,blockquote,th,td {
             padding: 0;
             margin: 0;
@@ -41,13 +49,13 @@
             text-align: left;
 
         }
-        h1,h2,h3,h4,h5,h6 {
+        /*h1,h2,h3,h4,h5,h6 {
             font-weight: normal;
             font-size: 100%;
             margin:0;
             padding:0;
             color:#444;
-        }
+        }*/
         q:before,q:after {
             content:'';
         }
@@ -60,9 +68,6 @@
         body{
           font-family: arial,helvetica;
           color: #F2F2F2;
-        }
-        h1{
-          font-size: 6em;
         }
         p{
           font-size: 2em;
@@ -145,11 +150,123 @@
     <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
     <div id="container">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <!--<header>
-      <h1>Hyblab 2016</h1>
-    </header>-->
+      <section class="section" style="background-color:#00ffff; opacity: 0.8">
+        <span class="row contenu titre_et_sous_titre">
+          <h1 class="col-md-12">
+            Top 5 des choses à savoir sur les Pays de la Loire
+          </h1>
+          <span class="row">
+            <h2 class="col-md-offset-4 col-md-4">
+              Ceci est une phrase d'accroche
+            </h2>
+          </span>
+        </span>
+      </section>
 
+      <section class="section" style="background-color:#c53e3e; opacity: 0.8">
+        <span class="row contenu">
+          <h2 class="col-md-offset-3 col-md-6">
+            Ceci est une autre phrase d'accroche
+          </h2>
+        </span>
+      </section>
+
+      <section class="section" style="background-color:#8dc63f; opacity: 0.9">
+        <section class="slide">
+          <span class="row">
+            <h2 class="text-center col-md-12">
+              Quel est le titre de ce site ?
+            </h2>
+          </span>
+          <span class="text-center row contenu slide_width">
+            <p class"text-center" style="color:red">IMAGE</p>
+          </span>
+          <span class="row contenu propositions">
+            <ul class=" text-center total_width col-md-12" id="question1">
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q1_p1">Les Pays de la Loire au top</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q1_p2">L'équipe par défaut présente</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q1_p3">Top 5 des choses à savoir sur les Pays de la Loire</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q1_p4">Je sais plus</li>
+            </ul>
+          </span>
+        </section>
+
+        <section class="slide">
+          <span class="row">
+            <h2 class="text-center col-md-12">
+              De quelle couleur est cette diapo ?
+            </h2>
+          </span>
+          <span class="text-center row contenu slide_width">
+            <p class="text-center" style="color:red">IMAGE</p>
+          </span>
+          <span class="row contenu propositions">
+            <ul class="text-center total_width col-md-12">
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q2_p1">Jaune</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q2_p2">Vert</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q2_p3">Pas joli</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q2_p4">Je ne sais pas</li>
+            </ul>
+          </span>
+        </section>
+
+        <section class="slide">
+          <span class="row">
+            <h2 class="text-center col-md-12">
+              Cette question a pour but de tester votre attention, sélectionnez la proposition n°3
+            </h2>
+          </span>
+          <span class="text-center row contenu slide_width">
+            <p class="text-center" style="color:red">IMAGE</p>
+          </span>
+          <span class="row contenu propositions">
+            <ul class="text-center total_width col-md-12">
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q3_p1">Cette réponse teste votre attention</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q3_p2">Je ne comprends pas</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q3_p3">Ne pas sélectionner</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q3_p4">Ceci n'est pas la proposition n°3</li>
+            </ul>
+          </span>
+        </section>
+
+        <section class="slide">
+          <span class="row">
+            <h2 class="text-center col-md-12">
+              Elouarn peut-il tout faire en web ?
+            </h2>
+          </span>
+          <span class="text-center row contenu slide_width">
+            <p class="text-center" style="color:red">IMAGE</p>
+          </span>
+          <span class="row contenu propositions">
+            <ul class="text-center total_width col-md-12">
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q4_p1">Oui</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q4_p2">Oui</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q4_p3">Oui</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q4_p4">Oui</li>
+            </ul>
+          </span>
+        </section>
+
+        <section class="slide">
+          <span class="row">
+            <h2 class="text-center col-md-12">
+              Va t-il vraiment faire tout ce qu'il a promis ?
+            </h2>
+          </span>
+          <span class="text-center row contenu slide_width">
+            <p class="text-center" style="color:red">IMAGE</p>
+          </span>
+          <span class="row contenu propositions">
+            <ul class="text-center total_width col-md-12">
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q5_p1">Non</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q5_p2">Non</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q5_p3">Non</li>
+              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q5_p4">Non</li>
+            </ul>
+          </span>
+        </section>
+      </section>
 
       <div class="section " id="section0">
         <div class="content">
@@ -180,30 +297,15 @@
           </div>
         </div>
       </div>
-      <div class="section" id="section2">
-        <div class="content">
-          <h1>Compatible</h1>
-          <p>IE 8+ support.</p>
-        </div>
-      </div>
-      <div class="section" id="section3">
-        <div class="content">
-          <h1>Section 4</h1>
-          <p>IE 8+ support.</p>
-        </div>
-      </div>
-      <div class="section" id="section4">
-        <div class="content">
-          <h1>Section 5</h1>
-          <p>IE 8+ support.</p>
-        </div>
-      </div>
 
     <!-- Notre pied de page -->
     <!--<footer>
       <p>Copyright Hyblab team 2016</p>
     </footer>-->
     </div>
+
+
+    <script src="../libraries/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="../libraries/fullpage/javascript.fullPage.js"></script>
     <script type="text/javascript">
       fullpage.initialize('#container', {
@@ -215,5 +317,6 @@
       });
 
     </script>
+    <script src="javascript/script.js"></script>
   </body>
 </html>
