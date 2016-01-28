@@ -121,7 +121,7 @@ var angleActuMax = 0;
 var angleActuMoy = 0;
 var angleActuMin = 0;
 
-var tooltip = d3.select("#araigneeAMAP").append("div").style("position","absolute").style("z-index","100000").style("visibility","hidden").text("simple tooltip");
+var tooltip = d3.select("#araigneeAMAP").append("div").attr("class","dataTooltip");//style("background-color","black").style("position","absolute").style("z-index","100000").style("visibility","hidden").text("simple tooltip");
 
 // DESSIN DES LIGNES DES DISTANCES
 var lignesMax = groupes.append("line").attr("x1", function(d, i) {
@@ -147,11 +147,13 @@ var lignesMax = groupes.append("line").attr("x1", function(d, i) {
 	var angle = i*(Math.PI*2)/produits.length;
 	d.ymax = rotatePoint(x, y, (width/2), (height/2), angle).y;
 	return d.ymax;
-}).attr("stroke-width",2).attr("stroke","yellow").on("mouseover", function(){
+}).attr("stroke-width",8).attr("stroke","yellow").on("mouseover", function(d){
 	d3.select(this).attr("stroke","orange");
+	tooltip.text("Maximum : "+d.distMax.toFixed(2));
 	return tooltip.style("visibility","visible");
 }).on("mousemove",function(d){
-	//return tooltip.style("left",(d3.event.pageX)+"px").style("top",(d3.event.pageY)+"px");
+	console.log(d3.mouse(this));
+	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
 }).on("mouseout",function(d){
 	d3.select(this).attr("stroke","yellow");
 	return tooltip.style("visibility","hidden");
@@ -178,7 +180,17 @@ var x = (width/2) - nantesRadius - d.distanceMoyenne;
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("stroke-width",3).attr("stroke","green");
+}).attr("stroke-width",9).attr("stroke","green").on("mouseover", function(d){
+	d3.select(this).attr("stroke","#075b37");
+	tooltip.text("Moyenne : "+d.distanceMoyenne.toFixed(2));
+	return tooltip.style("visibility","visible");
+}).on("mousemove",function(d){
+	console.log(d3.mouse(this));
+	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
+}).on("mouseout",function(d){
+	d3.select(this).attr("stroke","green");
+	return tooltip.style("visibility","hidden");
+});
 
 
 
@@ -205,14 +217,35 @@ var lignesMin = groupes.append("line").attr("x1", function(d, i) {
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("stroke-width",4).attr("stroke","red");
+}).attr("stroke-width",10).attr("stroke","red").on("mouseover", function(d){
+	d3.select(this).attr("stroke","#7f080a");
+	tooltip.text("Minimum : "+d.distMin.toFixed(2));
+	return tooltip.style("visibility","visible");
+}).on("mousemove",function(d){
+	console.log(d3.mouse(this));
+	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
+}).on("mouseout",function(d){
+	d3.select(this).attr("stroke","red");
+	return tooltip.style("visibility","hidden");
+});
 
 
+// DESSIN DU TEXTE
 svg.selectAll("text").data(produits).enter().append("text").text(function(d){
 	return d.produit;
 }).attr("x", function(d,i){
+	var angle = i*(Math.PI*2)/produits.length;
+	
+	if(angle < Math.PI)
+	{
+		d.xmax += 10;
+	}
 	return d.xmax;
-}).attr("y", function(d){
+}).attr("y", function(d,i){
+	var angle = i*(Math.PI*2)/produits.length;
+	if(angle >= Math.PI)
+		d.ymax -= 10;
+
 	return d.ymax;
 }).attr("font-size","11px").attr("fill","white");
 
