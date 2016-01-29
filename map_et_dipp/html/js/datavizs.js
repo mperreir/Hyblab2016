@@ -259,10 +259,10 @@ var lignesMin = groupes.append("line").attr("x1", function(d, i) {
 
 // DESSIN DU TEXTE
 //svg.selectAll("image").data(nantesRadius).enter()
-.append("svg:image").attr("x",(width/2)-(150/2)).
+/*.append("svg:image").attr("x",(width/2)-(150/2)).
 attr("y",(height/2)-(150/2)).attr("width", 150).attr("height",150).attr("xlink:href",function(d,i){
 	return "../img/picto"+i+".png";
-});
+});*/
 /*svg.selectAll("text").data(produits).enter().append("text").text(function(d){
 	return d.produit;
 }).attr("x", function(d,i){
