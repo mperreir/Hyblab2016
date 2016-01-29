@@ -1,5 +1,13 @@
 "use-strict"
 
+$(document).ready( function () {
+	var answers = document.getElementsByClassName("answers");
+
+	for(var i = 0; i < answers.length; i++) {
+		document.getElementById(answers[i].id).style.display = "none";
+	}
+})
+
 function moveEntriesIn (prop_id) {
 
 	childs = document.getElementById("question1").children;
@@ -26,22 +34,16 @@ function answerQuestions(prop_id) {
 
 	var question = prop_id[0]+prop_id[1];
 	var answer = prop_id[3]+prop_id[4];
-
-	var img_answer = document.createElement("img");
 	
 	switch(question) {
 		case "q1":
 			switch(answer) {
-				case "p1":
-					img_answer.src = "../resources/check.png";
-					document.getElementById(prop_id).appendChild(img_answer);
+				case "p3":
+					document.getElementById(question+"_a").style.display = "block";
 					break;
 
+				case "p1":
 				case "p2":
-				case "p3":
-				case "p4":
-					img_answer.src = "../resources/cross.png";
-					document.getElementById(prop_id).appendChild(img_answer);
 					break;
 			}
 			break;
@@ -49,14 +51,10 @@ function answerQuestions(prop_id) {
 		case "q2":
 			switch(answer) {
 				case "p2":
-					img_answer.src = "../resources/check.png";
-					document.getElementById(prop_id).appendChild(img_answer);
+					document.getElementById(question+"_a").style.display = "block";
 					break;
 				case "p1":
 				case "p3":
-				case "p4":
-					img_answer.src = "../resources/cross.png";
-					document.getElementById(prop_id).appendChild(img_answer);
 					break;
 			}
 			break;
@@ -64,14 +62,11 @@ function answerQuestions(prop_id) {
 		case "q3":
 			switch(answer) {
 				case "p1":
+					document.getElementById(question+"_a").style.display = "block";
+					break;
 				case "p2":				
 				case "p3":
-					img_answer.src = "../resources/cross.png";
-					document.getElementById(prop_id).appendChild(img_answer);
-					break;
 				case "p4":
-					img_answer.src = "../resources/check.png";
-					document.getElementById(prop_id).appendChild(img_answer);
 					break;
 			}
 			break;
@@ -82,8 +77,7 @@ function answerQuestions(prop_id) {
 				case "p2":				
 				case "p3":
 				case "p4":
-					img_answer.src = "../resources/check.png";
-					document.getElementById(prop_id).appendChild(img_answer);
+					document.getElementById(question+"_a").style.display = "block";
 					break;
 			}
 			break;
@@ -94,8 +88,7 @@ function answerQuestions(prop_id) {
 				case "p2":				
 				case "p3":
 				case "p4":
-					img_answer.src = "../resources/check.png";
-					document.getElementById(prop_id).appendChild(img_answer);
+					document.getElementById(question+"_a").style.display = "block";
 					break;
 			}
 			break;
