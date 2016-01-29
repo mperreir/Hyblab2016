@@ -206,7 +206,6 @@ var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
 	tooltip.text("Moyenne : "+d.distanceMoyenne.toFixed(2));
 	return tooltip.style("visibility","visible");
 }).on("mousemove",function(d){
-	console.log(d3.mouse(this));
 	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
 }).on("mouseout",function(d){
 	d3.select(this).attr("stroke","black");
@@ -257,8 +256,14 @@ var lignesMin = groupes.append("line").attr("x1", function(d, i) {
 });
 
 
+
 // DESSIN DU TEXTE
-svg.selectAll("text").data(produits).enter().append("text").text(function(d){
+//svg.selectAll("image").data(nantesRadius).enter()
+.append("svg:image").attr("x",(width/2)-(150/2)).
+attr("y",(height/2)-(150/2)).attr("width", 150).attr("height",150).attr("xlink:href",function(d,i){
+	return "../img/picto"+i+".png";
+});
+/*svg.selectAll("text").data(produits).enter().append("text").text(function(d){
 	return d.produit;
 }).attr("x", function(d,i){
 	var angle = i*(Math.PI*2)/produits.length;
@@ -274,13 +279,13 @@ svg.selectAll("text").data(produits).enter().append("text").text(function(d){
 		d.ymax -= 10;
 
 	return d.ymax;
-}).attr("font-size","11px").attr("fill","white");
+}).attr("font-size","11px").attr("fill","white");*/
 
 
 
 //dessin des triangles :)
 var trianglesMax = triangles.append("polyline").style("stroke","#fecccb").style("fill","#fecccb").attr("points",function(d,i){
-	var x1,y1,x2,y2,x3,y3,poinx1,pointx2,pointx3,pointy1,pointy2,pointy3;
+	var x1,y1,x2,y2,x3,y3,pointx1,pointx2,pointx3,pointy1,pointy2,pointy3;
 	//utilisable : d.xmax et y.xmax les coords du point représentant la distance max+20
 	
     var x = (width/2) - nantesRadius - (d.distMax*ratio);
@@ -308,7 +313,7 @@ var trianglesMax = triangles.append("polyline").style("stroke","#fecccb").style(
 	return pointx1+","+pointy1+", "+pointx2+","+pointy2+", "+pointx3+","+pointy3;
 });
 var trianglesMin = triangles.append("polyline").style("stroke","#addfeb").style("fill","#addfeb").attr("points",function(d,i){
-	var x1,y1,x2,y2,x3,y3,poinx1,pointx2,pointx3,pointy1,pointy2,pointy3;
+	var x1,y1,x2,y2,x3,y3,pointx1,pointx2,pointx3,pointy1,pointy2,pointy3;
 	//utilisable : d.xmax et y.xmax les coords du point représentant la distance max+20
 	
     var x = (width/2) - nantesRadius - ((d.distMin)*ratio);
@@ -339,32 +344,6 @@ var trianglesMin = triangles.append("polyline").style("stroke","#addfeb").style(
 
 
 // ######### DESSIN DES CERCLES
-
-var pointsMax = groupes.append("circle").attr("cx", function(d, i) {
-    var x = (width/2) - nantesRadius - d.distMax;
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).x;
-}).attr("cy", function(d, i) {
-    var x = (width/2) - nantesRadius - d.distMax;
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("r", 5).attr("fill","yellow");
-*/
-/*
-var pointsMin = groupes.append("circle").attr("cx", function(d, i) {
-    var x = (width/2) - nantesRadius - d.distMin;
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).x;
-}).attr("cy", function(d, i) {
-    var x = (width/2) - nantesRadius - d.distMin;
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("r", 5).attr("fill","red");
-*/
 
 var pointsMoy = groupes.append("circle").attr("cx", function(d, i) {
     var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
