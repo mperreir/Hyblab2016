@@ -65,15 +65,18 @@ abbr,acronym { border: 0;
 
 body{
 	font-family: Open Sans;
-	color: #000000;
+	color: #179fae;
 }		
 
 h1{
 	font-size: 6em;
+	color: #179fae;
 }
 
 p{
 	font-size: 14px;
+	color: #179fae;
+
 }
 
 .heading{
@@ -84,14 +87,13 @@ p{
 }
 
 .section{
-	background-color: #a5f8b4;
+	background-color: #031d2a;
 
 }
 
 /* Section 0
  * --------------------------------------- */
 #section0{
-	background-color: #f1f1f1;
 
 }
 
@@ -152,4 +154,25 @@ p.titre{
 
 div.jqvmap-label{
 	visibility: hidden;
+}
+
+div.leftPart{
+	width:50%;
+	left:0%;
+	position:absolute;
+	display: inline-block;
+}
+
+div.rightPart{
+	width:50%;
+	right:0%;
+	position:absolute;
+	display: inline-block;
+}
+
+div#pieChart{
+	height: 50%;
+	top:50%;
+	position: absolute;
+	display: inline-block;
 }

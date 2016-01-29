@@ -25,16 +25,40 @@
 
         <script src="jquerysvg/jquery.svg.js"></script>
 
-        <script src="map_pays_de_la_loire2.js"></script>		
+        <script src="map_pays_de_la_loire2.js"></script>	
+
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+		<script src="d3pie.min.js"></script>
+
 
 		<script>
 			window.addEventListener('load', function () {
 
-				$(document).ready(function() {
+				map1 = $(document).ready(function () {
 					$('#map').vectorMap({
 						map:'pays_de_la_loire2',
+						backgroundColor: 'none',
+						colors:{
+							"FR-44":'#179fae',
+							"FR-85":'#179fae',
+							"FR-49":'#179fae',
+							"FR-72":'#179fae',
+							"FR-53":'#179fae',
+						},
+						series:{
+							regions:[{
+								attribute:'fill', 
+							}]
+						},
+						onRegionSelected: function(){
+						}   
 					});
+
+					//map.series.regions[0].setValues("#179fae");
+
 					$('#map').css("background-color","rgba(0,0,0,0)");
+					//$('path g svg p div').attr("fill","#179fae");
 
 					
 				});
@@ -53,7 +77,9 @@
                 pdll.firstChild.setAttribute("id", "carte");
                 pdll.firstChild.nextSibling.setAttribute("id", "points");
 
-				/*document.getElementById("carte").setAttribute("transform","scale(2), translate(-140,-190)");*/
+                //d3.select("#carte").selectAll("path").attr("fill","#179fae");
+
+				//document.getElementById("carte").setAttribute("transform","scale(1), translate(0,0)");
 
 				var jsonDptInfo = [
 					{"n":"Vendee","r":5,"a":6,"s":4,"b":62,"sc":9},				
@@ -69,16 +95,16 @@
 				var info = d3.select("#infodpt");
 				
 				dpt.on('click', function (d){
-						info.style("visibility" ,"visible");
+					info.style("visibility" ,"visible");
 					info.html("<p class='titre'>" + d.n + "</p><p>Radios : " + d.r + "</p><p>Antennes : " + d.a + "</p><p>Salaries : " + d.s + "</p><p>Benevoles : " + d.b + "</p><p>Service Civique : " + d.sc + "</p>");
 				});
 
 
 
 				var jsonMarker = [
-					{"x":560,"y":180,"r":3.5,"c":"red","texte":"Radio 1"},
-					{"x":450,"y":282,"r":3.5,"c":"red","texte":"Radio 2"},
-					{"x":200,"y":300,"r":3.5,"c":"red","texte":"<p>Prun'</p><p>Une radio étudiante Nantaise<p>"}
+					{"x":560,"y":180,"r":3.5,"c":"white","texte":"Radio 1"},
+					{"x":450,"y":282,"r":3.5,"c":"white","texte":"Radio 2"},
+					{"x":200,"y":300,"r":3.5,"c":"white","texte":"<p>Prun'</p><p>Une radio étudiante Nantaise<p>"}
 
 				]
 
@@ -107,6 +133,132 @@
                        });
 			});
 		</script>
+
+		<script>
+			window.addEventListener('load',function () {
+				
+				var pie = new d3pie("pieChart", {
+					/*"header": {
+						"title": {
+							"fontSize": 34,
+							"font": "courier"
+						},
+						"subtitle": {
+							"color": "#999999",
+							"fontSize": 10,
+							"font": "courier"
+						},
+						"titleSubtitlePadding": 10
+					},
+					"footer": {
+						"color": "#999999",
+						"fontSize": 10,
+						"font": "open sans",
+						"location": "bottom-left"
+					},*/
+					"size": {
+						"canvasWidth": 300,
+						"pieInnerRadius": "64%",
+						"pieOuterRadius": "66%"
+					},
+					"data": {
+						"sortOrder": "label-desc",
+						"content": [
+							{
+								"label": "Subventions",
+								"value": 68,
+								"color": "#ea0000"
+							},
+							{
+								"label": "Aides à l'emploi",
+								"value": 10,
+								"color": "#ff00f8"
+							},
+							{
+								"label": "Publicité",
+								"value": 7,
+								"color": "#1000ff"
+							},
+							{
+								"label": "Evenements",
+								"value": 2,
+								"color": "#00ff23"
+							},
+							{
+								"label": "Cotisations et dons ",
+								"value": 2,
+								"color": "#00f8ff"
+							},
+							{
+								"label": "Autre",
+								"value": 20,
+								"color": "#ff5f00"
+							}
+						]
+					},
+					"labels": {
+						"outer": {
+							"format": "none",
+							"pieDistance": 20
+						},
+						"inner": {
+							"format": "none"
+						},
+						"mainLabel": {
+							"fontSize": 11
+						},
+						"percentage": {
+							"color": "#999999",
+							"fontSize": 11,
+							"decimalPlaces": 0
+						},
+						"value": {
+							"color": "#cccc43",
+							"fontSize": 11
+						},
+						"lines": {
+							"enabled": true,
+							"color": "#777777"
+						},
+						"truncation": {
+							"enabled": true
+						}
+					},
+					"tooltips": {
+						"enabled": true,
+						"type": "placeholder",
+						"string": "{label}: {value}, {percentage}%",
+						"styles": {
+							"backgroundOpacity": 0.61
+						}
+					},
+					"effects": {
+						"pullOutSegmentOnClick": {
+							"effect": "linear",
+							"speed": 400,
+							"size": 8
+						}
+					},
+					"misc": {
+						"colors": {
+							"segmentStroke": "#000000"
+						}
+					}
+				});
+
+
+				pie = d3.select("#pieChart").select("svg");
+				pie.attr("height",300)
+				x = document.getElementsByClassName("p0_pieChart")
+				console.log(x);
+
+				//.setAttribute("transform","scale(1), translate(150,150)");
+
+				
+				//document.getElementById("pie").setAttribute("transform","scale(1), translate(0,0)");
+
+			});
+		</script>
 	</head>
 
 	<body>
@@ -122,10 +274,14 @@
 			</div>
 			<div class="section " id="section1">
 				<div class="content1">
-
-					<p id="map" style="width:841.89px;height:595.28px"></p>
-        			<p id="infodpt"></p>		
-
+					<div class="leftPart">
+						<p id="map" style="width:841.89px;height:595.28px"></p>
+        				<p id="infodpt"></p>
+        			</div>
+        			<div class="rightPart">
+        				<p id="infodpt"></p>
+        				<div id="pieChart"></div>	
+        			</div>
 				</div>
 			</div>
 		</div>
