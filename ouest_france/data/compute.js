@@ -8,11 +8,9 @@ fs.readFile('./data.json', 'utf8', function(err,data){
 		} 
 		else{
 			var donnees = JSON.parse(data); 
-			
-			var carburant = donnees.carburant;
 
 			compute(donnees.carburant);
-			compute(donnees.achat);
+			compute2(donnees.parc);
 			fs.writeFile('./data.json', JSON.stringify(donnees, null, 4), function(err){
 				if(err) throw err;
 				else console.log("Saved!");
@@ -34,3 +32,9 @@ function compute(objet){
 		}
 	});
 };
+
+function compute2(objet){
+	objet.years.forEach(function(year){
+		objet.data.neuf[year].pourcentage = 100.0-objet.data.occasion[year].pourcentage;
+	});
+}
