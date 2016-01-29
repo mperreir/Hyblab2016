@@ -135,9 +135,11 @@ var saisonActuelle = getSaisonActuelle();
 var donnesActuelles = donneesJardinJoseph[saisonActuelle];
 
 
-var total = calculerPoidsTotal(donnesActuelles);
+var total = [ calculerPoidsTotal(donnesActuelles) ];
 //document.getElementById("totalJoseph").innerHTML(total);
-
+d3.select("#totalJoseph").selectAll("p").data(total).enter().append("p").text(function(d) {
+    return d;
+});
 
 
 donnesActuelles.forEach(function(element, index, tableau) {
@@ -150,12 +152,12 @@ donnesActuelles.forEach(function(element, index, tableau) {
     
     
     // <svg id="fillgauge6" width="19%" height="300" onclick="gauge6.update(NewValue());"></svg>
-    var jauge = baliseJauge.append("svg").attr("id", idJauge).attr("width", 100).attr("height", 200);
+    var svgJauge = baliseJauge.append("svg").attr("id", idJauge).attr("width", 100).attr("height", 200);
     // le faire en class après / style
         
     var config = liquidFillGaugeDefaultSettings();
     config.minValue = 0;
-    config.maxValue = infoElement.maximum;
+    config.maxValue = (infoElement.maximum * 0.001).toFixed(1);
     config.circleThickness = 0.04;  // taille cercle extérieur
     config.circleFillGap = 0;       // espacement entre cercle extérieur et intérieur 
     config.textVertPosition = 1.4;  // positionner le texte au dessus de la gauge 
@@ -171,11 +173,11 @@ donnesActuelles.forEach(function(element, index, tableau) {
     config.textSize = 1.2;
     config.displayPercent = false;
     
-    var jauge = loadLiquidFillGauge(idJauge, element.poids, config);
+    var poids = (element.poids * 0.001).toFixed(1);
+    var jauge = loadLiquidFillGauge(idJauge, poids, config);
     jauges[idJauge] = jauge;
     
-    
-    //var image = baliseJauge.append("img").attr("src", infoElement.cheminImage).attr("alt", element.nomProduit);
+    var image = baliseJauge.append("img").attr("src", infoElement.cheminImage).attr("alt", element.nomProduit);
     
 });
 
@@ -188,19 +190,29 @@ function updateDiagrammeJoseph(saison) {
     donneesActuelles.forEach(function(element, index, tableau) {
         var infosElement = infosJardinJoseph[element.nomProduit];
         var jauge = jauges[infosElement.idJauge];
-        jauge.update(element.poids);
+        var poids = (element.poids * 0.001).toFixed(1);
+        jauge.update(poids);
     });
     
     // mise à jour du total
-    var total = calculerPoidsTotal(donnesActuelles);
-    document.getElementById("totalJoseph").innerHTML = total;
+    total[0] = calculerPoidsTotal(donnesActuelles);
     
+    
+    var tmp = d3.select("#totalJoseph").transition(); //.select("p").transition();
+    tmp.select("p").text(function(d, i) {
+        console.log(d);
+        return total[0];
+    });
+    /*
+    
+    */
 }
 
 function calculerPoidsTotal(donnees) {
-    return donnees.reduce(function(prec, elem, indice, tab) {
+    var total = donnees.reduce(function(prec, elem, indice, tab) {
         return prec + elem.poids;
     }, 0);
+    return (total * 0.001).toFixed(1);
 }
 
 
