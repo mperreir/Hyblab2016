@@ -14,7 +14,9 @@
     <!-- Déclaration des scripts js et librairies -->
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="script/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="script/jquery.fullPage.min.js"></script>
+
+
     <script type='text/javascript' src="global.js"></script>
 
   </head>
@@ -24,17 +26,34 @@
     <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
     <div id="container">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <div id="footer">Copyright Hyblab 2016 Team K2000</div>
+      <!-- l'entête de la page: titre, barre de recherche -->
+      <div id="footer">Copyright Hyblab 2016 Team K2000</div>
 
-    <!-- Le contenu du site -->
-    <div id="fullpage">
-      <div class="section" id="s1">1st Slide ! Intro</div>
-      <div class="section" id="s2">2nd Slide ! Dataviz #1</div>
-      <div class="section" id="s3">3rd Slide ! Dataviz #2</div>
-      <div class="section" id="s4">4th Slide ! Dataviz #3</div>
-      <div class="section" id="s5">5th Slide ! Conclusion / Sponsors Hyblab</div>
-    </div>
+      <!-- Le contenu du site -->
+      <div id="fullpage">
+        <div class="section" id="s1">
+          <img class="svg" src="images/accueil.svg" alt="En voiture Simone !">
+          <img id="scroll" src="images/scroll_bas.svg" alt="Slide suivante">
+          <h2>LES FRANÇAIS ET L’AUTOMOBILE : QUELLES HABITUDES DE CONSOMMATION ?</h2>
+          
+        </div>
+        <div class="section" id="s2">
+          <h1>COMBIEN DE VOITURES DANS TON GARAGE ?</h1>
+          <img class="svg" src="images/motor.svg" alt="Ménages motorisés">
+        </div>
+        <div class="section" id="s3">
+          <h1>PLUTÔT NEUF OU OCCASION ?</h1>
+          <img class="svg" src="images/neuf_occaz.svg" alt="Neuf ou occasion ?">
+        </div>
+        <div class="section" id="s4">
+          <h1>À QUOI TU CARBURES ?</h1>
+          <img class="svg" src="images/pompe.svg" alt="Pompe">
+        </div>
+        <div class="section" id="s5">
+          <h1>5th Slide ! Conclusion / Sponsors Hyblab</h1>
+
+        </div>
+      </div>
 
 
     </div>
