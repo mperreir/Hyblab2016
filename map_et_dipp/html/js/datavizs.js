@@ -1,3 +1,4 @@
+"use strict";
 
 
 var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "distMax":0},
@@ -7,13 +8,6 @@ var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "
   {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0},
   {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0}];
 
-
-var jardinJoseph = {
-    "printemps": {"total": 180369, "racines": 12850, "poids_haricots": 10934, "choux": 8760, "epinards_salades": 19851, "courges": 77400, "tomates": 35314, "aromatiques": 1260, "fruits": 11600, "autres": 2400},
-    "été": {"total": 118850, "racines": 7200, "poids_haricots": 5466, "choux": 0, "epinards_salades": 6671, "courges": 0, "tomates": 88286, "aromatiques": 1267, "fruits": 2695, "autres": 7265}, 
-    "automne": {"total": 22208, "racines": 0, "poids_haricots": 0, "choux": 2920, "epinards_salades": 0, "courges": 0, "tomates": 0, "aromatiques": 1273, "fruits": 15715, "autres": 2300},
-    "hiver": {"total": 16153, "racines": 0, "poids_haricots": 0, "choux": 2920, "epinards_salades": 13233, "courges": 0, "tomates": 0, "aromatiques": 0, "fruits": 0, "autres": 0}
-};
 
 
 
@@ -98,10 +92,6 @@ produits.forEach(function(p)
 	p.distanceMoyenne = moy;
 	
 });
-
-
-var svgJoseph = d3.select("#legumesJoseph").append("svg").attr("width", 500).attr("height", 500);
-
 
 
 
@@ -349,7 +339,7 @@ var trianglesMin = triangles.append("polyline").style("stroke","#addfeb").style(
 
 
 // ######### DESSIN DES CERCLES
-/*
+
 var pointsMax = groupes.append("circle").attr("cx", function(d, i) {
     var x = (width/2) - nantesRadius - d.distMax;
 	var y = (height/2);
