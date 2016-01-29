@@ -132,29 +132,24 @@ var width = 600;
 var jauges = {};
 
 var saisonActuelle = getSaisonActuelle();
-var donnesActuelles = donneesJardinJoseph[saisonActuelle];
+var donneesActuelles = donneesJardinJoseph[saisonActuelle];
 
 
-var total = [ calculerPoidsTotal(donnesActuelles) ];
-//document.getElementById("totalJoseph").innerHTML(total);
+var total = [ calculerPoidsTotal(donneesActuelles) ];
 d3.select("#totalJoseph").selectAll("p").data(total).enter().append("p").text(function(d) {
     return d;
 });
 
 
-donnesActuelles.forEach(function(element, index, tableau) {
+donneesActuelles.forEach(function(element, index, tableau) {
     
     var infoElement = infosJardinJoseph[element.nomProduit];
     var idJauge = infoElement.idJauge;
     
-    
     var baliseJauge = d3.select("#diagrammeJoseph").append("div").attr("class", "baliseJauge"); 
-    
-    
-    // <svg id="fillgauge6" width="19%" height="300" onclick="gauge6.update(NewValue());"></svg>
     var svgJauge = baliseJauge.append("svg").attr("id", idJauge).attr("width", 100).attr("height", 200);
-    // le faire en class après / style
-        
+    // <svg id="fillgauge6" width="19%" height="300" onclick="gauge6.update(NewValue());"></svg>
+    
     var config = liquidFillGaugeDefaultSettings();
     config.minValue = 0;
     config.maxValue = (infoElement.maximum * 0.001).toFixed(1);
@@ -195,17 +190,11 @@ function updateDiagrammeJoseph(saison) {
     });
     
     // mise à jour du total
-    total[0] = calculerPoidsTotal(donnesActuelles);
+    var total = [ calculerPoidsTotal(donneesActuelles) ];
     
-    
-    var tmp = d3.select("#totalJoseph").transition(); //.select("p").transition();
-    tmp.select("p").text(function(d, i) {
-        console.log(d);
-        return total[0];
+    var balisesTotal = d3.select("#totalJoseph").selectAll("p").data(total).text(function(d, i) {
+        return d;
     });
-    /*
-    
-    */
 }
 
 function calculerPoidsTotal(donnees) {
