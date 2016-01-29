@@ -1,11 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="fr"> <!-- Notre page est en français -->
   <head>
+    <title>En voiture Simone !</title>
+
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
-    <title>Hyblab 2016</title>
+
     <!-- Déclaration de la feuille de style du document-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+
+    <!-- Déclaration des scripts js et librairies -->
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script/jquery.fullPage.js"></script>
+    <script type='text/javascript' src="global.js"></script>
+
   </head>
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
@@ -14,17 +25,22 @@
     <div id="container">
 
     <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-      <h1>Hyblab 2016</h1>
-    </header>
+    <div id="footer">Copyright Hyblab 2016 Team K2000</div>
 
     <!-- Le contenu du site -->
-    <p>replace this content by your web app !</p>
-
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2016</p>
-    </footer>
+    <div id="fullpage">
+      <div class="section" id="s1">1st Slide ! Intro</div>
+      <div class="section" id="s2">2nd Slide ! Dataviz #1</div>
+      <div class="section" id="s3">3rd Slide ! Dataviz #2</div>
+      <div class="section" id="s4">4th Slide ! Dataviz #3</div>
+      <div class="section" id="s5">5th Slide ! Conclusion / Sponsors Hyblab</div>
     </div>
+
+
+    </div>
+
+
+     
+
   </body>
 </html>

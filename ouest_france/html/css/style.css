@@ -3,3 +3,40 @@ footer p
 {
   font-size: small;
 }
+
+#s1 {
+    background-color: #F5DD71;
+}
+#s2 {
+    background-color: #5bcd15;
+}
+#s3 {
+    background-color: #A4F3DA;
+}
+#s4 {
+    background-color: #FFF000;
+}
+#s5 {
+    background-color: #A11BBA;
+}
+
+/* Fixed header and footer.
+* --------------------------------------- */
+#header, #footer{
+	position:fixed;
+	height: 50px;
+	display:block;
+	width: 100%;
+	background: #333;
+	z-index:9;
+	text-align:center;
+	color: #f2f2f2;
+	padding: 20px 0 0 0;
+}
+
+#header{
+	top:0px;
+}
+#footer{
+	bottom:0px;
+}
