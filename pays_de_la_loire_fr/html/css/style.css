@@ -6,14 +6,15 @@ footer p
 
 h1, h2, h3, h4, h5, h6
 {
+	position: relative;
 	color: black;
 	text-align: center;
-	font-size: 6vw;
+	font-size: 2.5vw;
 }
 
 h2
 {
-	font-size: 3vw;
+	font-size: 1.75vw;
 }
 
 li
@@ -32,6 +33,16 @@ li
 span>ul>li
 {
 	background-color: #008fff;
+}
+
+.titre
+{
+	top: 10%;
+}
+
+.sous_titre
+{
+	top: 10%;
 }
 
 .contenu
