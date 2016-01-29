@@ -8,7 +8,9 @@ var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "
   {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0},
   {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0}];
 
-
+var villes = [{"nom":"Angers", "distance":82}, {"nom":"Laval","distance":138}];
+var quartiers = [{"nom":"Malakoff St Donatien", "produits":[]}, {"nom":"Doulon Bottière"}, {"nom":"Hauts Pavés St Félix"}, {"nom":"Bellevue Chantenay"}
+, {"nom":"Centre Ville"}, {"nom":"Nantes Nord"}, {"nom":"Ile de Nantes"}, {"nom":"Nantes Erdre"}, {"nom":"Nantes Sud"}, {"nom":"Breil Barberie"}];
 
 
 
@@ -70,6 +72,15 @@ var qte = -1;
 var moy = -1;
 
 var lesp = [];
+/*quartiers.forEach(function(q){
+	q.produits = [];
+	produits.forEach(function(p){
+		q.produits.push({"nom":p.produit, "min":9999,"max":0,"moy":9999});
+		dataset.forEach(function(d){
+			if(d.Produits == p.produit && )
+		});
+	});
+});*/
 
 produits.forEach(function(p)
 {
@@ -77,7 +88,6 @@ produits.forEach(function(p)
 	qte = 0;
 	moy = 0;
 	dataset.forEach(function(d){
-		
 		if(d.Produits == p.produit)
 		{
 			if(d.Distance < p.distMin)
@@ -95,6 +105,7 @@ produits.forEach(function(p)
 
 
 
+
 var nantesRadius = [30];
 var width = 650;
 var height = 650;
@@ -108,6 +119,8 @@ svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", w
 
 
 var groupes = svg.selectAll("g").data(produits).enter();
+var echelle = svg.selectAll("g").data(villes).enter();
+
 var triangles = svg.selectAll("g").data(produits).enter();
 
 var angleActuMax = 0;
@@ -274,7 +287,9 @@ attr("y",function(d,i){
 	return "../img/picto"+i+".png";
 });
 
-
+svg.selectAll("text").data(produits).enter().append("text").text("changer l'échelle").attr("x",0).attr("y",100).on("click",function(){
+	return svg.transition().attr("transform","scale(0.2)").ease("linear").duration(1000).delay(100);
+});
 
 //dessin des triangles :)
 var trianglesMax = triangles.append("polyline").style("stroke","#fecccb").style("fill","#fecccb").attr("points",function(d,i){
@@ -351,5 +366,12 @@ var pointsMoy = groupes.append("circle").attr("cx", function(d, i) {
 }).attr("r", 3).attr("fill","black");
 
 
+
+var villesDistances = echelle.append("circle").attr("cx",width/2).attr("cy",height/2).attr("r",function(d){
+	return d.distance;
+}).attr("fill","none").attr("stroke","black").attr("stroke-width",1).attr("stroke-dasharray", "5,5");
+var villesNoms = echelle.append("text").attr("x",width/2).attr("y",function(d){
+	return height/2-d.distance-5;
+}).text(function(d){return d.nom;});
 
 });
