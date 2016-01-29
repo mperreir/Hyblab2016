@@ -27,12 +27,12 @@
         return result;
     }());
 
-    function meanLSOAs(indicator, LSOAs) {
+    function meanLSOAs(indicator, LSOAs, type) {
         var count = 0;
         var result = LSOAs
                 .map(function (lsoa11cd) {
                     count += 1;
-                    return window.data[lsoa11cd][indicator].raw;
+                    return window.data[lsoa11cd][indicator][type];
                 }).reduce(function (a, b) {
                     return a + b;
                 }) / count;
@@ -79,7 +79,9 @@
                         return a + b;
                     }) / count;
             for (var indicator in INDICATORS) {
-                MSOA[MSOA11CD][indicator] = meanLSOAs(indicator, MSOA[MSOA11CD]["LSOAs"]);
+                MSOA[MSOA11CD][indicator] = {};
+                MSOA[MSOA11CD][indicator]["raw"] = meanLSOAs(indicator, MSOA[MSOA11CD]["LSOAs"], "raw");
+                MSOA[MSOA11CD][indicator]["decile"] = meanLSOAs(indicator, MSOA[MSOA11CD]["LSOAs"], "decile");
             }
         }
     }());
@@ -228,11 +230,16 @@
             }
         }
         else {
-
+            for (var indicator in INDICATORS) {
+                deciles.push({
+                    'indicator': indicator.toUpperCase(),
+                    'decile': MSOA[e.target.feature.properties["MSOA11CD"]][indicator]["decile"]
+                })
+            }
         }
         //console.log(deciles);
-        //barchart.addTo(map);
-        //barchart.draw(deciles);
+        barchart.addTo(map);
+        barchart.draw(deciles);
 
         var CD;
         var NM;
@@ -258,12 +265,12 @@
 
     function LsoaResetHighlight(e) {
         topoLsoaLayer.resetStyle(e.target);
-        //map.closePopup(popup);
+        map.removeControl(barchart);
     }
 
     function MsoaResetHighlight(e) {
         topoMsoaLayer.resetStyle(e.target);
-        //map.closePopup(popup);
+        map.removeControl(barchart);
     }
 
     function updatePopup(e) {
@@ -376,7 +383,6 @@
             e.stopPropagation();
         });
 
-        //console.log(this._div);
         return this._div;
     };
 
@@ -514,7 +520,6 @@
         this._chartContainer.setAttribute('id', 'chartContainer');
         return this._chartContainer;
     };
-    //barchart.addTo(map);
     // deciles
     barchart.draw = function(deciles) {
         var margin = {top: 10, right: 0, bottom: 40, left: 20},
@@ -573,30 +578,8 @@
             .attr('x', function(d) { return x(d.indicator); })
             .attr('width', x.rangeBand())
             .attr('y', function(d) { return y(d.decile); })
-            .attr('height', function(d) { console.log(y(d.decile));return height - y(d.decile); })
+            .attr('height', function(d) { return height - y(d.decile); })
     };
-    barchart.feedData = function(deciles) {
-        var svg = d3.select("#chartContainer");
-        svg.selectAll('.bar')
-            .data(deciles)
-            .enter().append('rect')
-            .attr('class', 'bar')
-            .attr('x', function(d) { return x(d.indicator); })
-            .attr('width', x.rangeBand())
-            .attr('y', function(d) { return y(d.decile); })
-            .attr('height', function(d) { console.log(y(d.decile));return height - y(d.decile); })
-    };
-
-    barchart.draw(
-        [   {'indicator':'INCOME',decile:1},
-            {'indicator':'HEALTH',decile:0},
-            {'indicator':'EDUCATION',decile:5},
-            {'indicator':'EMPLOYMENT',decile:5},
-            {'indicator':'ENVIRONMENT',decile:5},
-            {'indicator':'HOUSING',decile:5},
-            {'indicator':'CRIME',decile:5}
-        ]
-    );
 
     /*
     the chart of the population
