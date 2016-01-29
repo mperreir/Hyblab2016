@@ -108,6 +108,17 @@ def main():
             in keys_to_keep
         }
 
+    with open("imd_newgroups.csv", newline="") as f:
+        ages = list(csv.DictReader(f))
+
+    for row in ages:
+        lsoa11cd = row["LSOA11CD"]
+        keys = ["{}-{}".format(i, i+4) for i in range(0, 35, 5)]
+        keys.extend(["{}-{}".format(i, i+9) for i in range(35, 85, 10)])
+        keys.extend(["{}-{}".format(i, i+5) for i in range(85, 90, 5)])
+
+        data[lsoa11cd]["ages"] = {key: row[key] for key in keys}
+
     convert_numbers(data)
 
     calculate_exp(data)
