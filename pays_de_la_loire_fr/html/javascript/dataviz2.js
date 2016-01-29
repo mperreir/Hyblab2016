@@ -101,20 +101,22 @@ field.append("svg:image")
     //tick();
     } );
 
-tick();
+tick(0);
 
 //d3.select(self.frameElement).style("height", height + "px");
 
 
-function toE() {
-    console.log("toE");
-    field.data()[0].value = 0.6;
-    field.data()[2].value = 0.8;
-    if (!document.hidden) field
-        .transition()
-        .duration(500)
-        .each(fieldTransition)
-        .each("end", function(d) {console.log("a");} );
+function toE(i) {
+    if (i<5){
+        console.log("toE");
+        field.data()[i].value = 0.6;
+        //field.data()[2].value = 0.8;
+        if (!document.hidden) field
+            .transition()
+            .duration(500)
+            .each(fieldTransition)
+            .each("end", toE(i+1));
+    }
 }
 
 function toP() {
