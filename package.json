@@ -6,7 +6,8 @@
   "repository": "",
   "dependencies": {
     "basic-auth-connect": "^1.0.0",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "moment": "^2.11.1"
   },
   "author": "Matthieu PERREIRA DA SILVA",
   "license": "MIT"
