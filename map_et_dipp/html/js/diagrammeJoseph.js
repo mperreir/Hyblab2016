@@ -116,11 +116,13 @@ var infosJardinJoseph = {
 };
 
 
+// utilisation de : http://bl.ocks.org/brattonc/5e5ce9beee483220e2f6#index.html
 
 var jauges = {};
 
 var saisonActuelle = getSaisonActuelle();
 var donneesActuelles = donneesJardinJoseph[saisonActuelle];
+$("#radioJoseph_" + saisonActuelle).attr("checked", "");
 
 
 var total = [ calculerPoidsTotal(donneesActuelles) ];

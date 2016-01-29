@@ -105,7 +105,6 @@ produits.forEach(function(p)
 
 
 
-
 var nantesRadius = [30];
 var width = 650;
 var height = 650;

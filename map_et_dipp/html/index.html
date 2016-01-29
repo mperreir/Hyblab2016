@@ -168,13 +168,24 @@
                     <hr class="star-light">
                 </div>
             </div>
-            <div id="jardinDeJoseph" class="row">
-                <div id="boutonDiagrammeJoseph" >                    
-                    <button onclick="updateDiagrammeJoseph('printemps')">Printemps</button>
-                    <button onclick="updateDiagrammeJoseph('été')">Eté</button>
-                    <button onclick="updateDiagrammeJoseph('automne')">Automne</button>
-                    <button onclick="updateDiagrammeJoseph('hiver')">Hiver</button>
-                    <button onclick="updateDiagrammeJoseph('total')">Total</button>
+            <div id="jardinDeJoseph" class="row text-center">
+                <div id="boutonDiagrammeJoseph" >    
+                    
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_printemps" onclick="updateDiagrammeJoseph('printemps')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_printemps"></label>
+                    
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_été" onclick="updateDiagrammeJoseph('été')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_été"></label>
+                    
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_automne" onclick="updateDiagrammeJoseph('automne')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_automne"></label>
+                    
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_hiver" onclick="updateDiagrammeJoseph('hiver')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_hiver"></label>
+                    
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_total" onclick="updateDiagrammeJoseph('total')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_total"></label>
+                    
                 </div>
                 
                 <div id="diagrammeJoseph" class="text-center"></div> <!-- col-lg-4 col-lg-offset-2  -->

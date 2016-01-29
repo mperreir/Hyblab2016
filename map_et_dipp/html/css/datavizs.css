@@ -19,3 +19,28 @@
 }
 
 
+.radioJoseph {
+    display: none;
+}
+
+.labelRadioJoseph {
+    display: inline-block;
+    background: url(../img/picto0.png) left top no-repeat;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.labelRadioJoseph:hover {  
+    opacity: 0.5;
+    background: url(../img/picto2.png) left top no-repeat;
+}
+
+
+.radioJoseph:checked + .labelRadioJoseph {
+    opacity: 0;
+    background-color: red;
+}
+
