@@ -30,7 +30,7 @@ var color = d3.scale.category10();
 
 var svg = d3.select("body").append("svg")
     .attr("width", w + 100)
-    .attr("height", h + m[0] + m[2])
+    .attr("height", h + 200)
   .append("g")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
 
@@ -71,8 +71,8 @@ d3.csv("data.csv", function(data) {
     s.sumsubvention = d3.sum(s.values, function(d) { return d.subvention; });
   });
 
-  // Sort by maximum subvention, descending.
-  provenances.sort(function(a, b) { return b.maxsubvention - a.maxsubvention; });
+  // Sort by minimum subvention, ascending.
+  provenances.sort(function(a, b) { return a.minsubvention - b.minsubvention; });
 
   var g = svg.selectAll("g")
       .data(provenances)
