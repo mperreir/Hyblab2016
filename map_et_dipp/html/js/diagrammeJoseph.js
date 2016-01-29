@@ -195,10 +195,17 @@ function updateDiagrammeJoseph(saison) {
     // mise à jour du total
     var total = [ calculerPoidsTotal(donneesActuelles) ];
     
-    var balisesTotal = d3.select("#totalJoseph").selectAll("p").data(total).text(function(d, i) {
-        return d;
+    var balisesTotal = d3.select("#totalJoseph").selectAll("p").data(total).transition().duration(1000).tween("text", function() {
+        var i = d3.interpolateRound(Number(this.textContent), total[0]);
+        return function(t) {
+            this.textContent = i(t);
+        };
     });
+    // tween permet d'animer la mise à jour d'un nombre
+    
 }
+
+
 
 function calculerPoidsTotal(donnees) {
     var total = donnees.reduce(function(prec, elem, indice, tab) {
