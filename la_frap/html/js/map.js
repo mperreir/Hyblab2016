@@ -26,7 +26,7 @@ window.addEventListener('load', function () {
 			map:'pays_de_la_loire',
 			backgroundColor: 'none',
 			color:'#003f4e',
-			selectedColor:'#003f4e',
+			selectedColor:'#179fae',
 			hoverColor:'#006f7e',
 			series:{
 				regions:[{
@@ -88,7 +88,7 @@ window.addEventListener('load', function () {
 		{"x":86.481,"y":255.727,"r":3.492,"c":"white","texte":"Radio 1"},
 		{"x":120.008,"y":230.087,"r":3.492,"c":"white","texte":"Radio 1"},
 		{"x":115.487,"y":219.817,"r":3.492,"c":"white","texte":"Radio 1"},
-		{"x":99.538,"y":237.479,"r":3.493,"c":"white","texte":"Radio 1"},
+		{"x":99.538,"y":237.479,"r":3.492,"c":"white","texte":"Radio 1"},
 		{"x":110.766,"y":240.15,"r":3.492,"c":"white","texte":"Radio 1"},
 		{"x":238.695,"y":197.208,"r":3.492,"c":"white","texte":"Radio 1"},
 		{"x":248.007,"y":200.7,"r":3.492,"c":"white","texte":"Radio 1"},
@@ -112,15 +112,26 @@ window.addEventListener('load', function () {
 	var markerAttributes = markers
            .attr("cx", function (d) {return d.x;})
            .attr("cy", function (d) {return d.y;})
-           .attr("r", function (d) {return d.r; })
-           .style("fill",function (d) {return d.c;})
-           .on("mouseover", function (d){
+           .attr("r", function (d) {return d.r;})
+           .on("mouseover", function (d) {
+           		d.c = "red";
+           		d.r = 4.3;
+           		markers.attr("r", function (d) {return d.r;})
+					   .style("fill", function (d) {return d.c;});
+           })
+           .on("click", function (d) {
            		div.html(d.texte)
            		   .style("left",(d3.event.pageX) + "px")
            		   .style("top",(d3.event.pageY+10) + "px")
            		   .style("visibility","visible");
            })
-           .on("mouseout", function (d){
+           .on("mouseout", function (d) {
            		div.style("visibility","hidden");
-           });
-});
+           		d.c = "white";
+           		d.r = 3.492;
+           		markers.attr("r", function (d) {return d.r;})
+           			   .style("fill", function (d) {return d.c;});
+           })
+           .style("fill", function (d) {return d.c;}
+           );
+      });

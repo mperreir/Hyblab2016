@@ -100,8 +100,8 @@ window.addEventListener('load',function () {
 		"effects": {
 			"pullOutSegmentOnClick": {
 				"effect": "linear",
-				"speed": 400,
-				"size": 8
+				"speed": 800,
+				"size": 20
 			}
 		},
 		"misc": {
@@ -112,17 +112,32 @@ window.addEventListener('load',function () {
 		"callbacks":{
 			onClickSegment: function (info){
 				console.log(info);
+				console.log(info.data.value);
+				console.log(pie.total);
 				
-				if (!info.expanded) {
+				if(!info.expanded) {
+					pieData.text(info.data.value);
+				} else {
+					pieData.text("");
+				}
+				/*if (!info.expanded) {
 					$("#pieSection").css("visibility", "visible")
 					$("#pieSection").html(info.data.value);
 				} else {
 					$("#pieSection").css("visibility", "hidden");
-				}
+				}*/
 			}
 		}
 	});
-
+	var svg = d3.select("#pieChart").select("svg");
+	var pieData = svg.append("text")
+					 .attr("fill", "white")
+					 .attr("font-size", "30px")
+					 .attr("text-anchor", "middle")
+					 .attr("x", "50%")
+					 .attr("y", "50%")
+					 .attr("dx", "0px")
+					 .attr("dy", "10px");
 
 	/*pie = d3.select("#pieChart").select("svg");
 	pie.attr("height",300)*/

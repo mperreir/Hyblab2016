@@ -1,5 +1,10 @@
-"use strict";
-var cumul = function cumule (){
+
+trace = true;
+
+function cumule (){
+
+
+	if(trace){
 
 				var m = [20, 20, 30, 20],
 			    w = 400 +100,
@@ -14,11 +19,14 @@ var cumul = function cumule (){
 			var i = 0;
 
 			var svg = d3.select("#financement").append("svg")
+				.attr("id","svgcumule")
 			    .attr("width", w + 100)
 			    .attr("height", h + 150)
 			  	.append("g")
-			    .attr("transform", "translate(" + m[3] + "," + m[0] + ")")
-			    .attr("id","svgcumule");
+			    .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
+
+			trace = false;
+
 
 			var stocks,
 			    provenances;
@@ -265,4 +273,6 @@ var cumul = function cumule (){
 			  setTimeout(function() {
 			    svg.selectAll("g").data(provenances).enter().append("g").attr("class", "provenance");
 			  }, duration);
-			}}
+			}
+		}
+	}

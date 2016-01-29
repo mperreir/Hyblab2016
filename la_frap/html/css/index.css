@@ -60,6 +60,32 @@ abbr,acronym { border: 0;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Custom CSS
 ------------------------------------------*/
 
@@ -194,4 +220,23 @@ svg {
   fill: none;
   stroke: #179FAE;
   stroke-width: 2px;
+}
+
+
+.header{
+	height:10%;
+	top:0%;
+}
+
+.titre1{
+	font-weight: bold;	
+	font-size: 30px;
+}
+
+.home{
+	display: inline-block;
+}
+
+.texteheader{
+	display: inline-block;
 }
