@@ -43,6 +43,60 @@
         </script>
     </head>
     <body>
-        <div id="map"></div>
+        <div id="fullpage">
+            <div class="slide">
+                <div id="map"></div>
+            </div>
+            <div id="rope" class="slide">
+                <input type="text"
+                       id="our_postcode_rope"
+                       pattern="[A-Z]{2}[0-9] *[0-9][A-Z]{2}"
+                       placeholder="Enter your postcode"></input>
+                <input type="text"
+                       id="their_postcode_rope"
+                       pattern="[A-Z]{2}[0-9] *[0-9][A-Z]{2}"
+                       placeholder="Enter the other postcode"></input>
+
+                <div id="charts">
+                    <div id="chart_left" class="chart">
+                        <div style="width: 0;" id="our_crime"></div>
+                        <div style="width: 0;" id="our_income"></div>
+                        <div style="width: 0;" id="our_employment"></div>
+                        <div style="width: 0;" id="our_education"></div>
+                        <div style="width: 0;" id="our_health"></div>
+                        <div style="width: 0;" id="our_housing"></div>
+                        <div style="width: 0;" id="our_environment"></div>
+                    </div>
+                    <div id="chart_right" class="chart">
+                        <div style="width: 0;" id="their_crime"></div>
+                        <div style="width: 0;" id="their_income"></div>
+                        <div style="width: 0;" id="their_employment"></div>
+                        <div style="width: 0;" id="their_education"></div>
+                        <div style="width: 0;" id="their_health"></div>
+                        <div style="width: 0;" id="their_housing"></div>
+                        <div style="width: 0;" id="their_environment"></div>
+                    </div>
+                </div>
+
+                <div id="charts_bottom_buttons">
+                    <button type="button"
+                            id="select_max">
+                        Maximum
+                    </button>
+                    <button type="button"
+                            id="select_min">
+                        Minimum
+                    </button>
+                    <button type="button"
+                            id="select_moy">
+                        Average
+                    </button>
+                    <button type="button"
+                            id="select_pote">
+                        Select your pote
+                    </button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

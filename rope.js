@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    function mean(indicator) {
+    function meanLsoa(indicator) {
         var count;
         return Object.keys(window.data)
         .map(function (lsoa11cd) {
@@ -40,7 +40,36 @@
 
         return values[values.length() / 2];
     }
+
+    function updateChart(which) {
+        var indicator,
+            data,
+            lsoa11cd = PCDtoLSOA11CD($("#" + which + "_postcode_rope").get()[0].value);
+
+        if (!lsoa11cd) {
+            return;
+        } else {
+            data = window.data[lsoa11cd];
+        }
+
+        for (indicator in INDICATORS) {
+            $("#" + which + "_" + indicator).css("width", "" + 10*data[indicator]["decile"] + "%");
+        }
+    }
+
+    function enableOther() {
+        $("#their_postcode_rope").enable();
+    }
+
+    function disableOther() {
+        $("#their_postcode_rope").disable();
+    }
+
+    function selectReference(reference) {
+        disableOther();
+
+    }
+
+    $("#our_postcode_rope").change(updateChart.bind(undefined, "our"));
+    $("#their_postcode_rope").change(updateChart.bind(undefined, "their"));
 }());
-
-
-
