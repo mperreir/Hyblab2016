@@ -280,7 +280,7 @@ svg.selectAll("text").data(produits).enter().append("text").text(function(d){
 
 //dessin des triangles :)
 var trianglesMax = triangles.append("polyline").style("stroke","#fecccb").style("fill","#fecccb").attr("points",function(d,i){
-	var x1,y1,x2,y2,x3,y3,poinx1,pointx2,pointx3,pointy1,pointy2,pointy3;
+	var x1,y1,x2,y2,x3,y3,pointx1,pointx2,pointx3,pointy1,pointy2,pointy3;
 	//utilisable : d.xmax et y.xmax les coords du point représentant la distance max+20
 	
     var x = (width/2) - nantesRadius - (d.distMax*ratio);
@@ -308,7 +308,7 @@ var trianglesMax = triangles.append("polyline").style("stroke","#fecccb").style(
 	return pointx1+","+pointy1+", "+pointx2+","+pointy2+", "+pointx3+","+pointy3;
 });
 var trianglesMin = triangles.append("polyline").style("stroke","#addfeb").style("fill","#addfeb").attr("points",function(d,i){
-	var x1,y1,x2,y2,x3,y3,poinx1,pointx2,pointx3,pointy1,pointy2,pointy3;
+	var x1,y1,x2,y2,x3,y3,pointx1,pointx2,pointx3,pointy1,pointy2,pointy3;
 	//utilisable : d.xmax et y.xmax les coords du point représentant la distance max+20
 	
     var x = (width/2) - nantesRadius - ((d.distMin)*ratio);
