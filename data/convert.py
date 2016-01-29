@@ -76,18 +76,18 @@ def main():
             data[lsoa11cd][key] = row[key]
 
     for lsoa11cd, lsoa in data.items():
-        lsoa["PCD7s"] = [
+        lsoa["PCD7s"] = sorted([
                 row["PCD7"]
                 for row
                 in raw_data
                 if row["LSOA11CD"] == lsoa11cd
-        ]
-        lsoa["PCD8s"] = [
+        ])
+        lsoa["PCD8s"] = sorted([
                 row["PCD8"]
                 for row
                 in raw_data
                 if row["LSOA11CD"] == lsoa11cd
-        ]
+        ])
 
     with open('Mean_Wellbeing_Scores_Preston_LSOA.csv', newline='') as f:
         satisfaction = list(csv.DictReader(f))
