@@ -9,26 +9,8 @@ var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "
   {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":300}];
 
 
-var jardinJoseph = {
-    "printemps": {"total": 180369, "racines": 12850, "poids_haricots": 10934, "choux": 8760, "epinards_salades": 19851, "courges": 77400, "tomates": 35314, "aromatiques": 1260, "fruits": 11600, "autres": 2400},
-    "été": {"total": 118850, "racines": 7200, "poids_haricots": 5466, "choux": 0, "epinards_salades": 6671, "courges": 0, "tomates": 88286, "aromatiques": 1267, "fruits": 2695, "autres": 7265}, 
-    "automne": {"total": 22208, "racines": 0, "poids_haricots": 0, "choux": 2920, "epinards_salades": 0, "courges": 0, "tomates": 0, "aromatiques": 1273, "fruits": 15715, "autres": 2300},
-    "hiver": {"total": 16153, "racines": 0, "poids_haricots": 0, "choux": 2920, "epinards_salades": 13233, "courges": 0, "tomates": 0, "aromatiques": 0, "fruits": 0, "autres": 0}
-};
 
-/*
-var couleursProduits = {
-    "racines": "#ffee00", 
-    "poids_haricots": "#02365", 
-    "choux": "#11aabb", 
-    "epinards_salades": "#aa22bb", 
-    "courges": "#9900dd", 
-    "tomates": "#dd99cc", 
-    "aromatiques": "#cc66bb", 
-    "fruits": "#aaee33", 
-    "autres": "#332211"
-};
-*/
+
 
 
 function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
@@ -110,28 +92,6 @@ produits.forEach(function(p)
 	p.distanceMoyenne = moy;
 	
 });
-
-
-/*
-var svgJoseph = d3.select("#legumesJoseph").append("svg").attr("width", 500).attr("height", 500);
-var rectangles = svgJoseph.selectAll("rect").data(jardinJoseph["printemps"]).enter().append("rect").attr("x", function(d,i){
-	return i*20;
-}).attr("y",function(d){return height-(d.distanceMoyenne);}).attr("width",19).attr("height",function(d){
-	return d.distanceMoyenne;
-}).attr("fill", function(d){
-	return "rgb(" + couleursProduits[d] + ")";
-});
-
-
-svg.selectAll("text").data(produits).enter().append("text").text(function(d){
-	return d.produit+d.distanceMoyenne
-}).attr("x", function(d,i){
-	return i*20;
-}).attr("y", function(d){
-	return height-d.distanceMoyenne;
-}).attr("font-size","11px").attr("fill","white");
-*/
-
 
 
 
