@@ -562,4 +562,11 @@
             {'indicator':'HOUSING',decile:5},
             {'indicator':'CRIME',decile:5}]
     );
+
+    /*
+    the chart of the population
+    */
+    //var popChart = L.control({position : 'bottomright'});
+
+
 }());
