@@ -135,17 +135,22 @@ var saisonActuelle = getSaisonActuelle();
 var donnesActuelles = donneesJardinJoseph[saisonActuelle];
 
 
+var total = calculerPoidsTotal(donnesActuelles);
+//document.getElementById("totalJoseph").innerHTML(total);
+
+
+
 donnesActuelles.forEach(function(element, index, tableau) {
     
     var infoElement = infosJardinJoseph[element.nomProduit];
     var idJauge = infoElement.idJauge;
     
     
-    var baliseJauge = d3.select("#diagrammeJoseph").append("div").attr("class", "baliseJauge"); //.attr("width", "150").attr("height", 300);
+    var baliseJauge = d3.select("#diagrammeJoseph").append("div").attr("class", "baliseJauge"); 
     
     
     // <svg id="fillgauge6" width="19%" height="300" onclick="gauge6.update(NewValue());"></svg>
-    var jauge = baliseJauge.append("svg").attr("id", idJauge).attr("width", "150").attr("height", 300);
+    var jauge = baliseJauge.append("svg").attr("id", idJauge).attr("width", 100).attr("height", 200);
     // le faire en class après / style
         
     var config = liquidFillGaugeDefaultSettings();
@@ -170,13 +175,14 @@ donnesActuelles.forEach(function(element, index, tableau) {
     jauges[idJauge] = jauge;
     
     
-    var image = baliseJauge.append("img").attr("src", infoElement.cheminImage);
-        
+    //var image = baliseJauge.append("img").attr("src", infoElement.cheminImage).attr("alt", element.nomProduit);
+    
 });
 
 
 function updateDiagrammeJoseph(saison) {
     
+    // mise à jour des colonnes de l'histogramme
     var donneesActuelles = donneesJardinJoseph[saison] || [];
     
     donneesActuelles.forEach(function(element, index, tableau) {
@@ -185,7 +191,18 @@ function updateDiagrammeJoseph(saison) {
         jauge.update(element.poids);
     });
     
+    // mise à jour du total
+    var total = calculerPoidsTotal(donnesActuelles);
+    document.getElementById("totalJoseph").innerHTML = total;
+    
 }
+
+function calculerPoidsTotal(donnees) {
+    return donnees.reduce(function(prec, elem, indice, tab) {
+        return prec + elem.poids;
+    }, 0);
+}
+
 
 
 function getSaisonActuelle() {
