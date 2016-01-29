@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'html')));
 // You can then add whatever routing code you need
 
 
-// if asked for some data, read our json data file and send it back to the browser.
+/*// if asked for some data, read our json data file and send it back to the browser.
 // of course we could just declare '/data' as a static path that node should serve, 
 // but declaring a HTML GET callback like done below allows to have the
 // same url for accessing data with server-api.js and server-file.js.
@@ -35,7 +35,7 @@ app.get('/data', function(req,res){
       console.log(error);
   });
 })
-
+*/
 
 // This module is exported and served by the main server.js located
 // at the root of this set of projects. You can access it by lanching the main
