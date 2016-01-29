@@ -187,7 +187,8 @@ div.rightPart{
 }
 
 div#pieChart{
-	height: 50%;
+	height: 300px;
+	width:300px;
 	top:50%;
 	position: absolute;
 	display: inline-block;

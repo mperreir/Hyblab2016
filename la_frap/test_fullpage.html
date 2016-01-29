@@ -126,6 +126,10 @@
 					info.html("<p class='titre'>" + d.n + "</p><p>Radios : " + d.r + "</p><p>Antennes : " + d.a + "</p><p>Salaries : " + d.s + "</p><p>Benevoles : " + d.b + "</p><p>Service Civique : " + d.sc + "</p>");
 				});
 
+				dpt.on('mouseover', function (){
+					dpt.attr("fill","#ffffff")
+				});
+
 
 
 				var jsonMarker = [
@@ -289,14 +293,21 @@
 						"colors": {
 							"segmentStroke": "#000000"
 						}
+					},
+					"callbacks":{
+						onClickSegment: function (info){
+							console.log(info);
+
+							$("#pieChart").append("<p>"+info.data.value+"</p>");
+						}
 					}
 				});
 
 
-				pie = d3.select("#pieChart").select("svg");
-				pie.attr("height",300)
-				x = document.getElementsByClassName("p0_pieChart")
-				console.log(x);
+				/*pie = d3.select("#pieChart").select("svg");
+				pie.attr("height",300)*/
+				//x = document.getElementsByClassName("p0_pieChart");
+				//console.log(x);
 
 				//.setAttribute("transform","scale(1), translate(150,150)");
 
@@ -353,11 +364,11 @@
 
 
 
+		
 
 
-
-		<script type="text/javascript" src="javascript.fullPage.js"></script>
-		<script type="text/javascript">
+		<script src="javascript.fullPage.js"></script>
+		<script>
 			fullpage.initialize('#fullpage', {
 				anchors: ['title','firstPage', 'secondPage','thirdPage'],
 				menu: '#menu',
@@ -365,6 +376,14 @@
 			});
 
 		</script>
+		<script>
+			window.addEventListener('load', function () {
+				x = document.getElementsByClassName("p0_pieChart");
+				console.log(x);
+			});
+				
+			
 
+		</script>
 	</body>
 </html>
