@@ -126,9 +126,6 @@
 				});
 
 
-
-
-
 				var jsonMarker = [
 					{"x":560,"y":180,"r":3.5,"c":"white","texte":"Radio 1"},
 					{"x":450,"y":282,"r":3.5,"c":"white","texte":"Radio 2"},
@@ -298,8 +295,13 @@
 					"callbacks":{
 						onClickSegment: function (info){
 							console.log(info);
-
-							$("#pieChart").append("<p>"+info.data.value+"</p>");
+							
+							if (!info.expanded) {
+								$("#pieSection").css("visibility", "visible")
+								$("#pieSection").html(info.data.value);
+							} else {
+								$("#pieSection").css("visibility", "hidden");
+							}
 						}
 					}
 				});
@@ -350,7 +352,11 @@
         			</div>
         			<div class="rightPart">
         				<p id="infodpt"></p>
-        				<div id="pieChart"></div>	
+        				<div id="pieChart">
+						</div>	
+						<div id="pieInfo">
+							<p id="pieSection"></p>
+						</div>
         			</div>
 				</div>
 			</div>

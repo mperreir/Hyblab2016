@@ -187,9 +187,25 @@ div.rightPart{
 }
 
 div#pieChart{
-	height: 300px;
-	width:300px;
+	height: 500px;
+	width: 300px;
 	top:50%;
 	position: absolute;
 	display: inline-block;
+	z-index:1;
+}
+
+div#pieInfo{
+	height: 20px;
+	width: 20px;
+	top: 50%;
+	left 50%;
+	position: absolute;
+	z-index:2;
+	
+}
+
+#pieSection{
+	margin : auto;
+	text-align: center;
 }
