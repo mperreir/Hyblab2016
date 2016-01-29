@@ -74,3 +74,17 @@ span>ul>li
 {
 	position: absolute;
 }
+
+#svg_dataviz3
+{
+	position: absolute;
+}
+
+#fp-nav
+{
+	transform: rotate(90deg);
+}
+
+#fp-nav.right {
+    right: -70px !important;
+}
