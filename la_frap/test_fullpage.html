@@ -31,7 +31,33 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
 		<script src="d3pie.min.js"></script>
 
+		<script>
+			window.addEventListener('load', function () {
 
+				map1 = $(document).ready(function () {
+					$('#bigmap').vectorMap({
+						map:'pays_de_la_loire2',
+						backgroundColor: 'none',
+						color:'#003f4e',
+						selectedColor:'#003f4e',
+						hoverColor:'#006f7e',
+						series:{
+							regions:[{
+								attribute:'fill', 
+							}]
+						}, 
+					});
+
+					//map.series.regions[0].setValues("#179fae");
+
+					$('#map').css("background-color","rgba(0,0,0,0)");
+					//$('path g svg p div').attr("fill","#179fae");
+
+					
+				});
+			});
+		</script>
+		
 		<script>
 			window.addEventListener('load', function () {
 
@@ -295,7 +321,12 @@
 			
 			<div class="section " id="section1">
 				<div class="content1">
-					
+					<div class="leftPart">
+						<p id="bigmap" style="width:841.89px;height:595.28px"></p>
+        			</div>
+        			<div class="rightPart">
+        				
+        			</div>
 				</div>
 			</div>
 			
