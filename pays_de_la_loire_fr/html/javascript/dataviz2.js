@@ -2,8 +2,8 @@
 
 console.log("test");
 
-var width = 960,
-height = 800,
+var width = 480,
+height = 400,
 radius = Math.min(width, height) / 1.9,
 spacing = .1,
 opacity = .2,
@@ -90,21 +90,41 @@ field.append("text")
 
 //affichage des images
 field.append("svg:image")
-.attr('x',-9)
-.attr('y',-12)
+.attr('x',0)
+.attr('y',0)
 .attr('width', 20)
 .attr('height', 24)
 .attr("xlink:href","../resources/images/test.png")
-.on("click", function(d) { field.data()[0].previousValue = field.data()[0].value;
-    field.data()[0].value = 0.8;
-    //field.data()[1].value = field.data()[1].val2/10000;
-    //field.data()[2].value = field.data()[2].val2/10000;
-    //field.data()[3].value = field.data()[3].val2/10000;
-    tick();} );
+.on("click", function(d) {
+    console.log("click");
+    toE();
+    //tick();
+    } );
 
 tick();
 
 //d3.select(self.frameElement).style("height", height + "px");
+
+
+function toE() {
+    console.log("toE");
+    field.data()[0].value = 0.6;
+    field.data()[2].value = 0.8;
+    if (!document.hidden) field
+        .transition()
+        .duration(500)
+        .each(fieldTransition)
+        .each("end", function(d) {console.log("a");} );
+}
+
+function toP() {
+    
+}
+
+function toB() {
+    
+}
+
 
 function tick() {
     if (!document.hidden) field
@@ -114,7 +134,9 @@ function tick() {
         .transition()
         //.ease("elastic")
         .duration(500)
-        .each(fieldTransition);
+        .each(fieldTransition)
+        //fonction de callback
+        .each("end", function(d) {console.log("test");});
     
     //setTimeout(tick, 1000 - Date.now() % 1000);
 }
@@ -158,7 +180,7 @@ function arcTween(arc) {
 //valeurs entre 0-1
 function fields() {
     return [
-            {index: .5, text: "", value: 0.6, previousValue: 0.6, opacity: 1, year: "2014", val1: "8000", val2: "7000", val3: "6000", val4: "5000"},
+            {index: .5, text: "", value: 0, previousValue: 0, opacity: 1, year: "2014", val1: "8000", val2: "7000", val3: "6000", val4: "5000"},
             {index: .4, text: "", value: 0.5, previousValue: 0.5, opacity: 1, year: "2012", val1: "7000", val2: "6000", val3: "5000", val4: "4000"},
             {index: .3, text: "", value: 0.4, previousValue: 0.4, opacity: 1, year: "2010", val1: "6000", val2: "5000", val3: "4000", val4: "3000"},
             {index: .2, text: "", value: 0.3, previousValue: 0.3, opacity: 1, year: "2008", val1: "5000", val2: "4000", val3: "3000", val4: "2000"},

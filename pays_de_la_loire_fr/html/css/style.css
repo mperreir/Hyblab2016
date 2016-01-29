@@ -32,7 +32,9 @@ li
 
 span>ul>li
 {
-	background-color: #008fff;
+	background-color: #ccffcc;
+	border-radius: 1vw;
+	color: black;
 }
 
 .titre
@@ -43,6 +45,11 @@ span>ul>li
 .sous_titre
 {
 	top: 10%;
+}
+
+.sous_sous_titre
+{
+	top: 20%;
 }
 
 .contenu
@@ -98,4 +105,9 @@ span>ul>li
 
 #fp-nav.right {
     right: -70px !important;
+}
+
+#svg_dataviz2 {
+    display: block;
+    margin: auto;
 }
