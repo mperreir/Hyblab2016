@@ -32,7 +32,9 @@ li
 
 span>ul>li
 {
-	background-color: #008fff;
+	background-color: #ccffcc;
+	border-radius: 1vw;
+	color: black;
 }
 
 .titre
@@ -43,6 +45,11 @@ span>ul>li
 .sous_titre
 {
 	top: 10%;
+}
+
+.sous_sous_titre
+{
+	top: 20%;
 }
 
 .contenu
@@ -79,9 +86,4 @@ span>ul>li
 #question1
 {
 	position: relative;
-}
-
-#question>li
-{
-	position: absolute;
 }
