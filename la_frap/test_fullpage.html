@@ -25,7 +25,7 @@
 
         <script src="jquerysvg/jquery.svg.js"></script>
 
-        <script src="map_pays_de_la_loire2.js"></script>	
+        <script src="map_pays_de_la_loire3.js"></script>	
 
 
 		<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
@@ -63,23 +63,22 @@
 
 				map1 = $(document).ready(function () {
 					$('#map').vectorMap({
-						map:'pays_de_la_loire2',
+						map:'pays_de_la_loire',
 						backgroundColor: 'none',
-						/*colors:{
+						colors:{
 							"FR-44":'#179fae',
 							"FR-85":'#179fae',
 							"FR-49":'#179fae',
 							"FR-72":'#179fae',
 							"FR-53":'#179fae',
-						},*/
-						color:'#003f4e',
-						selectedColor:'#179fae',
-						hoverColor:'#006f7e',
+						},
 						series:{
 							regions:[{
 								attribute:'fill', 
 							}]
-						}, 
+						},
+						onRegionSelected: function(){
+						}   
 					});
 
 					//map.series.regions[0].setValues("#179fae");
@@ -128,28 +127,9 @@
 
 
 				var jsonMarker = [
-					{"x":126.232,"y":518.706,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":136.232,"y":508.706,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":-5.748,"y":518.706,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":44.252,"y":477.706,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":12.897,"y":386.391,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":33.98,"y":418.61,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":145.394,"y":299.752,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":33.98,"y":433.114,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":85.818,"y":387.643,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":95.07,"y":395.645,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":67.501,"y":427.114,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":108.323,"y":395.897,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":102.818,"y":383.391,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":83.399,"y":404.897,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":97.07,"y":408.149,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":252.836,"y":355.862,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":264.173,"y":360.114,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":255.173,"y":370.114,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":361.173,"y":359.114,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":245.308,"y":283.931,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":264.173,"y":173.862,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":373.071,"y":241.862,"r":4.252,"c":"white","texte":"Radio"}
+					{"x":560,"y":180,"r":3.5,"c":"white","texte":"Radio 1"},
+					{"x":450,"y":282,"r":3.5,"c":"white","texte":"Radio 2"},
+					{"x":200,"y":300,"r":3.5,"c":"white","texte":"<p>Prun'</p><p>Une radio étudiante Nantaise<p>"}
 
 				]
 
@@ -325,13 +305,13 @@
 					<h1>LES RADIOS LOCALES</h1>
 					<p>Radios associatives</p>
 					<form>
-						<input type="button" name="section 2" value="Vers la section 2" onclick="self.location.href='test_fullpage.html#secondPage'">
+						<input type="button" name="section 2" value="Vers la section 2" onclick="self.location.href='file:///D:/COURS/4A/Web/Hyblab/Hyblab2016/la_frap/test_fullpage.html#secondPage'">
 					</form>
 				</div>
 			</div>
-			
 			<div class="section " id="section1">
 				<div class="content1">
+
 					<div class="leftPart">
 						<p id="bigmap" style="width:841.89px;height:595.28px"></p>
         			</div>
@@ -343,8 +323,9 @@
 			
 			<div class="section " id="section2">
 				<div class="content2">
+
 					<div class="leftPart">
-						<p id="map" style="width:841.89px;height:595.28px"></p>
+						<p id="map" style="width:419.037px;height:407.543px"></p>
         			</div>
         			<div class="rightPart">
         				<p id="infodpt"></p>
@@ -354,12 +335,6 @@
 							<p id="pieSection"></p>
 						</div>
         			</div>
-				</div>
-			</div>
-			
-			<div class="section " id="section3">
-				<div class="content3">
-					
 				</div>
 			</div>
 		</div>
@@ -374,7 +349,7 @@
 		<script src="javascript.fullPage.js"></script>
 		<script>
 			fullpage.initialize('#fullpage', {
-				anchors: ['title','firstPage', 'secondPage','thirdPage'],
+				anchors: ['firstPage', 'secondPage'],
 				menu: '#menu',
 				css3:true
 			});
