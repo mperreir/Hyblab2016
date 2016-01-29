@@ -106,3 +106,8 @@ span>ul>li
 #fp-nav.right {
     right: -70px !important;
 }
+
+#svg_dataviz2 {
+    display: block;
+    margin: auto;
+}
