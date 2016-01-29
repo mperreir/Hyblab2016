@@ -26,6 +26,13 @@ L.TopoJSON = L.GeoJSON.extend({
         environment: "Living Environment"
     };
 
+    // Sort all the pcd7 arrays in window.data
+    (function() {
+        for (var lsoa11cd in window.data) {
+            window.data[lsoa11cd]["PCD7s"].sort();
+        }
+    }());
+
     // Utility variable storing the max & min value of each indicator and IMD as well
     var LSOA_Limits = (function() {
          var result = {};
@@ -63,21 +70,37 @@ L.TopoJSON = L.GeoJSON.extend({
                 }) / count;
         return result;
     }
+    /*
+    var pushArray = function(oldArr) {
+        var toPush = oldArr.concat.apply([], arguments);
+        for (var i = 0, len = toPush.length; i < len; ++i) {
+            this.push(toPush[i]);
+        }
+    };*/
 
     // Utility variable for storing MSOA's properties
     var MSOA = {};
     (function() {
         var g = topo_msoa.objects.E07000123.geometries;
         for (var i in g) {
-            MSOA[g[i].properties.MSOA11CD] = { "LSOAs" : [] };
+            console.log(g[i]);
+            MSOA[g[i].properties["MSOA11CD"]] = { "LSOAs" : [], "PCD7s" : [] };
         }
     }());
+    // Store info of mapping from MSOA to LSOAs
     (function() {
         for (var LSOA11CD in window.data) {
             var MSOA11CD = window.data[LSOA11CD]["MSOA11CD"];
             MSOA[MSOA11CD]["LSOAs"].push(LSOA11CD);
+            for (var i in window.data[LSOA11CD]["PCD7s"]) {
+                MSOA[MSOA11CD]["PCD7s"].push(window.data[LSOA11CD]["PCD7s"][i]);
+            }
+        }
+        for (var MSOA11CD in MSOA) {
+            MSOA[MSOA11CD]["PCD7s"].sort();
         }
     }());
+    // Store indicators of MSOA
     (function(){
         for (var MSOA11CD in MSOA) {
             var count = 0;
@@ -212,6 +235,20 @@ L.TopoJSON = L.GeoJSON.extend({
         }
     }
 
+    function getMsoaPopupContent(CD, NM) {
+        var arr = MSOA[CD]["PCD7s"];
+        return '<h4>' + NM + '</h4><div>( '
+            + arr[0] + ' - '
+            + arr[arr.length-1] + ' )</div>';
+    }
+
+    function getLsoaPopupContent(CD, NM) {
+        var arr = window.data[CD]["PCD7s"];
+        return '<h4>' + NM + '</h4><div>( '
+        + arr[0] + ' - '
+        + arr[arr.length-1] + ' )</div>';
+    }
+
     function highlightFeature(e) {
         var layer = e.target;
 
@@ -227,18 +264,26 @@ L.TopoJSON = L.GeoJSON.extend({
 
         info.update(e.target.feature.properties);
 
+        var CD;
         var NM;
         if (e.target.feature.properties.hasOwnProperty("LSOA11NM")) {
+            CD = e.target.feature.properties["LSOA11CD"];
             NM = e.target.feature.properties["LSOA11NM"];
+            popup
+                .setLatLng(e.latlng)
+                .setContent(getLsoaPopupContent(CD, NM))
+                .openOn(map);
         }
         else {
+            CD = e.target.feature.properties["MSOA11CD"];
             NM = e.target.feature.properties["MSOA11NM"];
+            popup
+                .setLatLng(e.latlng)
+                .setContent(getMsoaPopupContent(CD, NM))
+                .openOn(map);
         }
 
-        popup
-            .setLatLng(e.latlng)
-            .setContent(NM)
-            .openOn(map);
+
     }
 
     function LsoaResetHighlight(e) {
