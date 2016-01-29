@@ -351,7 +351,9 @@ var pointsMax = groupes.append("circle").attr("cx", function(d, i) {
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("r", 5).attr("fill","yellow");
-*/
+    
+    
+
 /*
 var pointsMin = groupes.append("circle").attr("cx", function(d, i) {
     var x = (width/2) - nantesRadius - d.distMin;
