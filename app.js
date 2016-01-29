@@ -42,5 +42,7 @@ function PCDtoLSOA11CD(PCD) {
 
 
 (function() {
-    //$("#fullpage").fullpage();
+    $("#fullpage").fullpage({
+        scrollBar: true
+    });
 }())
