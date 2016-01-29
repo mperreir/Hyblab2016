@@ -258,28 +258,21 @@ var lignesMin = groupes.append("line").attr("x1", function(d, i) {
 
 
 // DESSIN DU TEXTE
-//svg.selectAll("image").data(nantesRadius).enter()
-/*.append("svg:image").attr("x",(width/2)-(150/2)).
-attr("y",(height/2)-(150/2)).attr("width", 150).attr("height",150).attr("xlink:href",function(d,i){
-	return "../img/picto"+i+".png";
-});*/
-/*svg.selectAll("text").data(produits).enter().append("text").text(function(d){
-	return d.produit;
-}).attr("x", function(d,i){
+svg.selectAll("image").data(produits).enter()
+.append("svg:image").attr("x",function(d,i){
 	var angle = i*(Math.PI*2)/produits.length;
-	
-	if(angle < Math.PI)
-	{
-		d.xmax += 10;
-	}
-	return d.xmax;
-}).attr("y", function(d,i){
+
+	return d.xmax+20;
+}).
+attr("y",function(d,i){
 	var angle = i*(Math.PI*2)/produits.length;
-	if(angle >= Math.PI)
-		d.ymax -= 10;
+	if(angle == Math.PI || angle == 0)
+		d.ymax -= 45;
 
 	return d.ymax;
-}).attr("font-size","11px").attr("fill","white");*/
+}).attr("width", 30).attr("height",30).attr("xlink:href",function(d,i){
+	return "../img/picto"+i+".png";
+});
 
 
 
