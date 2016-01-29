@@ -249,6 +249,8 @@ L.TopoJSON = L.GeoJSON.extend({
     }
 
     function highlightFeature(e) {
+        var isLsoaLayer = e.target.feature.properties.hasOwnProperty("LSOA11NM");
+
         var layer = e.target;
 
         layer.setStyle({
@@ -261,11 +263,28 @@ L.TopoJSON = L.GeoJSON.extend({
             layer.bringToFront();
         }
 
+        // info update
         info.update(e.target.feature.properties);
+        // barchart update
+        var deciles = [];
+        if (isLsoaLayer) {
+            for (var indicator in INDICATORS) {
+                deciles.push({
+                    'indicator': indicator.toUpperCase(),
+                    'decile': window.data[e.target.feature.properties["LSOA11CD"]][indicator]['decile']
+                })
+            }
+        }
+        else {
+
+        }
+        //console.log(deciles);
+        //barchart.addTo(map);
+        //barchart.draw(deciles);
 
         var CD;
         var NM;
-        if (e.target.feature.properties.hasOwnProperty("LSOA11NM")) {
+        if (isLsoaLayer) {
             CD = e.target.feature.properties["LSOA11CD"];
             NM = e.target.feature.properties["LSOA11NM"];
             popup
@@ -541,15 +560,14 @@ L.TopoJSON = L.GeoJSON.extend({
     barchart.onAdd = function(map) {
         this._chartContainer = L.DomUtil.create('div','');
         this._chartContainer.setAttribute('id', 'chartContainer');
-        //this._chartContainer.innerHTML = '<h1>adsf</h1>';
         return this._chartContainer;
     };
-    barchart.addTo(map);
+    //barchart.addTo(map);
     // deciles
     barchart.draw = function(deciles) {
-        var margin = {top: 20, right: 0, bottom: 20, left: 0},
-            width = 400 - margin.left - margin.right,
-            height = 300 - margin.top - margin.bottom;
+        var margin = {top: 10, right: 0, bottom: 40, left: 20},
+            width = 320 - margin.left - margin.right,
+            height = 250 - margin.top - margin.bottom;
 
         var x = d3.scale.ordinal()
             .rangeRoundBands([0, width], .1);
@@ -564,7 +582,7 @@ L.TopoJSON = L.GeoJSON.extend({
         var yAxis = d3.svg.axis()
             .scale(y)
             .orient("left")
-            .ticks(10, "%");
+            .ticks(10);
 
         var svg = d3.select("#chartContainer").append("svg")
             .attr("width", width + margin.left + margin.right)
@@ -573,41 +591,69 @@ L.TopoJSON = L.GeoJSON.extend({
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         x.domain(['INCOME', 'HEALTH', 'EDUCATION', 'EMPLOYMENT', 'ENVIRONMENT', 'HOUSING', 'CRIME']);
-        y.domain(d3.range(10));
+        y.domain([0, 10]);
 
         svg.append('g')
             .attr('class', 'x axis')
             .attr('transform', 'translate(0,' + height + ')')
             .call(xAxis)
+            .selectAll('text')
+            .style('text-anchor', 'end')
+            .attr('dx', '0em')
+            .attr('dy', '.8em')
+            .attr('transform', 'rotate(-30)');
 
         svg.append("g")
             .attr("class", "y axis")
-            .call(yAxis)
+            .call(yAxis);
+            /* Label for y-axis
             .append("text")
             .attr("transform", "rotate(-90)")
-            .attr("y", 6)
-            .attr("dy", ".71em")
+            .attr("y", -10)
+            .attr("dy", "-1em")
             .style("text-anchor", "end")
-            .text("Performance");
-
-        console.log(deciles);
+            .text("Performance");*/
 
         svg.selectAll('.bar')
             .data(deciles)
             .enter().append('rect')
             .attr('class', 'bar')
-            .attr('x', function(d) { console.log(d);return x(d.indicator); })
+            .attr('x', function(d) { return x(d.indicator); })
             .attr('width', x.rangeBand())
             .attr('y', function(d) { return y(d.decile); })
-            .attr('height', function(d) { return height - y(d.decile); })
+            .attr('height', function(d) { console.log(y(d.decile));return height - y(d.decile); })
     };
+    barchart.feedData = function(deciles) {
+        var svg = d3.select("#chartContainer");
+        svg.selectAll('.bar')
+            .data(deciles)
+            .enter().append('rect')
+            .attr('class', 'bar')
+            .attr('x', function(d) { return x(d.indicator); })
+            .attr('width', x.rangeBand())
+            .attr('y', function(d) { return y(d.decile); })
+            .attr('height', function(d) { console.log(y(d.decile));return height - y(d.decile); })
+    };
+
     barchart.draw(
-        [   {'indicator':'INCOME',decile:5},
-            {'indicator':'HEALTH',decile:5},
+        [   {'indicator':'INCOME',decile:1},
+            {'indicator':'HEALTH',decile:0},
             {'indicator':'EDUCATION',decile:5},
             {'indicator':'EMPLOYMENT',decile:5},
             {'indicator':'ENVIRONMENT',decile:5},
             {'indicator':'HOUSING',decile:5},
-            {'indicator':'CRIME',decile:5}]
+            {'indicator':'CRIME',decile:5}
+        ]
     );
+    /*
+    barchart.feedData(
+        [   {'indicator':'INCOME',decile:1},
+            {'indicator':'HEALTH',decile:0},
+            {'indicator':'EDUCATION',decile:5},
+            {'indicator':'EMPLOYMENT',decile:5},
+            {'indicator':'ENVIRONMENT',decile:5},
+            {'indicator':'HOUSING',decile:5},
+            {'indicator':'CRIME',decile:5}
+        ]
+    );*/
 }());
