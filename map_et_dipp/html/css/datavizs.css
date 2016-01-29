@@ -14,18 +14,8 @@
     margin-left: 3px;
     margin-right: 3px;
     
-    height: 250px;
+    height: 180px;
     width: 100px;
-}
-
-.baliseJauge svg {
-    
-}
-
-.baliseJauge img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 

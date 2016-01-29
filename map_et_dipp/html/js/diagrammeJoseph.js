@@ -62,62 +62,53 @@ var donneesJardinJoseph = {
 var infosJardinJoseph = {
     "Racines": { 
         idJauge: "jauge_racine",
-        style: "",
         couleur: "#ffee00",
         maximum: 20050,
         cheminImage: ""
     },
     "Poids et Haricots": { 
         idJauge: "jauge_haricots",
-        style: "",
         couleur: "#02365", 
         maximum: 16400,
         cheminImage: ""
     },
     "Choux": { 
         idJauge: "jauge_choux",
-        style: "",
         couleur: "#11aabb",
         maximum: 14600
     },
     "Epinards et Salades": { 
         idJauge: "jauge_salades",
-        style: "",
         couleur: "#aa22bb",
         maximum: 39755,
         cheminImage: ""
     },
     "Courges": { 
         idJauge: "jauge_courges",
-        style: "",
         couleur: "#9900dd",
         maximum: 77400,
         cheminImage: ""
     },
     "Tomates": { 
         idJauge: "jauge_tomates",
-        style: "",
         couleur: "#dd99cc",
         maximum: 123600,
         cheminImage: ""
     },
     "Aromatiques": { 
         idJauge: "jauge_aromatiques",
-        style: "",
         couleur: "#cc66bb",
         maximum: 3800,
         cheminImage: ""
     },
     "Fruits": { 
         idJauge: "jauge_fruits",
-        style: "",
         couleur: "#aaee33",
         maximum: 30010,
         cheminImage: ""
     },
     "Autres": { 
         idJauge: "jauge_autres",
-        style: "",
         couleur: "#332211",
         maximum: 11965,
         cheminImage: ""
@@ -125,9 +116,6 @@ var infosJardinJoseph = {
 };
 
 
-
-var height = 600;
-var width = 600;
 
 var jauges = {};
 
@@ -155,7 +143,7 @@ donneesActuelles.forEach(function(element, index, tableau) {
     config.maxValue = (infoElement.maximum * 0.001).toFixed(1);
     config.circleThickness = 0.04;  // taille cercle extérieur
     config.circleFillGap = 0;       // espacement entre cercle extérieur et intérieur 
-    config.textVertPosition = 1.4;  // positionner le texte au dessus de la gauge 
+    config.textVertPosition = 1.6;  // positionner le texte au dessus de la gauge 
     config.circleColor = infoElement.couleur;
     config.textColor = infoElement.couleur;
     config.waveColor = infoElement.couleur;
@@ -172,7 +160,22 @@ donneesActuelles.forEach(function(element, index, tableau) {
     var jauge = loadLiquidFillGauge(idJauge, poids, config);
     jauges[idJauge] = jauge;
     
-    var image = baliseJauge.append("img").attr("src", infoElement.cheminImage).attr("alt", element.nomProduit);
+    // ajout du "kg" au dessus de la jauge
+    svgJauge.select("g").append("text").attr("x", 50).attr("y", -6).attr("class", "liquidFillGaugeText").attr("text-anchor", "middle").style("fill", infoElement.couleur).text("kg");   
+    
+    // ajout de l'image dans la jauge
+    // <image x="200" y="200" width="100px" height="100px" xlink:href="myimage.png"> 
+    svgJauge.select("g").append("image").attr("x", 0).attr("y", 0).attr("xlink:href", "").attr("width", 0).attr("height", 0);
+    /*
+    .text(textRounder(textStartValue) + percentText)
+        .attr("class", "liquidFillGaugeText")
+        .attr("text-anchor", "middle")
+        .attr("font-size", textPixels + "px")
+        .style("fill", config.waveTextColor)
+        */
+    
+    // ajout de l'image en html
+    //var image = baliseJauge.append("img").attr("src", infoElement.cheminImage).attr("alt", element.nomProduit);
     
 });
 
