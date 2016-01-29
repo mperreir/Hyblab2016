@@ -1,9 +1,14 @@
 body {
     margin: 0;
 }
-#map {
+#map, #rope {
     height: 100vh;
 }
+
+#rope {
+    position: relative;
+}
+
 .leaflet-popup-pane {
     pointer-events: none;
 }
@@ -122,4 +127,29 @@ body {
 
 .purple {
 
+}
+
+#charts {
+    height: 400px;
+}
+
+.chart {
+    width: 49%;
+    height: 100%;
+    display: inline-block;
+}
+
+.chart div {
+    background-color: blue;
+    height: 10%;
+    margin-bottom: 4%;
+    transition: width 0.5s;
+}
+
+#chart_left div {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#chart_right div {
 }
