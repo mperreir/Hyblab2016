@@ -3,7 +3,7 @@
 <head>
   <title>Métagramme</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
   <!-- <link rel="stylesheet" type="text/css" href="css/indexstyle.css"> -->
 
@@ -19,14 +19,18 @@
         <div id="container" class="row">
 
           <!-- Navigation -->
-          <div class="col-md-2 navbar sidebar " id="left">
-              <ul id="menu1" class="menu_el">CA POUSSE</ul>
-              <ul id="menu2" class="menu_el">10 ECLOSIONS</ul>
-              <ul id="menu3" class="menu_el">QUARTIERS</ul>
+          <div class="col-md-1 sidebar" id="navbar_left">
+              <ul class="nav nav-sidebar vertical-center" id="left">
+                <li id="menu1" class="text-center text-uppercase active">ça pousse</li>
+                <li id="menu2" class="text-center text-uppercase">10 éclosions</li>
+                <li id="menu3" class="text-center text-uppercase">quartiers</li>
+              </ul>
           </div>
 
           <!-- Middle -->
-          <div class="col-md-5" id="middle">
+          <div class="col-md-4" id="middle">
+              
+              <!-- Middle panel navbar -->
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" id="submenu">
                   <li class="col-md-4" id="submenu1">
@@ -40,10 +44,26 @@
                   </li>
                 </ul>
               </div>
+
+              <!-- Middle panel content -->
+              <div class="mp_content">
+                <div class="mp_header">
+                  <p class="text-center text-uppercase">ça pousse !</p>
+                </div>
+              
+                <p class="mp_intro">
+                  En quinze ans, beaucoup de beaux projets ont vu le jour,
+                  mais également de nombreux édifices ont été batis. Eux
+                  aussi ont beaucoup contribué à la floraison Brestoise ! 
+                </p>
+
+                <img src="img/ca_pousse_edito.png">
+              </div>
+              
           </div>
 
           <!-- Map -->
-          <div class="col-md-5" id="right">
+          <div class="col-md-7" id="right">
             <iframe src="map.html"></iframe>
           </div>
 

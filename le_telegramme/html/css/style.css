@@ -25,6 +25,11 @@
     src: url(../fonts/SantEliaScriptBoldDEMO.otf);
 }
 
+@font-face{
+    font-family: DINPro-Bold;
+    src: url(../fonts/DINPro-Bold.otf);
+}
+
 /*General properties*/
 html, body {
   height: 100%;
@@ -46,41 +51,41 @@ iframe {
 
 
 /* Left panel */
-#left {
-  background-color : black;
-  padding: 25% 0 0;
-  margin : 0;
-  height : 100vh;
+#navbar_left {
+  padding: 25% 0;
+  height: 100vh;
+  background-color: #313232;
 }
 
-#left ul {
-  padding : 0;
-  width : 100%;
-  margin : auto;
-  text-align: center;
-  height : 100px;
-  display : block;
+#left {
+  height: 33%;
+  vertical-align: middle;
+}
+
+#left li {
+  padding-top: 30%;
+  height: 100%;
+  border-bottom: 2px solid #666666;
+  font-size: 20px;
 }
 
 #menu1 {
   background-color : grey;
-  margin-top : 50%;
   color: white;
-  font-family: SourceSansProRegular;
+  font-family: AeroMaticsDisplay;
+  border-top: 2px solid #666666;
 }
 
 #menu2 {
-  background-color : black;
+  background-color : #313232;
+  font-family: AeroMaticsDisplay;
   color : white;
 }
 
 #menu3 {
-  background-color : black;
+  background-color : #313232;
+  font-family: AeroMaticsDisplay;
   color: white;
-}
-
-.menu_el{
-  border-bottom : 2px solid grey;
 }
 
 /*Middle panel */
@@ -118,6 +123,28 @@ iframe {
 
 #submenu3 li {
   border-right: 5px solid #FACF43;
+}
+
+.mp_content {
+  margin: 10% 13%;
+  color: white;
+}
+
+.mp_header {
+  font-family: DINPro-Bold;
+  font-size : 5em;
+}
+
+.mp_intro{
+  font-family: SourceSansProRegular;
+  font-size: 1.5em;
+  text-align: justify;
+  padding: 0 2%;
+}
+
+.mp_content img {
+  padding-top: 15%;
+  width: 100%;
 }
 
 /*Right panel*/
