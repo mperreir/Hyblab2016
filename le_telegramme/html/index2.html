@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OSM Buildings</title>
+  <title>Métagramme</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" type="text/css" href="css/indexstyle.css">
 
   <!-- bootstrap -->
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
@@ -14,20 +16,46 @@
       <!-- Container -->
       <div class="container-fluid">
         <div class="row">
-          <div id='left' class="col-sm-3 col-md-1 sidebar">
-            <ul id='menu1' class="nav nav-sidebar">Ca pousse</ul>
-            <ul id='menu2' class="nav nav-sidebar">10 éclosions</ul>
-            <ul id='menu3' class="nav nav-sidebar">Quartiers</ul>
+
+          <!-- Navigation -->
+          <div class="col-md-2 navbar navbar-inverse sidebar" id="navigation">
+            <ul class="nav nav-sidebar nav-pills">
+              <li><a href="#">INTRO</a></li>
+              <li><a href="#">10 CHANTIERS</a></li>
+              <li><a href="#">QUARTIERS</a></li>
+            </ul>
           </div>
 
-          <div id='middle' class="col-md-5">
+          <!-- Middle -->
+          <div class="col-md-5">
+            <nav>
+              <ul class="nav nav-tabs">
+                <li><a href="#edito" data-toggle="tab">Edito</a></li>
+                <li><a href="#sondage" data-toggle="tab">Sondage</a></li>
+                <li><a href="#photos" data-toggle="tab">Photo</a></li>
+              </ul>
+            </nav>
+            <section id="tab-content">
+              <article id="edito" class="tab-pane fade in active">
+                <p>Bla bla bla...</p>
+              </article>
+
+              <article id="sondage" class="tab-pane fade">
+                <p>Bla bla bla... So</p>
+              </article>
+
+              <article id="photos" class="tab-pane fade">
+                <p>Photos....</p>
+              </article>
+            </section>
           </div>
-          
-          <div id='right' class="col-md-6">
+
+          <!-- Map -->
+          <div class="col-md-5">
             <iframe src="map.html"></iframe>
           </div>
-        </div>
 
+        </div>
       </div>
   </body>
 </html>
