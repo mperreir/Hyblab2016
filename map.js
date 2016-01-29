@@ -537,6 +537,16 @@
     searchbar.create(map);
     searchbar.configEventListener();
 
+    var colorsOfIndicators = {
+        'INCOME': '#805501',
+        'HEALTH': '#029FDA',
+        'EDUCATION': '#5203FF',
+        'EMPLOYMENT': '#DAA643',
+        'ENVIRONMENT': '#276880',
+        'HOUSING': '#864FFF',
+        'CRIME': '#FFDD9A'
+    };
+
     var barchart = L.control({position : 'bottomright'});
     barchart.onAdd = function(map) {
         this._chartContainer = L.DomUtil.create('div','');
@@ -579,6 +589,7 @@
             .call(xAxis)
             .selectAll('text')
             .style('text-anchor', 'end')
+            .attr('class', 'x-axis-label')
             .attr('dx', '0em')
             .attr('dy', '.8em')
             .attr('transform', 'rotate(-30)');
@@ -594,10 +605,13 @@
             .style("text-anchor", "end")
             .text("Performance");*/
 
+
+
         svg.selectAll('.bar')
             .data(deciles)
             .enter().append('rect')
-            .attr('class', 'bar')
+            .attr('class', function(d) { return 'bar'; })
+            .attr('style', function(d) { return 'fill:' + colorsOfIndicators[d.indicator];})
             .attr('x', function(d) { return x(d.indicator); })
             .attr('width', x.rangeBand())
             .attr('y', function(d) { return y(d.decile); })

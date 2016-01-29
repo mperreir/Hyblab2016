@@ -105,9 +105,11 @@ body {
     stroke: #000;
     shape-rendering: crispEdges;
 }
-
 .x.axis path {
     display: none;
+}
+.x-axis-label {
+    stroke-width: 10;
 }
 @media (max-height: 530px) {
 
