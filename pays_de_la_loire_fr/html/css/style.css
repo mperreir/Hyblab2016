@@ -3,3 +3,74 @@ footer p
 {
   font-size: small;
 }
+
+h1, h2, h3, h4, h5, h6
+{
+	color: black;
+	text-align: center;
+	font-size: 6vw;
+}
+
+h2
+{
+	font-size: 3vw;
+}
+
+li
+{
+	position: relative;
+	display:block;
+	width:40%;
+	float:left;
+	margin-bottom: 15px;
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: 2vw;
+	cursor: pointer;
+}
+
+span>ul>li
+{
+	background-color: #008fff;
+}
+
+.contenu
+{
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	height: auto;
+}
+
+.titre_et_sous_titre
+{
+	top: 35%;
+}
+
+.propositions
+{
+	top: 70%;
+	width: inherit;
+	margin-right:15px;
+	margin-left:15px;
+}
+
+.slide_width
+{
+	width: inherit;
+}
+
+.total_width
+{
+	width: 100%;
+}
+
+#question1
+{
+	position: relative;
+}
+
+#question>li
+{
+	position: absolute;
+}
