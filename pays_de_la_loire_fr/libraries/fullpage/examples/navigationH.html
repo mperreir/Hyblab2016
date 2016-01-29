@@ -1,167 +1,184 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <meta name="copyright" content="Copyright © 2013 Adobe Systems Incorporated. All rights reserved.
- 
- Licensed under the Apache License, Version 2.0 (the “License”);
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- 
- http://www.apache.org/licenses/LICENSE-2.0
- 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an “AS IS” BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Vertical navigation dots - fullPage.js</title>
 
 
-    <!-- set viewport correctly so that the page displays full width on mobiel devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hyblab 2016</title>
 
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="../libraries/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<style>
+	    /* Reset CSS
+	     * --------------------------------------- */
+	    body,div,dl,dt,dd,ul,ol,h1,h2,h3,h4,h5,h6,pre,
+	    form,fieldset,input,textarea,p,blockquote,th,td {
+	        padding: 0;
+	        margin: 0;
+	    }
+	    a{
+	      text-decoration:none;
+	    }
+	    table {
+	        border-spacing: 0;
+	    }
+	    fieldset,img {
+	        border: 0;
+	    }
+	    address,caption,cite,code,dfn,em,strong,th,var {
+	        font-weight: normal;
+	        font-style: normal;
+	    }
+	    strong{
+	      font-weight: bold;
+	    }
+	    ol,ul {
+	        list-style: none;
+	        margin:0;
+	        padding:0;
+	    }
+	    caption,th {
+	        text-align: left;
 
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/javascript.fullPage.css" />
-
-      <style>
-        /* Reset CSS
-         * --------------------------------------- */
-        body,div,dl,dt,dd,ul,ol,h1,h2,h3,h4,h5,h6,pre,
-        form,fieldset,input,textarea,p,blockquote,th,td {
-            padding: 0;
-            margin: 0;
-        }
-        a{
-          text-decoration:none;
-        }
-        table {
-            border-spacing: 0;
-        }
-        fieldset,img {
-            border: 0;
-        }
-        address,caption,cite,code,dfn,em,strong,th,var {
-            font-weight: normal;
-            font-style: normal;
-        }
-        strong{
-          font-weight: bold;
-        }
-        ol,ul {
-            list-style: none;
-            margin:0;
-            padding:0;
-        }
-        caption,th {
-            text-align: left;
-
-        }
-        /*h1,h2,h3,h4,h5,h6 {
-            font-weight: normal;
-            font-size: 100%;
-            margin:0;
-            padding:0;
-            color:#444;
-        }*/
-        q:before,q:after {
-            content:'';
-        }
-        abbr,acronym { border: 0;
-        }
+	    }
+	    /*h1,h2,h3,h4,h5,h6 {
+	        font-weight: normal;
+	        font-size: 100%;
+	        margin:0;
+	        padding:0;
+	        color:#444;
+	    }*/
+	    q:before,q:after {
+	        content:'';
+	    }
+	    abbr,acronym { border: 0;
+	    }
 
 
-        /* Custom CSS
-         * --------------------------------------- */
-        body{
-          font-family: arial,helvetica;
-          color: #F2F2F2;
-        }
-        p{
-          font-size: 2em;
-        }
-        .content{
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          text-align: center;
-        }
+	    /* Custom CSS
+	     * --------------------------------------- */
+	    body{
+	      font-family: arial,helvetica;
+	      color: #F2F2F2;
+	    }
+	    p{
+	      font-size: 2em;
+	    }
+	    .content{
+	      position: relative;
+	      top: 50%;
+	      transform: translateY(-50%);
+	      text-align: center;
+	    }
 
-        /* Section 1
-         * --------------------------------------- */
-        #section0{
-          background-color: #BFDA00;
-        }
-        #section0 h1{
-          color: #444;
-        }
-        #section0 p{
-          color: #333;
-          opacity: 0.4;
-        }
-
-
-        /* Section 2
-         * --------------------------------------- */
-        #section1{
-          background-color: #2EBE21;
-        }
-        #section1 h1{
-          color: #fff;
-        }
-        #section1 p{
-          opacity: 0.8;
-        }
+	    /* Section 1
+	     * --------------------------------------- */
+	    #section0{
+	      background-color: #BFDA00;
+	    }
+	    #section0 h1{
+	      color: #444;
+	    }
+	    #section0 p{
+	      color: #333;
+	      opacity: 0.4;
+	    }
 
 
-        /* Section 3
-         * --------------------------------------- */
-        #section2{
-          background-color: #2C3E50;
-        }
-        #section2 h1{
-          color: #F2F2F2;
-        }
-        #section2 p{
-          opacity: 0.6;
-        }
+	    /* Section 2
+	     * --------------------------------------- */
+	    #section1{
+	      background-color: #2EBE21;
+	    }
+	    #section1 h1{
+	      color: #fff;
+	    }
+	    #section1 p{
+	      opacity: 0.8;
+	    }
 
-        /* Section 3
-         * --------------------------------------- */
-        #section3{
-          background-color: #2C3E50;
-        }
-        #section3 h1{
-          color: #F2F2F2;
-        }
-        #section3 p{
-          opacity: 0.6;
-        }
 
-        /* Section 3
-         * --------------------------------------- */
-        #section4{
-          background-color: #2C3E50;
-        }
-        #section4 h1{
-          color: #F2F2F2;
-        }
-        #section4 p{
-          opacity: 0.6;
-        }
-      </style>
+	    /* Section 3
+	     * --------------------------------------- */
+	    #section2{
+	      background-color: #2C3E50;
+	    }
+	    #section2 h1{
+	      color: #F2F2F2;
+	    }
+	    #section2 p{
+	      opacity: 0.6;
+	    }
 
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+	    /* Section 3
+	     * --------------------------------------- */
+	    #section3{
+	      background-color: #2C3E50;
+	    }
+	    #section3 h1{
+	      color: #F2F2F2;
+	    }
+	    #section3 p{
+	      opacity: 0.6;
+	    }
+
+	    /* Section 3
+	     * --------------------------------------- */
+	    #section4{
+	      background-color: #2C3E50;
+	    }
+	    #section4 h1{
+	      color: #F2F2F2;
+	    }
+	    #section4 p{
+	      opacity: 0.6;
+	    }
+	  </style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="../vendors/jquery.slimscroll.min.js"></script>
+
+	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+	
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#container').fullpage({
+		        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage', '8thpage', 'lastPage'],
+		        menu: '#menu',
+		        slidesNavigation: true,
+		        slidesNavPosition: 'bottom',
+		        navigation: true,
+		        navigationPosition: 'right',
+		        
+		        css3:true,
+		        loopHorizontal: false
+			});
+		});
+	</script>
+	<script src="../libraries/jquery/dist/jquery.js"></script>
+    <!--<script type="text/javascript" src="../libraries/fullpage/javascript.fullPage.js"></script>-->
+    <script src="../libraries/snap/snap.svg-min.js"></script>
+    <script src="../libraries/d3/d3.min.js"></script>
+    
+    <script src="javascript/dataviz1.js"></script>
+    <script src="javascript/dataviz2.js"></script>
+    <script src="javascript/dataviz3.js"></script>
+</head>
+<body>
+
+
+
+<div id="container">
 
       <section class="section" style="background-color:#ffffff; opacity: 0.8">
           <h1 class="titre">
@@ -179,7 +196,7 @@
       </section>
 
       <section class="section" style="background-color:#ffffff; opacity: 0.9">
-        <section class="slide" >
+        <section class="slide" id="slide1" data-anchor="slide1">
           <h2 class="text-center titre">
             QUELLE EST LA SUPERFICIE DE LA RÉGION PAYS DE LA LOIRE
           </h2>
@@ -202,7 +219,7 @@
           </span>
         </section>
 
-        <section class="slide" >
+        <section class="slide" id="slide2" data-anchor="slide2">
           <h2 class="text-center">
             De quelle couleur est cette diapo ?
           </h2>
@@ -225,7 +242,7 @@
           </span>
         </section>
 
-        <section class="slide" >
+        <section class="slide" id="slide3" data-anchor="slide3">
           <h2 class="text-center">
             Cette question a pour but de tester votre attention, sélectionnez la proposition n°3
           </h2>
@@ -248,7 +265,7 @@
           </span>
         </section>
 
-        <section class="slide" >
+        <section class="slide" id="slide4" data-anchor="slide4">
           <h2 class="text-center">
             Elouarn peut-il tout faire en web ?
           </h2>
@@ -341,32 +358,5 @@
     </div>
 
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="../libraries/fullPage/vendors/jquery.slimscroll.min.js"></script>
-    <script type="text/javascript" src="../libraries/fullPage/jquery.fullPage.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-      $('#container').fullpage({
-        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage', '8thpage', 'lastPage'],
-        menu: '#menu',
-        slidesNavigation: true,
-        slidesNavPosition: 'bottom',
-        navigation: true,
-        navigationPosition: 'right',
-        
-        css3:true,
-        loopHorizontal: false
-      });
-    });
-    </script>
-    
-    <!--<script type="text/javascript" src="../libraries/fullpage/javascript.fullPage.js"></script>-->
-    <script src="../libraries/snap/snap.svg-min.js"></script>
-    <script src="../libraries/d3/d3.min.js"></script>
-    
-    <script src="javascript/dataviz1.js"></script>
-    <script src="javascript/dataviz2.js"></script>
-    <script src="javascript/dataviz3.js"></script>
-  </body>
+</body>
 </html>
