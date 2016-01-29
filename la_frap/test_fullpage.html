@@ -65,20 +65,14 @@
 					$('#map').vectorMap({
 						map:'pays_de_la_loire',
 						backgroundColor: 'none',
-						colors:{
-							"FR-44":'#179fae',
-							"FR-85":'#179fae',
-							"FR-49":'#179fae',
-							"FR-72":'#179fae',
-							"FR-53":'#179fae',
-						},
+						color:'#003f4e',
+						selectedColor:'#179fae',
+						hoverColor:'#006f7e',
 						series:{
 							regions:[{
 								attribute:'fill', 
 							}]
 						},
-						onRegionSelected: function(){
-						}   
 					});
 
 					//map.series.regions[0].setValues("#179fae");
@@ -127,9 +121,6 @@
 
 
 				var jsonMarker = [
-					{"x":560,"y":180,"r":3.5,"c":"white","texte":"Radio 1"},
-					{"x":450,"y":282,"r":3.5,"c":"white","texte":"Radio 2"},
-					{"x":200,"y":300,"r":3.5,"c":"white","texte":"<p>Prun'</p><p>Une radio étudiante Nantaise<p>"},
 					{"x":134.716,"y":330.95,"r":3.492,"c":"white","texte":"Radio 1"},
 					{"x":142.93,"y":322.737,"r":3.492,"c":"white","texte":"Radio 1"},
 					{"x":26.323,"y":330.95,"r":3.492,"c":"white","texte":"Radio 1"},
@@ -152,7 +143,6 @@
 					{"x":232.514,"y":138.131,"r":3.492,"c":"white","texte":"Radio 1"},
 					{"x":248.007,"y":47.732,"r":3.492,"c":"white","texte":"Radio 1"},
 					{"x":337.444,"y":103.58,"r":3.492,"c":"white","texte":"Radio 1"}
-
 
 				]
 
@@ -360,6 +350,12 @@
         			</div>
 				</div>
 			</div>
+			
+			<div class="section " id="section3">
+				<div class="content3">
+					
+				</div>
+			</div>
 		</div>
 
 
@@ -372,7 +368,7 @@
 		<script src="javascript.fullPage.js"></script>
 		<script>
 			fullpage.initialize('#fullpage', {
-				anchors: ['firstPage', 'secondPage'],
+				anchors: ['title','firstPage', 'secondPage','thirdPage'],
 				menu: '#menu',
 				css3:true
 			});
