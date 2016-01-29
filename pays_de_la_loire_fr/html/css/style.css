@@ -48,18 +48,16 @@ span>ul>li>p
 
 .titre
 {
-	top: 10%;
+	text-align: center;
+	bottom: 40%;
 	color: #002266;
 }
 
-.sous_titre
+.sous_titre_orange
 {
-	top: 10%;
-}
-
-.sous_sous_titre
-{
-	top: 20%;
+	text-align: center;
+	bottom: 40%;
+	color: #ffbf00;
 }
 
 .contenu
@@ -70,15 +68,10 @@ span>ul>li>p
 	height: auto;
 }
 
-.titre_et_sous_titre
-{
-	top: 35%;
-}
-
 .propositions
 {
 	top: 75%;
-	width: inherit;
+	width: 25%;
 	margin-right:15px;
 	margin-left:15px;
 }
