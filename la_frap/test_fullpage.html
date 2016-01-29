@@ -25,7 +25,7 @@
 
         <script src="jquerysvg/jquery.svg.js"></script>
 
-        <script src="map_pays_de_la_loire2.js"></script>	
+        <script src="map_pays_de_la_loire3.js"></script>	
 
 
 		<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
@@ -36,7 +36,7 @@
 
 				map1 = $(document).ready(function () {
 					$('#bigmap').vectorMap({
-						map:'pays_de_la_loire2',
+						map:'pays_de_la_loire',
 						backgroundColor: 'none',
 						color:'#003f4e',
 						selectedColor:'#003f4e',
@@ -63,15 +63,8 @@
 
 				map1 = $(document).ready(function () {
 					$('#map').vectorMap({
-						map:'pays_de_la_loire2',
+						map:'pays_de_la_loire',
 						backgroundColor: 'none',
-						/*colors:{
-							"FR-44":'#179fae',
-							"FR-85":'#179fae',
-							"FR-49":'#179fae',
-							"FR-72":'#179fae',
-							"FR-53":'#179fae',
-						},*/
 						color:'#003f4e',
 						selectedColor:'#179fae',
 						hoverColor:'#006f7e',
@@ -79,7 +72,7 @@
 							regions:[{
 								attribute:'fill', 
 							}]
-						}, 
+						},
 					});
 
 					//map.series.regions[0].setValues("#179fae");
@@ -126,35 +119,30 @@
 					info.html("<p class='titre'>" + d.n + "</p><p>Radios : " + d.r + "</p><p>Antennes : " + d.a + "</p><p>Salaries : " + d.s + "</p><p>Benevoles : " + d.b + "</p><p>Service Civique : " + d.sc + "</p>");
 				});
 
-				dpt.on('mouseover', function (){
-					dpt.attr("fill","#ffffff")
-				});
-
-
 
 				var jsonMarker = [
-					{"x":126.232,"y":518.706,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":136.232,"y":508.706,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":-5.748,"y":518.706,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":44.252,"y":477.706,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":12.897,"y":386.391,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":33.98,"y":418.61,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":145.394,"y":299.752,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":33.98,"y":433.114,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":85.818,"y":387.643,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":95.07,"y":395.645,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":67.501,"y":427.114,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":108.323,"y":395.897,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":102.818,"y":383.391,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":83.399,"y":404.897,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":97.07,"y":408.149,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":252.836,"y":355.862,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":264.173,"y":360.114,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":255.173,"y":370.114,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":361.173,"y":359.114,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":245.308,"y":283.931,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":264.173,"y":173.862,"r":4.252,"c":"white","texte":"Radio"},
-					{"x":373.071,"y":241.862,"r":4.252,"c":"white","texte":"Radio"}
+					{"x":134.716,"y":330.95,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":142.93,"y":322.737,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":26.323,"y":330.95,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":67.387,"y":297.277,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":41.635,"y":222.281,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":58.95,"y":248.742,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":150.455,"y":151.125,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":58.95,"y":260.654,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":101.524,"y":223.309,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":109.123,"y":229.881,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":86.481,"y":255.727,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":120.008,"y":230.087,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":115.487,"y":219.817,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":99.538,"y":237.479,"r":3.493,"c":"white","texte":"Radio 1"},
+					{"x":110.766,"y":240.15,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":238.695,"y":197.208,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":248.007,"y":200.7,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":240.615,"y":208.913,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":327.673,"y":199.878,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":232.514,"y":138.131,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":248.007,"y":47.732,"r":3.492,"c":"white","texte":"Radio 1"},
+					{"x":337.444,"y":103.58,"r":3.492,"c":"white","texte":"Radio 1"}
 
 				]
 
@@ -297,8 +285,13 @@
 					"callbacks":{
 						onClickSegment: function (info){
 							console.log(info);
-
-							$("#pieChart").append("<p>"+info.data.value+"</p>");
+							
+							if (!info.expanded) {
+								$("#pieSection").css("visibility", "visible")
+								$("#pieSection").html(info.data.value);
+							} else {
+								$("#pieSection").css("visibility", "hidden");
+							}
 						}
 					}
 				});
@@ -325,13 +318,13 @@
 					<h1>LES RADIOS LOCALES</h1>
 					<p>Radios associatives</p>
 					<form>
-						<input type="button" name="section 2" value="Vers la section 2" onclick="self.location.href='test_fullpage.html#secondPage'">
+						<input type="button" name="section 2" value="Vers la section 2" onclick="self.location.href='file:///D:/COURS/4A/Web/Hyblab/Hyblab2016/la_frap/test_fullpage.html#secondPage'">
 					</form>
 				</div>
 			</div>
-			
 			<div class="section " id="section1">
 				<div class="content1">
+
 					<div class="leftPart">
 						<p id="bigmap" style="width:841.89px;height:595.28px"></p>
         			</div>
@@ -343,12 +336,17 @@
 			
 			<div class="section " id="section2">
 				<div class="content2">
+
 					<div class="leftPart">
-						<p id="map" style="width:841.89px;height:595.28px"></p>
+						<p id="map" style="width:419.037px;height:407.543px"></p>
         			</div>
         			<div class="rightPart">
         				<p id="infodpt"></p>
-        				<div id="pieChart"></div>	
+        				<div id="pieChart">
+						</div>	
+						<div id="pieInfo">
+							<p id="pieSection"></p>
+						</div>
         			</div>
 				</div>
 			</div>
