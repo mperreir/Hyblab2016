@@ -336,7 +336,7 @@
     var map = L.map('map', {
         center: [53.85, -2.7],
         zoom: 11,
-        layers: [osm, topoMsoaLayer], // Only Add default layers here
+        layers: [topoMsoaLayer], // Only Add default layers here
         minZoom: 11,
         maxZoom: 16,
         maxBounds: topoMsoaLayer.getBounds(),
