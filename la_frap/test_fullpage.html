@@ -126,11 +126,6 @@
 					info.html("<p class='titre'>" + d.n + "</p><p>Radios : " + d.r + "</p><p>Antennes : " + d.a + "</p><p>Salaries : " + d.s + "</p><p>Benevoles : " + d.b + "</p><p>Service Civique : " + d.sc + "</p>");
 				});
 
-				dpt.on('mouseover', function (){
-					dpt.attr("fill","#ffffff")
-				});
-
-
 
 				var jsonMarker = [
 					{"x":126.232,"y":518.706,"r":4.252,"c":"white","texte":"Radio"},
@@ -297,8 +292,13 @@
 					"callbacks":{
 						onClickSegment: function (info){
 							console.log(info);
-
-							$("#pieChart").append("<p>"+info.data.value+"</p>");
+							
+							if (!info.expanded) {
+								$("#pieSection").css("visibility", "visible")
+								$("#pieSection").html(info.data.value);
+							} else {
+								$("#pieSection").css("visibility", "hidden");
+							}
 						}
 					}
 				});
@@ -348,7 +348,11 @@
         			</div>
         			<div class="rightPart">
         				<p id="infodpt"></p>
-        				<div id="pieChart"></div>	
+        				<div id="pieChart">
+						</div>	
+						<div id="pieInfo">
+							<p id="pieSection"></p>
+						</div>
         			</div>
 				</div>
 			</div>
