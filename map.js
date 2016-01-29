@@ -237,7 +237,10 @@
                 })
             }
         }
-        //console.log(deciles);
+        if (barchart._map != undefined) {
+            // sanity check, in case that barchart not cleaned previously
+            map.removeControl(barchart);
+        }
         barchart.addTo(map);
         barchart.draw(deciles);
 
@@ -265,12 +268,16 @@
 
     function LsoaResetHighlight(e) {
         topoLsoaLayer.resetStyle(e.target);
-        map.removeControl(barchart);
+        if (barchart._map != undefined) {
+            map.removeControl(barchart);
+        }
     }
 
     function MsoaResetHighlight(e) {
         topoMsoaLayer.resetStyle(e.target);
-        map.removeControl(barchart);
+        if (barchart._map != undefined) {
+            map.removeControl(barchart);
+        }
     }
 
     function updatePopup(e) {
@@ -332,7 +339,8 @@
         layers: [osm, topoMsoaLayer], // Only Add default layers here
         minZoom: 11,
         maxZoom: 16,
-        maxBounds: topoMsoaLayer.getBounds()
+        maxBounds: topoMsoaLayer.getBounds(),
+        zoomControl: false
     });
 
     map.on('zoomend', function(e) {
@@ -358,7 +366,7 @@
         { "Map": osm },
         { "MSOA": topoMsoaLayer, "LSOA": topoLsoaLayer }
     ).addTo(map);*/
-    L.control.scale().addTo(map);
+    //L.control.scale().addTo(map);
 
     var info = L.control();
 
@@ -466,8 +474,8 @@
 
     info.addTo(map);
 
-    var searchbar = L.control();
-    searchbar.onAdd = function(map) {
+    var searchbar = {};
+    searchbar.create = function(map) {
         this._div = L.DomUtil.create('div', 'searchbar');
         this._div.innerHTML = '';
 
@@ -478,6 +486,8 @@
         this._input.setAttribute('maxlength', 8);
 
         this._div.appendChild(this._input);
+
+        document.getElementById('map').appendChild(this._div);
 
         return this._div;
     };
@@ -495,6 +505,19 @@
                             .setLatLng(topoLsoaLayer["_layers"][layer].getBounds().getCenter())
                             .setContent(topoLsoaLayer["_layers"][layer].feature.properties.LSOA11NM)
                             .openOn(map);
+                        var deciles = [];
+                        for (var indicator in INDICATORS) {
+                            deciles.push({
+                                'indicator': indicator.toUpperCase(),
+                                'decile': window.data[lsoa11cd][indicator]['decile']
+                            });
+                            console.log(window.data[lsoa11cd][indicator]['decile']);
+                        }
+                        if (barchart._map != undefined) {
+                            map.removeControl(barchart);
+                        }
+                        barchart.addTo(map);
+                        barchart.draw(deciles);
                         topoLsoaLayer["_layers"][layer].setStyle({
                             weight: 5,
                             color: '#fff',
@@ -511,7 +534,7 @@
             input.removeEventListener('keyup', keypressEventListener);
         });
     };
-    searchbar.addTo(map);
+    searchbar.create(map);
     searchbar.configEventListener();
 
     var barchart = L.control({position : 'bottomright'});
@@ -522,7 +545,7 @@
     };
     // deciles
     barchart.draw = function(deciles) {
-        var margin = {top: 10, right: 0, bottom: 40, left: 20},
+        var margin = {top: 10, right: 0, bottom: 55, left: 20},
             width = 320 - margin.left - margin.right,
             height = 250 - margin.top - margin.bottom;
 
