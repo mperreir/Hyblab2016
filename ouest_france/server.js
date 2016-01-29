@@ -10,6 +10,7 @@ var donnees;
 fs.readFile('./ouest_france/data/data.json', 'utf-8', function(err, data){
 	if(err) throw err;
 	else donnees = JSON.parse(data);
+	console.log("Données chargées");
 });
 
 // Minimum routing: serve static content from the html directory
@@ -21,6 +22,8 @@ app.use(express.static(path.join(__dirname, 'html')));
 app.get("/data/", getData);
 //Tableaux des années disponibles pour une catégorie (menage ou carburant ou achat)
 app.get("/data/:categorie/available_years", getCategorieAvailableYears);
+
+app.get("/data/:categorie/years_comment", getCategorieYearsComments);
 //Données pour la catégorie donnée triées par années
 app.get("/data/:categorie/years", getCategorieAllYears);
 //Données pour la catégorie donnée pour une année
@@ -70,6 +73,7 @@ function getCategorie(req,res){
 		retour.categorie = categorie;
 		retour.dataType = getAtt(donnees[categorie].data);
 		retour.years = donnees[categorie].years;
+		retour.yearsComments = donnees[categorie].yearsComments;
 		retour.data = donnees[categorie].data;
 	};
 	res.write(stringifyPerso(retour));
@@ -89,6 +93,19 @@ function getCategorieAvailableYears(req,res){
 	res.end();
 };
 
+function getCategorieYearsComments(req, res){
+	resHeader;
+	var categorie = req.params.categorie;
+	var retour = {};
+	if(!donnees[categorie]) retour.err = "undefined data";
+	else{
+		retour.categorie = categorie;
+		retour.years = donnees[categorie].years;
+		retour.yearsComments = donnees[categorie].yearsComments;
+	}
+	res.write(stringifyPerso(retour));
+	res.end();
+};
 function getCategorieType(req,res){
 	resHeader(res);
 	var categorie = req.params.categorie;
@@ -117,6 +134,8 @@ function getCategoriePerYear(req,res){
 		retour.categorie = categorie;
 		retour.years = [year];
 		retour.dataType = getAtt(donnees[categorie].data);
+		retour.yearsComments = {};
+		retour.yearsComments[year] = donnees[categorie].yearsComments[year];
 		retour.data = {};
 		retour.data[year] = {};
 		for(type in donnees[categorie].data){
@@ -137,6 +156,7 @@ function getCategorieAllYears(req,res){
 		retour.years = donnees[categorie].years;
 		retour.categorie = categorie;
 		retour.dataType = getAtt(donnees[categorie].data);
+		retour.yearsComments = donnees[categorie].yearsComments;
 		retour.data = {};
 		donnees[categorie].years.forEach(function(year){
 			retour.data[year] = {}
