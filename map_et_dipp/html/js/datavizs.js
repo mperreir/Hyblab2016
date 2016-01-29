@@ -1,11 +1,11 @@
 
 
-var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":0},
-  {"produit":"Fruits", "distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":0.5235987755982988},
-  {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":120},
-  {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":180},
-  {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":240},
-  {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0, "angle":300}];
+var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit":"Fruits", "distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0},
+  {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0}];
 
 
 var jardinJoseph = {
@@ -105,17 +105,20 @@ var svgJoseph = d3.select("#legumesJoseph").append("svg").attr("width", 500).att
 
 
 
-var nantesRadius = [20];
-var width = 500;
-var height = 500;
+var nantesRadius = [30];
+var width = 650;
+var height = 650;
+var ratio = 1.3;
+
 var svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("height",height);
 
 //DESSIN du cercle représentant nantes
 svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", width/2).attr("cy",height/2).attr("r",nantesRadius).attr("fill","teal");
-
+//svg.selectAll("image").data(nantesRadius).enter().append("svg:image").attr("x",(width/2)-(150/2)).attr("y",(height/2)-(150/2)).attr("width", 150).attr("height",150).attr("xlink:href","../img/nantesRond.png");
 
 
 var groupes = svg.selectAll("g").data(produits).enter();
+var triangles = svg.selectAll("g").data(produits).enter();
 
 var angleActuMax = 0;
 var angleActuMoy = 0;
@@ -123,72 +126,100 @@ var angleActuMin = 0;
 
 var tooltip = d3.select("#araigneeAMAP").append("div").attr("class","dataTooltip");//style("background-color","black").style("position","absolute").style("z-index","100000").style("visibility","hidden").text("simple tooltip");
 
+
 // DESSIN DES LIGNES DES DISTANCES
 var lignesMax = groupes.append("line").attr("x1", function(d, i) {
-	var x = (width/2) - nantesRadius;
+	var x = (width/2) - nantesRadius-(d.distanceMoyenne*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 }).attr("y1", function(d, i) {
-	var x = (width/2) - nantesRadius;
+	var x = (width/2) - nantesRadius-(d.distanceMoyenne*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("x2",function(d,i){
-	var x = (width/2) - nantesRadius - d.distMax;
+	var x = (width/2) - nantesRadius - (d.distMax*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	d.xmax = rotatePoint(x,y,(width/2), (height/2), angle).x;
 	return d.xmax;
 }).attr("y2",function(d,i){
-	var x = (width/2) - nantesRadius - d.distMax;
+	var x = (width/2) - nantesRadius - (d.distMax*ratio);
 	var y = (height/2);
 	//var angle = 360 * i / produits.length;
 	var angle = i*(Math.PI*2)/produits.length;
 	d.ymax = rotatePoint(x, y, (width/2), (height/2), angle).y;
 	return d.ymax;
-}).attr("stroke-width",8).attr("stroke","yellow").on("mouseover", function(d){
-	d3.select(this).attr("stroke","orange");
+}).attr("stroke-width",1).attr("stroke","black").on("mouseover", function(d){
+	d3.select(this).attr("stroke","grey");
 	tooltip.text("Maximum : "+d.distMax.toFixed(2));
 	return tooltip.style("visibility","visible");
 }).on("mousemove",function(d){
-	console.log(d3.mouse(this));
 	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
 }).on("mouseout",function(d){
-	d3.select(this).attr("stroke","yellow");
+	d3.select(this).attr("stroke","black");
 	return tooltip.style("visibility","hidden");
 });
 
-//##### LIGNES MOYENNES
-var lignesMoyenne = groupes.append("line").attr("x1", function(d, i) {
-	var x = (width/2) - nantesRadius;
+
+
+//bout de ligne qui dépasse après le max
+var lignesApresMax = groupes.append("line").attr("x1", function(d, i) {
+	var x = (width/2) - nantesRadius-(d.distMax*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+
 }).attr("y1", function(d, i) {
-	var x = (width/2) - nantesRadius;
+	var x = (width/2) - nantesRadius-(d.distMax*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
+
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("x2",function(d,i){
-var x = (width/2) - nantesRadius - d.distanceMoyenne;
+	var x = (width/2) - nantesRadius - (d.distMax*ratio)-20;
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 }).attr("y2",function(d,i){
-	var x = (width/2) - nantesRadius - d.distanceMoyenne;
+	var x = (width/2) - nantesRadius - (d.distMax*ratio)-20;
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("stroke-width",9).attr("stroke","green").on("mouseover", function(d){
-	d3.select(this).attr("stroke","#075b37");
+}).attr("stroke-width",1).attr("stroke","black");
+
+//##### LIGNES MOYENNES
+var lignesMoyenne = groupes.append("line").attr("x1", function(d, i) {
+	var x = (width/2) - nantesRadius-(d.distMin*ratio);
+	var y = (height/2);
+	var angle = i*(Math.PI*2)/produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+
+}).attr("y1", function(d, i) {
+	var x = (width/2) - nantesRadius-(d.distMin*ratio);
+	var y = (height/2);
+	var angle = i*(Math.PI*2)/produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+}).attr("x2",function(d,i){
+var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
+	var y = (height/2);
+	var angle = i*(Math.PI*2)/produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+}).attr("y2",function(d,i){
+	var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
+	var y = (height/2);
+	var angle = i*(Math.PI*2)/produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+}).attr("stroke-width",1).attr("stroke","black").on("mouseover", function(d){
+	d3.select(this).attr("stroke","grey");
 	tooltip.text("Moyenne : "+d.distanceMoyenne.toFixed(2));
 	return tooltip.style("visibility","visible");
 }).on("mousemove",function(d){
 	console.log(d3.mouse(this));
 	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
 }).on("mouseout",function(d){
-	d3.select(this).attr("stroke","green");
+	d3.select(this).attr("stroke","black");
 	return tooltip.style("visibility","hidden");
 });
 
@@ -202,30 +233,36 @@ var lignesMin = groupes.append("line").attr("x1", function(d, i) {
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+
 }).attr("y1", function(d, i) {
 	var x = (width/2) - nantesRadius;
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+
 }).attr("x2",function(d,i){
-	var x = (width/2) - nantesRadius - d.distMin;
+	var x = (width/2) - nantesRadius - (d.distMin*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+
 }).attr("y2",function(d,i){
-	var x = (width/2) - nantesRadius - d.distMin;
+	var x = (width/2) - nantesRadius - (d.distMin*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("stroke-width",10).attr("stroke","red").on("mouseover", function(d){
-	d3.select(this).attr("stroke","#7f080a");
+
+}).attr("stroke-width",1).attr("stroke","black").on("mouseover", function(d){
+	d3.select(this).attr("stroke","grey");
 	tooltip.text("Minimum : "+d.distMin.toFixed(2));
 	return tooltip.style("visibility","visible");
+
+
 }).on("mousemove",function(d){
-	console.log(d3.mouse(this));
+	
 	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
 }).on("mouseout",function(d){
-	d3.select(this).attr("stroke","red");
+	d3.select(this).attr("stroke","black");
 	return tooltip.style("visibility","hidden");
 });
 
@@ -251,45 +288,105 @@ svg.selectAll("text").data(produits).enter().append("text").text(function(d){
 
 
 
+//dessin des triangles :)
+var trianglesMax = triangles.append("polyline").style("stroke","#fecccb").style("fill","#fecccb").attr("points",function(d,i){
+	var x1,y1,x2,y2,x3,y3,poinx1,pointx2,pointx3,pointy1,pointy2,pointy3;
+	//utilisable : d.xmax et y.xmax les coords du point représentant la distance max+20
+	
+    var x = (width/2) - nantesRadius - (d.distMax*ratio);
+	var y = (height/2);
+	var angle = i*(Math.PI*2)/produits.length;
+
+	x1 = x;
+	y1 = y-10;
+
+	x2 = x;
+	y2 = y+10;
+
+	x3 = x+10;
+	y3 = y;
+
+	pointx1 = rotatePoint(x1, y1, (width/2), (height/2), angle).x;
+	pointy1 = rotatePoint(x1, y1, (width/2), (height/2), angle).y;
+
+	pointx2 = rotatePoint(x2, y2, (width/2), (height/2), angle).x;
+	pointy2 = rotatePoint(x2, y2, (width/2), (height/2), angle).y;
+
+	pointx3 = rotatePoint(x3, y3, (width/2), (height/2), angle).x;
+	pointy3 = rotatePoint(x3, y3, (width/2), (height/2), angle).y;
+
+	return pointx1+","+pointy1+", "+pointx2+","+pointy2+", "+pointx3+","+pointy3;
+});
+var trianglesMin = triangles.append("polyline").style("stroke","#addfeb").style("fill","#addfeb").attr("points",function(d,i){
+	var x1,y1,x2,y2,x3,y3,poinx1,pointx2,pointx3,pointy1,pointy2,pointy3;
+	//utilisable : d.xmax et y.xmax les coords du point représentant la distance max+20
+	
+    var x = (width/2) - nantesRadius - ((d.distMin)*ratio);
+	var y = (height/2);
+	var angle = i*(Math.PI*2)/produits.length;
+
+	x1 = x;
+	y1 = y-10;
+
+	x2 = x;
+	y2 = y+10;
+
+	x3 = x-10;
+	y3 = y;
+
+	pointx1 = rotatePoint(x1, y1, (width/2), (height/2), angle).x;
+	pointy1 = rotatePoint(x1, y1, (width/2), (height/2), angle).y;
+
+	pointx2 = rotatePoint(x2, y2, (width/2), (height/2), angle).x;
+	pointy2 = rotatePoint(x2, y2, (width/2), (height/2), angle).y;
+
+	pointx3 = rotatePoint(x3, y3, (width/2), (height/2), angle).x;
+	pointy3 = rotatePoint(x3, y3, (width/2), (height/2), angle).y;
+
+	return pointx1+","+pointy1+", "+pointx2+","+pointy2+", "+pointx3+","+pointy3;
+});
+//##########################################################################
+
+
 // ######### DESSIN DES CERCLES
 /*
 var pointsMax = groupes.append("circle").attr("cx", function(d, i) {
     var x = (width/2) - nantesRadius - d.distMax;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 }).attr("cy", function(d, i) {
     var x = (width/2) - nantesRadius - d.distMax;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("r", 5).attr("fill","yellow");
-
-
+*/
+/*
 var pointsMin = groupes.append("circle").attr("cx", function(d, i) {
     var x = (width/2) - nantesRadius - d.distMin;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 }).attr("cy", function(d, i) {
     var x = (width/2) - nantesRadius - d.distMin;
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("r", 5).attr("fill","red");
-
+*/
 
 var pointsMoy = groupes.append("circle").attr("cx", function(d, i) {
-    var x = (width/2) - nantesRadius - d.distanceMoyenne;
+    var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 }).attr("cy", function(d, i) {
-    var x = (width/2) - nantesRadius - d.distanceMoyenne;
+    var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
 	var y = (height/2);
-	var angle = 360 * i / produits.length;
+	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("r", 5).attr("fill","green");*/
+}).attr("r", 3).attr("fill","black");
 
 
 
