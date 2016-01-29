@@ -26,20 +26,30 @@ li
 	float:left;
 	margin-right: 9.15%;
 	margin-left: 9.15%;
-	font-size: 1.25vw;
+	font-size: 0.625vw;
 	cursor: pointer;
 }
 
 span>ul>li
 {
-	background-color: #ccffcc;
+	background-color: #66ffff;
 	border-radius: 1vw;
 	color: black;
+	display: table;
+	vertical-align: middle;
+}
+
+span>ul>li>p
+{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
 }
 
 .titre
 {
 	top: 10%;
+	color: #002266;
 }
 
 .sous_titre
@@ -83,14 +93,30 @@ span>ul>li
 	width: 100%;
 }
 
-#question1
+.bloc_reponse
 {
 	position: relative;
+	top: 12.5%;
+	left: 50%;
+	background-color: #00004d;
+	opacity: 0.7;
+	width: 40%;
+	height: 50%;
+	color: white;
+	border-radius: 5vw;
 }
 
-#question>li
+.liste_propositions
 {
 	position: absolute;
+	left: 24%;
+	width: 50%;
+}
+
+.bouton
+{
+	position: relative;
+	color: black;
 }
 
 #svg_dataviz3
