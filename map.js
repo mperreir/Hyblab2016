@@ -465,9 +465,13 @@
         }
         else if (props !== undefined) {
             if (props.hasOwnProperty("LSOA11CD"))
-                document.getElementById("idm").innerHTML = ": " + calculateIMD(props["LSOA11CD"]).toFixed(1) + "%";
+                //document.getElementById("idm").innerHTML = ": " + calculateIMD(props["LSOA11CD"]).toFixed(1) + "%";
+                document.getElementById("idm").innerHTML = ": " +
+                    parseInt(calculateIMD(props["LSOA11CD"]).toPrecision(1) / 10);
             else {
-                document.getElementById("idm").innerHTML = ": " + calculateMsoaIMD(props["MSOA11CD"]).toFixed(1) + "%";
+                //document.getElementById("idm").innerHTML = ": " + calculateMsoaIMD(props["MSOA11CD"]).toFixed(1) + "%";
+                document.getElementById("idm").innerHTML = ": " +
+                    parseInt(calculateMsoaIMD(props["MSOA11CD"]).toPrecision(1) / 10);
             }
         }
     };
@@ -614,8 +618,11 @@
             .attr('style', function(d) { return 'fill:' + colorsOfIndicators[d.indicator];})
             .attr('x', function(d) { return x(d.indicator); })
             .attr('width', x.rangeBand())
+            .attr('y', height)
+            .attr('height', '1')
+            .transition()
             .attr('y', function(d) { return y(d.decile); })
-            .attr('height', function(d) { return height - y(d.decile); })
+            .attr('height', function(d) {return height - y(d.decile); });
     };
 
     /*
