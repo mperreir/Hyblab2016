@@ -62,56 +62,57 @@ var donneesJardinJoseph = {
 var infosJardinJoseph = {
     "Racines": { 
         idJauge: "jauge_racine",
-        couleur: "#ffee00",
+        couleur: "#f7bd48",
         maximum: 20050,
-        cheminImage: ""
+        cheminImage: "./img/diagrammes/joseph/racine.png"
     },
     "Poids et Haricots": { 
         idJauge: "jauge_haricots",
-        couleur: "#02365", 
+        couleur: "#c96d63", 
         maximum: 16400,
-        cheminImage: ""
+        cheminImage: "./img/diagrammes/joseph/haricots.png"
     },
     "Choux": { 
         idJauge: "jauge_choux",
-        couleur: "#11aabb",
-        maximum: 14600
+        couleur: "#b5ff9c",
+        maximum: 14600,
+        cheminImage: "./img/diagrammes/joseph/choux.png"
     },
     "Epinards et Salades": { 
         idJauge: "jauge_salades",
-        couleur: "#aa22bb",
+        couleur: "#c9ff73",
         maximum: 39755,
-        cheminImage: ""
+        cheminImage: "./img/diagrammes/joseph/salades.png"
     },
     "Courges": { 
         idJauge: "jauge_courges",
-        couleur: "#9900dd",
+        couleur: "#d6ff38",
         maximum: 77400,
-        cheminImage: ""
+        cheminImage: "./img/diagrammes/joseph/poivron.png"
     },
     "Tomates": { 
         idJauge: "jauge_tomates",
-        couleur: "#dd99cc",
+        couleur: "#ee7268",
         maximum: 123600,
-        cheminImage: ""
+        cheminImage: "./img/diagrammes/joseph/tomates.png"
     },
     "Aromatiques": { 
         idJauge: "jauge_aromatiques",
-        couleur: "#cc66bb",
+        couleur: "#aef86e",
         maximum: 3800,
-        cheminImage: ""
+        cheminImage: "./img/diagrammes/joseph/aromatique.png"
     },
     "Fruits": { 
         idJauge: "jauge_fruits",
-        couleur: "#aaee33",
+        couleur: "#f7e957",
         maximum: 30010,
-        cheminImage: ""
+        cheminImage: "./img/diagrammes/joseph/citron.png"
     },
     "Autres": { 
         idJauge: "jauge_autres",
-        couleur: "#332211",
+        couleur: "#f7ff64",
         maximum: 11965,
-        cheminImage: ""
+        cheminImage: "./img/diagrammes/joseph/mais.png"
     }
 };
 
@@ -143,11 +144,11 @@ donneesActuelles.forEach(function(element, index, tableau) {
     var config = liquidFillGaugeDefaultSettings();
     config.minValue = 0;
     config.maxValue = (infoElement.maximum * 0.001).toFixed(1);
-    config.circleThickness = 0.04;  // taille cercle extérieur
+    config.circleThickness = 0.02;  // taille cercle extérieur
     config.circleFillGap = 0;       // espacement entre cercle extérieur et intérieur 
     config.textVertPosition = 1.6;  // positionner le texte au dessus de la gauge 
-    config.circleColor = infoElement.couleur;
-    config.textColor = infoElement.couleur;
+    config.circleColor = "#706f6f";
+    config.textColor = "#999999";
     config.waveColor = infoElement.couleur;
     //config.waveTextColor = "#6DA398";
     config.waveAnimateTime = 5000;
@@ -163,11 +164,11 @@ donneesActuelles.forEach(function(element, index, tableau) {
     jauges[idJauge] = jauge;
     
     // ajout du "kg" au dessus de la jauge
-    svgJauge.select("g").append("text").attr("x", 50).attr("y", -6).attr("class", "liquidFillGaugeText").attr("text-anchor", "middle").style("fill", infoElement.couleur).text("kg");   
+    svgJauge.select("g").append("text").attr("x", 50).attr("y", -6).attr("class", "liquidFillGaugeText").attr("text-anchor", "middle").style("fill", "#fdbe63").text("kg");   
     
     // ajout de l'image dans la jauge
     // <image x="200" y="200" width="100px" height="100px" xlink:href="myimage.png"> 
-    svgJauge.select("g").append("image").attr("x", 0).attr("y", 0).attr("xlink:href", "").attr("width", 0).attr("height", 0);
+    svgJauge.select("g").append("image").attr("x", 0).attr("y", 0).attr("xlink:href", infoElement.cheminImage).attr("width", 101).attr("height", 101);
     /*
     .text(textRounder(textStartValue) + percentText)
         .attr("class", "liquidFillGaugeText")

@@ -9,23 +9,49 @@
 
 
 
+.trucOrange {
+    color: #fdbe63;
+    font: 18px / 74.681px MuseoSlab;
+}
+
+/* "tout seul" */
+.pozeod {
+    color: #fdbe63;
+    font: 18px Museo;
+}
+
+
+
+#totalJoseph p {
+    color: #666666;
+    font: 300 60px / 99.667px FuturaPT;
+    font-size: 60px;
+}
+
+
+
+
 .baliseJauge {
     display: inline-block;
     margin-left: 3px;
     margin-right: 3px;
-    
-    height: 180px;
+    height: 160px;
     width: 100px;
 }
 
+.test {
+    background: url(img/tmp/aro.png);
+    
+    
+}
 
-.radioJoseph {
-    display: none;
+.radioJoseph {  
+    display: none;  /* faire disparaître les puces inutiles */
 }
 
 .labelRadioJoseph {
     display: inline-block;
-    background: url(../img/picto0.png) left top no-repeat;
+    background: url(../img/diagrammes/joseph/fauille_.png) left top no-repeat;
     width: 60px;
     height: 60px;
     cursor: pointer;
