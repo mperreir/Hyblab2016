@@ -113,9 +113,17 @@
             QUEL EST LE RANG DU <span class="mot_important">PIB</span> DE LA RÉGION ?
           </h2>
 
-          <span class="text-center answers" style="position: relative; top:12.5%; left: 50%; background-color:lightblue; opacity: 0.5; width: 40%; height: 50%" id="q2_a">
+          <span class="text-center answers bloc_reponse q2" id="q2_ag">
             <p class="text-center">
-            Réponse
+            <b>BONNE RÉPONSE</b><br/>
+            Bravo ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
+            </p>
+          </span>
+
+          <span class="text-center answers bloc_reponse q2" id="q2_ab">
+            <p class="text-center">
+            <b>MAUVAISE RÉPONSE</b><br/>
+            Eh non ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
             </p>
           </span>
 
@@ -123,10 +131,12 @@
             <p class="text-center" style="color:red">IMAGE</p>
           </span>
           <span class="contenu propositions">
-            <ul class="text-center liste_propositions">
-              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q2_p1"><p>3ème</p></li>
-              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q2_p2"><p>5ème</p></li>
-              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q2_p3"><p>7ème</p></li>
+            <ul class="text-center liste_propositions" id="q2">
+              <li onclick="chooseAnswer(this.id)" id="q2_p1"><p>3ème</p></li>
+              <li onclick="chooseAnswer(this.id)" id="q2_p2"><p>5ème</p></li>
+              <li onclick="chooseAnswer(this.id)" id="q2_p3"><p>7ème</p></li>
+
+              <img class="bouton_valider" id="q2_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
             </ul>
           </span>
         </section>
@@ -139,9 +149,17 @@
             QUEL TYPE D'<span class="mot_important">ÉNERGIE RENOUVELABLE</span> EST LE PLUS PRODUIT EN PAYS DE LA LOIRE ?
           </h2>
 
-          <span class="text-center answers" style="position: relative; top:12.5%; left: 50%; background-color:lightblue; opacity: 0.5; width: 40%; height: 50%" id="q4_a">
+          <span class="text-center answers bloc_reponse q3" id="q3_ag">
             <p class="text-center">
-            Réponse
+            <b>BONNE RÉPONSE</b><br/>
+            Bravo ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
+            </p>
+          </span>
+
+          <span class="text-center answers bloc_reponse q3" id="q3_ab">
+            <p class="text-center">
+            <b>MAUVAISE RÉPONSE</b><br/>
+            Eh non ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
             </p>
           </span>
 
@@ -149,10 +167,12 @@
             <p class="text-center" style="color:red">IMAGE</p>
           </span>
           <span class="contenu propositions">
-            <ul class="text-center liste_propositions">
-              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q4_p1"><p>Eolien</p></li>
-              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q4_p2"><p>Photovoltaïque</p></li>
-              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q4_p3"><p>Biomasse</p></li>
+            <ul class="text-center liste_propositions" id="q3">
+              <li onclick="chooseAnswer(this.id)" id="q3_p1"><p>Eolien</p></li>
+              <li onclick="chooseAnswer(this.id)" id="q3_p2"><p>Photovoltaïque</p></li>
+              <li onclick="chooseAnswer(this.id)" id="q3_p3"><p>Biomasse</p></li>
+
+              <img class="bouton_valider" id="q3_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
             </ul>
           </span>
         </section>
@@ -165,9 +185,17 @@
             LA <span class="mot_important">PRODUCTION</span> D'ÉNERGIES RENOUVELABLES DE LA RÉGION ALIMENTE :
           </h2>
 
-          <span class="text-center answers" style="position: relative; top:12.5%; left: 50%; background-color:lightblue; opacity: 0.5; width: 40%; height: 50%" id="q5_a">
+          <span class="text-center answers bloc_reponse q4" id="q4_ag">
             <p class="text-center">
-            Réponse
+            <b>BONNE RÉPONSE</b><br/>
+            Bravo ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
+            </p>
+          </span>
+
+          <span class="text-center answers bloc_reponse q4" id="q4_ab">
+            <p class="text-center">
+            <b>MAUVAISE RÉPONSE</b><br/>
+            Eh non ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
             </p>
           </span>
 
@@ -175,10 +203,12 @@
             <p class="text-center" style="color:red">IMAGE</p>
           </span>
           <span class="contenu propositions">
-            <ul class="text-center liste_propositions">
-              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q5_p1"><p>115 700<br/>foyers</p></li>
-              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q5_p2"><p>153 000<br/>foyers</p></li>
-              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="answerQuestions(this.id)" id="q5_p3"><p>165 400<br/>foyers</p></li>
+            <ul class="text-center liste_propositions" id="q4">
+              <li onclick="chooseAnswer(this.id)" id="q4_p1"><p>115 700<br/>foyers</p></li>
+              <li onclick="chooseAnswer(this.id)" id="q4_p2"><p>153 000<br/>foyers</p></li>
+              <li onclick="chooseAnswer(this.id)" id="q4_p3"><p>165 400<br/>foyers</p></li>
+
+              <img class="bouton_valider" id="q4_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
             </ul>
           </span>
         </section>
