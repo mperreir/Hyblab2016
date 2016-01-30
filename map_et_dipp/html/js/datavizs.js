@@ -153,19 +153,19 @@ var lignesMax = groupes.append("line").attr("x1", function(d, i) {
 	var angle = i*(Math.PI*2)/produits.length;
 	d.ymax = rotatePoint(x, y, (width/2), (height/2), angle).y;
 	return d.ymax;
-}).attr("stroke-width",1).attr("stroke","black").on("mouseover", function(d){
+}).attr("stroke-width",3).attr("stroke","#adf0c3").on("mouseover", function(d){
 	d3.select(this).attr("stroke","grey");
 	tooltip.text("Maximum : "+d.distMax.toFixed(2));
 	return tooltip.style("visibility","visible");
 }).on("mousemove",function(d){
 	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
 }).on("mouseout",function(d){
-	d3.select(this).attr("stroke","black");
+	d3.select(this).attr("stroke","#adf0c3");
 	return tooltip.style("visibility","hidden");
 });
 
 
-
+/*
 //bout de ligne qui dépasse après le max
 var lignesApresMax = groupes.append("line").attr("x1", function(d, i) {
 	var x = (width/2) - nantesRadius-(d.distMax*ratio);
@@ -190,7 +190,7 @@ var lignesApresMax = groupes.append("line").attr("x1", function(d, i) {
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("stroke-width",1).attr("stroke","black");
-
+*/
 //##### LIGNES MOYENNES
 var lignesMoyenne = groupes.append("line").attr("x1", function(d, i) {
 	var x = (width/2) - nantesRadius-(d.distMin*ratio);
@@ -213,14 +213,14 @@ var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("stroke-width",1).attr("stroke","black").on("mouseover", function(d){
+}).attr("stroke-width",3).attr("stroke","#80cbc4").on("mouseover", function(d){
 	d3.select(this).attr("stroke","grey");
 	tooltip.text("Moyenne : "+d.distanceMoyenne.toFixed(2));
 	return tooltip.style("visibility","visible");
 }).on("mousemove",function(d){
 	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
 }).on("mouseout",function(d){
-	d3.select(this).attr("stroke","black");
+	d3.select(this).attr("stroke","#80cbc4");
 	return tooltip.style("visibility","hidden");
 });
 
@@ -253,7 +253,7 @@ var lignesMin = groupes.append("line").attr("x1", function(d, i) {
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 
-}).attr("stroke-width",1).attr("stroke","black").on("mouseover", function(d){
+}).attr("stroke-width",3).attr("stroke","#38615a").on("mouseover", function(d){
 	d3.select(this).attr("stroke","grey");
 	tooltip.text("Minimum : "+d.distMin.toFixed(2));
 	return tooltip.style("visibility","visible");
@@ -263,33 +263,38 @@ var lignesMin = groupes.append("line").attr("x1", function(d, i) {
 	
 	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
 }).on("mouseout",function(d){
-	d3.select(this).attr("stroke","black");
+	d3.select(this).attr("stroke","#38615a");
 	return tooltip.style("visibility","hidden");
 });
 
 
 
-// DESSIN DU TEXTE
+//DESSIN DES PICTOS
 svg.selectAll("image").data(produits).enter()
 .append("svg:image").attr("x",function(d,i){
+	var x = (width/2) - nantesRadius - d.distMax - 70;
+	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 
-	return d.xmax+20;
+	return (rotatePoint(x, y, (width/2), (height/2), angle).x)-15;
 }).
 attr("y",function(d,i){
+	var x = (width/2) - nantesRadius - d.distMax - 70;
+	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
-	if(angle == Math.PI || angle == 0)
-		d.ymax -= 45;
 
-	return d.ymax;
+	return (rotatePoint(x, y, (width/2), (height/2), angle).y)-15;
 }).attr("width", 30).attr("height",30).attr("xlink:href",function(d,i){
 	return "../img/picto"+i+".png";
 });
 
+
+//bouton changement d'échelle
 svg.selectAll("text").data(produits).enter().append("text").text("changer l'échelle").attr("x",0).attr("y",100).on("click",function(){
 	return svg.transition().attr("transform","scale(0.2)").ease("linear").duration(1000).delay(100);
 });
 
+/*
 //dessin des triangles :)
 var trianglesMax = triangles.append("polyline").style("stroke","#fecccb").style("fill","#fecccb").attr("points",function(d,i){
 	var x1,y1,x2,y2,x3,y3,pointx1,pointx2,pointx3,pointy1,pointy2,pointy3;
@@ -363,14 +368,14 @@ var pointsMoy = groupes.append("circle").attr("cx", function(d, i) {
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("r", 3).attr("fill","black");
-
+*/
 
 
 var villesDistances = echelle.append("circle").attr("cx",width/2).attr("cy",height/2).attr("r",function(d){
 	return d.distance;
-}).attr("fill","none").attr("stroke","black").attr("stroke-width",1).attr("stroke-dasharray", "5,5");
+}).attr("fill","none").attr("stroke","grey").attr("stroke-width",1).attr("stroke-dasharray", "5,5");
 var villesNoms = echelle.append("text").attr("x",width/2).attr("y",function(d){
 	return height/2-d.distance-5;
-}).text(function(d){return d.nom;});
+}).attr("font-size","10px").attr("fill","grey").text(function(d){return d.nom;});
 
 });
