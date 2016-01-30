@@ -14,6 +14,14 @@ function startQ () {
 	document.getElementById("sectionQ").style.display = "block";
 }
 
+function chooseAnswer (prop_id) {
+	
+}
+
+function valideQ () {
+
+}
+
 function moveEntriesIn (prop_id) {
 
 	childs = document.getElementById("question1").children;

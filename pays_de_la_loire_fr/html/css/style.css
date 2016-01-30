@@ -32,7 +32,6 @@ li
 
 span>ul>li
 {
-	background-color: #66ffff;
 	border-radius: 1vw;
 	color: black;
 	display: table;
@@ -75,7 +74,7 @@ span>ul>li>p
 
 .propositions
 {
-	top: 75%;
+	top: 82.5%;
 	width: 25%;
 	margin-right:15px;
 	margin-left:15px;
@@ -100,13 +99,14 @@ span>ul>li>p
 
 .bloc_reponse
 {
-	position: relative;
-	top: 12.5%;
-	left: 50%;
+	display: block;
+	position: absolute;
+	top: 30%;
+	left: 12.5%;
 	background-color: #00004d;
 	opacity: 0.7;
-	width: 40%;
-	height: 50%;
+	width: 10%;
+	height: 35%;
 	color: white;
 	border-radius: 5vw;
 }
@@ -132,6 +132,12 @@ span>ul>li>p
 	padding:6px 15px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #b23e35;
+}
+
+.bouton_valider
+{
+	position: absolute;
+	right: -15%;
 }
 
 .mot_important
