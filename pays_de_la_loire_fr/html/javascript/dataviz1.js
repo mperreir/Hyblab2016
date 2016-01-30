@@ -5,6 +5,7 @@ $(document).ready( function () {
 
 	for(var i = 0; i < answers.length; i++) {
 		document.getElementById(answers[i].id).style.display = "none";
+		document.getElementById(answers[i].id).style.display = "none";
 	}
 
 	//document.getElementById("sectionQ").style.display = "none";
@@ -27,106 +28,125 @@ function chooseAnswer (prop_id) {
 	}
 
 	var valid_button = document.getElementById(idQ+"_b");
-	/*function loop (object) {
-		//$(object).css({ transform: 'scale(1)' });
-		$(object).effect('pulsate', {times : 2}, 1000);
-		/*$(object).animate({
-			transform: 'scale(2)',
-		}, 5000, 'linear', function () {
-			loop(object);
-		});
-	}, function loop (object) {
-		$(object).effect('pulsate', { times : 4}, 100);
+
+	for(i = 0; i < 5; i++) {
+		$(valid_button).transition({ scale: 1.25 }, 700);
+		$(valid_button).transition({ scale: 1 }, 700);
 	}
-
-	loop(valid_button);*/
-}
-
-function valideQ () {
-
-}
-
-function moveEntriesIn (prop_id) {
-
-	childs = document.getElementById("question1").children;
-
-	for(var i = 0; i < childs.length; i++) {
-		if(childs[i].id != prop_id) {
-			$(childs[i]).animate({ opacity: "0.4" }, 500);
-		}
-	}
-
-}
-
-function moveEntriesOut (prop_id) {
-
-	childs = document.getElementById("question1").children;
-
-	for(var i = 0; i < childs.length; i++) {
-		$(childs[i]).animate({ opacity: "1" }, 0);
-	}
-
 }
 
 function answerQuestions(prop_id) {
 
 	var question = prop_id[0]+prop_id[1];
-	var answer = prop_id[3]+prop_id[4];
+	var childs = document.getElementById(question).children;
+
+	for(var i = 0; i < childs.length; i++) {
+		if(document.getElementById(childs[i].id).style.backgroundColor != "transparent")
+		{
+			var answer = childs[i].id;
+			answer = answer[3]+answer[4];
+		}
+	}
+
+	var bad_bloc = document.getElementById(question+"_ab");
+	var good_bloc = document.getElementById(question+"_ag");
+
+	function appear(bloc) {
+		bloc.style.opacity = 0;
+		$(bloc).transition({
+			opacity: 0.7,
+			x: 20
+		});
+	}
+
+	function disappear(bloc) {
+		$(bloc).transition({
+			opacity: 0,
+			x: -20
+		});
+	}
 	
 	switch(question) {
 		case "q1":
 			switch(answer) {
+				// Bonne réponse
 				case "p3":
-					document.getElementById(question+"_a").style.display = "block";
+					bad_bloc.style.display = "none";
+					disappear(bad_bloc);
+					good_bloc.style.display = "block";
+					appear(good_bloc);
 					break;
 
+				// Mauvaises réponses
 				case "p1":
 				case "p2":
+					bad_bloc.style.display = "block";
+					appear(bad_bloc);
+					good_bloc.style.display = "none";
+					disappear(good_bloc);
 					break;
 			}
 			break;
 
 		case "q2":
 			switch(answer) {
+				// Bonne réponse
 				case "p2":
-					document.getElementById(question+"_a").style.display = "block";
+					bad_bloc.style.display = "none";
+					disappear(bad_bloc);
+					good_bloc.style.display = "block";
+					appear(good_bloc);
 					break;
+
+				// Mauvaises réponses
 				case "p1":
 				case "p3":
+					bad_bloc.style.display = "block";
+					appear(bad_bloc);
+					good_bloc.style.display = "none";
+					disappear(good_bloc);
 					break;
 			}
 			break;
 
 		case "q3":
 			switch(answer) {
+				// Bonne réponse
 				case "p1":
-					document.getElementById(question+"_a").style.display = "block";
+					bad_bloc.style.display = "none";
+					disappear(bad_bloc);
+					good_bloc.style.display = "block";
+					appear(good_bloc);
 					break;
+
+				// Mauvaises réponses
 				case "p2":				
 				case "p3":
-				case "p4":
+					bad_bloc.style.display = "block";
+					appear(bad_bloc);
+					good_bloc.style.display = "none";
+					disappear(good_bloc);
 					break;
 			}
 			break;
 
 		case "q4":
 			switch(answer) {
-				case "p1":
-				case "p2":				
+				// Bonne réponse
 				case "p3":
-				case "p4":
-					document.getElementById(question+"_a").style.display = "block";
+					bad_bloc.style.display = "none";
+					disappear(bad_bloc);
+					good_bloc.style.display = "block";
+					appear(good_bloc);
 					break;
-			}
-			break;
 
-		case "q5":
-			switch(answer) {
-				case "p1":
-				case "p2":				
-				case "p3":
-				case "p4":
-					document.getElementById(question+"_a").style.display = "block";
+				// Mauvaises réponses
+				case "p1":				
+				case "p2":
+					bad_bloc.style.display = "block";
+					appear(bad_bloc);
+					good_bloc.style.display = "none";
+					disappear(good_bloc);
 					break;
 			}
 			break;
