@@ -136,6 +136,7 @@ span>ul>li>p
 
 .bouton_valider
 {
+	cursor: pointer;
 	position: absolute;
 	right: -15%;
 }

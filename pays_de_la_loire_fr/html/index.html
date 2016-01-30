@@ -87,12 +87,12 @@
             <p class"text-center" style="color:red">IMAGE</p>
           </span>
           <span class="contenu propositions">
-            <ul class=" text-center liste_propositions">
-              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="chooseAnswer(this.id)" id="q1_p1"><p>2 100 000</p></li>
-              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="chooseAnswer(this.id)" id="q1_p2"><p>2 900 000</p></li>
-              <li onmouseover="moveEntriesIn(this.id)" onmouseout="moveEntriesOut(this.id)" onclick="chooseAnswer(this.id)" id="q1_p3"><p>3 600 000</p></li>
-              
-              <img class="bouton_valider" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
+            <ul class=" text-center liste_propositions" id="q1">
+              <li onclick="chooseAnswer(this.id)" id="q1_p1"><p>2 100 000</p></li>
+              <li onclick="chooseAnswer(this.id)" id="q1_p2"><p>2 900 000</p></li>
+              <li onclick="chooseAnswer(this.id)" id="q1_p3"><p>3 600 000</p></li>
+
+              <img class="bouton_valider" id="q1_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
             </ul>
           </span>
         </section>

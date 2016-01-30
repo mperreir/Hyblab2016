@@ -15,7 +15,31 @@ function startQ () {
 }
 
 function chooseAnswer (prop_id) {
-	
+	var idQ = document.getElementById(prop_id).parentElement.id;
+	var childs = document.getElementById(prop_id).parentElement.children;
+
+	for(var i = 0; i < childs.length; i++) {
+		if(childs[i].id != prop_id) {
+			document.getElementById(childs[i].id).style.backgroundColor = "transparent";
+		} else {
+			document.getElementById(childs[i].id).style.backgroundColor = "blue";
+		}
+	}
+
+	var valid_button = document.getElementById(idQ+"_b");
+	/*function loop (object) {
+		//$(object).css({ transform: 'scale(1)' });
+		$(object).effect('pulsate', {times : 2}, 1000);
+		/*$(object).animate({
+			transform: 'scale(2)',
+		}, 5000, 'linear', function () {
+			loop(object);
+		});
+	}, function loop (object) {
+		$(object).effect('pulsate', { times : 4}, 100);
+	}
+
+	loop(valid_button);*/
 }
 
 function valideQ () {
