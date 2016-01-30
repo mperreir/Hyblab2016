@@ -6,7 +6,13 @@ $(document).ready( function () {
 	for(var i = 0; i < answers.length; i++) {
 		document.getElementById(answers[i].id).style.display = "none";
 	}
+
+	//document.getElementById("sectionQ").style.display = "none";
 })
+
+function startQ () {
+	document.getElementById("sectionQ").style.display = "block";
+}
 
 function moveEntriesIn (prop_id) {
 
