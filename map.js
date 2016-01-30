@@ -263,7 +263,8 @@
                 .openOn(map);
         }
 
-
+        // add overlay (note: effect not good, disabled)
+        // overlay.setAttribute('class', 'show');
     }
 
     function LsoaResetHighlight(e) {
@@ -336,7 +337,7 @@
     var map = L.map('map', {
         center: [53.85, -2.7],
         zoom: 11,
-        layers: [topoMsoaLayer], // Only Add default layers here
+        layers: [osm, topoMsoaLayer], // Only Add default layers here
         minZoom: 11,
         maxZoom: 16,
         maxBounds: topoMsoaLayer.getBounds(),
@@ -367,6 +368,15 @@
         { "MSOA": topoMsoaLayer, "LSOA": topoLsoaLayer }
     ).addTo(map);*/
     //L.control.scale().addTo(map);
+
+    // Create overlay for later use
+    /*
+    var overlay = (function() {
+        var _div = L.DomUtil.create('div', '');
+        _div.setAttribute('id', 'overlay');
+        document.getElementById('map').appendChild(_div);
+        return _div;
+    }());*/
 
     var info = L.control();
 
@@ -609,8 +619,6 @@
             .style("text-anchor", "end")
             .text("Performance");*/
 
-
-
         svg.selectAll('.bar')
             .data(deciles)
             .enter().append('rect')
@@ -624,6 +632,16 @@
             .attr('y', function(d) { return y(d.decile); })
             .attr('height', function(d) {return height - y(d.decile); });
     };
+
+    var legend = L.control({ position: 'bottomleft' });
+    legend.onAdd = function(map) {
+        this._div = L.DomUtil.create('div', 'legendContainer');
+        this._div.innerHTML = '<div class="legend-label"><strong>most</strong> deprived</div>' +
+            '<div class="legend"></div>' +
+            '<div class="legend-label"><strong>least</strong> deprived</div>';
+        return this._div;
+    };
+    legend.addTo(map);
 
     /*
     the chart of the population
