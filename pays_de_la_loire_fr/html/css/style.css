@@ -32,6 +32,7 @@ li
 
 span>ul>li
 {
+	background-color: #E1F1F3;
 	border-radius: 1vw;
 	color: black;
 	display: table;
@@ -99,15 +100,32 @@ span>ul>li>p
 
 .bloc_reponse
 {
-	display: block;
 	position: absolute;
 	top: 30%;
 	left: 12.5%;
-	background-color: #00004d;
+	background-color: #365471;
 	width: 10%;
 	height: 35%;
 	color: white;
 	border-radius: 5vw;
+	display: table;
+	vertical-align: middle;
+}
+
+.contenu_reponse
+{
+	font-size: 1.125vw;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	padding-left: 17.5%;
+	padding-right: 5%;
+	line-height: 1.75vw;
+}
+
+.contenu_reponse>b
+{
+	font-size: 1.5vw;
 }
 
 .q2
@@ -153,6 +171,14 @@ span>ul>li>p
 	cursor: pointer;
 	position: absolute;
 	right: -15%;
+}
+
+.bouton_continuer
+{
+	position: relative;
+	margin-top: 200%;
+	right: 35%;
+	cursor: pointer;
 }
 
 .mot_important

@@ -20,10 +20,12 @@ function chooseAnswer (prop_id) {
 	var childs = document.getElementById(prop_id).parentElement.children;
 
 	for(var i = 0; i < childs.length; i++) {
-		if(childs[i].id != prop_id) {
-			document.getElementById(childs[i].id).style.backgroundColor = "transparent";
-		} else {
-			document.getElementById(childs[i].id).style.backgroundColor = "blue";
+		if(childs[i].id != prop_id && childs[i].nodeName == "LI") {
+			document.getElementById(childs[i].id).style.backgroundColor = "#E1F1F3";
+			document.getElementById(childs[i].id).className = "";
+		} else if(childs[i].id == prop_id && childs[i].nodeName == "LI") {
+			document.getElementById(childs[i].id).style.backgroundColor = "#AFDCDF";
+			document.getElementById(childs[i].id).className = "tmp_answer";
 		}
 	}
 
@@ -41,7 +43,7 @@ function answerQuestions(prop_id) {
 	var childs = document.getElementById(question).children;
 
 	for(var i = 0; i < childs.length; i++) {
-		if(document.getElementById(childs[i].id).style.backgroundColor != "transparent")
+		if(document.getElementById(childs[i].id).className == "tmp_answer")
 		{
 			var answer = childs[i].id;
 			answer = answer[3]+answer[4];
@@ -54,7 +56,7 @@ function answerQuestions(prop_id) {
 	function appear(bloc) {
 		bloc.style.opacity = 0;
 		$(bloc).transition({
-			opacity: 0.7,
+			opacity: 1,
 			x: 20
 		});
 	}
@@ -73,14 +75,14 @@ function answerQuestions(prop_id) {
 				case "p3":
 					bad_bloc.style.display = "none";
 					disappear(bad_bloc);
-					good_bloc.style.display = "block";
+					good_bloc.style.display = "table";
 					appear(good_bloc);
 					break;
 
 				// Mauvaises réponses
 				case "p1":
 				case "p2":
-					bad_bloc.style.display = "block";
+					bad_bloc.style.display = "table";
 					appear(bad_bloc);
 					good_bloc.style.display = "none";
 					disappear(good_bloc);
@@ -94,14 +96,14 @@ function answerQuestions(prop_id) {
 				case "p2":
 					bad_bloc.style.display = "none";
 					disappear(bad_bloc);
-					good_bloc.style.display = "block";
+					good_bloc.style.display = "table";
 					appear(good_bloc);
 					break;
 
 				// Mauvaises réponses
 				case "p1":
 				case "p3":
-					bad_bloc.style.display = "block";
+					bad_bloc.style.display = "table";
 					appear(bad_bloc);
 					good_bloc.style.display = "none";
 					disappear(good_bloc);
@@ -115,14 +117,14 @@ function answerQuestions(prop_id) {
 				case "p1":
 					bad_bloc.style.display = "none";
 					disappear(bad_bloc);
-					good_bloc.style.display = "block";
+					good_bloc.style.display = "table";
 					appear(good_bloc);
 					break;
 
 				// Mauvaises réponses
 				case "p2":				
 				case "p3":
-					bad_bloc.style.display = "block";
+					bad_bloc.style.display = "table";
 					appear(bad_bloc);
 					good_bloc.style.display = "none";
 					disappear(good_bloc);
@@ -136,14 +138,14 @@ function answerQuestions(prop_id) {
 				case "p3":
 					bad_bloc.style.display = "none";
 					disappear(bad_bloc);
-					good_bloc.style.display = "block";
+					good_bloc.style.display = "table";
 					appear(good_bloc);
 					break;
 
 				// Mauvaises réponses
 				case "p1":				
 				case "p2":
-					bad_bloc.style.display = "block";
+					bad_bloc.style.display = "table";
 					appear(bad_bloc);
 					good_bloc.style.display = "none";
 					disappear(good_bloc);
