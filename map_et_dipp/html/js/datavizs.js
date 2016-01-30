@@ -366,10 +366,7 @@ attr("y",function(d,i){
 
 //bouton changement d'échelle
 svg.selectAll("text").data(wahoo).enter().append("text").text("changer l'échelle").attr("x",0).attr("y",100).on("click",function(){
-	return svg.transition().attr("transform","scale(0.1) translate("+width*4+","+height*4+")").ease("linear").duration(1000).delay(100).each('end',function(){
-		svg.selectAll("text").data(wahoo).enter().append("text").text("Moscou").attr("x",width/2).attr("y",height/2).attr("font-size","1000px").attr("fill","black");
-		console.log("fini");
-	});
+	return svg.transition().attr("transform","scale(0.1) translate("+width*4.5+","+height*4.5+")").ease("linear").duration(1000).delay(100);
 });
 
 /*
@@ -457,5 +454,8 @@ var villesNoms = echelle.append("text").attr("x",(width/2)-15).attr("y",function
 }).attr("font-size","10px").attr("fill","grey").text(function(d){return d.nom;});
 
 var moscou = gmoscou.append("circle").attr("cx",width/2).attr("cy",height/2).attr("r",function(d){return d.distance;}).attr("fill","none").attr("stroke","black").attr("stroke-width",4);
-
+gmoscou.append("text").attr("x",(width/2)-400).attr("y",-2200).text("Moscou").attr("font-size","200px");
+gmoscou.append("text").attr("x",-2000).attr("y",-2000).text("Revenir à Nantes").attr("font-size","100px").on("click",function(){
+	return svg.transition().attr("transform","scale(1) translate("+(0-(width/1000))+","+(0-(height/1000))+")").ease("linear").duration(1000).delay(100);
+});
 });
