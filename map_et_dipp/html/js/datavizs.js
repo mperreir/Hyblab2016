@@ -8,6 +8,13 @@ var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "
   {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0},
   {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0}];
 
+var produitsDebut = [ {"produit":"Légumes","distanceMoyenne":0, "distMin":0, "distMax":0},
+  {"produit":"Fruits", "distanceMoyenne":0, "distMin":0, "distMax":0},
+  {"produit": "Produits Laitiers","distanceMoyenne":0, "distMin":0, "distMax":0},
+  {"produit": "Viande","distanceMoyenne":0, "distMin":0, "distMax":0},
+  {"produit": "Miel","distanceMoyenne":0, "distMin":0, "distMax":0},
+  {"produit": "Autres","distanceMoyenne":0, "distMin":0, "distMax":0}];
+
 var villes = [{"nom":"Angers", "distance":82}, {"nom":"Laval","distance":138}];
 var quartiers = [{"nom":"Malakoff St Donatien", "produits":[]}, {"nom":"Doulon Bottière"}, {"nom":"Hauts Pavés St Félix"}, {"nom":"Bellevue Chantenay"}
 , {"nom":"Centre Ville"}, {"nom":"Nantes Nord"}, {"nom":"Ile de Nantes"}, {"nom":"Nantes Erdre"}, {"nom":"Nantes Sud"}, {"nom":"Breil Barberie"}];
@@ -117,7 +124,7 @@ svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", w
 //svg.selectAll("image").data(nantesRadius).enter().append("svg:image").attr("x",(width/2)-(150/2)).attr("y",(height/2)-(150/2)).attr("width", 150).attr("height",150).attr("xlink:href","../img/nantesRond.png");
 
 
-var groupes = svg.selectAll("g").data(produits).enter();
+var groupes = svg.selectAll("g").data(produitsDebut).enter();
 var echelle = svg.selectAll("g").data(villes).enter();
 
 var triangles = svg.selectAll("g").data(produits).enter();
@@ -129,70 +136,67 @@ var angleActuMin = 0;
 var tooltip = d3.select("#araigneeAMAP").append("div").attr("class","dataTooltip");//style("background-color","black").style("position","absolute").style("z-index","100000").style("visibility","hidden").text("simple tooltip");
 
 
-// DESSIN DES LIGNES DES DISTANCES
-var lignesMax = groupes.append("line").attr("x1", function(d, i) {
-	var x = (width/2) - nantesRadius-(d.distanceMoyenne*ratio);
+//##### LIGNES MIN
+var lignesMin = groupes.append("line").attr("x1", function(d, i) {
+	var x = (width/2) - nantesRadius;
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
-}).attr("y1", function(d, i) {
-	var x = (width/2) - nantesRadius-(d.distanceMoyenne*ratio);
+
+}).attr("class","ligneMin").attr("y1", function(d, i) {
+	var x = (width/2) - nantesRadius;
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+
 }).attr("x2",function(d,i){
-	var x = (width/2) - nantesRadius - (d.distMax*ratio);
+	var x = (width/2) - nantesRadius - (d.distMin*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
-	d.xmax = rotatePoint(x,y,(width/2), (height/2), angle).x;
-	return d.xmax;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+
 }).attr("y2",function(d,i){
-	var x = (width/2) - nantesRadius - (d.distMax*ratio);
+	var x = (width/2) - nantesRadius - (d.distMin*ratio);
 	var y = (height/2);
-	//var angle = 360 * i / produits.length;
 	var angle = i*(Math.PI*2)/produits.length;
-	d.ymax = rotatePoint(x, y, (width/2), (height/2), angle).y;
-	return d.ymax;
-}).attr("stroke-width",3).attr("stroke","#adf0c3").on("mouseover", function(d){
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+
+}).attr("stroke-width",3).attr("stroke","#38615a").on("mouseover", function(d){
 	d3.select(this).attr("stroke","grey");
-	tooltip.text("Maximum : "+d.distMax.toFixed(2));
+	tooltip.text("Minimum : "+d.distMin.toFixed(2));
 	return tooltip.style("visibility","visible");
 }).on("mousemove",function(d){
 	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
 }).on("mouseout",function(d){
-	d3.select(this).attr("stroke","#adf0c3");
+	d3.select(this).attr("stroke","#38615a");
 	return tooltip.style("visibility","hidden");
 });
+	//mise à jour des lignes min
+	svg.selectAll("line.ligneMin").data(produits).transition().duration(4000).delay(150).ease("elastic").attr("x1", function(d, i) {
+		var x = (width/2) - nantesRadius;
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
+		return rotatePoint(x, y, (width/2), (height/2), angle).x;
+	}).attr("y1", function(d, i) {
+		var x = (width/2) - nantesRadius;
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
+		return rotatePoint(x, y, (width/2), (height/2), angle).y;
+	}).attr("x2",function(d,i){
+		var x = (width/2) - nantesRadius - (d.distMin*ratio);
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
+		return rotatePoint(x,y,(width/2), (height/2), angle).x;
+	}).attr("y2",function(d,i){
+		var x = (width/2) - nantesRadius - (d.distMin*ratio);
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
+		return rotatePoint(x, y, (width/2), (height/2), angle).y;
+	});
 
 
-/*
-//bout de ligne qui dépasse après le max
-var lignesApresMax = groupes.append("line").attr("x1", function(d, i) {
-	var x = (width/2) - nantesRadius-(d.distMax*ratio);
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).x;
-
-}).attr("y1", function(d, i) {
-	var x = (width/2) - nantesRadius-(d.distMax*ratio);
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-
-	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("x2",function(d,i){
-	var x = (width/2) - nantesRadius - (d.distMax*ratio)-20;
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).x;
-}).attr("y2",function(d,i){
-	var x = (width/2) - nantesRadius - (d.distMax*ratio)-20;
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("stroke-width",1).attr("stroke","black");
-*/
 //##### LIGNES MOYENNES
-var lignesMoyenne = groupes.append("line").attr("x1", function(d, i) {
+var lignesMoyenne = groupes.append("line").attr("class","ligneMoy").attr("x1", function(d, i) {
 	var x = (width/2) - nantesRadius-(d.distMin*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
@@ -223,49 +227,119 @@ var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
 	d3.select(this).attr("stroke","#80cbc4");
 	return tooltip.style("visibility","hidden");
 });
+	//mise à jour des lignes min
+	svg.selectAll("line.ligneMoy").data(produits).transition().duration(4000).delay(150).ease("elastic").attr("x1", function(d, i) {
+		var x = (width/2) - nantesRadius-(d.distMin*ratio);
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
+		return rotatePoint(x, y, (width/2), (height/2), angle).x;
+	}).attr("y1", function(d, i) {
+		var x = (width/2) - nantesRadius-(d.distMin*ratio);
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
+		return rotatePoint(x, y, (width/2), (height/2), angle).y;
+	}).attr("x2",function(d,i){
+		var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
+		return rotatePoint(x,y,(width/2), (height/2), angle).x;
+	}).attr("y2",function(d,i){
+		var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
+		return rotatePoint(x, y, (width/2), (height/2), angle).y;
+	});
 
+// DESSIN DES LIGNES DES DISTANCES MAX
+var lignesMax = groupes.append("line").attr("class","ligneMax").attr("x1", function(d, i) {
+	var x = (width/2) - nantesRadius-(d.distanceMoyenne*ratio);
+	var y = (height/2);
+	var angle = i*(Math.PI*2)/produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).x;
+}).attr("y1", function(d, i) {
+	var x = (width/2) - nantesRadius-(d.distanceMoyenne*ratio);
+	var y = (height/2);
+	var angle = i*(Math.PI*2)/produits.length;
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
+}).attr("x2",function(d,i){
+	var x = (width/2) - nantesRadius - (d.distMax*ratio);
+	var y = (height/2);
+	var angle = i*(Math.PI*2)/produits.length;
+	d.xmax = rotatePoint(x,y,(width/2), (height/2), angle).x;
+	return d.xmax;
+}).attr("y2",function(d,i){
+	var x = (width/2) - nantesRadius - (d.distMax*ratio);
+	var y = (height/2);
+	var angle = i*(Math.PI*2)/produits.length;
+	d.ymax = rotatePoint(x, y, (width/2), (height/2), angle).y;
+	return d.ymax;
+}).attr("stroke-width",3).attr("stroke","#adf0c3").on("mouseover", function(d){
+	d3.select(this).attr("stroke","grey");
+	tooltip.text("Maximum : "+d.distMax.toFixed(2));
+	return tooltip.style("visibility","visible");
+}).on("mousemove",function(d){
+	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
+}).on("mouseout",function(d){
+	d3.select(this).attr("stroke","#adf0c3");
+	return tooltip.style("visibility","hidden");
+});
 
+	//mise à jour des lignes max
+	svg.selectAll("line.ligneMax").data(produits).transition().duration(4000).delay(150).ease("elastic").attr("x1", function(d, i) {
+		var x = (width/2) - nantesRadius-(d.distanceMoyenne*ratio);
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
+		return rotatePoint(x, y, (width/2), (height/2), angle).x;
+	}).attr("y1", function(d, i) {
+		var x = (width/2) - nantesRadius-(d.distanceMoyenne*ratio);
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
+		return rotatePoint(x, y, (width/2), (height/2), angle).y;
+	}).attr("x2",function(d,i){
+		var x = (width/2) - nantesRadius - (d.distMax*ratio);
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
+		return rotatePoint(x,y,(width/2), (height/2), angle).x;
+	}).attr("y2",function(d,i){
+		var x = (width/2) - nantesRadius - (d.distMax*ratio);
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
+		return rotatePoint(x, y, (width/2), (height/2), angle).y;
+	});
 
-
-
-//##### LIGNES MIN
-var lignesMin = groupes.append("line").attr("x1", function(d, i) {
-	var x = (width/2) - nantesRadius;
+/*
+//bout de ligne qui dépasse après le max
+var lignesApresMax = groupes.append("line").attr("x1", function(d, i) {
+	var x = (width/2) - nantesRadius-(d.distMax*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 
 }).attr("y1", function(d, i) {
-	var x = (width/2) - nantesRadius;
+	var x = (width/2) - nantesRadius-(d.distMax*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 
+	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 }).attr("x2",function(d,i){
-	var x = (width/2) - nantesRadius - (d.distMin*ratio);
+	var x = (width/2) - nantesRadius - (d.distMax*ratio)-20;
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
-
 }).attr("y2",function(d,i){
-	var x = (width/2) - nantesRadius - (d.distMin*ratio);
+	var x = (width/2) - nantesRadius - (d.distMax*ratio)-20;
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-
-}).attr("stroke-width",3).attr("stroke","#38615a").on("mouseover", function(d){
-	d3.select(this).attr("stroke","grey");
-	tooltip.text("Minimum : "+d.distMin.toFixed(2));
-	return tooltip.style("visibility","visible");
+}).attr("stroke-width",1).attr("stroke","black");
+*/
 
 
-}).on("mousemove",function(d){
-	
-	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
-}).on("mouseout",function(d){
-	d3.select(this).attr("stroke","#38615a");
-	return tooltip.style("visibility","hidden");
-});
+
+
+
+
+
 
 
 
@@ -374,7 +448,7 @@ var pointsMoy = groupes.append("circle").attr("cx", function(d, i) {
 var villesDistances = echelle.append("circle").attr("cx",width/2).attr("cy",height/2).attr("r",function(d){
 	return d.distance;
 }).attr("fill","none").attr("stroke","grey").attr("stroke-width",1).attr("stroke-dasharray", "5,5");
-var villesNoms = echelle.append("text").attr("x",width/2).attr("y",function(d){
+var villesNoms = echelle.append("text").attr("x",(width/2)-15).attr("y",function(d){
 	return height/2-d.distance-5;
 }).attr("font-size","10px").attr("fill","grey").text(function(d){return d.nom;});
 
