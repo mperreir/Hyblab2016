@@ -10,6 +10,8 @@ opacity = .2,
 posMax = .7,
 colText = "hsl(300,100%,50%)";
 
+var data = fields();
+
 var color = d3.scale.linear()
 .range(["hsl(0,0%,100%)", "hsl(195,100%,50%)"])
 .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
@@ -37,7 +39,7 @@ var svg = d3.select("#svg_dataviz2")//.append("svg")
 .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 var field = svg.selectAll("g")
-.data(fields)
+.data(data)
 .enter().append("g");
 
 //arc data
@@ -97,25 +99,29 @@ field.append("svg:image")
 .attr("xlink:href","../resources/images/test.png")
 .on("click", function(d) {
     console.log("click");
-    toE();
+    toE(0);
     //tick();
     } );
 
-tick(0);
+tick();
 
 //d3.select(self.frameElement).style("height", height + "px");
 
 
 function toE(i) {
+	console.log(field.data());
     if (i<5){
         console.log("toE");
-        field.data()[i].value = 0.6;
+		data[i].previousValue = data[i].value;
+        data[i].value = data[i].value + 0.1;
+		field.data(data);
         //field.data()[2].value = 0.8;
         if (!document.hidden) field
             .transition()
             .duration(500)
             .each(fieldTransition)
-            .each("end", toE(i+1));
+            .each("end", /*toE(i+1)*/console.log("a"));
+		toE(i+1);
     }
 }
 
@@ -129,16 +135,17 @@ function toB() {
 
 
 function tick() {
+	console.log(field.data());
     if (!document.hidden) field
         //.each(function(d) { this._value = d.value; })
         //.data(fields)
         //.each(function(d) { d.previousValue = this._value; })
-        .transition()
+        //.transition()
         //.ease("elastic")
-        .duration(500)
+        //.duration(500)
         .each(fieldTransition)
         //fonction de callback
-        .each("end", function(d) {console.log("test");});
+        //.each("end", function(d) {console.log("test");});
     
     //setTimeout(tick, 1000 - Date.now() % 1000);
 }
@@ -172,6 +179,7 @@ function arcTween(arc) {
         console.log( d.previousValue + "-" + d.value);
         var i = d3.interpolateNumber(d.previousValue, d.value);
         return function(t) {
+			d.previousValue = d.value;
             d.value = i(t);
             return arc(d);
         };
@@ -182,7 +190,7 @@ function arcTween(arc) {
 //valeurs entre 0-1
 function fields() {
     return [
-            {index: .5, text: "", value: 0, previousValue: 0, opacity: 1, year: "2014", val1: "8000", val2: "7000", val3: "6000", val4: "5000"},
+            {index: .5, text: "", value: 0.7, previousValue: 0.7, opacity: 1, year: "2014", val1: "8000", val2: "7000", val3: "6000", val4: "5000"},
             {index: .4, text: "", value: 0.5, previousValue: 0.5, opacity: 1, year: "2012", val1: "7000", val2: "6000", val3: "5000", val4: "4000"},
             {index: .3, text: "", value: 0.4, previousValue: 0.4, opacity: 1, year: "2010", val1: "6000", val2: "5000", val3: "4000", val4: "3000"},
             {index: .2, text: "", value: 0.3, previousValue: 0.3, opacity: 1, year: "2008", val1: "5000", val2: "4000", val3: "3000", val4: "2000"},
