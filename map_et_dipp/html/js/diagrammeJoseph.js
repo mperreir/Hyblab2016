@@ -13,7 +13,7 @@ var donneesJardinJoseph = {
         {nomProduit: "Fruits", poids: 11600},
         {nomProduit: "Autres", poids: 2400}
     ],
-    "été": [
+    "ete": [
         {nomProduit: "Racines", poids: 7200}, 
         {nomProduit: "Poids et Haricots", poids: 5466},
         {nomProduit: "Choux", poids: 0},
@@ -227,16 +227,16 @@ function getSaisonActuelle() {
     // janvier: 0, fevrier: 1, ...
     if(mois >=2 && mois <= 5) { // entre mars et juin
         if(mois == 2 && jour < 20) return "hiver";
-        else if(mois == 5 && jour > 20) return "été";
+        else if(mois == 5 && jour > 20) return "ete";
         else return "printemps";
     }
     else if(mois >= 5 && mois <= 8) { // entre juin et septembre
         if(mois == 5 && jour < 21) return "printemps";
         else if(mois == 8 && jour > 22) return "automne";
-        else return "été";
+        else return "ete";
     }
     else if(mois >= 8 && mois <= 11) { // entre septemps et decembre 
-        if(mois == 8 && jour < 23) return "été";
+        if(mois == 8 && jour < 23) return "ete";
         else if(mois == 11 && jour > 20) return "hiver";
         else return "automne";
     }
