@@ -15,6 +15,23 @@ function startQ () {
 	document.getElementById("sectionQ").style.display = "block";
 }
 
+/* Fonction passant à la slide suivante (scroll horizontal) */
+function moveNextQ (button) {
+	$.fn.fullpage.moveSlideRight();
+	var idQ = button[0]+button[1];
+	resetSlide(idQ);
+}
+
+function resetSlide (idQ) {
+	/* Pour reset une slide, il faut cacher les blocs réponses
+	Mettre le background color des propositions à #E1F1F3
+	Remettre le onclick des propositions à disponible (onclick à "chooseAnswer(this.id)") */
+	
+	// Cacher les blocs réponses
+	var bad_block = document.getElementById(idQ+"_ab");
+	var good_block = document.getElementById(idQ+"_ag");
+}
+
 function chooseAnswer (prop_id) {
 	var idQ = document.getElementById(prop_id).parentElement.id;
 	var childs = document.getElementById(prop_id).parentElement.children;
@@ -31,13 +48,19 @@ function chooseAnswer (prop_id) {
 
 	var valid_button = document.getElementById(idQ+"_b");
 
-	for(i = 0; i < 5; i++) {
+	for(i = 0; i < 3; i++) {
 		$(valid_button).transition({ scale: 1.25 }, 700);
 		$(valid_button).transition({ scale: 1 }, 700);
 	}
 }
 
 function answerQuestions(prop_id) {
+
+	// Récupère l'id de l'élément <ul> contenant les propositions
+	var idQ = document.getElementById(prop_id).parentElement.id;
+
+	var valid_button = document.getElementById(idQ+"_b");
+	$(valid_button).stop(true);
 
 	var question = prop_id[0]+prop_id[1];
 	var childs = document.getElementById(question).children;
@@ -48,6 +71,7 @@ function answerQuestions(prop_id) {
 			var answer = childs[i].id;
 			answer = answer[3]+answer[4];
 		}
+		document.getElementById(childs[i].id).onclick = "false";
 	}
 
 	var bad_bloc = document.getElementById(question+"_ab");
