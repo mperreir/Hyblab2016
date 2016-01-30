@@ -1,12 +1,12 @@
 "use strict";
 
 
-var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit":"Fruits", "distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0},
-  {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0}];
+var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoLegumes.png"},
+  {"produit":"Fruits", "distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoFruits.png"},
+  {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoBouteille.png"},
+  {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoViande.png"},
+  {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoMiel.png"},
+  {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoLegumes.png"}];
 
 var produitsDebut = [ {"produit":"Légumes","distanceMoyenne":0, "distMin":0, "distMax":0},
   {"produit":"Fruits", "distanceMoyenne":0, "distMin":0, "distMax":0},
@@ -351,16 +351,16 @@ svg.selectAll("image").data(produits).enter()
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 
-	return (rotatePoint(x, y, (width/2), (height/2), angle).x)-15;
+	return (rotatePoint(x, y, (width/2), (height/2), angle).x)-30;
 }).
 attr("y",function(d,i){
 	var x = (width/2) - nantesRadius - d.distMax - 70;
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 
-	return (rotatePoint(x, y, (width/2), (height/2), angle).y)-15;
-}).attr("width", 30).attr("height",30).attr("xlink:href",function(d,i){
-	return "./img/picto"+i+".png";
+	return (rotatePoint(x, y, (width/2), (height/2), angle).y)-30;
+}).attr("width", 50).attr("height",50).attr("xlink:href",function(d,i){
+	return "./img/"+d.img;
 });
 
 
