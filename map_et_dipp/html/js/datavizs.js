@@ -18,7 +18,7 @@ var produitsDebut = [ {"produit":"Légumes","distanceMoyenne":0, "distMin":0, "d
 var villes = [{"nom":"Angers", "distance":82}, {"nom":"Laval","distance":138}];
 var quartiers = [{"nom":"Malakoff St Donatien", "produits":[]}, {"nom":"Doulon Bottière"}, {"nom":"Hauts Pavés St Félix"}, {"nom":"Bellevue Chantenay"}
 , {"nom":"Centre Ville"}, {"nom":"Nantes Nord"}, {"nom":"Ile de Nantes"}, {"nom":"Nantes Erdre"}, {"nom":"Nantes Sud"}, {"nom":"Breil Barberie"}];
-
+var wahoo = [{"nom":"Moscou", "distance":2494}];
 
 
 
@@ -126,6 +126,7 @@ svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", w
 
 var groupes = svg.selectAll("g").data(produitsDebut).enter();
 var echelle = svg.selectAll("g").data(villes).enter();
+var gmoscou = svg.selectAll("g").data(wahoo).enter();
 
 var triangles = svg.selectAll("g").data(produits).enter();
 
@@ -359,13 +360,16 @@ attr("y",function(d,i){
 
 	return (rotatePoint(x, y, (width/2), (height/2), angle).y)-15;
 }).attr("width", 30).attr("height",30).attr("xlink:href",function(d,i){
-	return "../img/picto"+i+".png";
+	return "./img/picto"+i+".png";
 });
 
 
 //bouton changement d'échelle
-svg.selectAll("text").data(produits).enter().append("text").text("changer l'échelle").attr("x",0).attr("y",100).on("click",function(){
-	return svg.transition().attr("transform","scale(0.2)").ease("linear").duration(1000).delay(100);
+svg.selectAll("text").data(wahoo).enter().append("text").text("changer l'échelle").attr("x",0).attr("y",100).on("click",function(){
+	return svg.transition().attr("transform","scale(0.1) translate("+width*4+","+height*4+")").ease("linear").duration(1000).delay(100).each('end',function(){
+		svg.selectAll("text").data(wahoo).enter().append("text").text("Moscou").attr("x",width/2).attr("y",height/2).attr("font-size","1000px").attr("fill","black");
+		console.log("fini");
+	});
 });
 
 /*
@@ -431,7 +435,7 @@ var trianglesMin = triangles.append("polyline").style("stroke","#addfeb").style(
 
 // ######### DESSIN DES CERCLES
 
-var pointsMoy = groupes.append("circle").attr("cx", function(d, i) {
+var pointsMoy = triangles.append("circle").attr("cx", function(d, i) {
     var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
@@ -451,5 +455,7 @@ var villesDistances = echelle.append("circle").attr("cx",width/2).attr("cy",heig
 var villesNoms = echelle.append("text").attr("x",(width/2)-15).attr("y",function(d){
 	return height/2-d.distance-5;
 }).attr("font-size","10px").attr("fill","grey").text(function(d){return d.nom;});
+
+var moscou = gmoscou.append("circle").attr("cx",width/2).attr("cy",height/2).attr("r",function(d){return d.distance;}).attr("fill","none").attr("stroke","black").attr("stroke-width",4);
 
 });
