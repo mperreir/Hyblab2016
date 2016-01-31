@@ -137,7 +137,7 @@ span>ul>li>p
 
 #q3
 {
-	left: -37.5%;
+	left: -65.5%;
 }
 
 #q4
@@ -374,6 +374,43 @@ span>ul>li>p
 	width: 55%;
 	height: auto;
 	left: 19%;
+	bottom: 5%;
+}
+
+#tracteur_q3
+{
+	position: relative;
+	width: 7.5%;
+	height: auto;
+	right: 31%;
+	top: 17.5%;
+}
+
+#panneau_1_q3
+{
+	position: relative;
+	width: 6.5%;
+	height: auto;
+	top: 19%;
+	right: 11%;
+}
+
+#panneau_2_q3
+{
+	position: relative;
+	width: 6.5%;
+	height: auto;
+	top: 12%;
+	right: 14%;
+}
+
+#panneau_3_q3
+{
+	position: relative;
+	width: 6.5%;
+	height: auto;
+	top: 12%;
+	right: 27.5%;
 }
 
 #elements_q4
@@ -383,6 +420,64 @@ span>ul>li>p
 	height: auto;
 	left: 28.5%;
 	bottom: 0%;
+}
+
+#data1_infos
+{
+	position: absolute;
+	width: 30%;
+	height: 25%;
+	left: 11.4%;
+	top: 25%;
+	font-size: 1vw;
+	color: #002266;
+}
+
+#data1_infos>b
+{
+	font-size: 1.25vw;
+}
+
+#saviez_vous
+{
+	position: relative;
+	width: 30%;
+	height: 25%;
+	padding: 2%;
+	top: 17.5%;
+	left: 11.4%;
+	text-align: center;
+}
+
+#saviez_vous>p
+{
+	text-align: left;
+	font-size: 1vw;
+}
+
+#saviez_vous>b
+{
+	font-size: 1.25vw;
+}
+
+#data1_contenu_carte
+{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.data1_element
+{
+	position: relative;
+	width: 2%;
+	height: auto;
+}
+
+#tracteur1_data1
+{
+	left: 62%;
+	bottom: -50%;
 }
 
 #svg_dataviz3

@@ -131,8 +131,28 @@ function resetSlide (idQ) {
 
 		case "q3":
 			var elements = document.getElementById("elements_q3");
+			var panneau1 = document.getElementById("panneau_1_q3");
+			var panneau2 = document.getElementById("panneau_2_q3");
+			var panneau3 = document.getElementById("panneau_3_q3");
+			var tracteur = document.getElementById("tracteur_q3");
 
 			$(elements_q3).transition({
+				scale: 1,
+				x: 0
+			})
+			$(panneau1).transition({
+				scale: 1,
+				x: 0
+			})
+			$(panneau2).transition({
+				scale: 1,
+				x: 0
+			})
+			$(panneau3).transition({
+				scale: 1,
+				x: 0
+			})
+			$(tracteur).transition({
 				scale: 1,
 				x: 0
 			})
@@ -248,8 +268,28 @@ function answerQuestions(prop_id) {
 
 	function animElementsQ3 () {
 		var elements = document.getElementById("elements_q3");
+		var panneau1 = document.getElementById("panneau_1_q3");
+		var panneau2 = document.getElementById("panneau_2_q3");
+		var panneau3 = document.getElementById("panneau_3_q3");
+		var tracteur = document.getElementById("tracteur_q3");
 
 		$(elements_q3).transition({
+			scale: 0.8,
+			x: -300
+		})
+		$(panneau1).transition({
+			scale: 0.8,
+			x: -300
+		})
+		$(panneau2).transition({
+			scale: 0.8,
+			x: -300
+		})
+		$(panneau3).transition({
+			scale: 0.8,
+			x: -300
+		})
+		$(tracteur).transition({
 			scale: 0.8,
 			x: -300
 		})
