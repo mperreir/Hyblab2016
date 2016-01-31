@@ -96,18 +96,8 @@ span>ul>li>p
 .liste_propositions
 {
 	position: absolute;
-	left: 17.5%;
+	left: -27.5%;
 	width: 60%;
-}
-
-.slide_width
-{
-	width: inherit;
-}
-
-.total_width
-{
-	width: 100%;
 }
 
 .bloc_reponse
@@ -138,6 +128,21 @@ span>ul>li>p
 .contenu_reponse>b
 {
 	font-size: 1.5vw;
+}
+
+#q2
+{
+	left: -28%;
+}
+
+#q3
+{
+	left: -65.5%;
+}
+
+#q4
+{
+	left: -27.5%;
 }
 
 .q2
@@ -225,6 +230,28 @@ span>ul>li>p
 	position: absolute;
 	z-index: 1;
 	opacity: 0;
+	width: 6%;
+	height: auto;
+}
+
+#fond_q1
+{
+	left: -37.5%;
+}
+
+#fond_q2
+{
+	left: -12.5%;
+}
+
+#fond_q3
+{
+	left: 12.5%;
+}
+
+#fond_q4
+{
+	left: 37.5%;
 }
 
 #nuage1
@@ -306,6 +333,151 @@ span>ul>li>p
 	opacity: 1;
 	bottom: 33%;
 	left: 70.5%;
+}
+
+#france
+{
+	position: relative;
+	width: 45%;
+	height: auto;
+	bottom: 4.5%;
+	left: 25%;
+}
+
+#ampoule_q2
+{
+	position: relative;
+	left: 17.5%;
+	width: 15%;
+	height: auto;
+}
+
+#batiment_q2
+{
+	position: relative;
+	left: 27.5%;
+	width: 15%;
+	height: auto;
+}
+
+#euro_q2
+{
+	position: relative;
+	left: 37.5%;
+	width: 15%;
+	height: auto;
+}
+
+#elements_q3
+{
+	position: relative;
+	width: 55%;
+	height: auto;
+	left: 19%;
+	bottom: 5%;
+}
+
+#tracteur_q3
+{
+	position: relative;
+	width: 7.5%;
+	height: auto;
+	right: 31%;
+	top: 17.5%;
+}
+
+#panneau_1_q3
+{
+	position: relative;
+	width: 6.5%;
+	height: auto;
+	top: 19%;
+	right: 11%;
+}
+
+#panneau_2_q3
+{
+	position: relative;
+	width: 6.5%;
+	height: auto;
+	top: 12%;
+	right: 14%;
+}
+
+#panneau_3_q3
+{
+	position: relative;
+	width: 6.5%;
+	height: auto;
+	top: 12%;
+	right: 27.5%;
+}
+
+#elements_q4
+{
+	position: relative;
+	width: 45%;
+	height: auto;
+	left: 28.5%;
+	bottom: 0%;
+}
+
+#data1_infos
+{
+	position: absolute;
+	width: 30%;
+	height: 25%;
+	left: 11.4%;
+	top: 25%;
+	font-size: 1vw;
+	color: #002266;
+}
+
+#data1_infos>b
+{
+	font-size: 1.25vw;
+}
+
+#saviez_vous
+{
+	position: relative;
+	width: 30%;
+	height: 25%;
+	padding: 2%;
+	top: 17.5%;
+	left: 11.4%;
+	text-align: center;
+}
+
+#saviez_vous>p
+{
+	text-align: left;
+	font-size: 1vw;
+}
+
+#saviez_vous>b
+{
+	font-size: 1.25vw;
+}
+
+#data1_contenu_carte
+{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.data1_element
+{
+	position: relative;
+	width: 2%;
+	height: auto;
+}
+
+#tracteur1_data1
+{
+	left: 62%;
+	bottom: -50%;
 }
 
 #svg_dataviz3
