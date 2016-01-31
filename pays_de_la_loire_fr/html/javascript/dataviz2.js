@@ -91,21 +91,48 @@ field.append("text")
 
 
 //affichage des images
+//vers eolienne
 field.append("svg:image")
-.attr('x',0)
-.attr('y',0)
+.attr('x',-width/2)
+.attr('y',-height/2)
 .attr('width', 20)
 .attr('height', 24)
 .attr("xlink:href","../resources/images/test.png")
 .on("click", function(d) {
     console.log("click");
     toE();
-    } );
+	} );
+	
+//vers photovol
+field.append("svg:image")
+.attr('x',width/2 - 20)
+.attr('y',-height/2)
+.attr('width', 20)
+.attr('height', 24)
+.attr("xlink:href","../resources/images/test.png")
+.on("click", function(d) {
+	console.log("click");
+	zero();
+	} );
+
+
 
 tick();
 
 //d3.select(self.frameElement).style("height", height + "px");
 
+function zero() {
+	//mise à zéro des valeurs
+	for (var i = 0; i < 5; i++) {
+		field.data()[i].previousValue = field.data()[i].value;
+		field.data()[i].value = 0;
+    }
+	//transition
+	if (!document.hidden) field
+		.transition()
+		.duration(500)
+        .each(fieldTransition)
+}
 
 function toE() {
 	console.log("toE");
@@ -123,7 +150,18 @@ function toE() {
 }
 
 function toP() {
-    
+    console.log("toP");
+	//calcule de la nouvelle valeur
+	for (var i = 0; i < 5; i++) {
+		field.data()[i].previousValue = field.data()[i].value;
+		field.data()[i].value = field.data()[i].value + 0.2;
+    }
+	//transition
+    if (!document.hidden) field
+		.transition()
+		.duration(500)
+		.delay(function(d,i) { return (4-i)*500; })
+        .each(fieldTransition)
 }
 
 function toB() {
@@ -187,10 +225,10 @@ function arcTween(arc) {
 //valeurs entre 0-1
 function fields() {
     return [
-            {index: .5, text: "", value: 0.7, previousValue: 0.7, opacity: 1, year: "2014", val1: "8000", val2: "7000", val3: "6000", val4: "5000"},
-            {index: .4, text: "", value: 0.5, previousValue: 0.5, opacity: 1, year: "2012", val1: "7000", val2: "6000", val3: "5000", val4: "4000"},
-            {index: .3, text: "", value: 0.4, previousValue: 0.4, opacity: 1, year: "2010", val1: "6000", val2: "5000", val3: "4000", val4: "3000"},
-            {index: .2, text: "", value: 0.3, previousValue: 0.3, opacity: 1, year: "2008", val1: "5000", val2: "4000", val3: "3000", val4: "2000"},
-            {index: .1, text: "", value: 0.2, previousValue: 0.2, opacity: 1, year: "2004", val1: "4000", val2: "3000", val3: "2000", val4: "1000"}
+            {index: .5, text: "", value: 0.7, previousValue: 0.7, opacity: 1, year: "2014", val1: "8000", val2: "7000", val3: "6000"},
+            {index: .4, text: "", value: 0.5, previousValue: 0.5, opacity: 1, year: "2012", val1: "7000", val2: "6000", val3: "5000"},
+            {index: .3, text: "", value: 0.4, previousValue: 0.4, opacity: 1, year: "2010", val1: "6000", val2: "5000", val3: "4000"},
+            {index: .2, text: "", value: 0.3, previousValue: 0.3, opacity: 1, year: "2008", val1: "5000", val2: "4000", val3: "3000"},
+            {index: .1, text: "", value: 0.2, previousValue: 0.2, opacity: 1, year: "2004", val1: "4000", val2: "3000", val3: "2000"}
             ];
 }
