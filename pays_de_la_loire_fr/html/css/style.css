@@ -224,50 +224,81 @@ span>ul>li>p
 {
 	bottom: 75%;
 	left: 5%;
+	transform: scale(3.5);
 }
 
 #nuage2
 {
 	bottom: 62.5%;
 	left: 30%;
+	transform: scale(2.5);
 }
 
 #nuage3
 {
 	bottom: 70%;
 	left: 75%;
+	transform: scale(2.5);
 }
 
 #tracteur_intro
 {
 	opacity: 1;
-	bottom: 15%;
-	left: 14%;
+	bottom: 20%;
+	left: -5%;
 	transform: scale(0.6);
+}
+
+#bateau_intro
+{
+	opacity: 1;
+	bottom: 27.5%;
+	left: 37.5%;
 }
 
 #panneau_intro_1
 {
 	opacity: 1;
-	bottom: 30%;
-	left: 30.5%;
+	bottom: 19%;
+	left: 1%;
 	transform: scale(0.8);
 }
 
 #panneau_intro_2
 {
 	opacity: 1;
-	bottom: 25%;
-	left: 21.5%;
+	bottom: 14%;
+	right: 8.5%;
 	transform: scale(0.8);
 }
 
 #panneau_intro_3
 {
 	opacity: 1;
-	bottom: 25%;
-	left: 19.5%;
+	bottom: 14%;
+	right: 9%;
 	transform: scale(0.8);
+}
+
+#pale_intro_1
+{
+	opacity: 1;
+	bottom: 47.5%;
+	left: 38.9%;
+}
+
+#pale_intro_2
+{
+	opacity: 1;
+	bottom: 47.5%;
+	left: 39.2%;
+}
+
+#pale_intro_3
+{
+	opacity: 1;
+	bottom: 47.5%;
+	left: 39.65%;
 }
 
 #svg_dataviz3
