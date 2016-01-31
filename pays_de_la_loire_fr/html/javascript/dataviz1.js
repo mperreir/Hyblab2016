@@ -22,23 +22,23 @@ function animIntro() {
 	$(nuage1)
 		.transition({
 					opacity: 1,
-					x: 200,
+					x: '+=200%',
 					scale: 4 }, 1500);
 	$(nuage2)
 		.transition({
 					opacity: 1,
-					x: 100,
+					x: '+=100%',
 					scale: 2.5 }, 1500);
 	$(nuage3)
 		.transition({
 					opacity: 1,
-					x: -200,
+					x: '-=200%',
 					scale: 2.5 }, 1500);
 
 	$(tracteur)
 		.transition({
 					opacity: 1,
-					x: -510,
+					x: '-=510%',
 					scale: 0.6 }, 20000);
 }
 
