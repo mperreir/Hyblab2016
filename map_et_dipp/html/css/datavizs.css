@@ -121,11 +121,6 @@
 
 
 /* slide 2 */
-#titreSlide2 {
-    color: #ffffff;
-    font: 41.13px Museo;
-}
-
 #slide8 {
     margin: 0;
     padding: 0;
@@ -139,9 +134,16 @@
     background-color: #82e69b;
 }
 
+#titreSlide2 {
+    color: #ffffff;
+    font: 41.13px Museo;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
 .imageContact {
-    height: 107px;
-    width: 107px;
+    height: 40px;
+    width: 40px;
     margin-right: 30px;
     margin-left: 30px;
     margin-top: 10px;
@@ -150,7 +152,7 @@
 
 #imageLettre {
     z-index: 1;
-    width: 50%;
+    /width: 50%;
 }
 
 #titreLettre {
