@@ -153,3 +153,33 @@ body {
 
 #chart_right div {
 }
+
+/* ---------population chart------------- */
+#pop_chart {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.bar text {
+    fill: white;
+    font: 10px sans-serif;
+    text-anchor: end;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path {
+    display: none;
+}
+.axis line {
+  fill: none;
+  stroke: #d6e9c6;
+  /*shape-rendering: crispEdges;*/
+}
+

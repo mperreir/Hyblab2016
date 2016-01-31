@@ -10,6 +10,32 @@ var INDICATORS = {
     environment: "Living Environment"
 };
 
+var AGES = {
+    a04: "0-4",
+    a59: "5-9",
+    a1014: "10-14",
+    a1519: "15-19",
+    a2024: "20-24",
+    a2529: "25-29",
+    a3034: "30-34",
+    a3544: "35-44",
+    a4554: "45-54",
+    a5564: "55-64",
+    a6574: "65-74",
+    a7584: "75-84",
+    a8590: "85-90"
+};
+
+var SUBDOMAIN = [
+    "income ..............",
+    "employment............",
+    "education...........",
+    "health.............",
+    "crime.............",
+    "housing...............",
+    "environment................"
+];
+
 L.TopoJSON = L.GeoJSON.extend({
     addData: function(jsonData) {
         if (jsonData.type === "Topology") {

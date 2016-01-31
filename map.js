@@ -3,41 +3,50 @@
 
     // Utility variable storing the max & min value of each indicator and IMD as well
     var LSOA_Limits = (function() {
-         var result = {};
-         result["IMD"] = {min:100, max:0};
-         for (var indicator in INDICATORS) {
-             result[indicator] = {min:100, max:0};
-         }
-         for (var lsoa11cd in window.data) {
-             for (var indicator in INDICATORS) {
-                 if (result[indicator].max < window.data[lsoa11cd][indicator]["raw"]) {
-                     result[indicator].max = window.data[lsoa11cd][indicator]["raw"];
-                 }
-                 if (result[indicator].min > window.data[lsoa11cd][indicator]["raw"]) {
-                     result[indicator].min = window.data[lsoa11cd][indicator]["raw"];
-                 }
-             }
-             if (result["IMD"].max < window.data[lsoa11cd]["IMD"]["raw"]) {
-                 result["IMD"].max = window.data[lsoa11cd]["IMD"]["raw"];
-             }
-             if (result["IMD"].min > window.data[lsoa11cd]["IMD"]["raw"]) {
-                 result["IMD"].min = window.data[lsoa11cd]["IMD"]["raw"];
-             }
-         }
+        var result = {};
+        result["IMD"] = {
+            min: 100,
+            max: 0
+        };
+        for (var indicator in INDICATORS) {
+            result[indicator] = {
+                min: 100,
+                max: 0
+            };
+        }
+        for (var lsoa11cd in window.data) {
+            for (var indicator in INDICATORS) {
+                if (result[indicator].max < window.data[lsoa11cd][indicator]["raw"]) {
+                    result[indicator].max = window.data[lsoa11cd][indicator]["raw"];
+                }
+                if (result[indicator].min > window.data[lsoa11cd][indicator]["raw"]) {
+                    result[indicator].min = window.data[lsoa11cd][indicator]["raw"];
+                }
+            }
+            if (result["IMD"].max < window.data[lsoa11cd]["IMD"]["raw"]) {
+                result["IMD"].max = window.data[lsoa11cd]["IMD"]["raw"];
+            }
+            if (result["IMD"].min > window.data[lsoa11cd]["IMD"]["raw"]) {
+                result["IMD"].min = window.data[lsoa11cd]["IMD"]["raw"];
+            }
+        }
         return result;
     }());
 
     function meanLSOAs(indicator, LSOAs, type) {
         var count = 0;
         var result = LSOAs
-                .map(function (lsoa11cd) {
-                    count += 1;
-                    return window.data[lsoa11cd][indicator][type];
-                }).reduce(function (a, b) {
-                    return a + b;
-                }) / count;
+            .map(function(lsoa11cd) {
+                count += 1;
+                return window.data[lsoa11cd][indicator][type];
+            }).reduce(function(a, b) {
+                return a + b;
+            }) / count;
         return result;
     }
+
+
+
     /*
     var pushArray = function(oldArr) {
         var toPush = oldArr.concat.apply([], arguments);
@@ -51,7 +60,10 @@
     (function() {
         var g = topo_msoa.objects.E07000123.geometries;
         for (var i in g) {
-            MSOA[g[i].properties["MSOA11CD"]] = { "LSOAs" : [], "PCD7s" : [] };
+            MSOA[g[i].properties["MSOA11CD"]] = {
+                "LSOAs": [],
+                "PCD7s": []
+            };
         }
     }());
     // Store info of mapping from MSOA to LSOAs
@@ -68,22 +80,44 @@
         }
     }());
     // Store indicators of MSOA
-    (function(){
+    (function() {
         for (var MSOA11CD in MSOA) {
             var count = 0;
             MSOA[MSOA11CD]["IMD"] = MSOA[MSOA11CD]["LSOAs"]
-                    .map(function (lsoa11cd) {
-                        count += 1;
-                        return window.data[lsoa11cd]["IMD"]["raw"];
-                    }).reduce(function (a, b) {
-                        return a + b;
-                    }) / count;
+                .map(function(lsoa11cd) {
+                    count += 1;
+                    return window.data[lsoa11cd]["IMD"]["raw"];
+                }).reduce(function(a, b) {
+                    return a + b;
+                }) / count;
             for (var indicator in INDICATORS) {
                 MSOA[MSOA11CD][indicator] = {};
                 MSOA[MSOA11CD][indicator]["raw"] = meanLSOAs(indicator, MSOA[MSOA11CD]["LSOAs"], "raw");
                 MSOA[MSOA11CD][indicator]["decile"] = meanLSOAs(indicator, MSOA[MSOA11CD]["LSOAs"], "decile");
             }
         }
+    }());
+
+    function totalAges(group, LSOAs) {
+        var result = LSOAs
+            .map(function(lsoa11cd) {
+                return window.data[lsoa11cd]["ages"][group];
+            }).reduce(function(a, b) {
+                return a + b;
+            });
+
+        return result;
+    }
+
+    // calculate total agegroup for MSOA
+    (function() {
+        for (var MSOA11CD in MSOA) {
+            MSOA[MSOA11CD]["ages"] = {};
+            for (var group in AGES) {
+                MSOA[MSOA11CD]["ages"][AGES[group]] = totalAges(AGES[group], MSOA[MSOA11CD]["LSOAs"]);
+            }
+        }
+        
     }());
 
     // Convert HSV to RGB
@@ -98,12 +132,24 @@
         q = v * (1 - f * s);
         t = v * (1 - (1 - f) * s);
         switch (i % 6) {
-            case 0: r = v, g = t, b = p; break;
-            case 1: r = q, g = v, b = p; break;
-            case 2: r = p, g = v, b = t; break;
-            case 3: r = p, g = q, b = v; break;
-            case 4: r = t, g = p, b = v; break;
-            case 5: r = v, g = p, b = q; break;
+            case 0:
+                r = v, g = t, b = p;
+                break;
+            case 1:
+                r = q, g = v, b = p;
+                break;
+            case 2:
+                r = p, g = v, b = t;
+                break;
+            case 3:
+                r = p, g = q, b = v;
+                break;
+            case 4:
+                r = t, g = p, b = v;
+                break;
+            case 5:
+                r = v, g = p, b = q;
+                break;
         }
         return {
             r: Math.round(r * 255),
@@ -141,10 +187,13 @@
         var LSOAs = MSOA[msoa11cd]["LSOAs"];
         return LSOAs
             .map(calculateIMD)
-            .reduce(function(a, b){return a + b;}) / LSOAs.length;
+            .reduce(function(a, b) {
+                return a + b;
+            }) / LSOAs.length;
     };
 
     var hasInitializedStyle = false;
+
     function LsoaStyle(feature) {
         if (!hasInitializedStyle) {
             var d = window.data[feature.properties.LSOA11CD];
@@ -155,8 +204,7 @@
                 color: 'black',
                 fillOpacity: 0.7
             };
-        }
-        else {
+        } else {
             return {
                 fillColor: getColor(calculateIMD(feature.properties.LSOA11CD)),
                 weight: 2,
@@ -176,8 +224,7 @@
                 color: 'black',
                 fillOpacity: 0.7
             };
-        }
-        else {
+        } else {
             return {
                 fillColor: getColor(calculateMsoaIMD(feature.properties.MSOA11CD)),
                 weight: 1,
@@ -190,16 +237,12 @@
 
     function getMsoaPopupContent(CD, NM) {
         var arr = MSOA[CD]["PCD7s"];
-        return '<h4>' + NM + '</h4><div>( '
-            + arr[0] + ' - '
-            + arr[arr.length-1] + ' )</div>';
+        return '<h4>' + NM + '</h4><div>( ' + arr[0] + ' - ' + arr[arr.length - 1] + ' )</div>';
     }
 
     function getLsoaPopupContent(CD, NM) {
         var arr = window.data[CD]["PCD7s"];
-        return '<h4>' + NM + '</h4><div>( '
-        + arr[0] + ' - '
-        + arr[arr.length-1] + ' )</div>';
+        return '<h4>' + NM + '</h4><div>( ' + arr[0] + ' - ' + arr[arr.length - 1] + ' )</div>';
     }
 
     function highlightFeature(e) {
@@ -228,8 +271,7 @@
                     'decile': window.data[e.target.feature.properties["LSOA11CD"]][indicator]['decile']
                 })
             }
-        }
-        else {
+        } else {
             for (var indicator in INDICATORS) {
                 deciles.push({
                     'indicator': indicator.toUpperCase(),
@@ -237,7 +279,7 @@
                 })
             }
         }
-        //console.log(deciles);
+        // console.log(deciles);
         barchart.addTo(map);
         barchart.draw(deciles);
 
@@ -250,8 +292,7 @@
                 .setLatLng(e.latlng)
                 .setContent(getLsoaPopupContent(CD, NM))
                 .openOn(map);
-        }
-        else {
+        } else {
             CD = e.target.feature.properties["MSOA11CD"];
             NM = e.target.feature.properties["MSOA11NM"];
             popup
@@ -261,16 +302,39 @@
         }
 
 
+        //update the data of the age group
+        var ages = [];
+        if (isLsoaLayer) {
+            for (var group in AGES) {
+                ages.push({
+                    'name': AGES[group],
+                    'value': window.data[CD]["ages"][AGES[group]]
+                })
+            }
+        } else {
+            for (var group in AGES) {
+                ages.push({
+                    'name': AGES[group],
+                    'value': MSOA[CD]["ages"][AGES[group]]
+                })
+            } 
+        }
+
+        popChart.addTo(map);  
+        popChart.draw(ages);
+
     }
 
     function LsoaResetHighlight(e) {
         topoLsoaLayer.resetStyle(e.target);
         map.removeControl(barchart);
+        map.removeControl(popChart);
     }
 
     function MsoaResetHighlight(e) {
         topoMsoaLayer.resetStyle(e.target);
         map.removeControl(barchart);
+        map.removeControl(popChart);
     }
 
     function updatePopup(e) {
@@ -339,8 +403,7 @@
         if (map.getZoom() >= 13) {
             map.addLayer(topoLsoaLayer);
             map.removeLayer(topoMsoaLayer);
-        }
-        else {
+        } else {
             map.addLayer(topoMsoaLayer);
             map.removeLayer(topoLsoaLayer);
         }
@@ -371,13 +434,13 @@
             '<h4 id="idm"></h4> <br/>' +
             '<h5>How much does each of the following matters to you ?</h5>' +
             '<div class="sliderset">' +
-            '   <div class="row"></div><label>Income</label><input id="income" type="range" min="0" max="1000" value="225" class="slider red"/><br/>' +
-            '   <div class="row"></div><label>Employment</label><input id="employment" type="range" min="0" max="1000" value="225" class="slider orange"/><br/>' +
-            '   <div class="row"></div><label>Education</label><input id="education" type="range" min="0" max="1000" value="135" class="slider yellow"/><br/>' +
-            '   <div class="row"></div><label>Health</label><input id="health" type="range" min="0" max="1000" value="135" class="slider green"/><br/>' +
-            '   <div class="row"></div><label>Crime</label><input id="crime" type="range" min="0" max="1000" value="93" class="slider blue"/><br/>' +
-            '   <div class="row"></div><label>Housing</label><input id="housing" type="range" min="0" max="1000" value="93" class="slider indigo"/><br/>' +
-            '   <div class="row"></div><label>Environment</label><input id="environment" type="range" min="0" max="1000" value="93" class="slider purple"/><br/>' +
+            '   <div class="row"></div><label>Income</label><i class="information" id="icon_income"></i><input id="income" type="range" min="0" max="1000" value="225" class="slider red"/><br/>' +
+            '   <div class="row"></div><label>Employment</label><i class="information" id="icon_employment"></i><input id="employment" type="range" min="0" max="1000" value="225" class="slider orange"/><br/>' +
+            '   <div class="row"></div><label>Education</label><i class="information" id="icon_education"></i><input id="education" type="range" min="0" max="1000" value="135" class="slider yellow"/><br/>' +
+            '   <div class="row"></div><label>Health</label><i class="information" id="icon_health"></i><input id="health" type="range" min="0" max="1000" value="135" class="slider green"/><br/>' +
+            '   <div class="row"></div><label>Crime</label><i class="information" id="icon_crime"></i><input id="crime" type="range" min="0" max="1000" value="93" class="slider blue"/><br/>' +
+            '   <div class="row"></div><label>Housing</label><i class="information" id="icon_housing"></i><input id="housing" type="range" min="0" max="1000" value="93" class="slider indigo"/><br/>' +
+            '   <div class="row"></div><label>Environment</label><i class="information" id="icon_environment"></i><input id="environment" type="range" min="0" max="1000" value="93" class="slider purple"/><br/>' +
             '</div>';
         this._div.addEventListener('mousemove', function(e) {
             e.stopPropagation();
@@ -409,7 +472,7 @@
             });
             document.getElementById("education").addEventListener('change', function(e) {
                 info.update(props);
-                topoLsoaLayer.eachLayer(function(layer){
+                topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
                 });
                 topoMsoaLayer.eachLayer(function(layer) {
@@ -418,7 +481,7 @@
             });
             document.getElementById("health").addEventListener('change', function(e) {
                 info.update(props);
-                topoLsoaLayer.eachLayer(function(layer){
+                topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
                 });
                 topoMsoaLayer.eachLayer(function(layer) {
@@ -427,7 +490,7 @@
             });
             document.getElementById("crime").addEventListener('change', function(e) {
                 info.update(props);
-                topoLsoaLayer.eachLayer(function(layer){
+                topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
                 });
                 topoMsoaLayer.eachLayer(function(layer) {
@@ -436,7 +499,7 @@
             });
             document.getElementById("housing").addEventListener('change', function(e) {
                 info.update(props);
-                topoLsoaLayer.eachLayer(function(layer){
+                topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
                 });
                 topoMsoaLayer.eachLayer(function(layer) {
@@ -445,7 +508,7 @@
             });
             document.getElementById("environment").addEventListener('change', function(e) {
                 info.update(props);
-                topoLsoaLayer.eachLayer(function(layer){
+                topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
                 });
                 topoMsoaLayer.eachLayer(function(layer) {
@@ -454,8 +517,7 @@
             });
             sliderListenersAdded = true;
             hasInitializedStyle = true;
-        }
-        else if (props !== undefined) {
+        } else if (props !== undefined) {
             if (props.hasOwnProperty("LSOA11CD"))
                 document.getElementById("idm").innerHTML = ": " + calculateIMD(props["LSOA11CD"]).toFixed(1) + "%";
             else {
@@ -514,15 +576,22 @@
     searchbar.addTo(map);
     searchbar.configEventListener();
 
-    var barchart = L.control({position : 'bottomright'});
+    var barchart = L.control({
+        position: 'bottomright'
+    });
     barchart.onAdd = function(map) {
-        this._chartContainer = L.DomUtil.create('div','');
+        this._chartContainer = L.DomUtil.create('div', '');
         this._chartContainer.setAttribute('id', 'chartContainer');
         return this._chartContainer;
     };
     // deciles
     barchart.draw = function(deciles) {
-        var margin = {top: 10, right: 0, bottom: 40, left: 20},
+        var margin = {
+                top: 10,
+                right: 0,
+                bottom: 40,
+                left: 20
+            },
             width = 320 - margin.left - margin.right,
             height = 250 - margin.top - margin.bottom;
 
@@ -563,28 +632,179 @@
         svg.append("g")
             .attr("class", "y axis")
             .call(yAxis);
-            /* Label for y-axis
-            .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", -10)
-            .attr("dy", "-1em")
-            .style("text-anchor", "end")
-            .text("Performance");*/
+        /* Label for y-axis
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -10)
+        .attr("dy", "-1em")
+        .style("text-anchor", "end")
+        .text("Performance");*/
 
         svg.selectAll('.bar')
             .data(deciles)
             .enter().append('rect')
             .attr('class', 'bar')
-            .attr('x', function(d) { return x(d.indicator); })
+            .attr('x', function(d) {
+                return x(d.indicator);
+            })
             .attr('width', x.rangeBand())
-            .attr('y', function(d) { return y(d.decile); })
-            .attr('height', function(d) { return height - y(d.decile); })
+            .attr('y', function(d) {
+                return y(d.decile);
+            })
+            .attr('height', function(d) {
+                return height - y(d.decile);
+            })
     };
+
+
 
     /*
     the chart of the population
     */
-    //var popChart = L.control({position : 'bottomright'});
+    var popChart = L.control({
+        position: 'bottomleft'
+    });
+
+    popChart.onAdd = function(map) {
+        this._chartContainer = L.DomUtil.create('div', '');
+        this._chartContainer.setAttribute('id', 'pop_chart');
+        return this._chartContainer;
+    };
+    //we get ages here
+    popChart.draw = function(data) {
+
+        var margin = {
+                top: 20,
+                right: 30,
+                bottom: 30,
+                left: 40
+            },
+            width = 460 - margin.left - margin.right,
+            height = 300 - margin.bottom - margin.top;
+
+        var x = d3.scale.ordinal()
+            .domain(data.map(function(d) {
+                return d.name;
+            }))
+            .rangeRoundBands([0, width], .1);
 
 
+        var y = d3.scale.linear()
+            .domain([0, d3.max(data, function(d) {
+                return d.value;
+            })])
+            .range([height, 0]);
+
+        var colors = d3.scale.linear()
+            .domain([0, data.length * .33, data.length * .66, data.length])
+            .range(['#d6e9c6', '#bce8f1', '#faebcc', '#ebccd1']);
+
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .ticks(5)
+            .tickSize(-width);
+
+
+        var chart = d3.select("#pop_chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+        chart.selectAll(".groupLogo")
+            .data(data)
+            .enter().append("svg:image")
+            .attr("x", function(d, i) {
+                return x(d.name);
+            })
+            .attr("y", height)
+            .attr("width", x.rangeBand())
+            .attr("height", 30)
+            // .attr("xlink:href", function(d, i) {
+            //     return "image/axis" + i + ".png");
+            // });
+            .attr("xlink:href", "image/info28.png");
+
+        chart.append("g")
+            .attr("class", "y axis")
+            .call(yAxis)
+            .append("text")
+            .attr("transform", "translate(10, -10)")
+            .attr("y", 0)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .text("Number");
+
+        var bar = chart.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+            .style({
+                'fill': function(d, i) {
+                    return colors(i);
+                }
+            })
+            .attr("class", "bar")
+            .attr("x", function(d) {
+                return x(d.name);
+            })
+            .attr("y", function(d) {
+                return y(d.value);
+            })
+            .attr("height", function(d) {
+                return height - y(d.value);
+            })
+            .attr("width", x.rangeBand());
+
+
+        bar.append("title")
+            .text(function(d) {
+                return d.name + ":" + d.value;
+            });
+
+
+    }
+
+
+    /* ------------information icon--------- */
+    console.log(data);
+    var icon = d3.selectAll(".information")
+        .append("svg")
+        .attr("width", 20)
+        .attr("height", 15)
+        .append("image")
+        .attr("class", "icon_info")
+        .attr("x", 5)
+        .attr("y", 0)
+        .attr("width", 15)
+        .attr("height", 15)
+        .attr("xlink:href", "image/info28.png")
+        .append("title")
+        .text(function(d, i) {
+            return SUBDOMAIN[i];
+        });
+
+    function addEventListenerByClass(className, event, fn) {
+        var list = document.getElementsByClassName(className);
+        for (var i = 0, len = list.length; i < len; i++) {
+            list[i].addEventListener(event, fn, true);
+        }
+    }
+
+    addEventListenerByClass("icon_info", 'mouseover', function(e) {
+        d3.select(e.target)       
+            .attr("xlink:href", "image/info29.png");
+    });
+
+    addEventListenerByClass("icon_info", 'mouseout', function(e) {
+        d3.select(e.target)
+            .attr("xlink:href", "image/info28.png");
+    });    
+    
 }());
