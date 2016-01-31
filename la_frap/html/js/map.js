@@ -56,11 +56,11 @@ window.addEventListener('load', function () {
 	//document.querySelector("#carte").setAttribute("transform","scale(1.5), translate(-50,0)");
 
 	var jsonDptInfo = [
-		{"n":"Vendee","r":5,"a":6,"s":4,"b":62,"sc":9},				
-		{"n":"Loire Atlantique","r":3,"a":4,"s":3,"b":58,"sc":5},
-		{"n":"Maine et Loire","r":4,"a":2,"s":6,"b":53,"sc":2},
-		{"n":"Mayenne","r":8,"a":3,"s":5,"b":50,"sc":7},
-		{"n":"Sarthe","r":2,"a":4,"s":2,"b":65,"sc":0}
+		{"n":"LA VENDEE","num":"85","r":4,"s":18,"b":181,"sc":0},				
+		{"n":"LA LOIRE ATLANTIQUE","num":"44","r":11,"s":57,"b":738,"sc":7},
+		{"n":"LE MAINE ET LOIRE","num":"49","r":4,"s":16,"b":311,"sc":3},
+		{"n":"LA MAYENNE","num":"53","r":2,"s":9,"b":117,"sc":2},
+		{"n":"LA SARTHE","num":"72","r":1,"s":7,"b":60,"sc":0}
 
 
 	]
@@ -70,8 +70,9 @@ window.addEventListener('load', function () {
 	var info = d3.select("#infodpt");
 	
 	dpt.on('click', function (d){
+		d3.select("#nomdpt").html("<img src=img/loc_26.png> " + d.n + "<span> " + d.num +"</span>");
 		info.style("visibility" ,"visible");
-		info.html("<p class='titre'>" + d.n + "</p><p>Radios : " + d.r + "</p><p>Antennes : " + d.a + "</p><p>Salaries : " + d.s + "</p><p>Benevoles : " + d.b + "</p><p>Service Civique : " + d.sc + "</p>");
+		info.html("<h1>En quelques chiffres</h1><div><p class=\"chiffre\">" + d.r + "</p> <img src=img/Radio_26-01.png> Radios fédérées</div><p><span>" + d.s + "</span> <img src=img/Perso_26-01.png> Salariés</p><p><span>" + d.b + "</span> <img src=img/Perso_26-01.png> Bénévoles</p><p><span>" + d.sc + "</span> <img src=img/Perso_26-01.png> Services Civiques</p>");
 	});
 
 
@@ -98,7 +99,7 @@ window.addEventListener('load', function () {
 		{"x":248.007,"y":47.732,"r":3.492,"c":"white","nom":"Fidelité Mayenne","texte":"Fidélité Mayenne radio se met au service des associations, des groupements mais aussi des mouvements de l’église locale, particulièrement attentive aux plus démunis."},
 		{"x":337.444,"y":103.58,"r":3.492,"c":"white","nom":"RCF Le Mans","texte":"RCF Le Mans est une radio locale, généraliste et chrétienne  destinée à un public très large, quelles que soient ses convictions."}
 
-	]
+	];
 
 	var markers = markersContainer.selectAll("circle")
 										.data(jsonMarker)

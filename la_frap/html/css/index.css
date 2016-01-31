@@ -149,8 +149,8 @@ p{
 
 #infodpt {
 	visibility: hidden;
-	width:150px;
-	height:200px;
+	width:300px;
+	height:300px;
 	margin-top: 0px;
 	margin-left: 5px;
 	border:hidden;
@@ -159,9 +159,33 @@ p{
 	position:absolute;
 }
 
+#infodpt h1{
+	background-color:#003f4e;
+	font-size: 20px;
+	color: white;
+}
+
+#infodpt span{
+	color: white;
+	font-style: bold;
+	font-size: 22px;
+	width:80px;
+	text-align: right;
+}
+
+.chiffre{
+	color: white;
+	font-style: bold;
+	font-size: 22px;
+	width:80px;
+	text-align: right;
+	display: inline;
+}
+
 #map {
 	display:inline-block;
-	float:left;
+	margin-left: 10%;
+	padding-top: 3%;
 }
 
 #tooltip{
@@ -208,7 +232,7 @@ div.rightPart{
 div#pieChart{
 	height: 300px;
 	width:300px;
-	top:50%;
+	margin-top: 10%;
 	position: absolute;
 	display: inline-block;
 }
@@ -238,17 +262,31 @@ svg {
 }
 
 .titre1{
+	top:0%;
 	font-weight: bold;	
 	font-size: 30px;
 }
 
 .home{
-	display: inline-block;
+	margin-top: 2%;
+	margin-left: 2%;
+	display: inline-block;	
+	height: 100px;
+}
+
+.evolution{
+	margin-top: 2%;
+	position: absolute;
+	display: inline-block;	
+	height: 100px;
+	right:2%;
 }
 
 .texteheader{
 	display: inline-block;
-	padding-left: 10px;
+	position: absolute;
+	margin-top:3%;
+	margin-left: 15px;
 }
 
 .texteintro{
@@ -275,4 +313,26 @@ svg {
 	background-color: #179FAE;
 	border-color: #031d2a;
 
+}
+
+#nomdpt{
+	color:white;
+	margin-left: 140px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 30px;
+}
+
+#nomdpt span{
+	color:gray;
+}
+
+.content2 .rightPart{
+	width:40%;
+	height:100%;
+	background-color: #005a6e;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	margin-left: 50px;
 }
