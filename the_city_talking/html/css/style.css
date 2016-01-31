@@ -3,3 +3,14 @@ footer p
 {
   font-size: small;
 }
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+.lineb {
+  fill: none;
+  stroke-width: 0.5px;
+}

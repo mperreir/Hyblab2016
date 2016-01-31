@@ -1,46 +1,42 @@
 const d3 = require('d3');
 import "../scss/main.scss";
 
-function parseDay(d){
-	return {
-		"Hour":d.Hour,
-		"NO":+d.NO,
-		"NO2":+d.NO2,
-		"PM25":+d.PM25,
-	}
+var width=1000,
+	height=400;
+
+var chart = d3.select(".chart")
+	.attr("width",width)
+	.attr("height",height);
+
+var formatDate = d3.time.format("%d-%m-%Y");
+
+function type(d) {
+  d.date = formatDate.parse(d.date);
+  d.no2 = +d.no2;
+  return d;
 }
 
-let width = 960,
-	height = 500;
+var x = d3.time.scale()
+	.range([0,width]);
 
-let y = d3.scale.linear()
-	.range([height, 0]);
+var y = d3.scale.linear()
+	.range([height,0]);
 
-let chart = d3.select(".chart")
-	.attr("width", width)
-	.attr("height", height);
+var line = d3.svg.line()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.no2); });
 
-d3.csv("data/average_sun.csv",parseDay,(err,data) => {
-	y.domain([0, d3.max(data, function(d) { return d.NO; })]);
+d3.csv("per_day_test.csv",type,function(error,data){
+	if (error) throw error;
 
-	let barWidth = width / data.length;
+	x.domain(d3.extent(data, function(d) { return d.date; }));
+	y.domain(d3.extent(data, function(d) { return d.no2; }));
 
-	let bar = chart.selectAll("g")
-		.data(data)
-		.enter()
-		.append("g")
-		.attr("transform",(d, i) =>  "translate(" + i * barWidth + ",0)" );
-
-	bar.append("rect")
-		.attr("y", (d) => y(d.NO) )
-		.attr("height", (d) =>  height - y(d.NO))
-		.attr("width", barWidth - 1);
-	/*
-	bar.append("text")
-		.attr("x", barWidth / 2)
-		.attr("y", function(d) { return y(d.value) + 3; })
-		.attr("dy", ".75em")
-		.text(function(d) { return d.value; });
-	});
-	*/
+	chart.append("path")
+		.datum(data)
+		.attr("d",line)
+		.attr("class","lineb")
+		.transition()
+		.delay(500)
+		.attr("class","line")
 });
