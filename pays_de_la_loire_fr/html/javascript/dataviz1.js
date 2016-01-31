@@ -145,6 +145,7 @@ function answerQuestions(prop_id) {
 					disappear(bad_bloc);
 					bad_bloc.style.display = "none";
 					good_bloc.style.display = "table";
+					good_bloc.style.visibility = "visible";
 					appear(good_bloc);
 					animContinue(good_arrow);
 					break;
@@ -153,6 +154,7 @@ function answerQuestions(prop_id) {
 				case "p1":
 				case "p2":
 					bad_bloc.style.display = "table";
+					bad_bloc.style.visibility = "visible";
 					appear(bad_bloc);
 					disappear(good_bloc);
 					good_bloc.style.display = "none";
@@ -168,6 +170,7 @@ function answerQuestions(prop_id) {
 					disappear(bad_bloc);
 					bad_bloc.style.display = "none";
 					good_bloc.style.display = "table";
+					good_bloc.style.visibility = "visible";
 					appear(good_bloc);
 					animContinue(good_arrow);
 					break;
@@ -176,6 +179,7 @@ function answerQuestions(prop_id) {
 				case "p1":
 				case "p3":
 					bad_bloc.style.display = "table";
+					bad_bloc.style.visibility = "visible";
 					appear(bad_bloc);
 					disappear(good_bloc);
 					good_bloc.style.display = "none";
@@ -191,6 +195,7 @@ function answerQuestions(prop_id) {
 					disappear(bad_bloc);
 					bad_bloc.style.display = "none";
 					good_bloc.style.display = "table";
+					good_bloc.style.visibility = "visible";
 					appear(good_bloc);
 					animContinue(good_arrow);
 					break;
@@ -199,6 +204,7 @@ function answerQuestions(prop_id) {
 				case "p2":				
 				case "p3":
 					bad_bloc.style.display = "table";
+					bad_bloc.style.visibility = "visible";
 					appear(bad_bloc);
 					disappear(good_bloc);
 					good_bloc.style.display = "none";
@@ -214,6 +220,7 @@ function answerQuestions(prop_id) {
 					bad_bloc.style.display = "none";
 					disappear(bad_bloc);
 					good_bloc.style.display = "table";
+					good_bloc.style.visibility = "visible";
 					appear(good_bloc);
 					animContinue(good_arrow);
 					break;
@@ -222,6 +229,7 @@ function answerQuestions(prop_id) {
 				case "p1":				
 				case "p2":
 					bad_bloc.style.display = "table";
+					bad_bloc.style.visibility = "visible";
 					appear(bad_bloc);
 					good_bloc.style.display = "none";
 					disappear(good_bloc);
