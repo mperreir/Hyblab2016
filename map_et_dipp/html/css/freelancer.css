@@ -47,9 +47,15 @@
 }
 #slide2 #row2slide2 .container
 {
-    padding-top: 50px;
     text-align: center;
 }
+@media screen and (min-width: 1500px){
+#slide2 #row2slide2 .container
+{
+    padding-top: 50px;
+}
+}
+
 @media screen and (min-width: 1500px){
     #slide2 aside
     {
@@ -87,8 +93,24 @@
     max-width: 40%;
     vertical-align: top;
     padding-top: 35px;
+    color: #4d4d4d;
 }
-
+#slide2 article h1, #slide2 article h2
+{
+    color: white;
+}
+@media screen and (min-width: 1500px){
+    #slide2 article p
+    {
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width: 1500px){
+    #slide2 article p
+    {
+        margin-top: 25px;
+    }
+}
 body {
     overflow-x: hidden;
 }
