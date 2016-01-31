@@ -120,6 +120,56 @@
 
 
 
+
+
+
+
+
+section .container {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+section .container .contenu {
+    height: 80%;
+    width: 100%;
+    margin: 0;
+}
+
+
+
+
+
+/* placer la flèche des sections en bas */
+.flecheSlide {
+    /* prendre le reste de la section */
+    height: 20%;
+    /* width: 100%; pas besoin avec boostrap */
+    margin: 0;
+    /* positioner la flèche tout en bas */
+    position: relative;
+}
+
+.flecheSlide div {
+    /* positionner la flèche tout en bas */
+    position: absolute; 
+    bottom: 0;
+}
+
+.flecheSlide div img {
+    margin-bottom: 30px;
+}
+
+
+
+/* slide 5 */
+#slide5 {
+    background-color: #90d7df;
+}
+
+
 /* slide 7 */
 #slide7 {
     background-color: white;
@@ -132,23 +182,16 @@
     margin-bottom: 50px;
 }
 
-#slide7 .container {
-    height: 100%;
-    position: relative;
-}
-
-#slide7 .container p {
+#slide7 .container .contenu p {
     color: #4c4c4c;
     font: 20px / 30px Museo;
-    margin
 }
 
-#flecheSlide7 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin-bottom: 40px;
-}
+
+
+
+
+
 
 
 /* slide 8 */
