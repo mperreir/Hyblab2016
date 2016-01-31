@@ -63,7 +63,7 @@ function rotatePoint(xToRotate, yTORotate, xCenter, yCenter, angle) {
 //récupération des données
 var dataset;
 
-$.getJSON('../json/donneesAMAPSProducteurs.js', function(data){ 
+$.getJSON('./json/donneesAMAPSProducteurs.js', function(data){ 
 	dataset = data; 
 
 
