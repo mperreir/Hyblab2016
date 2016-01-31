@@ -15,9 +15,10 @@
 @media screen and (max-width: 1500px){
     section#slide1 #slide1Fond{
         height: 100vh;
-        background: url("../img/vaguesSlide1.png") repeat-x bottom fixed, url("../img/surFondSlide1.png") repeat-x bottom fixed, url("../img/villeSlide1-petite.png") no-repeat bottom fixed;
+        background: url("../img/vaguesSlide1-petite.png") repeat-x bottom fixed, url("../img/surFondSlide1.png") repeat-x bottom fixed, url("../img/villeSlide1-petite.png") no-repeat bottom fixed;
     }   
-    }
+}
+
 #slide1Titre
 {
     margin-top: 5%;
