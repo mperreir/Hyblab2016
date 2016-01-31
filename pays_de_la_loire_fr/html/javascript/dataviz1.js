@@ -1,6 +1,7 @@
 "use strict"
 
 $(document).ready( function () {
+	$.fn.fullpage.reBuild();
 	var elementsToHide = document.getElementsByClassName("answers");
 
 	for(var i = 0; i < elementsToHide.length; i++) {
