@@ -225,21 +225,18 @@ span>ul>li>p
 {
 	bottom: 100%;
 	left: 5%;
-	transform: scale(4);
 }
 
 #nuage2
 {
 	bottom: 80%;
 	left: 30%;
-	transform: scale(2.5);
 }
 
 #nuage3
 {
 	bottom: 92%;
 	left: 75%;
-	transform: scale(2.5);
 }
 
 #tracteur_intro
@@ -248,6 +245,30 @@ span>ul>li>p
 	bottom: 30%;
 	left: 12%;
 	transform: scale(0.6);
+}
+
+#panneau_intro_1
+{
+	opacity: 1;
+	bottom: 30%;
+	left: 30.5%;
+	transform: scale(0.8);
+}
+
+#panneau_intro_2
+{
+	opacity: 1;
+	bottom: 25%;
+	left: 21.5%;
+	transform: scale(0.8);
+}
+
+#panneau_intro_3
+{
+	opacity: 1;
+	bottom: 25%;
+	left: 19.5%;
+	transform: scale(0.8);
 }
 
 #svg_dataviz3
