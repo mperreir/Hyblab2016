@@ -209,26 +209,8 @@ span>ul>li>p
 {
 	position: relative;
 	z-index: -1;
-}
-
-#fond_intro
-{
-	width: 100%;
-	height: 115%;
-	bottom: 12.5%;
-}
-
-#fond_intercalaire_questionnaire
-{
 	width: 100%;
 	height: 100%;
-}
-
-.fond_question
-{
-	width: 100%;
-	height: 100%;
-	bottom: 5%;
 }
 
 .element_fond
@@ -240,27 +222,27 @@ span>ul>li>p
 
 #nuage1
 {
-	bottom: 100%;
+	bottom: 75%;
 	left: 5%;
 }
 
 #nuage2
 {
-	bottom: 80%;
+	bottom: 62.5%;
 	left: 30%;
 }
 
 #nuage3
 {
-	bottom: 92%;
+	bottom: 70%;
 	left: 75%;
 }
 
 #tracteur_intro
 {
 	opacity: 1;
-	bottom: 30%;
-	left: 12%;
+	bottom: 15%;
+	left: 14%;
 	transform: scale(0.6);
 }
 
