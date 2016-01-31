@@ -22,9 +22,17 @@ function animIntro() {
 		.transition({
 					opacity: 1,
 					x: 200,
-					scale: 4 }, 1500, 'cubic-bezier(0,0.9,0.3,1)');
-	$(nuage2).transition({ opacity: 1 }, 700);
-	$(nuage3).transition({ opacity: 1 }, 700);
+					scale: 4 }, 1500);
+	$(nuage2)
+		.transition({
+					opacity: 1,
+					x: 100,
+					scale: 2.5 }, 1500);
+	$(nuage3)
+		.transition({
+					opacity: 1,
+					x: -200,
+					scale: 2.5 }, 1500);
 }
 
 function startQ () {
