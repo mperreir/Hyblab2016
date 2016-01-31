@@ -15,6 +15,38 @@ section#slide1 #slide1Fond{
     margin-top: 5%;
     position: absolute;
 }
+#slide2 #row1slide2
+{
+    background: url("../img/fondSlide2.png") top repeat, #82e69b;
+    height: 80%;
+}
+#slide2 #row2slide2
+{
+
+}
+#slide2 #row1slide2 .container
+{
+    padding-top: 150px;
+}
+#slide2 #row2slide2 .container
+{
+    padding-top: 50px;
+    text-align: center;
+}
+#slide2 aside
+{
+    vertical-align: top;
+    display: inline-block;
+    max-width: 50%;
+    margin-left: 10%;
+}
+#slide2 article
+{
+    display: inline-block;
+    max-width: 40%;
+    vertical-align: top;
+    padding-top: 35px;
+}
 body {
     overflow-x: hidden;
 }
@@ -182,7 +214,6 @@ header .intro-text .skills {
 }
 
 section {
-    //padding: 100px 0;
     max-height: 100vh;
     height: 100vh;
     overflow: hidden;

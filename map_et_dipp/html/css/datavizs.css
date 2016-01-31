@@ -10,23 +10,11 @@
 
 
 
-#slide2 .contenu {
-    background: url(../img/slide_2_background.png) no-repeat;
-}
-
-
-
 
 
 .trucOrange {
     color: #fdbe63;
     font: 18px / 74.681px MuseoSlab;
-}
-
-/* "tout seul" */
-.pozeod {
-    color: #fdbe63;
-    font: 18px Museo;
 }
 
 
