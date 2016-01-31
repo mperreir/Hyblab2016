@@ -17,7 +17,7 @@ section#slide1 #slide1Fond{
 }
 #slide2 #row1slide2
 {
-    background: url("../img/fondSlide2.png") top no-repeat, #82e69b;
+    background: url("../img/fondSlide2.png") top repeat, #82e69b;
     height: 80%;
 }
 #slide2 #row2slide2
