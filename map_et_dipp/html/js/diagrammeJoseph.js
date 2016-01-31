@@ -119,18 +119,16 @@ var infosJardinJoseph = {
 
 // utilisation de : http://bl.ocks.org/brattonc/5e5ce9beee483220e2f6#index.html
 
-var jauges = {};
+var jauges = {};    // utilisé pour sauvegarder les Jauge Updater
 
 var saisonActuelle = getSaisonActuelle();
 var donneesActuelles = donneesJardinJoseph[saisonActuelle];
 $("#radioJoseph_" + saisonActuelle).attr("checked", "");
 
-
 var total = [ calculerPoidsTotal(donneesActuelles) ];
 d3.select("#totalJoseph").selectAll("p").data(total).enter().append("p").text(function(d) {
     return d;
 });
-
 
 donneesActuelles.forEach(function(element, index, tableau) {
     
@@ -169,17 +167,6 @@ donneesActuelles.forEach(function(element, index, tableau) {
     // ajout de l'image dans la jauge
     // <image x="200" y="200" width="100px" height="100px" xlink:href="myimage.png"> 
     svgJauge.select("g").append("image").attr("x", 0).attr("y", 0).attr("xlink:href", infoElement.cheminImage).attr("width", 101).attr("height", 101);
-    /*
-    .text(textRounder(textStartValue) + percentText)
-        .attr("class", "liquidFillGaugeText")
-        .attr("text-anchor", "middle")
-        .attr("font-size", textPixels + "px")
-        .style("fill", config.waveTextColor)
-        */
-    
-    // ajout de l'image en html
-    //var image = baliseJauge.append("img").attr("src", infoElement.cheminImage).attr("alt", element.nomProduit);
-    
 });
 
 
