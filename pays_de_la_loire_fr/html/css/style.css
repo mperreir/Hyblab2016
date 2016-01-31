@@ -49,12 +49,24 @@ span>ul>li>p
 	text-align: center;
 }
 
+.section
+ {
+	background-color:#f7fbfc; 
+	opacity: 0.9;
+ }
+
 .titre
 {
 	font-weight: bold;
 	text-align: center;
 	bottom: 40%;
 	color: #002266;
+}
+
+.text-left
+{
+	text-align: left;
+	left: 2%;
 }
 
 .sous_titre_orange
