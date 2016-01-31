@@ -102,6 +102,52 @@ function resetSlide (idQ) {
 
 	document.getElementById(idQ+"_b").style.pointerEvents = "auto";
 
+	switch(idQ) {
+		case "q1":
+			var france = document.getElementById("france");
+			$(france).transition({
+				x: 0
+			})
+			break;
+
+		case "q2":
+			var ampoule = document.getElementById("ampoule_q2");
+			var batiment = document.getElementById("batiment_q2");
+			var euro = document.getElementById("euro_q2");
+
+			$(ampoule).transition({
+				scale: 1,
+				x: 0
+			})
+			$(batiment).transition({
+				scale: 1,
+				x: 0
+			})
+			$(euro).transition({
+				scale: 1,
+				x: 0
+			})
+			break;
+
+		case "q3":
+			var elements = document.getElementById("elements_q3");
+
+			$(elements_q3).transition({
+				scale: 1,
+				x: 0
+			})
+			break;
+
+		case "q4":
+			var elements = document.getElementById("elements_q4");
+
+			$(elements_q4).transition({
+				scale: 1,
+				x: 0
+			})
+			break;
+	}
+
 }
 
 function chooseAnswer (prop_id) {
@@ -172,6 +218,51 @@ function answerQuestions(prop_id) {
 			$(arrow).transition({ scale: 1 }, 650);
 		}
 	}
+
+	function animFrance() {
+		var france = document.getElementById("france");
+
+		$(france).transition({
+			x: -220
+		})
+	}
+
+	function animEuro() {
+		var ampoule = document.getElementById("ampoule_q2");
+		var batiment = document.getElementById("batiment_q2");
+		var euro = document.getElementById("euro_q2");
+
+		$(ampoule).transition({
+			scale: 0.6,
+			x: -440
+		})
+		$(batiment).transition({
+			scale: 0.5,
+			x: -840
+		})
+		$(euro).transition({
+			scale: 0.5,
+			x: -1140
+		})
+	}
+
+	function animElementsQ3 () {
+		var elements = document.getElementById("elements_q3");
+
+		$(elements_q3).transition({
+			scale: 0.8,
+			x: -300
+		})
+	}
+
+	function animElementsQ4 () {
+		var elements = document.getElementById("elements_q4");
+
+		$(elements_q4).transition({
+			scale: 0.8,
+			x: -350
+		})
+	}
 	
 	switch(question) {
 		case "q1":
@@ -184,6 +275,7 @@ function answerQuestions(prop_id) {
 					good_bloc.style.visibility = "visible";
 					appear(good_bloc);
 					animContinue(good_arrow);
+					animFrance();
 					break;
 
 				// Mauvaises réponses
@@ -195,6 +287,7 @@ function answerQuestions(prop_id) {
 					disappear(good_bloc);
 					good_bloc.style.display = "none";
 					animContinue(bad_arrow);
+					animFrance();
 					break;
 			}
 			break;
@@ -209,6 +302,7 @@ function answerQuestions(prop_id) {
 					good_bloc.style.visibility = "visible";
 					appear(good_bloc);
 					animContinue(good_arrow);
+					animEuro();
 					break;
 
 				// Mauvaises réponses
@@ -220,6 +314,7 @@ function answerQuestions(prop_id) {
 					disappear(good_bloc);
 					good_bloc.style.display = "none";
 					animContinue(bad_arrow);
+					animEuro();
 					break;
 			}
 			break;
@@ -234,6 +329,7 @@ function answerQuestions(prop_id) {
 					good_bloc.style.visibility = "visible";
 					appear(good_bloc);
 					animContinue(good_arrow);
+					animElementsQ3();
 					break;
 
 				// Mauvaises réponses
@@ -245,6 +341,7 @@ function answerQuestions(prop_id) {
 					disappear(good_bloc);
 					good_bloc.style.display = "none";
 					animContinue(bad_arrow);
+					animElementsQ3();
 					break;
 			}
 			break;
@@ -259,6 +356,7 @@ function answerQuestions(prop_id) {
 					good_bloc.style.visibility = "visible";
 					appear(good_bloc);
 					animContinue(good_arrow);
+					animElementsQ4();
 					break;
 
 				// Mauvaises réponses
@@ -270,6 +368,7 @@ function answerQuestions(prop_id) {
 					good_bloc.style.display = "none";
 					disappear(good_bloc);
 					animContinue(bad_arrow);
+					animElementsQ4();
 					break;
 			}
 			break;

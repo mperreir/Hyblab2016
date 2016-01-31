@@ -96,7 +96,7 @@ span>ul>li>p
 .liste_propositions
 {
 	position: absolute;
-	left: 7.5%;
+	left: -27.5%;
 	width: 60%;
 }
 
@@ -337,20 +337,11 @@ span>ul>li>p
 
 #france
 {
-	position: absolute;
-	width: 10%;
-	height: auto;
-	bottom: 12.5%;
-	left: 7.5%;
-}
-
-#pays_de_la_loire
-{
 	position: relative;
-	width: 10%;
+	width: 45%;
 	height: auto;
-	left: 38.6%;
-	bottom: 5.8%;
+	bottom: 4.5%;
+	left: 25%;
 }
 
 #ampoule_q2
