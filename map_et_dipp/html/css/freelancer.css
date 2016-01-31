@@ -15,39 +15,71 @@
 @media screen and (max-width: 1500px){
     section#slide1 #slide1Fond{
         height: 100vh;
-        background: url("../img/vaguesSlide1-petite.png") repeat-x bottom fixed, url("../img/surFondSlide1.png") repeat-x bottom fixed, url("../img/villeSlide1-petite.png") no-repeat bottom fixed;
+        background: url("../img/vaguesSlide1-petite.png") repeat-x bottom fixed, url("../img/surFondSlide1-petite.png") repeat-x bottom fixed, url("../img/villeSlide1-petite.png") no-repeat bottom fixed;
     }   
 }
 
 #slide1Titre
 {
-    margin-top: 5%;
     position: absolute;
+}
+
+@media screen and (min-width: 1500px){
+#slide1Titre
+{
+    margin-top: 12%;
+}}
+@media screen and (max-width: 1500px){
+#slide1Titre
+{
+    margin-top: 25%;
+}
 }
 #slide2 #row1slide2
 {
     background: url("../img/fondSlide2.png") top repeat, #82e69b;
     height: 80%;
 }
-#slide2 #row2slide2
-{
 
-}
 #slide2 #row1slide2 .container
 {
-    padding-top: 150px;
+    padding-top: 3%;
 }
 #slide2 #row2slide2 .container
 {
     padding-top: 50px;
     text-align: center;
 }
-#slide2 aside
-{
-    vertical-align: top;
-    display: inline-block;
-    max-width: 50%;
-    margin-left: 10%;
+@media screen and (min-width: 1500px){
+    #slide2 aside
+    {
+        vertical-align: top;
+        display: inline-block;
+        max-width: 50%;
+        margin-left: 10%;
+        background: url("../img/slide_2_chart.png");
+        width: 510px;
+        height: 510px;
+    }
+}
+@media screen and (max-width: 1500px){
+    #slide2 aside
+    {
+        vertical-align: top;
+        display: inline-block;
+        max-width: 50%;
+        margin-left: 10%;
+        margin-top: 150px;
+        background: url("../img/slide_2_chart-petite.png");
+        width: 250px;
+        height: 250px;
+    }
+}
+@media screen and (max-width: 1500px){
+    #slide2 article
+    {
+        margin-left: 50px;
+    }
 }
 #slide2 article
 {
@@ -56,6 +88,7 @@
     vertical-align: top;
     padding-top: 35px;
 }
+
 body {
     overflow-x: hidden;
 }
@@ -249,7 +282,7 @@ section.success a.active {
 
 @media(max-width:767px) {
     section {
-        padding: 75px 0;
+        //padding: 75px 0;
     }
 
     section.first {
