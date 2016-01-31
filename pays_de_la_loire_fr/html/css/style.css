@@ -203,12 +203,13 @@ span>ul>li>p
 .section_perso
 {
 	background-color: #F7FBFC;
-	opacity: 0.8;
 }
 
-#section_intro
+.image_fond
 {
-	background-image: url("../resources/images/Backgrounds/background3-01.svg");
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
 
 #svg_dataviz3
