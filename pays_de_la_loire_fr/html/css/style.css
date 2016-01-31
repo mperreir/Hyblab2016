@@ -209,7 +209,8 @@ span>ul>li>p
 {
 	position: relative;
 	width: 100%;
-	height: 100%;
+	height: 130%;
+	bottom: 20%;
 }
 
 #svg_dataviz3
