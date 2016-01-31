@@ -111,6 +111,24 @@
         margin-top: 25px;
     }
 }
+
+
+#slide6 #araigneeAMAP
+{
+    vertical-align: top;
+    display:inline-block;
+}
+#slide6 #infosAraignee
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+
+
+
+
 body {
     overflow-x: hidden;
 }

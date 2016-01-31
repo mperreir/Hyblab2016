@@ -114,10 +114,17 @@ produits.forEach(function(p)
 
 var nantesRadius = [30];
 var width = 650;
-var height = 650;
+var height = 600;
 var ratio = 1.3;
 
+var widthAside = 300;
+var heightAside = 120;
+var couleurLigneMin = "#38615a";
+var couleurLigneMoy = "#80cbc4";
+var couleurLigneMax = "#adf0c3"
+
 var svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("height",height);
+var svgAside = d3.select("#legendeAraignee").append("svg").attr("width",widthAside).attr("height",heightAside);
 
 //DESSIN du cercle représentant nantes
 svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", width/2).attr("cy",height/2).attr("r",nantesRadius).attr("fill","teal");
@@ -125,6 +132,7 @@ svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", w
 
 
 var groupes = svg.selectAll("g").data(produitsDebut).enter();
+var pictoAside = svgAside.selectAll("g").data(wahoo).enter();
 
 var echelle = svg.selectAll("g").data(villes).enter();
 var gmoscou = svg.selectAll("g").data(wahoo).enter();
@@ -139,7 +147,7 @@ var tooltip = d3.select("#araigneeAMAP").append("div").attr("class","dataTooltip
 
 
 //##### LIGNES MIN
-var lignesMin = groupes.append("line").attr("x1", function(d, i) {
+var lignesMin = groupes.append("line").attr("categorie",function(d){return d.produit;}).attr("x1", function(d, i) {
 	var x = (width/2) - nantesRadius;
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
@@ -163,14 +171,14 @@ var lignesMin = groupes.append("line").attr("x1", function(d, i) {
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
 
-}).attr("stroke-width",3).attr("stroke","#38615a").on("mouseover", function(d){
+}).attr("stroke-width",3).attr("stroke",couleurLigneMin).on("mouseover", function(d){
 	d3.select(this).attr("stroke","grey");
 	tooltip.text("Minimum : "+d.distMin.toFixed(2));
 	return tooltip.style("visibility","visible");
 }).on("mousemove",function(d){
 	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
 }).on("mouseout",function(d){
-	d3.select(this).attr("stroke","#38615a");
+	d3.select(this).attr("stroke",couleurLigneMin);
 	return tooltip.style("visibility","hidden");
 });
 	//mise à jour des lignes min
@@ -198,7 +206,7 @@ var lignesMin = groupes.append("line").attr("x1", function(d, i) {
 
 
 //##### LIGNES MOYENNES
-var lignesMoyenne = groupes.append("line").attr("class","ligneMoy").attr("x1", function(d, i) {
+var lignesMoyenne = groupes.append("line").attr("class","ligneMoy").attr("categorie",function(d){return d.produit;}).attr("x1", function(d, i) {
 	var x = (width/2) - nantesRadius-(d.distMin*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
@@ -219,17 +227,17 @@ var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("stroke-width",3).attr("stroke","#80cbc4").on("mouseover", function(d){
+}).attr("stroke-width",3).attr("stroke",couleurLigneMoy).on("mouseover", function(d){
 	d3.select(this).attr("stroke","grey");
 	tooltip.text("Moyenne : "+d.distanceMoyenne.toFixed(2));
 	return tooltip.style("visibility","visible");
 }).on("mousemove",function(d){
 	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
 }).on("mouseout",function(d){
-	d3.select(this).attr("stroke","#80cbc4");
+	d3.select(this).attr("stroke",couleurLigneMoy);
 	return tooltip.style("visibility","hidden");
 });
-	//mise à jour des lignes min
+	//mise à jour des lignes moy
 	svg.selectAll("line.ligneMoy").data(produits).transition().duration(4000).delay(150).ease("elastic").attr("x1", function(d, i) {
 		var x = (width/2) - nantesRadius-(d.distMin*ratio);
 		var y = (height/2);
@@ -253,7 +261,7 @@ var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
 	});
 
 // DESSIN DES LIGNES DES DISTANCES MAX
-var lignesMax = groupes.append("line").attr("class","ligneMax").attr("x1", function(d, i) {
+var lignesMax = groupes.append("line").attr("categorie",function(d){return d.produit;}).attr("class","ligneMax").attr("x1", function(d, i) {
 	var x = (width/2) - nantesRadius-(d.distanceMoyenne*ratio);
 	var y = (height/2);
 	var angle = i*(Math.PI*2)/produits.length;
@@ -275,14 +283,14 @@ var lignesMax = groupes.append("line").attr("class","ligneMax").attr("x1", funct
 	var angle = i*(Math.PI*2)/produits.length;
 	d.ymax = rotatePoint(x, y, (width/2), (height/2), angle).y;
 	return d.ymax;
-}).attr("stroke-width",3).attr("stroke","#adf0c3").on("mouseover", function(d){
+}).attr("stroke-width",3).attr("stroke",couleurLigneMax).on("mouseover", function(d){
 	d3.select(this).attr("stroke","grey");
 	tooltip.text("Maximum : "+d.distMax.toFixed(2));
 	return tooltip.style("visibility","visible");
 }).on("mousemove",function(d){
 	return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
 }).on("mouseout",function(d){
-	d3.select(this).attr("stroke","#adf0c3");
+	d3.select(this).attr("stroke",couleurLigneMax);
 	return tooltip.style("visibility","hidden");
 });
 
@@ -342,8 +350,15 @@ var lignesApresMax = groupes.append("line").attr("x1", function(d, i) {
 
 
 
-
-
+svgAside.append("svg:image").attr("x",25).attr("y",25).attr("width",50).attr("height",50).attr("xlink:href","./img/pictoFruits.png");
+svgAside.append("text").attr("class","nomCategorie").attr("x",25).attr("y",105).text("Fruits");
+svgAside.append("line").attr("x1", widthAside/2).attr("y1", 0).attr("x2",widthAside/2).attr("y2",120).attr("stroke-width",1).attr("stroke","orange");
+svgAside.append("text").attr("x",widthAside/2+55).attr("y",15).text("max");
+svgAside.append("text").attr("x",widthAside/2+95).attr("y",15).text("169.71").attr("class","max");
+svgAside.append("text").attr("x",widthAside/2+55).attr("y",50).text("moy");
+svgAside.append("text").attr("x",widthAside/2+95).attr("y",50).text("51.08").attr("class","moy");
+svgAside.append("text").attr("x",widthAside/2+55).attr("y",75).text("min");
+svgAside.append("text").attr("x",widthAside/2+95).attr("y",75).text("16.98").attr("class","min");
 
 //DESSIN DES PICTOS
 svg.selectAll("image").data(produits).enter()
@@ -362,6 +377,24 @@ attr("y",function(d,i){
 	return (rotatePoint(x, y, (width/2), (height/2), angle).y)-30;
 }).attr("width", 50).attr("height",50).attr("xlink:href",function(d,i){
 	return "./img/"+d.img;
+
+}).attr("categorie",function(d){return d.produit;}).attr("distMin",function(d){return d.distMin.toFixed(2);}).attr("distMoy",function(d){return d.distanceMoyenne.toFixed(2);})
+.attr("distMax",function(d){return d.distMax.toFixed(2);}).on("mouseover", function(d){
+	svgAside.selectAll("text.nomCategorie").text(d3.select(this).attr("categorie"));
+	svgAside.selectAll("text.max").text(d3.select(this).attr("distMax"));
+	svgAside.selectAll("text.moy").text(d3.select(this).attr("distMoy"));
+	svgAside.selectAll("text.min").text(d3.select(this).attr("distMin"));
+	svg.selectAll("line[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke","grey");
+
+	return svgAside.selectAll("image").attr("xlink:href",d3.select(this).attr("xlink:href"));
+}).on("mousemove",function(d){
+	//return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
+}).on("mouseout",function(d){
+	svg.selectAll("line.ligneMin[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke",couleurLigneMin);
+	svg.selectAll("line.ligneMoy[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke",couleurLigneMoy);
+	svg.selectAll("line.ligneMax[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke",couleurLigneMax);
+	//d3.select(this).attr("stroke","#adf0c3");
+	//return tooltip.style("visibility","hidden");
 });
 
 
