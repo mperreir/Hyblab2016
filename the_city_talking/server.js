@@ -94,7 +94,7 @@ var path = require('path');
 var app = express();
 
 // Minimum routing: serve static content from the html directory
-app.get('/json/:json',(req,res) => {
+app.get('/json_centre/:json',(req,res) => {
 	var result = /^(\d{2}\-\d{4})\.json$/.exec(req.params.json);
 	if (result == null){
 		res.status(404);
@@ -102,6 +102,19 @@ app.get('/json/:json',(req,res) => {
 	}else{
 		let month = result[1] ;
 		fs.readFile(path.join(__dirname,'data/Centre_all_years.csv'),'utf8',(err,data) => {
+			processData(err,data,(e) => res.json(e),false,(obj) => obj.date.format("MM-YYYY") == result[1]);
+		});
+	}
+})
+
+app.get('/json_kerbside/:json',(req,res) => {
+	var result = /^(\d{2}\-\d{4})\.json$/.exec(req.params.json);
+	if (result == null){
+		res.status(404);
+		res.send("requete invalide");
+	}else{
+		let month = result[1] ;
+		fs.readFile(path.join(__dirname,'data/HeadingleyKerbside_all_years.csv'),'utf8',(err,data) => {
 			processData(err,data,(e) => res.json(e),false,(obj) => obj.date.format("MM-YYYY") == result[1]);
 		});
 	}
