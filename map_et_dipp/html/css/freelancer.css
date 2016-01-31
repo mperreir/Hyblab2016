@@ -6,9 +6,13 @@
 {
     color: black;
 }
-section#slide1{
-    padding-top: 200px;
-    background: url("../img/vaguesSlide1.png") repeat-x bottom, url("../img/surFondSlide1.png") repeat-x bottom, url("../img/villeSlide1.png") no-repeat bottom;
+section#slide1 #slide1Fond{
+    height: 100vh;
+    background: url("../img/vaguesSlide1.png") repeat-x bottom fixed, url("../img/surFondSlide1.png") repeat-x bottom fixed, url("../img/villeSlide1.png") no-repeat bottom fixed;
+}
+#slide1Titre
+{
+    margin-top: 5%;
 }
 body {
     overflow-x: hidden;
@@ -177,8 +181,10 @@ header .intro-text .skills {
 }
 
 section {
-    padding: 100px 0;
+    //padding: 100px 0;
+    max-height: 100vh;
     height: 100vh;
+    overflow: hidden;
 }
 
 section h2 {
