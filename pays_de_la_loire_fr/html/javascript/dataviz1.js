@@ -17,7 +17,8 @@ function animIntro() {
 	var nuage1 = document.getElementById("nuage1");
 	var nuage2 = document.getElementById("nuage2");
 	var nuage3 = document.getElementById("nuage3");
-
+	var tracteur = document.getElementById("tracteur_intro");
+	
 	$(nuage1)
 		.transition({
 					opacity: 1,
@@ -33,6 +34,12 @@ function animIntro() {
 					opacity: 1,
 					x: -200,
 					scale: 2.5 }, 1500);
+
+	$(tracteur)
+		.transition({
+					opacity: 1,
+					x: -510,
+					scale: 0.6 }, 20000);
 }
 
 function startQ () {

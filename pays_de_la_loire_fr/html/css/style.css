@@ -242,6 +242,14 @@ span>ul>li>p
 	transform: scale(2.5);
 }
 
+#tracteur_intro
+{
+	opacity: 1;
+	bottom: 30%;
+	left: 12%;
+	transform: scale(0.6);
+}
+
 #svg_dataviz3
 {
 	position: absolute;
