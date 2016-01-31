@@ -15,6 +15,29 @@ section#slide1 #slide1Fond{
     margin-top: 5%;
     position: absolute;
 }
+#slide2 .row
+{
+    background: #82e69b;
+    height: 100%;
+}
+#slide2 .container
+{
+    padding-top: 150px;
+}
+#slide2 aside
+{
+    vertical-align: top;
+    display: inline-block;
+    max-width: 50%;
+    margin-left: 10%;
+}
+#slide2 article
+{
+    display: inline-block;
+    max-width: 40%;
+    vertical-align: top;
+    padding-top: 35px;
+}
 body {
     overflow-x: hidden;
 }
