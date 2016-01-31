@@ -1,7 +1,7 @@
 "use strict"
 
 $(document).ready( function () {
-	var elementsToHide = document.getElementsByClassName("hidden");
+	var elementsToHide = document.getElementsByClassName("answers");
 
 	for(var i = 0; i < elementsToHide.length; i++) {
 		document.getElementById(elementsToHide[i].id).style.display = "none";
