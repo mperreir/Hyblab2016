@@ -200,6 +200,12 @@ span>ul>li>p
 	font-weight: bold;
 }
 
+.section_perso
+{
+	background-color: #F7FBFC;
+	opacity: 0.8;
+}
+
 #svg_dataviz3
 {
 	position: absolute;

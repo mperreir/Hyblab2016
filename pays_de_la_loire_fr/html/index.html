@@ -41,7 +41,7 @@
         Slide introduction
       **********************
       -->
-      <section class="section" style="background-color:#f7fbfc; opacity: 0.8">
+      <section class="section section_perso">
           <h1 class="titre">
             LES ÉNERGIES RENOUVELABLES EN PAYS DE LA LOIRE
           </h1>
@@ -55,11 +55,11 @@
         Slide intercalaire, dataviz 1
       *********************************
       -->
-      <section class="section" style="background-color:#f7fbfc; opacity: 0.8">
+      <section class="section section_perso">
         <h2 class="titre">
           CONNAISSEZ-VOUS VOTRE RÉGION ?
         </h2>
-        <button class="bouton_demarrer">Démarrer</button>
+        <button class="bouton_demarrer" onclick="startQ()" >Démarrer</button>
       </section>
 
       <!-- 
@@ -67,7 +67,7 @@
         Questionnaire
       *****************
       -->
-      <section class="section" style="background-color:#f7fbfc; opacity: 0.9" id="sectionQ">
+      <section class="section section_perso" id="sectionQ">
 
         <!-- 
           Question 1
@@ -82,7 +82,7 @@
             <b>BONNE RÉPONSE</b><br/></br>
             Bravo ! La région compte plus de 3 600 000 habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
             </p>
-            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ()" id="q1_ag_button" />
+            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q1_ag_button" />
           </span>
 
           <span class="text-center answers bloc_reponse" id="q1_ab">
@@ -90,12 +90,9 @@
             <b>MAUVAISE RÉPONSE</b><br/><br/>
             Eh non ! La région compte plus de 3 600 000 habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
             </p>
-            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this)" id="q1_ab_button" />
+            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q1_ab_button" />
           </span>
 
-          <span class="text-center contenu slide_width">
-            <p class"text-center" style="color:red">IMAGE</p>
-          </span>
           <span class="contenu propositions">
             <ul class=" text-center liste_propositions" id="q1">
               <li onclick="chooseAnswer(this.id)" id="q1_p1"><p>2 100 000</p></li>
@@ -120,7 +117,7 @@
             <b>BONNE RÉPONSE</b><br/></br>
             Bravo ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
             </p>
-            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" />
+            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q2_ag_button" />
           </span>
 
           <span class="text-center answers bloc_reponse q2" id="q2_ab">
@@ -128,12 +125,9 @@
             <b>MAUVAISE RÉPONSE</b><br/></br>
             Eh non ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
             </p>
-            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" />
+            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q2_ab_button" />
           </span>
 
-          <span class="text-center contenu slide_width">
-            <p class="text-center" style="color:red">IMAGE</p>
-          </span>
           <span class="contenu propositions">
             <ul class="text-center liste_propositions" id="q2">
               <li onclick="chooseAnswer(this.id)" id="q2_p1"><p>3ème</p></li>
@@ -158,7 +152,7 @@
             <b>BONNE RÉPONSE</b><br/></br>
             Bravo ! En effet, la région compte 62 parcs éoliens.
             </p>
-            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" />
+            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q3_ag_button" />
           </span>
 
           <span class="text-center answers bloc_reponse q3" id="q3_ab">
@@ -167,12 +161,9 @@
             Eh non ! Il s’agissait de l’énergie éolienne. En effet, la région compte 62
 parcs éoliens.
             </p>
-            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" />
+            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q3_ab_button" />
           </span>
 
-          <span class="text-center contenu slide_width">
-            <p class="text-center" style="color:red">IMAGE</p>
-          </span>
           <span class="contenu propositions">
             <ul class="text-center liste_propositions" id="q3">
               <li onclick="chooseAnswer(this.id)" id="q3_p1"><p>Eolien</p></li>
@@ -197,7 +188,7 @@ parcs éoliens.
             <b>BONNE RÉPONSE</b><br/></br>
             Bravo ! La production d’énergie de la région était estimée à 1654GW en 2014.<br/>Cette production permet donc d’alimenter 165 400 foyers !
             </p>
-            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" />
+            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextS(this.id)" id="q4_ag_button" />
           </span>
 
           <span class="text-center answers bloc_reponse q4" id="q4_ab">
@@ -206,12 +197,9 @@ parcs éoliens.
             Eh non ! La production d’énergie de la région était estimée à 1654GW en
 2014.<br/>Cette production permet donc d’alimenter 165 400 foyers !
             </p>
-            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" />
+            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextS(this.id)" id="q4_ab_button" />
           </span>
 
-          <span class="text-center contenu slide_width">
-            <p class="text-center" style="color:red">IMAGE</p>
-          </span>
           <span class="contenu propositions">
             <ul class="text-center liste_propositions" id="q4">
               <li onclick="chooseAnswer(this.id)" id="q4_p1"><p>115 700<br/>foyers</p></li>
@@ -229,38 +217,38 @@ parcs éoliens.
         Slide dataviz 1
       *******************
       -->
-      <section class="section" style="background-color:#c53e3e; opacity: 0.8">
+      <section class="section section_perso">
         <h2 class="contenu">
           Dataviz 1
         </h2>
       </section>
 
-      <section class="section" style="background-color:#c53e3e; opacity: 0.8">
+      <section class="section section_perso">
         <h2 class="contenu">
           Dataviz 2
         </h2>
         <svg id="svg_dataviz2" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
       </section>
 
-      <section class="section">
+      <section class="section section_perso">
         <svg id="svg_i3" style="margin: 0 40% 0;overflow:visible" width="200px" height="200px">
           <!--<img id="trotteuse" style="margin: 0 47% 0;" src="../resources/images/previsions/aiguille-horloge.svg" alt="trotteuse"/>-->
         </svg>
       </section>
 
-      <section class="section">
+      <section class="section section_perso">
         <h2 class="text-left titre">
           DES ÉNERGIES RENOUVELABLES </br><span class="mot_important">PROMETTEUSES</span>
         </h2>
       </section>
 
-      <section class="section">
+      <section class="section section_perso">
         <h2 class="contenu">
           Blanc
         </h2>
       </section>
 
-      <section class="section">
+      <section class="section section_perso">
         <h2 class="contenu">
           Conclusion
         </h2>
