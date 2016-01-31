@@ -73,6 +73,7 @@ function getCategorie(req,res){
 		retour.categorie = categorie;
 		retour.dataType = getAtt(donnees[categorie].data);
 		retour.years = donnees[categorie].years;
+		retour.yearsToScreen = donnees[categorie].yearsToScreen;
 		retour.yearsComments = donnees[categorie].yearsComments;
 		retour.data = donnees[categorie].data;
 	};
@@ -88,6 +89,7 @@ function getCategorieAvailableYears(req,res){
 	else{
 		retour.categorie = categorie;
 		retour.years = donnees[categorie].years;
+		retour.yearsToScreen = donnees[categorie].yearsToScreen;
 	};
 	res.write(stringifyPerso(retour));
 	res.end();
@@ -101,6 +103,7 @@ function getCategorieYearsComments(req, res){
 	else{
 		retour.categorie = categorie;
 		retour.years = donnees[categorie].years;
+		retour.yearsToScreen = donnees[categorie].yearsToScreen;
 		retour.yearsComments = donnees[categorie].yearsComments;
 	}
 	res.write(stringifyPerso(retour));
@@ -116,6 +119,7 @@ function getCategorieType(req,res){
 		retour.categorie = categorie;
 		retour.dataType = [type];
 		retour.years = donnees[categorie].years;
+		retour.yearsToScreen = donnees[categorie].yearsToScreen;
 		retour.data = {};
 		retour.data[type] = donnees[categorie].data[type];
 	};
@@ -129,11 +133,16 @@ function getCategoriePerYear(req,res){
 	var categorie = req.params.categorie;
 	var year = req.params.year;
 	var retour = {};
+	var toScreen = (jQuery.inArray(year, donnees[categorie].yearsToScreen) != -1);
 	if(donnees[categorie].years.indexOf(year) == -1) res.write(stringifyPerso({"err":"undefined data"}));
 	else{
 		retour.categorie = categorie;
 		retour.years = [year];
 		retour.dataType = getAtt(donnees[categorie].data);
+		retour.yearsToScreen = [];
+		if(toScreen){
+			retour.yearsToScreen[0] = [year];
+		}
 		retour.yearsComments = {};
 		retour.yearsComments[year] = donnees[categorie].yearsComments[year];
 		retour.data = {};
@@ -157,6 +166,7 @@ function getCategorieAllYears(req,res){
 		retour.categorie = categorie;
 		retour.dataType = getAtt(donnees[categorie].data);
 		retour.yearsComments = donnees[categorie].yearsComments;
+		retour.yearsToScreen = donnees[categorie].yearsToScreen;
 		retour.data = {};
 		donnees[categorie].years.forEach(function(year){
 			retour.data[year] = {}
@@ -174,10 +184,15 @@ function getCategorieTypeYear(req,res){
 	var categorie = req.params.categorie;
 	var type = req.params.type;
 	var year = req.params.year;
+	var toScreen = (jQuery.inArray(year, donnees[categorie].yearsToScreen) != -1);
 	var retour = {};
 	if(!donnees[categorie].data[type][year]) retour.err = "undefined data";
 	else{
 		retour.years = [year];
+		retour.yearsToScreen = [];
+		if(toScreen){
+			retour.yearsToScreen[0] = [year];
+		}
 		retour.dataType = [type];
 		retour.type = type;
 		retour.categorie = categorie;
