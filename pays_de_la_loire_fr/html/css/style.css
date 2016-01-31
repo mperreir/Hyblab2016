@@ -207,34 +207,11 @@ span>ul>li>p
 
 .image_fond
 {
-	position: relative;
+	position: absolute;
 	z-index: -1;
-}
-
-#fond_intro
-{
-	width: 100%;
-	height: 115%;
-	bottom: 12.5%;
-}
-
-#fond_intercalaire_questionnaire
-{
 	width: 100%;
 	height: 100%;
-}
-
-#fond_intercalaire_previsions
-{
-	width: 100%;
-	height: 100%;
-}
-
-.fond_question
-{
-	width: 100%;
-	height: 100%;
-	bottom: 5%;
+	bottom: 0%;
 }
 
 .image_fond2
@@ -245,59 +222,90 @@ span>ul>li>p
 
 .element_fond
 {
-	position: relative;
+	position: absolute;
 	z-index: 1;
 	opacity: 0;
 }
 
 #nuage1
 {
-	bottom: 100%;
+	bottom: 62.5%;
 	left: 5%;
+	transform: scale(3.5);
 }
 
 #nuage2
 {
-	bottom: 80%;
-	left: 30%;
+	bottom: 50%;
+	left: 40%;
+	transform: scale(2.5);
 }
 
 #nuage3
 {
-	bottom: 92%;
-	left: 75%;
+	bottom: 59%;
+	left: 85%;
+	transform: scale(2.5);
 }
 
 #tracteur_intro
 {
 	opacity: 1;
-	bottom: 30%;
-	left: 12%;
+	bottom: 3.5%;
+	left: 32.5%;
 	transform: scale(0.6);
+}
+
+#bateau_intro
+{
+	opacity: 1;
+	bottom: 10%;
+	right: 11.5%;
 }
 
 #panneau_intro_1
 {
 	opacity: 1;
-	bottom: 30%;
-	left: 30.5%;
+	bottom: 7%;
+	left: 56%;
 	transform: scale(0.8);
 }
 
 #panneau_intro_2
 {
 	opacity: 1;
-	bottom: 25%;
-	left: 21.5%;
+	bottom: 3%;
+	left: 53%;
 	transform: scale(0.8);
 }
 
 #panneau_intro_3
 {
 	opacity: 1;
-	bottom: 25%;
-	left: 19.5%;
+	bottom: 3%;
+	left: 58%;
 	transform: scale(0.8);
+}
+
+#pale_intro_1
+{
+	opacity: 1;
+	bottom: 33%;
+	left: 57.4%;
+}
+
+#pale_intro_2
+{
+	opacity: 1;
+	bottom: 33%;
+	left: 63.9%;
+}
+
+#pale_intro_3
+{
+	opacity: 1;
+	bottom: 33%;
+	left: 70.5%;
 }
 
 #svg_dataviz3
