@@ -46,7 +46,7 @@ grandparent.append('rect')
     .attr('y', -margin.top)
     .attr('width', width)
     .attr('height', margin.top)
-    .attr('stroke', '#fff')
+    .attr('stroke', '#18BC9C')
     .attr('stroke-width', '2px');
 
 grandparent.append('text')
@@ -239,7 +239,7 @@ d3.json('json/treemap.json', function(root) {
         .attr('y', function(d) { return y(d.y); })
         .attr('width', function(d) { return x(d.x + d.dx) - x(d.x); })
         .attr('height', function(d) { return y(d.y + d.dy) - y(d.y); })
-        .attr('stroke', '#fff')
+        .attr('stroke', '#18BC9C')
         .attr('stroke-width', '1px')
         .attr('rx', 6)
         .attr('ry', 6)
