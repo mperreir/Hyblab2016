@@ -96,18 +96,8 @@ span>ul>li>p
 .liste_propositions
 {
 	position: absolute;
-	left: 17.5%;
+	left: 7.5%;
 	width: 60%;
-}
-
-.slide_width
-{
-	width: inherit;
-}
-
-.total_width
-{
-	width: 100%;
 }
 
 .bloc_reponse
@@ -138,6 +128,21 @@ span>ul>li>p
 .contenu_reponse>b
 {
 	font-size: 1.5vw;
+}
+
+#q2
+{
+	left: -28%;
+}
+
+#q3
+{
+	left: -37.5%;
+}
+
+#q4
+{
+	left: -27.5%;
 }
 
 .q2
@@ -219,6 +224,28 @@ span>ul>li>p
 	position: absolute;
 	z-index: 1;
 	opacity: 0;
+	width: 6%;
+	height: auto;
+}
+
+#fond_q1
+{
+	left: -37.5%;
+}
+
+#fond_q2
+{
+	left: -12.5%;
+}
+
+#fond_q3
+{
+	left: 12.5%;
+}
+
+#fond_q4
+{
+	left: 37.5%;
 }
 
 #nuage1
@@ -300,6 +327,65 @@ span>ul>li>p
 	opacity: 1;
 	bottom: 33%;
 	left: 70.5%;
+}
+
+#france
+{
+	position: absolute;
+	width: 10%;
+	height: auto;
+	bottom: 12.5%;
+	left: 7.5%;
+}
+
+#pays_de_la_loire
+{
+	position: relative;
+	width: 10%;
+	height: auto;
+	left: 38.6%;
+	bottom: 5.8%;
+}
+
+#ampoule_q2
+{
+	position: relative;
+	left: 17.5%;
+	width: 15%;
+	height: auto;
+}
+
+#batiment_q2
+{
+	position: relative;
+	left: 27.5%;
+	width: 15%;
+	height: auto;
+}
+
+#euro_q2
+{
+	position: relative;
+	left: 37.5%;
+	width: 15%;
+	height: auto;
+}
+
+#elements_q3
+{
+	position: relative;
+	width: 55%;
+	height: auto;
+	left: 19%;
+}
+
+#elements_q4
+{
+	position: relative;
+	width: 45%;
+	height: auto;
+	left: 28.5%;
+	bottom: 0%;
 }
 
 #svg_dataviz3
