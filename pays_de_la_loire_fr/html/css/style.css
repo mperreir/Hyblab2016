@@ -206,6 +206,11 @@ span>ul>li>p
 	opacity: 0.8;
 }
 
+#section_intro
+{
+	background-image: url("../resources/images/Backgrounds/background3-01.svg");
+}
+
 #svg_dataviz3
 {
 	position: absolute;

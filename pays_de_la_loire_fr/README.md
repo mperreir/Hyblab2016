@@ -14,8 +14,3 @@ Patricipants :
 # Installation 
 
 # Informations complémentaires
-
-
-TODO
-
-- Réinitialisation des variables à chaque fois qu'on revient sur un écran

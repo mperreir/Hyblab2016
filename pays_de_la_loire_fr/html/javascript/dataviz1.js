@@ -19,7 +19,6 @@ function startQ () {
 /* Fonction passant à la slide suivante (scroll horizontal) */
 function moveNextQ (button) {
 	$.fn.fullpage.moveSlideRight();
-	console.debug("Next : "+button);
 	var idQ = button[0]+button[1];
 	resetSlide(idQ);
 }
@@ -31,12 +30,7 @@ function moveNextS (button) {
 	resetSlide(idQ);
 }
 
-function resetSlide (idQ) {
-	/* Pour reset une slide, il faut cacher les blocs réponses
-	Mettre le background color des propositions à #E1F1F3
-	Remettre le onclick des propositions à disponible (onclick à "chooseAnswer(this.id)") */
-	console.debug("Reset : "+idQ);
-	
+function resetSlide (idQ) {	
 	// Cacher les blocs réponses
 	var bad_block = document.getElementById(idQ+"_ab");
 	var good_block = document.getElementById(idQ+"_ag");
@@ -48,9 +42,7 @@ function resetSlide (idQ) {
 	var props = document.getElementById(idQ).children;
 
 	for(var i = 0; i < props.length; i++) {
-		console.debug("Node : "+props[i].id);
 		if(props[i].nodeName == "LI") {
-			console.debug("Background et onclick");
 			document.getElementById(props[i].id).style.backgroundColor = "#E1F1F3";
 			document.getElementById(props[i].id).style.pointerEvents = "auto";
 		}
