@@ -1,0 +1,746 @@
+{
+	"name": "Métropole Nantaise",
+	"major" : "JF",
+	"children": [{
+		"name": "Bouguenais",
+		"major" : "JF",
+		"children": [{
+			"name": "Jardins Familiaux",
+			"major" : "JF",
+			"children": [{
+				"name": "Les Jardins Familiaux de la Gagnerie",
+				"major" : "JF",
+				"children" : [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins Familiaux de la Gagnerie",
+					"address": "RUE DE LA GAGNERIE BOUGUENAIS",
+					"city": "Bouguenais",
+					"type": "Jardin Familial",
+					"plot": 54
+				}]
+			}, {
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JF",
+				"name": "Les Jardins Familiaux de la Grande Ouche",
+				"address": "La Grande Ouche",
+				"city": "Bouguenais",
+				"type": "Jardin Familial",
+				"plot": 20
+			}, {
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JF",
+				"name": "Les Jardins Familiaux de Beauvoir",
+				"address": "-",
+				"city": "Bouguenais",
+				"type": "Jardin Familial",
+				"plot": 6,
+				"totalsize": 346
+			}]
+		}]
+	}, {
+		"name": "Carquefou",
+		"major" : "JI",
+		"children": [{
+			"name": "Jardins Partagés",
+			"major" : "JP",
+			"children": [{
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JP",
+				"name": "Jardins Kentelioù An Noz",
+				"address": "3 RUE HARROUYS",
+				"city": "Carquefou",
+				"type": "Jardin Partagé",
+				"plot": 1,
+				"totalsize": 67
+			}]
+		}, {
+			"name": "Jardins d'Insertion",
+			"major" : "JI",
+			"children": [{
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JI",
+				"name": "Les Jardins de Cocagne Nantais",
+				"address": "LES RUETTES",
+				"city": "Carquefou",
+				"type": "Jardin d'Insertion"
+			}]
+		}]
+	}, {
+		"name": "Rezé",
+		"major" : "JF",
+		"children": [{
+			"name": "Jardins Partagés",
+			"major" : "JP",
+			"children": [{
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JP",
+				"name": "Les Jardins du Port-au-Blé (Gare)",
+				"address": "RUE MAURICE GARAND",
+				"city": "Rezé",
+				"type": "Jardin Partagé",
+				"plot": 18
+			}]
+		}, {
+			"name": "Jardins Familiaux",
+			"major" : "JF",
+			"children": [{
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JF",
+				"name": "Les Jardins de Roiné",
+				"address": "RUE RAPHAEL LANCELOT",
+				"city": "Rezé",
+				"type": "Jardin Familial",
+				"plot": 9
+			}, {
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JF",
+				"name": "Les Jardins de Jean-Baptiste-Hamon",
+				"address": "RUE JEAN VIGNAIS",
+				"city": "Rezé",
+				"type": "Jardin Familial",
+				"plot": 9
+			}, {
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JF",
+				"name": "Les Jardins de Barbonnerie",
+				"address": "RUE RENÉ CASSIN",
+				"city": "Rezé",
+				"type": "Jardin Familial",
+				"plot": 14
+			}, {
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JF",
+				"name": "Les Jardins de Philomène Bazile",
+				"address": "IMPASSE DES BERNADERIES",
+				"city": "Rezé",
+				"type": "Jardin Familial",
+				"plot": 3
+			}, {
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JF",
+				"name": "Les Jardins du Port-au-Blé (Gymnase)",
+				"address": "RUE DU PORT AU BLÉ",
+				"city": "Rezé",
+				"type": "Jardin Familial",
+				"plot": 10
+			}, {
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JF",
+				"name": "Les Jardins de Paul-Ploquin",
+				"address": "RUE PAUL PLOQUIN",
+				"city": "Rezé",
+				"type": "Jardin Familial",
+				"plot": 4
+			}, {
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JF",
+				"name": "Les Jardins de Léard",
+				"address": "RUE DU PETIT LÉARD",
+				"city": "Rezé",
+				"type": "Jardin Familial",
+				"plot": 11
+			}, {
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JF",
+				"name": "Les Jardins de Jean-Baptiste- et-Henri-Tendron",
+				"address": "RUE JEAN-BAPTISTE ET HENRI TENDRON",
+				"city": "Rezé",
+				"type": "Jardin Familial",
+				"plot": 6
+			}, {
+				"rate": 0.5,
+				"value": 10,
+				"major" : "JF",
+				"name": "Les Jardins de Mortrait",
+				"address": "RUE DU MORTRAIT",
+				"city": "Rezé",
+				"type": "Jardin Familial",
+				"plot": 3
+			}]
+		}]
+	}, {
+		"name": "Nantes",
+		"major" : "JF",
+		"children": [{
+			"name": "Bellevue Chantenay",
+			"major" : "JP",
+			"children": [{
+				"name": "Jardins Partagés",
+				"major" : "JP",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"name": "Les Jardins du Parc des Oblates",
+					"address": "RUE DE LA BRIANDERIE",
+					"city": "Nantes",
+					"type": "Jardin Partagé",
+					"plot": 14,
+					"totalsize": 1618
+				}]
+			}, {
+				"name": "Jardins Familiaux",
+				"major" : "JF",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins Familiaux Nantais",
+					"address": "RUE DE L'ABBAYE",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 10,
+					"totalsize": 2031
+				}]
+			}, {
+				"name": "Stations Gourmandes",
+				"major" : "SG",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "SG",
+					"name": "Station le petit verger",
+					"address": "RUE DU JAMET",
+					"city": "Nantes",
+					"type": "Station Gourmande"
+				}]
+			}]
+		}, {
+			"name": "Breil Barberie",
+			"major" : "JF",
+			"children": [{
+				"name": "Jardins Familiaux",
+				"major" : "JF",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Confédération Syndicale des Familles",
+					"address": "RUE SUZANNE LENGLEN",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 1,
+					"totalsize": 68
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Jardins Familiaux Nantais",
+					"address": "BD PIERRE DE COUBERTIN",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 14,
+					"totalsize": 1743
+				}]
+			}, {
+				"name": "Stations Gourmandes",
+				"major" : "SG",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "SG",
+					"name": "Breil",
+					"address": "RUE JACQUES FEYDER",
+					"city": "Nantes",
+					"type": "Station Gourmande"
+				}]
+			}]
+		}, {
+			"name": "Centre Ville",
+			"major" : "SG",
+			"children": [{
+				"name": "Jardins Familiaux",
+				"major" : "JF",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Petits Jardins du Lait de Mai",
+					"address": "RUE EMILE PEHANT",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 1,
+					"totalsize": 183
+				}]
+			}, {
+				"name": "Jardins Partagés",
+				"major" : "JP",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JP",
+					"name": "Le Papotager",
+					"address": "RUE DE L'HÉRONNIÈRE",
+					"city": "Nantes",
+					"type": "Jardin Partagé",
+					"plot": 1,
+					"totalsize": 859
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JP",
+					"name": "Le Jardin du Lieu Unique",
+					"address": "QUAI FERDINAND-FAVRE",
+					"city": "Nantes",
+					"type": "Jardin Partagé"
+				}]
+			}, {
+				"name": "Stations Gourmandes",
+				"major" : "SG",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "SG",
+					"name": "Square Daviais",
+					"address": "RUE FELIX EBOUÉ",
+					"city": "Nantes",
+					"type": "Station Gourmande"
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "SG",
+					"name": "Cour du Château des ducs de Bretagne",
+					"address": "RUE DU CHATEAU",
+					"city": "Nantes",
+					"type": "Station Gourmande"
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "SG",
+					"name": "Duchesse Anne",
+					"address": "COURS JOHN KENNEDY",
+					"city": "Nantes",
+					"type": "Station Gourmande"
+				}]
+			}]
+		}, {
+			"name": "Dervallières Zola",
+			"major" : "JF",
+			"children": [{
+				"name": "Jardins Familiaux",
+				"major" : "JF",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Senteurs Gourmandes Jamet",
+					"address": "RUE DU JAMET",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 9,
+					"totalsize": 594
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins de la Fournilière",
+					"address": "RUE JULES PIÉDELEU",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 120,
+					"totalsize": 31605
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins Familiaux Nantais",
+					"address": "RUE DU CORPS DE GARDE",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 78,
+					"totalsize": 15965
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins Familiaux Nantais",
+					"address": "BOULEVARD DU MASSACRE",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 21,
+					"totalsize": 3218
+				}]
+			}]
+		}, {
+			"name": "Doulon Bottière",
+			"major" : "JF",
+			"children": [{
+				"name": "Jardins Familiaux",
+				"major" : "JF",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins des Collines",
+					"address": "CHEMIN DES COLLINES",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 31,
+					"totalsize": 7683
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins Familiaux Nantais",
+					"address": "CHEMIN DU BOIS DES ANSES",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 36,
+					"totalsize": 9240
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Mille et un Jardins",
+					"address": "RUE DES ÉPINETTES",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 12,
+					"totalsize": 1678
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins Familiaux Nantais",
+					"address": "PETIT CHEMIN DES CHAUPIÈRES",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 86,
+					"totalsize": 16038
+				}]
+			}, {
+				"name": "Jardins Partagés",
+				"major" : "JP",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JP",
+					"name": "Jardin du Centre Socioculturel du Perray-Haluchère",
+					"address": "1 RUE JULES GRANDJOUAN",
+					"city": "Nantes",
+					"type": "Jardin Partagé",
+					"plot": 1,
+					"totalsize": 76
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JP",
+					"name": "Le Jardin des Ronces",
+					"address": "RUE DE LA PAPOTIÈRE",
+					"city": "Nantes",
+					"type": "Jardin Partagé"
+				}]
+			}]
+		}, {
+			"name": "Ile de Nantes",
+			"major" : "JF",
+			"children": [{
+				"name": "Jardins Familiaux",
+				"major" : "JF",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Potagers Les 16 Watt",
+					"address": "RUE PETITE BIESSE",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 1,
+					"totalsize": 121
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins du Vertais",
+					"address": "RUE DE VERTAIS",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 10,
+					"totalsize": 1118
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins Familiaux de la Nizannerie",
+					"address": "RUE PAUL NIZAN",
+					"city": "Nantes",
+					"type": "Jardin Familial"
+				}]
+			}, {
+				"name": "Jardins Partagés",
+				"major" : "JP",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JP",
+					"name": "Ca Pousse En Amont",
+					"address": "COURS DE LA PRAIRIE D'AMONT",
+					"city": "NANTES",
+					"type": "Jardins Partagés",
+					"plot": 1,
+					"totalsize": 169
+				}]
+			}, {
+				"name": "Stations Gourmandes",
+				"major" : "SG",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "SG",
+					"name": "Square Vertais",
+					"address": "RUE DE VERTAIS",
+					"city": "Nantes",
+					"type": "Station Gourmande"
+				}]
+			}]
+		}, {
+			"name": "Malakoff Saint-Donastien",
+			"major" : "JF",
+			"children": [{
+				"name": "Stations Gourmandes",
+				"major" : "SG",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "SG",
+					"name": "Square Vertais",
+					"address": "RUE DE VERTAIS",
+					"city": "Nantes",
+					"type": "Station Gourmande"
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "SG",
+					"name": "Station de l'Alhalambra",
+					"address": "MAIL DE RUFISQUE",
+					"city": "Nantes",
+					"type": "Station Gourmande"
+				}]
+			}, {
+				"name": "Jardins Familiaux",
+				"major" : "JF",
+				"children": [{
+						"rate": 0.5,
+						"value": 10,
+						"major" : "JF",
+						"name": "Le Garden'Koff",
+						"address": "RUE DE HONGRIE",
+						"city": "Nantes",
+						"type": "Jardin Familial",
+						"plot": 1,
+						"totalsize": 82
+					}, {
+						"rate": 0.5,
+						"value": 10,
+						"major" : "JF",
+						"name": "Les Jardins de la Roche",
+						"address": "CHEMIN DE LA ROCHE",
+						"city": "Nantes",
+						"type": "Jardin Familial",
+						"plot": 17,
+						"totalsize": 4013
+					}, {
+						"rate": 0.5,
+						"value": 10,
+						"major" : "JF",
+						"name": "Les Jardins Familiaux Nantais",
+						"address": "RUE FRANCISCO FERRER",
+						"city": "Nantes",
+						"type": "Jardin Famimial",
+						"plot": 23,
+						"totalsize": 3830
+					}
+
+				]
+			}]
+		}, {
+			"name": "Nantes Erdre",
+			"major" : "JF",
+			"children": [{
+				"name": "Jardins Familiaux",
+				"major" : "JF",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins Familiaux Nantais",
+					"address": "RUE LEON SERPOLLET",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 12,
+					"totalsize": 714
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins Familiaux Nantais",
+					"address": "BD DES BATIGNOLLES",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 39,
+					"totalsize": 7284
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins Familiaux Nantais",
+					"address": "RUE DU PORT BOYER",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 1,
+					"totalsize": 216
+				}]
+			}, {
+				"name": "Stations Gourmandes",
+				"major" : "SG",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "SG",
+					"name": "Port Boyer",
+					"address": "RUE DU PORT BOYER",
+					"city": "Nantes",
+					"type": "Station Gourmande"
+				}]
+			}]
+		}, {
+			"name": "Nantes Nord",
+			"major" : "JF",
+			"children": [{
+				"name": "Jardins Familiaux",
+				"major" : "JF",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins de la Cressonnière",
+					"address": "RUE DES RENARDS",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 10,
+					"totalsize": 1177
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins Familiaux des Bruyères",
+					"address": "RUE DE PONT AVEN",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 30,
+					"totalsize": 13294
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Nature et Jardins Nantes Nord",
+					"address": "CHEMIN DE L'ANGLE CHAILLOU",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 58,
+					"totalsize": 14469
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins des Eglantiers",
+					"address": "ROUTE DE LA CHAPELLE SUR ERDRE",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 92,
+					"totalsize": 22967
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Jardins de l'Amande",
+					"address": "BOULEVARD RENÉ CASSIN",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 21,
+					"totalsize": 4754
+				}]
+			}, {
+				"name": "Stations Gourmandes",
+				"major" : "SG",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "SG",
+					"name": "Nantes Nord.",
+					"address": "RUE DE HAMILTON",
+					"city": "Nantes",
+					"type": "Station Gourmande"
+				}]
+			}]
+		}, {
+			"name": "Nantes Sud",
+			"major" : "JF",
+			"children": [{
+				"name": "Jardins Familiaux",
+				"major" : "JF",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Parc Potager de la Crapaudine",
+					"address": "AVENUE DES GOBELETS",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 92,
+					"totalsize": 23223
+				}, {
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JF",
+					"name": "Les Escartons",
+					"address": "RUE GABRIEL GOUDY",
+					"city": "Nantes",
+					"type": "Jardin Familial",
+					"plot": 1,
+					"totalsize": 806
+				}]
+			}, {
+				"name": "Jardins Partagés",
+				"major" : "JP",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "JP",
+					"name": "Le Jardin du Clos Toreau",
+					"address": "RUE D'HENDAYE",
+					"city": "Nantes",
+					"type": "Jardin Partagé",
+					"plot": 1,
+					"totalsize": 98
+				}]
+			}, {
+				"name": "Stations Gourmandes",
+				"major" : "SG",
+				"children": [{
+					"rate": 0.5,
+					"value": 10,
+					"major" : "SG",
+					"name": "Clos Toreau",
+					"address": "RUE DE BIARRITZ",
+					"city": "Nantes",
+					"type": "Station Gourmande"
+				}]
+			}]
+		}]
+	}]
+}

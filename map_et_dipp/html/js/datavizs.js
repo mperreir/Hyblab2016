@@ -63,7 +63,7 @@ function rotatePoint(xToRotate, yTORotate, xCenter, yCenter, angle) {
 //récupération des données
 var dataset;
 
-$.getJSON('./js/donneesAMAPSProducteurs.js', function(data){ 
+$.getJSON('../json/donneesAMAPSProducteurs.js', function(data){ 
 	dataset = data; 
 
 
@@ -125,6 +125,7 @@ svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", w
 
 
 var groupes = svg.selectAll("g").data(produitsDebut).enter();
+
 var echelle = svg.selectAll("g").data(villes).enter();
 var gmoscou = svg.selectAll("g").data(wahoo).enter();
 
@@ -312,7 +313,7 @@ var lignesMax = groupes.append("line").attr("class","ligneMax").attr("x1", funct
 //bout de ligne qui dépasse après le max
 var lignesApresMax = groupes.append("line").attr("x1", function(d, i) {
 	var x = (width/2) - nantesRadius-(d.distMax*ratio);
-	var y = (height/2);
+	var y = (height/2);i
 	var angle = i*(Math.PI*2)/produits.length;
 	return rotatePoint(x, y, (width/2), (height/2), angle).x;
 

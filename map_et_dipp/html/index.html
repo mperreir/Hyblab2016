@@ -17,6 +17,7 @@
     <!-- Custom CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
     <link href="css/datavizs.css" rel="stylesheet">
+    <link href="css/treemap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -68,38 +69,36 @@
     </nav>
 
     <section id="slide1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1 id="titreSlide1">La ville comestible</h1>
-                    <h2 id="soustitreFirstSlide">Les différents visages de l'agriculture urbaine sur le territoire nantais</h2>
-                </div>
+        
+        <div class="row">
+            <div id="slide1Titre" class="col-lg-12 text-center">
+                <h1 id="titreSlide1">La ville comestible</h1>
+                <h2 id="soustitreFirstSlide">Les différents visages de l'agriculture urbaine sur le territoire nantais</h2>
             </div>
         </div>
+
+        <div class="row" id="slide1Fond">
+        </div>
+
+
     </section>
 
     
     <section id="slide2">
-        <div class="container">
-            
-            <!-- contenu -->
-            <div class="row contenu">
-                
-                <article class="col-lg-6">
+        <div class="row">
+                <div class="container">
 
                     <h2>L’agriculture urbaine</h2>
                     <h1>Un nouvel art de vivre</h1>
+                    <article>
+                        Loin des bocages et des grands champs à labourer, l’agriculture s’implante aussi en ville.
+                        Pour cela, pas de chichis, les petits espaces conviennent parfaitement. Ronds-points, jardinets, terrasses, toits… Tout est possible ! L’occasion de se reconnecter à son assiette, de favoriser le local et de rencontrer ses voisins via des jardins collectifs, des réseaux paysans (AMAP), et des potagers individuels.
+                    </article>
 
-                    <pre>Loin des bocages et des grands champs à labourer, l’agriculture s’implante aussi en ville. 
-
-Pour cela, pas de chichis, les petits espaces conviennent parfaitement. Ronds-points, jardinets, terrasses, toits… Tout est possible ! L’occasion de se reconnecter à son assiette, de favoriser le local et de rencontrer ses voisins via des jardins collectifs, des réseaux paysans (AMAP), et des potagers individuels.</pre>
-                </article>
-                
-                <aside class="col-lg-6 text-center">
-                    <img src="img/slide_2_chart.png" alt="graphique" />
-                </aside>
-            
-            </div>
+                    <aside>
+                        <img src="img/slide_2_chart.png"/>
+                    </aside>
+                </div>
             
             <!-- flèche de tansition -->
             <div class="row text-center flecheTransition">
@@ -170,6 +169,8 @@ Pour cela, pas de chichis, les petits espaces conviennent parfaitement. Ronds-po
                 <div class="col-lg-12 text-center">
                     <h2>Slide 5 : treemap</h2>
                     <hr class="star-light">
+                <div id="treemap">
+                </div>
                 </div>
             </div>
         </div>
@@ -546,6 +547,7 @@ Pour cela, pas de chichis, les petits espaces conviennent parfaitement. Ronds-po
     <script src="js/liquidFillGauge.js"></script>
     <script src="js/datavizs.js"></script>
     <script src="js/diagrammeJoseph.js"></script>
+    <script src="js/treemap.js"></script>
     
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>

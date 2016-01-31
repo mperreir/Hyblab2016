@@ -6,9 +6,37 @@
 {
     color: black;
 }
-section#slide1{
-    padding-top: 200px;
-    background: url("../img/vaguesSlide1.png") repeat-x bottom, url("../img/surFondSlide1.png") repeat-x bottom, url("../img/villeSlide1.png") no-repeat bottom;
+section#slide1 #slide1Fond{
+    height: 100vh;
+    background: url("../img/vaguesSlide1.png") repeat-x bottom fixed, url("../img/surFondSlide1.png") repeat-x bottom fixed, url("../img/villeSlide1.png") no-repeat bottom fixed;
+}
+#slide1Titre
+{
+    margin-top: 5%;
+    position: absolute;
+}
+#slide2 .row
+{
+    background: #82e69b;
+    height: 100%;
+}
+#slide2 .container
+{
+    padding-top: 150px;
+}
+#slide2 aside
+{
+    vertical-align: top;
+    display: inline-block;
+    max-width: 50%;
+    margin-left: 10%;
+}
+#slide2 article
+{
+    display: inline-block;
+    max-width: 40%;
+    vertical-align: top;
+    padding-top: 35px;
 }
 body {
     overflow-x: hidden;
@@ -177,8 +205,10 @@ header .intro-text .skills {
 }
 
 section {
-    padding: 100px 0;
+    //padding: 100px 0;
+    max-height: 100vh;
     height: 100vh;
+    overflow: hidden;
 }
 
 section h2 {

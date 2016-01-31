@@ -1,0 +1,22 @@
+#treemap {
+  width: 960px;
+  height: 500px;
+}
+
+#treemap .grandparent:hover rect {
+  fill: darkgrey;
+}
+
+#treemap .children rect.parent,
+.grandparent rect {
+  cursor: pointer;
+}
+
+#treemap .children:hover rect.child {
+  opacity: 1;
+  stroke-width: 1px;
+}
+
+#treemap .children:hover rect.parent {
+  opacity: 0;
+}
