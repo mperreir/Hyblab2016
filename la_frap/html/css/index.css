@@ -164,13 +164,22 @@ p{
 	float:left;
 }
 
-div.tooltip{
+#tooltip{
+	left:50%;
+	top:70%;
 	visibility: hidden;
 	position:absolute;
-	width:150px;
-	height:200px;
-	background-color: white;
-	border:solid;
+	width:400px;	
+}
+
+#tooltip p{
+	font-size: 14px;
+	color:#ffffff;
+}
+
+#tooltip h1{
+	font-size: 20px;
+	color:#ff2800;
 }
 
 p.titre{
