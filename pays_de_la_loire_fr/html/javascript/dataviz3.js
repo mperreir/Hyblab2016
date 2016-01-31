@@ -3,7 +3,7 @@
 $(document).ready(function() {
       
 	var trotteuse = document.getElementById("trotteuse");
-	var eolienne1_i3 = document.getElementById("eolienne1_i3");
+	
 
 	$(trotteuse).css({ transformOrigin: '74.3% 10%' });
 	animTrotteuse(1);
@@ -23,22 +23,39 @@ $(document).ready(function() {
 
 	}
 
+	var eolienne1_i3 = document.getElementById("eolienne1_i3");
+	var eolienne2_i3 = document.getElementById("eolienne2_i3");
 
-	animEoliennesI3();
-	function animEoliennesI3() {
+	animEoliennesI3_1();
+	function animEoliennesI3_1() {
 		$(eolienne1_i3)
 		.transition({
 					opacity: 1,
-					rotate: '2610deg'
-					}, 5000, 'easeInOutCubic',
+					rotate: 360*rand(1,6)+'deg'
+					}, 7000, 'linear',
 					function(){
 						$(eolienne1_i3).css({ rotate: '0deg'});
-						animEoliennesI3();
+						animEoliennesI3_1();
 					});
-
 	}
 
+	animEoliennesI3_2();
+	function animEoliennesI3_2() {
+		$(eolienne2_i3)
+		.transition({
+					opacity: 1,
+					rotate: 360*rand(1,4)+'deg'
+					}, 5000, 'linear',
+					function(){
+						$(eolienne2_i3).css({ rotate: '0deg'});
+						animEoliennesI3_2();
+					});
+	}
 
 	
-	
+
+	function rand(min,max){
+		return(Math.round((Math.random()*(max-min))+min));
+	}
+
 });
