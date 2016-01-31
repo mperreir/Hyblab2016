@@ -116,7 +116,7 @@ window.addEventListener('load',function () {
 				console.log(pie.total);
 				
 				if(!info.expanded) {
-					pieData.text(info.data.value);
+					pieData.text((100*info.data.value/pie.totalSize).toFixed(2) +'%');
 				} else {
 					pieData.text("");
 				}

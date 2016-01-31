@@ -239,4 +239,16 @@ svg {
 
 .texteheader{
 	display: inline-block;
+	padding-left: 10px;
+}
+
+.texteintro{
+	display: inline-block;
+	position: absolute;
+	width:70%;
+	background-color: #003f4e;
+	font-size: 18px;
+	right:10%;
+	top:200px;
+
 }
