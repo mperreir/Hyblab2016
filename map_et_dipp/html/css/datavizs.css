@@ -135,7 +135,17 @@
     font: 20px / 30px Museo;
 }
 
+#slide7 .container {
+    height: 100%;
+    position: relative;
+}
 
+#flecheSlide7 {
+    height: 10%;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 50px;
+}
 
 
 /* slide 8 */
