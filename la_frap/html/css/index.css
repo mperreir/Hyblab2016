@@ -208,8 +208,8 @@ div#pieChart{
 	clear: left;
 }
 
-text {
- fill:#3bbd31;
+g.provenance text{
+	fill:#3bbd31;
 }
 
 svg {
@@ -250,5 +250,20 @@ svg {
 	font-size: 18px;
 	right:10%;
 	top:200px;
+
+}
+
+
+.bouton{
+	color: #179FAE;
+	background-color: #031d2a;
+  	border-color: #179FAE;
+
+ }
+
+.bouton:hover{
+	color: #031d2a;
+	background-color: #179FAE;
+	border-color: #031d2a;
 
 }

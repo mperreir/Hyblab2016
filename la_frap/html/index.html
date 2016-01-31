@@ -38,9 +38,9 @@
 			<div class="section " id="section0">
 				<div class="heading">
 					<h1>LES RADIOS LOCALES</h1>
-					<p>Radios associatives</p>
+					<p>L'impact des radios associatives sur la région Pays de la Loire</p>
 					<form>
-						<input type="button" name="section 2" value="Vers la section 2" onclick="self.location.href='index.html#secondPage'">
+						<input type="button" class="bouton" name="boutoncarte" value="Voir la carte" onclick="self.location.href='index.html#firstPage'">
 					</form>
 				</div>
 			</div>
@@ -82,6 +82,9 @@
 							<p>
 								Pour se développer, elles comptent sur les politiques territoriales et la diversification de leurs ressources. Fédérée depuis dix ans, sont-elles plus soutenues des collectivités territoriales ? On-t-elle réussi à renforcer leurs équipes, facteur indispensable du bon développement de l’antenne et de nouvelles activités ?
 							</p>
+							<form>
+								<input type="button" class="bouton" name="boutonevolution" value="Evolution" onclick="self.location.href='index.html#thirdPage'">
+							</form>
 
 
 						</div>
@@ -104,7 +107,6 @@
 										<rect x="20.407" y="18.329" fill="none" stroke="#179FAE" stroke-width="1.2375" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="7.425" height="16.867"/>
 										<line fill="none" stroke="#179FAE" stroke-width="1.2375" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="9.658" y1="26.391" x2="16.771" y2="26.391"/>
 									</g>
-									
 								</svg>
 							</div>
 						<div class="texteheader">
@@ -114,6 +116,7 @@
 					</div>
 					<div class="leftPart">
 						<p id="map" style="width:419.037px;height:407.543px"></p>
+						<div id="tooltip"></div>
 					</div>
 					<div class="rightPart">
 						<p id="infodpt"></p>
