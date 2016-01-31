@@ -135,7 +135,6 @@
 #slide7 .container {
     height: 100%;
     position: relative;
-    /width: 50%;
 }
 
 #slide7 .container p {
@@ -145,10 +144,10 @@
 }
 
 #flecheSlide7 {
-    height: 10%;
+    position: absolute;
     bottom: 0;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 
