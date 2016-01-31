@@ -128,14 +128,27 @@
 #titreSlide7 {
     color: #82e69b;
     font: 50px Museo;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#slide7 .container {
+    height: 100%;
+    position: relative;
 }
 
 #slide7 .container p {
     color: #4c4c4c;
     font: 20px / 30px Museo;
+    margin
 }
 
-
+#flecheSlide7 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 40px;
+}
 
 
 /* slide 8 */
