@@ -1,15 +1,31 @@
 "use strict"
 
 $(document).ready( function () {
-	var answers = document.getElementsByClassName("answers");
+	var elementsToHide = document.getElementsByClassName("hidden");
 
-	for(var i = 0; i < answers.length; i++) {
-		document.getElementById(answers[i].id).style.display = "none";
-		document.getElementById(answers[i].id).style.display = "none";
+	for(var i = 0; i < elementsToHide.length; i++) {
+		document.getElementById(elementsToHide[i].id).style.display = "none";
 	}
+
+	// Animation de la slide d'intro
+	animIntro();
 
 	//document.getElementById("sectionQ").style.display = "none";
 })
+
+function animIntro() {
+	var nuage1 = document.getElementById("nuage1");
+	var nuage2 = document.getElementById("nuage2");
+	var nuage3 = document.getElementById("nuage3");
+
+	$(nuage1)
+		.transition({
+					opacity: 1,
+					x: 200,
+					scale: 4 }, 1500, 'cubic-bezier(0,0.9,0.3,1)');
+	$(nuage2).transition({ opacity: 1 }, 700);
+	$(nuage3).transition({ opacity: 1 }, 700);
+}
 
 function startQ () {
 	//document.getElementById("sectionQ").style.display = "block";

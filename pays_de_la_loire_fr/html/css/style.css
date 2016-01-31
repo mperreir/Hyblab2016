@@ -209,8 +209,37 @@ span>ul>li>p
 {
 	position: relative;
 	width: 100%;
-	height: 130%;
-	bottom: 20%;
+	height: 115%;
+	bottom: 12.5%;
+	z-index: -1;
+}
+
+.element_fond
+{
+	position: relative;
+	z-index: 1;
+	opacity: 0;
+}
+
+#nuage1
+{
+	bottom: 100%;
+	left: 5%;
+	transform: scale(4);
+}
+
+#nuage2
+{
+	bottom: 80%;
+	left: 40%;
+	transform: scale(2.5);
+}
+
+#nuage3
+{
+	bottom: 92%;
+	left: 60%;
+	transform: scale(2.5);
 }
 
 #svg_dataviz3
