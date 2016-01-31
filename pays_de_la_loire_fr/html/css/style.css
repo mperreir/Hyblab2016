@@ -219,6 +219,12 @@ span>ul>li>p
 	bottom: 0%;
 }
 
+.image_fond2
+{
+	width: 100%;
+	height: 100%;
+}
+
 .element_fond
 {
 	position: absolute;
@@ -405,4 +411,25 @@ span>ul>li>p
 #svg_dataviz2 {
     display: block;
     margin: auto;
+}
+
+
+/* Intercalaire Dataviz 3 */
+
+#trotteuse
+{
+	position: absolute;
+	width: 10%;
+	height: 20%;
+	top : 62%;
+	left: 42.8%;
+}
+
+#eolienne1_i3
+{
+	position: absolute;
+	width: 10%;
+	height: 13%;
+	top : 31%;
+	left: 39.8%;
 }
