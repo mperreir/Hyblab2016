@@ -10,7 +10,6 @@ opacity = .2,
 posMax = .7,
 colText = "hsl(300,100%,50%)";
 
-var data = fields();
 
 var color = d3.scale.linear()
 .range(["hsl(0,0%,100%)", "hsl(195,100%,50%)"])
@@ -39,8 +38,9 @@ var svg = d3.select("#svg_dataviz2")//.append("svg")
 .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 var field = svg.selectAll("g")
-.data(data)
+.data(fields())
 .enter().append("g");
+
 
 //arc data
 field.append("path")
@@ -99,8 +99,7 @@ field.append("svg:image")
 .attr("xlink:href","../resources/images/test.png")
 .on("click", function(d) {
     console.log("click");
-    toE(0);
-    //tick();
+    toE();
     } );
 
 tick();
@@ -108,21 +107,19 @@ tick();
 //d3.select(self.frameElement).style("height", height + "px");
 
 
-function toE(i) {
-	console.log(field.data());
-    if (i<5){
-        console.log("toE");
-		data[i].previousValue = data[i].value;
-        data[i].value = data[i].value + 0.1;
-		field.data(data);
-        //field.data()[2].value = 0.8;
-        if (!document.hidden) field
-            .transition()
-            .duration(500)
-            .each(fieldTransition)
-            .each("end", /*toE(i+1)*/console.log("a"));
-		toE(i+1);
+function toE() {
+	console.log("toE");
+	//calcule de la nouvelle valeur
+	for (var i = 0; i < 5; i++) {
+		field.data()[i].previousValue = field.data()[i].value;
+		field.data()[i].value = field.data()[i].value + 0.2;
     }
+	//transition
+    if (!document.hidden) field
+		.transition()
+		.duration(500)
+		.delay(function(d,i) { return (4-i)*500; })
+        .each(fieldTransition)
 }
 
 function toP() {
