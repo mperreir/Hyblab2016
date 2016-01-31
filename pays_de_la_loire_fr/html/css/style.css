@@ -208,18 +208,39 @@ span>ul>li>p
 .image_fond
 {
 	position: relative;
+	z-index: -1;
+}
+
+#fond_intro
+{
 	width: 100%;
 	height: 115%;
 	bottom: 12.5%;
-	z-index: -1;
+}
+
+#fond_intercalaire_questionnaire
+{
+	width: 100%;
+	height: 100%;
+}
+
+#fond_intercalaire_previsions
+{
+	width: 100%;
+	height: 100%;
+}
+
+.fond_question
+{
+	width: 100%;
+	height: 100%;
+	bottom: 5%;
 }
 
 .image_fond2
 {
-	position: relative;
+	width: 100%;
 	height: 100%;
-	left:10%;
-	z-index: -1;
 }
 
 .element_fond
@@ -233,21 +254,18 @@ span>ul>li>p
 {
 	bottom: 100%;
 	left: 5%;
-	transform: scale(4);
 }
 
 #nuage2
 {
 	bottom: 80%;
 	left: 30%;
-	transform: scale(2.5);
 }
 
 #nuage3
 {
 	bottom: 92%;
 	left: 75%;
-	transform: scale(2.5);
 }
 
 #tracteur_intro
@@ -256,6 +274,30 @@ span>ul>li>p
 	bottom: 30%;
 	left: 12%;
 	transform: scale(0.6);
+}
+
+#panneau_intro_1
+{
+	opacity: 1;
+	bottom: 30%;
+	left: 30.5%;
+	transform: scale(0.8);
+}
+
+#panneau_intro_2
+{
+	opacity: 1;
+	bottom: 25%;
+	left: 21.5%;
+	transform: scale(0.8);
+}
+
+#panneau_intro_3
+{
+	opacity: 1;
+	bottom: 25%;
+	left: 19.5%;
+	transform: scale(0.8);
 }
 
 #svg_dataviz3
@@ -275,4 +317,25 @@ span>ul>li>p
 #svg_dataviz2 {
     display: block;
     margin: auto;
+}
+
+
+/* Intercalaire Dataviz 3 */
+
+#trotteuse
+{
+	position: absolute;
+	width: 10%;
+	height: 20%;
+	top : 62%;
+	left: 42.8%;
+}
+
+#eolienne1_i3
+{
+	position: absolute;
+	width: 10%;
+	height: 13%;
+	top : 31%;
+	left: 39.8%;
 }

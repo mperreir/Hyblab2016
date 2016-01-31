@@ -2,25 +2,43 @@
 
 $(document).ready(function() {
       
-	var s = Snap.select('#svg_i3');
-	var g = s.group();
-	/*var trotteuse = s.select("#trotteuse");*/
-	g.image("svg/aiguille-horloge.svg",0,0,200,200, function(loadedFragment) {
-                                                g.append(loadedFragment);
-                                                /*g.hover(hoverover, hoverout);*/
-                                        });
+	var trotteuse = document.getElementById("trotteuse");
+	var eolienne1_i3 = document.getElementById("eolienne1_i3");
 
-	animTrotteuse(6);
-	function animTrotteuse(time){
+	$(trotteuse).css({ transformOrigin: '74.3% 10%' });
+	animTrotteuse(1);
+
+	function animTrotteuse(time) {
 		var rot = time * 6;
-		g.stop().animate({ transform: 'r'+rot+', 160, 25'},
-		1000,mina.bounce,
-		function(){
-			var rot = time * 6;
-			g.attr({ transform: 'rotate('+rot+' 160 25)'});
-			animTrotteuse(++time);
-		});
+		$(trotteuse)
+		.transition({
+					opacity: 1,
+					rotate: rot+'deg'
+					}, 1000, 'cubic-bezier(0.64,0.57,0.67,1.53)',
+					function(){
+						var rot = time * 6;
+						$(trotteuse).css({ rotate: rot+'deg'});
+						animTrotteuse(++time);
+					});
+
 	}
 
+
+	animEoliennesI3();
+	function animEoliennesI3() {
+		$(eolienne1_i3)
+		.transition({
+					opacity: 1,
+					rotate: '2610deg'
+					}, 5000, 'easeInOutCubic',
+					function(){
+						$(eolienne1_i3).css({ rotate: '0deg'});
+						animEoliennesI3();
+					});
+
+	}
+
+
+	
 	
 });

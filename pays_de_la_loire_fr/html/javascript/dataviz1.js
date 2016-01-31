@@ -19,28 +19,35 @@ function animIntro() {
 	var nuage2 = document.getElementById("nuage2");
 	var nuage3 = document.getElementById("nuage3");
 	var tracteur = document.getElementById("tracteur_intro");
+	var panneau1 = document.getElementById("panneau_intro_1");
+	var panneau2 = document.getElementById("panneau_intro_2");
+	var panneau3 = document.getElementById("panneau_intro_3");
 	
 	$(nuage1)
 		.transition({
 					opacity: 1,
 					x: '+=200%',
-					scale: 4 }, 1500);
+					scale: '+=3%',
+					delay: 500 }, 1000);
 	$(nuage2)
 		.transition({
 					opacity: 1,
 					x: '+=100%',
-					scale: 2.5 }, 1500);
+					scale: '+=1.5%',
+					delay: 500 }, 1000);
 	$(nuage3)
 		.transition({
 					opacity: 1,
 					x: '-=200%',
-					scale: 2.5 }, 1500);
+					scale: '+=1.5%',
+					delay: 500 }, 1000);
 
 	$(tracteur)
 		.transition({
 					opacity: 1,
 					x: '-=510%',
-					scale: 0.6 }, 20000);
+					scale: 0.6,
+					delay: 1000 }, 10000, 'linear');
 }
 
 function startQ () {
