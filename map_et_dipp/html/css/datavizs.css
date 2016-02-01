@@ -44,23 +44,16 @@
 
 #diagrammeJoseph {
     margin-top: 15px;
+    margin-bottom: 0;
     padding: 0;
+    height: 150px;
 }
 
-.baliseJauge svg {
-    border: 2px solid green;
-    background-color: yellow;
-    padding: 0;
-    height: auto;
-}
 
 .baliseJauge {
     display: inline-block;
     margin-left: 30px;
     margin-right: 30px;
-    margin-bottom: 0;
-    height: 160px;
-    width: 100px;    
 }
 
 .radioJoseph {  

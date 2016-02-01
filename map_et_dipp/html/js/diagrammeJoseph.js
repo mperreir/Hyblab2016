@@ -136,7 +136,7 @@ donneesActuelles.forEach(function(element, index, tableau) {
     var idJauge = infoElement.idJauge;
     
     var baliseJauge = d3.select("#diagrammeJoseph").append("div").attr("class", "baliseJauge"); 
-    var svgJauge = baliseJauge.append("svg").attr("id", idJauge).attr("width", 100).attr("height", 200);
+    var svgJauge = baliseJauge.append("svg").attr("id", idJauge).attr("width", 100).attr("height", 150);
     // <svg id="fillgauge6" width="19%" height="300" onclick="gauge6.update(NewValue());"></svg>
     
     var config = liquidFillGaugeDefaultSettings();
@@ -163,6 +163,9 @@ donneesActuelles.forEach(function(element, index, tableau) {
     
     // ajout du "kg" au dessus de la jauge
     svgJauge.select("g").append("text").attr("x", 50).attr("y", -6).attr("class", "liquidFillGaugeText").attr("text-anchor", "middle").style("fill", "#fdbe63").text("kg");   
+    
+    // remettre le groupe à la position (0, 0) (nécessaire car le texte de la jauge sortait de la zone)
+    svgJauge.select("g").attr("transform", "translate(0, 50)");
     
     // ajout de l'image dans la jauge
     // <image x="200" y="200" width="100px" height="100px" xlink:href="myimage.png"> 
