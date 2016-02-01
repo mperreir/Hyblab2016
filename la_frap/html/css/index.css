@@ -290,14 +290,19 @@ svg {
 }
 
 .texteintro{
+	padding: 5px;
 	display: inline-block;
+	text-align: justify;
 	position: absolute;
 	width:70%;
 	background-color: #003f4e;
 	font-size: 18px;
 	right:10%;
 	top:200px;
+}
 
+.texteintro p{
+	padding: 10px;
 }
 
 
