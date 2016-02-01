@@ -1,3 +1,10 @@
-g {
+.dot_pollution{
 	fill:steelblue;
+	stroke:#000;
+	stroke-width:1px;
+	cursor:pointer;
+	&:hover{
+		stroke-width:3px;
+	}
+
 }

@@ -8,35 +8,29 @@ var chart = d3.select(".chart")
 	.attr("width",width)
 	.attr("height",height);
 
-var formatDate = d3.time.format("%d-%m-%Y");
+let padding_y = 20 ;
+let scale_y = d3.scale.linear().range([height-padding_y,padding_y]);
+let scale_x = d3.scale.ordinal().rangePoints([0, width],0.5);
 
-function type(d) {
-  d.date = formatDate.parse(d.date);
-  d.no2 = +d.no2;
-  return d;
+let months = ['01-2014','02-2014','03-2014','04-2014','05-2014','06-2014','07-2014','08-2014','09-2014','10-2014','11-2014','12-2014']
+let current_month = 0 ;
+function loopMonth(){
+	d3.json("json_centre/"+months[current_month]+".json",(err,data) => {
+		scale_x = scale_x.domain(data.map((dataOneHour) => dataOneHour.Hour)) ;
+		scale_y = scale_y.domain(d3.extent(data.map((dataOneHour) => dataOneHour.NO2)));
+		var circles = chart.selectAll("circle").data(data);
+		circles.enter().append("circle")
+			.attr("cy", (d,i) => { return scale_y(d.NO2) })
+			.attr("cx", (d,i) => { return scale_x(d.Hour) })
+			.attr("r", 10)
+			.classed("dot_pollution",true)
+
+		circles
+			.attr("cy", (d,i) => { return scale_y(d.NO2) })
+			.attr("cx", (d,i) => { return scale_x(d.Hour) })
+		current_month = (current_month + 1) % months.length ;
+		setTimeout(loopMonth,2000);
+	});
 }
 
-var x = d3.time.scale()
-	.range([0,width]);
-
-var y = d3.scale.linear()
-	.range([height,0]);
-
-var line = d3.svg.line()
-    .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.no2); });
-
-d3.csv("per_day_test.csv",type,function(error,data){
-	if (error) throw error;
-
-	x.domain(d3.extent(data, function(d) { return d.date; }));
-	y.domain(d3.extent(data, function(d) { return d.no2; }));
-
-	chart.append("path")
-		.datum(data)
-		.attr("d",line)
-		.attr("class","lineb")
-		.transition()
-		.delay(500)
-		.attr("class","line")
-});
+loopMonth();
