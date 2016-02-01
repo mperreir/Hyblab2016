@@ -1,6 +1,6 @@
 "use strict";
 
-/*EXEMPLE JQUERY REQUETE HTTP*/
+
 $(document).ready(function(){
 	var requete = $.ajax({
 		url : "http://127.0.0.1:8080/ouest_france/data/menage/years",
@@ -65,8 +65,6 @@ function generateChart(res, statut){
 			}
 		}
 
-		console.log(data.labels);
-
 		var chart = new Chartist.Line('.ct-chart', data, options);
 		var seq = 0;
 		var delays = 80;
@@ -94,27 +92,63 @@ function generateChart(res, statut){
 								'[y="'+param.y+'"]'+
 								'[width="'+param.width+'"]'+
 								'[height="'+param.height+'"]';
-					$(chaine+" span").mouseenter(function(node){
+
+
+					var label = $(chaine+" span");
+					var labelParent = $(chaine);			
+					var labelParentOriginPos = labelParent.position();
+					
+					//var pointOriginWidth = 
+					label.mouseenter(function(node){
+						//Grossissement et changement de couleur du point
+						var point = label.parent().parent().parent().find('.ct-point[year="'+param.text+'"]');
+						point.stop().animate({
+							"stroke-color" : "rgb(0,0,125)",
+							"stroke-width" : 50,
+							opacity : 0
+						}, 300);
+
+						//Grossissement du label
 						$(this).stop().animate({ 
 							fontSize: "2em"
 		  				}, 300 );
-		  				var position = $(this).parent().position();
+
+		  				//Décalage à gauche au fur et à mesure du grossissement du label
 		  				$(this).parent().stop().animate({ 
-							x : position.left-18
+							x : labelParentOriginPos.left-18,
+							y : labelParentOriginPos.top-10
 		  				}, 300 );
 					});
-					$(chaine+" span").mouseleave(function(node){
+					label.mouseleave(function(node){
+						//Retrecissement du point et retour à la vouleur d'origine
+						var point = label.parent().parent().parent().find('.ct-point[year="'+param.text+'"]');
+						point.stop().animate({
+							stroke : "rgb(255,0,0)",
+							"stroke-width" : 10,
+							opacity : 1
+						}, 300);
+
+						//Retrecissement du label
 						$(this).stop().animate({ 
 							fontSize: "0.75em"
 		  				}, 300 );
-		  				var position = $(this).parent().position();
+
+		  				//Retrecissement du label et retour à la position d'origine
 		  				$(this).parent().stop().animate({ 
-							x : position.left+18
+							x : labelParentOriginPos.left,
+							y : labelParentOriginPos.top
 		  				}, 300 );
 					});
 
 				};
 			}else if(param.type === 'point'){
+				
+				var annee = param.axisX.ticks[param.index];
+
+				var chaine = 'line[class="ct-point"]'+
+								'[x1="'+param.x+'"]'+
+								'[y1="'+param.y+'"]';
+				$(chaine).attr("year", annee);
 				param.element.animate({
 				      x1: {
 				        begin: seq * delays,
