@@ -111,6 +111,11 @@ iframe {
   font-family: SantEliaScriptBoldDEMO;
   font-size: 14px;
   border-right: 2px solid #FACF43;
+  padding: 0;
+}
+
+#submenu li a:hover{
+  background-color: #EFBC30;
 }
 
 #submenu li a {
@@ -130,6 +135,10 @@ iframe {
   color: white;
 }
 
+.mp_sondage {
+  color: white;
+}
+
 .mp_header {
   font-family: DINPro-Bold;
   font-size : 5em;
@@ -145,6 +154,18 @@ iframe {
 .mp_content img {
   padding-top: 5%;
   width: 100%;
+}
+
+.img-header-sondage {
+  position: absolute;
+  z-index: -1;
+}
+
+#brestmem {
+  display: block;
+  width: 50%;
+  height: 50%;
+  margin: auto;
 }
 
 /*Right panel*/
