@@ -34,7 +34,7 @@ function makeAnAverageDay(multipleDays){
 	}
 	multipleDays.forEach( (dataOneHour) => {
 		dataOneHour.hours.forEach((particlesOneHour,hour) => {
-			for (particle in particlesOneHour){
+			for (let particle in particlesOneHour){
 				if (!isNaN(particlesOneHour[particle])){
 					array_data_oneDay[hour][particle] += particlesOneHour[particle];
 					countParticles[hour][particle] += 1 ;
@@ -102,7 +102,7 @@ app.get('/json_centre/:json',(req,res) => {
 	}else{
 		let month = result[1] ;
 		fs.readFile(path.join(__dirname,'data/Centre_all_years.csv'),'utf8',(err,data) => {
-			processData(err,data,(e) => res.json(e),false,(obj) => obj.date.format("MM-YYYY") == result[1]);
+			processData(err,data,(e) => res.json(e),true,(obj) => obj.date.format("MM-YYYY") == result[1]);
 		});
 	}
 })
@@ -115,10 +115,11 @@ app.get('/json_kerbside/:json',(req,res) => {
 	}else{
 		let month = result[1] ;
 		fs.readFile(path.join(__dirname,'data/HeadingleyKerbside_all_years.csv'),'utf8',(err,data) => {
-			processData(err,data,(e) => res.json(e),false,(obj) => obj.date.format("MM-YYYY") == result[1]);
+			processData(err,data,(e) => res.json(e),true,(obj) => obj.date.format("MM-YYYY") == result[1]);
 		});
 	}
 })
+
 
 app.use(express.static(path.join(__dirname, 'html')));
 
