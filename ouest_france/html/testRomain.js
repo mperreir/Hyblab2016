@@ -23,24 +23,28 @@ function generateChart(res, statut){
 		var options = {
 			axisY : {
 				showLabel: false,
-  				showGrid : false,
+  				showGrid : false
 			},
 			axisX : {
   				showGrid : false,
+  				labelOffset : {
+  					x:-13,
+  					y:0
+  				}
 			}, 
+			showArea : true,
 			lineSmooth: Chartist.Interpolation.cardinal({
-    			fillHoles: true,
+    			fillHoles: true
   			}),
 
-  			width : '100%',
-  			height : '25%',
-			
-			/*chartPadding: {
-    			top: 0,
-    			right: 0,
-    			bottom: 0,
+  			width : '75%',
+  			height : '12.5%',
+  			chartPadding: {
+    			top: 5,
+    			right: 30,
+    			bottom: 5,
     			left: 0
-  				},*/
+  			},
 		};
 		for(var i=0; i<donnees.years.length; i++){
 			if(i==0){
@@ -91,13 +95,21 @@ function generateChart(res, statut){
 								'[width="'+param.width+'"]'+
 								'[height="'+param.height+'"]';
 					$(chaine+" span").mouseenter(function(node){
-						$(this).animate({ 
+						$(this).stop().animate({ 
 							fontSize: "2em"
+		  				}, 300 );
+		  				var position = $(this).parent().position();
+		  				$(this).parent().stop().animate({ 
+							x : position.left-18
 		  				}, 300 );
 					});
 					$(chaine+" span").mouseleave(function(node){
-						$(this).animate({ 
+						$(this).stop().animate({ 
 							fontSize: "0.75em"
+		  				}, 300 );
+		  				var position = $(this).parent().position();
+		  				$(this).parent().stop().animate({ 
+							x : position.left+18
 		  				}, 300 );
 					});
 
