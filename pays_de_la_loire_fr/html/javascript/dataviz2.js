@@ -98,6 +98,10 @@ var bouton_solaire = d3.select("#data2_solaire")
 bouton_solaire
 .on("click", function(d) {
     console.log("bouton_solaire");
+    //on change le saviez_vous
+    $(document.getElementById("saviez_vous_eolienne")).hide();
+    $(document.getElementById("saviez_vous_biomasse")).hide();
+    $(document.getElementById("saviez_vous_solaire")).show();
     //rotation de la pale
     var img = document.getElementById("data2_pale");
     if (pos!=1) {
@@ -109,21 +113,24 @@ bouton_solaire
                     rotate: deg+'deg'
                     }, 500, 'linear',
                     function(){
-                    //$(img).css({ rotate: deg%360+'deg'})
+                    //$(img).css({ rotate: '-120deg'})
                     })
         //remise a zéro des valeurs
-        //zero();
+        zero();
         //transition
-        //toS();
+        toS();
         //on eleve l'animation
         bouton_solaire.attr("class", "");
-        pos = 1;
     }
     } );
 
 var bouton_eolien = d3.select("#data2_eolien")
 .on("click", function(d) {
     console.log("bouton_eolien");
+    //on change le saviez_vous
+    $(document.getElementById("saviez_vous_solaire")).hide();
+    $(document.getElementById("saviez_vous_biomasse")).hide();
+    $(document.getElementById("saviez_vous_eolienne")).show();
     //rotation de la pale
     var img = document.getElementById("data2_pale");
     if (pos!=0) {
@@ -134,20 +141,22 @@ var bouton_eolien = d3.select("#data2_eolien")
                     rotate: deg+'deg'
                     }, 500, 'linear',
                     function(){
-                    //$(img).css({ rotate: deg%360+'deg'})
+                    //$(img).css({ rotate: '0deg'})
                     });
         //remise a zéro des valeurs
-        //zero();
+        zero();
         //transition
-        //toE();
-        //on eleve l'animation
-        pos = 0;
+        toE();
     }
     } );
 
 var bouton_biomasse = d3.select("#data2_biomasse")
 .on("click", function(d) {
     console.log("bouton_biomasse");
+    //on change le saviez_vous
+    $(document.getElementById("saviez_vous_solaire")).hide();
+    $(document.getElementById("saviez_vous_eolienne")).hide();
+    $(document.getElementById("saviez_vous_biomasse")).show();
     //rotation de la pale
     var img = document.getElementById("data2_pale");
     if (pos!=2) {
@@ -158,43 +167,43 @@ var bouton_biomasse = d3.select("#data2_biomasse")
                     rotate: deg+'deg'
                     }, 500, 'linear',
                     function(){
-                    //$(img).css({ rotate: deg%360+'deg'})
+                    //$(img).css({ rotate: '120deg'})
                     });
         //remise a zéro des valeurs
-        //zero();
+        zero();
         //transition
-        //toB();
+        toB();
         //on eleve l'animation
         bouton_biomasse.attr("class", "");
-        pos = 2;
     }
     } );
 
-tick();
+toE();
 
 //d3.select(self.frameElement).style("height", height + "px");
 
 
-function zero(callback) {
+function zero() {
 	//mise à zéro des valeurs
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
 		field.data()[i].value = 0;
+        field.data()[i].opacity = 0;
     }
 	//transition
 	if (!document.hidden) field
 		.transition()
 		.duration(500)
         .each(fieldTransition)
-        .call(callback);
 }
 
 function toE() {
-	console.log("toE");
+    pos = 0;
 	//calcule de la nouvelle valeur
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
 		field.data()[i].value = field.data()[i].value + 0.2;
+        field.data()[i].opacity = 1;
     }
 	//transition
     if (!document.hidden) field
@@ -204,14 +213,13 @@ function toE() {
         .each(fieldTransition)
 }
 
-function toP() {
-    console.log("toP");
+function toS() {
     pos = 1;
-    zero();
 	//calcule de la nouvelle valeur
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
 		field.data()[i].value = field.data()[i].value + 0.2;
+        field.data()[i].opacity = 1;
     }
 	//transition
     if (!document.hidden) field
@@ -222,24 +230,26 @@ function toP() {
 }
 
 function toB() {
-    
+    pos = 2;
+    //calcule de la nouvelle valeur
+    for (var i = 0; i < 5; i++) {
+        field.data()[i].previousValue = field.data()[i].value;
+        field.data()[i].value = field.data()[i].value + 0.2;
+        field.data()[i].opacity = 1;
+    }
+    //transition
+    if (!document.hidden) field
+        .transition()
+        .duration(500)
+        .delay(function(d,i) { return (4-i)*500; })
+        .each(fieldTransition)
 }
 
 
 function tick() {
 	console.log(field.data());
     if (!document.hidden) field
-        //.each(function(d) { this._value = d.value; })
-        //.data(fields)
-        //.each(function(d) { d.previousValue = this._value; })
-        //.transition()
-        //.ease("elastic")
-        //.duration(500)
         .each(fieldTransition)
-        //fonction de callback
-        //.each("end", function(d) {console.log("test");});
-    
-    //setTimeout(tick, 1000 - Date.now() % 1000);
 }
 
 function fieldTransition() {
