@@ -1,7 +1,30 @@
+nav
+{
+    text-align: center;
+}
+nav li:not(:first-child)
+{
+    padding-left: 10%;
+}
+nav li
+{
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 2%;
+}
+nav li a
+{
+    color: black;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+
 #soustitreFirstSlide
 {
-    color: #80cbc4;
+    color: #90d6df;
 }
+
 #titreSlide1
 {
     color: black;
@@ -31,7 +54,7 @@
 }
 #slide2 #row1slide2
 {
-    background: url("../img/fondSlide2.png") top repeat, #82e69b;
+    background: url("../img/fondSlide2.png") top repeat, #78dc82;
     height: 80%;
 }
 #slide2 #row1slide2 .container article
@@ -40,7 +63,7 @@
 }
 #slide2 #row1slide2 .container
 {
-    padding-top: 3%;
+    //padding-top: 3%;
     text-align: center;
 }
 
@@ -51,8 +74,8 @@
 #slide2 #row2slide2 .container
 {
     text-align: center;
-    color: #82e69b;
-    padding-bottom: 2%;
+    color: #78dc82;
+    //padding-bottom: 2%;
 
 }
 @media screen and (min-width: 1500px){
@@ -66,12 +89,13 @@
     #slide2 aside
     {
         vertical-align: top;
+        margin-top: 2%;
         display: inline-block;
         max-width: 50%;
         margin-left: 10%;
-        background: url("../img/slide_2_chart.png");
+        background: url("../img/slide_2_chart.png") no-repeat center top;
         width: 510px;
-        height: 510px;
+        height: 550px;
     }
 }
 @media screen and (max-width: 1500px){
@@ -87,12 +111,7 @@
         height: 250px;
     }
 }
-@media screen and (max-width: 1500px){
-    #slide2 article
-    {
-        /*margin-left: 50px;*/
-    }
-}
+
 #slide2 article
 {
     display: inline-block;
