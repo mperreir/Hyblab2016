@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
 	var requete = $.ajax({
-		url : "http://127.0.0.1:8080/ouest_france/data/menage/years",
+		url : "http://127.0.0.1:8080/ouest_france/data/parc/years",
 		type : "GET",
 		dataType : "text",
 		success : generateMenageChart,
@@ -17,8 +17,19 @@ function generateMenageChart(res, statut){
 		var valeurs = [];
 		var data = generateChartData(donnees);
 		var options = fillOptions();
-
-		var chart = new Chartist.Line('#chartMotorisation', data, options);
+		var chartId;
+		switch(donnees.categorie){
+			case "menage":
+				chartId = '#chartMotorisation';
+				break;
+			case "carburant":
+				chartId = '#chartCarburant';
+				break;
+			case "parc":
+				chartId = '#chartParc';
+				break;	
+		};
+		var chart = new Chartist.Line(chartId, data, options);
 		var seq = 0;
 		var delays = 80;
 		var durations = 500;
@@ -115,6 +126,7 @@ function dataToAdd(donnees, index){
 
 		case "parc":
 			retour = donnees.data[donnees.years[index]].occasion.pourcentage;
+			
 			break;
 	}
 	return retour;
