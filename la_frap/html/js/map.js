@@ -2,9 +2,9 @@
 
 window.addEventListener('load', function () {
 
-	var map1 = $(document).ready(function () {
+	$(document).ready(function () {
 		$('#bigmap').vectorMap({
-			map:'pays_de_la_loire',
+			map:'pays_de_la_loire_king_size',
 			backgroundColor: 'none',
 			color:'#003f4e',
 			selectedColor:'#003f4e',
@@ -13,7 +13,8 @@ window.addEventListener('load', function () {
 				regions:[{
 					attribute:'fill', 
 				}]
-			}, 
+			},
+
 		});
 
 		$('#bigmap').css("background-color","rgba(0,0,0,0)");
@@ -21,7 +22,7 @@ window.addEventListener('load', function () {
 		
 	});
 	
-	var map2 = $(document).ready(function () {
+	$(document).ready(function () {
 		$('#map').vectorMap({
 			map:'pays_de_la_loire',
 			backgroundColor: 'none',
@@ -32,12 +33,17 @@ window.addEventListener('load', function () {
 				regions:[{
 					attribute:'fill', 
 				}]
-			}, 
+			},
+			selectedRegion: "FR-44",
+
 		});
 
 		//map.series.regions[0].setValues("#179fae");
-
-		$('#map').css("background-color","rgba(0,0,0,0)");
+		/*console.log($('#map').selectedRegions);
+        var map = $('#map').vectorMap('get', 'mapObject');	
+        map.setSelectedRegions("FR-44");
+        console.log($('#map').selectedRegions);
+		$('#map').css("background-color","rgba(0,0,0,0)");*/
 		//$('path g svg p div').attr("fill","#179fae");
 
 		
