@@ -116,55 +116,50 @@
         <div class="container">
             <div class="row contenu">
 
-            
-            <div class="row">
-                <h3>tout seul</h3>
-            </div>
-            
-            <div class="row">
-                <h2>Un jardin et 252kg de légumes urbains</h2>
-            </div>
-            
-            
-            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>TOUT SEUL</h3>
+                    <h2>Un jardin et 252kg de légumes urbains</h2>
+                </div>
+                        
+                <div class="row">
                 
-                <article>
-                    <p>Joseph et sa famille ont pu manger des légumes toute l’année. Cliquez sur chaque saison pour découvrir le poids des récoltes et constater les effets de la permaculture en ville !</p>
+                    <article class="col-md-6 text-center">
+                        <p>Joseph et sa famille ont pu manger des légumes toute l’année. Cliquez sur chaque saison pour découvrir le poids des récoltes et constater les effets de la permaculture en ville !</p>
                     
-                    <div id="jardinDeJoseph" class="row text-center">
-                        <div id="boutonDiagrammeJoseph" >    
+                        <div id="jardinDeJoseph" class="row text-center">
+                            <div id="boutonDiagrammeJoseph" >    
 
-                            <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_printemps" onclick="updateDiagrammeJoseph('printemps')" />
-                            <label class="labelRadioJoseph" for="radioJoseph_printemps" id="labelJoseph_printemps"></label>
+                                <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_printemps" onclick="updateDiagrammeJoseph('printemps')" />
+                                <label class="labelRadioJoseph" for="radioJoseph_printemps" id="labelJoseph_printemps"></label>
 
-                            <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_ete" onclick="updateDiagrammeJoseph('ete')" />
-                            <label class="labelRadioJoseph" for="radioJoseph_ete" id="labelJoseph_ete"></label>
+                                <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_ete" onclick="updateDiagrammeJoseph('ete')" />
+                                <label class="labelRadioJoseph" for="radioJoseph_ete" id="labelJoseph_ete"></label>
 
-                            <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_automne" onclick="updateDiagrammeJoseph('automne')" />
-                            <label class="labelRadioJoseph" for="radioJoseph_automne" id="labelJoseph_automne"></label>
+                                <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_automne" onclick="updateDiagrammeJoseph('automne')" />
+                                <label class="labelRadioJoseph" for="radioJoseph_automne" id="labelJoseph_automne"></label>
 
-                            <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_hiver" onclick="updateDiagrammeJoseph('hiver')" />
-                            <label class="labelRadioJoseph" for="radioJoseph_hiver" id="labelJoseph_hiver"></label>
+                                <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_hiver" onclick="updateDiagrammeJoseph('hiver')" />
+                                <label class="labelRadioJoseph" for="radioJoseph_hiver" id="labelJoseph_hiver"></label>
 
-                            <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_total" onclick="updateDiagrammeJoseph('total')" />
-                            <label class="labelRadioJoseph" for="radioJoseph_total" id="labelJoseph_total"></label>
+                                <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_total" onclick="updateDiagrammeJoseph('total')" />
+                                <label class="labelRadioJoseph" for="radioJoseph_total" id="labelJoseph_total"></label>
 
+                            </div>
                         </div>
-                    </div>
-                    
-                </article>
+
+                    </article>
                 
                 
-                <aside>
-                    <pre>Il habite à trois heures d’ici, mais cela pourrait se passer chez un nantais. Joseph Chauffrey, qui n’y connaissait rien, a réussi à produire 252 kilos de fruits et légumes dans ses 150m2 de terrain, dont seulement 25m2 de potager.
+                    <aside class="col-md-6">
+                        <pre>Il habite à trois heures d’ici, mais cela pourrait se passer chez un nantais. Joseph Chauffrey, qui n’y connaissait rien, a réussi à produire 252 kilos de fruits et légumes dans ses 150m2 de terrain, dont seulement 25m2 de potager.
+
+    Son mot d’ordre ? <strong>Permaculture</strong>, soit une forme respectueuse et écologique de production.</pre>
+                    </aside>
                 
-Son mot d’ordre ? <strong>Permaculture</strong>, soit une forme respectueuse et écologique de production.</pre>
-                </aside>
                 
-                
-            </div>
+                </div>
             
-            <div id="diagrammeJoseph" class="row text-center"></div> <!-- col-lg-4 col-lg-offset-2  -->
+                <div id="diagrammeJoseph" class="row text-center"></div> <!-- col-lg-4 col-lg-offset-2  -->
                                 
                 <p id="totalJoseph" class="text-center"></p>
                 <p class="text-center trucOrange">total en kg</p>

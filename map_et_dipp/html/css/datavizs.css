@@ -164,6 +164,33 @@ section .container .contenu {
 
 
 
+/* slide 3 */
+#slide3 {
+    background-color: white;
+}
+
+#slide3 h2 {
+    color: #fdbe63;
+    font: 40px Museo;
+}
+
+#slide3 h3 {
+    color: #fdbe63;
+    font: 18px Museo;
+}
+
+#slide3 article {
+    border-color: #fdbe63;
+    color: #4c4c4c;
+    font: 15px / 19px Museo;
+}
+
+#slide3 aside {
+    color: #4c4c4c;
+    font: 400 17px / 21px Arial;
+}
+
+
 /* slide 5 */
 #slide5 {
     background-color: #90d7df;
