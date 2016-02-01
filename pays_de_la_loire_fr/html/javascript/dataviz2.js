@@ -246,21 +246,11 @@ function toB() {
 }
 
 
-/*function tick() {
+function tick() {
 	console.log(field.data());
     if (!document.hidden) field
-        //.each(function(d) { this._value = d.value; })
-        //.data(fields)
-        //.each(function(d) { d.previousValue = this._value; })
-        //.transition()
-        //.ease("elastic")
-        //.duration(500)
         .each(fieldTransition)
-        //fonction de callback
-        //.each("end", function(d) {console.log("test");});
-    
-    //setTimeout(tick, 1000 - Date.now() % 1000);
-}*/
+}
 
 function fieldTransition() {
     var field = d3.select(this).transition();
