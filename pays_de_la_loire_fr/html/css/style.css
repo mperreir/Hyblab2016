@@ -616,7 +616,10 @@ span>ul>li>p
     width: 10%;
     top: 35%;
     left: 82%;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
+
 
 #data2_solaire
 {
@@ -655,27 +658,35 @@ span>ul>li>p
 
 #trotteuse
 {
-	position: relative;
-	width: 10%;
-	top : 64.5%;
-	left: 41.8%;
+	position: absolute;
+	width: 31%;
+	top : 37.5%;
+	left: 34.45%;
 }
 
 #eolienne1_i3
 {
-	position: relative;
-	width: 10%;
-	height: 10%;
-	top : 28.5%;
-	left: 25.5%;
+	position: absolute;
+	width: 6%;
+	top : 32.5%;
+	left: 32%;
 }
 
 
 #eolienne2_i3
 {
-	position: relative;
-	width: 10%;
-	height: 10%;
-	top : 28.5%;
-	left: 9%;
+	position: absolute;
+	width: 6%;
+	top : 31.5%;
+	left: 38%;
+}
+
+/*Dataviz3*/
+
+#eolienne_mat1_3
+{
+	position: absolute;
+	width: 6%;
+	top : 32.5%;
+	left: 32%;
 }

@@ -7,7 +7,8 @@ spacing = .08,
 opacity = .2,
 posMax = .7,
 colText = "hsl(300,100%,50%)",
-pos = 0;
+pos = 0,
+deg = 0;
 
 
 var color = d3.scale.linear()
@@ -99,31 +100,74 @@ bouton_solaire
     console.log("bouton_solaire");
     //rotation de la pale
     var img = document.getElementById("data2_pale");
-    $(img)
-    .transition({
-                opacity: 1,
-                rotate: '120deg'
-                }, 500, 'linear',
-                function(){
-                $(img).css({ rotate: '120deg'})
-                });
-    //remise a zéro des valeurs
-    zero(function(){alert('test');});
-    //toE();
-    //transition
-    
+    if (pos!=1) {
+        deg = pos==0 ? deg-120 : deg+120;
+        console.log(deg);
+        $(img)
+        .transition({
+                    opacity: 1,
+                    rotate: deg+'deg'
+                    }, 500, 'linear',
+                    function(){
+                    //$(img).css({ rotate: deg%360+'deg'})
+                    })
+        //remise a zéro des valeurs
+        //zero();
+        //transition
+        //toS();
+        //on eleve l'animation
+        bouton_solaire.attr("class", "");
+        pos = 1;
+    }
     } );
 
 var bouton_eolien = d3.select("#data2_eolien")
 .on("click", function(d) {
     console.log("bouton_eolien");
-    toE();
+    //rotation de la pale
+    var img = document.getElementById("data2_pale");
+    if (pos!=0) {
+        deg = pos==1 ? deg+120 : deg-120;
+        $(img)
+        .transition({
+                    opacity: 1,
+                    rotate: deg+'deg'
+                    }, 500, 'linear',
+                    function(){
+                    //$(img).css({ rotate: deg%360+'deg'})
+                    });
+        //remise a zéro des valeurs
+        //zero();
+        //transition
+        //toE();
+        //on eleve l'animation
+        pos = 0;
+    }
     } );
 
 var bouton_biomasse = d3.select("#data2_biomasse")
 .on("click", function(d) {
     console.log("bouton_biomasse");
-    zero();
+    //rotation de la pale
+    var img = document.getElementById("data2_pale");
+    if (pos!=2) {
+        deg = pos==0 ? deg+120 : deg-120;
+        $(img)
+        .transition({
+                    opacity: 1,
+                    rotate: deg+'deg'
+                    }, 500, 'linear',
+                    function(){
+                    //$(img).css({ rotate: deg%360+'deg'})
+                    });
+        //remise a zéro des valeurs
+        //zero();
+        //transition
+        //toB();
+        //on eleve l'animation
+        bouton_biomasse.attr("class", "");
+        pos = 2;
+    }
     } );
 
 tick();
