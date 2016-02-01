@@ -24,35 +24,40 @@
     position: absolute;
 }
 
-@media screen and (min-width: 1500px){
+
 #slide1Titre
 {
-    margin-top: 12%;
-}}
-@media screen and (max-width: 1500px){
-#slide1Titre
-{
-    margin-top: 25%;
-}
+    margin-top: 6%;
 }
 #slide2 #row1slide2
 {
     background: url("../img/fondSlide2.png") top repeat, #82e69b;
     height: 80%;
 }
-
+#slide2 #row1slide2 .container article
+{
+    text-align: left;
+}
 #slide2 #row1slide2 .container
 {
     padding-top: 3%;
 }
+
+#slide2 #row2slide2 .container h3
+{
+    font-size: 25px;
+}
 #slide2 #row2slide2 .container
 {
     text-align: center;
+    color: #82e69b;
+    padding-bottom: 2%;
+
 }
 @media screen and (min-width: 1500px){
 #slide2 #row2slide2 .container
 {
-    padding-top: 50px;
+    /*padding-top: 50px;*/
 }
 }
 
@@ -84,7 +89,7 @@
 @media screen and (max-width: 1500px){
     #slide2 article
     {
-        margin-left: 50px;
+        /*margin-left: 50px;*/
     }
 }
 #slide2 article
@@ -94,6 +99,7 @@
     vertical-align: top;
     padding-top: 35px;
     color: #4d4d4d;
+    margin-left: 50px;
 }
 #slide2 article h1, #slide2 article h2
 {
@@ -111,8 +117,20 @@
         margin-top: 25px;
     }
 }
-
-
+#slide6 #legendeAraignee
+{
+    border: 1px solid #fdbe63;
+    border-radius: 10px;
+}
+#slide6 .container h2
+{
+    color: #fdbe63;
+}
+#slide6 .container
+{
+    text-align: center;
+    padding-top: 3%;
+}
 #slide6 #araigneeAMAP
 {
     vertical-align: top;
@@ -123,7 +141,10 @@
     display: inline-block;
     vertical-align: top;
 }
-
+#slide6 #contenuDatavizAraignee
+{
+    padding-top: 5%;
+}
 
 
 

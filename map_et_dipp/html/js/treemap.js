@@ -1,8 +1,10 @@
 'use strict';
 
 var margin = {top: 30, right: 0, bottom: 20, left: 0},
-    width = 960,
-    height = 500 - margin.top - margin.bottom,
+    //width = 960,
+    width = (window.screen.availWidth / 2),
+    //height = 500 - margin.top - margin.bottom,
+    height = (window.screen.availHeight / 2) - margin.top - margin.bottom,
     transitioning;
 
 // sets x and y scale to determine size of visible boxes
@@ -19,8 +21,6 @@ var colorSet = { 'JF' : '#38615a', // Jardin Familial
                  'JI': '#62ceb3', // Jardin d'Insertion
                  'SG' : '#ffffff' // Station Gourmande
                };
-
-var font_color = '#3f6660';
 
 var treemap = d3.layout.treemap()
     .children(function(d, depth) { return depth ? null : d._children; }) // Fonction d'accès aux noeuds fils
@@ -46,7 +46,7 @@ grandparent.append('rect')
     .attr('y', -margin.top)
     .attr('width', width)
     .attr('height', margin.top)
-    .attr('stroke', '#18BC9C')
+    .attr('stroke', '#90D7DF')
     .attr('stroke-width', '2px');
 
 grandparent.append('text')
@@ -239,7 +239,7 @@ d3.json('json/treemap.json', function(root) {
         .attr('y', function(d) { return y(d.y); })
         .attr('width', function(d) { return x(d.x + d.dx) - x(d.x); })
         .attr('height', function(d) { return y(d.y + d.dy) - y(d.y); })
-        .attr('stroke', '#18BC9C')
+        .attr('stroke', '#90D7DF')
         .attr('stroke-width', '1px')
         .attr('rx', 6)
         .attr('ry', 6)

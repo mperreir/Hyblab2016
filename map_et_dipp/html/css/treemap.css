@@ -1,7 +1,31 @@
+#slide5 {
+	height: 100%;
+}
+
+#slide5 h2 {
+	margin-top: 12.5%;
+}
+
+#treemap_legend {
+	vertical-align: top;
+	display: inline-block;
+	margin-top: 25%;
+	margin-left: 15%;
+	margin-right: 5%;
+}
+
+
+#treemap_legend img, #treemap_legend p  {
+	vertical-align: top;
+	display: inline-block;
+	margin-right: 10px;
+}
+
 #treemap {
-  width: 960px;
-  height: 500px;
-  margin: auto;
+
+	margin-top: 25vh;
+	vertical-align: top;
+	display: inline-block;
 }
 
 #treemap .grandparent:hover rect {
