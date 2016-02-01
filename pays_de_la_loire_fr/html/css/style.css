@@ -525,24 +525,24 @@ span>ul>li>p
 {
     position: absolute;
     width: 10%;
-    top: 10%;
-    left: 30%;
+    top: 35%;
+    left: 82%;
 }
 
 #data2_solaire
 {
     position: absolute;
     width: 10%;
-    top: 20%;
-    left: 40%;
+    top: 4%;
+    left: 45%;
 }
 
 #data2_biomasse
 {
     position: absolute;
     width: 10%;
-    top: 30%;
-    left: 50%;
+    top: 75%;
+    left: 45%;
 }
 
 #svg_dataviz2
