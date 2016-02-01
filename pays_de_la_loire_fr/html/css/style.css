@@ -524,6 +524,22 @@ span>ul>li>p
 	height: auto;
 }
 
+#bouton_2008_data1
+{
+	position: absolute;
+	width: 12%;
+	left: 78%;
+	bottom: 28%;
+}
+
+#bouton_2014_data1
+{
+	position: absolute;
+	width: 12%;
+	left: 78%;
+	bottom: 19%;
+}
+
 #tracteur1_data1
 {
 	position: absolute;
@@ -783,7 +799,7 @@ span>ul>li>p
 #personnage1_data1
 {
 	position: absolute;
-	width: 4.5%;
+	width: 5.5%;
 	left: 66%;
 	bottom: 43.5%;
 }
@@ -791,7 +807,7 @@ span>ul>li>p
 #personnage2_data1
 {
 	position: absolute;
-	width: 4.5%;
+	width: 5.5%;
 	left: 71.5%;
 	bottom: 61.5%;
 }
@@ -818,6 +834,342 @@ span>ul>li>p
 	width: 3.5%;
 	left: 53.5%;
 	bottom: 51.5%;
+}
+
+#tracteur1_14_data1
+{
+	position: absolute;
+	width: 1.5%;
+	left: 60.5%;
+	bottom: 67%;
+}
+
+#tracteur2_14_data1
+{
+	position: absolute;
+	width: 2.3%;
+	left: 75.5%;
+	bottom: 79%;
+}
+
+#tracteur3_14_data1
+{
+	position: absolute;
+	width: 1.5%;
+	left: 73.5%;
+	bottom: 58%;
+}
+
+#tracteur4_14_data1
+{
+	position: absolute;
+	width: 3.2%;
+	left: 69.5%;
+	bottom: 51%;
+}
+
+#tracteur5_14_data1
+{
+	position: absolute;
+	width: 2.3%;
+	left: 51.5%;
+	bottom: 38%;
+}
+
+#tracteur6_14_data1
+{
+	position: absolute;
+	width: 1.7%;
+	left: 63%;
+	bottom: 16%;
+}
+
+#panneau1_14_data1
+{
+	position: absolute;
+	width: 2%;
+	left: 62.5%;
+	bottom: 70%;
+}
+
+#panneau2_14_data1
+{
+	position: absolute;
+	width: 2.3%;
+	left: 77.5%;
+	bottom: 74%;
+}
+
+#panneau3_14_data1
+{
+	position: absolute;
+	width: 1.5%;
+	left: 80.5%;
+	bottom: 61%;
+}
+
+#panneau4_14_data1
+{
+	position: absolute;
+	width: 2.5%;
+	left: 65%;
+	bottom: 57%;
+}
+
+#panneau5_14_data1
+{
+	position: absolute;
+	width: 2.9%;
+	left: 70%;
+	bottom: 46%;
+}
+
+#panneau6_14_data1
+{
+	position: absolute;
+	width: 1.7%;
+	left: 56%;
+	bottom: 59%;
+}
+
+#panneau7_14_data1
+{
+	position: absolute;
+	width: 2.5%;
+	left: 54.5%;
+	bottom: 45%;
+}
+
+#panneau8_14_data1
+{
+	position: absolute;
+	width: 1.9%;
+	left: 52%;
+	bottom: 34%;
+}
+
+#panneau9_14_data1
+{
+	position: absolute;
+	width: 2.5%;
+	left: 58.5%;
+	bottom: 23%;
+}
+
+#eolienne1_14_data1
+{
+	position: absolute;
+	width: 2%;
+	left: 66.5%;
+	bottom: 79%;
+}
+
+#eolienne2_14_data1
+{
+	position: absolute;
+	width: 2%;
+	left: 70%;
+	bottom: 81%;
+}
+
+#eolienne3_14_data1
+{
+	position: absolute;
+	width: 2.3%;
+	left: 63.5%;
+	bottom: 64%;
+}
+
+#eolienne4_14_data1
+{
+	position: absolute;
+	width: 3%;
+	left: 76.5%;
+	bottom: 69%;
+}
+
+#eolienne5_14_data1
+{
+	position: absolute;
+	width: 2.1%;
+	left: 81.5%;
+	bottom: 66%;
+}
+
+#eolienne6_14_data1
+{
+	position: absolute;
+	width: 3.2%;
+	left: 77.5%;
+	bottom: 59%;
+}
+
+#eolienne7_14_data1
+{
+	position: absolute;
+	width: 3.2%;
+	left: 62.5%;
+	bottom: 50%;
+}
+
+#eolienne8_14_data1
+{
+	position: absolute;
+	width: 2.2%;
+	left: 72.5%;
+	bottom: 44%;
+}
+
+#eolienne9_14_data1
+{
+	position: absolute;
+	width: 3.2%;
+	left: 65.5%;
+	bottom: 40%;
+}
+
+#eolienne10_14_data1
+{
+	position: absolute;
+	width: 4.2%;
+	left: 59%;
+	bottom: 38%;
+}
+
+#eolienne11_14_data1
+{
+	position: absolute;
+	width: 2.2%;
+	left: 53.5%;
+	bottom: 58%;
+}
+
+#eolienne12_14_data1
+{
+	position: absolute;
+	width: 4.2%;
+	left: 49.8%;
+	bottom: 47%;
+}
+
+#eolienne13_14_data1
+{
+	position: absolute;
+	width: 2.2%;
+	left: 45.8%;
+	bottom: 50%;
+}
+
+#eolienne14_14_data1
+{
+	position: absolute;
+	width: 2.2%;
+	left: 53.8%;
+	bottom: 40%;
+}
+
+#eolienne15_14_data1
+{
+	position: absolute;
+	width: 2.2%;
+	left: 60%;
+	bottom: 29%;
+}
+
+#eolienne16_14_data1
+{
+	position: absolute;
+	width: 3.2%;
+	left: 49%;
+	bottom: 26%;
+}
+
+#eolienne17_14_data1
+{
+	position: absolute;
+	width: 2.5%;
+	left: 56%;
+	bottom: 22%;
+}
+
+#eolienne18_14_data1
+{
+	position: absolute;
+	width: 3.2%;
+	left: 61%;
+	bottom: 18%;
+}
+
+#entreprise1_14_data1
+{
+	position: absolute;
+	width: 1.5%;
+	left: 62%;
+	bottom: 74%;
+}
+
+#entreprise2_14_data1
+{
+	position: absolute;
+	width: 1.5%;
+	left: 68%;
+	bottom: 56%;
+}
+
+#entreprise3_14_data1
+{
+	position: absolute;
+	width: 1.5%;
+	left: 49%;
+	bottom: 41%;
+}
+
+#entreprise4_14_data1
+{
+	position: absolute;
+	width: 1.2%;
+	left: 52%;
+	bottom: 30%;
+}
+
+#personnage1_14_data1
+{
+	position: absolute;
+	width: 3%;
+	left: 64.5%;
+	bottom: 75%;
+}
+
+#personnage2_14_data1
+{
+	position: absolute;
+	width: 2.8%;
+	left: 72%;
+	bottom: 73%;
+}
+
+#personnage3_14_data1
+{
+	position: absolute;
+	width: 3.2%;
+	left: 60%;
+	bottom: 57%;
+}
+
+#personnage4_14_data1
+{
+	position: absolute;
+	width: 3.2%;
+	left: 48.7%;
+	bottom: 54.8%;
+}
+
+#personnage5_14_data1
+{
+	position: absolute;
+	width: 2.5%;
+	left: 55.7%;
+	bottom: 32.8%;
 }
 
 #svg_dataviz3
