@@ -187,6 +187,8 @@ section .container .contenu {
 }
 
 #slide3 article {
+    /margin: 20px;
+    padding: 30px;
     /* style du texte */
     color: #4c4c4c;
     font: 15px / 19px Museo;
