@@ -12,7 +12,7 @@ $(document).ready(function() {
 	var eolienne1_i3 = document.getElementById("eolienne1_i3");
 	var eolienne2_i3 = document.getElementById("eolienne2_i3");
 	
-	initI3();
+	//initI3();
 });
 
 function initI3(){
