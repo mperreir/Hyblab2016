@@ -595,11 +595,6 @@ span>ul>li>p
     right: -70px !important;
 }
 
-/*#svg_dataviz2 {
-    display: block;
-    margin: auto;
-}*/
-
 /* Dataviz 2 */
 
 #data2_pale
@@ -646,6 +641,71 @@ span>ul>li>p
     left: 22%
 }
 
+#saviez_vous_eolienne
+{
+    position: relative;
+    width: 30%;
+    height: 25%;
+    padding: 2%;
+    top: 45%;
+    left: 9.6%;
+    text-align: center;
+}
+
+#saviez_vous_eolienne>p
+{
+    text-align: left;
+    font-size: 1vw;
+}
+
+#saviez_vous_eolienne>b
+{
+    font-size: 1.25vw;
+}
+
+#saviez_vous_solaire
+{
+    position: relative;
+    width: 30%;
+    height: 25%;
+    padding: 2%;
+    top: 45%;
+    left: 9.6%;
+    text-align: center;
+}
+
+#saviez_vous_solaire>p
+{
+    text-align: left;
+    font-size: 1vw;
+}
+
+#saviez_vous_solaire>b
+{
+    font-size: 1.25vw;
+}
+
+#saviez_vous_biomasse
+{
+    position: relative;
+    width: 30%;
+    height: 25%;
+    padding: 2%;
+    top: 40%;
+    left: 9.6%;
+    text-align: center;
+}
+
+#saviez_vous_biomasse>p
+{
+    text-align: left;
+    font-size: 1vw;
+}
+
+#saviez_vous_biomasse>b
+{
+    font-size: 1.25vw;
+}
 
 /* Intercalaire Dataviz 3 */
 #bandeau_i3
