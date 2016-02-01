@@ -114,51 +114,71 @@
     <!-- diagramme de Joseph -->
     <section class="success" id="slide3">
         <div class="container">
+            <div class="row contenu">
+
+            
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Légumes joseph</h2>
-                    <hr class="star-light">
-                </div>
+                <h3>tout seul</h3>
             </div>
             
-            <h3>tout seul</h3>
-            <h2>Un jardin et 252kg de légumes urbains</h2>
+            <div class="row">
+                <h2>Un jardin et 252kg de légumes urbains</h2>
+            </div>
             
-            <article>
-                <p>Joseph et sa famille ont pu manger des légumes toute l’année. Cliquez sur chaque saison pour découvrir le poids des récoltes et constater les effets de la permaculture en ville !</p>
-            </article>
-            <aside>
-                <pre>Il habite à trois heures d’ici, mais cela pourrait se passer chez un nantais. Joseph Chauffrey, qui n’y connaissait rien, a réussi à produire 252 kilos de fruits et légumes dans ses 150m2 de terrain, dont seulement 25m2 de potager.
+            
+            <div class="row">
+                
+                <article>
+                    <p>Joseph et sa famille ont pu manger des légumes toute l’année. Cliquez sur chaque saison pour découvrir le poids des récoltes et constater les effets de la permaculture en ville !</p>
+                    
+                    <div id="jardinDeJoseph" class="row text-center">
+                        <div id="boutonDiagrammeJoseph" >    
+
+                            <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_printemps" onclick="updateDiagrammeJoseph('printemps')" />
+                            <label class="labelRadioJoseph" for="radioJoseph_printemps" id="labelJoseph_printemps"></label>
+
+                            <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_ete" onclick="updateDiagrammeJoseph('ete')" />
+                            <label class="labelRadioJoseph" for="radioJoseph_ete" id="labelJoseph_ete"></label>
+
+                            <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_automne" onclick="updateDiagrammeJoseph('automne')" />
+                            <label class="labelRadioJoseph" for="radioJoseph_automne" id="labelJoseph_automne"></label>
+
+                            <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_hiver" onclick="updateDiagrammeJoseph('hiver')" />
+                            <label class="labelRadioJoseph" for="radioJoseph_hiver" id="labelJoseph_hiver"></label>
+
+                            <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_total" onclick="updateDiagrammeJoseph('total')" />
+                            <label class="labelRadioJoseph" for="radioJoseph_total" id="labelJoseph_total"></label>
+
+                        </div>
+                    </div>
+                    
+                </article>
+                
+                
+                <aside>
+                    <pre>Il habite à trois heures d’ici, mais cela pourrait se passer chez un nantais. Joseph Chauffrey, qui n’y connaissait rien, a réussi à produire 252 kilos de fruits et légumes dans ses 150m2 de terrain, dont seulement 25m2 de potager.
                 
 Son mot d’ordre ? <strong>Permaculture</strong>, soit une forme respectueuse et écologique de production.</pre>
-            </aside>
-            
-            <div id="jardinDeJoseph" class="row text-center">
-                <div id="boutonDiagrammeJoseph" >    
-                    
-                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_printemps" onclick="updateDiagrammeJoseph('printemps')" />
-                    <label class="labelRadioJoseph" for="radioJoseph_printemps" id="labelJoseph_printemps"></label>
-                    
-                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_ete" onclick="updateDiagrammeJoseph('ete')" />
-                    <label class="labelRadioJoseph" for="radioJoseph_ete" id="labelJoseph_ete"></label>
-                    
-                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_automne" onclick="updateDiagrammeJoseph('automne')" />
-                    <label class="labelRadioJoseph" for="radioJoseph_automne" id="labelJoseph_automne"></label>
-                    
-                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_hiver" onclick="updateDiagrammeJoseph('hiver')" />
-                    <label class="labelRadioJoseph" for="radioJoseph_hiver" id="labelJoseph_hiver"></label>
-                    
-                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_total" onclick="updateDiagrammeJoseph('total')" />
-                    <label class="labelRadioJoseph" for="radioJoseph_total" id="labelJoseph_total"></label>
-                                        
-                </div>
+                </aside>
                 
-                <div id="diagrammeJoseph" class="text-center"></div> <!-- col-lg-4 col-lg-offset-2  -->
+                
+            </div>
+            
+            <div id="diagrammeJoseph" class="row text-center"></div> <!-- col-lg-4 col-lg-offset-2  -->
                                 
                 <p id="totalJoseph" class="text-center"></p>
                 <p class="text-center trucOrange">total en kg</p>
+            
             </div>
-        </div>
+
+            
+            <div class="row flecheSlide">
+                <div class="col-xs-12 text-center">
+                    <img src="./img/fleche_bas_de_page_orange.png" alt="fleche" />
+                </div>
+            </div>
+            
+        </div>        
     </section>
     
     
