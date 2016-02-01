@@ -564,7 +564,10 @@ span>ul>li>p
     width: 10%;
     top: 35%;
     left: 82%;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
+
 
 #data2_solaire
 {
