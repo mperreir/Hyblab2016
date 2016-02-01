@@ -177,15 +177,20 @@ section .container .contenu {
 #slide3 h3 {
     color: #fdbe63;
     font: 18px Museo;
+    border: 2px solid #fdbe63;
 }
 
 #slide3 article {
-    border-color: #fdbe63;
+    /* style du texte */
     color: #4c4c4c;
     font: 15px / 19px Museo;
+    /* contour */
+    border: 2px solid #fdbe63;
+    border-radius: 50px;
 }
 
-#slide3 aside {
+#slide3 aside p {
+    /* style du texte */
     color: #4c4c4c;
     font: 400 17px / 21px Arial;
 }
