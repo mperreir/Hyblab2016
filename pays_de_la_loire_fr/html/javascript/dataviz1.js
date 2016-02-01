@@ -112,7 +112,7 @@ function resetSlide (idQ) {
 		case "q1":
 			var france = document.getElementById("france");
 			$(france).transition({
-				left: '7%'
+				left: '-127.5%'
 			})
 			break;
 
@@ -123,15 +123,15 @@ function resetSlide (idQ) {
 
 			$(ampoule).transition({
 				scale: 1,
-				left: '17.5%'
+				left: '-35.5%'
 			})
 			$(batiment).transition({
 				scale: 1,
-				left: '27.5%'
+				left: '-11.5%'
 			})
 			$(euro).transition({
 				scale: 1,
-				left: '37.5%'
+				left: '13.5%'
 			})
 			break;
 
@@ -147,35 +147,35 @@ function resetSlide (idQ) {
 
 			$(elements_q3).transition({
 				scale: 1,
-				left: '80%'
+				left: '72.5%'
 			})
 			$(panneau1).transition({
 				scale: 1,
-				left: '111%'
+				left: '105%'
 			})
 			$(panneau2).transition({
 				scale: 1,
-				left: '108%'
+				left: '102%'
 			})
 			$(panneau3).transition({
 				scale: 1,
-				left: '115%'
+				left: '109%'
 			})
 			$(tracteur).transition({
 				scale: 1,
-				left: '84%'
+				left: '78%'
 			})
 			$(pale1).transition({
 				scale: 1,
-				left: '84%'
+				left: '103.15%'
 			})
 			$(pale2).transition({
 				scale: 1,
-				left: '84%'
+				left: '108.1%'
 			})
 			$(pale3).transition({
 				scale: 1,
-				left: '84%'
+				left: '113.7%'
 			})
 			break;
 
@@ -184,7 +184,7 @@ function resetSlide (idQ) {
 
 			$(elements_q4).transition({
 				scale: 1,
-				x: 0
+				left: '183%'
 			})
 			break;
 	}
@@ -264,7 +264,7 @@ function answerQuestions(prop_id) {
 		var france = document.getElementById("france");
 
 		$(france).transition({
-			left: '1.5%'
+			left: '-140.5%'
 		})
 	}
 
@@ -275,15 +275,15 @@ function answerQuestions(prop_id) {
 
 		$(ampoule).transition({
 			scale: 0.6,
-			left: '6.95%'
+			left: '-42.05%'
 		})
 		$(batiment).transition({
 			scale: 0.5,
-			left: '7%'
+			left: '-32%'
 		})
 		$(euro).transition({
 			scale: 0.5,
-			left: '7.05%'
+			left: '-20.95%'
 		})
 	}
 
@@ -293,26 +293,45 @@ function answerQuestions(prop_id) {
 		var panneau2 = document.getElementById("panneau_2_q3");
 		var panneau3 = document.getElementById("panneau_3_q3");
 		var tracteur = document.getElementById("tracteur_q3");
+		var pale1 = document.getElementById("pale_1_q3");
+		var pale2 = document.getElementById("pale_2_q3");
+		var pale3 = document.getElementById("pale_3_q3");
 
 		$(elements_q3).transition({
 			scale: 0.8,
-			x: -300
+			left: '55%'
 		})
 		$(panneau1).transition({
 			scale: 0.8,
-			x: -300
+			left: '87.5%'
 		})
 		$(panneau2).transition({
 			scale: 0.8,
-			x: -300
+			left: '84.5%'
 		})
 		$(panneau3).transition({
 			scale: 0.8,
-			x: -300
+			left: '91.5%'
 		})
 		$(tracteur).transition({
 			scale: 0.8,
-			x: -300
+			left: '63.5%',
+			top: '54%'
+		})
+		$(pale1).transition({
+			scale: 0.8,
+			left: '84.1%',
+			top: '28%'
+		})
+		$(pale2).transition({
+			scale: 0.8,
+			left: '88.1%',
+			top: '30.5%'
+		})
+		$(pale3).transition({
+			scale: 0.8,
+			left: '92.5%',
+			top: '29%'
 		})
 	}
 
@@ -321,7 +340,7 @@ function answerQuestions(prop_id) {
 
 		$(elements_q4).transition({
 			scale: 0.8,
-			x: -350
+			left: '160%'
 		})
 	}
 	

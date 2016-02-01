@@ -107,18 +107,17 @@ span>ul>li>p
 .liste_propositions
 {
 	position: absolute;
-	left: 17.5%;
-	width: 60%;
-	height: auto;
+	left: -550%;
+	width: 240%;
 }
 
 .bloc_reponse
 {
 	position: absolute;
 	top: 30%;
-	left: 12.5%;
+	left: -100%;
 	background-color: #365471;
-	width: 10%;
+	width: 36%;
 	height: 35%;
 	color: white;
 	border-radius: 5vw;
@@ -144,33 +143,37 @@ span>ul>li>p
 
 #q2
 {
-	left: -28%;
+	left: -136%;
+	z-index: 1;
 }
 
 #q3
 {
-	left: 303.5%;
+	left: 276.5%;
 	width: 240%;
 }
 
 #q4
 {
-	left: -27.5%;
+	width: 240%;
+	left: 689%;
 }
 
 .q2
 {
-	left: 37.5%;
+	left: 4.5%;
+	z-index: 1;
 }
 
 .q3
 {
-	left: 62.5%;
+	left: 107.5%;
 }
 
 .q4
 {
-	left: 87.5%;
+	left: 207.5%;
+	width: 38%;
 }
 
 .bouton
@@ -248,22 +251,22 @@ span>ul>li>p
 
 #fond_q1
 {
-	left: -37.5%;
+	left: -155%;
 }
 
 #fond_q2
 {
-	left: -12.5%;
+	left: -50%;
 }
 
 #fond_q3
 {
-	left: 60%;
+	left: 52.5%;
 }
 
 #fond_q4
 {
-	left: 37.5%;
+	left: 154.5%;
 }
 
 #nuage1
@@ -365,32 +368,35 @@ span>ul>li>p
 #france
 {
 	position: absolute;
-	width: 11%;
-	bottom: 2%;
-	left: 7%;
+	width: 45%;
+	bottom: 12%;
+	left: -127.5%;
 }
 
 #ampoule_q2
 {
-	position: relative;
-	left: 17.5%;
-	width: 15%;
+	position: absolute;
+	left: -35.5%;
+	width: 20%;
+	top: 30%;
 	height: auto;
 }
 
 #batiment_q2
 {
-	position: relative;
-	left: 27.5%;
-	width: 15%;
+	position: absolute;
+	left: -11.5%;
+	width: 20%;
+	top: 30%;
 	height: auto;
 }
 
 #euro_q2
 {
-	position: relative;
-	left: 37.5%;
-	width: 15%;
+	position: absolute;
+	left: 13.5%;
+	width: 20%;
+	top: 30%;
 	height: auto;
 }
 
@@ -399,7 +405,7 @@ span>ul>li>p
 	position: absolute;
 	width: 55%;
 	height: auto;
-	left: 80%;
+	left: 72.5%;
 	bottom: 5%;
 }
 
@@ -408,7 +414,7 @@ span>ul>li>p
 	position: absolute;
 	width: 7.5%;
 	height: auto;
-	left: 84%;
+	left: 78%;
 	top: 57.5%;
 }
 
@@ -418,7 +424,7 @@ span>ul>li>p
 	width: 6.5%;
 	height: auto;
 	top: 65%;
-	left: 111%;
+	left: 105%;
 }
 
 #panneau_2_q3
@@ -427,7 +433,7 @@ span>ul>li>p
 	width: 6.5%;
 	height: auto;
 	top: 60%;
-	left: 108%;
+	left: 102%;
 }
 
 #panneau_3_q3
@@ -436,7 +442,7 @@ span>ul>li>p
 	width: 6.5%;
 	height: auto;
 	top: 60%;
-	left: 115%;
+	left: 109%;
 }
 
 #pale_1_q3
@@ -444,7 +450,7 @@ span>ul>li>p
 	position: absolute;
 	width: 9%;
 	top: 25.5%;
-	left: 110.6%;
+	left: 103.15%;
 }
 
 #pale_2_q3
@@ -452,7 +458,7 @@ span>ul>li>p
 	position: absolute;
 	width: 9%;
 	top: 29%;
-	left: 115.7%;
+	left: 108.1%;
 }
 
 #pale_3_q3
@@ -460,16 +466,16 @@ span>ul>li>p
 	position: absolute;
 	width: 9%;
 	top: 25.7%;
-	left: 121.1%;
+	left: 113.7%;
 }
 
 #elements_q4
 {
-	position: relative;
+	position: absolute;
 	width: 45%;
 	height: auto;
-	left: 28.5%;
-	bottom: 0%;
+	left: 183%;
+	bottom: 7%;
 }
 
 #data1_infos
