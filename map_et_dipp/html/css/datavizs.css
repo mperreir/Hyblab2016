@@ -175,9 +175,15 @@ section .container .contenu {
 }
 
 #slide3 h3 {
+    padding: 5px;
+    /* style du texte */
     color: #fdbe63;
     font: 18px Museo;
+    /* contour */
     border: 2px solid #fdbe63;
+    border-radius: 5px;
+    /* pour que la largeur du titre soit égale à la taille du texte, et non à la taille de la page */
+    display: inline-block;
 }
 
 #slide3 article {
