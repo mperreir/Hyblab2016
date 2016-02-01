@@ -34,19 +34,30 @@
     background: url("../img/fondSlide2.png") top repeat, #82e69b;
     height: 80%;
 }
-
+#slide2 #row1slide2 .container article
+{
+    text-align: left;
+}
 #slide2 #row1slide2 .container
 {
     padding-top: 3%;
 }
+
+#slide2 #row2slide2 .container h3
+{
+    font-size: 25px;
+}
 #slide2 #row2slide2 .container
 {
     text-align: center;
+    color: #82e69b;
+    padding-bottom: 2%;
+
 }
 @media screen and (min-width: 1500px){
 #slide2 #row2slide2 .container
 {
-    padding-top: 50px;
+    /*padding-top: 50px;*/
 }
 }
 
@@ -291,8 +302,8 @@ header .intro-text .skills {
 }
 
 section {
-    /*max-height: 100vh;
-    height: 100vh;*/
+    max-height: 100vh;
+    height: 100vh;
     overflow: hidden;
 }
 
