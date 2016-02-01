@@ -1,15 +1,22 @@
 @font-face {
     font-family: "Avenir";
-    src: url('font/Avenir.ttc');
+    src: url('../font/Avenir.ttc');
     font-weight: bolder;
 }
+@font-face {
+    font-family: 'Aldrich';
+    src: url('../font/Aldrich.ttf') format('truetype');
+}
 
+@import url(http://fonts.googleapis.com/css?family=Aldrich);
 
 #container{
 	font-family: "Avenir",Arial,sans-serif;
 	text-align: center;
 	background-color: #FFF;
 }
+
+a:link{text-decoration:none}
 
 h1{
 	color: #C2DEBC;
@@ -34,6 +41,31 @@ h2{
 .isles{
 	position:relative;
 	top:-14vh;
+}
+
+.logo{
+	height: 10vh;
+	padding-right: 10px;
+}
+
+.small_logo{
+	height: 3vh;
+	padding: 10px;
+}
+
+#logo{
+	position: absolute;
+	bottom: 12vh;
+	width: 100%;
+}
+
+.lets_text{
+    font-family: "Aldrich", sans-serif;
+}
+
+.lets_text .logo{
+	position: relative;
+	top: 8vh;
 }
 
 #s1 {
