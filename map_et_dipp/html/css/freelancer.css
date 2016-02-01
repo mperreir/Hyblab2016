@@ -24,16 +24,10 @@
     position: absolute;
 }
 
-@media screen and (min-width: 1500px){
+
 #slide1Titre
 {
-    margin-top: 12%;
-}}
-@media screen and (max-width: 1500px){
-#slide1Titre
-{
-    margin-top: 25%;
-}
+    margin-top: 6%;
 }
 #slide2 #row1slide2
 {
@@ -84,7 +78,7 @@
 @media screen and (max-width: 1500px){
     #slide2 article
     {
-        margin-left: 50px;
+        /*margin-left: 50px;*/
     }
 }
 #slide2 article
@@ -94,6 +88,7 @@
     vertical-align: top;
     padding-top: 35px;
     color: #4d4d4d;
+    margin-left: 50px;
 }
 #slide2 article h1, #slide2 article h2
 {
@@ -296,8 +291,8 @@ header .intro-text .skills {
 }
 
 section {
-    max-height: 100vh;
-    height: 100vh;
+    /*max-height: 100vh;
+    height: 100vh;*/
     overflow: hidden;
 }
 
