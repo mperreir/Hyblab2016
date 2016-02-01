@@ -14,13 +14,14 @@ window.addEventListener('load',function () {
 				"font": "courier"
 			},
 			"titleSubtitlePadding": 10
-		},
-		"footer": {
-			"color": "#999999",
-			"fontSize": 10,
-			"font": "open sans",
-			"location": "bottom-left"
 		},*/
+		"footer": {
+			"text": "Cliquez pour afficher les valeurs",
+			"color": "#999999",
+			"fontSize": 12,
+			"font": "open sans",
+			"location": "bottom-center"
+		},
 		"size": {
 			"canvasWidth": 300,
 			"pieInnerRadius": "64%",
