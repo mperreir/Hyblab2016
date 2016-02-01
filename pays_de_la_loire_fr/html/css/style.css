@@ -149,7 +149,8 @@ span>ul>li>p
 
 #q3
 {
-	left: -65.5%;
+	left: 303.5%;
+	width: 240%;
 }
 
 #q4
@@ -346,18 +347,18 @@ span>ul>li>p
 #pale_intro_2
 {
 	opacity: 1;
-	bottom: 33.5%;
-	left: 64.8%;
-	width: 6%;
+	bottom: 32.2%;
+	left: 62.2%;
+	width: 9.4%;
 	height: auto;
 }
 
 #pale_intro_3
 {
 	opacity: 1;
-	bottom: 33.5%;
-	left: 71.8%;
-	width: 6%;
+	bottom: 32.1%;
+	left: 69.1%;
+	width: 9.4%;
 	height: auto;
 }
 
@@ -606,27 +607,35 @@ span>ul>li>p
 
 #trotteuse
 {
-	position: relative;
-	width: 10%;
-	top : 64.5%;
-	left: 41.8%;
+	position: absolute;
+	width: 31%;
+	top : 37.5%;
+	left: 34.45%;
 }
 
 #eolienne1_i3
 {
-	position: relative;
-	width: 10%;
-	height: 10%;
-	top : 28.5%;
-	left: 25.5%;
+	position: absolute;
+	width: 6%;
+	top : 32.5%;
+	left: 32%;
 }
 
 
 #eolienne2_i3
 {
-	position: relative;
-	width: 10%;
-	height: 10%;
-	top : 28.5%;
-	left: 9%;
+	position: absolute;
+	width: 6%;
+	top : 31.5%;
+	left: 38%;
+}
+
+/*Dataviz3*/
+
+#eolienne_mat1_3
+{
+	position: absolute;
+	width: 6%;
+	top : 32.5%;
+	left: 32%;
 }
