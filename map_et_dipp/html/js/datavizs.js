@@ -6,7 +6,7 @@ var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "
   {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoBouteille.png"},
   {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoViande.png"},
   {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoMiel.png"},
-  {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoLegumes.png"}];
+  {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoAutres.png"}];
 
 var produitsDebut = [ {"produit":"Légumes","distanceMoyenne":0, "distMin":0, "distMax":0},
   {"produit":"Fruits", "distanceMoyenne":0, "distMin":0, "distMax":0},
