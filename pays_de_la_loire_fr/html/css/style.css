@@ -93,7 +93,6 @@ span>ul>li>p
 {
 	position: absolute;
 	top: 50%;
-	width: 100%;
 	height: auto;
 }
 
@@ -108,8 +107,9 @@ span>ul>li>p
 .liste_propositions
 {
 	position: absolute;
-	left: -27.5%;
+	left: 17.5%;
 	width: 60%;
+	height: auto;
 }
 
 .bloc_reponse
@@ -199,6 +199,7 @@ span>ul>li>p
 {
 	cursor: pointer;
 	position: absolute;
+	width: 10%;
 	right: -15%;
 }
 
@@ -242,8 +243,6 @@ span>ul>li>p
 	position: absolute;
 	z-index: 1;
 	opacity: 0;
-	width: 6%;
-	height: auto;
 }
 
 #fond_q1
@@ -258,7 +257,7 @@ span>ul>li>p
 
 #fond_q3
 {
-	left: 12.5%;
+	left: 60%;
 }
 
 #fond_q4
@@ -268,46 +267,53 @@ span>ul>li>p
 
 #nuage1
 {
-	bottom: 62.5%;
-	left: 5%;
-	transform: scale(3.5);
+	bottom: 42.5%;
+	left: 0%;
+	width: 28%;
+	height: auto;
 }
 
 #nuage2
 {
-	bottom: 50%;
-	left: 40%;
-	transform: scale(2.5);
+	bottom: 42%;
+	left: 60%;
+	width: 15%;
+	height: auto;
 }
 
 #nuage3
 {
-	bottom: 59%;
-	left: 85%;
-	transform: scale(2.5);
+	bottom: 52%;
+	left: 80%;
+	width: 15%;
+	height: auto;
 }
 
 #tracteur_intro
 {
 	opacity: 1;
-	bottom: 3.5%;
+	bottom: 5.5%;
 	left: 32.5%;
-	transform: scale(0.6);
+	width: 5%;
+	height: auto;
 }
 
 #bateau_intro
 {
 	opacity: 1;
 	bottom: 10%;
-	right: 11.5%;
+	left: 80%;
+	width: 12%;
+	height: auto;
 }
 
 #panneau_intro_1
 {
 	opacity: 1;
-	bottom: 7%;
+	bottom: 8.5%;
 	left: 56%;
-	transform: scale(0.8);
+	width: 6%;
+	height: auto;
 }
 
 #panneau_intro_2
@@ -315,7 +321,8 @@ span>ul>li>p
 	opacity: 1;
 	bottom: 3%;
 	left: 53%;
-	transform: scale(0.8);
+	width: 6%;
+	height: auto;
 }
 
 #panneau_intro_3
@@ -323,37 +330,43 @@ span>ul>li>p
 	opacity: 1;
 	bottom: 3%;
 	left: 58%;
-	transform: scale(0.8);
+	width: 6%;
+	height: auto;
 }
 
 #pale_intro_1
 {
 	opacity: 1;
-	bottom: 33%;
-	left: 57.4%;
+	bottom: 33.5%;
+	left: 57.9%;
+	width: 6%;
+	height: auto;
 }
 
 #pale_intro_2
 {
 	opacity: 1;
-	bottom: 33%;
-	left: 63.9%;
+	bottom: 33.5%;
+	left: 64.8%;
+	width: 6%;
+	height: auto;
 }
 
 #pale_intro_3
 {
 	opacity: 1;
-	bottom: 33%;
-	left: 70.5%;
+	bottom: 33.5%;
+	left: 71.8%;
+	width: 6%;
+	height: auto;
 }
 
 #france
 {
-	position: relative;
-	width: 45%;
-	height: auto;
-	bottom: 4.5%;
-	left: 25%;
+	position: absolute;
+	width: 11%;
+	bottom: 2%;
+	left: 7%;
 }
 
 #ampoule_q2
@@ -382,47 +395,71 @@ span>ul>li>p
 
 #elements_q3
 {
-	position: relative;
+	position: absolute;
 	width: 55%;
 	height: auto;
-	left: 19%;
+	left: 80%;
 	bottom: 5%;
 }
 
 #tracteur_q3
 {
-	position: relative;
+	position: absolute;
 	width: 7.5%;
 	height: auto;
-	right: 31%;
-	top: 17.5%;
+	left: 84%;
+	top: 57.5%;
 }
 
 #panneau_1_q3
 {
-	position: relative;
+	position: absolute;
 	width: 6.5%;
 	height: auto;
-	top: 19%;
-	right: 11%;
+	top: 65%;
+	left: 111%;
 }
 
 #panneau_2_q3
 {
-	position: relative;
+	position: absolute;
 	width: 6.5%;
 	height: auto;
-	top: 12%;
-	right: 14%;
+	top: 60%;
+	left: 108%;
 }
 
 #panneau_3_q3
 {
-	position: relative;
+	position: absolute;
 	width: 6.5%;
 	height: auto;
-	top: 12%;
-	right: 27.5%;
+	top: 60%;
+	left: 115%;
+}
+
+#pale_1_q3
+{
+	position: absolute;
+	width: 9%;
+	top: 25.5%;
+	left: 110.6%;
+}
+
+#pale_2_q3
+{
+	position: absolute;
+	width: 9%;
+	top: 29%;
+	left: 115.7%;
+}
+
+#pale_3_q3
+{
+	position: absolute;
+	width: 9%;
+	top: 25.7%;
+	left: 121.1%;
 }
 
 #elements_q4
