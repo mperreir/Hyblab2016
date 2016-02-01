@@ -41,6 +41,7 @@
 #slide2 #row1slide2 .container
 {
     padding-top: 3%;
+    text-align: center;
 }
 
 #slide2 #row2slide2 .container h3
@@ -121,15 +122,17 @@
 {
     border: 1px solid #fdbe63;
     border-radius: 10px;
+
 }
-#slide6 .container h2
+#slide6 .contaainer h2
 {
     color: #fdbe63;
 }
-#slide6 .container
+#slide6 .contaainer
 {
     text-align: center;
     padding-top: 3%;
+
 }
 #slide6 #araigneeAMAP
 {
@@ -140,10 +143,15 @@
 {
     display: inline-block;
     vertical-align: top;
+    width: 350px;
 }
 #slide6 #contenuDatavizAraignee
 {
     padding-top: 5%;
+}
+#slide6 #effetWahoo
+{
+    
 }
 
 
