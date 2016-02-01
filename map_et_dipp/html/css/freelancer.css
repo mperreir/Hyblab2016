@@ -143,6 +143,13 @@ nav li a
     border-radius: 10px;
 
 }
+@media screen and (max-width: 1000px){
+    #slide6 #legendeAraignee
+    {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
 #slide6 .contaainer h2
 {
     color: #fdbe63;
@@ -158,21 +165,49 @@ nav li a
     vertical-align: top;
     display:inline-block;
 }
+@media screen and (max-width: 1000px){
+    #slide6 #araigneeAMAP
+    {
+        transform: scale(0.7);
+        margin-top: -20%;
+    }
+}
+#slide6 #infosAraignee
+{
+    width: 350px;
+}
+@media screen and (min-width: 1000px){
 #slide6 #infosAraignee
 {
     display: inline-block;
     vertical-align: top;
-    width: 350px;
+    
+}
+}
+@media screen and (max-width: 1000px){
+    #slide6 #infosAraignee
+    {
+        transform: scale(0.7);
+        margin-top: -15%;
+    }
 }
 #slide6 #contenuDatavizAraignee
 {
     padding-top: 5%;
 }
+@media screen and (min-width: 1000px){
 #slide6 #effetWahoo
 {
-    
+    margin-top: 10%;
 }
-
+}
+@media screen and (max-width: 1000px){
+    #slide6 #effetWahoo
+    {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
 
 
 
