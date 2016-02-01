@@ -1,14 +1,13 @@
 "use strict";
 
-console.log("test");
-
 var width = 480,
 height = 400,
 radius = Math.min(width, height) / 1.9,
-spacing = .1,
+spacing = .08,
 opacity = .2,
 posMax = .7,
-colText = "hsl(300,100%,50%)";
+colText = "hsl(300,100%,50%)",
+pos = 0;
 
 
 var color = d3.scale.linear()
@@ -22,7 +21,7 @@ var arcBody = d3.svg.arc()
 .endAngle(function(d) { return d.value * 2 * Math.PI + Math.PI; })
 .innerRadius(function(d) { return d.index * radius; })
 .outerRadius(function(d) { return (d.index + spacing) * radius; })
-.cornerRadius(0);
+.cornerRadius(6);
 
 var arcCenter = d3.svg.arc()
 .startAngle(Math.PI)
@@ -31,7 +30,7 @@ var arcCenter = d3.svg.arc()
 .outerRadius(function(d) { return (d.index + spacing / 2) * radius; });
 
 
-var svg = d3.select("#svg_dataviz2")//.append("svg")
+var svg = d3.select("#svg_dataviz2")
 .attr("width", width)
 .attr("height", height)
 .append("g")
@@ -89,39 +88,50 @@ field.append("text")
 .attr("y", function (d) { return (d.index + 0.05) * (radius + spacing); })
 .attr("class", "year-text");
 
+//gestion des pales
+var pales = d3.select("#data2_pale");
 
-//affichage des images
-//vers eolienne
-field.append("svg:image")
-.attr('x',-width/2)
-.attr('y',-height/2)
-.attr('width', 20)
-.attr('height', 24)
-.attr("xlink:href","../resources/images/test.png")
+
+//gestion des boutons
+var bouton_solaire = d3.select("#data2_solaire")
+bouton_solaire
 .on("click", function(d) {
-    console.log("click");
+    console.log("bouton_solaire");
+    //rotation de la pale
+    var img = document.getElementById("data2_pale");
+    $(img)
+    .transition({
+                opacity: 1,
+                rotate: '120deg'
+                }, 500, 'linear',
+                function(){
+                $(img).css({ rotate: '120deg'})
+                });
+    //remise a zéro des valeurs
+    zero(function(){alert('test');});
+    //toE();
+    //transition
+    
+    } );
+
+var bouton_eolien = d3.select("#data2_eolien")
+.on("click", function(d) {
+    console.log("bouton_eolien");
     toE();
-	} );
-	
-//vers photovol
-field.append("svg:image")
-.attr('x',width/2 - 20)
-.attr('y',-height/2)
-.attr('width', 20)
-.attr('height', 24)
-.attr("xlink:href","../resources/images/test.png")
+    } );
+
+var bouton_biomasse = d3.select("#data2_biomasse")
 .on("click", function(d) {
-	console.log("click");
-	zero();
-	} );
-
-
+    console.log("bouton_biomasse");
+    zero();
+    } );
 
 tick();
 
 //d3.select(self.frameElement).style("height", height + "px");
 
-function zero() {
+
+function zero(callback) {
 	//mise à zéro des valeurs
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
@@ -132,6 +142,7 @@ function zero() {
 		.transition()
 		.duration(500)
         .each(fieldTransition)
+        .call(callback);
 }
 
 function toE() {
@@ -145,12 +156,14 @@ function toE() {
     if (!document.hidden) field
 		.transition()
 		.duration(500)
-		.delay(function(d,i) { return (4-i)*500; })
+		.delay(function(d,i) { return (5-i)*500; })
         .each(fieldTransition)
 }
 
 function toP() {
     console.log("toP");
+    pos = 1;
+    zero();
 	//calcule de la nouvelle valeur
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
@@ -225,7 +238,7 @@ function arcTween(arc) {
 //valeurs entre 0-1
 function fields() {
     return [
-            {index: .5, text: "", value: 0.7, previousValue: 0.7, opacity: 1, year: "2014", val1: "8000", val2: "7000", val3: "6000"},
+            {index: .5, text: "", value: 0.9, previousValue: 0.9, opacity: 1, year: "2014", val1: "8000", val2: "7000", val3: "6000"},
             {index: .4, text: "", value: 0.5, previousValue: 0.5, opacity: 1, year: "2012", val1: "7000", val2: "6000", val3: "5000"},
             {index: .3, text: "", value: 0.4, previousValue: 0.4, opacity: 1, year: "2010", val1: "6000", val2: "5000", val3: "4000"},
             {index: .2, text: "", value: 0.3, previousValue: 0.3, opacity: 1, year: "2008", val1: "5000", val2: "4000", val3: "3000"},

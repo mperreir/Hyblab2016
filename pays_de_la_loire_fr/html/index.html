@@ -42,6 +42,7 @@
       **********************
       -->
       <section class="section section_perso">
+        <span class="responsive_container">
           <img class="image_fond" src="../resources/images/Backgrounds/background3-01.svg" alt="Fond" id="fond_intro" />
 
           <img class="element_fond" src="../resources/images/1ere-page-home/nuage1.svg" alt="Nuage" id="nuage1" />
@@ -63,6 +64,7 @@
           <img class="element_fond" src="../resources/images/1ere-page-home/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau_intro_1" />
           <img class="element_fond" src="../resources/images/1ere-page-home/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau_intro_2" />
           <img class="element_fond" src="../resources/images/1ere-page-home/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau_intro_3" />
+        </span>
 
           <!--<h1 class="titre titre_intro">
             LES ÉNERGIES RENOUVELABLES EN PAYS DE LA LOIRE
@@ -79,11 +81,13 @@
       *********************************
       -->
       <section class="section section_perso">
-        <img class="image_fond" src="../resources/images/Backgrounds/background3-02.svg" alt="Fond" />
-        <!--<h2 class="titre" id="titre_intercalaire_questionnaire" >
-          CONNAISSEZ-VOUS VOTRE RÉGION ?
-        </h2>-->
-        <button class="bouton_demarrer" onclick="startQ()" >Démarrer</button>
+        <span class="responsive_container">
+          <img class="image_fond" src="../resources/images/Backgrounds/background3-02.svg" alt="Fond" />
+          <!--<h2 class="titre" id="titre_intercalaire_questionnaire" >
+            CONNAISSEZ-VOUS VOTRE RÉGION ?
+          </h2>-->
+          <button class="bouton_demarrer" onclick="startQ()" >Démarrer</button>
+        </span>
       </section>
 
       <!-- 
@@ -97,38 +101,40 @@
           Question 1
         -->
         <section class="slide">
-          <img class="image_fond" src="../resources/images/Backgrounds/background3-03.svg" alt="Fond" id="fond_q1" />
-        
-          <img class="" src="../resources/images/questionnaire/france.svg" alt="Fond" id="france" />
+          <span class="resposive_container">
+            <img class="image_fond" src="../resources/images/Backgrounds/background3-03.svg" alt="Fond" id="fond_q1" />
+          
+            <img class="" src="../resources/images/questionnaire/france.svg" alt="Fond" id="france" />
 
-          <!--<h2 class="text-center titre">
-            EN 2012 LE NOMBRE D'<span class="mot_important">HABITANTS</span> EN PAYS DE LA LOIRE ÉTAIT DE : 
-          </h2>-->
+            <!--<h2 class="text-center titre">
+              EN 2012 LE NOMBRE D'<span class="mot_important">HABITANTS</span> EN PAYS DE LA LOIRE ÉTAIT DE : 
+            </h2>-->
 
-          <span class="text-center answers bloc_reponse" id="q1_ag">
-            <p class="text-center contenu_reponse">
-            <b>BONNE RÉPONSE</b><br/></br>
-            Bravo ! La région compte plus de 3 600 000 habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
-            </p>
-            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q1_ag_button" />
-          </span>
+            <span class="text-center answers bloc_reponse" id="q1_ag">
+              <p class="text-center contenu_reponse">
+              <b>BONNE RÉPONSE</b><br/></br>
+              Bravo ! La région compte plus de 3 600 000 habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
+              </p>
+              <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q1_ag_button" />
+            </span>
 
-          <span class="text-center answers bloc_reponse" id="q1_ab">
-            <p class="text-center contenu_reponse">
-            <b>MAUVAISE RÉPONSE</b><br/><br/>
-            Eh non ! La région compte plus de 3 600 000 habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
-            </p>
-            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q1_ab_button" />
-          </span>
+            <span class="text-center answers bloc_reponse" id="q1_ab">
+              <p class="text-center contenu_reponse">
+              <b>MAUVAISE RÉPONSE</b><br/><br/>
+              Eh non ! La région compte plus de 3 600 000 habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
+              </p>
+              <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q1_ab_button" />
+            </span>
 
-          <span class="contenu propositions">
-            <ul class=" text-center liste_propositions" id="q1">
-              <li onclick="chooseAnswer(this.id)" id="q1_p1"><p>2 100 000</p></li>
-              <li onclick="chooseAnswer(this.id)" id="q1_p2"><p>2 900 000</p></li>
-              <li onclick="chooseAnswer(this.id)" id="q1_p3"><p>3 600 000</p></li>
+            <span class="contenu propositions">
+              <ul class=" text-center liste_propositions" id="q1">
+                <li onclick="chooseAnswer(this.id)" id="q1_p1"><p>2 100 000</p></li>
+                <li onclick="chooseAnswer(this.id)" id="q1_p2"><p>2 900 000</p></li>
+                <li onclick="chooseAnswer(this.id)" id="q1_p3"><p>3 600 000</p></li>
 
-              <img class="bouton_valider" id="q1_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
-            </ul>
+                <img class="bouton_valider" id="q1_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
+              </ul>
+            </span>
           </span>
         </section>
 
@@ -179,47 +185,55 @@
           Question 3
         -->
         <section class="slide" >
-          <img class="image_fond" src="../resources/images/Backgrounds/background3-05.svg" alt="Fond" id="fond_q3" />
+          <span class="responsive_container">
+            <img class="image_fond" src="../resources/images/Backgrounds/background3-05.svg" alt="Fond" id="fond_q3" />
 
-          <img class="" src="../resources/images/questionnaire/fondbakcground5.svg" alt="Fond" id="elements_q3" />
+            <img class="" src="../resources/images/questionnaire/fondbakcground5.svg" alt="Fond" id="elements_q3" />
 
-          <img class="" src="../resources/images/questionnaire/tracteur.svg" alt="Tracteur" id="tracteur_q3" />
+            <img class="" src="../resources/images/questionnaire/tracteur.svg" alt="Tracteur" id="tracteur_q3" />
 
-          <img class="" src="../resources/images/questionnaire/panneau-photovoltaique.svg" alt="Panneau" id="panneau_1_q3" />
+            <img class="" src="../resources/images/questionnaire/panneau-photovoltaique.svg" alt="Panneau" id="panneau_1_q3" />
 
-          <img class="" src="../resources/images/questionnaire/panneau-photovoltaique.svg" alt="Panneau" id="panneau_2_q3" />
+            <img class="" src="../resources/images/questionnaire/panneau-photovoltaique.svg" alt="Panneau" id="panneau_2_q3" />
 
-          <img class="" src="../resources/images/questionnaire/panneau-photovoltaique.svg" alt="Panneau" id="panneau_3_q3" />
+            <img class="" src="../resources/images/questionnaire/panneau-photovoltaique.svg" alt="Panneau" id="panneau_3_q3" />
 
-          <!--<h2 class="text-center titre">
-            QUEL TYPE D'<span class="mot_important">ÉNERGIE RENOUVELABLE</span> EST LE PLUS PRODUIT EN PAYS DE LA LOIRE ?
-          </h2>-->
+            <img class="" src="../resources/images/questionnaire/pale.svg" alt="Pale" id="pale_1_q3" />
 
-          <span class="text-center answers bloc_reponse q3" id="q3_ag">
-            <p class="text-center contenu_reponse">
-            <b>BONNE RÉPONSE</b><br/></br>
-            Bravo ! En effet, la région compte 62 parcs éoliens.
-            </p>
-            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q3_ag_button" />
-          </span>
+            <img class="" src="../resources/images/questionnaire/pale.svg" alt="Pale" id="pale_2_q3" />
 
-          <span class="text-center answers bloc_reponse q3" id="q3_ab">
-            <p class="text-center contenu_reponse">
-            <b>MAUVAISE RÉPONSE</b><br/></br>
-            Eh non ! Il s’agissait de l’énergie éolienne. En effet, la région compte 62
-parcs éoliens.
-            </p>
-            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q3_ab_button" />
-          </span>
+            <img class="" src="../resources/images/questionnaire/pale.svg" alt="Pale" id="pale_3_q3" />
 
-          <span class="contenu propositions">
-            <ul class="text-center liste_propositions" id="q3">
-              <li onclick="chooseAnswer(this.id)" id="q3_p1"><p>Eolien</p></li>
-              <li onclick="chooseAnswer(this.id)" id="q3_p2"><p>Photovoltaïque</p></li>
-              <li onclick="chooseAnswer(this.id)" id="q3_p3"><p>Biomasse</p></li>
+            <!--<h2 class="text-center titre">
+              QUEL TYPE D'<span class="mot_important">ÉNERGIE RENOUVELABLE</span> EST LE PLUS PRODUIT EN PAYS DE LA LOIRE ?
+            </h2>-->
 
-              <img class="bouton_valider" id="q3_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
-            </ul>
+            <span class="text-center answers bloc_reponse q3" id="q3_ag">
+              <p class="text-center contenu_reponse">
+              <b>BONNE RÉPONSE</b><br/></br>
+              Bravo ! En effet, la région compte 62 parcs éoliens.
+              </p>
+              <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q3_ag_button" />
+            </span>
+
+            <span class="text-center answers bloc_reponse q3" id="q3_ab">
+              <p class="text-center contenu_reponse">
+              <b>MAUVAISE RÉPONSE</b><br/></br>
+              Eh non ! Il s’agissait de l’énergie éolienne. En effet, la région compte 62
+  parcs éoliens.
+              </p>
+              <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q3_ab_button" />
+            </span>
+
+            <span class="contenu propositions">
+              <ul class="text-center liste_propositions" id="q3">
+                <li onclick="chooseAnswer(this.id)" id="q3_p1"><p>Eolien</p></li>
+                <li onclick="chooseAnswer(this.id)" id="q3_p2"><p>Photovoltaïque</p></li>
+                <li onclick="chooseAnswer(this.id)" id="q3_p3"><p>Biomasse</p></li>
+
+                <img class="bouton_valider" id="q3_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
+              </ul>
+            </span>
           </span>
         </section>
 
@@ -293,10 +307,14 @@ parcs éoliens.
       </section>
 
       <section class="section section_perso">
-        <h2 class="contenu">
-          Dataviz 2
-        </h2>
-        <svg id="svg_dataviz2" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
+        <span class="responsive_container">
+            <img class="image_fond" src="../resources/images/Backgrounds/background3-08.svg" alt="Fond" id="fond_intro" />
+            <img src="../resources/images/data2/pale-bleu.svg" alt="pale" id="data2_pale" />
+            <svg id="svg_dataviz2" viewbox="0 0 730 730" version="1.1" xmlns="http://www.w3.org/2000/svg" />
+            <img src="../resources/images/data2/eolien.svg" alt="bouton eolien" id="data2_eolien" />
+            <img src="../resources/images/data2/solaire.svg" alt="bouton solaire" id="data2_solaire" />
+            <img src="../resources/images/data2/biomasse.svg" alt="bouton biomasse" id="data2_biomasse" />
+        </span>
       </section>
 
       <!--<section class="section section_perso">
