@@ -12,10 +12,7 @@
 
 
 
-.trucOrange {
-    color: #fdbe63;
-    font: 18px / 74.681px MuseoSlab;
-}
+
 
 
 
@@ -25,17 +22,30 @@
     Partie Diagramme de Joseph
 */
 
+#totalJoseph {
+    margin: 0;
+    padding: 0;
+}
+
 #totalJoseph p {
+    display: inline-block;
+    /* style du texte */
     color: #666666;
     font: 300 60px / 99.667px FuturaPT;
     font-size: 60px;
 }
 
+#uniteTotalJoseph {
+    color: #fdbe63;
+    font: 18px / 74.681px MuseoSlab;
+    display: inline-block;
+}
+
 
 .baliseJauge {
     display: inline-block;
-    margin-left: 3px;
-    margin-right: 3px;
+    margin-left: 30px;
+    margin-right: 30px;
     height: 160px;
     width: 100px;
 }
@@ -186,9 +196,12 @@ section .container .contenu {
     display: inline-block;
 }
 
-#slide3 article {
-    /margin: 20px;
-    padding: 30px;
+
+#slide3 div article {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
     /* style du texte */
     color: #4c4c4c;
     font: 15px / 19px Museo;
@@ -197,7 +210,12 @@ section .container .contenu {
     border-radius: 50px;
 }
 
+#slide3 aside {
+    
+}
+
 #slide3 aside p {
+    
     /* style du texte */
     color: #4c4c4c;
     font: 400 17px / 21px Arial;
