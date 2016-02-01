@@ -1,4 +1,5 @@
 const d3 = require('d3');
+d3.tip = require('d3-tip');
 import "../scss/main.scss";
 
 var width=1000,
@@ -14,6 +15,11 @@ let scale_x = d3.scale.ordinal().rangePoints([0, width],0.5);
 
 let months = ['01-2014','02-2014','03-2014','04-2014','05-2014','06-2014','07-2014','08-2014','09-2014','10-2014','11-2014','12-2014']
 let current_month = 0 ;
+
+let tip = d3.tip().attr('class', 'd3-tip').html(function(d) { return d.NO2; });
+
+chart.call(tip);
+
 function loopMonth(){
 	d3.json("json_centre/"+months[current_month]+".json",(err,data) => {
 		scale_x = scale_x.domain(data.map((dataOneHour) => dataOneHour.Hour)) ;
@@ -24,6 +30,8 @@ function loopMonth(){
 			.attr("cx", (d,i) => { return scale_x(d.Hour) })
 			.attr("r", 10)
 			.classed("dot_pollution",true)
+			.on('mouseover', tip.show)
+			.on('mouseout', tip.hide)
 
 		circles
 			.attr("cy", (d,i) => { return scale_y(d.NO2) })
