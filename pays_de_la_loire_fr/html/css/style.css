@@ -506,9 +506,52 @@ span>ul>li>p
     right: -70px !important;
 }
 
-#svg_dataviz2 {
+/*#svg_dataviz2 {
     display: block;
     margin: auto;
+}*/
+
+/* Dataviz 2 */
+
+#data2_pale
+{
+    position: absolute;
+    width: 40%;
+    top: 9.3%;
+    left: 45%;
+}
+
+#data2_eolien
+{
+    position: absolute;
+    width: 10%;
+    top: 10%;
+    left: 30%;
+}
+
+#data2_solaire
+{
+    position: absolute;
+    width: 10%;
+    top: 20%;
+    left: 40%;
+}
+
+#data2_biomasse
+{
+    position: absolute;
+    width: 10%;
+    top: 30%;
+    left: 50%;
+}
+
+#svg_dataviz2
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 17%;
+    left: 22%
 }
 
 
