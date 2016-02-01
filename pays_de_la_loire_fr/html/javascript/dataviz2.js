@@ -5,7 +5,7 @@ console.log("test");
 var width = 480,
 height = 400,
 radius = Math.min(width, height) / 1.9,
-spacing = .1,
+spacing = .08,
 opacity = .2,
 posMax = .7,
 colText = "hsl(300,100%,50%)";
@@ -22,7 +22,7 @@ var arcBody = d3.svg.arc()
 .endAngle(function(d) { return d.value * 2 * Math.PI + Math.PI; })
 .innerRadius(function(d) { return d.index * radius; })
 .outerRadius(function(d) { return (d.index + spacing) * radius; })
-.cornerRadius(0);
+.cornerRadius(6);
 
 var arcCenter = d3.svg.arc()
 .startAngle(Math.PI)
@@ -31,7 +31,7 @@ var arcCenter = d3.svg.arc()
 .outerRadius(function(d) { return (d.index + spacing / 2) * radius; });
 
 
-var svg = d3.select("#svg_dataviz2")//.append("svg")
+var svg = d3.select("#svg_dataviz2")
 .attr("width", width)
 .attr("height", height)
 .append("g")
@@ -89,6 +89,7 @@ field.append("text")
 .attr("y", function (d) { return (d.index + 0.05) * (radius + spacing); })
 .attr("class", "year-text");
 
+/*
 
 //affichage des images
 //vers eolienne
@@ -114,7 +115,7 @@ field.append("svg:image")
 	console.log("click");
 	zero();
 	} );
-
+*/
 
 
 tick();
@@ -225,7 +226,7 @@ function arcTween(arc) {
 //valeurs entre 0-1
 function fields() {
     return [
-            {index: .5, text: "", value: 0.7, previousValue: 0.7, opacity: 1, year: "2014", val1: "8000", val2: "7000", val3: "6000"},
+            {index: .5, text: "", value: 0.9, previousValue: 0.9, opacity: 1, year: "2014", val1: "8000", val2: "7000", val3: "6000"},
             {index: .4, text: "", value: 0.5, previousValue: 0.5, opacity: 1, year: "2012", val1: "7000", val2: "6000", val3: "5000"},
             {index: .3, text: "", value: 0.4, previousValue: 0.4, opacity: 1, year: "2010", val1: "6000", val2: "5000", val3: "4000"},
             {index: .2, text: "", value: 0.3, previousValue: 0.3, opacity: 1, year: "2008", val1: "5000", val2: "4000", val3: "3000"},
