@@ -109,7 +109,7 @@ bouton_solaire
                     rotate: deg+'deg'
                     }, 500, 'linear',
                     function(){
-                    //$(img).css({ rotate: deg%360+'deg'})
+                    //$(img).css({ rotate: '-120deg'})
                     })
         //remise a zéro des valeurs
         //zero();
@@ -134,12 +134,12 @@ var bouton_eolien = d3.select("#data2_eolien")
                     rotate: deg+'deg'
                     }, 500, 'linear',
                     function(){
-                    //$(img).css({ rotate: deg%360+'deg'})
+                    //$(img).css({ rotate: '0deg'})
                     });
         //remise a zéro des valeurs
-        //zero();
+        zero();
         //transition
-        //toE();
+        toE();
         //on eleve l'animation
         pos = 0;
     }
@@ -158,10 +158,10 @@ var bouton_biomasse = d3.select("#data2_biomasse")
                     rotate: deg+'deg'
                     }, 500, 'linear',
                     function(){
-                    //$(img).css({ rotate: deg%360+'deg'})
+                    //$(img).css({ rotate: '120deg'})
                     });
         //remise a zéro des valeurs
-        //zero();
+        zero();
         //transition
         //toB();
         //on eleve l'animation
@@ -175,18 +175,18 @@ tick();
 //d3.select(self.frameElement).style("height", height + "px");
 
 
-function zero(callback) {
+function zero() {
 	//mise à zéro des valeurs
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
 		field.data()[i].value = 0;
+        field.data()[i].opacity = 0;
     }
 	//transition
 	if (!document.hidden) field
 		.transition()
 		.duration(500)
         .each(fieldTransition)
-        .call(callback);
 }
 
 function toE() {
@@ -195,6 +195,7 @@ function toE() {
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
 		field.data()[i].value = field.data()[i].value + 0.2;
+        field.data()[i].opacity = 1;
     }
 	//transition
     if (!document.hidden) field
