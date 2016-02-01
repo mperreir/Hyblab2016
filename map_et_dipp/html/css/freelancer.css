@@ -117,8 +117,20 @@
         margin-top: 25px;
     }
 }
-
-
+#slide6 #legendeAraignee
+{
+    border: 1px solid #fdbe63;
+    border-radius: 10px;
+}
+#slide6 .container h2
+{
+    color: #fdbe63;
+}
+#slide6 .container
+{
+    text-align: center;
+    padding-top: 3%;
+}
 #slide6 #araigneeAMAP
 {
     vertical-align: top;
@@ -129,7 +141,10 @@
     display: inline-block;
     vertical-align: top;
 }
-
+#slide6 #contenuDatavizAraignee
+{
+    padding-top: 5%;
+}
 
 
 

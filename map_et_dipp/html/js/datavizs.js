@@ -118,13 +118,13 @@ var height = 600;
 var ratio = 1.3;
 
 var widthAside = 300;
-var heightAside = 120;
+var heightAside = 170;
 var couleurLigneMin = "#38615a";
 var couleurLigneMoy = "#80cbc4";
 var couleurLigneMax = "#adf0c3"
 
 var svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("height",height);
-var svgAside = d3.select("#legendeAraignee").append("svg").attr("width",widthAside).attr("height",heightAside);
+var svgAside = d3.select("#legendeAraignee").append("svg").attr("width",widthAside).attr("height",heightAside).attr("id","svgAside");
 
 //DESSIN du cercle représentant nantes
 svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", width/2).attr("cy",height/2).attr("r",nantesRadius).attr("fill","teal");
@@ -350,9 +350,9 @@ var lignesApresMax = groupes.append("line").attr("x1", function(d, i) {
 
 
 
-svgAside.append("svg:image").attr("x",25).attr("y",25).attr("width",50).attr("height",50).attr("xlink:href","./img/pictoFruits.png");
+svgAside.append("svg:image").attr("x",50).attr("y",60).attr("width",50).attr("height",50).attr("xlink:href","./img/pictoFruits.png");
 svgAside.append("text").attr("class","nomCategorie").attr("x",25).attr("y",105).text("Fruits");
-svgAside.append("line").attr("x1", widthAside/2).attr("y1", 0).attr("x2",widthAside/2).attr("y2",120).attr("stroke-width",1).attr("stroke","orange");
+svgAside.append("line").attr("x1", widthAside/2).attr("y1", 35).attr("x2",widthAside/2).attr("y2",135).attr("stroke-width",1).attr("stroke","orange");
 svgAside.append("text").attr("x",widthAside/2+55).attr("y",15).text("max");
 svgAside.append("text").attr("x",widthAside/2+95).attr("y",15).text("169.71").attr("class","max");
 svgAside.append("text").attr("x",widthAside/2+55).attr("y",50).text("moy");
