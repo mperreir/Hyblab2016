@@ -120,6 +120,32 @@
         
     }());
 
+    function totalPeople(lsoa11cd) {
+        var result = AGES
+            .map(function(group) {
+                return window.data[lsoa11cd]["ages"][AGES[group]];
+            }).reduce(function(a, b) {
+                return a + b;
+            });
+        return result;
+    }
+
+    // /*calculate the average age for the msoa*/
+    // (function() {
+    //     var LSOAs = MSOA[msoa11cd]["LSOAs"];        
+    //     for (var MSOA11CD in MSOA) {
+    //         var totalAges = 0;
+    //         var totalPeople = 0;
+    //         for (var LSOA11CD in LSOAs) {
+    //             count++;
+    //             totalPeople += totalPeople(LSOA11CD);
+    //             totalAges += totalPeople * window.data[lsoa11cd]["ages.average"];
+    //         }
+    //         MSOA[MSOA11CD]["ages.average"] = totalAges / totalPeople;
+    //     }
+        
+    // }());
+
     // Convert HSV to RGB
     function HSVtoRGB(h, s, v) {
         var r, g, b, i, f, p, q, t;
@@ -191,6 +217,8 @@
                 return a + b;
             }) / LSOAs.length;
     };
+
+
 
     var hasInitializedStyle = false;
 
@@ -279,7 +307,11 @@
                 })
             }
         }
-        // console.log(deciles);
+
+        if (barchart._map != undefined) {
+            // sanity check, in case that barchart not cleaned previously
+            map.removeControl(barchart);
+        }
         barchart.addTo(map);
         barchart.draw(deciles);
 
@@ -320,21 +352,32 @@
             } 
         }
 
+        console.log(popChart);
+        if (popChart._map != undefined) {
+            map.removeControl(popChart);
+        };
+
         popChart.addTo(map);  
         popChart.draw(ages);
 
+        // add overlay (note: effect not good, disabled)
+        // overlay.setAttribute('class', 'show');
     }
 
     function LsoaResetHighlight(e) {
         topoLsoaLayer.resetStyle(e.target);
-        map.removeControl(barchart);
-        map.removeControl(popChart);
+
+        if (barchart._map != undefined) {
+            map.removeControl(barchart);
+        }
     }
 
     function MsoaResetHighlight(e) {
         topoMsoaLayer.resetStyle(e.target);
-        map.removeControl(barchart);
-        map.removeControl(popChart);
+
+        if (barchart._map != undefined) {
+            map.removeControl(barchart);
+        }
     }
 
     function updatePopup(e) {
@@ -396,7 +439,8 @@
         layers: [osm, topoMsoaLayer], // Only Add default layers here
         minZoom: 11,
         maxZoom: 16,
-        maxBounds: topoMsoaLayer.getBounds()
+        maxBounds: topoMsoaLayer.getBounds(),
+        zoomControl: false
     });
 
     map.on('zoomend', function(e) {
@@ -421,7 +465,16 @@
         { "Map": osm },
         { "MSOA": topoMsoaLayer, "LSOA": topoLsoaLayer }
     ).addTo(map);*/
-    L.control.scale().addTo(map);
+    //L.control.scale().addTo(map);
+
+    // Create overlay for later use
+    /*
+    var overlay = (function() {
+        var _div = L.DomUtil.create('div', '');
+        _div.setAttribute('id', 'overlay');
+        document.getElementById('map').appendChild(_div);
+        return _div;
+    }());*/
 
     var info = L.control();
 
@@ -519,17 +572,21 @@
             hasInitializedStyle = true;
         } else if (props !== undefined) {
             if (props.hasOwnProperty("LSOA11CD"))
-                document.getElementById("idm").innerHTML = ": " + calculateIMD(props["LSOA11CD"]).toFixed(1) + "%";
+                //document.getElementById("idm").innerHTML = ": " + calculateIMD(props["LSOA11CD"]).toFixed(1) + "%";
+                document.getElementById("idm").innerHTML = ": " +
+                    parseInt(calculateIMD(props["LSOA11CD"]).toPrecision(1) / 10);
             else {
-                document.getElementById("idm").innerHTML = ": " + calculateMsoaIMD(props["MSOA11CD"]).toFixed(1) + "%";
+                //document.getElementById("idm").innerHTML = ": " + calculateMsoaIMD(props["MSOA11CD"]).toFixed(1) + "%";
+                document.getElementById("idm").innerHTML = ": " +
+                    parseInt(calculateMsoaIMD(props["MSOA11CD"]).toPrecision(1) / 10);
             }
         }
     };
 
     info.addTo(map);
 
-    var searchbar = L.control();
-    searchbar.onAdd = function(map) {
+    var searchbar = {};
+    searchbar.create = function(map) {
         this._div = L.DomUtil.create('div', 'searchbar');
         this._div.innerHTML = '';
 
@@ -540,6 +597,8 @@
         this._input.setAttribute('maxlength', 8);
 
         this._div.appendChild(this._input);
+
+        document.getElementById('map').appendChild(this._div);
 
         return this._div;
     };
@@ -557,6 +616,19 @@
                             .setLatLng(topoLsoaLayer["_layers"][layer].getBounds().getCenter())
                             .setContent(topoLsoaLayer["_layers"][layer].feature.properties.LSOA11NM)
                             .openOn(map);
+                        var deciles = [];
+                        for (var indicator in INDICATORS) {
+                            deciles.push({
+                                'indicator': indicator.toUpperCase(),
+                                'decile': window.data[lsoa11cd][indicator]['decile']
+                            });
+                            console.log(window.data[lsoa11cd][indicator]['decile']);
+                        }
+                        if (barchart._map != undefined) {
+                            map.removeControl(barchart);
+                        }
+                        barchart.addTo(map);
+                        barchart.draw(deciles);
                         topoLsoaLayer["_layers"][layer].setStyle({
                             weight: 5,
                             color: '#fff',
@@ -573,12 +645,21 @@
             input.removeEventListener('keyup', keypressEventListener);
         });
     };
-    searchbar.addTo(map);
+    searchbar.create(map);
     searchbar.configEventListener();
 
-    var barchart = L.control({
-        position: 'bottomright'
-    });
+
+    var colorsOfIndicators = {
+        'INCOME': '#805501',
+        'HEALTH': '#029FDA',
+        'EDUCATION': '#5203FF',
+        'EMPLOYMENT': '#DAA643',
+        'ENVIRONMENT': '#276880',
+        'HOUSING': '#864FFF',
+        'CRIME': '#FFDD9A'
+    };
+
+    var barchart = L.control({position : 'bottomright'});
     barchart.onAdd = function(map) {
         this._chartContainer = L.DomUtil.create('div', '');
         this._chartContainer.setAttribute('id', 'chartContainer');
@@ -586,12 +667,8 @@
     };
     // deciles
     barchart.draw = function(deciles) {
-        var margin = {
-                top: 10,
-                right: 0,
-                bottom: 40,
-                left: 20
-            },
+
+        var margin = {top: 10, right: 0, bottom: 55, left: 20},
             width = 320 - margin.left - margin.right,
             height = 250 - margin.top - margin.bottom;
 
@@ -625,6 +702,7 @@
             .call(xAxis)
             .selectAll('text')
             .style('text-anchor', 'end')
+            .attr('class', 'x-axis-label')
             .attr('dx', '0em')
             .attr('dy', '.8em')
             .attr('transform', 'rotate(-30)');
@@ -643,18 +721,26 @@
         svg.selectAll('.bar')
             .data(deciles)
             .enter().append('rect')
-            .attr('class', 'bar')
-            .attr('x', function(d) {
-                return x(d.indicator);
-            })
+              .attr('class', function(d) { return 'bar'; })
+            .attr('style', function(d) { return 'fill:' + colorsOfIndicators[d.indicator];})
+            .attr('x', function(d) { return x(d.indicator); })
             .attr('width', x.rangeBand())
-            .attr('y', function(d) {
-                return y(d.decile);
-            })
-            .attr('height', function(d) {
-                return height - y(d.decile);
-            })
+            .attr('y', height)
+            .attr('height', '1')
+            .transition()
+            .attr('y', function(d) { return y(d.decile); })
+            .attr('height', function(d) {return height - y(d.decile); });
     };
+
+    var legend = L.control({ position: 'bottomleft' });
+    legend.onAdd = function(map) {
+        this._div = L.DomUtil.create('div', 'legendContainer');
+        this._div.innerHTML = '<div class="legend-label"><strong>most</strong> deprived</div>' +
+            '<div class="legend"></div>' +
+            '<div class="legend-label"><strong>least</strong> deprived</div>';
+        return this._div;
+    };
+    legend.addTo(map);
 
 
 

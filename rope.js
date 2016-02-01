@@ -1,7 +1,11 @@
 (function() {
     "use strict";
 
-    function meanLsoa(indicator) {
+    function getIMDRank(lsoa) {
+        return window.data[lsoa]["IMD"]["rank"];
+    }
+
+    function meanLSOA() {
         var count;
         return Object.keys(window.data)
         .map(function (lsoa11cd) {
@@ -12,25 +16,19 @@
         }) / count;
     }
 
-    function max(indicator) {
-        return Object.keys(window.data)
-        .map(function (lsoa11cd) {
-            return window.data[lsoa11cd][indicator].raw;
-        }).reduce(function (max, a) {
-            return a > max ? a : max;
-        });
+    function maxLSOA() {
+        return Object.keys(window.data).reduce(function (a, b) {
+            return getIMDRank(a) > getIMDRank(b) ? a : b;
+        })[0];
     }
 
-    function min(indicator) {
-        return Object.keys(window.data)
-        .map(function (lsoa11cd) {
-            return window.data[lsoa11cd][indicator].raw;
-        }).reduce(function (max, a) {
-            return a < max ? a : max;
-        });
+    function minLSOA() {
+        return Object.keys(window.data).reduce(function (a, b) {
+            return getIMDRank(a) < getIMDRank(b) ? a : b;
+        })[0];
     }
 
-    function median(indicator) {
+    function medianLSOA() {
         var values = Object.keys(window.data)
         .map(function (lsoa11cd) {
             return window.data[lsoa11cd][indicator].raw;

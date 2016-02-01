@@ -125,7 +125,8 @@ def main():
 
     with open('data.json', 'w') as f:
         f.write("window.data = ")
-        json.dump(data, f)
+        json.dump(data, f, indent="  ", allow_nan=False, sort_keys=True)
+        f.write("\n")
 
 if __name__ == "__main__":
     main()
