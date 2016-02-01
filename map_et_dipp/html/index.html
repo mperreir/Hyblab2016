@@ -68,14 +68,16 @@
         
     </nav>-->
 
-    <section id="slide1">
-        <nav>
+        <nav id="lemenu">
             <ul>
                 <li><a href="#slide1"><b>Présentation</b></a></li>
                 <li><a href="#slide3">Les différents visages</a></li>
                 <li><a href="#slide7">Remerciements</a></li>
             </ul>
         </nav>
+        <img src="../img/cross.png" id="croixMenu"/>
+        <img src="../img/menu.png" id="boutonMenu" />
+    <section id="slide1">
         <div class="row">
             <div id="slide1Titre" class="col-lg-12 text-center">
                 <h1 id="titreSlide1">La ville comestible</h1>
@@ -91,13 +93,7 @@
 
     
     <section id="slide2">
-                <nav>
-            <ul>
-                <li><a href="#slide1"><b style="color: #78dc82;">Présentation</b></a></li>
-                <li><a href="#slide3">Les différents visages</a></li>
-                <li><a href="#slide7">Remerciements</a></li>
-            </ul>
-        </nav>
+
             <div class="row" id="row1slide2">
         <div class="container" >
 
@@ -126,13 +122,7 @@
     
     <!-- diagramme de Joseph -->
     <section class="success" id="slide3">
-                <nav>
-            <ul>
-                <li><a href="#slide1">Présentation</a></li>
-                <li><a href="#slide3"><b style="color: #fdbe63;">Les différents visages</b></a></li>
-                <li><a href="#slide7">Remerciements</a></li>
-            </ul>
-        </nav>
+
         <div class="container">
             <div class="row contenu">
 
@@ -196,13 +186,7 @@
     
     
     <section class="success" id="slide4">
-                <nav>
-            <ul>
-                <li><a href="#slide1">Présentation</a></li>
-                <li><a href="#slide3"><b>Les différents visages</b></a></li>
-                <li><a href="#slide7">Remerciements</a></li>
-            </ul>
-        </nav>
+
         <div class="container">
             <div class="row contenu">
                 <div class="col-lg-12 text-center">
@@ -239,13 +223,7 @@
     
     
     <section class="success" id="slide5">
-                <nav>
-            <ul>
-                <li><a href="#slide1">Présentation</a></li>
-                <li><a href="#slide3"><b>Les différents visages</b></a></li>
-                <li><a href="#slide7">Remerciements</a></li>
-            </ul>
-        </nav>
+
         <div class="row contenu">
             <div class="container">
                 <div class="col-lg-12 text-center">
@@ -275,13 +253,7 @@
     </section>
     
     <section id="slide6">
-                        <nav>
-            <ul>
-                <li><a href="#slide1">Présentation</a></li>
-                <li><a href="#slide3"><b style="color: #fdbe63;">Les différents visages</b></a></li>
-                <li><a href="#slide7">Remerciements</a></li>
-            </ul>
-        </nav>
+
         <div class="contenu">
             <div class="contaainer">
                     <h2>Les agriculteurs <b>s'enracinent en ville</b></h2>
@@ -289,12 +261,18 @@
                     <div id="araigneeAMAP"></div>
 
                     <div id="infosAraignee">
-                        <div id="legendeAraignee"></div>
-                            <div id="effetWahoo">
-                                <p>Comparez avec la distance moyenne parcourue par les <b>produits industriels</b> importés en <b>France</b> en cliquant
-                                </p>
-                            </div>
-                        <div id="texteAraignee"><p></p></div>
+                        <div id="legendeAraignee">
+                        </div>
+                        <div id="effetWahoo">
+                            <p>Comparez avec la distance moyenne parcourue par les <b>produits industriels</b> importés en <b>France</b> en cliquant
+                            </p>
+                        </div>
+                        <div id="texteAraignee">
+                            <br /><p style="text-align: justify;">Les AMAP* sont destinées à favoriser l'agriculture paysanne et biologique en distribuant en ville des légumes
+                                frais récoltés à proximité. Le principe : s’engager à acheter un panier de provisions à un prix équitable, payé à l’avance. Cela crée un circuit court : les paysans et les
+                                consommateurs d’un territoire sont mis en relation directement.</p>
+                            <span style="text-align: left;float: left;">*Associations pour le maintien d'une agriculture paysanne</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -309,13 +287,7 @@
     
     
     <section class="success" id="slide7">
-                        <nav>
-            <ul>
-                <li><a href="#slide1">Présentation</a></li>
-                <li><a href="#slide3">Les différents visages</a></li>
-                <li><a href="#slide7"><b>Remerciements</a></b></li>
-            </ul>
-        </nav>
+
         <div class="container">
             <div class="row text-center contenu">
                 <h2 class="col-lg-12" id="titreSlide7">Silence, ça pousse !</h2>
@@ -385,7 +357,27 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
+    <script type="text/javascript">
+        $("#lemenu").slideUp();
+        $("#croixMenu").slideUp();
+        document.getElementById("boutonMenu").addEventListener("click", function(e)
+        {
+            document.getElementById("boutonMenu").style.visibility = "hidden";
+            document.getElementById("croixMenu").style.visibility = "visible";
+            document.getElementById("lemenu").style.visibility = "visible";
+            $("#lemenu").slideDown(800);
+            $("#croixMenu").slideDown();
+
+        });
+        document.getElementById("croixMenu").addEventListener("click", function(e)
+        {
+            document.getElementById("boutonMenu").style.visibility = "visible";
+            document.getElementById("croixMenu").style.visibility = "hidden";
+            document.getElementById("lemenu").style.visibility = "hidden";
+        });
+    </script>
 
 </body>
 
 </html>
+

@@ -1,10 +1,14 @@
 nav
 {
+    position: fixed;
+    /*top: -7%;*/
     text-align: center;
+    width: 100%;
+    visibility: hidden;
 }
 nav li:not(:first-child)
 {
-    padding-left: 10%;
+    padding-left: 9%;
 }
 nav li
 {
@@ -19,7 +23,23 @@ nav li a
     text-transform: uppercase;
 }
 
-
+#croixMenu:hover, #boutonMenu:hover
+{
+    cursor: pointer;
+}
+#croixMenu, #boutonMenu
+{
+    display: block;
+    position: fixed;
+    left: 100%;
+    margin-top: 10px;
+    margin-left: -70px;
+    visibility: visible;
+}
+#croixMenu
+{
+    visibility: hidden;
+}
 #soustitreFirstSlide
 {
     color: #90d6df;
@@ -154,6 +174,7 @@ nav li a
 {
     color: #fdbe63;
 }
+
 #slide6 .contaainer
 {
     text-align: center;
@@ -172,10 +193,11 @@ nav li a
         margin-top: -20%;
     }
 }
+@media screen and (min-width: 1000px){
 #slide6 #infosAraignee
 {
     width: 350px;
-}
+}}
 @media screen and (min-width: 1000px){
 #slide6 #infosAraignee
 {
@@ -206,6 +228,7 @@ nav li a
     {
         display: inline-block;
         vertical-align: top;
+        width: 310px;
     }
 }
 
