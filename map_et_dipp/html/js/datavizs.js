@@ -6,7 +6,7 @@ var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "
   {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoBouteille.png"},
   {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoViande.png"},
   {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoMiel.png"},
-  {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoLegumes.png"}];
+  {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoAutres.png"}];
 
 var produitsDebut = [ {"produit":"Légumes","distanceMoyenne":0, "distMin":0, "distMax":0},
   {"produit":"Fruits", "distanceMoyenne":0, "distMin":0, "distMax":0},
@@ -353,57 +353,117 @@ var lignesApresMax = groupes.append("line").attr("x1", function(d, i) {
 svgAside.append("svg:image").attr("x",widthAside/4-25).attr("y",40).attr("width",50).attr("height",50).attr("xlink:href","./img/pictoFruits.png");
 svgAside.append("text").attr("class","nomCategorie").text("Fruits").attr("x",function(){
 
-	return widthAside/4-25;
-}).attr("y",130);
+	return widthAside/4-24;
+}).attr("y",130).attr("fill","#4c4c4c").attr("font-size","20px");
 svgAside.append("line").attr("x1", widthAside/2).attr("y1", 35).attr("x2",widthAside/2).attr("y2",135).attr("stroke-width",1).attr("stroke","orange");
 
-svgAside.append("text").attr("x",widthAside-(widthAside/3)-20).attr("y",40).text("max").attr("stroke","#1badbd").attr("fill","#1badbd").attr("stroke-width","1px");
-svgAside.append("text").attr("x",widthAside/2+85).attr("y",40).text("169.71").attr("class","max").attr("font-size","20px").attr("stroke","#999999").attr("fill","#999999").attr("stroke-width","1px");
-svgAside.append("text").attr("x",widthAside-(widthAside/3)-20).attr("y",85).text("moy").attr("stroke", "#90d7df").attr("fill","#90d7df").attr("stroke-width","1px");
-svgAside.append("text").attr("x",widthAside/2+85).attr("y",85).text("51.08").attr("class","moy").attr("font-size","20px").attr("stroke","#999999").attr("fill","#999999").attr("stroke-width","1px");
-svgAside.append("text").attr("x",widthAside-(widthAside/3)-20).attr("y",130).text("min").attr("stroke", "#4c4c4c").attr("fill","#4c4c4c").attr("stroke-width","1px");
-svgAside.append("text").attr("x",widthAside/2+85).attr("y",130).text("16.98").attr("class","min").attr("font-size","20px").attr("stroke","#999999").attr("fill","#999999").attr("stroke-width","1px");
+svgAside.append("text").attr("x",widthAside-(widthAside/3)-20)
+	.attr("y",40)
+	.text("MAX")
+	.attr("fill","#1badbd")
+	.attr("stroke-width","1px");
+
+svgAside.append("text")
+	.attr("x",widthAside/2+85)
+	.attr("y",40)
+	.text("169.71")
+	.attr("class","max")
+	.attr("font-size","20px")
+	.attr("fill","#999999")
+	.attr("stroke-width","1px");
+
+svgAside.append("text")
+	.attr("x",widthAside-(widthAside/3)-20)
+	.attr("y",85)
+	.text("MOY")
+	.attr("fill","#90d7df")
+	.attr("stroke-width","1px");
+
+svgAside.append("text")
+	.attr("x",widthAside/2+85)
+	.attr("y",85).text("51.08")
+	.attr("class","moy")
+	.attr("font-size","20px")
+	.attr("fill","#999999")
+	.attr("stroke-width","1px");
+
+svgAside.append("text")
+	.attr("x",widthAside-(widthAside/3)-20)
+	.attr("y",130)
+	.text("MIN")
+	.attr("fill","#4c4c4c")
+	.attr("stroke-width","1px");
+
+svgAside.append("text")
+	.attr("x",widthAside/2+85)
+	.attr("y",130)
+	.text("16.98")
+	.attr("class","min")
+	.attr("font-size","20px")
+	.attr("fill","#999999")
+	.attr("stroke-width","1px");
 
 //DESSIN DES PICTOS
-svg.selectAll("image").data(produits).enter()
-.append("svg:image").attr("x",function(d,i){
-	var x = (width/2) - nantesRadius - d.distMax - 70;
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
+svg.selectAll("image")
+	.data(produits)
+	.enter()
+	.append("svg:image")
+	.attr("x",function(d,i){
+		var x = (width/2) - nantesRadius - d.distMax - 70;
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
 
-	return (rotatePoint(x, y, (width/2), (height/2), angle).x)-30;
-}).
-attr("y",function(d,i){
-	var x = (width/2) - nantesRadius - d.distMax - 70;
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
+		return (rotatePoint(x, y, (width/2), (height/2), angle).x)-30;
+	})
+	.attr("y",function(d,i){
+		var x = (width/2) - nantesRadius - d.distMax - 70;
+		var y = (height/2);
+		var angle = i*(Math.PI*2)/produits.length;
 
-	return (rotatePoint(x, y, (width/2), (height/2), angle).y)-30;
-}).attr("width", 50).attr("height",50).attr("xlink:href",function(d,i){
-	return "./img/"+d.img;
+		return (rotatePoint(x, y, (width/2), (height/2), angle).y)-30;
+	})
+	.attr("width", 50)
+	.attr("height",50)
+	.attr("xlink:href",function(d,i){
+		return "./img/"+d.img;
+	})
+	.attr("categorie",function(d){return d.produit;})
+	.attr("distMin",function(d){return d.distMin.toFixed(2);})
+	.attr("distMoy",function(d){return d.distanceMoyenne.toFixed(2);})
+	.attr("distMax",function(d){return d.distMax.toFixed(2);})
+	.on("mouseover", function(d){
+		svgAside.selectAll("text.nomCategorie").text(d3.select(this).attr("categorie"));
+	
+		svgAside.selectAll("text.nomCategorie").attr("x",widthAside/4-(4*(d3.select(this).attr("categorie").length)));
 
-}).attr("categorie",function(d){return d.produit;}).attr("distMin",function(d){return d.distMin.toFixed(2);}).attr("distMoy",function(d){return d.distanceMoyenne.toFixed(2);})
-.attr("distMax",function(d){return d.distMax.toFixed(2);}).on("mouseover", function(d){
-	svgAside.selectAll("text.nomCategorie").text(d3.select(this).attr("categorie"));
-	svgAside.selectAll("text.max").text(d3.select(this).attr("distMax"));
-	svgAside.selectAll("text.moy").text(d3.select(this).attr("distMoy"));
-	svgAside.selectAll("text.min").text(d3.select(this).attr("distMin"));
-	svg.selectAll("line[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke","grey");
+		svgAside.selectAll("text.max").text(d3.select(this).attr("distMax"));
+		svgAside.selectAll("text.moy").text(d3.select(this).attr("distMoy"));
+		svgAside.selectAll("text.min").text(d3.select(this).attr("distMin"));
+		svg.selectAll("line[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke","grey");
 
-	return svgAside.selectAll("image").attr("xlink:href",d3.select(this).attr("xlink:href"));
-}).on("mousemove",function(d){
-	//return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
-}).on("mouseout",function(d){
-	svg.selectAll("line.ligneMin[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke",couleurLigneMin);
-	svg.selectAll("line.ligneMoy[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke",couleurLigneMoy);
-	svg.selectAll("line.ligneMax[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke",couleurLigneMax);
-	//d3.select(this).attr("stroke","#adf0c3");
-	//return tooltip.style("visibility","hidden");
-});
+		return svgAside.selectAll("image").attr("xlink:href",d3.select(this).attr("xlink:href"));
+	})
+	.on("mousemove",function(d){
+		//return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
+	})
+	.on("mouseout",function(d){
+		svg.selectAll("line.ligneMin[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke",couleurLigneMin);
+		svg.selectAll("line.ligneMoy[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke",couleurLigneMoy);
+		svg.selectAll("line.ligneMax[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke",couleurLigneMax);
+		//d3.select(this).attr("stroke","#adf0c3");
+		//return tooltip.style("visibility","hidden");
+	});
 
 
 //bouton changement d'échelle
-svg.selectAll("text").data(wahoo).enter().append("text").text("changer l'échelle").attr("x",0).attr("y",100).on("click",function(){
+svg.selectAll("text")
+	.data(wahoo)
+	.enter()
+	.append("text")
+	.text("changer l'échelle")
+	.attr("x",0)
+	.attr("y",100)
+	.on("click",function(){
 	return svg.transition().attr("transform","scale(0.1) translate("+width*4.5+","+height*4.5+")").ease("linear").duration(1000).delay(100);
 });
 
