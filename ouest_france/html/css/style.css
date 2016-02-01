@@ -12,28 +12,28 @@
 }
 
 h1{
-	position: absolute;
-	top: 0px;
-	width: 100%;
 	color: #C2DEBC;
 	font-size: 42px;
 }
 
 h2{
 	color: #5794B2;
-	position: absolute;
-	bottom: 200px;
-	width: 100%;
 }
 
 #scroll{
-	width:30%;
-	height:30%;
+	position: relative;
+	bottom: 16vh;
+	height: 40vh;
 }
 
 .svg{
 	width: 80%;
 	height: 80%;
+}
+
+.isles{
+	position:relative;
+	top:-14vh;
 }
 
 #s1 {
