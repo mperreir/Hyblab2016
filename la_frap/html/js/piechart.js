@@ -9,19 +9,19 @@ window.addEventListener('load',function () {
 				"font": "courier"
 			},
 			"subtitle": {
+				"text": "Cliquez pour afficher les valeurs",
 				"color": "#999999",
-				"fontSize": 10,
+				"fontSize": 12,
 				"font": "courier"
 			},
 			"titleSubtitlePadding": 10
-		},*/
+		},
 		"footer": {
-			"text": "Cliquez pour afficher les valeurs",
 			"color": "#999999",
 			"fontSize": 12,
 			"font": "open sans",
 			"location": "bottom-center"
-		},
+		},*/
 		"size": {
 			"canvasWidth": 300,
 			"pieInnerRadius": "64%",
@@ -130,15 +130,24 @@ window.addEventListener('load',function () {
 			}
 		}
 	});
+	
 	var svg = d3.select("#pieChart").select("svg");
 	var pieData = svg.append("text")
-					 .attr("fill", "white")
-					 .attr("font-size", "30px")
-					 .attr("text-anchor", "middle")
-					 .attr("x", "50%")
-					 .attr("y", "50%")
-					 .attr("dx", "0px")
-					 .attr("dy", "10px");
+					.attr("fill", "white")
+					.attr("font-size", "30px")
+					.attr("text-anchor", "middle")
+					.attr("x", "50%")
+					.attr("y", "50%")
+					.attr("dx", "0px")
+					.attr("dy", "10px");
+					 
+	var pieClick = svg.append("text")
+					.attr("fill", "lightgrey")
+					.attr("font-size", "14px")
+					.attr("text-anchor", "middle")
+					.attr("x", "50%")
+					.attr("y", "75%")
+					.text("Cliquez pour afficher les valeurs")
 
 	/*pie = d3.select("#pieChart").select("svg");
 	pie.attr("height",300)*/
