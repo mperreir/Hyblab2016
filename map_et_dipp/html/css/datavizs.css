@@ -222,6 +222,58 @@ section .container .contenu {
 }
 
 
+/* slide 4 */
+#slide4 .contenu {
+    background-color: #82e69b;
+    padding-top: 15px;
+}
+
+#slide4 .contenu h1 {
+    color: #ffffff;
+    font: 31px / 34px Museo;
+    margin-bottom: 0;
+}
+
+#slide4 .contenu h2 {
+    margin-top: 0;
+    color: #ffffff;
+    font: 20px / 34px Museo;
+}
+
+#slide4 .contenu section {
+    height: auto;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: inherit;
+    /* contour */
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+}
+
+#slide4 .contenu section header {
+    background-color: inherit;
+    color: #4c4c4c;
+    font: 15px / 14px Museo;
+    text-align: left;
+}
+
+#slide4 .contenu section article {
+    color: #4c4c4c;
+    font: 400 12px / 14px Arial;
+}
+
+#slide4 .contenu section aside {
+    /* correspond à la citation */
+    color: #ffffff;
+    font: 17px / 19px Museo;
+}
+
+#slide4 .flecheSlide {
+    background-color: white;
+}
+
+
+
 /* slide 5 */
 #slide5 {
     background-color: #90d7df;
