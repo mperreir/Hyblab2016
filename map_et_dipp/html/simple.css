@@ -19,6 +19,11 @@
     src: url("./fonts/ARIALBD.TTF");
 }
 
+@font-face {
+    font-family: FuturaPT;
+    src: url("./fonts/FuturaStd-Book.otf");
+}
+
 *
 {
 	font-family: arialSansSerif;
@@ -155,16 +160,21 @@ nav .boutonMenu
     text-align: center;
 }
 
-#slide4 h2 {
-    color: #fdbe63;
-    font: 40px Museo;
+#slide4 header {
+    
 }
 
-#slide4 h3 {
+#slide4 header h2 {
+    color: #fdbe63;
+    font: 40px museoReg;
+    margin-top: 0;
+}
+
+#slide4 header h3 {
     padding: 5px;
     /* style du texte */
     color: #fdbe63;
-    font: 18px Museo;
+    font: 18px museoReg;
     /* contour */
     border: 2px solid #fdbe63;
     border-radius: 5px;
@@ -179,7 +189,7 @@ nav .boutonMenu
     padding-bottom: 10px;
     /* style du texte */
     color: #4c4c4c;
-    font: 15px / 19px Museo;
+    font: 15px / 19px museoReg;
     /* contour */
     border: 2px solid #fdbe63;
     border-radius: 50px;
@@ -189,7 +199,11 @@ nav .boutonMenu
     float: none;
 }
 
-
+#slide4 aside p {
+    /* style du texte */
+    color: #4c4c4c;
+    font: 400 17px / 21px Arial;
+}
 
 /*
     Partie Diagramme de Joseph
@@ -211,7 +225,7 @@ nav .boutonMenu
 #uniteTotalJoseph {
     margin: 0;
     color: #fdbe63;
-    font: 18px MuseoSlab;
+    font: 18px museoBold;
     display: inline-block;
 }
 
