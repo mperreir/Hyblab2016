@@ -164,6 +164,24 @@ nav .boutonMenu
     display: inline-block;
 }
 
+#slide4 article {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    /* style du texte */
+    color: #4c4c4c;
+    font: 15px / 19px Museo;
+    /* contour */
+    border: 2px solid #fdbe63;
+    border-radius: 50px;
+    /* permet de centrer verticalement les balises, doit être utilisé sur toutes les balises du même row */
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
 
 /*
     Partie Diagramme de Joseph
