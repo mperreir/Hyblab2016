@@ -492,10 +492,10 @@ function goTo2008 () {
 	var bouton_2014 = document.getElementById("bouton_2014_data1");
 	$(bouton_2014).transition({
 		scale: 0.8,
-		opacity: 0.7
+		opacity: 0.5
 	})
 	$(bouton_2008_data1).transition({
-		scale: 1.2,
+		scale: 1.3,
 		opacity: 1
 	})
 
@@ -532,12 +532,12 @@ function goTo2014 () {
 	var bouton_2008 = document.getElementById("bouton_2008_data1");
 	var bouton_2014 = document.getElementById("bouton_2014_data1");
 	$(bouton_2014).transition({
-		scale: 1.2,
+		scale: 1.3,
 		opacity: 1
 	})
 	$(bouton_2008_data1).transition({
 		scale: 0.8,
-		opacity: 0.7
+		opacity: 0.5
 	})
 
 	document.getElementById("bouton_2008_data1").style.pointerEvents = "auto";
