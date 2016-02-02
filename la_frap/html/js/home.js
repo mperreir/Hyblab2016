@@ -61,4 +61,51 @@ window.addEventListener('load', function (){
 		self.location.href='index.html#thirdPage';
 	});
 
+	var click = "sub";
+	var sub = d3.selectAll("#choixsubvention");
+	var rh = d3.selectAll("#choixrh");
+
+	sub.on('mouseover', function (){
+		if (click != "sub"){
+			sub.style("background-color","white");
+			sub.style("color","#179fae");
+		}
+	});
+
+	sub.on('mouseout', function (){
+		if (click != "sub"){
+			sub.style("background-color","#02141e");
+			sub.style("color","#324c5a");
+		}
+	});
+
+	sub.on('click', function (){
+		click = "sub";
+		sub.style("background-color","white");
+		sub.style("color","#179fae");
+		rh.style("background-color","#02141e");
+		rh.style("color","#324c5a");
+	});
+
+	rh.on('mouseover', function (){
+		if (click != "rh"){
+			rh.style("background-color","white");
+			rh.style("color","#179fae");
+		}
+	});
+
+	rh.on('mouseout', function (){
+		if (click != "rh"){
+			rh.style("background-color","#02141e");
+			rh.style("color","#324c5a");
+		}
+	});
+
+	rh.on('click', function (){
+		click = "rh";
+		rh.style("background-color","white");
+		rh.style("color","#179fae");
+		sub.style("background-color","#02141e");
+		sub.style("color","#324c5a");
+	});
 });

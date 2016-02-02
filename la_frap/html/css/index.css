@@ -261,6 +261,9 @@ div#pieChart{
 
 #financement{
 	clear: left;
+	position: absolute;
+	margin-top:125px;
+	margin-left: 80px;
 }
 
 g.provenance text{
@@ -363,3 +366,47 @@ svg {
 	margin-top: 5%;
 	margin-left: 50px;
 }
+
+.choixevolution{
+	width:100%;
+	top:150px;
+	height:10%;
+	display: inline-block;
+	position: absolute;
+}
+
+#choixsubvention{
+	width:47.8%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: absolute;
+	margin-top:10px;
+	margin-left: 2%;
+	left:0%;
+	text-align: center;
+	border: solid;
+	border-width: 1px;
+	border-color: #179fae;
+	display: inline-block;
+	background-color: white;	
+	color:#179fae;
+
+}
+
+#choixrh{
+	width:47.8%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: absolute;
+	display: inline-block;	
+	margin-top:10px;
+	margin-right: 2%;
+	right:0%;
+	text-align: center;
+	border: solid;
+	border-width: 1px;
+	border-color: #179fae;
+	background-color: #02141e;
+	color:#324c5a;
+}
+
