@@ -32,6 +32,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/javascript.fullPage.css" />
 
+    <!-- Importation de la police Ubuntu -->
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
   </head>
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
@@ -89,7 +92,7 @@
           <!--<h2 class="titre" id="titre_intercalaire_questionnaire" >
             CONNAISSEZ-VOUS VOTRE RÉGION ?
           </h2>-->
-          <button class="bouton_demarrer" onclick="startQ()" >Démarrer</button>
+          <button class="bouton_demarrer" onclick="startQ()" >DÉMARRER</button>
         </span>
       </section>
 
@@ -110,7 +113,7 @@
             <img class="" src="../resources/images/questionnaire/france.svg" alt="Fond" id="france" />
 
             <!--<h2 class="text-center titre">
-              EN 2012 LE NOMBRE D'<span class="mot_important">HABITANTS</span> EN PAYS DE LA LOIRE ÉTAIT DE : 
+              EN 2012 LE <span class="mot_important EN ORANGE">NOMBRE D'HABITANTS</span> EN PAYS DE LA LOIRE ÉTAIT DE : 
             </h2>-->
 
             <span class="text-center answers bloc_reponse" id="q1_ag">
@@ -118,6 +121,7 @@
               <b>BONNE RÉPONSE</b><br/></br>
               Bravo ! La région compte plus de 3 600 000 habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
               </p>
+              <!-- LE NOMBRE EST COUPE SUR 2 LIGNES DAN SLES 2 BLOCS-->
               <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q1_ag_button" />
             </span>
 
@@ -232,7 +236,7 @@
 
             <span class="contenu propositions">
               <ul class="text-center liste_propositions" id="q3">
-                <li onclick="chooseAnswer(this.id)" id="q3_p1"><p>Eolien</p></li>
+                <li onclick="chooseAnswer(this.id)" id="q3_p1"><p>Eolienne</p></li>
                 <li onclick="chooseAnswer(this.id)" id="q3_p2"><p>Photovoltaïque</p></li>
                 <li onclick="chooseAnswer(this.id)" id="q3_p3"><p>Biomasse</p></li>
 
@@ -294,9 +298,10 @@
         <span class="responsive_container">
           <img class="image_fond" src="../resources/images/Backgrounds/background3-07.svg" alt="Fond" />
 
+          <!-- Changer de titre -->
           <span id="data1_infos">
             <b>LA RÉGION SE DÉVELOPPE DE MANIÈRE IMPORTANTE</b><br/>
-            <p>De nouvelles activités voient le jour, des entreprises apparaissent et la population augmente. Le besoin en énergie est de plus en plus important et nécessite des solutions environnementales adaptés: les énergies renouvelables se développent !</p>
+            <p>De nouvelles activités voient le jour, des entreprises apparaissent et la population augmente. Le besoin en énergie est de plus en plus important et nécessite des solutions environnementales adaptées: les énergies renouvelables se développent !</p>
           </span>
 
           <span class="bloc_reponse" id="saviez_vous">
@@ -437,7 +442,7 @@
             <span class="bloc_reponse" id="saviez_vous_eolienne">
                 <b>LE SAVIEZ-VOUS ?</b><br/><br/>
                 <p>Les éoliennes sont une source d’énergie électrique renouvelable,
-                elles permettent d’exploiter la force du vent. - En Pays de Loire, on compte plus de 62 parcs
+                elles permettent d’exploiter la force du vent. En Pays de Loire, on compte plus de 62 parcs
                 éoliens raccordés au réseau.
                 En 2014, la part de l’énergie sous obligation d’achat produite par les éoliennes représentait 64,5%
                 de la production des énergies renouvelables en région.<br/>
@@ -446,7 +451,7 @@
             <span class="bloc_reponse" id="saviez_vous_solaire" style="display: none">
                 <b>LE SAVIEZ-VOUS ?</b><br/><br/>
                 <p>L’énergie photovoltaïque permet de produire de
-                l’électricité en utilisant le rayonnement solaire. Elle connaît un fort développement.- En Pays de la
+                l’électricité en utilisant le rayonnement solaire. Elle connaît un fort développement. En Pays de la
                 Loire, on compte plus de 38 000 sites raccordés au réseau.<br/>
                 En 2014, la part de l’énergie sous obligation d’achat produite par les installations photovoltaïques
                 représentait 22% de la production des énergies renouvelables en région.<br/>
@@ -457,7 +462,7 @@
                 <p> La biomasse permet de générer de la chaleur à partir de
                 matières organiques vivantes, d’origine végétale ou animale. Cette chaleur permet de produire de
                 l’électricité. Elle dégage très peu de gaz à effet de serre, cette source d’énergie naturelle, participe
-                au traitement et à la destruction des déchets organiques. - En pays de la Loire, on compte plus de
+                au traitement et à la destruction des déchets organiques. En pays de la Loire, on compte plus de
                 26 installations de méthanisation (biomasse).<br/>
                 En 2014, la part de l’énergie sous obligation d’achat produite par les installations photovoltaïques
                 représentait 12% de la production des énergies renouvelables en région.<br/>
