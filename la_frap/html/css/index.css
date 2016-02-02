@@ -262,7 +262,7 @@ div#pieChart{
 #financement{
 	clear: left;
 	position: absolute;
-	margin-top:125px;
+	margin-top:160px;
 	margin-left: 80px;
 }
 
@@ -323,7 +323,7 @@ svg {
 	background-color: #003f4e;
 	font-size: 18px;
 	right:10%;
-	top:30%;
+	margin-top: 70px;
 }
 
 .texteintro p{
@@ -334,15 +334,17 @@ svg {
 .bouton{
 	color: #179FAE;
 	background-color: #031d2a;
-  	border-color: #179FAE;
+  	border-color: #179FAE;  
+}
 
- }
+#boutonevo{
+  	margin-left: 43%;	
+}
 
 .bouton:hover{
 	color: #031d2a;
 	background-color: #179FAE;
 	border-color: #031d2a;
-
 }
 
 #nomdpt{
@@ -410,3 +412,34 @@ svg {
 	color:#324c5a;
 }
 
+.content4{
+	width:100%;
+	text-align: center;
+}
+
+#frap{
+	display:block;
+	margin-top: 50px;
+}
+
+#credits{
+	display:block;
+	margin-top: 50px;
+	margin-left:30%;
+	margin-right:30%;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-bottom: solid;
+	border-top: solid;
+	border-color: #179fae;
+	border-width: 1px;
+}
+
+#partenaire{
+	display:block;	
+	margin-top: 20px;
+}
+
+#partenaire img{
+	margin:10px; 
+}

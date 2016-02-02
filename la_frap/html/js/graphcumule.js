@@ -70,7 +70,7 @@ function cumule (){
 
 			  var g = svg.selectAll("g")
 			      .data(provenances)
-			    .enter().append("g")
+			      .enter().append("g")
 			      .attr("class", "provenance");
 
 			  setTimeout(lines, duration+delay);
@@ -274,5 +274,7 @@ function cumule (){
 			    svg.selectAll("g").data(provenances).enter().append("g").attr("class", "provenance");
 			  }, duration);
 			}
+
+			
 		}
 	}
