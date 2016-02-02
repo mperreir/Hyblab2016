@@ -18,40 +18,48 @@
     font-family: arialSansSerifBold;
     src: url("./fonts/ARIALBD.TTF");
 }
+
 nav
 {
 	width: 100%;
 	text-align: center;
 }
+
 nav ul li
 {
 	display: inline-block;
 	vertical-align: top;
 }
+
 nav ul li:not(:first-child)
 {
 	margin-left: 12%;
 }
+
 nav .boutonMenu
 {
 	float: right;
 	margin-right: 25px;
 	margin-top: -40px;
 }
+
 .section
 {
 	position: relative;
 }
+
 #slide1
 {
 	background: url("./img/villeSlide1.png") no-repeat bottom center;
 }
+
 #slide1 h1
 {
 	font-family: libelSuit;
 	font-size: 63px;
 	letter-spacing: 3pt;
 }
+
 #slide1 h2
 {
 	color: #90d7df;
@@ -59,6 +67,7 @@ nav .boutonMenu
 	letter-spacing: 3pt;
 	line-height: 32pt;
 }
+
 #slide1 #titreSite
 {
 	text-align: center;
@@ -71,11 +80,13 @@ nav .boutonMenu
 {
 	margin-top: 3%;
 }
+
 #slide2
 {
 	background: #78dc82;
 	text-align: center;
 }
+
 #slide2 h2, #slide2 h1
 {
 	text-align: left;
@@ -83,6 +94,7 @@ nav .boutonMenu
 	font-family: museoReg;
 	letter-spacing: 3pt;
 }
+
 #slide2 p
 {
 	text-align: justify;
@@ -96,18 +108,21 @@ nav .boutonMenu
 	display: inline-block;
 	vertical-align: top;
 }
+
 .coteDroit
 {
 	width: 45%;
 	display: inline-block;
 	vertical-align: top;
 }
+
 .fullCentre
 {
 	text-align: center;
 	width: 80%;
 	margin: auto;
 }
+
 .flecheBas
 {
 	width: 100%;
@@ -117,6 +132,7 @@ nav .boutonMenu
 	margin-top: -30px;
 	cursor: pointer;
 }
+
 .bandeauBas
 {
 	padding-top: 15px;
