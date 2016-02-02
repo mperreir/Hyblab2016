@@ -220,11 +220,15 @@
 
 
 
-    var hasInitializedStyle = false;
+    var lsoaInitializedStyleCount = 0;
+    var msoaInitializedStyleCount = 0;
+    var lsoaLayersNum = window.topo_lsoa.objects["E07000123"]["geometries"].length;
+    var msoaLayersNum = Object.keys(MSOA).length;
 
     function LsoaStyle(feature) {
-        if (!hasInitializedStyle) {
+        if (lsoaInitializedStyleCount < lsoaLayersNum) {
             var d = window.data[feature.properties.LSOA11CD];
+            lsoaInitializedStyleCount++;
             return {
                 fillColor: getColor(d["IMD"]["raw"]),
                 weight: 2,
@@ -244,7 +248,8 @@
     }
 
     function MsoaStyle(feature) {
-        if (!hasInitializedStyle) {
+        if (msoaInitializedStyleCount < msoaLayersNum) {
+            msoaInitializedStyleCount++;
             return {
                 fillColor: getColor(MSOA[feature.properties.MSOA11CD]["IMD"]),
                 weight: 1,
@@ -569,7 +574,6 @@
                 });
             });
             sliderListenersAdded = true;
-            hasInitializedStyle = true;
         } else if (props !== undefined) {
             if (props.hasOwnProperty("LSOA11CD"))
                 //document.getElementById("idm").innerHTML = ": " + calculateIMD(props["LSOA11CD"]).toFixed(1) + "%";
@@ -891,6 +895,13 @@
     addEventListenerByClass("icon_info", 'mouseout', function(e) {
         d3.select(e.target)
             .attr("xlink:href", "image/info28.png");
-    });    
-    
+    });
+
+    // Temporary fix, used util IMD calculation error is fixed
+    topoMsoaLayer.eachLayer(function(layer) {
+        topoMsoaLayer.resetStyle(layer);
+    });
+    topoLsoaLayer.eachLayer(function(layer) {
+        topoLsoaLayer.resetStyle(layer);
+    });
 }());
