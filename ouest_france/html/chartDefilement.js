@@ -9,7 +9,7 @@ var dataCharts = {
 function requestGenerateChart(type){
 	if(!dataCharts[type]){
 		var requete = $.ajax({
-			url : "http://127.0.0.1:8080/ouest_france/data/"+type+"/years",
+			url : "data/"+type+"/years",
 			type : "GET",
 			dataType : "text",
 			success : generateChart,

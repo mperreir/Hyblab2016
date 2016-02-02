@@ -1,6 +1,38 @@
 "use strict";
 
 
+// Create a simple bar chart
+var data = {
+  labels: ['Essence', 'GNV', 'Électricité', 'Diesel', 'Bicrburation'],
+  series: [
+    [1],[2],[3],[4],[5]
+  ]
+};
+
+// In the global name space Chartist we call the Bar function to initialize a bar chart. As a first parameter we pass in a selector where we would like to get our chart created and as a second parameter we pass our data object.
+
+
+
+function generateCarburBar(donnee){
+	new Chartist.Bar('#carbu',
+	donnee,
+	{
+		axisX:{
+			showGrid: false,
+			showLabel: false
+		},
+		axisY:{
+			showLabel: false,
+			showGrid: false
+		},
+		horizontalBars: true
+		
+	});
+};
+
+
+
+
 function generateMenageDonut(donnee){
 
 	var label = '<h3>'+donnee+'%</h3>'
@@ -61,6 +93,7 @@ function generateMenageDonut(donnee){
 };
 
 generateMenageDonut(60);
+generateCarburBar(data);
 
 /*
 var chart = new Chartist.Pie('.ct-chart', {

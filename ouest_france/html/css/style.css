@@ -96,19 +96,19 @@ h2{
 	height: 11vh;
 }
 
-#monomotor{
+#mono{
 	z-index: 20;
 	top : 15vh;
 	left: 44vw;
 }
 
-#nomotor{
+#none{
 	z-index: 21;
 	top: 32vh;
 	left: 30vw;
 }
 
-#bimotor{
+#biPlus{
 	z-index: 22;
 	top: 40vh;
 	left: 53vw;
@@ -130,7 +130,7 @@ h2{
 
 h3{
 	font-family: "Avenir";
-	font-size: 15pt;
+	font-size: 1.7em;
 	color: #C96178;
 }
 
