@@ -92,8 +92,8 @@ h2{
 
 .donut{
 	position: absolute;
-	width: 7vw;
-	height: 7vw;
+	width: 11vh;
+	height: 11vh;
 }
 
 #mono{
@@ -130,7 +130,7 @@ h2{
 
 h3{
 	font-family: "Avenir";
-	font-size: 15pt;
+	font-size: 1.7em;
 	color: #C96178;
 }
 

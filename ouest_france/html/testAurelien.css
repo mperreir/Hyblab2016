@@ -1,9 +1,3 @@
-.percent{
-	position: relative;
-	text-align: center;
-	top: 35vh;
-}
-
 .ct-chart-donut .ct-series-a .ct-slice-donut {
 	stroke: #C2DEBC;
 }
@@ -22,4 +16,8 @@ h3{
 	font-family: "Avenir";
 	font-size: 30pt;
 	color: #70C2B8;
+}
+
+.bar{
+	width: 50vw;
 }
