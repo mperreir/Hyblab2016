@@ -22,6 +22,12 @@
 *
 {
 	font-family: arialSansSerif;
+	margin: 0px;
+	padding: 0px;
+}
+h1,h2
+{
+	font-family: museoReg;
 }
 nav
 {
@@ -137,6 +143,193 @@ nav .boutonMenu
 	cursor: pointer;
 }
 
+
+
+
+
+/* slide 4 : Joseph */
+
+#slide4 {
+    text-align: center;
+}
+
+#slide4 h2 {
+    color: #fdbe63;
+    font: 40px Museo;
+}
+
+#slide4 h3 {
+    padding: 5px;
+    /* style du texte */
+    color: #fdbe63;
+    font: 18px Museo;
+    /* contour */
+    border: 2px solid #fdbe63;
+    border-radius: 5px;
+    /* pour que la largeur du titre soit égale à la taille du texte, et non à la taille de la page */
+    display: inline-block;
+}
+
+#slide4 article {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    /* style du texte */
+    color: #4c4c4c;
+    font: 15px / 19px Museo;
+    /* contour */
+    border: 2px solid #fdbe63;
+    border-radius: 50px;
+    /* permet de centrer verticalement les balises, doit être utilisé sur toutes les balises du même row */
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
+
+/*
+    Partie Diagramme de Joseph
+*/
+
+#totalJoseph {
+    margin: 0;
+    padding: 0;
+}
+
+#totalJoseph p {
+    margin: 0;
+    display: inline-block;
+    /* style du texte */
+    color: #666666;
+    font: 300 60px FuturaPT;
+}
+
+#uniteTotalJoseph {
+    margin: 0;
+    color: #fdbe63;
+    font: 18px MuseoSlab;
+    display: inline-block;
+}
+
+
+#diagrammeJoseph {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+
+.baliseJauge {
+    display: inline-block;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 0;
+    
+    width: 100px;
+    height: 150px;
+}
+
+.baliseJauge svg {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    
+}
+
+.baliseJauge svg g {
+    
+}
+
+.radioJoseph {  
+    display: none;  /* faire disparaître les puces inutiles */
+}
+
+.labelRadioJoseph {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+/* radio printemps */
+#labelJoseph_printemps {
+    background: url(./img/diagrammes/joseph/printemps.png) left top no-repeat;
+}
+
+#labelJoseph_printemps:hover {  
+    background: url(./img/diagrammes/joseph/printemps_hover.png) left top no-repeat;
+}
+
+#radioJoseph_printemps:checked + .labelRadioJoseph {
+    background: url(./img/diagrammes/joseph/printemps_checked.png) left top no-repeat;
+}
+
+/* radio été */
+#labelJoseph_ete {
+    background: url(./img/diagrammes/joseph/ete.png) left top no-repeat;
+}
+
+#labelJoseph_ete:hover {  
+    background: url(./img/diagrammes/joseph/ete_hover.png) top no-repeat;
+}
+
+#radioJoseph_ete:checked + .labelRadioJoseph {
+    background: url(./img/diagrammes/joseph/ete_checked.png) left top no-repeat;
+}
+
+/* radio automne */
+#labelJoseph_automne {
+    background: url(./img/diagrammes/joseph/automne.png) left top no-repeat;
+}
+
+#labelJoseph_automne:hover {  
+    background: url(./img/diagrammes/joseph/automne_hover.png) left top no-repeat;
+}
+
+#radioJoseph_automne:checked + .labelRadioJoseph {
+    background: url(./img/diagrammes/joseph/automne_checked.png) left top no-repeat;
+}
+
+/* radio hiver */
+#labelJoseph_hiver {
+    background: url(./img/diagrammes/joseph/hiver.png) left top no-repeat;
+}
+
+#labelJoseph_hiver:hover {  
+    background: url(./img/diagrammes/joseph/hiver_hover.png) left top no-repeat;
+}
+
+#radioJoseph_hiver:checked + .labelRadioJoseph {
+    background: url(./img/diagrammes/joseph/hiver_checked.png) left top no-repeat;
+}
+
+/* radio total */
+#labelJoseph_total {
+    background: url(./img/diagrammes/joseph/total.png) left top no-repeat;
+    width: 75px;
+    height: 75px;
+}
+
+#labelJoseph_total:hover {  
+    background: url(./img/diagrammes/joseph/total_hover.png) left top no-repeat;
+}
+
+#radioJoseph_total:checked + .labelRadioJoseph {
+    background: url(./img/diagrammes/joseph/total_checked.png) left top no-repeat;
+}
+
+
+
+
+
+
+
+/* flèche du bas */
 .bandeauBas
 {
 	padding-top: 15px;
@@ -149,4 +342,25 @@ nav .boutonMenu
 	background: white;
 	color: #78dc82;
 	font-size: 20px;
+}
+#slide7
+{
+	text-align: center;
+}
+#slide7 h1
+{
+	color: #fdbe63;
+}
+
+#slide7 #lebadge
+{
+	margin-top: 1%;
+	color: #fdbe63;
+	font-size: 16px;
+	border: 1px solid #fdbe63;
+	border-radius: 6px;
+	padding: 5px;
+	width: 135px;
+	text-align: center;
+	font-family: museoReg;
 }

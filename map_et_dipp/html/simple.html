@@ -10,6 +10,7 @@
 	<meta name="Resource-type" content="Document" />
 
 
+
 	<link rel="stylesheet" type="text/css" href="./jquery.fullPage.css" />
 	<!--<link rel="stylesheet" type="text/css" href="examples.css" />-->
 	<link rel="stylesheet" type="text/css" href="simple.css" />
@@ -68,7 +69,7 @@
 				</p>
 			</div>
 			<div class="coteDroit">
-				<img style="width:80%;" src="img/slide_2_chart.png" />
+				<img style="width:60vh;" src="img/slide_2_chart.png" />
 			</div>
 		</div>
 		<div class="bandeauBas">
@@ -80,14 +81,50 @@
     
     
 	<div class="section" id="slide3">
-        <h1>No wraps, no extra markup</h1>
-    
+        
+        <p>Il habite à trois heures d’ici, mais cela pourrait se passer chez un nantais. Joseph Chauffrey, qui n’y connaissait rien, a réussi à produire 252 kilos de fruits et légumes dans ses 150m2 de terrain, dont seulement 25m2 de potager.</p>
+        <p>Son mot d’ordre ? <strong>Permaculture</strong>, soit une forme respectueuse et écologique de production.</p>
     
     </div>
     
     
 	<div class="section" id="slide4">
-        <h1>No wraps, no extra markup</h1>
+        <header>
+            <h3>TOUT SEUL</h3>
+            <h2>Un jardin et 252kg de légumes urbains</h2>
+        </header>
+        
+        <article>
+            <p>Joseph et sa famille ont pu manger des légumes toute l’année. Cliquez sur chaque saison pour découvrir le poids des récoltes et constater les effets de la permaculture en ville !</p>
+
+            <div id="boutonDiagrammeJoseph">    
+                <div>
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_total" onclick="updateDiagrammeJoseph('total')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_total" id="labelJoseph_total"></label>
+                </div>
+
+                <div>
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_printemps" onclick="updateDiagrammeJoseph('printemps')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_printemps" id="labelJoseph_printemps"></label>
+
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_ete" onclick="updateDiagrammeJoseph('ete')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_ete" id="labelJoseph_ete"></label>
+
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_automne" onclick="updateDiagrammeJoseph('automne')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_automne" id="labelJoseph_automne"></label>
+
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_hiver" onclick="updateDiagrammeJoseph('hiver')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_hiver" id="labelJoseph_hiver"></label>
+                </div>
+            </div>
+        </article>
+                
+
+        <div id="diagrammeJoseph"></div>
+        <div id="totalJoseph"></div>
+        <p id="uniteTotalJoseph">total en kg</p>
+
+        <div class="flecheBas"><img src="./img/fleche_bas_de_page_orange.png" onclick="$.fn.fullpage.moveSectionDown();" /></div>
         
     </div>
 	
@@ -123,13 +160,20 @@
 	</div>
 
 	<div class="section" id="slide6"><h1>No wraps, no extra markup</h1></div>
-	<div class="section" id="slide7"><h1>No wraps, no extra markup</h1></div>
+	<div class="section" id="slide7">
+		<p id="lebadge" class="fullCentre">AVEC LES PROS</p>
+		<h1>Les agriculteurs <span style="font-family: museoBold;">s'enracinent en ville</span></h1>
+
+	</div>
 	<div class="section" id="slide8"><h1>No wraps, no extra markup</h1></div>
 	<div class="section" id="slide9"><h1>Just the simplest demo ever</h1></div>
 </div>
 
 	<script src="js/d3.js"></script>
+    <script src="js/liquidFillGauge.js"></script>   <!-- utilisé pour le diagramme de joseph -->
 	<script src="js/treemap.js"></script>
-
+    <script src="js/diagrammeJoseph.js"></script>
+    <script src="js/datavizs.js"></script>
+    
 </body>
 </html>
