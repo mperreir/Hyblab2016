@@ -471,20 +471,20 @@ function goTo2008 () {
 		num_rand = Math.random();
 
 		// Application d'une animation
-		if((i % 2) == 0) {
+		if(i > 0) {
 			$(elements[i]).transition({
 					left: '+=5%',
 					top: '+=6%',
 					opacity: 0,
 					delay: num_rand*100
-				}, 500);
+				}, 500)
 		} else {
 			$(elements[i]).transition({
 					right: '+=5%',
 					bottom: '+=6%',
 					opacity: 0,
 					delay: num_rand*100
-				}, 500);
+				}, 500)
 		}
 	}
 
@@ -512,20 +512,20 @@ function goTo2014 () {
 		num_rand = Math.random();
 
 		// Application de l'animation inverse
-		if((i % 2) == 0) {
+		if(i > 0) {
 			$(elements[i]).transition({
 					left: '-=5%',
 					top: '-=6%',
 					opacity: 1,
 					delay: num_rand*100
-				}, 500);
+				}, 500)
 		} else {
 			$(elements[i]).transition({
 					right: '-=5%',
 					bottom: '-=6%',
 					opacity: 1,
 					delay: num_rand*100
-				}, 500);
+				}, 500)
 		}
 	}
 
