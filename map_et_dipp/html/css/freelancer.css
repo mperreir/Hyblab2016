@@ -195,6 +195,18 @@ nav li a
     vertical-align: top;
     display:inline-block;
 }
+@media screen and (min-height: 800px){
+#slide6 #araigneeAMAP
+    {
+        transform: scale(1.0);
+    }
+}
+@media screen and (max-height: 800px){
+    #slide6 #araigneeAMAP
+    {
+        transform: scale(0.8);
+    }
+}
 @media screen and (max-width: 1000px){
     #slide6 #araigneeAMAP
     {
@@ -215,6 +227,10 @@ nav li a
     
 }
 }
+#slide6 #infosAraignee p
+{
+    font-size: 15px;
+}
 @media screen and (max-width: 1000px){
     #slide6 #infosAraignee
     {
@@ -224,7 +240,7 @@ nav li a
 }
 #slide6 #contenuDatavizAraignee
 {
-    padding-top: 5%;
+    padding-top: 2%;
 }
 @media screen and (min-width: 1000px){
 #slide6 #effetWahoo
