@@ -224,7 +224,7 @@ function setLabelAnimation(param, categorie){
 		}, 300);
 		//Grossissement du label
 		$(this).stop().animate({ 
-			fontSize: "2em",
+			fontSize: "3vmin",
 			}, 300 );
 
 		//Décalage à gauche au fur et à mesure du grossissement du label
@@ -243,7 +243,7 @@ function setLabelAnimation(param, categorie){
 
 		//Retrecissement du label
 		$(this).stop().animate({ 
-			fontSize: "1em"
+			fontSize: "2vmin"
 			}, 300 );
 
 		//Retrecissement du label et retour à la position d'origine
@@ -399,4 +399,6 @@ function generateCars(donnee, type){
 	cars.css('background-color', 'black');
 	var nbCar = Math.round(donnee/2);
 	console.log(type+" : "+donnee+"% -> "+nbCar+" voitures");
+
+	cars
 }

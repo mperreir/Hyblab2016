@@ -20,7 +20,7 @@ a:link{text-decoration:none}
 
 h1{
 	color: #C2DEBC;
-	font-size: 42px;
+	font-size: 4vmin;
 }
 
 h2{
@@ -32,8 +32,9 @@ h2{
 }
 
 .svg{
-	width: 80vw;
+	width: 60vw;
 	height: 80vh;
+	preserveAspectRatio: none;
 }
 
 
@@ -98,19 +99,19 @@ h2{
 
 #mono{
 	z-index: 20;
-	top : 15vh;
-	left: 44vw;
+	top : 13vh;
+	left: 45vw;
 }
 
 #none{
 	z-index: 21;
 	top: 32vh;
-	left: 30vw;
+	left: 33vw;
 }
 
 #biPlus{
 	z-index: 22;
-	top: 40vh;
+	top: 38vh;
 	left: 53vw;
 }
 
@@ -130,7 +131,7 @@ h2{
 
 h3{
 	font-family: "Avenir";
-	font-size: 1.7em;
+	font-size: 2.5vmin;
 	color: #C96178;
 }
 

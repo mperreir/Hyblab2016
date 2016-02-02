@@ -10,7 +10,7 @@
 
 span.ct-label{
 	font-weight: bold;
-	font-size : 1em;
+	font-size : 2vmin;
 	display : block;
 	max-width: 2em;
 }
