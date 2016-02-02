@@ -3,16 +3,19 @@
 	background-color: #90D7DF;
 }
 
+#slide5 #absSlide5 {
+	position: absolute;
+	margin-top: 1%;
+}
+
 #slide5 #badge {
 	color: white;
 	font-size: 16px;
 	border: 1px solid white;
 	border-radius: 6px;
-	position: absolute;
 	padding: 5px;
 	width: 128px; 
 	margin-left: 45%;
-	margin-top: 1%;
 }
 
 #slide5 h2 {
