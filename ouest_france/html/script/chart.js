@@ -20,7 +20,7 @@ var dataCars = {
 function requestGenerateCars(type, year){
 	if(!dataCars[type]){
 		var requete = $.ajax({
-			url : "data/parc/"+type,
+			url : "http://127.0.0.1:8080/ouest_france/data/parc/"+type,
 			type : "GET",
 			dataType : "text",
 			success : function(res, statut){
@@ -38,7 +38,7 @@ function requestGenerateCars(type, year){
 function requestGenerateChartDonut(type, year){
 	if(!dataDonuts[type]){
 		var requete = $.ajax({
-			url : "data/menage/"+type,
+			url : "http://127.0.0.1:8080/ouest_france/data/menage/"+type,
 			type : "GET",
 			dataType : "text",
 			success : function(res, statut){
@@ -56,7 +56,7 @@ function requestGenerateChartDonut(type, year){
 function requestGenerateChartDefilement(type){
 	if(!dataCharts[type]){
 		var requete = $.ajax({
-			url : "data/"+type+"/years",
+			url : "http://127.0.0.1:8080/ouest_france/data/"+type+"/years",
 			type : "GET",
 			dataType : "text",
 			success : generateChart,
