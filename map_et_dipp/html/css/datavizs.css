@@ -28,16 +28,17 @@
 }
 
 #totalJoseph p {
+    margin: 0;
     display: inline-block;
     /* style du texte */
     color: #666666;
-    font: 300 60px / 99.667px FuturaPT;
-    font-size: 60px;
+    font: 300 60px FuturaPT;
 }
 
 #uniteTotalJoseph {
+    margin: 0;
     color: #fdbe63;
-    font: 18px / 74.681px MuseoSlab;
+    font: 18px MuseoSlab;
     display: inline-block;
 }
 
@@ -46,7 +47,6 @@
     margin-top: 15px;
     margin-bottom: 0;
     padding: 0;
-    height: 150px;
 }
 
 
@@ -202,6 +202,9 @@ section .container .contenu {
     display: inline-block;
 }
 
+#titreSlide3 {
+    margin-bottom: 10px;
+}
 
 #slide3 div article {
     padding-top: 30px;
@@ -214,14 +217,22 @@ section .container .contenu {
     /* contour */
     border: 2px solid #fdbe63;
     border-radius: 50px;
+    /* permet de centrer verticalement les balises, doit être utilisé sur toutes les balises du même row */
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
 
+
 #slide3 aside {
-    
+    /* permet de centrer verticalement les balises, doit être utilisé sur toutes les balises du même row */
+    /* http://stackoverflow.com/questions/20547819/vertical-align-with-bootstrap-3 */
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
 
 #slide3 aside p {
-    
     /* style du texte */
     color: #4c4c4c;
     font: 400 17px / 21px Arial;
