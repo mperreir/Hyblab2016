@@ -11,7 +11,7 @@
 				"name": "Les Jardins Familiaux de la Gagnerie",
 				"major" : "JF",
 				"children" : [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Jardins Familiaux de la Gagnerie",
 					"address": "RUE DE LA GAGNERIE BOUGUENAIS",
@@ -23,7 +23,7 @@
 				"name": "Les Jardins Familiaux de la Grande Ouche",
 				"major" : "JF",
 				"children" : [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Jardins Familiaux de la Grande Ouche",
 					"address": "La Grande Ouche",
@@ -35,7 +35,7 @@
 				"name": "Les Jardins Familiaux de Beauvoir",
 				"major" : "JF",
 				"children" : [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Jardins Familiaux de Beauvoir",
 					"address": "-",
@@ -53,7 +53,7 @@
 			"name": "Jardins Partagés",
 			"major" : "JP",
 			"children": [{
-				"value": 10,
+				"value": 1,
 				"major" : "JP",
 				"name": "Jardins Kentelioù An Noz",
 				"address": "3 RUE HARROUYS",
@@ -66,7 +66,7 @@
 			"name": "Jardins d'Insertion",
 			"major" : "JI",
 			"children": [{
-				"value": 10,
+				"value": 1,
 				"major" : "JI",
 				"name": "Les Jardins de Cocagne Nantais",
 				"address": "LES RUETTES",
@@ -81,7 +81,7 @@
 			"name": "Jardins Partagés",
 			"major" : "JP",
 			"children": [{
-				"value": 10,
+				"value": 1,
 				"major" : "JP",
 				"name": "Les Jardins du Port-au-Blé (Gare)",
 				"address": "RUE MAURICE GARAND",
@@ -96,7 +96,7 @@
 				"name": "Les Jardins de Roiné",
 				"major" : "JF",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Jardins de Roiné",
 					"address": "RUE RAPHAEL LANCELOT",
@@ -108,7 +108,7 @@
 				"name": "Les Jardins de Jean-Baptiste-Hamon",
 				"major" : "JF",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Jardins de Jean-Baptiste-Hamon",
 					"address": "RUE JEAN VIGNAIS",
@@ -120,7 +120,7 @@
 				"name": "Les Jardins de Barbonnerie",
 				"major" : "JF",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Jardins de Barbonnerie",
 					"address": "RUE RENÉ CASSIN",
@@ -132,7 +132,7 @@
 				"name": "Les Jardins de Philomène Bazile",
 				"major" : "JF",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Jardins de Philomène Bazile",
 					"address": "IMPASSE DES BERNADERIES",
@@ -144,7 +144,7 @@
 				"name": "Les Jardins du Port-au-Blé (Gymnase)",
 				"major" : "JF",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Jardins du Port-au-Blé (Gymnase)",
 					"address": "RUE DU PORT AU BLÉ",
@@ -156,7 +156,7 @@
 				"name": "Les Jardins de Paul-Ploquin",
 				"major" : "JF",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Jardins de Paul-Ploquin",
 					"address": "RUE PAUL PLOQUIN",
@@ -168,7 +168,7 @@
 				"name": "Les Jardins de Léard",
 				"major" : "JF",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Jardins de Léard",
 					"address": "RUE DU PETIT LÉARD",
@@ -180,7 +180,7 @@
 				"name": "Les Jardins de Jean-Baptiste- et-Henri-Tendron",
 				"major" : "JF",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Jardins de Jean-Baptiste- et-Henri-Tendron",
 					"address": "RUE JEAN-BAPTISTE ET HENRI TENDRON",
@@ -192,7 +192,7 @@
 				"name": "Les Jardins de Mortrait",
 				"major" : "JF",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Jardins de Mortrait",
 					"address": "RUE DU MORTRAIT",
@@ -212,7 +212,7 @@
 				"name": "Jardins Partagés",
 				"major" : "JP",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"name": "Les Jardins du Parc des Oblates",
 					"address": "RUE DE LA BRIANDERIE",
 					"city": "Nantes",
@@ -224,7 +224,7 @@
 				"name": "Jardins Familiaux",
 				"major" : "JF",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Jardins Familiaux Nantais",
 					"address": "RUE DE L'ABBAYE",
@@ -237,7 +237,7 @@
 				"name": "Stations Gourmandes",
 				"major" : "SG",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "SG",
 					"name": "Station gourmande du petit verger",
 					"address": "RUE DU JAMET",
@@ -255,7 +255,7 @@
 					"name": "Confédération Syndicale des Familles",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Confédération Syndicale des Familles",
 						"address": "RUE SUZANNE LENGLEN",
@@ -268,7 +268,7 @@
 					"name": "Jardins Familiaux Nantais",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Jardins Familiaux Nantais",
 						"address": "BD PIERRE DE COUBERTIN",
@@ -282,7 +282,7 @@
 				"name": "Stations Gourmandes",
 				"major" : "SG",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "SG",
 					"name": "Station gourmande Breil",
 					"address": "RUE JACQUES FEYDER",
@@ -297,7 +297,7 @@
 				"name": "Jardins Familiaux",
 				"major" : "JF",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "JF",
 					"name": "Les Petits Jardins du Lait de Mai",
 					"address": "RUE EMILE PEHANT",
@@ -313,7 +313,7 @@
 					"address": "RUE DE L'HÉRONNIÈRE",
 					"major" : "JP",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JP",
 						"name": "Le Papotager",
 						"address": "RUE DE L'HÉRONNIÈRE",
@@ -326,7 +326,7 @@
 					"name": "Le Jardin du Lieu Unique",
 					"major" : "JP",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JP",
 						"name": "Le Jardin du Lieu Unique",
 						"address": "QUAI FERDINAND-FAVRE",
@@ -341,7 +341,7 @@
 					"name": "Square Daviais",
 					"major" : "SG",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "SG",
 						"name": "Square Daviais",
 						"address": "RUE FELIX EBOUÉ",
@@ -352,7 +352,7 @@
 					"name": "Cours du Château des ducs de Bretagne",
 					"major" : "SG",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "SG",
 						"name": "Cours du Château des ducs de Bretagne",
 						"address": "RUE DU CHATEAU",
@@ -363,7 +363,7 @@
 					"name": "Station gourmande Duchesse Anne",
 					"major" : "SG",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "SG",
 						"name": "Station gourmande Duchesse Anne",
 						"address": "COURS JOHN KENNEDY",
@@ -382,7 +382,7 @@
 					"name": "Senteurs Gourmandes Jamet",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Senteurs Gourmandes Jamet",
 						"address": "RUE DU JAMET",
@@ -395,7 +395,7 @@
 					"name": "Les Jardins de la Fournilière",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins de la Fournilière",
 						"address": "RUE JULES PIÉDELEU",
@@ -408,7 +408,7 @@
 					"name": "Les Jardins Familiaux Nantais",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins Familiaux Nantais",
 						"address": "RUE DU CORPS DE GARDE",
@@ -421,7 +421,7 @@
 					"name": "Les Jardins Familiaux Nantais",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins Familiaux Nantais",
 						"address": "BOULEVARD DU MASSACRE",
@@ -442,7 +442,7 @@
 					"name": "Les Jardins des Collines",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins des Collines",
 						"address": "CHEMIN DES COLLINES",
@@ -455,7 +455,7 @@
 					"name": "Les Jardins Familiaux Nantais",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins Familiaux Nantais",
 						"address": "CHEMIN DU BOIS DES ANSES",
@@ -468,7 +468,7 @@
 					"name": "Mille et un Jardins",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Mille et un Jardins",
 						"address": "RUE DES ÉPINETTES",
@@ -481,7 +481,7 @@
 					"name": "Les Jardins Familiaux Nantais",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins Familiaux Nantais",
 						"address": "PETIT CHEMIN DES CHAUPIÈRES",
@@ -498,7 +498,7 @@
 					"name": "Jardin du Centre Socioculturel du Perray-Haluchère",
 					"major" : "JP",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JP",
 						"name": "Jardin du Centre Socioculturel du Perray-Haluchère",
 						"address": "1 RUE JULES GRANDJOUAN",
@@ -512,7 +512,7 @@
 					"major" : "JP",
 					"children": [{
 						"rate": 0.5,
-						"value": 10,
+						"value": 1,
 						"major" : "JP",
 						"name": "Le Jardin des Ronces",
 						"address": "RUE DE LA PAPOTIÈRE",
@@ -531,7 +531,7 @@
 					"name": "Potagers Les 16 Watt",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Potagers Les 16 Watt",
 						"address": "RUE PETITE BIESSE",
@@ -544,7 +544,7 @@
 					"name": "Les Jardins du Vertais",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins du Vertais",
 						"address": "RUE DE VERTAIS",
@@ -557,7 +557,7 @@
 					"name": "Les Jardins Familiaux de la Nizannerie",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins Familiaux de la Nizannerie",
 						"address": "RUE PAUL NIZAN",
@@ -569,7 +569,7 @@
 				"name": "Jardins Partagés",
 				"major" : "JP",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "JP",
 					"name": "Ca Pousse En Amont",
 					"address": "COURS DE LA PRAIRIE D'AMONT",
@@ -582,7 +582,7 @@
 				"name": "Stations Gourmandes",
 				"major" : "SG",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "SG",
 					"name": "Square Vertais",
 					"address": "RUE DE VERTAIS",
@@ -600,7 +600,7 @@
 					"name": "Square Vertais",
 					"major" : "SG",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "SG",
 						"name": "Square Vertais",
 						"address": "RUE DE VERTAIS",
@@ -611,7 +611,7 @@
 					"name": "Station de l'Alhalambra",
 					"major" : "SG",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "SG",
 						"name": "Station de l'Alhalambra",
 						"address": "MAIL DE RUFISQUE",
@@ -626,7 +626,7 @@
 					"name": "Le Garden'Koff",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Le Garden'Koff",
 						"address": "RUE DE HONGRIE",
@@ -639,7 +639,7 @@
 					"name": "Les Jardins de la Roche",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins de la Roche",
 						"address": "CHEMIN DE LA ROCHE",
@@ -652,7 +652,7 @@
 					"name": "Les Jardins Familiaux Nantais",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins Familiaux Nantais",
 						"address": "RUE FRANCISCO FERRER",
@@ -673,7 +673,7 @@
 					"name": "Les Jardins Familiaux Nantais",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins Familiaux Nantais",
 						"address": "RUE LEON SERPOLLET",
@@ -686,7 +686,7 @@
 					"name": "Les Jardins Familiaux Nantais",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins Familiaux Nantais",
 						"address": "BD DES BATIGNOLLES",
@@ -699,7 +699,7 @@
 					"name": "Les Jardins Familiaux Nantais",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins Familiaux Nantais",
 						"address": "RUE DU PORT BOYER",
@@ -713,7 +713,7 @@
 				"name": "Stations Gourmandes",
 				"major" : "SG",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "SG",
 					"name": "Port Boyer",
 					"address": "RUE DU PORT BOYER",
@@ -731,7 +731,7 @@
 					"name": "Les Jardins de la Cressonnière",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins de la Cressonnière",
 						"address": "RUE DES RENARDS",
@@ -744,7 +744,7 @@
 					"name": "Les Jardins Familiaux des Bruyères",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins Familiaux des Bruyères",
 						"address": "RUE DE PONT AVEN",
@@ -757,7 +757,7 @@
 					"name": "Nature et Jardins Nantes Nord",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Nature et Jardins Nantes Nord",
 						"address": "CHEMIN DE L'ANGLE CHAILLOU",
@@ -770,7 +770,7 @@
 					"name": "Les Jardins des Eglantiers",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins des Eglantiers",
 						"address": "ROUTE DE LA CHAPELLE SUR ERDRE",
@@ -783,7 +783,7 @@
 					"name": "Les Jardins de l'Amande",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Jardins de l'Amande",
 						"address": "BOULEVARD RENÉ CASSIN",
@@ -797,7 +797,7 @@
 				"name": "Stations Gourmandes",
 				"major" : "SG",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "SG",
 					"name": "Nantes Nord.",
 					"address": "RUE DE HAMILTON",
@@ -815,7 +815,7 @@
 					"name": "Parc Potager de la Crapaudine",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Parc Potager de la Crapaudine",
 						"address": "AVENUE DES GOBELETS",
@@ -828,7 +828,7 @@
 					"name": "Les Escartons",
 					"major" : "JF",
 					"children": [{
-						"value": 10,
+						"value": 1,
 						"major" : "JF",
 						"name": "Les Escartons",
 						"address": "RUE GABRIEL GOUDY",
@@ -842,7 +842,7 @@
 				"name": "Jardins Partagés",
 				"major" : "JP",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "JP",
 					"name": "Le Jardin du Clos Toreau",
 					"address": "RUE D'HENDAYE",
@@ -855,7 +855,7 @@
 				"name": "Stations Gourmandes",
 				"major" : "SG",
 				"children": [{
-					"value": 10,
+					"value": 1,
 					"major" : "SG",
 					"name": "Clos Toreau",
 					"address": "RUE DE BIARRITZ",

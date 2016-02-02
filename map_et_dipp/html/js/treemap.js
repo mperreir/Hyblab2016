@@ -99,7 +99,6 @@ function layout(d) {
 }
 
 d3.json('json/treemap.json', function(root) {
-  console.log(root)
   initialize(root);
   accumulate(root);
   layout(root);
@@ -132,10 +131,6 @@ d3.json('json/treemap.json', function(root) {
         .classed('children', true)
         .on('click', transition); // On pourrait ajouter la propriété CSS OnHover.
 
-
-    console.log('g');
-    console.log(g);
-
     g.selectAll('.child')
         .data(function(d) { return d._children || [d]; })
       .enter().append('rect')
@@ -143,15 +138,15 @@ d3.json('json/treemap.json', function(root) {
         .call(rect);
     
     g.append('rect')
-        .attr('class', 'parent')
-        .call(rect);
+      .attr('class', 'parent')
+      .call(rect);
 
     g.append('text')
         .attr('dy', '.75em')
         .text(function(d) { return d.name; })
         .call(text);
 
-    if (d.value == 10) {
+    if (d.value == 1) {
 
       if (d._children[0].address) {
         g.append('text')
@@ -187,6 +182,17 @@ d3.json('json/treemap.json', function(root) {
           .text(function(d) { return 'Surface totale (m²) : ' + d.totalsize; })
           .call(text);
       }
+    }
+    else
+    {
+      /*
+      g.append('text')
+        .attr('x', function(d) { return x(d.x) + 6; })
+        .attr('y', function(d) { return y(d.y) + 6; })
+        .text(function(d) { return d.value; })
+        .attr('font-size', '2em')
+        .attr('fill', function (d) { return (d.major == 'SG') ? '#3f6660' : '#fff'; });
+      */
     }
 
     function transition(d) {
