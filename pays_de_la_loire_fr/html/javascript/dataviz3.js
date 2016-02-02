@@ -4,22 +4,6 @@ var stopI3 = false;
 
 $(document).ready(function() {
       
-	var trotteuse = document.getElementById("trotteuse");
-		
-	var eolienne1_i3 = document.getElementById("eolienne1_i3");
-	var eolienne2_i3 = document.getElementById("eolienne2_i3");
-
-	var eolienne_mat1_3 = document.getElementById("eolienne_mat1_3");
-	var eolienne_pale1_3 = document.getElementById("eolienne_pale1_3");
-	var eolienne_mat2_3 = document.getElementById("eolienne_mat2_3");
-	var eolienne_pale2_3 = document.getElementById("eolienne_pale2_3");
-	var eolienne_mat3_3 = document.getElementById("eolienne_mat3_3");
-	var eolienne_pale3_3 = document.getElementById("eolienne_pale3_3");
-	var eolienne_mat4_3 = document.getElementById("eolienne_mat4_3");
-	var eolienne_pale4_3 = document.getElementById("eolienne_pale4_3");
-	var eolienne_mat5_3 = document.getElementById("eolienne_mat5_3");
-	var eolienne_pale5_3 = document.getElementById("eolienne_pale5_3");
-	
 	//init3();
 });
 
@@ -81,10 +65,17 @@ function animEoliennesI3_2() {
 
 
 function init3() {
+	var line1 = document.getElementById("line_data3_1");
+    
 	
 	reset3();
 	animEolienne3_1();
-}
+	
+	line1.classList.remove("draw_line1");
+  	setTimeout(function(){line1.classList.add("draw_line1");},1);
+  	line1.style.display = "block";
+
+  }
 
 function reset3() {
 
@@ -98,6 +89,10 @@ function reset3() {
 	$(eolienne_pale4_3).css({top:'80%'});
 	$(eolienne_mat5_3).css({top:'80%'});
 	$(eolienne_pale5_3).css({top:'80%'});
+	var line1 = document.getElementById("line_data3_1");
+	line1.style.display = "none";
+	var line2 = document.getElementById("line_data3_2");
+	line2.style.display = "none";
 }
 
 function animEolienne3_1(){
@@ -145,6 +140,8 @@ function animEolienne3_3(){
 				top:'19.5%'
 				}, 1000, 'easeOutCubic',function(){
 					animEolienne3_4();
+					var line2 = document.getElementById("line_data3_2");
+  					line2.style.display = "block";
 				});
 }
 
