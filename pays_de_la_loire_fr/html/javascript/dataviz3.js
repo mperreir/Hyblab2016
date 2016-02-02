@@ -1,6 +1,7 @@
 'use strict';
 
 var stopI3 = false;
+var stop3 = false;
 
 $(document).ready(function() {
       
@@ -69,16 +70,17 @@ function init3() {
     
 	
 	reset3();
+	stop3 = false;
 	animEolienne3_1();
 	
-	line1.classList.remove("draw_line1");
-  	setTimeout(function(){line1.classList.add("draw_line1");},1);
+	line1.classList.remove("draw_line");
+  	setTimeout(function(){line1.classList.add("draw_line");},1);
   	line1.style.display = "block";
 
   }
 
 function reset3() {
-
+	stop3 = true;
 	$(eolienne_mat1_3).css({top:'100%'});
 	$(eolienne_pale1_3).css({top:'100%'});
 	$(eolienne_mat2_3).css({top:'80%'});
@@ -93,6 +95,8 @@ function reset3() {
 	line1.style.display = "none";
 	var line2 = document.getElementById("line_data3_2");
 	line2.style.display = "none";
+	var line3 = document.getElementById("line_data3_3");
+	line3.style.display = "none";
 }
 
 function animEolienne3_1(){
@@ -107,6 +111,7 @@ function animEolienne3_1(){
 				opacity: 1,
 				top:'41.5%'
 				}, 1000, 'easeOutCubic',function(){
+					if(stop3) { return;}
 					animEolienne3_2();
 				});
 }
@@ -123,6 +128,7 @@ function animEolienne3_2(){
 				opacity: 1,
 				top:'30%'
 				}, 1000, 'easeOutCubic',function(){
+					if(stop3) { return;}
 					animEolienne3_3();
 				});
 }
@@ -139,9 +145,18 @@ function animEolienne3_3(){
 				opacity: 1,
 				top:'19.5%'
 				}, 1000, 'easeOutCubic',function(){
+					if(stop3) { return;}
 					animEolienne3_4();
 					var line2 = document.getElementById("line_data3_2");
+					var line3 = document.getElementById("line_data3_3");
+					line2.classList.remove("dash_line");
+					line2.classList.remove("draw_line");
+  					setTimeout(function(){line2.classList.add("draw_line");},1);
   					line2.style.display = "block";
+  					line3.classList.remove("dash_line");
+  					line3.classList.remove("draw_line");
+  					setTimeout(function(){line3.classList.add("draw_line");},1);
+  					line3.style.display = "block";
 				});
 }
 
@@ -157,6 +172,7 @@ function animEolienne3_4(){
 				opacity: 1,
 				top:'13.5%'
 				}, 1000, 'easeOutCubic',function(){
+					if(stop3) { return;}
 					animEolienne3_5();
 				});
 }
@@ -172,7 +188,16 @@ function animEolienne3_5(){
 	.transition({
 				opacity: 1,
 				top:'8.5%'
-				}, 1000, 'easeOutCubic');
+				}, 1000, 'easeOutCubic',function(){
+
+					if(stop3) { return;}
+					var line2 = document.getElementById("line_data3_2");
+					var line3 = document.getElementById("line_data3_3");
+					line2.classList.remove("dash_line");
+  					setTimeout(function(){line2.classList.add("dash_line");},1);
+  					line3.classList.remove("dash_line");
+  					setTimeout(function(){line3.classList.add("dash_line");},1);
+				});
 }
 
 function rand(min,max){
