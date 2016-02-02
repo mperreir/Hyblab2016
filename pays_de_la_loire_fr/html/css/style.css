@@ -600,7 +600,7 @@ DATA 1
 	left: 78%;
 	bottom: 32%;
 	cursor: pointer;
-	transform: scale(1.2);
+	transform: scale(1.3);
 }
 
 #bouton_2014_data1
@@ -610,7 +610,7 @@ DATA 1
 	left: 78%;
 	bottom: 13%;
 	cursor: pointer;
-	transform: scale(0.8);
+	transform: scale(0.7);
 	opacity: 0.8;
 }
 
