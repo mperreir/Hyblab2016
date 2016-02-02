@@ -43,11 +43,14 @@ nav .boutonMenu
 {
 	font-family: libelSuit;
 	font-size: 63px;
+	letter-spacing: 3pt;
 }
 #slide1 h2
 {
 	color: #90d7df;
 	font-family: museoReg;
+	letter-spacing: 3pt;
+	line-height: 32pt;
 }
 #slide1 #titreSite
 {
@@ -91,5 +94,6 @@ nav .boutonMenu
 	text-align: center;
 	position: absolute;
 	top: 100%;
-	margin-top: -50px;	
+	margin-top: -50px;
+	cursor: pointer;
 }
