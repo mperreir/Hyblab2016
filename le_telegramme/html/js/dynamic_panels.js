@@ -3,8 +3,6 @@ $(document).ready(function() {
   var currentNav=0;
   var currentTab=0;
 
-  var animationTypes = []
-
 
   //Different IDs of the div we're displaying / hiding in jQuery
   var arr = ['#ca_pousse_edito', '#ca_pousse_sondage', '#ca_pousse_photos',
@@ -19,6 +17,57 @@ $(document).ready(function() {
   }
   $(arr[0]).show("slow");
 
+  // $('#submenu1').hover(function(){
+  //       console.log('current Nav : ' + currentNav);
+  //       switch(currentNav){
+  //         case 0:
+  //           $(this).css('background-color', '#F7931E');
+  //           break;
+  //         case 1:
+  //           $(this).css('background-color', '#FF605E');
+  //           break;
+  //         case 2:
+  //           $(this).css('background-color', '#42B69E');
+  //           break;
+  //       }
+  //     }, function() {$(this).css('background-color', '');
+  //   });
+
+  // $('#submenu2').hover(function(){
+  //       console.log('current Nav : ' + currentNav);
+  //       switch(currentNav){
+  //         case 0:
+  //           $(this).css('background-color', '#F7931E');
+  //           break;
+  //         case 1:
+  //           $(this).css('background-color', '#FF605E');
+  //           break;
+  //         case 2:
+  //           $(this).css('background-color', '#42B69E');
+  //           break;
+  //       }
+  //     }, function() {$(this).css('background-color', '');
+  //   });
+
+  // $('#submenu3').hover(function(){
+  //       console.log('current Nav : ' + currentNav);
+  //       switch(currentNav){
+  //         case 0:
+  //           $(this).css('background-color', '#F7931E');
+  //           break;
+  //         case 1:
+  //           $(this).css('background-color', '#FF605E');
+  //           break;
+  //         case 2:
+  //           $(this).css('background-color', '#42B69E');
+  //           break;
+  //       }
+  //     }, function() {$(this).css('background-color', '');
+  //   });
+
+
+
+
   // Events handling
   $("#menu1").click( function() {
     console.log('clic menu1');
@@ -26,27 +75,57 @@ $(document).ready(function() {
     switch(currentNav){
       case 0:
         $("#menu1").removeClass("active");
+        $(tabs[currentTab]).removeClass("active_j");
+
+        //clean all the tabs
+        $("#submenu1").removeClass("noactive_j");
+        $("#submenu2").removeClass("noactive_j");
+        $("#submenu3").removeClass("noactive_j");
         $(this).addClass("active");
         break;
       case 1:
         $("#menu2").removeClass("active");
+        $(tabs[currentTab]).removeClass("active_r");
+        
+        //clean all the tabs
+        $("#submenu1").removeClass("noactive_r");
+        $("#submenu2").removeClass("noactive_r");
+        $("#submenu3").removeClass("noactive_r");
         $(this).addClass("active");
         break;
       case 2:
         $("#menu3").removeClass("active");
+        $(tabs[currentTab]).removeClass("active_b");
+        
+        //clean all the tabs
+        $("#submenu1").removeClass("noactive_b");
+        $("#submenu2").removeClass("noactive_b");
+        $("#submenu3").removeClass("noactive_b");
         $(this).addClass("active");
         break;
     }
 
+    //we update the current tab selected in the main navbar
     currentNav = 0;
+    //hiding all the divs
     for(var i=0; i < 9; i++){
       $(arr[i]).hide();
     }
+
+    //displaying the good panel
     $("#ca_pousse_edito").show("slow");
-    $(tabs[currentTab]).removeClass("active");
+
+    //applying the active CSS class to the current tab
     currentTab=0;
-    $(tabs[currentTab]).addClass("active");
+    $(tabs[currentTab]).addClass("active_j");
+    $("#submenu2").addClass("noactive_j");
+    $("#submenu3").addClass("noactive_j");
+
+    //changing the color of the tab to the right one
+    $("#middle").css("background-color","#F7931E");
   });
+
+
 
   $("#menu2").click( function() {
     console.log('clic menu2');
@@ -54,14 +133,32 @@ $(document).ready(function() {
     switch(currentNav){
       case 0:
         $("#menu1").removeClass("active");
+        $(tabs[currentTab]).removeClass("active_j");
+
+        //clean all the tabs
+        $("#submenu1").removeClass("noactive_j");
+        $("#submenu2").removeClass("noactive_j");
+        $("#submenu3").removeClass("noactive_j");
         $(this).addClass("active");
         break;
       case 1:
         $("#menu2").removeClass("active");
+        $(tabs[currentTab]).removeClass("active_r");
+        
+        //clean all the tabs
+        $("#submenu1").removeClass("noactive_r");
+        $("#submenu2").removeClass("noactive_r");
+        $("#submenu3").removeClass("noactive_r");
         $(this).addClass("active");
         break;
       case 2:
         $("#menu3").removeClass("active");
+        $(tabs[currentTab]).removeClass("active_b");
+        
+        //clean all the tabs
+        $("#submenu1").removeClass("noactive_b");
+        $("#submenu2").removeClass("noactive_b");
+        $("#submenu3").removeClass("noactive_b");
         $(this).addClass("active");
         break;
     }
@@ -70,11 +167,18 @@ $(document).ready(function() {
     for(var i=0; i < 9; i++){
       $(arr[i]).hide();
     }
+
     $("#eclosions_edito").show("slow");
-    $(tabs[currentTab]).removeClass("active");
+
     currentTab=0;
-    $(tabs[currentTab]).addClass("active");
+    $(tabs[currentTab]).addClass("active_r");
+    $("#submenu2").addClass("noactive_r");
+    $("#submenu3").addClass("noactive_r");
+
+    $("#middle").css("background-color","#FF605E");
   });
+
+
 
   $("#menu3").click( function() {
     console.log('clic menu3');
@@ -82,14 +186,32 @@ $(document).ready(function() {
     switch(currentNav){
       case 0:
         $("#menu1").removeClass("active");
+        $(tabs[currentTab]).removeClass("active_j");
+
+        //clean all the tabs
+        $("#submenu1").removeClass("noactive_j");
+        $("#submenu2").removeClass("noactive_j");
+        $("#submenu3").removeClass("noactive_j");
         $(this).addClass("active");
         break;
       case 1:
         $("#menu2").removeClass("active");
+        $(tabs[currentTab]).removeClass("active_r");
+        
+        //clean all the tabs
+        $("#submenu1").removeClass("noactive_r");
+        $("#submenu2").removeClass("noactive_r");
+        $("#submenu3").removeClass("noactive_r");
         $(this).addClass("active");
         break;
       case 2:
         $("#menu3").removeClass("active");
+        $(tabs[currentTab]).removeClass("active_b");
+        
+        //clean all the tabs
+        $("#submenu1").removeClass("noactive_b");
+        $("#submenu2").removeClass("noactive_b");
+        $("#submenu3").removeClass("noactive_b");
         $(this).addClass("active");
         break;
     }
@@ -98,10 +220,15 @@ $(document).ready(function() {
     for(var i=0; i < 9; i++){
       $(arr[i]).hide();
     }
+
     $("#quartiers_edito").show("slow");
-    $(tabs[currentTab]).removeClass("active");
+
     currentTab=0;
-    $(tabs[currentTab]).addClass("active");
+    $(tabs[currentTab]).addClass("active_b");
+    $("#submenu2").addClass("noactive_b");
+    $("#submenu3").addClass("noactive_b");
+
+    $("#middle").css("background-color","#42B69E");
   });
 
 
@@ -118,18 +245,24 @@ $(document).ready(function() {
     switch(currentNav){
       case 0:
         $("#ca_pousse_edito").show("slow");
-        $(tabs[currentTab]).removeClass("active");
-        $(this).addClass("active");
+        $(tabs[currentTab]).removeClass("active_j");
+        $(tabs[currentTab]).addClass("noactive_j");
+        $(this).removeClass("noactive_j");
+        $(this).addClass("active_j");
         break;
       case 1:
         $("#eclosions_edito").show("slow");
-        $(tabs[currentTab]).removeClass("active");
-        $(this).addClass("active");
+        $(tabs[currentTab]).removeClass("active_r");
+        $(tabs[currentTab]).addClass("noactive_r");
+        $(this).removeClass("noactive_r");
+        $(this).addClass("active_r");
         break;
       case 2:
         $("#quartiers_edito").show("slow");
-        $(tabs[currentTab]).removeClass("active");
-        $(this).addClass("active");
+        $(tabs[currentTab]).removeClass("active_b");
+        $(tabs[currentTab]).addClass("noactive_b");
+        $(this).removeClass("noactive_b");
+        $(this).addClass("active_b");
         break;
     }
     currentTab=0;
@@ -145,18 +278,24 @@ $(document).ready(function() {
     switch(currentNav){
       case 0:
         $("#ca_pousse_sondage").show("slow");
-        $(tabs[currentTab]).removeClass("active");
-        $(this).addClass("active");
+        $(tabs[currentTab]).removeClass("active_j");
+        $(tabs[currentTab]).addClass("noactive_j");
+        $(this).removeClass("noactive_j");
+        $(this).addClass("active_j");
         break;
       case 1:
         $("#eclosions_sondage").show("slow");
-        $(tabs[currentTab]).removeClass("active");
-        $(this).addClass("active");
+        $(tabs[currentTab]).removeClass("active_r");
+        $(tabs[currentTab]).addClass("noactive_r");
+        $(this).removeClass("noactive_r");
+        $(this).addClass("active_r");
         break;
       case 2:
         $("#quartiers_sondage").show("slow");
-        $(tabs[currentTab]).removeClass("active");
-        $(this).addClass("active");
+        $(tabs[currentTab]).removeClass("active_b");
+        $(tabs[currentTab]).addClass("noactive_b");
+        $(this).removeClass("noactive_b");
+        $(this).addClass("active_b");
         break;
     }
     currentTab=1;
@@ -173,18 +312,24 @@ $(document).ready(function() {
     switch(currentNav){
       case 0:
         $("#ca_pousse_photos").show("slow");
-        $(tabs[currentTab]).removeClass("active");
-        $(this).addClass("active");
+        $(tabs[currentTab]).removeClass("active_j");
+        $(tabs[currentTab]).addClass("noactive_j");
+        $(this).removeClass("noactive_j");
+        $(this).addClass("active_j");
         break;
       case 1:
         $("#eclosions_photos").show("slow");
-        $(tabs[currentTab]).removeClass("active");
-        $(this).addClass("active");
+        $(tabs[currentTab]).removeClass("active_r");
+        $(tabs[currentTab]).addClass("noactive_r");
+        $(this).removeClass("noactive_r");
+        $(this).addClass("active_r");
         break;
       case 2:
         $("#quartiers_photos").show("slow");
-        $(tabs[currentTab]).removeClass("active");
-        $(this).addClass("active");
+        $(tabs[currentTab]).removeClass("active_b");
+        $(tabs[currentTab]).addClass("noactive_b");
+        $(this).removeClass("noactive_b");
+        $(this).addClass("active_b");
         break;
     }
     currentTab=2;
