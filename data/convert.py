@@ -113,9 +113,13 @@ def main():
 
     for row in ages:
         lsoa11cd = row["LSOA11CD"]
-        keys = ["{}-{}".format(i, i+4) for i in range(0, 35, 5)]
-        keys.extend(["{}-{}".format(i, i+9) for i in range(35, 85, 10)])
-        keys.extend(["{}-{}".format(i, i+5) for i in range(85, 90, 5)])
+        keys = [
+            "0-15",
+            "16-25",
+            "26-35",
+            "36-55",
+            "56-90"
+        ]
 
         data[lsoa11cd]["ages"] = {key: row[key] for key in keys}
 

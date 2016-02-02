@@ -2,12 +2,19 @@ body {
     margin: 0;
 }
 #map, #rope {
+    overflow: hidden;
     height: 100vh;
 }
 
 #rope {
     position: relative;
 }
+
+iframe {
+    width: 100%;
+    height: 10vh;
+}
+
 .leaflet-map-pane {
     z-index: 3;
 }
@@ -241,4 +248,3 @@ body {
   stroke: #d6e9c6;
   /*shape-rendering: crispEdges;*/
 }
-
