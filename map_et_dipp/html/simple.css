@@ -103,7 +103,7 @@ nav .boutonMenu
 	text-align: center;
 }
 
-#slide2 h2, #slide2 h1
+#slide2 h2, #slide2 h1, #slide10 h2, #slide10 h1
 {
 	text-align: left;
 	color: white;
@@ -344,12 +344,44 @@ nav .boutonMenu
 
 
 /* slide10 */
-#slide10 {
-    /background-color: 
+#slide10  {
+    background-color: #82e69b; 
+    height: 100%;
 }
 
 #slide10 .flecheBas {
     background-color: white;
+}
+
+
+
+
+#slide10 section {
+    height: auto;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: inherit;
+    /* contour */
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+}
+
+#slide10 section header {
+    background-color: inherit;
+    color: #4c4c4c;
+    font: 15px / 14px Museo;
+    text-align: left;
+}
+
+#slide10 section article {
+    color: #4c4c4c;
+    font: 400 12px / 14px Arial;
+}
+
+#slide10 section aside {
+    /* correspond à la citation */
+    color: #ffffff;
+    font: 17px / 19px Museo;
 }
 
 
