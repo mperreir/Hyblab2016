@@ -57,6 +57,7 @@ span>ul>li>p
 
  .responsive_container
 {
+	overflow: hidden;
 	width: 100vw; 
     height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
     max-height: 100vh;
@@ -1363,7 +1364,7 @@ span>ul>li>p
 	position: absolute;
 	width: 38%;
 	top : 19.5%;
-	left: 45%;
+	left: 45.1%;
 }
 
 #eolienne_mat5_3
@@ -1371,7 +1372,7 @@ span>ul>li>p
 	position: absolute;
 	width: 42%;
 	top : 12.5%;
-	left: 59%;
+	left: 58%;
 }
 
 #eolienne_pale1_3
@@ -1411,7 +1412,7 @@ span>ul>li>p
 	position: absolute;
 	width: 20%;
 	top : 8.5%;
-	left: 70.5%;
+	left: 70%;
 }
 
 #line_data3_1
