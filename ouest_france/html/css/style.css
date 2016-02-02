@@ -28,15 +28,14 @@ h2{
 }
 
 #scroll{
-	position: relative;
-	bottom: 16vh;
-	height: 40vh;
+	height: 10vh;
 }
 
 .svg{
 	width: 80%;
 	height: 80%;
 }
+
 
 .isles{
 	position:relative;
@@ -85,7 +84,7 @@ h2{
 }
 
 .section{
-	position: relative;
+
 }
 
 
@@ -93,27 +92,30 @@ h2{
 
 .donut{
 	position: absolute;
-	z-index: 23;
-	height: 15vh;
-	background-color: rgba(255,255,255,0.9);
-	border-radius: 5px;
-	padding: 3px;
-	display: inline-block;
-	width: 15vh;
+	width: 7vw;
+	height: 7vw;
 }
 
 #monomotor{
-	top: -65vh;
-	left: -33vw;
+	z-index: 20;
+	top : 15vh;
+	left: 44vw;
 }
 
 #nomotor{
-	top: -42vh;
-	left: -66vw;
+	z-index: 21;
+	top: 32vh;
+	left: 30vw;
+}
+
+#bimotor{
+	z-index: 22;
+	top: 40vh;
+	left: 53vw;
 }
 
 .ct-chart-donut .ct-series-a .ct-slice-donut {
-	stroke: #C2DEBC;
+	stroke: #C96178;
 }
 /*make b hidden*/
 .ct-chart-donut .ct-series-b .ct-slice-donut {
@@ -128,8 +130,8 @@ h2{
 
 h3{
 	font-family: "Avenir";
-	font-size: 20pt;
-	color: #70C2B8;
+	font-size: 15pt;
+	color: #C96178;
 }
 
 

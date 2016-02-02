@@ -22,13 +22,15 @@ function generateMenageDonut(donnee,id){
 		donut: true,
 		showLabel: true,
 		total: 100,
-		donutWidth: 10,
+		donutWidth: 8,
 		chartPadding: 0,
 		showLabel: false,
+		startAngle: 190,
 		plugins: [
             Chartist.plugins.fillDonut({
                 items: [{
-					content: label
+					content: label,
+					position: 'center'
 				}]
             })
         ],
@@ -73,4 +75,5 @@ function generateMenageDonut(donnee,id){
 };
 
 generateMenageDonut(60,"monomotor");
-generateMenageDonut(40,"nomotor");
+generateMenageDonut(30,"nomotor");
+generateMenageDonut(10,"bimotor");

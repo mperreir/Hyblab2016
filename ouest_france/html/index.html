@@ -19,7 +19,7 @@
 
     <!--********************** TEST ************************-->
     <script type="text/javascript" src="script/chartist/dist/chartist.min.js"></script>
-    <script type="text/javascript" src="script/chartist-plugin-fill-donut.min.js"></script>
+    <script type="text/javascript" src="script/chartist-plugin-fill-donut.js"></script>
     <link rel="stylesheet" href="script/chartist/dist/chartist.min.css"
 
     <script type="text/javascript" src="script/chartist/dist/chartist.min.js"></script>
@@ -31,16 +31,22 @@
     <div id="container">
 
       <!-- l'entête de la page: titre, barre de recherche -->
-      <div id="footer">Copyright Hyblab 2016 Team K2000</div>
 
       <!-- Le contenu du site -->
       <div id="fullpage">
+
+
+
+
         <div class="section" id="s1">
           <img class="svg" src="images/accueil.svg" alt="En voiture Simone !"/>
           <h2>LES FRANÇAIS ET L’AUTOMOBILE : QUELLES HABITUDES DE CONSOMMATION ?</h2>
           <a href="#2"><img  id="scroll" src="images/scroll_bas.svg" alt="Slide suivante"/></a>
-          <div class="arrow bounce"></div>
         </div>
+
+
+
+
         <div class="section" id="s2">
           <h1>COMBIEN DE VOITURES DANS TON GARAGE ?</h1>
           <img class="svg isles"  src="images/motor.svg" alt="Ménages motorisés"/>
@@ -49,20 +55,33 @@
 
           <div class="ct-chart donut" id="monomotor"></div>
           <div class="ct-chart donut" id="nomotor"></div>
+          <div class="ct-chart donut" id="bimotor"></div>
 
           <div class="ct-chart barreDefilement" id="chartMotorisation"></div>
         </div>
+
+
+
+
         <div class="section" id="s3">
           <h1>PLUTÔT NEUF OU OCCASION ?</h1>
           <img class="svg isles" src="images/neuf_occaz.svg" alt="Neuf ou occasion ?"/>
 
           <div class="ct-chart barreDefilement" id="chartParc"></div>
         </div>
+
+
+
+
         <div class="section" id="s4">
           <h1>À QUOI TU CARBURES ?</h1>
           <img class="svg" src="images/pompe.svg" alt="Pompe"/>
           <div class="ct-chart barreDefilement" id="chartCarburant"></div>
         </div>
+
+
+
+
         <div class="section" id="s5">
           <h1>5th Slide ! Conclusion / Sponsors Hyblab</h1>
 
@@ -103,6 +122,7 @@
               <a href="http://www.hyblab.fr"><img class="logo" src="logos/hyblab.png" alt="Hyblab - Data Journalisme"></a>
               <a href="http://www.ouestmedialab.fr" title="MediaLab"><img class="logo" src="logos/medialab.png" alt="MediaLab" /></a>
             </div>
+            <div id="footer">Copyright Hyblab 2016 Team K2000</div>
           </div>
         </div>
       </div>

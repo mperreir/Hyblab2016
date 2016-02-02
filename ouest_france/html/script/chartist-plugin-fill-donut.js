@@ -22,7 +22,7 @@
         return function fillDonut(chart){
             if(chart instanceof Chartist.Pie) {
                 var $chart = $(chart.container);
-                $chart.css('position', 'relative');
+                //$chart.css('position', 'relative');
                 var $svg;
 
                 chart.on('draw', function(data) {
