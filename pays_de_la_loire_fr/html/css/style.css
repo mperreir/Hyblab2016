@@ -1202,8 +1202,6 @@ span>ul>li>p
     width: 10%;
     top: 35%;
     left: 82%;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
 }
 
 
@@ -1213,6 +1211,8 @@ span>ul>li>p
     width: 10%;
     top: 4%;
     left: 45%;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 #data2_biomasse
@@ -1221,6 +1221,9 @@ span>ul>li>p
     width: 10%;
     top: 75%;
     left: 45%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
 }
 
 #svg_dataviz2
