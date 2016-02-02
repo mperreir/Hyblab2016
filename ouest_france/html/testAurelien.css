@@ -1,0 +1,25 @@
+.percent{
+	position: relative;
+	text-align: center;
+	top: 35vh;
+}
+
+.ct-chart-donut .ct-series-a .ct-slice-donut {
+	stroke: #C2DEBC;
+}
+/*make b hidden*/
+.ct-chart-donut .ct-series-b .ct-slice-donut {
+	stroke: #efefef;
+	opacity: 0.0;
+}
+/*make all fill-donut series visible and set color*/
+.ct-chart-donut .ct-fill-donut .ct-slice-donut{
+	stroke: #efefef;
+	opacity: 1;
+}
+
+h3{
+	font-family: "Avenir";
+	font-size: 30pt;
+	color: #70C2B8;
+}

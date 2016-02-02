@@ -16,6 +16,11 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="script/jquery.fullPage.min.js"></script>
 
+    <!--********************** TEST ************************-->
+    <script type="text/javascript" src="script/chartist/dist/chartist.min.js"></script>
+    <script type="text/javascript" src="script/chartist-plugin-fill-donut.min.js"></script>
+    <link rel="stylesheet" href="script/chartist/dist/chartist.min.css">
+
   </head>
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
@@ -36,6 +41,8 @@
         <div class="section" id="s2">
           <h1>COMBIEN DE VOITURES DANS TON GARAGE ?</h1>
           <img class="svg isles"  src="images/motor.svg" alt="Ménages motorisés"/>
+          <div class="ct-chart donut" id="monomotor"></div>
+          <div class="ct-chart donut" id="nomotor"></div>
         </div>
         <div class="section" id="s3">
           <h1>PLUTÔT NEUF OU OCCASION ?</h1>

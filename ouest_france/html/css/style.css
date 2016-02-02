@@ -40,7 +40,7 @@ h2{
 
 .isles{
 	position:relative;
-	top:-14vh;
+	top:-12vh;
 }
 
 .logo{
@@ -86,6 +86,50 @@ h2{
 
 .section{
 	position: relative;
+}
+
+
+/**** Implémentation tests dans site ****/
+
+.donut{
+	position: absolute;
+	z-index: 23;
+	height: 15vh;
+	background-color: rgba(255,255,255,0.9);
+	border-radius: 5px;
+	padding: 3px;
+	display: inline-block;
+	width: 15vh;
+}
+
+#monomotor{
+	top: -65vh;
+	left: -33vw;
+}
+
+#nomotor{
+	top: -42vh;
+	left: -66vw;
+}
+
+.ct-chart-donut .ct-series-a .ct-slice-donut {
+	stroke: #C2DEBC;
+}
+/*make b hidden*/
+.ct-chart-donut .ct-series-b .ct-slice-donut {
+	stroke: #efefef;
+	opacity: 0;
+}
+/*make all fill-donut series visible and set color*/
+.ct-chart-donut .ct-fill-donut .ct-slice-donut{
+	stroke: #efefef;
+	opacity: 1;
+}
+
+h3{
+	font-family: "Avenir";
+	font-size: 20pt;
+	color: #70C2B8;
 }
 
 
