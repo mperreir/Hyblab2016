@@ -151,7 +151,6 @@ d3.json('json/treemap.json', function(root) {
         .text(function(d) { return d.name; })
         .call(text);
 
-
     if (d.value == 10) {
 
       if (d._children[0].address) {
