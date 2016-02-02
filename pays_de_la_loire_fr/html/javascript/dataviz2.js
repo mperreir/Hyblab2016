@@ -97,7 +97,6 @@ var pales = d3.select("#data2_pale");
 var bouton_solaire = d3.select("#data2_solaire")
 bouton_solaire
 .on("click", function(d) {
-    console.log("bouton_solaire");
     //on change le saviez_vous
     $(document.getElementById("saviez_vous_eolienne")).hide();
     $(document.getElementById("saviez_vous_biomasse")).hide();
@@ -106,7 +105,6 @@ bouton_solaire
     var img = document.getElementById("data2_pale");
     if (pos!=1) {
         deg = pos==0 ? deg-120 : deg+120;
-        console.log(deg);
         $(img)
         .transition({
                     opacity: 1,
@@ -116,9 +114,9 @@ bouton_solaire
                     //$(img).css({ rotate: '-120deg'})
                     })
         //remise a zéro des valeurs
-        zero();
+        zero(toS);
         //transition
-        toS();
+        //toS()
         //on eleve l'animation
         bouton_solaire.attr("class", "");
     }
@@ -126,7 +124,6 @@ bouton_solaire
 
 var bouton_eolien = d3.select("#data2_eolien")
 .on("click", function(d) {
-    console.log("bouton_eolien");
     //on change le saviez_vous
     $(document.getElementById("saviez_vous_solaire")).hide();
     $(document.getElementById("saviez_vous_biomasse")).hide();
@@ -152,7 +149,6 @@ var bouton_eolien = d3.select("#data2_eolien")
 
 var bouton_biomasse = d3.select("#data2_biomasse")
 .on("click", function(d) {
-    console.log("bouton_biomasse");
     //on change le saviez_vous
     $(document.getElementById("saviez_vous_solaire")).hide();
     $(document.getElementById("saviez_vous_eolienne")).hide();
@@ -183,27 +179,27 @@ toE();
 
 //d3.select(self.frameElement).style("height", height + "px");
 
+function endall(transition, callback) {
+    var n = 0;
+    transition
+    .each(function() { ++n; })
+    .each("end", function() { if (!--n) callback.apply(this, arguments); });
+}
+
 
 function zero(callback) {
 	//mise à zéro des valeurs
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
-		field.data()[i].value = 0;
-        field.data()[i].opacity = 0;
+		field.data()[i].value = 0.2;
+        field.data()[i].opacity = 1;
     }
 	//transition
-    var n = 0;
 	if (!document.hidden) field
 		.transition()
 		.duration(500)
         .each(fieldTransition)
-        .each(function() { n++; })
-        .each("end", function () {
-              if (n==5){
-                //callback();
-              }
-              }
-              );
+        .call(endall, callback);
 }
 
 function toE() {
@@ -223,13 +219,14 @@ function toE() {
 }
 
 function toS() {
+    console.log("toS");
     pos = 1;
 	//calcule de la nouvelle valeur
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
 		field.data()[i].value = (field.data()[i].val2*posMax)/field.data()[0].val2;
+        console.log(field.data()[i].previousValue + '-' + field.data()[i].value);
         field.data()[i].opacity = 1;
-        console.log(field.data()[i].value);
     }
 	//transition
     if (!document.hidden) field
@@ -257,13 +254,18 @@ function toB() {
 
 
 function tick() {
-	console.log(field.data());
     if (!document.hidden) field
         .each(fieldTransition)
 }
 
 function fieldTransition() {
+    
     var field = d3.select(this).transition();
+    
+    //for (var i =0; i < 5; i++){
+    field.each(function(d) { console.log(d); });
+    //}
+    
     
     //data
     field.select(".arc-body")
@@ -302,10 +304,10 @@ function arcTween(arc) {
 //valeurs entre 0-1
 function fields() {
     return [
-            {index: .5, text: "", value: 0, previousValue: 0, opacity: 1, year: "2014", val1: "1067", val2: "364", val3: "199"},
-            {index: .4, text: "", value: 0, previousValue: 0, opacity: 1, year: "2013", val1: "981", val2: "299", val3: "182"},
-            {index: .3, text: "", value: 0, previousValue: 0, opacity: 1, year: "2012", val1: "884", val2: "266", val3: "114"},
-            {index: .2, text: "", value: 0, previousValue: 0, opacity: 1, year: "2011", val1: "704", val2: "179", val3: "67"},
-            {index: .1, text: "", value: 0, previousValue: 0, opacity: 1, year: "2010", val1: "611", val2: "61", val3: "50"}
+            {index: .5, text: "", value: 0, previousValue: 0, opacity: 1, year: "2014", val1: "1067", val2: "364", val3: "199", color: ""},
+            {index: .4, text: "", value: 0, previousValue: 0, opacity: 1, year: "2013", val1: "981", val2: "299", val3: "182", color: ""},
+            {index: .3, text: "", value: 0, previousValue: 0, opacity: 1, year: "2012", val1: "884", val2: "266", val3: "114", color : ""},
+            {index: .2, text: "", value: 0, previousValue: 0, opacity: 1, year: "2011", val1: "704", val2: "179", val3: "67", color: ""},
+            {index: .1, text: "", value: 0, previousValue: 0, opacity: 1, year: "2010", val1: "611", val2: "61", val3: "50", color: ""}
             ];
 }
