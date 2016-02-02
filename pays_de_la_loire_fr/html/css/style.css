@@ -131,9 +131,9 @@ span>ul>li>p
 {
 	position: absolute;
 	top: 30%;
-	left: -100%;
+	left: 12%;
 	background-color: #365471;
-	width: 36%;
+	width: 10%;
 	height: 35%;
 	color: white;
 	border-radius: 5vw;
@@ -165,32 +165,29 @@ span>ul>li>p
 
 #q3
 {
-	left: 276.5%;
-	width: 240%;
+	left: 17.5%;
 	z-index: 1;
 }
 
 #q4
 {
-	width: 240%;
-	left: 689%;
+	left: 17.5%;
 }
 
 .q2
 {
-	left: 4.5%;
+	left: 37.5%;
 	z-index: 1;
 }
 
 .q3
 {
-	left: 107.5%;
+	left: 62.5%;
 }
 
 .q4
 {
-	left: 207.5%;
-	width: 38%;
+	left: 87.5%;
 }
 
 .bouton
@@ -291,7 +288,7 @@ span>ul>li>p
 
 #fond_q4
 {
-	left: 154.5%;
+	left: 37.5%;
 }
 
 #nuage1
@@ -506,12 +503,21 @@ span>ul>li>p
 	bottom: 85.5%;
 }
 
+/* 
+Elements de la question 4
+*/
+#titre_q4
+{
+	left: 75%;
+	bottom: 85.5%;
+}
+
 #elements_q4
 {
 	position: absolute;
-	width: 45%;
+	width: 10%;
 	height: auto;
-	left: 183%;
+	left: 82.5%;
 	bottom: 7%;
 }
 
