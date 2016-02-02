@@ -1,62 +1,71 @@
 "use strict";
 
-$(document).ready(function(){
-	requestGenerateChart("menage");
-	requestGenerateChart("parc");
-	requestGenerateChart("carburant");
-});
+var dataCharts = {
+		menage : null,
+		parc : null,
+		carburant : null,
+}
 
 function requestGenerateChart(type){
-	var requete = $.ajax({
-		url : "http://127.0.0.1:8080/ouest_france/data/"+type+"/years",
-		type : "GET",
-		dataType : "text",
-		success : generateChart,
-		error : function(res, statut, error){
-			alert(res+" ; "+statut+" ; "+error);
-		}
-	});
-};
-function generateChart(res, statut){
-		var donnees = JSON.parse(res);
-		var valeurs = [];
-		var data = generateChartData(donnees);
-		var options = fillOptions();
-		var chartId;
-		switch(donnees.categorie){
-			case "menage":
-				chartId = '#chartMotorisation';
-				break;
-			case "carburant":
-				chartId = '#chartCarburant';
-				break;
-			case "parc":
-				chartId = '#chartParc';
-				break;	
-		};
-		var chart = new Chartist.Line(chartId, data, options);
-		var seq = 0;
-		var delays = 80;
-		var durations = 500;
-
-		chart.on('created', function(){
-			seq=0;
-		});
-
-		chart.on('draw', function(param){
-			seq++;
-
-			if(param.type === 'line'){
-				setLineAnimation(param, seq, delays, durations);
-			}else if(param.type === 'label'){
-
-				if(jQuery.inArray(param.text, donnees.yearsToScreen == -1)){
-					setLabelAnimation(param, donnees.categorie);
-				};
-			}else if(param.type === 'point'){
-				setPointAnimation(param,donnees.categorie,seq,delays,durations);
+	if(!dataCharts[type]){
+		var requete = $.ajax({
+			url : "http://127.0.0.1:8080/ouest_france/data/"+type+"/years",
+			type : "GET",
+			dataType : "text",
+			success : generateChart,
+			error : function(res, statut, error){
+				alert(res+" ; "+statut+" ; "+error);
 			}
 		});
+	}else generateChart(dataCharts[type], "200");
+	
+};
+function generateChart(res, statut){
+	var donnees;
+	if(typeof res == "string"){
+		donnees = JSON.parse(res);
+		dataCharts[donnees.categorie] = donnees;
+	}else donnees = res;
+
+	var valeurs = [];
+	var data = generateChartData(donnees);
+	var options = fillOptions();
+	var chartId;
+	switch(donnees.categorie){
+		case "menage":
+			chartId = '#chartMotorisation';
+			break;
+		case "carburant":
+			chartId = '#chartCarburant';
+			break;
+		case "parc":
+			chartId = '#chartParc';
+			break;	
+	};
+	var chart = new Chartist.Line(chartId, data, options);
+
+	var seq = 0;
+	var delays = 80;
+	var durations = 500;
+
+	chart.on('created', function(){
+		seq=0;
+	});
+
+	chart.on('draw', function(param){
+		seq++;
+
+		if(param.type === 'line'){
+			setLineAnimation(param, seq, delays, durations);
+		}else if(param.type === 'label'){
+
+			if(jQuery.inArray(param.text, donnees.yearsToScreen == -1)){
+				setLabelAnimation(param, donnees.categorie);
+			};
+		}else if(param.type === 'point'){
+			setPointAnimation(param,donnees.categorie,seq,delays,durations);
+		}
+	});
 };
 
 
@@ -229,4 +238,19 @@ function setPointAnimation(param, categorie, seq, delay, duration){
 	        easing: 'easeOutQuart'
 	      }
 	});
+}
+
+function relaunchChartAnimation(index, nextIndex, direction){
+	console.log(index+"->"+nextIndex);
+	switch(nextIndex){
+		case 2:
+			requestGenerateChart("menage");
+			break;
+		case 3:
+			requestGenerateChart("parc");
+			break;
+		case 4:
+			requestGenerateChart("carburant");
+			break;
+	}
 }

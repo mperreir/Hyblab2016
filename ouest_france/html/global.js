@@ -1,10 +1,15 @@
 "use strict";
+
 $(document).ready(function() {
     $('#fullpage').fullpage({
-    	navigation : true
+    	navigation : true,
+    	onLeave : relaunchChartAnimation,
     });
-});
 
+	requestGenerateChart("menage");
+	requestGenerateChart("parc");
+	requestGenerateChart("carburant");
+});
 
 /********* TEST ***********/
 function generateMenageDonut(donnee,id){

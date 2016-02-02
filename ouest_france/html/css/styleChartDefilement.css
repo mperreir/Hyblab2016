@@ -18,3 +18,7 @@ span.ct-label{
 .section{
 	max-height: 100vh;
 }
+
+#chartMotorisation .ct-line, #chartParc .ct-line, #chartCarburant .ct-line{
+	stroke-width: 1px;
+}
