@@ -64,55 +64,55 @@ var infosJardinJoseph = {
         idJauge: "jauge_racine",
         couleur: "#f7bd48",
         maximum: 20050,
-        cheminImage: "./img/diagrammes/joseph/racine.png"
+        cheminImage: "./img/diagrammes/joseph/racines.svg"
     },
     "Poids et Haricots": { 
         idJauge: "jauge_haricots",
         couleur: "#c96d63", 
         maximum: 16400,
-        cheminImage: "./img/diagrammes/joseph/haricots.png"
+        cheminImage: "./img/diagrammes/joseph/haricots.svg"
     },
     "Choux": { 
         idJauge: "jauge_choux",
         couleur: "#b5ff9c",
         maximum: 14600,
-        cheminImage: "./img/diagrammes/joseph/choux.png"
+        cheminImage: "./img/diagrammes/joseph/choux.svg"
     },
     "Epinards et Salades": { 
         idJauge: "jauge_salades",
         couleur: "#c9ff73",
         maximum: 39755,
-        cheminImage: "./img/diagrammes/joseph/salades.png"
+        cheminImage: "./img/diagrammes/joseph/salades.svg"
     },
     "Courges": { 
         idJauge: "jauge_courges",
         couleur: "#d6ff38",
         maximum: 77400,
-        cheminImage: "./img/diagrammes/joseph/poivron.png"
+        cheminImage: "./img/diagrammes/joseph/courges.svg"
     },
     "Tomates": { 
         idJauge: "jauge_tomates",
         couleur: "#ee7268",
         maximum: 123600,
-        cheminImage: "./img/diagrammes/joseph/tomates.png"
+        cheminImage: "./img/diagrammes/joseph/tomates.svg"
     },
     "Aromatiques": { 
         idJauge: "jauge_aromatiques",
         couleur: "#aef86e",
         maximum: 3800,
-        cheminImage: "./img/diagrammes/joseph/aromatique.png"
+        cheminImage: "./img/diagrammes/joseph/aromatiques.svg"
     },
     "Fruits": { 
         idJauge: "jauge_fruits",
-        couleur: "#f7e957",
+        couleur: "#ffa87b",
         maximum: 30010,
-        cheminImage: "./img/diagrammes/joseph/citron.png"
+        cheminImage: "./img/diagrammes/joseph/fruits.svg"
     },
     "Autres": { 
         idJauge: "jauge_autres",
         couleur: "#f7ff64",
         maximum: 11965,
-        cheminImage: "./img/diagrammes/joseph/mais.png"
+        cheminImage: "./img/diagrammes/joseph/autres.svg"
     }
 };
 
@@ -137,7 +137,9 @@ donneesActuelles.forEach(function(element, index, tableau) {
     
     var baliseJauge = d3.select("#diagrammeJoseph").append("div").attr("class", "baliseJauge"); 
     var svgJauge = baliseJauge.append("svg").attr("id", idJauge).attr("width", 100).attr("height", 150);
+    svgJauge.attr("viewBox", "0, 0, 100 150");
     // <svg id="fillgauge6" width="19%" height="300" onclick="gauge6.update(NewValue());"></svg>
+    
     
     var config = liquidFillGaugeDefaultSettings();
     config.minValue = 0;
@@ -169,7 +171,7 @@ donneesActuelles.forEach(function(element, index, tableau) {
     
     // ajout de l'image dans la jauge
     // <image x="200" y="200" width="100px" height="100px" xlink:href="myimage.png"> 
-    svgJauge.select("g").append("image").attr("x", 0).attr("y", 0).attr("xlink:href", infoElement.cheminImage).attr("width", 101).attr("height", 101);
+    svgJauge.select("g").append("image").attr("x", 25).attr("y", 25).attr("xlink:href", infoElement.cheminImage).attr("width", 50).attr("height", 50);
 });
 
 

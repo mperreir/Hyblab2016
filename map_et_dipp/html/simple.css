@@ -167,11 +167,13 @@ nav .boutonMenu
 #slide4 header h2 {
     color: #fdbe63;
     font: 40px museoReg;
-    margin-top: 0;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 #slide4 header h3 {
     padding: 5px;
+    margin-top: 1%;
     /* style du texte */
     color: #fdbe63;
     font: 18px museoReg;
@@ -183,16 +185,15 @@ nav .boutonMenu
 }
 
 #slide4 article {
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 10px;
+    padding: 2%; /* 30px 30px 30px 10px */
+    margin: 0 auto;
+    width: 50%;
     /* style du texte */
     color: #4c4c4c;
     font: 15px / 19px museoReg;
     /* contour */
     border: 2px solid #fdbe63;
-    border-radius: 50px;
+    border-radius: 30px;
     /* permet de centrer verticalement les balises, doit être utilisé sur toutes les balises du même row */
     display: inline-block;
     vertical-align: middle;
@@ -233,7 +234,7 @@ nav .boutonMenu
 
 
 #diagrammeJoseph {
-    margin-top: 15px;
+    margin-top: 3%;
     margin-bottom: 0;
     padding: 0;
 }
