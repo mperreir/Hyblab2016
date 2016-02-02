@@ -72,8 +72,14 @@ span>ul>li>p
 {
 	font-weight: bold;
 	text-align: center;
-	bottom: 40%;
+	position: absolute;
 	color: #002266;
+}
+
+#titre_intercalaire_questionnaire
+{
+	left: 31.5%;
+	bottom: 74.5%;
 }
 
 .text-left
@@ -82,10 +88,19 @@ span>ul>li>p
 	left: 2%;
 }
 
+#titre_intro
+{
+	bottom: 82%;
+	left: 15%;
+}
+
 .sous_titre_orange
 {
+	position: absolute;
 	text-align: center;
-	bottom: 40%;
+	bottom: 75.6%;
+	left: 32%;
+	font-size: 2vw;
 	color: #ffbf00;
 	font-weight: bold;
 }
@@ -108,17 +123,17 @@ span>ul>li>p
 .liste_propositions
 {
 	position: absolute;
-	left: -550%;
-	width: 240%;
+	left: 17%;
+	width: 60%;
 }
 
 .bloc_reponse
 {
 	position: absolute;
 	top: 30%;
-	left: -100%;
+	left: 12%;
 	background-color: #365471;
-	width: 36%;
+	width: 10%;
 	height: 35%;
 	color: white;
 	border-radius: 5vw;
@@ -144,38 +159,35 @@ span>ul>li>p
 
 #q2
 {
-	left: -136%;
+	left: 17%;
 	z-index: 1;
 }
 
 #q3
 {
-	left: 276.5%;
-	width: 240%;
+	left: 17.5%;
 	z-index: 1;
 }
 
 #q4
 {
-	width: 240%;
-	left: 689%;
+	left: 17.5%;
 }
 
 .q2
 {
-	left: 4.5%;
+	left: 37.5%;
 	z-index: 1;
 }
 
 .q3
 {
-	left: 107.5%;
+	left: 62.5%;
 }
 
 .q4
 {
-	left: 207.5%;
-	width: 38%;
+	left: 87.5%;
 }
 
 .bouton
@@ -189,8 +201,8 @@ span>ul>li>p
 	color: white;
 	position: absolute;
 	top : 80%;
-	left: 45%;
-	width: 10%;
+	left: 42.5%;
+	width: 15%;
 	font-size: 1.5vw;
 	background-color:#e4685d;
 	border:1px solid #ffffff;
@@ -224,6 +236,14 @@ span>ul>li>p
 	font-weight: bold;
 }
 
+#titre_q1
+{
+	position: absolute;
+	bottom: 85.5%;
+	left: 3.5%;
+	width: 20%;
+}
+
 .section_perso
 {
 	background-color: #F7FBFC;
@@ -253,22 +273,23 @@ span>ul>li>p
 
 #fond_q1
 {
-	left: -155%;
+	z-index: 0;
+	left: -37.5%;
 }
 
 #fond_q2
 {
-	left: -50%;
+	left: -12.5%;
 }
 
 #fond_q3
 {
-	left: 52.5%;
+	left: 12.5%;
 }
 
 #fond_q4
 {
-	left: 154.5%;
+	left: 37.5%;
 }
 
 #nuage1
@@ -343,141 +364,178 @@ span>ul>li>p
 #pale_intro_1
 {
 	opacity: 1;
-	bottom: 33.5%;
-	left: 57.9%;
-	width: 6%;
+	bottom: 31.7%;
+	left: 57.4%;
+	width: 7%;
 	height: auto;
 }
 
 #pale_intro_2
 {
 	opacity: 1;
-	bottom: 32.2%;
-	left: 62.2%;
-	width: 9.4%;
+	bottom: 31.7%;
+	left: 64.23%;
+	width: 7%;
 	height: auto;
 }
 
 #pale_intro_3
 {
 	opacity: 1;
-	bottom: 32.1%;
-	left: 69.1%;
-	width: 9.4%;
+	bottom: 31.7%;
+	left: 71.25%;
+	width: 7%;
 	height: auto;
 }
 
 #france
 {
 	position: absolute;
-	width: 45%;
-	bottom: 12%;
-	left: -127.5%;
+	width: 12%;
+	bottom: 5%;
+	left: 6.5%;
 }
 
 #ampoule_q2
 {
 	position: absolute;
-	left: -35.5%;
-	width: 20%;
-	top: 30%;
+	left: 27.5%;
+	width: 6%;
+	top: 32.5%;
 	height: auto;
 }
 
 #batiment_q2
 {
 	position: absolute;
-	left: -11.5%;
-	width: 20%;
-	top: 30%;
+	left: 34.5%;
+	width: 6%;
+	top: 32.5%;
 	height: auto;
 }
 
 #euro_q2
 {
 	position: absolute;
-	left: 13.5%;
-	width: 20%;
-	top: 30%;
+	left: 42%;
+	width: 6%;
+	top: 32.5%;
 	height: auto;
+}
+
+#titre_q2
+{
+	left: 33%;
+	bottom: 85.5%;
+	width: 10%;
 }
 
 #elements_q3
 {
 	position: absolute;
-	width: 55%;
+	width: 25%;
 	height: auto;
-	left: 72.5%;
-	bottom: 5%;
+	left: 50%;
+	bottom: -10%;
 }
 
 #tracteur_q3
 {
 	position: absolute;
-	width: 7.5%;
+	width: 2%;
 	height: auto;
-	left: 78%;
-	top: 57.5%;
+	left: 56.5%;
+	bottom: 25%;
 }
 
 #panneau_1_q3
 {
 	position: absolute;
-	width: 6.5%;
+	width: 1.5%;
 	height: auto;
-	top: 65%;
-	left: 105%;
+	bottom: 18%;
+	left: 64%;
 }
 
 #panneau_2_q3
 {
 	position: absolute;
-	width: 6.5%;
+	width: 1.5%;
 	height: auto;
-	top: 60%;
-	left: 102%;
+	bottom: 24%;
+	left: 65%;
 }
 
 #panneau_3_q3
 {
 	position: absolute;
-	width: 6.5%;
+	width: 1.5%;
 	height: auto;
-	top: 60%;
-	left: 109%;
+	bottom: 24%;
+	left: 63%;
 }
 
 #pale_1_q3
 {
 	position: absolute;
-	width: 9%;
-	top: 25.5%;
-	left: 103.15%;
+	width: 1.8%;
+	bottom: 55.8%;
+	left: 63.6%;
 }
 
 #pale_2_q3
 {
 	position: absolute;
-	width: 9%;
-	top: 29%;
-	left: 108.1%;
+	width: 1.8%;
+	bottom: 52.78%;
+	left: 64.94%;
 }
 
 #pale_3_q3
 {
 	position: absolute;
-	width: 9%;
-	top: 25.7%;
-	left: 113.7%;
+	width: 1.8%;
+	bottom: 55.8%;
+	left: 66.4%;
+}
+
+#titre_q3
+{
+	left: 55%;
+	bottom: 85.5%;
+	width: 15%;
+}
+
+/* 
+Elements de la question 4
+*/
+#titre_q4
+{
+	left: 77.5%;
+	bottom: 85.5%;
+	width: 20%;
 }
 
 #elements_q4
 {
 	position: absolute;
-	width: 45%;
+	width: 10%;
 	height: auto;
-	left: 183%;
+	left: 82.5%;
 	bottom: 7%;
+}
+
+/*
+DATA 1
+*/
+
+#titre_data1
+{
+	position: absolute;
+	width: 35%;
+	left: 10%;
+	bottom: 85.5%;
+	text-align: left;
 }
 
 #data1_infos
@@ -485,8 +543,8 @@ span>ul>li>p
 	position: absolute;
 	width: 30%;
 	height: 25%;
-	left: 10.25%;
-	top: 25%;
+	left: 10%;
+	top: 20%;
 	font-size: 1vw;
 	color: #002266;
 }
@@ -498,13 +556,18 @@ span>ul>li>p
 
 #saviez_vous
 {
-	position: relative;
+	position: absolute;
 	width: 30%;
-	height: 25%;
 	padding: 2%;
-	top: 50.5%;
+	top: 44%;
 	left: 9.6%;
 	text-align: center;
+}
+
+.petit_mot
+{
+	font-size: 1.25vw;
+	color: #e4685d;
 }
 
 #saviez_vous>p
@@ -525,12 +588,19 @@ span>ul>li>p
 	height: auto;
 }
 
+.elem_14
+{
+	opacity: 0;
+}
+
 #bouton_2008_data1
 {
 	position: absolute;
 	width: 12%;
 	left: 78%;
-	bottom: 28%;
+	bottom: 32%;
+	cursor: pointer;
+	transform: scale(1.3);
 }
 
 #bouton_2014_data1
@@ -538,7 +608,10 @@ span>ul>li>p
 	position: absolute;
 	width: 12%;
 	left: 78%;
-	bottom: 19%;
+	bottom: 13%;
+	cursor: pointer;
+	transform: scale(0.7);
+	opacity: 0.8;
 }
 
 #tracteur1_data1
@@ -1192,9 +1265,9 @@ span>ul>li>p
 #data2_pale
 {
     position: absolute;
-    width: 40%;
-    top: 9.3%;
-    left: 45%;
+    width: 44%;
+    top: 5%;
+    left: 40%;
 }
 
 #data2_eolien
@@ -1210,8 +1283,8 @@ span>ul>li>p
 {
     position: absolute;
     width: 10%;
-    top: 4%;
-    left: 45%;
+    top: 2%;
+    left: 43%;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }

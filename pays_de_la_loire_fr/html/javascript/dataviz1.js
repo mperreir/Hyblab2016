@@ -11,6 +11,8 @@ $(document).ready( function () {
 	// Animation de la slide d'intro
 	animIntro();
 
+	document.getElementById("bouton_2008_data1").style.pointerEvents = "none";
+
 	//document.getElementById("sectionQ").style.display = "none";
 })
 
@@ -112,7 +114,7 @@ function resetSlide (idQ) {
 		case "q1":
 			var france = document.getElementById("france");
 			$(france).transition({
-				left: '-127.5%'
+				left: '6.5%'
 			})
 			break;
 
@@ -123,15 +125,15 @@ function resetSlide (idQ) {
 
 			$(ampoule).transition({
 				scale: 1,
-				left: '-35.5%'
+				left: '27.5%'
 			})
 			$(batiment).transition({
 				scale: 1,
-				left: '-11.5%'
+				left: '34.5%'
 			})
 			$(euro).transition({
 				scale: 1,
-				left: '13.5%'
+				left: '42%'
 			})
 			break;
 
@@ -147,35 +149,38 @@ function resetSlide (idQ) {
 
 			$(elements_q3).transition({
 				scale: 1,
-				left: '72.5%'
+				left: '50%'
 			})
 			$(panneau1).transition({
 				scale: 1,
-				left: '105%'
+				left: '64%'
 			})
 			$(panneau2).transition({
 				scale: 1,
-				left: '102%'
+				left: '65%'
 			})
 			$(panneau3).transition({
 				scale: 1,
-				left: '109%'
+				left: '63%'
 			})
 			$(tracteur).transition({
 				scale: 1,
-				left: '78%'
+				left: '56.5%'
 			})
 			$(pale1).transition({
 				scale: 1,
-				left: '103.15%'
+				left: '63.6%',
+				top: '31.5%'
 			})
 			$(pale2).transition({
 				scale: 1,
-				left: '108.1%'
+				left: '64.94%',
+				top: '34.4%'
 			})
 			$(pale3).transition({
 				scale: 1,
-				left: '113.7%'
+				left: '66.4%',
+				top: '31.5%'
 			})
 			break;
 
@@ -184,7 +189,7 @@ function resetSlide (idQ) {
 
 			$(elements_q4).transition({
 				scale: 1,
-				left: '183%'
+				left: '82.5%'
 			})
 			break;
 	}
@@ -264,7 +269,7 @@ function answerQuestions(prop_id) {
 		var france = document.getElementById("france");
 
 		$(france).transition({
-			left: '-140.5%'
+			left: '1%'
 		})
 	}
 
@@ -275,15 +280,15 @@ function answerQuestions(prop_id) {
 
 		$(ampoule).transition({
 			scale: 0.6,
-			left: '-42.05%'
+			left: '26.5%'
 		})
 		$(batiment).transition({
 			scale: 0.5,
-			left: '-32%'
+			left: '29%'
 		})
 		$(euro).transition({
 			scale: 0.5,
-			left: '-20.95%'
+			left: '32%'
 		})
 	}
 
@@ -299,39 +304,39 @@ function answerQuestions(prop_id) {
 
 		$(elements_q3).transition({
 			scale: 0.8,
-			left: '55%'
+			left: '44%'
 		})
 		$(panneau1).transition({
 			scale: 0.8,
-			left: '87.5%'
+			left: '58%'
 		})
 		$(panneau2).transition({
 			scale: 0.8,
-			left: '84.5%'
+			left: '59%'
 		})
 		$(panneau3).transition({
 			scale: 0.8,
-			left: '91.5%'
+			left: '57%'
 		})
 		$(tracteur).transition({
 			scale: 0.8,
-			left: '63.5%',
+			left: '50.5%',
 			top: '54%'
 		})
 		$(pale1).transition({
 			scale: 0.8,
-			left: '84.1%',
-			top: '28%'
+			left: '57.2%',
+			top: '34.8%'
 		})
 		$(pale2).transition({
 			scale: 0.8,
-			left: '88.1%',
-			top: '30.5%'
+			left: '58.29%',
+			top: '37.2%'
 		})
 		$(pale3).transition({
 			scale: 0.8,
-			left: '92.5%',
-			top: '29%'
+			left: '59.42%',
+			top: '34.8%'
 		})
 	}
 
@@ -340,7 +345,7 @@ function answerQuestions(prop_id) {
 
 		$(elements_q4).transition({
 			scale: 0.8,
-			left: '160%'
+			left: '77%'
 		})
 	}
 	
@@ -453,4 +458,88 @@ function answerQuestions(prop_id) {
 			}
 			break;
 	}
+}
+
+function goTo2008 () {
+	var elements = document.getElementsByClassName("elem_14");
+	var num_rand;
+
+	console.debug("Go To 2008");
+
+	for(var i = 0; i < elements.length; i++)
+	{
+		num_rand = Math.random();
+
+		// Application d'une animation
+		if(i > 0) {
+			$(elements[i]).transition({
+					left: '+=5%',
+					top: '+=6%',
+					opacity: 0,
+					delay: num_rand*100
+				}, 500)
+		} else {
+			$(elements[i]).transition({
+					right: '+=5%',
+					bottom: '+=6%',
+					opacity: 0,
+					delay: num_rand*100
+				}, 500)
+		}
+	}
+
+	var bouton_2008 = document.getElementById("bouton_2008_data1");
+	var bouton_2014 = document.getElementById("bouton_2014_data1");
+	$(bouton_2014).transition({
+		scale: 0.8,
+		opacity: 0.5
+	})
+	$(bouton_2008_data1).transition({
+		scale: 1.3,
+		opacity: 1
+	})
+
+	document.getElementById("bouton_2008_data1").style.pointerEvents = "none";
+	document.getElementById("bouton_2014_data1").style.pointerEvents = "auto";
+}
+
+function goTo2014 () {
+	var elements = document.getElementsByClassName("elem_14");
+	var num_rand;
+
+	for(var i = 0; i < elements.length; i++)
+	{
+		num_rand = Math.random();
+
+		// Application de l'animation inverse
+		if(i > 0) {
+			$(elements[i]).transition({
+					left: '-=5%',
+					top: '-=6%',
+					opacity: 1,
+					delay: num_rand*100
+				}, 500)
+		} else {
+			$(elements[i]).transition({
+					right: '-=5%',
+					bottom: '-=6%',
+					opacity: 1,
+					delay: num_rand*100
+				}, 500)
+		}
+	}
+
+	var bouton_2008 = document.getElementById("bouton_2008_data1");
+	var bouton_2014 = document.getElementById("bouton_2014_data1");
+	$(bouton_2014).transition({
+		scale: 1.3,
+		opacity: 1
+	})
+	$(bouton_2008_data1).transition({
+		scale: 0.8,
+		opacity: 0.5
+	})
+
+	document.getElementById("bouton_2008_data1").style.pointerEvents = "auto";
+	document.getElementById("bouton_2014_data1").style.pointerEvents = "none";
 }

@@ -5,8 +5,9 @@
 	 width="85.04px" height="85.04px" viewBox="0 0 85.04 85.04" enable-background="new 0 0 85.04 85.04" xml:space="preserve">
 <g>
 	
-		<line fill="none" stroke="#183356" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="27.696" y1="56.562" x2="57.455" y2="56.562"/>
-	<path fill="none" stroke="#183356" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M12.336,45.406h16.343
-		c0,0-0.685-6.068,7.927-6.068c0,0,0.685-4.697,6.459-4.697s5.578,4.307,5.578,4.307s7.046-1.272,7.046,7.144v2.349h22.118"/>
+		<line fill="none" stroke="#183356" stroke-linecap="round" stroke-miterlimit="10" x1="27.696" y1="56.562" x2="57.456" y2="56.562"/>
+	<path fill="none" stroke="#183356" stroke-linecap="round" stroke-miterlimit="10" d="M12.336,45.407h16.343
+		c0,0-0.685-6.069,7.927-6.069c0,0,0.685-4.697,6.459-4.697c5.773,0,5.578,4.307,5.578,4.307s7.046-1.272,7.046,7.144v2.349h22.118"
+		/>
 </g>
 </svg>

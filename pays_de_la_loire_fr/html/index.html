@@ -72,12 +72,12 @@
           <img class="element_fond" src="../resources/images/1ere-page-home/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau_intro_3" />
         </span>
 
-          <!--<h1 class="titre titre_intro">
-            LES ÉNERGIES RENOUVELABLES EN PAYS DE LA LOIRE
-          </h1>
-          <h2 class="sous_titre_orange titre_intro">
-            TOUT CE QUE VOUS DEVEZ SAVOIR
-          </h2>-->
+        <h1 class="titre" id="titre_intro">
+          LES ÉNERGIES RENOUVELABLES EN PAYS DE LA LOIRE
+        </h1>
+        <h2 class="sous_titre_orange">
+          TOUT CE QUE VOUS DEVEZ SAVOIR
+        </h2>
           
       </section>
 
@@ -89,9 +89,9 @@
       <section class="section section_perso">
         <span class="responsive_container">
           <img class="image_fond" src="../resources/images/Backgrounds/background3-02.svg" alt="Fond" />
-          <!--<h2 class="titre" id="titre_intercalaire_questionnaire" >
+          <h2 class="titre" id="titre_intercalaire_questionnaire" >
             CONNAISSEZ-VOUS VOTRE RÉGION ?
-          </h2>-->
+          </h2>
           <button class="bouton_demarrer" onclick="startQ()" >DÉMARRER</button>
         </span>
       </section>
@@ -101,34 +101,33 @@
         Questionnaire
       *****************
       -->
-      <section class="section section_perso responsive_container" id="sectionQ">
+      <section class="section section_perso" id="sectionQ">
+        <span class="responsive_container">
 
-        <!-- 
-          Question 1
-        -->
-        <section class="slide">
-          <span class="">
-            <img class="image_fond" src="../resources/images/Backgrounds/background3-03.svg" alt="Fond" id="fond_q1" />
+          <!-- 
+            Question 1
+          -->
+          <section class="slide">
+            <img class="image_fond" src="../resources/images/Backgrounds/background3-04.svg" alt="Fond" id="fond_q1" />
           
             <img class="" src="../resources/images/questionnaire/france.svg" alt="Fond" id="france" />
 
-            <!--<h2 class="text-center titre">
-              EN 2012 LE <span class="mot_important EN ORANGE">NOMBRE D'HABITANTS</span> EN PAYS DE LA LOIRE ÉTAIT DE : 
-            </h2>-->
+            <h2 class="text-center titre" id="titre_q1">
+              EN 2012 LE <span class="mot_important">NOMBRE D'HABITANTS</span> EN PAYS DE LA LOIRE ÉTAIT DE : 
+            </h2>
 
             <span class="text-center answers bloc_reponse" id="q1_ag">
               <p class="text-center contenu_reponse">
               <b>BONNE RÉPONSE</b><br/></br>
-              Bravo ! La région compte plus de 3 600 000 habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
+              Bravo ! La région compte plus de <br/>3 600 000 habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
               </p>
-              <!-- LE NOMBRE EST COUPE SUR 2 LIGNES DAN SLES 2 BLOCS-->
               <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q1_ag_button" />
             </span>
 
             <span class="text-center answers bloc_reponse" id="q1_ab">
               <p class="text-center contenu_reponse">
               <b>MAUVAISE RÉPONSE</b><br/><br/>
-              Eh non ! La région compte plus de 3 600 000 habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
+              Eh non ! La région compte plus de <br/>3 600 000 habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
               </p>
               <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q1_ab_button" />
             </span>
@@ -142,60 +141,58 @@
                 <img class="bouton_valider" id="q1_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
               </ul>
             </span>
-          </span>
-        </section>
+          </section>
 
-        <!-- 
-          Question 2
-        -->
-        <section class="slide" >
-          <span class="">
-            <img class="image_fond fond_questions" src="../resources/images/Backgrounds/background3-04.svg" alt="Fond" id="fond_q2" />
+          <!-- 
+            Question 2
+          -->
+          <section class="slide" >
+            <span class="">
+              <img class="image_fond fond_questions" src="../resources/images/Backgrounds/background3-04.svg" alt="Fond" id="fond_q2" />
 
-            <img class="" src="../resources/images/questionnaire/ampoule-orange.svg" alt="Ampoule" id="ampoule_q2" />
+              <img class="" src="../resources/images/questionnaire/ampoule-orange.svg" alt="Ampoule" id="ampoule_q2" />
 
-            <img class="" src="../resources/images/questionnaire/batiment.svg" alt="Batiments" id="batiment_q2" />
+              <img class="" src="../resources/images/questionnaire/batiment.svg" alt="Batiments" id="batiment_q2" />
 
-            <img class="" src="../resources/images/questionnaire/euro-bleufonce.svg" alt="Euros" id="euro_q2" />
+              <img class="" src="../resources/images/questionnaire/euro-bleufonce.svg" alt="Euros" id="euro_q2" />
 
-            <!--<h2 class="text-center titre">
-              QUEL EST LE RANG DU <span class="mot_important">PIB</span> DE LA RÉGION ?
-            </h2>-->
+              <h2 class="text-center titre" id="titre_q2">
+                QUEL EST LE RANG DU <span class="mot_important">PIB</span> DE LA RÉGION ?
+              </h2>
 
-            <span class="text-center answers bloc_reponse q2" id="q2_ag">
-              <p class="text-center contenu_reponse">
-              <b>BONNE RÉPONSE</b><br/></br>
-              Bravo ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
-              </p>
-              <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q2_ag_button" />
+              <span class="text-center answers bloc_reponse q2" id="q2_ag">
+                <p class="text-center contenu_reponse">
+                <b>BONNE RÉPONSE</b><br/></br>
+                Bravo ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
+                </p>
+                <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q2_ag_button" />
+              </span>
+
+              <span class="text-center answers bloc_reponse q2" id="q2_ab">
+                <p class="text-center contenu_reponse">
+                <b>MAUVAISE RÉPONSE</b><br/></br>
+                Eh non ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
+                </p>
+                <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q2_ab_button" />
+              </span>
+
+              <span class="contenu propositions">
+                <ul class="text-center liste_propositions" id="q2">
+                  <li onclick="chooseAnswer(this.id)" id="q2_p1"><p>3ème</p></li>
+                  <li onclick="chooseAnswer(this.id)" id="q2_p2"><p>5ème</p></li>
+                  <li onclick="chooseAnswer(this.id)" id="q2_p3"><p>7ème</p></li>
+
+                  <img class="bouton_valider" id="q2_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
+                </ul>
+              </span>
             </span>
+          </section>
 
-            <span class="text-center answers bloc_reponse q2" id="q2_ab">
-              <p class="text-center contenu_reponse">
-              <b>MAUVAISE RÉPONSE</b><br/></br>
-              Eh non ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
-              </p>
-              <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q2_ab_button" />
-            </span>
-
-            <span class="contenu propositions">
-              <ul class="text-center liste_propositions" id="q2">
-                <li onclick="chooseAnswer(this.id)" id="q2_p1"><p>3ème</p></li>
-                <li onclick="chooseAnswer(this.id)" id="q2_p2"><p>5ème</p></li>
-                <li onclick="chooseAnswer(this.id)" id="q2_p3"><p>7ème</p></li>
-
-                <img class="bouton_valider" id="q2_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
-              </ul>
-            </span>
-          </span>
-        </section>
-
-        <!-- 
-          Question 3
-        -->
-        <section class="slide" >
-          <span class="">
-            <img class="image_fond" src="../resources/images/Backgrounds/background3-05.svg" alt="Fond" id="fond_q3" />
+          <!-- 
+            Question 3
+          -->
+          <section class="slide" >
+            <img class="image_fond" src="../resources/images/Backgrounds/background3-04.svg" alt="Fond" id="fond_q3" />
 
             <img class="" src="../resources/images/questionnaire/fondbakcground5.svg" alt="Fond" id="elements_q3" />
 
@@ -213,9 +210,9 @@
 
             <img class="" src="../resources/images/questionnaire/pale.svg" alt="Pale" id="pale_3_q3" />
 
-            <!--<h2 class="text-center titre">
-              QUEL TYPE D'<span class="mot_important">ÉNERGIE RENOUVELABLE</span> EST LE PLUS PRODUIT EN PAYS DE LA LOIRE ?
-            </h2>-->
+            <h2 class="text-center titre" id="titre_q3">
+              QUELLE <span class="mot_important">ÉNERGIE RENOUVELABLE</span> EST LA PLUS PRODUITE EN PAYS DE LA LOIRE ?
+            </h2>
 
             <span class="text-center answers bloc_reponse q3" id="q3_ag">
               <p class="text-center contenu_reponse">
@@ -243,50 +240,50 @@
                 <img class="bouton_valider" id="q3_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
               </ul>
             </span>
-          </span>
-        </section>
+          </section>
 
-        <!-- 
-          Question 4
-        -->
-        <section class="slide">
-          <span class="">
-            <img class="image_fond" src="../resources/images/Backgrounds/background3-06.svg" alt="Fond" id="fond_q4" />
+          <!-- 
+            Question 4
+          -->
+          <section class="slide">
+            <span class="">
+              <img class="image_fond" src="../resources/images/Backgrounds/background3-04.svg" alt="Fond" id="fond_q4" />
 
-            <img class="" src="../resources/images/questionnaire/maison+perso.svg" alt="Fond" id="elements_q4" />
+              <img class="" src="../resources/images/questionnaire/maison+perso.svg" alt="Fond" id="elements_q4" />
 
-            <!--<h2 class="text-center titre">
-              LA <span class="mot_important">PRODUCTION</span> D'ÉNERGIES RENOUVELABLES DE LA RÉGION ALIMENTE :
-            </h2>-->
+              <h2 class="text-center titre" id="titre_q4">
+                EN UN AN, LES <span class="mot_important">ÉNERGIES RENOUVELABLES PRODUITES</span> EN PAYS DE LA LOIRE ALIMENTENT L'ÉQUIVALENT DE...
+              </h2>
 
-            <span class="text-center answers bloc_reponse q4" id="q4_ag">
-              <p class="text-center contenu_reponse">
-              <b>BONNE RÉPONSE</b><br/></br>
-              Bravo ! La production d’énergie de la région était estimée à 1654GW en 2014.<br/>Cette production permet donc d’alimenter 165 400 foyers !
-              </p>
-              <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextS(this.id)" id="q4_ag_button" />
+              <span class="text-center answers bloc_reponse q4" id="q4_ag">
+                <p class="text-center contenu_reponse">
+                <b>BONNE RÉPONSE</b><br/></br>
+                Bravo ! La production d’énergie de la région était estimée à 1654GW en 2014.<br/>Cette production permet donc d’alimenter 165 400 foyers !
+                </p>
+                <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextS(this.id)" id="q4_ag_button" />
+              </span>
+
+              <span class="text-center answers bloc_reponse q4" id="q4_ab">
+                <p class="text-center contenu_reponse">
+                <b>MAUVAISE RÉPONSE</b><br/></br>
+                Eh non ! La production d’énergie de la région était estimée à 1654GW en
+    2014.<br/>Cette production permet donc d’alimenter 165 400 foyers !
+                </p>
+                <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextS(this.id)" id="q4_ab_button" />
+              </span>
+
+              <span class="contenu propositions">
+                <ul class="text-center liste_propositions" id="q4">
+                  <li onclick="chooseAnswer(this.id)" id="q4_p1"><p>115 700<br/>foyers</p></li>
+                  <li onclick="chooseAnswer(this.id)" id="q4_p2"><p>153 000<br/>foyers</p></li>
+                  <li onclick="chooseAnswer(this.id)" id="q4_p3"><p>165 400<br/>foyers</p></li>
+
+                  <img class="bouton_valider" id="q4_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
+                </ul>
+              </span>
             </span>
-
-            <span class="text-center answers bloc_reponse q4" id="q4_ab">
-              <p class="text-center contenu_reponse">
-              <b>MAUVAISE RÉPONSE</b><br/></br>
-              Eh non ! La production d’énergie de la région était estimée à 1654GW en
-  2014.<br/>Cette production permet donc d’alimenter 165 400 foyers !
-              </p>
-              <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextS(this.id)" id="q4_ab_button" />
-            </span>
-
-            <span class="contenu propositions">
-              <ul class="text-center liste_propositions" id="q4">
-                <li onclick="chooseAnswer(this.id)" id="q4_p1"><p>115 700<br/>foyers</p></li>
-                <li onclick="chooseAnswer(this.id)" id="q4_p2"><p>153 000<br/>foyers</p></li>
-                <li onclick="chooseAnswer(this.id)" id="q4_p3"><p>165 400<br/>foyers</p></li>
-
-                <img class="bouton_valider" id="q4_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
-              </ul>
-            </span>
-          </span>
-        </section>
+          </section>
+        </span>
       </section>
 
       <!-- 
@@ -298,7 +295,10 @@
         <span class="responsive_container">
           <img class="image_fond" src="../resources/images/Backgrounds/background3-07.svg" alt="Fond" />
 
-          <!-- Changer de titre -->
+          <h2 class="text-center titre" id="titre_data1">
+            LES <b>PAYS DE LA LOIRE</b>: UNE RÉGION <br/>DE PLUS EN PLUS <span class="mot_important">DYNAMIQUE</span> !
+          </h2>
+
           <span id="data1_infos">
             <b>LA RÉGION SE DÉVELOPPE DE MANIÈRE IMPORTANTE</b><br/>
             <p>De nouvelles activités voient le jour, des entreprises apparaissent et la population augmente. Le besoin en énergie est de plus en plus important et nécessite des solutions environnementales adaptées: les énergies renouvelables se développent !</p>
@@ -306,16 +306,16 @@
 
           <span class="bloc_reponse" id="saviez_vous">
             <b>LE SAVIEZ-VOUS ?</b><br/><br/>
-            <p>La production d'électricité régionale en Gw/h a été multiplié par 6 en 6 ans !<br/>
-            Eolien: la production a été multiplié par 4 entre 2008 et 2014<br/>
-            Photovoltaïque: la production a été multipliée par 72 entre 2008 et 2014<br/>
-            Biomasse: la production a été multipliée par 66 entre 2008 et 2014<br/>
+            <p>En Pays de la Loire, la production d'énergie renouvelable sous obligation d'achat en Gw/h a été multipliée par 6 en 6 ans ! (entre 2008 et 2014)<br/>
+            <b class="petit_mot">Eolien</b>: la production a été multipliée par 4 entre 2008 et 2014<br/>
+            <b class="petit_mot">Photovoltaïque</b>: la production a été multipliée par 72 entre 2008 et 2014<br/>
+            <b class="petit_mot">Biomasse</b>: la production a été multipliée par 66 entre 2008 et 2014<br/>
             <cite>Source: ores.paysdelaloire.fr</cite></p>
           </span>
 
           <!-- Boutons des années -->
-          <img src="../resources/images/data1/2008-bouton.svg" alt="Bouton 2008" id="bouton_2008_data1" />
-          <img src="../resources/images/data1/2014-bouton.svg" alt="Bouton 2014" id="bouton_2014_data1" />
+          <img src="../resources/images/data1/2008-bouton.svg" alt="Bouton 2008" id="bouton_2008_data1" onclick="goTo2008()" />
+          <img src="../resources/images/data1/2014-bouton.svg" alt="Bouton 2014" id="bouton_2014_data1" onclick="goTo2014()" />
 
           <!--
           ********************
@@ -377,62 +377,62 @@
           ********************
           -->
           <!-- Placement des tracteurs -->
-          <img src="../resources/images/data1/tracteur.svg" alt="Tracteur" id="tracteur1_14_data1" />
-          <img src="../resources/images/data1/tracteur.svg" alt="Tracteur" id="tracteur2_14_data1" />
-          <img src="../resources/images/data1/tracteur.svg" alt="Tracteur" id="tracteur3_14_data1" />
-          <img src="../resources/images/data1/tracteur.svg" alt="Tracteur" id="tracteur4_14_data1" />
-          <img src="../resources/images/data1/tracteur.svg" alt="Tracteur" id="tracteur5_14_data1" />
-          <img src="../resources/images/data1/tracteur.svg" alt="Tracteur" id="tracteur6_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/tracteur.svg" alt="Tracteur" id="tracteur1_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/tracteur.svg" alt="Tracteur" id="tracteur2_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/tracteur.svg" alt="Tracteur" id="tracteur3_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/tracteur.svg" alt="Tracteur" id="tracteur4_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/tracteur.svg" alt="Tracteur" id="tracteur5_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/tracteur.svg" alt="Tracteur" id="tracteur6_14_data1" />
 
           <!-- Placement des panneaux -->
-          <img src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau1_14_data1" />
-          <img src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau2_14_data1" />
-          <img src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau3_14_data1" />
-          <img src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau4_14_data1" />
-          <img src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau5_14_data1" />
-          <img src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau6_14_data1" />
-          <img src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau7_14_data1" />
-          <img src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau8_14_data1" />
-          <img src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau9_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau1_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau2_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau3_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau4_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau5_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau6_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau7_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau8_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/panneau-photovoltaique.svg" alt="Panneau photovoltaïque" id="panneau9_14_data1" />
 
           <!-- Placement des éoliennes -->
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne1_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne2_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne3_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne4_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne5_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne6_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne7_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne8_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne9_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne10_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne11_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne12_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne13_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne14_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne15_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne16_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne17_14_data1" />
-          <img src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne18_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne1_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne2_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne3_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne4_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne5_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne6_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne7_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne8_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne9_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne10_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne11_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne12_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne13_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne14_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne15_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne16_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne17_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/eolienne-entiere.svg" alt="Eolienne" id="eolienne18_14_data1" />
 
           <!-- Placement des entreprises -->
-          <img src="../resources/images/data1/entreprise.svg" alt="Entreprise" id="entreprise1_14_data1" />
-          <img src="../resources/images/data1/entreprise.svg" alt="Entreprise" id="entreprise2_14_data1" />
-          <img src="../resources/images/data1/entreprise.svg" alt="Entreprise" id="entreprise3_14_data1" />
-          <img src="../resources/images/data1/entreprise.svg" alt="Entreprise" id="entreprise4_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/entreprise.svg" alt="Entreprise" id="entreprise1_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/entreprise.svg" alt="Entreprise" id="entreprise2_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/entreprise.svg" alt="Entreprise" id="entreprise3_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/entreprise.svg" alt="Entreprise" id="entreprise4_14_data1" />
 
           <!-- Placement des personnages -->
-          <img src="../resources/images/data1/perso6.svg" alt="Personnage" id="personnage1_14_data1" />
-          <img src="../resources/images/data1/perso1.svg" alt="Personnage" id="personnage2_14_data1" />
-          <img src="../resources/images/data1/perso3.svg" alt="Personnage" id="personnage3_14_data1" />
-          <img src="../resources/images/data1/perso2.svg" alt="Personnage" id="personnage4_14_data1" />
-          <img src="../resources/images/data1/perso4.svg" alt="Personnage" id="personnage5_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/perso6.svg" alt="Personnage" id="personnage1_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/perso1.svg" alt="Personnage" id="personnage2_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/perso3.svg" alt="Personnage" id="personnage3_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/perso2.svg" alt="Personnage" id="personnage4_14_data1" />
+          <img class="elem_14" src="../resources/images/data1/perso4.svg" alt="Personnage" id="personnage5_14_data1" />
 
         </span>
       </section>
 
       <section class="section section_perso">
-        <span class="responsive_container">
+        <span class="responsive_container" style="overflow: visible;">
             <img class="image_fond" src="../resources/images/Backgrounds/background3-08.svg" alt="Fond" id="fond_intro" />
             <img src="../resources/images/data2/pale-bleu.svg" alt="pale" id="data2_pale" />
             <svg id="svg_dataviz2" viewbox="0 0 730 730" version="1.1" xmlns="http://www.w3.org/2000/svg" />
