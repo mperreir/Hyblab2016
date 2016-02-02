@@ -66,7 +66,7 @@ nav .boutonMenu
 
 #slide1
 {
-	background: url("./img/villeSlide1.png") no-repeat bottom center;
+	background: url("./img/villeSlide1.png") no-repeat bottom center, url("./img/vaguesSlide1.png") repeat-x bottom center;
 }
 
 #slide1 h1
@@ -427,4 +427,5 @@ nav .boutonMenu
 	width: 350px;
 	border-radius: 10px;
 	border: 1px solid #fdbe63;
+	margin-top: 1%;
 }
