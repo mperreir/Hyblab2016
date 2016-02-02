@@ -1,11 +1,14 @@
 #slide5 {
 	height: 100vh;
 	background-color: #90D7DF;
+	color: #4c4c4c;	
+	
 }
 
 #slide5 #absSlide5 {
 	position: absolute;
 	margin-top: 1%;
+	text-align: center;
 }
 
 #slide5 #badge {
@@ -14,31 +17,41 @@
 	border: 1px solid white;
 	border-radius: 6px;
 	padding: 5px;
-	width: 128px; 
-	margin-left: 45%;
+	width: 128px;
+	text-align: center;
 }
 
 #slide5 h2 {
 	color: white;
-	margin-bottom: 20px;
 	font-family: museoReg;
-	font-size: 40px;
+	font-size: 33px;
+	letter-spacing: 3px;
+	text-align: center;
 }
 
 #slide5 #caption {
-	color: black;
+	font-family: "arial";
 	font-size: 14px;
 	text-align: justify;
 	width: 45%;
 	margin-left: 5%;
 }
 
+#slide5 #treemap {
+	width: 45%;
+	display: inline-block;
+}
+
+#slide5 #treemap_legend {
+	width: 30%;
+	display: inline-block;
+	margin-left: 5%;
+}
 /*
 .legend_bullet {
 	display: inline-block;
 }
 */
-
 #treemap .grandparent:hover rect {
   fill: darkgrey;
 }
