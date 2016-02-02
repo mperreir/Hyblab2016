@@ -11,6 +11,8 @@ $(document).ready( function () {
 	// Animation de la slide d'intro
 	animIntro();
 
+	document.getElementById("bouton_2008_data1").style.pointerEvents = "none";
+
 	//document.getElementById("sectionQ").style.display = "none";
 })
 
@@ -456,4 +458,88 @@ function answerQuestions(prop_id) {
 			}
 			break;
 	}
+}
+
+function goTo2008 () {
+	var elements = document.getElementsByClassName("elem_14");
+	var num_rand;
+
+	console.debug("Go To 2008");
+
+	for(var i = 0; i < elements.length; i++)
+	{
+		num_rand = Math.random();
+
+		// Application d'une animation
+		if(i % 2 == 0) {
+			$(elements[i]).transition({
+					left: '+=5%',
+					top: '+=6%',
+					opacity: 0,
+					delay: num_rand*100
+				}, 500);
+		} else {
+			$(elements[i]).transition({
+					right: '+=5%',
+					bottom: '+=6%',
+					opacity: 0,
+					delay: num_rand*100
+				}, 500);
+		}
+	}
+
+	var bouton_2008 = document.getElementById("bouton_2008_data1");
+	var bouton_2014 = document.getElementById("bouton_2014_data1");
+	$(bouton_2014).transition({
+		scale: 0.8,
+		opacity: 0.7
+	})
+	$(bouton_2008_data1).transition({
+		scale: 1.2,
+		opacity: 1
+	})
+
+	document.getElementById("bouton_2008_data1").style.pointerEvents = "none";
+	document.getElementById("bouton_2014_data1").style.pointerEvents = "auto";
+}
+
+function goTo2014 () {
+	var elements = document.getElementsByClassName("elem_14");
+	var num_rand;
+
+	for(var i = 0; i < elements.length; i++)
+	{
+		num_rand = Math.random();
+
+		// Application de l'animation inverse
+		if(i % 2 == 0) {
+			$(elements[i]).transition({
+					left: '-=5%',
+					top: '-=6%',
+					opacity: 1,
+					delay: num_rand*100
+				}, 500);
+		} else {
+			$(elements[i]).transition({
+					right: '-=5%',
+					bottom: '-=6%',
+					opacity: 1,
+					delay: num_rand*100
+				}, 500);
+		}
+	}
+
+	var bouton_2008 = document.getElementById("bouton_2008_data1");
+	var bouton_2014 = document.getElementById("bouton_2014_data1");
+	$(bouton_2014).transition({
+		scale: 1.2,
+		opacity: 1
+	})
+	$(bouton_2008_data1).transition({
+		scale: 0.8,
+		opacity: 0.7
+	})
+
+	document.getElementById("bouton_2008_data1").style.pointerEvents = "auto";
+	document.getElementById("bouton_2014_data1").style.pointerEvents = "none";
 }

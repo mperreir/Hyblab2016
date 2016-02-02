@@ -525,13 +525,26 @@ Elements de la question 4
 	bottom: 7%;
 }
 
+/*
+DATA 1
+*/
+
+#titre_data1
+{
+	position: absolute;
+	width: 35%;
+	left: 10%;
+	bottom: 85.5%;
+	text-align: left;
+}
+
 #data1_infos
 {
 	position: absolute;
 	width: 30%;
 	height: 25%;
-	left: 10.25%;
-	top: 25%;
+	left: 10%;
+	top: 20%;
 	font-size: 1vw;
 	color: #002266;
 }
@@ -543,13 +556,18 @@ Elements de la question 4
 
 #saviez_vous
 {
-	position: relative;
+	position: absolute;
 	width: 30%;
-	height: 25%;
 	padding: 2%;
 	top: 50.5%;
 	left: 9.6%;
 	text-align: center;
+}
+
+.petit_mot
+{
+	font-size: 1.25vw;
+	color: #e4685d;
 }
 
 #saviez_vous>p
@@ -570,12 +588,19 @@ Elements de la question 4
 	height: auto;
 }
 
+.elem_14
+{
+	opacity: 0;
+}
+
 #bouton_2008_data1
 {
 	position: absolute;
 	width: 12%;
 	left: 78%;
-	bottom: 28%;
+	bottom: 32%;
+	cursor: pointer;
+	transform: scale(1.2);
 }
 
 #bouton_2014_data1
@@ -583,7 +608,10 @@ Elements de la question 4
 	position: absolute;
 	width: 12%;
 	left: 78%;
-	bottom: 19%;
+	bottom: 13%;
+	cursor: pointer;
+	transform: scale(0.8);
+	opacity: 0.8;
 }
 
 #tracteur1_data1
