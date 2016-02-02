@@ -1,15 +1,62 @@
 "use strict";
 
 var dataCharts = {
-		menage : null,
-		parc : null,
-		carburant : null,
+	menage : null,
+	parc : null,
+	carburant : null
+};
+
+var dataDonuts = {
+	monomotor: null,
+	bimotor : null,
+	nomotor : null
+};
+
+var dataCars = {
+	occasion : null,
+	neuf : null
+};
+
+function requestGenerateCars(type, year){
+	if(!dataCars[type]){
+		var requete = $.ajax({
+			url : "data/parc/"+type,
+			type : "GET",
+			dataType : "text",
+			success : function(res, statut){
+				dataCars[type] = JSON.parse(res).data[type];
+				generateCars(dataCars[type][year].pourcentage, type);
+				console.log(dataCars[type]);
+			},
+			error : function(res, statut, error){
+				alert(res+" ; "+statut+" ; "+error);
+			}
+		});
+	}else generateCars(dataCars[type][year].pourcentage, type);
 }
 
-function requestGenerateChart(type){
+function requestGenerateChartDonut(type, year){
+	if(!dataDonuts[type]){
+		var requete = $.ajax({
+			url : "data/menage/"+type,
+			type : "GET",
+			dataType : "text",
+			success : function(res, statut){
+				dataDonuts[type] = JSON.parse(res).data[type];
+				generateMenageDonut(dataDonuts[type][year].pourcentage, type);
+			},
+			error : function(res, statut, error){
+				alert(res+" ; "+statut+" ; "+error);
+			}
+		});
+	}else generateMenageDonut(dataDonuts[type][year].pourcentage, type);
+}
+
+
+function requestGenerateChartDefilement(type){
 	if(!dataCharts[type]){
 		var requete = $.ajax({
-			url : "http://127.0.0.1:8080/ouest_france/data/"+type+"/years",
+			url : "data/"+type+"/years",
 			type : "GET",
 			dataType : "text",
 			success : generateChart,
@@ -76,7 +123,6 @@ function fillOptions(){
 			showGrid : false
 		},
 		axisX : {
-			//offset : 100,
 			showGrid : false,
 			labelOffset : {
 				x:-16,
@@ -206,6 +252,25 @@ function setLabelAnimation(param, categorie){
 		y : labelParentOriginPos.y+"px"
 		}, 300 );
 	});
+
+	label.click(function(){
+		var annee = $(this).html();
+		
+		switch(categorie){
+			case "menage":
+				requestGenerateChartDonut("mono", annee);
+				requestGenerateChartDonut("biPlus", annee);
+				requestGenerateChartDonut("none", annee);
+				console.log(categorie);
+				break;
+			case "parc":
+				console.log(categorie);
+				break;
+			case "carburant":
+				console.log(categorie);
+				break;
+		}
+	});
 }
 
 function setPointAnimation(param, categorie, seq, delay, duration){
@@ -240,17 +305,98 @@ function setPointAnimation(param, categorie, seq, delay, duration){
 	});
 }
 
-function relaunchChartAnimation(index, nextIndex, direction){
-	console.log(index+"->"+nextIndex);
+function relaunchAnimation(index, nextIndex, direction){
 	switch(nextIndex){
 		case 2:
-			requestGenerateChart("menage");
+			requestGenerateChartDefilement("menage");
+			requestGenerateChartDonut("mono", "1990");
+			requestGenerateChartDonut("biPlus", "1990");
+			requestGenerateChartDonut("none", "1990");
 			break;
 		case 3:
-			requestGenerateChart("parc");
+			requestGenerateChartDefilement("parc");
 			break;
 		case 4:
-			requestGenerateChart("carburant");
+			requestGenerateChartDefilement("carburant");
 			break;
 	}
+}
+
+function generateMenageDonut(donnee,id){
+
+
+	var label = '<h3>'+donnee+'%</h3>';
+	var idStr = '#'+id;
+	var options = fillOptionsDonut(label);
+	var data
+	var chart = new Chartist.Pie(idStr, {
+		series: [donnee]
+	}, options);
+
+	chart.on('draw', function(data) {
+		if(data.type === 'slice') {
+			setSliceAnimation(data);
+	  	}
+	});
+};
+
+function fillOptionsDonut(label){
+	var retour ={
+		donut: true,
+		showLabel: true,
+		total: 100,
+		donutWidth: 8,
+		chartPadding: 0,
+		showLabel: false,
+		startAngle: 190,
+		plugins: [
+            Chartist.plugins.fillDonut({
+                items: [{
+					content: label,
+					position: 'center'
+				}]
+            })
+        ],
+	};
+	return retour;
+}
+function setSliceAnimation(data){
+	// Get the total path length in order to use for dash array animation
+	var pathLength = data.element._node.getTotalLength();
+
+	// Set a dasharray that matches the path length as prerequisite to animate dashoffset
+	data.element.attr({
+	  'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+	});
+
+	// Create animation definition while also assigning an ID to the animation for later sync usage
+	var animationDefinition = {
+		'stroke-dashoffset': {
+		id: 'anim' + data.index,
+		dur: 3000,
+		from: -pathLength + 'px',
+		to:  '0px',
+		easing: Chartist.Svg.Easing.easeOutQuint,
+
+		// We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
+		fill: 'freeze'
+		}
+	};
+
+
+	// We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
+	data.element.attr({
+		'stroke-dashoffset': -pathLength + 'px'
+	});
+
+	// We can't use guided mode as the animations need to rely on setting begin manually
+	// See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
+	data.element.animate(animationDefinition, false);
+}
+
+function generateCars(donnee, type){
+	var cars = $('.cars[id='+type+'] .car');
+	cars.css('background-color', 'black');
+	var nbCar = Math.round(donnee/2);
+	console.log(type+" : "+donnee+"% -> "+nbCar+" voitures");
 }

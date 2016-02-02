@@ -32,8 +32,8 @@ h2{
 }
 
 .svg{
-	width: 80%;
-	height: 80%;
+	width: 80vw;
+	height: 80vh;
 }
 
 
@@ -96,19 +96,19 @@ h2{
 	height: 7vw;
 }
 
-#monomotor{
+#mono{
 	z-index: 20;
 	top : 15vh;
 	left: 44vw;
 }
 
-#nomotor{
+#none{
 	z-index: 21;
 	top: 32vh;
 	left: 30vw;
 }
 
-#bimotor{
+#biPlus{
 	z-index: 22;
 	top: 40vh;
 	left: 53vw;
