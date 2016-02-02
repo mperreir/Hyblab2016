@@ -901,4 +901,7 @@
     topoMsoaLayer.eachLayer(function(layer) {
         topoMsoaLayer.resetStyle(layer);
     });
+    topoLsoaLayer.eachLayer(function(layer) {
+        topoLsoaLayer.resetStyle(layer);
+    });
 }());
