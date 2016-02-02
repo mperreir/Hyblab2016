@@ -31,7 +31,7 @@
         </script>
         <script src="data/msoa.topo.json"
                 defer>
-        </script>      
+        </script>
         <script src="app.js"
                 defer>
         </script>
@@ -44,36 +44,52 @@
     </head>
     <body>
         <div id="fullpage">
-            <div class="section"><div id="map"></div></div>
+            <div class="section">
+                <div id="map" />
+            </div>
 
             <div id="rope" class="section">
-                <input type="text"
-                       id="our_postcode_rope"
-                       pattern="[A-Z]{2}[0-9] *[0-9][A-Z]{2}"
-                       placeholder="Enter your postcode"></input>
-                <input type="text"
-                       id="their_postcode_rope"
-                       pattern="[A-Z]{2}[0-9] *[0-9][A-Z]{2}"
-                       placeholder="Enter the other postcode"></input>
+                <div id="rope_selectors">
+                    <select id="which_left">
+                        <option value="max">Max</option>
+                        <option value="min">Min</option>
+                        <option value="mean">Mean</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                    <select id="which_right">
+                        <option value="max">Max</option>
+                        <option value="min">Min</option>
+                        <option value="mean">Mean</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                    <input type="text"
+                           id="left_postcode_rope"
+                           pattern="[A-Z]{2}[0-9] *[0-9][A-Z]{2}"
+                           placeholder="Enter your postcode"></input>
+                    <input type="text"
+                           id="right_postcode_rope"
+                           pattern="[A-Z]{2}[0-9] *[0-9][A-Z]{2}"
+                           placeholder="Enter the other postcode"></input>
+                </div>
 
                 <div id="charts">
                     <div id="chart_left" class="chart">
-                        <div style="width: 0;" id="our_crime"></div>
-                        <div style="width: 0;" id="our_income"></div>
-                        <div style="width: 0;" id="our_employment"></div>
-                        <div style="width: 0;" id="our_education"></div>
-                        <div style="width: 0;" id="our_health"></div>
-                        <div style="width: 0;" id="our_housing"></div>
-                        <div style="width: 0;" id="our_environment"></div>
+                        <div style="width: 0;" id="left_crime"></div>
+                        <div style="width: 0;" id="left_income"></div>
+                        <div style="width: 0;" id="left_employment"></div>
+                        <div style="width: 0;" id="left_education"></div>
+                        <div style="width: 0;" id="left_health"></div>
+                        <div style="width: 0;" id="left_housing"></div>
+                        <div style="width: 0;" id="left_environment"></div>
                     </div>
                     <div id="chart_right" class="chart">
-                        <div style="width: 0;" id="their_crime"></div>
-                        <div style="width: 0;" id="their_income"></div>
-                        <div style="width: 0;" id="their_employment"></div>
-                        <div style="width: 0;" id="their_education"></div>
-                        <div style="width: 0;" id="their_health"></div>
-                        <div style="width: 0;" id="their_housing"></div>
-                        <div style="width: 0;" id="their_environment"></div>
+                        <div style="width: 0;" id="right_crime"></div>
+                        <div style="width: 0;" id="right_income"></div>
+                        <div style="width: 0;" id="right_employment"></div>
+                        <div style="width: 0;" id="right_education"></div>
+                        <div style="width: 0;" id="right_health"></div>
+                        <div style="width: 0;" id="right_housing"></div>
+                        <div style="width: 0;" id="right_environment"></div>
                     </div>
                 </div>
             </div>

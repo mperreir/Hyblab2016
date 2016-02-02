@@ -19,13 +19,13 @@
     function maxLSOA() {
         return Object.keys(window.data).reduce(function (a, b) {
             return getIMDRank(a) > getIMDRank(b) ? a : b;
-        })[0];
+        });
     }
 
     function minLSOA() {
         return Object.keys(window.data).reduce(function (a, b) {
             return getIMDRank(a) < getIMDRank(b) ? a : b;
-        })[0];
+        });
     }
 
     function medianLSOA() {
@@ -55,19 +55,42 @@
         }
     }
 
-    function enableOther() {
-        $("#their_postcode_rope").enable();
+    function enablePostcode(which) {
+        $("#" + which + "_postcode_rope").prop("disabled", false);
     }
 
-    function disableOther() {
-        $("#their_postcode_rope").disable();
+    function disablePostcode(which) {
+        $("#" + which + "_postcode_rope").prop("disabled", true);
     }
 
-    function selectReference(reference) {
-        disableOther();
-
+    function changePostcode(which, lsoa11cd) {
+        var input = $("#" + which + "_postcode_rope");
+        input.val(window.data[lsoa11cd]["PCD7s"][0]);
+        input.change()
     }
 
-    $("#our_postcode_rope").change(updateChart.bind(undefined, "our"));
-    $("#their_postcode_rope").change(updateChart.bind(undefined, "their"));
+    function onSelectChange(which) {
+        switch ($("#which_" + which).val()) {
+            case "max":
+                disablePostcode(which);
+                changePostcode(which, maxLSOA());
+                break;
+            case "min":
+                disablePostcode(which);
+                changePostcode(which, minLSOA());
+                break;
+            case "mean":
+                disablePostcode(which);
+                changePostcode(which, meanLSOA());
+                break;
+            case "custom":
+                enablePostcode(which);
+                break;
+        }
+    }
+
+    $("#left_postcode_rope").change(updateChart.bind(undefined, "left"));
+    $("#right_postcode_rope").change(updateChart.bind(undefined, "right"));
+    $("#which_left").change(onSelectChange.bind(undefined, "left"));
+    $("#which_right").change(onSelectChange.bind(undefined, "right"));
 }());
