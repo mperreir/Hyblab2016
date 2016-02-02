@@ -1,5 +1,11 @@
 #slide5 {
 	height: 100vh;
+	background-color: #90D7DF;
+}
+
+#slide5 #absSlide5 {
+	position: absolute;
+	margin-top: 1%;
 }
 
 #slide5 #badge {
@@ -8,14 +14,15 @@
 	border: 1px solid white;
 	border-radius: 6px;
 	padding: 5px;
-	width: 120px;
-	margin: auto;
-	margin-top: 3%;
-	margin-bottom: 20px;
+	width: 128px; 
+	margin-left: 45%;
 }
 
 #slide5 h2 {
+	color: white;
 	margin-bottom: 20px;
+	font-family: museoReg;
+	font-size: 40px;
 }
 
 #slide5 #caption {
@@ -26,9 +33,11 @@
 	margin-left: 5%;
 }
 
+/*
 .legend_bullet {
 	display: inline-block;
 }
+*/
 
 #treemap .grandparent:hover rect {
   fill: darkgrey;
