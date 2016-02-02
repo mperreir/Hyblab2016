@@ -1,0 +1,30 @@
+@font-face {
+    font-family: libelSuit;
+    src: url("../fonts/LIBELSUIT.ttf");
+}
+
+#slide1 
+
+#slide2 h2, #slide2 h1
+{
+	color: white;
+}
+
+.coteGauche
+{
+	width: 45%;
+	float: left;
+	margin-left: 4%;
+
+}
+.coteDroit
+{
+	width: 45%;
+	float: right;
+}
+.fullCentre
+{
+	text-align: center;
+	width: 80%;
+	margin: auto;
+}
