@@ -2,8 +2,52 @@
     font-family: libelSuit;
     src: url("../fonts/LIBELSUIT.ttf");
 }
+@font-face {
+    font-family: museoReg;
+    src: url("../fonts/Museo300-Regular.otf");
+}
+@font-face {
+    font-family: museoBold;
+    src: url("../fonts/Museo500-Regular.otf");
+}
 
-#slide1 
+nav
+{
+	width: 100%;
+	text-align: center;
+
+}
+nav ul li
+{
+	display: inline-block;
+	vertical-align: top;
+}
+nav ul li:not(:first-child)
+{
+	margin-left: 12%;
+}
+
+#slide1
+{
+	background: url("../img/villeSlide1.png") no-repeat bottom center;
+}
+#slide1 h1
+{
+	font-family: libelSuit;
+	font-size: 63px;
+}
+#slide1 h2
+{
+	color: #90d7df;
+	font-family: museoReg;
+}
+#slide1 #titreSite
+{
+	text-align: center;
+	width: 80%;
+	margin: auto;
+	margin-top: 5%;
+}
 
 #slide2 h2, #slide2 h1
 {
