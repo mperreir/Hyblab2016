@@ -19,6 +19,10 @@
     src: url("./fonts/ARIALBD.TTF");
 }
 
+*
+{
+	font-family: arialSansSerif;
+}
 nav
 {
 	width: 100%;
