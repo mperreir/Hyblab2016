@@ -369,7 +369,7 @@ nav .boutonMenu
 #slide10 section header {
     background-color: inherit;
     color: #4c4c4c;
-    font: 15px / 14px Museo;
+    font: 15px / 14px museoReg;
     text-align: left;
 }
 
@@ -381,7 +381,7 @@ nav .boutonMenu
 #slide10 section aside {
     /* correspond à la citation */
     color: #ffffff;
-    font: 17px / 19px Museo;
+    font: 17px / 19px museoReg;
 }
 
 
