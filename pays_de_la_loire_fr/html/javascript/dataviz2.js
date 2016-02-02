@@ -6,7 +6,7 @@ radius = Math.min(width, height) / 1.9,
 spacing = .08,
 opacity = .2,
 posMax = .7,
-colText = "hsl(300,100%,50%)",
+colText = "hsl(0,0%,0%)",
 pos = 0,
 deg = 0;
 
@@ -180,10 +180,11 @@ var bouton_biomasse = d3.select("#data2_biomasse")
 
 toE();
 
+
 //d3.select(self.frameElement).style("height", height + "px");
 
 
-function zero() {
+function zero(callback) {
 	//mise à zéro des valeurs
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
@@ -191,10 +192,18 @@ function zero() {
         field.data()[i].opacity = 0;
     }
 	//transition
+    var n = 0;
 	if (!document.hidden) field
 		.transition()
 		.duration(500)
         .each(fieldTransition)
+        .each(function() { n++; })
+        .each("end", function () {
+              if (n==5){
+                //callback();
+              }
+              }
+              );
 }
 
 function toE() {
@@ -202,7 +211,7 @@ function toE() {
 	//calcule de la nouvelle valeur
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
-		field.data()[i].value = field.data()[i].value + 0.2;
+        field.data()[i].value = (field.data()[i].val1*posMax)/field.data()[0].val1;
         field.data()[i].opacity = 1;
     }
 	//transition
@@ -218,8 +227,9 @@ function toS() {
 	//calcule de la nouvelle valeur
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
-		field.data()[i].value = field.data()[i].value + 0.2;
+		field.data()[i].value = (field.data()[i].val2*posMax)/field.data()[0].val2;
         field.data()[i].opacity = 1;
+        console.log(field.data()[i].value);
     }
 	//transition
     if (!document.hidden) field
@@ -234,7 +244,7 @@ function toB() {
     //calcule de la nouvelle valeur
     for (var i = 0; i < 5; i++) {
         field.data()[i].previousValue = field.data()[i].value;
-        field.data()[i].value = field.data()[i].value + 0.2;
+        field.data()[i].value = (field.data()[i].val3*posMax)/field.data()[0].val3;
         field.data()[i].opacity = 1;
     }
     //transition
@@ -292,10 +302,10 @@ function arcTween(arc) {
 //valeurs entre 0-1
 function fields() {
     return [
-            {index: .5, text: "", value: 0, previousValue: 0, opacity: 1, year: "2014", val1: "611", val2: "61", val3: "50"},
-            {index: .4, text: "", value: 0, previousValue: 0, opacity: 1, year: "2013", val1: "704", val2: "179", val3: "67"},
+            {index: .5, text: "", value: 0, previousValue: 0, opacity: 1, year: "2014", val1: "1067", val2: "364", val3: "199"},
+            {index: .4, text: "", value: 0, previousValue: 0, opacity: 1, year: "2013", val1: "981", val2: "299", val3: "182"},
             {index: .3, text: "", value: 0, previousValue: 0, opacity: 1, year: "2012", val1: "884", val2: "266", val3: "114"},
-            {index: .2, text: "", value: 0, previousValue: 0, opacity: 1, year: "2011", val1: "981", val2: "299", val3: "182"},
-            {index: .1, text: "", value: 0, previousValue: 0, opacity: 1, year: "2010", val1: "1067", val2: "364", val3: "199"}
+            {index: .2, text: "", value: 0, previousValue: 0, opacity: 1, year: "2011", val1: "704", val2: "179", val3: "67"},
+            {index: .1, text: "", value: 0, previousValue: 0, opacity: 1, year: "2010", val1: "611", val2: "61", val3: "50"}
             ];
 }
