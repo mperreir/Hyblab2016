@@ -27,6 +27,12 @@
 *
 {
 	font-family: arialSansSerif;
+	margin: 0px;
+	padding: 0px;
+}
+h1,h2
+{
+	font-family: museoReg;
 }
 nav
 {
@@ -351,4 +357,24 @@ nav .boutonMenu
 	color: #78dc82;
 	font-size: 20px;
 }
+#slide7
+{
+	text-align: center;
+}
+#slide7 h1
+{
+	color: #fdbe63;
+}
 
+#slide7 #lebadge
+{
+	margin-top: 1%;
+	color: #fdbe63;
+	font-size: 16px;
+	border: 1px solid #fdbe63;
+	border-radius: 6px;
+	padding: 5px;
+	width: 135px;
+	text-align: center;
+	font-family: museoReg;
+}
