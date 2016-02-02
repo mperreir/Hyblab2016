@@ -47,6 +47,23 @@
 	display: inline-block;
 	margin-left: 5%;
 }
+
+#slide5 #interview {
+	border: 1px solid white;
+	border-radius: 6px;
+	padding: 5px;
+	width: 50%;
+}
+
+#interview_text {
+	width : 60%;
+	display: inline-block;
+}
+
+#interview_res {
+	width : 40%;
+	display: inline-block;
+}
 /*
 .legend_bullet {
 	display: inline-block;
