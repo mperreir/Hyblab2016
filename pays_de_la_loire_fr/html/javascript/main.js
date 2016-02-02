@@ -6,10 +6,11 @@ var previousSection;
 $(document).ready(function() {
       
       currentSection = document.getElementsByClassName("active")[0].getAttribute('data-anchor');
+     // reset3();
 });
 
 function updateCurrentSection(){
-	
+
 	var n = document.getElementsByClassName("active").length;
 	for(var i = 0; i < n; i++) {
  		currentSection = document.getElementsByClassName("active")[i].getAttribute('data-anchor');
@@ -41,6 +42,8 @@ function updateCurrentSection(){
 		break;
 
 		case "7thPage" :
+		//alert("start");
+			init3();
 		break;
 
 		case "8thPage" :
@@ -74,6 +77,8 @@ function updateCurrentSection(){
 			break;
 
 			case "7thPage" :
+				//alert("reset");
+				reset3();
 			break;
 
 			case "8thPage" :
