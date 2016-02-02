@@ -1,10 +1,49 @@
+
+/* D3-tip shameless taken from http://rawgit.com/Caged/d3-tip/master/examples/example-styles.css */
+.d3-tip {
+	font-style: sans-serif ;
+	line-height: 1;
+	font-weight: bold;
+	padding: 12px;
+	background: rgba(255, 255, 255, 0.8);
+	color: #000;
+	border-radius: 2px;
+	margin-top: -5px ;
+	pointer-events: none;
+}
+
 .dot_pollution{
-	fill:steelblue;
 	stroke:#000;
 	stroke-width:1px;
 	cursor:pointer;
 	&:hover{
 		stroke-width:3px;
 	}
+	&.pollution_good{
+		fill: rgb(28,247,168);
+	}
+	&.pollution_poor{
+		fill: rgb(255,167,136);
+	}
+	&.pollution_terrible{
+		fill:rgb(249,98,90);
+	}
+}
 
+.bg_square{
+	&.pollution_good{
+		fill: rgb(28,247,168);
+	}
+	&.pollution_poor{
+		fill: rgb(255,167,136);
+	}
+	&.pollution_terrible{
+		fill:rgb(249,98,90);
+	}
+}
+
+
+
+.chart{
+	background-color: #EEE;
 }
