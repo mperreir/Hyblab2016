@@ -135,8 +135,9 @@ donneesActuelles.forEach(function(element, index, tableau) {
     var infoElement = infosJardinJoseph[element.nomProduit];
     var idJauge = infoElement.idJauge;
     
-    var baliseJauge = d3.select("#diagrammeJoseph").append("div").attr("class", "baliseJauge"); 
+    var baliseJauge = d3.select("#diagrammeJoseph").append("div").attr("class", "baliseJauge"); // col-xs-1
     var svgJauge = baliseJauge.append("svg").attr("id", idJauge).attr("width", 100).attr("height", 150);
+    svgJauge.attr("viewBox", "0 0 100 150");
     // <svg id="fillgauge6" width="19%" height="300" onclick="gauge6.update(NewValue());"></svg>
     
     var config = liquidFillGaugeDefaultSettings();
@@ -169,7 +170,7 @@ donneesActuelles.forEach(function(element, index, tableau) {
     
     // ajout de l'image dans la jauge
     // <image x="200" y="200" width="100px" height="100px" xlink:href="myimage.png"> 
-    svgJauge.select("g").append("image").attr("x", 0).attr("y", 0).attr("xlink:href", infoElement.cheminImage).attr("width", 101).attr("height", 101);
+    svgJauge.select("g").append("image").attr("x", 0).attr("y", 0).attr("xlink:href", infoElement.cheminImage).attr("width", 100).attr("height", 100);
 });
 
 

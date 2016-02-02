@@ -52,8 +52,20 @@
 
 .baliseJauge {
     display: inline-block;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 0;
+    
+    /height: 150px;
+    /width: 100px;        
+}
+
+.baliseJauge svg {
+        
+}
+
+.baliseJauge svg g {
+    
 }
 
 .radioJoseph {  
@@ -124,6 +136,8 @@
 /* radio total */
 #labelJoseph_total {
     background: url(../img/diagrammes/joseph/total.png) left top no-repeat;
+    width: 75px;
+    height: 75px;
 }
 
 #labelJoseph_total:hover {  
