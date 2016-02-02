@@ -3,14 +3,14 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>fullPage.js A simple Demo</title>
+	<title>Agriculture urbaine</title>
 	<meta name="author" content="Alvaro Trigo Lopez" />
 	<meta name="description" content="fullPage very simple demo." />
 	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
 	<meta name="Resource-type" content="Document" />
 
 
-	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="./js/jquery.fullPage.css" />
 	<!--<link rel="stylesheet" type="text/css" href="examples.css" />-->
 	<link rel="stylesheet" type="text/css" href="simple.css" />
 	<link href="css/treemap.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+	<script type="text/javascript" src="./js/jquery.fullPage.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
@@ -57,7 +57,7 @@
 	<div class="section" id="slide2">
 		<div class="coteGauche">
 			<h2>L'agriculture urbaine</h2>
-			<h1>Un nouvel art de vivre</h1>
+			<h1>Un nouvel <span style="font-family: museoBold;">art de vivre</span></h1>
 			<p>
 				Loin des bocages et des grands champs à labourer, l’agriculture s’implante aussi en ville.
 			</p>
@@ -71,11 +71,21 @@ possible ! L’occasion de se reconnecter à son assiette, de favoriser le local
 		</div>
 		<div class="flecheBas"><img src="./img/fleche_bas_de_page_noire.png" onclick="$.fn.fullpage.moveSectionDown();" /></div>
 	</div>
-
-
-	<div class="section" id="slide3"><h1>No wraps, no extra markup</h1></div>
-	<div class="section" id="slide4"><h1>No wraps, no extra markup</h1></div>
+    
+    
+	<div class="section" id="slide3">
+        <h1>No wraps, no extra markup</h1>
+    
+    
+    </div>
+    
+    
+	<div class="section" id="slide4">
+        <h1>No wraps, no extra markup</h1>
+        
+    </div>
 	
+    
 	<div class="section" id="slide5">
 		<div id="absSlide5">
 			<p id="badge" class="fullCentre">EN COLLECTIF</p>
@@ -93,7 +103,7 @@ possible ! L’occasion de se reconnecter à son assiette, de favoriser le local
 	        </div>
 
 	        <div id="treemap"></div>
-
+	        
 	        <div id="interview">
 	        	<div id="interview_text"
 	        		<p>Il y a aussi une autre façon de partager les jardins : mettre à disposition à des passionnés le terrain de sa propre maison ! C'est ce que propose l'association ECOS.</p>
