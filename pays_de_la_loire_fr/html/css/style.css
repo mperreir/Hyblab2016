@@ -1202,8 +1202,6 @@ span>ul>li>p
     width: 10%;
     top: 35%;
     left: 82%;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
 }
 
 
@@ -1213,6 +1211,8 @@ span>ul>li>p
     width: 10%;
     top: 4%;
     left: 45%;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 #data2_biomasse
@@ -1221,6 +1221,9 @@ span>ul>li>p
     width: 10%;
     top: 75%;
     left: 45%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
 }
 
 #svg_dataviz2
@@ -1337,7 +1340,112 @@ span>ul>li>p
 #eolienne_mat1_3
 {
 	position: absolute;
-	width: 6%;
-	top : 32.5%;
-	left: 32%;
+	width: 17%;
+	top : 53.5%;
+	left: 11%;
+}
+
+#eolienne_mat2_3
+{
+	position: absolute;
+	width: 23%;
+	top : 44.5%;
+	left: 23.5%;
+}
+
+#eolienne_mat3_3
+{
+	position: absolute;
+	width: 30%;
+	top : 34.5%;
+	left: 34.5%;
+}
+
+#eolienne_mat4_3
+{
+	position: absolute;
+	width: 38%;
+	top : 19.5%;
+	left: 45%;
+}
+
+#eolienne_mat5_3
+{
+	position: absolute;
+	width: 42%;
+	top : 12.5%;
+	left: 59%;
+}
+
+#eolienne_pale1_3
+{
+	position: absolute;
+	width: 13%;
+	top : 41.5%;
+	left: 13%;
+}
+
+#eolienne_pale2_3
+{
+	position: absolute;
+	width: 16%;
+	top : 30%;
+	left: 27%;
+}
+
+#eolienne_pale3_3
+{
+	position: absolute;
+	width: 18%;
+	top : 19.5%;
+	left: 40.5%;
+}
+
+#eolienne_pale4_3
+{
+	position: absolute;
+	width: 20%;
+	top : 13.5%;
+	left: 55%;
+}
+
+#eolienne_pale5_3
+{
+	position: absolute;
+	width: 20%;
+	top : 8.5%;
+	left: 70.5%;
+}
+
+#line_data3_1
+{
+
+}
+
+
+.draw_line1
+{
+
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+  from {
+  	stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#line_data3_2
+{
+  stroke-opacity: 1;
+  fill-opacity: 0.2;
+  fill:rgb(237,121,107);
+  stroke:rgb(237,121,107);
+  stroke-width:4;
+  stroke-dasharray:15;	
 }

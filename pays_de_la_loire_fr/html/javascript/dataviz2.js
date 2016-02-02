@@ -292,10 +292,10 @@ function arcTween(arc) {
 //valeurs entre 0-1
 function fields() {
     return [
-            {index: .5, text: "", value: 0.9, previousValue: 0.9, opacity: 1, year: "2014", val1: "8000", val2: "7000", val3: "6000"},
-            {index: .4, text: "", value: 0.5, previousValue: 0.5, opacity: 1, year: "2012", val1: "7000", val2: "6000", val3: "5000"},
-            {index: .3, text: "", value: 0.4, previousValue: 0.4, opacity: 1, year: "2010", val1: "6000", val2: "5000", val3: "4000"},
-            {index: .2, text: "", value: 0.3, previousValue: 0.3, opacity: 1, year: "2008", val1: "5000", val2: "4000", val3: "3000"},
-            {index: .1, text: "", value: 0.2, previousValue: 0.2, opacity: 1, year: "2004", val1: "4000", val2: "3000", val3: "2000"}
+            {index: .5, text: "", value: 0, previousValue: 0, opacity: 1, year: "2014", val1: "611", val2: "61", val3: "50"},
+            {index: .4, text: "", value: 0, previousValue: 0, opacity: 1, year: "2013", val1: "704", val2: "179", val3: "67"},
+            {index: .3, text: "", value: 0, previousValue: 0, opacity: 1, year: "2012", val1: "884", val2: "266", val3: "114"},
+            {index: .2, text: "", value: 0, previousValue: 0, opacity: 1, year: "2011", val1: "981", val2: "299", val3: "182"},
+            {index: .1, text: "", value: 0, previousValue: 0, opacity: 1, year: "2010", val1: "1067", val2: "364", val3: "199"}
             ];
 }
