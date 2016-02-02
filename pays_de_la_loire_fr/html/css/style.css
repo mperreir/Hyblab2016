@@ -236,11 +236,12 @@ span>ul>li>p
 	font-weight: bold;
 }
 
-.titre_question
+#titre_q1
 {
 	position: absolute;
 	bottom: 85.5%;
 	left: 3.5%;
+	width: 20%;
 }
 
 .section_perso
@@ -424,8 +425,9 @@ span>ul>li>p
 
 #titre_q2
 {
-	left: 32%;
+	left: 33%;
 	bottom: 85.5%;
+	width: 10%;
 }
 
 #elements_q3
@@ -499,8 +501,9 @@ span>ul>li>p
 
 #titre_q3
 {
-	left: 51.5%;
+	left: 55%;
 	bottom: 85.5%;
+	width: 15%;
 }
 
 /* 
