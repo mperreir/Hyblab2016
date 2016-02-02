@@ -2,7 +2,27 @@
 
 window.addEventListener('load', function () {
 
+
 	$(document).ready(function () {
+/*	    var map_grande = new jvm.Map({
+	        container: $('#bigmap'),
+	        map: 'pays_de_la_loire_king_size',
+	        regionsSelectable: true,
+	        regionsSelectableOne: true,
+	        backgroundColor: 'transparent',
+	        zoomMax: 1,
+	        zoomMin: 1,
+	        zoomOnScroll: false,
+			color:'#003f4e',
+			selectedColor:'#003f4e',
+			hoverColor:'#006f7e',
+			series:{
+				regions:[{
+					attribute:'fill', 
+				}]
+			}
+	    });*/
+
 		$('#bigmap').vectorMap({
 			map:'pays_de_la_loire_king_size',
 			backgroundColor: 'none',
@@ -13,16 +33,35 @@ window.addEventListener('load', function () {
 				regions:[{
 					attribute:'fill', 
 				}]
-			},
+			}
 
 		});
 
 		$('#bigmap').css("background-color","rgba(0,0,0,0)");
 
+	    $('#map').vectorMap({
+			map:'pays_de_la_loire',
+			backgroundColor: 'none',
+			color:'#003f4e',
+			selectedColor:'#179fae',
+			hoverColor:'#006f7e',
+			series:{
+				regions:[{
+					attribute:'fill', 
+				}]
+			},
+			selectedRegion: "FR-44",
+    });
+
+
+
+
 		
-	});
+
+
+		
 	
-	$(document).ready(function () {
+/*	$(document).ready(function () {
 		$('#map').vectorMap({
 			map:'pays_de_la_loire',
 			backgroundColor: 'none',
@@ -36,7 +75,7 @@ window.addEventListener('load', function () {
 			},
 			selectedRegion: "FR-44",
 
-		});
+		});*/
 
 		//map.series.regions[0].setValues("#179fae");
 		/*console.log($('#map').selectedRegions);
@@ -61,12 +100,32 @@ window.addEventListener('load', function () {
 
 	//document.querySelector("#carte").setAttribute("transform","scale(1.5), translate(-50,0)");
 
+	var bigmap = document.getElementById('bigmap');
+    bigmap.firstChild.setAttribute("id", "bigpdll");
+    var bigpdll = document.getElementById('bigpdll');
+    bigpdll.firstChild.setAttribute("id", "bigcarte");
+
+
+
+
+
+var infofunction = function (d) {
+	d3.select("#nomdpt").html("<img src=\"img/loc_26.png\"> " + d.n + "<span> " + d.num +"</span>");
+	info.style("visibility" ,"visible");
+	d3.select(".radios").select(".chiffre").html(d.r+" ");
+	d3.select(".salarie").select(".chiffre").html(d.s+" ");
+	d3.select(".benevole").select(".chiffre").html(d.b+" ");
+	d3.select(".servicecivique").select(".chiffre").html(d.sc+" ");
+}
+
+
+
 	var jsonDptInfo = [
-		{"n":"LA VENDEE","num":"85","r":4,"s":18,"b":181,"sc":0},				
-		{"n":"LA LOIRE ATLANTIQUE","num":"44","r":11,"s":57,"b":738,"sc":7},
-		{"n":"LE MAINE ET LOIRE","num":"49","r":4,"s":16,"b":311,"sc":3},
-		{"n":"LA MAYENNE","num":"53","r":2,"s":9,"b":117,"sc":2},
-		{"n":"LA SARTHE","num":"72","r":1,"s":7,"b":60,"sc":0}
+		{"n":"LA VENDEE","num":"85","id":"#jqvmap2_FR-85","r":4,"s":18,"b":181,"sc":0},				
+		{"n":"LA LOIRE ATLANTIQUE","num":"44","id":"#jqvmap2_FR-44","r":11,"s":57,"b":738,"sc":7},
+		{"n":"LE MAINE ET LOIRE","num":"49","id":"#jqvmap2_FR-49","r":4,"s":16,"b":311,"sc":3},
+		{"n":"LA MAYENNE","num":"53","id":"#jqvmap2_FR-53","r":2,"s":9,"b":117,"sc":2},
+		{"n":"LA SARTHE","num":"72","id":"#jqvmap2_FR-72","r":1,"s":7,"b":60,"sc":0}
 
 
 	]
@@ -76,9 +135,17 @@ window.addEventListener('load', function () {
 	var info = d3.select("#infodpt");
 	
 	dpt.on('click', function (d){
-		d3.select("#nomdpt").html("<img src=img/loc_26.png> " + d.n + "<span> " + d.num +"</span>");
-		info.style("visibility" ,"visible");
-		info.html("<h1>En quelques chiffres</h1><div><p class=\"chiffre\">" + d.r + "</p> <img src=img/Radio_26-01.png> Radios fédérées</div><p><span>" + d.s + "</span> <img src=img/Perso_26-01.png> Salariés</p><p><span>" + d.b + "</span> <img src=img/Perso_26-01.png> Bénévoles</p><p><span>" + d.sc + "</span> <img src=img/Perso_26-01.png> Services Civiques</p>");
+		infofunction(d);
+	});
+
+	var dptbig = d3.select("#bigcarte").selectAll("path")
+							  .data(jsonDptInfo);
+	
+	dptbig.on('click', function (d){
+		infofunction(d);        
+		dpt.attr("fill","#003f4e");
+		d3.select(d.id).attr("fill","#179fae");
+		self.location.href="index.html#secondPage";
 	});
 
 

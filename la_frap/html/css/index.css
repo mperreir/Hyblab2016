@@ -148,7 +148,7 @@ p{
 }
 
 #infodpt {
-	visibility: hidden;
+	visibility: visible;
 	width:300px;
 	height:300px;
 	margin-top: 0px;
@@ -163,14 +163,28 @@ p{
 	background-color:#003f4e;
 	font-size: 20px;
 	color: white;
+	margin-bottom: 10px;
+	width: 190px;
 }
 
-#infodpt span{
-	color: white;
-	font-style: bold;
-	font-size: 22px;
-	width:80px;
-	text-align: right;
+.radios{
+	display: block;
+	height: 30px;
+}
+
+.salarie{
+	display: block;
+	height: 30px;
+}
+
+.benevole{
+	display: block;
+	height: 30px;
+}
+
+.servicecivique{
+	display: block;
+	height: 30px;
 }
 
 .chiffre{
@@ -180,6 +194,14 @@ p{
 	width:80px;
 	text-align: right;
 	display: inline;
+	position: absolute;
+	float:right;
+}
+
+.legende{
+	display: inline;
+	position: absolute;
+	left:90px;
 }
 
 #map {
