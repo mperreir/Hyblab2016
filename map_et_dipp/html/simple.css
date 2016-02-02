@@ -1,14 +1,14 @@
 @font-face {
     font-family: libelSuit;
-    src: url("../fonts/LIBELSUIT.ttf");
+    src: url("./../fonts/LIBELSUIT.ttf");
 }
 @font-face {
     font-family: museoReg;
-    src: url("../fonts/Museo300-Regular.otf");
+    src: url("./../fonts/Museo300-Regular.otf");
 }
 @font-face {
     font-family: museoBold;
-    src: url("../fonts/Museo500-Regular.otf");
+    src: url("./../fonts/Museo500-Regular.otf");
 }
 
 nav
@@ -63,10 +63,17 @@ nav .boutonMenu
 #slide2
 {
 	background: #78dc82;
+	padding-top: 3%;
 }
 #slide2 h2, #slide2 h1
 {
 	color: white;
+	font-family: museoReg;
+	letter-spacing: 3pt;
+}
+#slide2 p
+{
+	color: #4c4c4c;
 }
 
 .coteGauche
