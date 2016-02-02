@@ -1,22 +1,22 @@
 @font-face {
     font-family: libelSuit;
-    src: url("./../fonts/LIBELSUIT.ttf");
+    src: url("./fonts/LIBELSUIT.ttf");
 }
 @font-face {
     font-family: museoReg;
-    src: url("./../fonts/Museo300-Regular.otf");
+    src: url("./fonts/Museo300-Regular.otf");
 }
 @font-face {
     font-family: museoBold;
-    src: url("./../fonts/Museo500-Regular.otf");
+    src: url("./fonts/Museo500-Regular.otf");
 }
 @font-face {
     font-family: arialSansSerif;
-    src: url("./../fonts/ARIAL.TTF");
+    src: url("./fonts/ARIAL.TTF");
 }
 @font-face {
     font-family: arialSansSerifBold;
-    src: url("./../fonts/ARIALBD.TTF");
+    src: url("./fonts/ARIALBD.TTF");
 }
 nav
 {
@@ -44,7 +44,7 @@ nav .boutonMenu
 }
 #slide1
 {
-	background: url("../img/villeSlide1.png") no-repeat bottom center;
+	background: url("./img/villeSlide1.png") no-repeat bottom center;
 }
 #slide1 h1
 {
