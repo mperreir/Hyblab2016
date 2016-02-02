@@ -19,11 +19,10 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+	<script type="text/javascript" src="./jquery.fullPage.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				resize: true
 
 			});
 		});
@@ -55,19 +54,25 @@
 
 
 	<div class="section" id="slide2">
-		<div class="coteGauche">
-			<h2>L'agriculture urbaine</h2>
-			<h1>Un nouvel <span style="font-family: museoBold;">art de vivre</span></h1>
-			<p>
-				Loin des bocages et des grands champs à labourer, l’agriculture s’implante aussi en ville.
-			</p>
-			<p>
-				Pour cela, pas de chichis, les petits espaces conviennent parfaitement. Ronds-points, jardinets, terrasses, toits... Tout est
-possible ! L’occasion de se reconnecter à son assiette, de favoriser le local et de rencontrer ses voisins via des jardins collectifs, des réseaux paysans (AMAP), et des potagers individuels.
-			</p>
+		<div class="container">
+			<div class="coteGauche">
+				<h2>L'agriculture urbaine</h2>
+				<h1>Un nouvel <span style="font-family: museoBold;">art de vivre</span></h1>
+				<p>
+					Loin des bocages et des grands champs à labourer, l’agriculture s’implante aussi en ville.
+				</p>
+				<p>
+					Pour cela, pas de chichis, les petits espaces conviennent parfaitement. Ronds-points, jardinets, terrasses, toits... Tout est
+	possible ! L’occasion de se reconnecter à son assiette, de favoriser le local et de rencontrer ses voisins via des jardins collectifs, des réseaux paysans (AMAP), et des potagers individuels.
+				</p>
+			</div>
+			<div class="coteDroit">
+				<img src="img/slide_2_chart.png" />
+			</div>
 		</div>
-		<div class="coteDroit">
-			<img src="img/slide_2_chart.png" />
+		<div class="bandeauBas">
+			<span style="font-family: museoBold;">L'agriculture urbaine te botte ?</span><br />
+			<span style="font-family: museoReg;">Rejoins le réseau du vert urbain, et choisis comment tu vas pécho ton légume</span>
 		</div>
 		<div class="flecheBas"><img src="./img/fleche_bas_de_page_noire.png" onclick="$.fn.fullpage.moveSectionDown();" /></div>
 	</div>
@@ -93,7 +98,7 @@ possible ! L’occasion de se reconnecter à son assiette, de favoriser le local
 	        </div>
 
 	        <div id="treemap"></div>
-        <:div>
+        </div>
 	</div>
 
 	<div class="section" id="slide6"><h1>No wraps, no extra markup</h1></div>
