@@ -1,18 +1,23 @@
 "use strict";
 
 $(document).ready(function(){
+	requestGenerateChart("menage");
+	requestGenerateChart("parc");
+	requestGenerateChart("carburant");
+});
+
+function requestGenerateChart(type){
 	var requete = $.ajax({
-		url : "http://127.0.0.1:8080/ouest_france/data/parc/years",
+		url : "http://127.0.0.1:8080/ouest_france/data/"+type+"/years",
 		type : "GET",
 		dataType : "text",
-		success : generateMenageChart,
+		success : generateChart,
 		error : function(res, statut, error){
 			alert(res+" ; "+statut+" ; "+error);
 		}
 	});
-});
-
-function generateMenageChart(res, statut){
+};
+function generateChart(res, statut){
 		var donnees = JSON.parse(res);
 		var valeurs = [];
 		var data = generateChartData(donnees);
@@ -42,16 +47,14 @@ function generateMenageChart(res, statut){
 			seq++;
 
 			if(param.type === 'line'){
-				//Animation d'apparition de la courbe
 				setLineAnimation(param, seq, delays, durations);
 			}else if(param.type === 'label'){
 
 				if(jQuery.inArray(param.text, donnees.yearsToScreen == -1)){
-					setLabelAnimation(param);
+					setLabelAnimation(param, donnees.categorie);
 				};
 			}else if(param.type === 'point'){
-				
-				setPointAnimation(param,seq,delays,durations);
+				setPointAnimation(param,donnees.categorie,seq,delays,durations);
 			}
 		});
 };
@@ -64,18 +67,16 @@ function fillOptions(){
 			showGrid : false
 		},
 		axisX : {
+			//offset : 100,
 			showGrid : false,
 			labelOffset : {
-				x:-13,
+				x:-16,
 				y:0
 			}
 		}, 
-		showArea : true,
 		lineSmooth: Chartist.Interpolation.cardinal({
 			fillHoles: true
 		}),
-		width : '75%',
-		height : '12.5%',
 		chartPadding: {
 			top: 5,
 			right: 30,
@@ -107,7 +108,6 @@ function generateChartData(donnees){
 			data.series[0].push(dataToAdd(donnees, i));
 		}
 	}
-	console.log(data);
 	return data;
 };
 
@@ -121,7 +121,11 @@ function dataToAdd(donnees, index){
 			break;
 
 		case "carburant":
-			retour = 0;
+			retour=0;
+			var cleanEnergies = ["electricite","hybride","gaz","superethanol","bicarburant"];
+			cleanEnergies.forEach(function(carburant){
+				retour += donnees.data[donnees.years[index]][carburant].pourcentage;
+			});
 			break;
 
 		case "parc":
@@ -143,63 +147,65 @@ function setLineAnimation(param, seq, delay, duration){
 	});
 }
 
-function setLabelAnimation(param){
+function setLabelAnimation(param, categorie){
 	var chaine = 'foreignobject[x="'+param.x+'"]'+
 				'[y="'+param.y+'"]'+
 				'[width="'+param.width+'"]'+
 				'[height="'+param.height+'"]';
 	var label = $(chaine+" span");
-	var labelParent = $(chaine);			
-	var labelParentOriginPos = labelParent.position();
-	
-	//var pointOriginWidth = 
+	var labelParent = $(chaine);	
+
+	var labelParentOriginPos = {
+		x : parseInt(labelParent.css("x").replace("px","")),
+		y : parseInt(labelParent.css("y").replace("px",""))
+	};
+	//var labelParentOriginPos = labelParent.position();
 	label.mouseenter(function(node){
 		//Grossissement et changement de couleur du point
-		var point = label.parent().parent().parent().find('.ct-point[year="'+param.text+'"]');
+		var point = label.parent().parent().parent().find('.ct-point[year="'+param.text+'"][categorie="'+categorie+'"]');
 		point.stop().animate({
-			"stroke-width" : 50,
-			opacity : 0.5
+			"stroke-width" : 20,
+			opacity : 0
 		}, 300);
 		//Grossissement du label
 		$(this).stop().animate({ 
 			fontSize: "2em",
 			}, 300 );
 
-			//Décalage à gauche au fur et à mesure du grossissement du label
-			$(this).parent().stop().animate({ 
-			x : labelParentOriginPos.left-18,
-			y : labelParentOriginPos.top-10
-			}, 300 );
+		//Décalage à gauche au fur et à mesure du grossissement du label
+		$(this).parent().stop().animate({ 
+		x : labelParentOriginPos.x-15+"px",
+		y : labelParentOriginPos.y-10+"px"
+		}, 300 );
 	});
 	label.mouseleave(function(node){
 		//Retrecissement du point et retour à la vouleur d'origine
 		var point = label.parent().parent().parent().find('.ct-point[year="'+param.text+'"]');
 		point.stop().animate({
-			stroke : "rgb(255,0,0)",
 			"stroke-width" : 10,
 			opacity : 1
 		}, 300);
 
 		//Retrecissement du label
 		$(this).stop().animate({ 
-			fontSize: "0.75em"
+			fontSize: "1em"
 			}, 300 );
 
-			//Retrecissement du label et retour à la position d'origine
-			$(this).parent().stop().animate({ 
-			x : labelParentOriginPos.left,
-			y : labelParentOriginPos.top
-			}, 300 );
+		//Retrecissement du label et retour à la position d'origine
+		$(this).parent().stop().animate({ 
+		x : labelParentOriginPos.x+"px",
+		y : labelParentOriginPos.y+"px"
+		}, 300 );
 	});
 }
 
-function setPointAnimation(param, seq, delay, duration){
+function setPointAnimation(param, categorie, seq, delay, duration){
 	var annee = param.axisX.ticks[param.index];
 
 	var chaine = 'line[class="ct-point"]'+
 					'[x1="'+param.x+'"]'+
 					'[y1="'+param.y+'"]';
-	$(chaine).attr("year", annee);
+	$(chaine).attr("year", annee).attr("categorie", categorie);
 	param.element.animate({
 	      x1: {
 	        begin: seq * delay,

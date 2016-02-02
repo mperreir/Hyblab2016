@@ -1,0 +1,20 @@
+.barreDefilement{
+	width: 50vw;
+	height: 15vh;
+	bottom: 5vh;
+	left: 25vw;
+	position : absolute;
+	margin-left: auto;
+	margin-right: auto;*
+}
+
+span.ct-label{
+	font-weight: bold;
+	font-size : 1em;
+	display : block;
+	max-width: 2em;
+}
+
+.section{
+	max-height: 100vh;
+}
