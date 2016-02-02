@@ -26,6 +26,7 @@
 	font-size: 33px;
 	letter-spacing: 3px;
 	margin-left: 10%;
+	margin-top: 1%;
 }
 
 #slide5 #caption {
@@ -34,31 +35,46 @@
 	text-align: justify;
 	width: 45%;
 	margin-left: 10%;
+	margin-top: 1%;
 }
 
 #slide5 #treemap {
-	width: 45%;
+	width: 60%;
 	display: inline-block;
 	margin-left: 5%;
+	margin-top: 1%;
 }
 
 #slide5 #treemap_legend {
-	width: 30%;
+	width: 17%;
 	display: inline-block;
 	margin-left: 10%;
+	margin-top: 20px;
+}
+
+.legend_bullet {
+	margin-bottom: 5%;
+	width: 100%;
+}
+
+.boldy {
+	font-weight: bold;
+}
+
+.bulletRight {
+	float: right;
 }
 
 .legend_bullet p {
 	display: inline-block;
 	font-size: 14px;
 	vertical-align: middle;
-	margin-right: 10px;
+	margin-left: 5%;
 }
 
 .legend_bullet img {
 	display: inline-block;
 	vertical-align: middle;
-	margin-right: 10px;
 }
 
 
