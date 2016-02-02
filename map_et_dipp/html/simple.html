@@ -10,7 +10,8 @@
 	<meta name="Resource-type" content="Document" />
 
 
-	<link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+
+	<link rel="stylesheet" type="text/css" href="./jquery.fullPage.css" />
 	<!--<link rel="stylesheet" type="text/css" href="examples.css" />-->
 	<link rel="stylesheet" type="text/css" href="simple.css" />
 	<link href="css/treemap.css" rel="stylesheet">
@@ -19,11 +20,11 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-	<script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+
+	<script type="text/javascript" src="./jquery.fullPage.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				resize: true
 
 			});
 		});
@@ -55,19 +56,25 @@
 
 
 	<div class="section" id="slide2">
-		<div class="coteGauche">
-			<h2>L'agriculture urbaine</h2>
-			<h1>Un nouvel <span style="font-family: museoBold;">art de vivre</span></h1>
-			<p>
-				Loin des bocages et des grands champs à labourer, l’agriculture s’implante aussi en ville.
-			</p>
-			<p>
-				Pour cela, pas de chichis, les petits espaces conviennent parfaitement. Ronds-points, jardinets, terrasses, toits... Tout est
-possible ! L’occasion de se reconnecter à son assiette, de favoriser le local et de rencontrer ses voisins via des jardins collectifs, des réseaux paysans (AMAP), et des potagers individuels.
-			</p>
+		<div class="container">
+			<div class="coteGauche">
+				<h2>L'agriculture urbaine</h2>
+				<h1>Un nouvel <span style="font-family: museoBold;">art de vivre</span></h1>
+				<p>
+					Loin des bocages et des grands champs à labourer, l’agriculture s’implante aussi en ville.
+				</p>
+				<p>
+					Pour cela, pas de chichis, les petits espaces conviennent parfaitement. Ronds-points, jardinets, terrasses, toits... Tout est
+	possible ! L’occasion de se reconnecter à son assiette, de favoriser le local et de rencontrer ses voisins via des jardins collectifs, des réseaux paysans (AMAP), et des potagers individuels.
+				</p>
+			</div>
+			<div class="coteDroit">
+				<img src="img/slide_2_chart.png" />
+			</div>
 		</div>
-		<div class="coteDroit">
-			<img src="img/slide_2_chart.png" />
+		<div class="bandeauBas">
+			<span style="font-family: museoBold;">L'agriculture urbaine te botte ?</span><br />
+			<span style="font-family: museoReg;">Rejoins le réseau du vert urbain, et choisis comment tu vas pécho ton légume</span>
 		</div>
 		<div class="flecheBas"><img src="./img/fleche_bas_de_page_noire.png" onclick="$.fn.fullpage.moveSectionDown();" /></div>
 	</div>
@@ -128,7 +135,7 @@ possible ! L’occasion de se reconnecter à son assiette, de favoriser le local
 
 	        <p id="caption">Partager un jardin, c’est possible, et les options sont multiples dans la métropole nantaise. Pour cultiver les tomates en même temps que le lien social, différentes solutions existent selon les villes et les quartiers...</p>
 
-	        <div id="treemap_legend">
+	        <div id="treemap_legend" class="coteGauche">
 	            <div class="legend_bullet">
 	                <img src="img/treemap/bulletJF_24.png">
 	                <p>Jardins Familiaux</p>
@@ -137,6 +144,16 @@ possible ! L’occasion de se reconnecter à son assiette, de favoriser le local
 	        </div>
 
 	        <div id="treemap"></div>
+	        
+	        <div id="interview">
+	        	<div id="interview_text"
+	        		<p>Il y a aussi une autre façon de partager les jardins : mettre à disposition à des passionnés le terrain de sa propre maison ! C'est ce que propose l'association ECOS.</p>
+	        	</div>
+
+	        	<div id="interview_res">
+	        		<p>Fanny Courieult au micro</p>
+	        	</div>
+	        </div>
         </div>
 	</div>
 
