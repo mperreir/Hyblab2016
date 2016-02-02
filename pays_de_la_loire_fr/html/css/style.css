@@ -1227,9 +1227,9 @@ span>ul>li>p
 #data2_pale
 {
     position: absolute;
-    width: 40%;
-    top: 9.3%;
-    left: 45%;
+    width: 44%;
+    top: 5%;
+    left: 40%;
 }
 
 #data2_eolien
@@ -1245,8 +1245,8 @@ span>ul>li>p
 {
     position: absolute;
     width: 10%;
-    top: 4%;
-    left: 45%;
+    top: 2%;
+    left: 43%;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
