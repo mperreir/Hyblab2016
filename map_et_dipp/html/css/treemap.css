@@ -7,7 +7,6 @@
 
 #slide5 #absSlide5 {
 	position: absolute;
-	margin-top: 1%;
 }
 
 #slide5 #badge {
@@ -18,6 +17,7 @@
 	padding: 5px;
 	width: 128px;
 	text-align: center;
+	margin-top: 1%;
 }
 
 #slide5 h2 {
@@ -25,7 +25,7 @@
 	font-family: museoReg;
 	font-size: 33px;
 	letter-spacing: 3px;
-	text-align: center;
+	margin-left: 10%;
 }
 
 #slide5 #caption {
@@ -33,27 +33,32 @@
 	font-size: 14px;
 	text-align: justify;
 	width: 45%;
-	margin-left: 5%;
+	margin-left: 10%;
 }
 
 #slide5 #treemap {
 	width: 45%;
 	display: inline-block;
+	margin-left: 5%;
 }
 
 #slide5 #treemap_legend {
 	width: 30%;
 	display: inline-block;
-	margin-left: 5%
+	margin-left: 10%;
 }
 
 .legend_bullet p {
 	display: inline-block;
 	font-size: 14px;
+	vertical-align: middle;
+	margin-right: 10px;
 }
 
 .legend_bullet img {
 	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
 }
 
 
