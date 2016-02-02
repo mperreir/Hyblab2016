@@ -11,10 +11,10 @@ pos = 0,
 deg = 0;
 
 
-var color = d3.scale.linear()
-.range(["hsl(0,0%,100%)", "hsl(195,100%,50%)"])
+/*var color = d3.scale.linear()
+.range(["hsl(-180,60%,50%)", "hsl(180,60%,50%)"])
 .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
-
+*/
 
 //arc des data
 var arcBody = d3.svg.arc()
@@ -116,7 +116,7 @@ bouton_solaire
         //remise a zéro des valeurs
         zero(toS);
         //transition
-        //toS()
+        //toS();
         //on eleve l'animation
         bouton_solaire.attr("class", "");
     }
@@ -214,7 +214,7 @@ function toE() {
     if (!document.hidden) field
 		.transition()
 		.duration(500)
-		.delay(function(d,i) { return (5-i)*500; })
+		.delay(function(d,i) { return (4-i)*500; })
         .each(fieldTransition)
 }
 
@@ -266,12 +266,11 @@ function fieldTransition() {
     field.each(function(d) { console.log(d); });
     //}
     
-    
     //data
     field.select(".arc-body")
     .attrTween("d", arcTween(arcBody))
     .style("fill-opacity", function(d) { return d.opacity;})
-    .style("fill", function(d) { return color(d.value);});
+    .style("fill", function(d) { return d.color(d.value);});
     
     field.select(".arc-center")
     .attrTween("d", arcTween(arcCenter));
@@ -303,11 +302,32 @@ function arcTween(arc) {
 //model
 //valeurs entre 0-1
 function fields() {
+    var col1 = d3.scale.linear()
+    .range(["hsl(-180,60%,50%)", "hsl(180,60%,50%)"])
+    .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
+    
+    var col2 = d3.scale.linear()
+    .range(["hsl(-180,60%,50%)", "hsl(180,60%,50%)"])
+    .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
+    
+    var col3 = d3.scale.linear()
+    .range(["hsl(-180,60%,50%)", "hsl(180,60%,50%)"])
+    .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
+    
+    var col4 = d3.scale.linear()
+    .range(["hsl(-180,60%,50%)", "hsl(180,60%,50%)"])
+    .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
+    
+    var col5 = d3.scale.linear()
+    .range(["hsl(-180,60%,50%)", "hsl(180,60%,50%)"])
+    .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
+    
+    
     return [
-            {index: .5, text: "", value: 0, previousValue: 0, opacity: 1, year: "2014", val1: "1067", val2: "364", val3: "199", color: ""},
-            {index: .4, text: "", value: 0, previousValue: 0, opacity: 1, year: "2013", val1: "981", val2: "299", val3: "182", color: ""},
-            {index: .3, text: "", value: 0, previousValue: 0, opacity: 1, year: "2012", val1: "884", val2: "266", val3: "114", color : ""},
-            {index: .2, text: "", value: 0, previousValue: 0, opacity: 1, year: "2011", val1: "704", val2: "179", val3: "67", color: ""},
-            {index: .1, text: "", value: 0, previousValue: 0, opacity: 1, year: "2010", val1: "611", val2: "61", val3: "50", color: ""}
+            {index: .5, text: "", value: 0, previousValue: 0, opacity: 1, year: "2014", val1: "1067", val2: "364", val3: "199", color: col1},
+            {index: .4, text: "", value: 0, previousValue: 0, opacity: 1, year: "2013", val1: "981", val2: "299", val3: "182", color: col2},
+            {index: .3, text: "", value: 0, previousValue: 0, opacity: 1, year: "2012", val1: "884", val2: "266", val3: "114", color: col3},
+            {index: .2, text: "", value: 0, previousValue: 0, opacity: 1, year: "2011", val1: "704", val2: "179", val3: "67", color: col4},
+            {index: .1, text: "", value: 0, previousValue: 0, opacity: 1, year: "2010", val1: "611", val2: "61", val3: "50", color: col5}
             ];
 }
