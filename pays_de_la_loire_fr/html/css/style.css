@@ -72,8 +72,14 @@ span>ul>li>p
 {
 	font-weight: bold;
 	text-align: center;
-	bottom: 40%;
+	position: absolute;
 	color: #002266;
+}
+
+#titre_intercalaire_questionnaire
+{
+	left: 31.5%;
+	bottom: 74.5%;
 }
 
 .text-left
@@ -82,10 +88,19 @@ span>ul>li>p
 	left: 2%;
 }
 
+#titre_intro
+{
+	bottom: 82%;
+	left: 15%;
+}
+
 .sous_titre_orange
 {
+	position: absolute;
 	text-align: center;
-	bottom: 40%;
+	bottom: 75.6%;
+	left: 32%;
+	font-size: 2vw;
 	color: #ffbf00;
 	font-weight: bold;
 }
@@ -108,8 +123,8 @@ span>ul>li>p
 .liste_propositions
 {
 	position: absolute;
-	left: -550%;
-	width: 240%;
+	left: 17%;
+	width: 60%;
 }
 
 .bloc_reponse
@@ -144,7 +159,7 @@ span>ul>li>p
 
 #q2
 {
-	left: -136%;
+	left: 17%;
 	z-index: 1;
 }
 
@@ -189,8 +204,8 @@ span>ul>li>p
 	color: white;
 	position: absolute;
 	top : 80%;
-	left: 45%;
-	width: 10%;
+	left: 42.5%;
+	width: 15%;
 	font-size: 1.5vw;
 	background-color:#e4685d;
 	border:1px solid #ffffff;
@@ -224,6 +239,13 @@ span>ul>li>p
 	font-weight: bold;
 }
 
+.titre_question
+{
+	position: absolute;
+	bottom: 85.5%;
+	left: 3.5%;
+}
+
 .section_perso
 {
 	background-color: #F7FBFC;
@@ -253,17 +275,18 @@ span>ul>li>p
 
 #fond_q1
 {
-	left: -155%;
+	z-index: 0;
+	left: -37.5%;
 }
 
 #fond_q2
 {
-	left: -50%;
+	left: -12.5%;
 }
 
 #fond_q3
 {
-	left: 52.5%;
+	left: 12.5%;
 }
 
 #fond_q4
@@ -343,132 +366,144 @@ span>ul>li>p
 #pale_intro_1
 {
 	opacity: 1;
-	bottom: 33.5%;
-	left: 57.9%;
-	width: 6%;
+	bottom: 31.7%;
+	left: 57.4%;
+	width: 7%;
 	height: auto;
 }
 
 #pale_intro_2
 {
 	opacity: 1;
-	bottom: 32.2%;
-	left: 62.2%;
-	width: 9.4%;
+	bottom: 31.7%;
+	left: 64.23%;
+	width: 7%;
 	height: auto;
 }
 
 #pale_intro_3
 {
 	opacity: 1;
-	bottom: 32.1%;
-	left: 69.1%;
-	width: 9.4%;
+	bottom: 31.7%;
+	left: 71.25%;
+	width: 7%;
 	height: auto;
 }
 
 #france
 {
 	position: absolute;
-	width: 45%;
-	bottom: 12%;
-	left: -127.5%;
+	width: 12%;
+	bottom: 5%;
+	left: 6.5%;
 }
 
 #ampoule_q2
 {
 	position: absolute;
-	left: -35.5%;
-	width: 20%;
-	top: 30%;
+	left: 27.5%;
+	width: 6%;
+	top: 32.5%;
 	height: auto;
 }
 
 #batiment_q2
 {
 	position: absolute;
-	left: -11.5%;
-	width: 20%;
-	top: 30%;
+	left: 34.5%;
+	width: 6%;
+	top: 32.5%;
 	height: auto;
 }
 
 #euro_q2
 {
 	position: absolute;
-	left: 13.5%;
-	width: 20%;
-	top: 30%;
+	left: 42%;
+	width: 6%;
+	top: 32.5%;
 	height: auto;
+}
+
+#titre_q2
+{
+	left: 32%;
+	bottom: 85.5%;
 }
 
 #elements_q3
 {
 	position: absolute;
-	width: 55%;
+	width: 25%;
 	height: auto;
-	left: 72.5%;
-	bottom: 5%;
+	left: 50%;
+	bottom: -10%;
 }
 
 #tracteur_q3
 {
 	position: absolute;
-	width: 7.5%;
+	width: 2%;
 	height: auto;
-	left: 78%;
-	top: 57.5%;
+	left: 56.5%;
+	bottom: 25%;
 }
 
 #panneau_1_q3
 {
 	position: absolute;
-	width: 6.5%;
+	width: 1.5%;
 	height: auto;
-	top: 65%;
-	left: 105%;
+	bottom: 18%;
+	left: 64%;
 }
 
 #panneau_2_q3
 {
 	position: absolute;
-	width: 6.5%;
+	width: 1.5%;
 	height: auto;
-	top: 60%;
-	left: 102%;
+	bottom: 24%;
+	left: 65%;
 }
 
 #panneau_3_q3
 {
 	position: absolute;
-	width: 6.5%;
+	width: 1.5%;
 	height: auto;
-	top: 60%;
-	left: 109%;
+	bottom: 24%;
+	left: 63%;
 }
 
 #pale_1_q3
 {
 	position: absolute;
-	width: 9%;
-	top: 25.5%;
-	left: 103.15%;
+	width: 1.8%;
+	bottom: 55.8%;
+	left: 63.6%;
 }
 
 #pale_2_q3
 {
 	position: absolute;
-	width: 9%;
-	top: 29%;
-	left: 108.1%;
+	width: 1.8%;
+	bottom: 52.78%;
+	left: 64.94%;
 }
 
 #pale_3_q3
 {
 	position: absolute;
-	width: 9%;
-	top: 25.7%;
-	left: 113.7%;
+	width: 1.8%;
+	bottom: 55.8%;
+	left: 66.4%;
+}
+
+#titre_q3
+{
+	left: 51.5%;
+	bottom: 85.5%;
 }
 
 #elements_q4
