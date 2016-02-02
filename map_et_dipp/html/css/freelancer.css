@@ -1,3 +1,7 @@
+@font-face {
+    font-family: libelSuit;
+    src: url("../fonts/LIBELSUIT.ttf");
+}
 nav
 {
     position: fixed;
@@ -5,6 +9,8 @@ nav
     text-align: center;
     width: 100%;
     visibility: hidden;
+    background: white;
+    z-index: 1000;
 }
 nav li:not(:first-child)
 {
@@ -14,7 +20,7 @@ nav li
 {
     display: inline-block;
     vertical-align: top;
-    padding-top: 2%;
+    padding-top: 1%;
 }
 nav li a
 {
@@ -35,6 +41,7 @@ nav li a
     margin-top: 10px;
     margin-left: -70px;
     visibility: visible;
+    z-index: 1000000;
 }
 #croixMenu
 {
@@ -48,6 +55,8 @@ nav li a
 #titreSlide1
 {
     color: black;
+    font-family: libelSuit;
+    font-size: 63px;
 }
 @media screen and (min-width: 1500px){
     section#slide1 #slide1Fond{

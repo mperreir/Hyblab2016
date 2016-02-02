@@ -18,7 +18,7 @@ var produitsDebut = [ {"produit":"Légumes","distanceMoyenne":0, "distMin":0, "d
 var villes = [{"nom":"Angers", "distance":82}, {"nom":"Laval","distance":138}];
 var quartiers = [{"nom":"Malakoff St Donatien", "produits":[]}, {"nom":"Doulon Bottière"}, {"nom":"Hauts Pavés St Félix"}, {"nom":"Bellevue Chantenay"}
 , {"nom":"Centre Ville"}, {"nom":"Nantes Nord"}, {"nom":"Ile de Nantes"}, {"nom":"Nantes Erdre"}, {"nom":"Nantes Sud"}, {"nom":"Breil Barberie"}];
-var wahoo = [{"nom":"Moscou", "distance":2494}];
+var wahoo = [{"nom":"Moyenne nationale", "distance":2494}];
 
 
 
@@ -292,7 +292,7 @@ var lignesMax = groupes.append("line").attr("categorie",function(d){return d.pro
 }).on("mouseout",function(d){
 	d3.select(this).attr("stroke",couleurLigneMax);
 	return tooltip.style("visibility","hidden");
-});
+}).attr("stroke-dasharray", "5,5");
 
 	//mise à jour des lignes max
 	svg.selectAll("line.ligneMax").data(produits).transition().duration(4000).delay(150).ease("elastic").attr("x1", function(d, i) {

@@ -384,18 +384,28 @@
         $("#croixMenu").slideUp();
         document.getElementById("boutonMenu").addEventListener("click", function(e)
         {
-            document.getElementById("boutonMenu").style.visibility = "hidden";
-            document.getElementById("croixMenu").style.visibility = "visible";
+            $("#boutonMenu").slideUp(function(){
+
+                    $("#boutonMenu").hide();
+            });
             document.getElementById("lemenu").style.visibility = "visible";
-            $("#lemenu").slideDown(800);
+            document.getElementById("croixMenu").style.visibility = "visible";
+            $("#lemenu").slideDown();
             $("#croixMenu").slideDown();
 
         });
         document.getElementById("croixMenu").addEventListener("click", function(e)
         {
+            $("#croixMenu").slideUp(function(){
+                $("#croixMenu").hide();
+            });
             document.getElementById("boutonMenu").style.visibility = "visible";
-            document.getElementById("croixMenu").style.visibility = "hidden";
-            document.getElementById("lemenu").style.visibility = "hidden";
+            $("#boutonMenu").slideDown();
+            $("#lemenu").slideUp(function(){
+
+                $("#lemenu").hide();
+            });
+            //document.getElementById("croixMenu").style.visibility = "hidden";
         });
     </script>
 
