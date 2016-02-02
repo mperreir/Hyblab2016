@@ -136,8 +136,13 @@ donneesActuelles.forEach(function(element, index, tableau) {
     var idJauge = infoElement.idJauge;
     
     var baliseJauge = d3.select("#diagrammeJoseph").append("div").attr("class", "baliseJauge"); 
-    var svgJauge = baliseJauge.append("svg").attr("id", idJauge).attr("width", 100).attr("height", 150);
-    svgJauge.attr("viewBox", "0, 0, 100 150");
+    var svgJauge = baliseJauge.append("svg").attr({
+        "id": idJauge,
+        "viewBox": "0 0 100 150",
+        "height": 150,
+        "width": 100
+    });
+    //"id", idJauge).attr("width", 100).attr("height", 150); svgJauge.attr("viewBox", "0, 0, 100 150");
     // <svg id="fillgauge6" width="19%" height="300" onclick="gauge6.update(NewValue());"></svg>
     
     
