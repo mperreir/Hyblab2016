@@ -1,30 +1,32 @@
 #slide5 {
-	height: 100%;
+	height: 100vh;
+}
+
+#slide5 #badge {
+	color: white;
+	font-size: 16px;
+	border: 1px solid white;
+	border-radius: 6px;
+	padding: 5px;
+	width: 120px;
+	margin: auto;
+	margin-top: 3%;
+	margin-bottom: 20px;
 }
 
 #slide5 h2 {
-	margin-top: 12.5%;
+	margin-bottom: 20px;
 }
 
-#treemap_legend {
-	vertical-align: top;
-	display: inline-block;
-	margin-top: 25%;
-	margin-left: 15%;
-	margin-right: 5%;
+#slide5 #caption {
+	color: black;
+	font-size: 14px;
+	text-align: justify;
+	width: 45%;
+	margin-left: 5%;
 }
 
-
-#treemap_legend img, #treemap_legend p  {
-	vertical-align: top;
-	display: inline-block;
-	margin-right: 10px;
-}
-
-#treemap {
-
-	margin-top: 25vh;
-	vertical-align: top;
+.legend_bullet {
 	display: inline-block;
 }
 
