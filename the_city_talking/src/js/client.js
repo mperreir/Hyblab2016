@@ -5,7 +5,7 @@ import "../scss/main.scss";
 var width=1000,
 	height=400;
 
-var chart = d3.select(".chart")
+var chart = d3.select(".dataviz2")
 	.attr("width",width)
 	.attr("height",height);
 
