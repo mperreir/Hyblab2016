@@ -72,6 +72,7 @@ function animIntro() {
 }
 
 function startQ () {
+	console.debug("Start");
 	//document.getElementById("sectionQ").style.display = "block";
 	$.fn.fullpage.moveSectionDown();
 }

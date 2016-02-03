@@ -1479,6 +1479,16 @@ DATA 1
 
 /*Dataviz3*/
 
+#bloc_data3
+{
+	width: 60%;
+	height: auto;
+	z-index: 4;
+	left: 32%;
+	top: 38%;
+	opacity: 0.9;
+}
+
 #eolienne_mat1_3
 {
 	position: absolute;
