@@ -1912,10 +1912,43 @@ DATA 1
 #titre_i3
 {
 	width: 100%;
-	top:47.5%;
+	top:48.5%;
 	z-index: 3;
 	font-size: 1.5vw;
 }
+
+#pan1_i3
+{
+	width: 100%;
+	top:14%;
+	z-index: 3;
+	font-size: 1vw;
+}
+
+#pan2_i3
+{
+	width: 100%;
+	top:21%;
+	z-index: 3;
+	font-size: 1vw;
+}
+
+#pan3_i3
+{
+	width: 100%;
+	top:28%;
+	z-index: 3;
+	font-size: 1vw;
+}
+
+#pan4_i3
+{
+	width: 100%;
+	top: 34.5%;
+	z-index: 3;
+	font-size: 1vw;
+}
+
 
 /*bénéfices*/
 
