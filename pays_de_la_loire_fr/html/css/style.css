@@ -1506,17 +1506,17 @@ DATA 1
 #eolienne_mat4_3
 {
 	position: absolute;
-	width: 38%;
-	top : 19.5%;
-	left: 45.1%;
+	width: 42%;
+	top : 15.5%;
+	left: 42.8%;
 }
 
 #eolienne_mat5_3
 {
 	position: absolute;
-	width: 42%;
-	top : 12.5%;
-	left: 58%;
+	width: 45%;
+	top : 9.5%;
+	left: 56.4%;
 }
 
 #eolienne_pale1_3
@@ -1531,7 +1531,7 @@ DATA 1
 {
 	position: absolute;
 	width: 16%;
-	top : 30%;
+	top : 33.2%;
 	left: 27%;
 }
 
@@ -1539,24 +1539,24 @@ DATA 1
 {
 	position: absolute;
 	width: 18%;
-	top : 19.5%;
-	left: 40.5%;
+	top : 22.7%;
+	left: 40.7%;
 }
 
 #eolienne_pale4_3
 {
 	position: absolute;
 	width: 20%;
-	top : 13.5%;
-	left: 55%;
+	top : 11%;
+	left: 54.7%;
 }
 
 #eolienne_pale5_3
 {
 	position: absolute;
 	width: 20%;
-	top : 8.5%;
-	left: 70%;
+	top : 5.5%;
+	left: 69.7%;
 }
 
 #line_data3_1
@@ -1750,4 +1750,9 @@ DATA 1
 	height: 10%;
 	left: 10%;
 	top: 10%;
+}
+
+#titre_concl
+{
+	width: 100%;
 }

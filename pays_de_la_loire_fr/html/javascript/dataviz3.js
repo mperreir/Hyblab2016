@@ -173,7 +173,7 @@ function animEolienne3_2(){
 	$(eolienne_pale2_3)
 	.transition({
 				opacity: 1,
-				top:'30%'
+				top:'33.2%'
 				}, 1000, 'easeOutCubic',function(){
 					if(stop3) { return;}
 					animEolienne3_3();
@@ -198,7 +198,7 @@ function animEolienne3_3(){
 	$(eolienne_pale3_3)
 	.transition({
 				opacity: 1,
-				top:'19.5%'
+				top:'22.7%'
 				}, 1000, 'easeOutCubic',function(){
 					if(stop3) { return;}
 					animEolienne3_4();
@@ -228,13 +228,13 @@ function animEolienne3_4(){
 	$(eolienne_mat4_3)
 	.transition({
 				opacity: 1,
-				top:'19.5%'
+				top:'15.5%'
 				}, 1000, 'easeOutCubic');
 
 	$(eolienne_pale4_3)
 	.transition({
 				opacity: 1,
-				top:'13.5%'
+				top:'11%'
 				}, 1000, 'easeOutCubic',function(){
 					if(stop3) { return;}
 					animEolienne3_5();
@@ -258,13 +258,13 @@ function animEolienne3_5(){
 	$(eolienne_mat5_3)
 	.transition({
 				opacity: 1,
-				top:'12.5%'
+				top:'9.5%'
 				}, 1000, 'easeOutCubic');
 
 	$(eolienne_pale5_3)
 	.transition({
 				opacity: 1,
-				top:'8.5%'
+				top:'5.5%'
 				}, 1000, 'easeOutCubic',function(){
 
 					if(stop3) { return;}
