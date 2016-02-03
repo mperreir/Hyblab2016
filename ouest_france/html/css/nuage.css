@@ -18,3 +18,24 @@
 	top:-15vh;
 	z-index:80; 
 }
+
+#nuage4{
+	position: absolute;
+	left:-10vw;
+	top:-34vh;
+	z-index:80; 
+}
+
+#nuage5{
+	position: absolute;
+	left:12vw;
+	top:-30vh;
+	z-index:80; 
+}
+
+#nuage6{
+	position: absolute;
+	left:2vw;
+	top:-50vh;
+	z-index:80; 
+}
