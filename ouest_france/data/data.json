@@ -20,17 +20,17 @@
             "2014"
         ],
         "yearsComments":{
-          "1990" : "",
-          "2000" : "",
+          "1990" : "En 1990, 76,8% des ménages sont équipés d’au moins une voiture. La tendance est aux ménages mono-motorisés (50,5%), tandis les ménages bi-motorisés ou plus sont minoritaires (26,3%). La part des ménages non-motorisés s’élève à 23,2%.",
+          "2000" : "La part des ménages motorisés augmente légèrement, en raison notamment des aides de l’Etat mises en place dans les années 90 pour acquérir un véhicule. La part de ménages bi-motorisés ou plus augmente, passant de 26,3% à 29,6%. La part des ménages non-motorisés diminue, baissant de 23,2% à 19,7%.",
           "2006" : "",
           "2007" : "",
           "2008" : "",
           "2009" : "",
-          "2010" : "",
+          "2010" : "La part des ménages motorisés continue d’augmenter, passant de 80,3% à 83,5%. Les ménages disposent de plus en plus d’une seconde voiture : la part des bi-motorisés ou plus grimpe de 29,6% à 35,9%.",
           "2011" : "",
           "2012" : "",
           "2013" : "",
-          "2014" : ""
+          "2014" : "Pour la première fois, la part des ménages motorisés recule, passant de 83,5% à 82,8%. La part des ménages mono-motorisés remonte, passant de 47,6% à 48,8%."
         },
         "data": {
             "mono": {

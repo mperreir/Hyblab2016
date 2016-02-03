@@ -15,9 +15,16 @@ span.ct-label{
 	max-width: 2em;
 	cursor:  pointer;
 }
+#chartParc .ct-label, #chartMotorisation .ct-label, #chartCarburant .ct-label{
+	color: #80BC4E;
+}
 
 #chartMotorisation .ct-line, #chartParc .ct-line, #chartCarburant .ct-line{
 	stroke-width: 1px;
+}
+
+#chartParc .ct-line, #chartParc .ct-point, #chartMotorisation .ct-line, #chartCarburant .ct-line, #chartMotorisation .ct-point, #chartCarburant .ct-point{
+	stroke: #80BC4E;
 }
 
 .car{
