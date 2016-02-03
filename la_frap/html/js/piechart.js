@@ -181,8 +181,8 @@ window.addEventListener('load',function () {
 	legend.append('text')
 					.attr('x', legendCircleSize + legendSpacing)
 					.attr('y', legendCircleSize - legendSpacing)
-					.attr("fill", "white")
-					.atr('font-weight', 'bold')
+					.attr("fill", "#179fae")
+					.attr('font-weight', 'bold')
 					.attr("font-size", "14px")
 					.text(function(d) { return d.label; });
 					 
