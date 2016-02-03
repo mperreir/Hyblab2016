@@ -353,7 +353,7 @@ input[type="checkbox"] {
 
 #charts {
     margin-top: 5%;
-    height: 80%;
+    height: 600px;
 }
 
 .chart {
@@ -390,18 +390,21 @@ input[type="checkbox"] {
 
 #chart_imgs {
     display: inline-block;
+    position: relative;
     z-index: 15;
     width: 1px;
     height: 100%;
+    vertical-align: top;
+    padding-top: 25px;
+    left: -27px;
+    top: -2px;
 }
 
 #chart_imgs img {
     display: inline-block;
-    height: 10%;
-    margin-bottom: 8px;
+    height: 50px;
     position: relative;
-    top: -5%;
-    left: -20px;
+    margin-bottom: 8px;
 }
 
 
