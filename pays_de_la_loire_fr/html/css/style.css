@@ -1805,7 +1805,7 @@ DATA 1
 .bloc_valeur
 {
 	position: absolute;
-	font-size: 0.8vw;
+	font-size: 1.4vw;
 	width: 11.5%;
     height: 4%;
     padding: 0.3%;
@@ -1928,12 +1928,12 @@ DATA 1
 #emploi
 {
     position: absolute;
-    width: 30%;
+    width: 20%;
     height: 25%;
     left: 18%;
     top: 30%;
     font-size: 1vw;
-    color: #002266;
+    color: #002266;	
 }
 
 #emploi>b
@@ -1944,12 +1944,13 @@ DATA 1
 #propre
 {
     position: absolute;
-    width: 40%;
+    width: 20%;
     height: 25%;
     left: 41%;
     top: 30%;
     font-size: 1vw;
     color: #002266;
+    animation: 0.5s;
 }
 
 #propre>b
@@ -1960,16 +1961,29 @@ DATA 1
 #eco
 {
     position: absolute;
-    width: 30%;
+    width: 20%;
     height: 25%;
     left: 65%;
     top: 30%;
     font-size: 1vw;
     color: #002266;
+    animation: 1s;
+    
 }
 
 #eco>b
 {
     font-size: 1.25vw;
+}
+
+.animConcl
+{
+	animation: fadeIn 10s linear forwards;
+}
+
+.image_concl
+{
+	width: 35%;
+	padding: 2% 0 2% 0;
 }
 
