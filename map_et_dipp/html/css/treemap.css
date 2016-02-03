@@ -7,6 +7,7 @@
 
 #slide5 #absSlide5 {
 	position: absolute;
+	text-align: center;
 }
 
 #slide5 #badge {
@@ -25,7 +26,6 @@
 	font-family: museoReg;
 	font-size: 33px;
 	letter-spacing: 3px;
-	margin-left: 10%;
 	margin-top: 1%;
 }
 
@@ -83,10 +83,12 @@
 	border-radius: 6px;
 	padding: 5px;
 	width: 50%;
+	float: right;
 }
 
 #interview_text {
 	width : 60%;
+	font-size: 12px;
 	display: inline-block;
 }
 

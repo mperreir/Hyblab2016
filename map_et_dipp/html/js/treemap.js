@@ -2,7 +2,7 @@
 
 var margin = {top: 30, right: 0, bottom: 20, left: 0},
     //width = 960,
-    width = (window.screen.availWidth * 45/100),
+    width = (window.screen.availWidth * 55/100),
     //height = 500 - margin.top - margin.bottom,
     height = (window.screen.availHeight * 40/100) - margin.top - margin.bottom,
     transitioning;
