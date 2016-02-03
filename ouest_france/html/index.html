@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="script/chartist/dist/chartist.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styleChartDefilement.css">
+    <link rel="stylesheet" href="css/nuage.css">
     <!-- Déclaration des scripts js et librairies -->
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -35,12 +36,53 @@
 
       <!-- Le contenu du site -->
       <div id="fullpage">
+      <!--First page-->
         <div class="section" id="s1">
-          <img class="svg" src="images/accueil.svg" alt="En voiture Simone !"/>
+
+        <!-- The clouds and the background svg-->
+        
+          <div style="position: relative;"> 
+              <!--First cloud-->               
+              <div id="nuage1">              
+                <img src="images/nuage_1.svg" alt="nuage"/>
+              </div>
+
+              <!--Second cloud-->
+              <div id="nuage2">
+                <img src="images/nuage_2.svg" alt="nuage"/>
+              </div>
+
+              <!--third cloud-->
+              <div id="nuage3">
+                <img src="images/nuage_3.svg" alt="nuage"/>
+              </div>
+
+              <!--4th cloud-->
+              <!--div style="position: absolute;left:-150px;top:-450px;z-index:80">
+                <img src="images/nuage_4.svg" alt="nuage4"/>
+              <--/div>
+
+              <!--5th cloud-->
+              <!--div style="position: absolute;left:200px;top:-100px;z-index:80">
+                <img src="images/nuage_5.svg" alt="nuage5"/>
+              <--/div>
+
+            <!--back ground svg-->
+            <img class="svg" src="images/accueil.svg" alt="En voiture Simone !"/>
+          </div> 
+        
           <h2>LES FRANÇAIS ET L’AUTOMOBILE : QUELLES HABITUDES DE CONSOMMATION ?</h2>
+        
+          
           <a href="#2"><img  id="scroll" src="images/scroll_bas.svg" alt="Slide suivante"/></a>
           <div class="arrow bounce"></div>
+          <div></div>
         </div>
+
+
+
+
+        <!--second page-->
         <div class="section" id="s2">
           <h1>COMBIEN DE VOITURES DANS TON GARAGE ?</h1>
           <img class="svg isles"  src="images/motor.svg" alt="Ménages motorisés"/>
