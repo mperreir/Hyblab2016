@@ -130,11 +130,11 @@ function resetSlide (idQ) {
 
 			$(ampoule).transition({
 				scale: 1,
-				left: '27.5%'
+				left: '29.5%'
 			})
 			$(batiment).transition({
 				scale: 1,
-				left: '34.5%'
+				left: '35.5%'
 			})
 			$(euro).transition({
 				scale: 1,
@@ -556,6 +556,65 @@ function setPDLSize (grosseur) {
 			$(paysdelaloire).transition({
 				scale: 1.6
 			})
+			break;
+	}
+}
+
+function animQ3 (element) {
+	switch(element) {
+		case 1:
+			var pale1 = document.getElementById("pale_1_q3");
+			var pale2 = document.getElementById("pale_2_q3");
+			var pale3 = document.getElementById("pale_3_q3");
+
+			$(pale1).transition({
+					rotate: '1480deg',
+					delay: 920 }, 18100, 'linear');
+			$(pale2).transition({
+					rotate: '1480deg',
+					delay: 710 }, 9800, 'linear');
+			$(pale3).transition({
+					rotate: '1480deg',
+					delay: 1154 }, 12540, 'linear');
+			break;
+
+		case 2:
+			var panneau1 = document.getElementById("panneau_1_q3");
+			var panneau2 = document.getElementById("panneau_2_q3");
+			var panneau3 = document.getElementById("panneau_3_q3");
+
+			for(var i = 0; i < 5; i++) {
+				$(panneau1).transition({
+						scale: 1.2,
+						delay: 920
+				});
+				$(panneau2).transition({
+						scale: 1.4,
+						delay: 710
+				});
+				$(panneau3).transition({
+						scale: 1.1,
+						delay: 1154
+				});
+
+				$(panneau1).transition({
+						scale: 1
+				});
+				$(panneau2).transition({
+						scale: 1
+				});
+				$(panneau3).transition({
+						scale: 1
+				});
+			}
+			break;
+
+		case 3:
+			var tracteur = document.getElementById("tracteur_q3");
+
+			$(tracteur).transition({
+				left: '47.5%'
+			}, 10000, 'linear');
 			break;
 	}
 }
