@@ -251,6 +251,9 @@ nav ul li:not(:first-child)
     color: #78dc82;
 }
 
+#slide3 .flecheBas {
+    margin-top: -50px;
+}
 
 
 /* slide 4 : Joseph */
