@@ -72,8 +72,9 @@ h2{
 
 
 #logo{
-	position: absolute;
-	bottom: 12vh;
+	position: relative;
+	padding-bottom: 10px;
+	bottom: 2vh;
 	width: 99%;
 	margin-left: auto;
 	margin-right: auto;
@@ -93,10 +94,10 @@ h2{
 }
 
 #s1 {
-    background-color: #D3E6FF;
+
 }
 #s2 {
-    background-color: #D3E6FF;
+
 }
 #s5{
 	vertical-align: top;
@@ -206,6 +207,17 @@ h3{
 	color: #E44637;
 }
 
+#foooter{
+	position: relative;
+	height: 60vh;
+	top: -10vh;
+	z-index:-1;
+}
+
+#s5 h2{
+	position: relative;
+	top: 31vh;
+}
 
 /* Fixed header and footer.
 * --------------------------------------- */
