@@ -1824,13 +1824,45 @@ DATA 1
     position: absolute;
     width: 30%;
     height: 25%;
-    left: 10%;
-    top: 20%;
+    left: 18%;
+    top: 30%;
     font-size: 1vw;
     color: #002266;
 }
 
 #emploi>b
+{
+    font-size: 1.25vw;
+}
+
+#propre
+{
+    position: absolute;
+    width: 40%;
+    height: 25%;
+    left: 41%;
+    top: 30%;
+    font-size: 1vw;
+    color: #002266;
+}
+
+#propre>b
+{
+    font-size: 1.25vw;
+}
+
+#eco
+{
+    position: absolute;
+    width: 30%;
+    height: 25%;
+    left: 65%;
+    top: 30%;
+    font-size: 1vw;
+    color: #002266;
+}
+
+#eco>b
 {
     font-size: 1.25vw;
 }
