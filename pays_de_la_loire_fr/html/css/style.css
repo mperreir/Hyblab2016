@@ -1816,3 +1816,21 @@ DATA 1
 {
 	width: 100%;
 }
+
+/*bénéfices*/
+
+#emploi
+{
+    position: absolute;
+    width: 30%;
+    height: 25%;
+    left: 10%;
+    top: 20%;
+    font-size: 1vw;
+    color: #002266;
+}
+
+#emploi>b
+{
+    font-size: 1.25vw;
+}
