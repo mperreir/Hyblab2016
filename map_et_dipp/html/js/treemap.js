@@ -2,9 +2,11 @@
 
 var margin = {top: 30, right: 0, bottom: 20, left: 0},
     //width = 960,
-    width = (window.screen.availWidth * 57.6/100),
+    //width = (window.screen.availWidth * 50/100),
+    width = 300,
+    height = 200,
     //height = 500 - margin.top - margin.bottom,
-    height = (window.screen.availHeight * 40/100) - margin.top - margin.bottom,
+    //height = (window.screen.availHeight * 40/100) - margin.top - margin.bottom,
     transitioning;
 
 // sets x and y scale to determine size of visible boxes
@@ -28,7 +30,9 @@ var treemap = d3.layout.treemap()
     .ratio(height / width * 0.5 * (1 + Math.sqrt(5)))
     .round(false);
 
-var svg = d3.select('#treemap').append('svg')
+var svgtm = d3.select('#treemap').append('svg')
+    .attr('viewbox', '0, 0, ' + (width + margin.left + margin.right) + ', ' + (height + margin.bottom + margin.top))
+    .attr('preserveAspectRatio', 'xMinYMin')
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.bottom + margin.top)
     .style('margin-left', -margin.left + 'px')
@@ -39,7 +43,7 @@ var svg = d3.select('#treemap').append('svg')
 
 
 // Ajout d'une balise 'grandparent' permettant au clic de dézoomer le treemap.
-var grandparent = svg.append('g')
+var grandparent = svgtm.append('g')
     .attr('class', 'grandparent');
 
 grandparent.append('rect')
@@ -118,7 +122,7 @@ d3.json('json/treemap.json', function(root) {
       .select('rect')
         .attr('fill', '#585858');
 
-    var g1 = svg.insert('g', '.grandparent') // Insère une balise 'g' de classe 'depth' avant la balise 'grandparent'.
+    var g1 = svgtm.insert('g', '.grandparent') // Insère une balise 'g' de classe 'depth' avant la balise 'grandparent'.
          .datum(d)
         .attr('class', 'depth');
 
@@ -209,10 +213,10 @@ d3.json('json/treemap.json', function(root) {
       y.domain([d.y, d.y + d.dy]);
 
       // Enable anti-aliasing during the transition.
-      svg.style('shape-rendering', null);
+      svgtm.style('shape-rendering', null);
 
       // Draw child nodes on top of parent nodes.
-      svg.selectAll('.depth').sort(function(a, b) { return a.depth - b.depth; });
+      svgtm.selectAll('.depth').sort(function(a, b) { return a.depth - b.depth; });
 
       // Fade-in entering text.
       g2.selectAll('text').style('fill-opacity', 0);
@@ -225,7 +229,7 @@ d3.json('json/treemap.json', function(root) {
 
       // Remove the old node when the transition is finished.
       t1.remove().each('end', function() {
-        svg.style('shape-rendering', 'crispEdges');
+        svgtm.style('shape-rendering', 'crispEdges');
         transitioning = false;
       });
     }
