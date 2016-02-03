@@ -182,6 +182,13 @@ nav ul li:not(:first-child)
     color: #78dc82;
     font: 50px museoBold;
     margin-bottom: 9%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#slide8 p {
+    vertical-align: middle;
+    text-align: center;
 }
 
 #slide8 {
@@ -189,6 +196,8 @@ nav ul li:not(:first-child)
                 url(./img/plantesbas.png) bottom center no-repeat,
                 url(./img/plantesgauche.png) left center no-repeat,
                 url(./img/plantedroite.png) right center no-repeat;
+
+    height: 100vh;
 
 }
 
