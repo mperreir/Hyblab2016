@@ -92,7 +92,7 @@ function loopMonth(){
 					.classed(utils.pollution_classes.join(' '),false)
 					.classed(getPollutionCategory(d.NO2),true)
 			});
-		current_month = (current_month + 1) % months.length ;
+		current_month = (current_month + 1) % months_demo.length ;
 		setTimeout(loopMonth,2000);
 	});
 }

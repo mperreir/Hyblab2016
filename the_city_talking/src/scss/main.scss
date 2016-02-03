@@ -1,8 +1,9 @@
 
 /* svg */
 
-#buttons_dataviz2 div{
-	
+#buttons_dataviz2 > div{
+	margin-top:2px;
+	margin-bottom:2px;
 }
 
 .dataviz2_button{
@@ -15,7 +16,7 @@
 	border-bottom: $border ;
 	border-right: $border ;
 	border-left:none;
-
+	cursor:pointer;
 
 	&:first-of-type{
 		border-top-left-radius:$radius;
