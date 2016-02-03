@@ -10,10 +10,16 @@
     <!-- Déclaration de la feuille de style du document-->
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" href="script/chartist/dist/chartist.min.css"/>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleChartDefilement.css">
+    <link rel="stylesheet" href="css/nuage.css">
+
     <link rel="stylesheet" href="css/styleChartDefilement.css"/>
     <link rel="stylesheet" href="script/chartist/dist/chartist.min.css"/>
 
     <link rel="stylesheet" href="css/style.css"/>
+
 
 
     <!-- Déclaration des scripts js et librairies -->
@@ -37,17 +43,57 @@
       <!-- Le contenu du site -->
       <div id="fullpage">
 
-
-
+      <!--First page-->
 
         <div class="section" id="s1">
-          <img class="svg" src="images/accueil.svg" alt="En voiture Simone !"/>
+
+        <!-- The clouds and the background svg-->
+        
+          <div style="position: relative;"> 
+              <!--First cloud-->               
+              <div id="nuage1">              
+                <img src="images/nuage_1.svg" alt="nuage"/>
+              </div>
+
+              <!--Second cloud-->
+              <div id="nuage2">
+                <img src="images/nuage_2.svg" alt="nuage"/>
+              </div>
+
+              <!--third cloud-->
+              <div id="nuage3">
+                <img src="images/nuage_3.svg" alt="nuage"/>
+              </div>
+
+              <!--4th cloud-->
+              <!--div style="position: absolute;left:-150px;top:-450px;z-index:80">
+                <img src="images/nuage_4.svg" alt="nuage4"/>
+              <--/div>
+
+              <!--5th cloud-->
+              <!--div style="position: absolute;left:200px;top:-100px;z-index:80">
+                <img src="images/nuage_5.svg" alt="nuage5"/>
+              <--/div>
+
+            <!--back ground svg-->
+            <img class="svg" src="images/accueil.svg" alt="En voiture Simone !"/>
+          </div> 
+        
           <h2>LES FRANÇAIS ET L’AUTOMOBILE : QUELLES HABITUDES DE CONSOMMATION ?</h2>
+        
+          
           <a href="#2"><img  id="scroll" src="images/scroll_bas.svg" alt="Slide suivante"/></a>
+
+          <div class="arrow bounce"></div>
+          <div></div>
+
         </div>
 
 
 
+
+
+        <!--second page-->
 
         <div class="section" id="s2">
           <h1>COMBIEN DE VOITURES DANS TON GARAGE ?</h1>
@@ -63,10 +109,7 @@
 
           <div class="info">
             <p>
-              Notre texte explicatif pour l'année 1990.<br/>
-              En 1990, on a plein de voitures !!!
-              Souvent 2 voitures ou plus même !
-              INCROYABLE !
+              En 1990, 76,8% des ménages sont équipés d’au moins une voiture. La tendance est aux ménages mono-motorisés (50,5%), tandis les ménages bi-motorisés ou plus sont minoritaires (26,3%). La part des ménages non-motorisés s’élève à 23,2%.
             </p>
           </div>
         </div>
@@ -117,6 +160,10 @@
         <div class="section" id="s5">
           <h1>5th Slide ! Conclusion / Sponsors Hyblab</h1>
 
+          <a href="http://www.ouest-france.fr/" title="Ouest France">
+                <img class="logo" src="logos/ouest_france.svg" alt="Ouest France" />
+          </a>
+
           <div id="logo">
             <div>
               <a href="http://www.agrnantes.fr" title="A.G.R.">
@@ -130,6 +177,11 @@
               <a href="http://www.sciencescom.org" title="Science Com">
                 <img class="logo" src="logos/SciencesCom.png" alt="Science Com" />
               </a>
+
+              <a href="https://www.uclan.ac.uk" title="UCLAN">
+                <img class="logo" src="logos/uclan.png" alt="UCLAN" />
+              </a>
+
 
               <a href="http://www.univ-nantes.fr" title="Université de Nantes">
                 <img class="logo" src="logos/univ-nantes.png" alt="Université de Nantes" />

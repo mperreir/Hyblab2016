@@ -2,9 +2,15 @@
 <!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="1280px" height="800px" viewBox="0 0 1280 800" enable-background="new 0 0 1280 800" xml:space="preserve" preserveAspectRatio="none">
-<ellipse fill="#E8A484" cx="626.68" cy="544.186" rx="228.793" ry="85.247"/>
+
+	 width="1280px" height="650px" viewBox="0 0 1280 650" enable-background="new 0 0 1280 800" xml:space="preserve">
 <g>
+	 <!--animateMotion path="M0 0 C5 3, 10 3, 15 0      " begin="0s" dur="5s" repeatCount="indefinite"/-->
+
+<ellipse fill="#E8A484" cx="626.68" cy="544.186" rx="228.793" ry="85.247"/>
+
+<g>
+
 	<path fill="#BDD57D" d="M680.547,449.388c-17.275-1.553-35.312-2.377-53.867-2.377c-126.359,0-228.793,38.167-228.793,85.247
 		c0,7.481,2.59,14.737,7.448,21.651l329.341-96.82C717.789,453.713,699.635,451.104,680.547,449.388z"/>
 	<path fill="#BDD57D" d="M834.737,496.749L485.56,599.362c38.875,11.366,87.873,18.143,141.12,18.143
@@ -210,4 +216,5 @@
 <path fill="#467FC0" d="M413.634,251.88l13.306-3.997l5.152,3.778c0,0,8.105,6.869,1.648,11.539
 	C433.74,263.2,425.947,266.936,413.634,251.88z"/>
 <polygon fill="#467FC0" points="442.612,231.283 452.778,228.123 462.649,220.749 452.483,223.909 "/>
+</g>
 </svg>

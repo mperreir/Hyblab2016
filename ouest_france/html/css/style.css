@@ -54,14 +54,15 @@ h2{
 }
 
 .logo{
-	height: 10vh;
+	height: 8vh;
 	padding-right: 10px;
 }
 
 .small_logo{
-	height: 3vh;
+	height: 2vh;
 	padding-right: 10px;
 }
+
 
 #logo{
 	position: absolute;
@@ -94,10 +95,11 @@ h2{
 	width: 20vw;
 	height: 16vh;
 	overflow: auto;
-	font-size: 10pt;
+	font-size: 1.4vmin;
 	border-radius: 10px;
-	box-shadow: 5px 7px 0px rgba(233, 164, 129, 0.7);
+	//box-shadow: 5px 7px 0px rgba(233, 164, 129, 0.7);
 	text-align: justify;
+	color: #70C2B8;
 }
 
 .donut{

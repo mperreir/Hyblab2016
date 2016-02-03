@@ -10,5 +10,3 @@ $(document).ready(function() {
 	requestGenerateChartDefilement("parc");
 	requestGenerateChartDefilement("carburant");
 });
-
-/********* TEST ***********/
