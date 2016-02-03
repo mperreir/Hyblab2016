@@ -1,15 +1,15 @@
 #nuage1{
 	position: absolute;
-	left:20vw;
-	top:-10vh;
+	left:13vw;
+	top:-20vh;
 	z-index:80; 
 	
 }
 
 #nuage2{
 	position: absolute;
-	left:2vw;
-	top:10vh;
+	left:3vw;
+	top:0vh;
 	z-index:80; 
 }
 
