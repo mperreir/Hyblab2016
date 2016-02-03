@@ -10,6 +10,16 @@
 
 @import url(http://fonts.googleapis.com/css?family=Aldrich);
 
+html{
+	-moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+    font-family: "Avenir",Arial,sans-serif;
+}
+
 #container{
 	font-family: "Avenir",Arial,sans-serif;
 	text-align: center;
@@ -20,7 +30,7 @@ a:link{text-decoration:none}
 
 h1{
 	color: #C2DEBC;
-	font-size: 42px;
+	font-size: 4vmin;
 }
 
 h2{
@@ -28,15 +38,14 @@ h2{
 }
 
 #scroll{
-	position: relative;
-	bottom: 16vh;
-	height: 40vh;
+	height: 10vh;
 }
 
 .svg{
-	width: 80%;
-	height: 80%;
+	width: 60vw;
+	height: 75vh
 }
+
 
 .isles{
 	position:relative;
@@ -50,13 +59,15 @@ h2{
 
 .small_logo{
 	height: 3vh;
-	padding: 10px;
+	padding-right: 10px;
 }
 
 #logo{
 	position: absolute;
 	bottom: 12vh;
-	width: 100%;
+	width: 99%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .lets_text{
@@ -71,6 +82,7 @@ h2{
 #s1 {
     background-color: #D3E6FF;
 }
+<<<<<<< HEAD
 #s2 {
 	background-color: #D3E6FF;
 }
@@ -83,37 +95,51 @@ h2{
 #s5 {
     
 }
+=======
 
-.section{
-	position: relative;
+>>>>>>> 28108af012771a8d42ec0c81f18ff084f65b79c1
+
+.info{
+	background-color: rgba(254, 231, 201, 0.5);
+	position: absolute;
+	top: 15vh;
+	right: 7vw;
+	padding: 10px;
+	width: 20vw;
+	height: 16vh;
+	overflow: auto;
+	font-size: 10pt;
+	border-radius: 10px;
+	box-shadow: 5px 7px 0px rgba(233, 164, 129, 0.7);
+	text-align: justify;
 }
-
-
-/**** Implémentation tests dans site ****/
 
 .donut{
 	position: absolute;
-	z-index: 23;
-	height: 15vh;
-	background-color: rgba(255,255,255,0.9);
-	border-radius: 5px;
-	padding: 3px;
-	display: inline-block;
-	width: 15vh;
+	width: 11vh;
+	height: 11vh;
 }
 
-#monomotor{
-	top: -65vh;
-	left: -33vw;
+#mono{
+	z-index: 20;
+	top : 15vh;
+	left: 45vw;
 }
 
-#nomotor{
-	top: -42vh;
-	left: -66vw;
+#none{
+	z-index: 21;
+	top: 34vh;
+	left: 33vw;
+}
+
+#biPlus{
+	z-index: 22;
+	top: 39vh;
+	left: 53vw;
 }
 
 .ct-chart-donut .ct-series-a .ct-slice-donut {
-	stroke: #C2DEBC;
+	stroke: #C96178;
 }
 /*make b hidden*/
 .ct-chart-donut .ct-series-b .ct-slice-donut {
@@ -128,8 +154,8 @@ h2{
 
 h3{
 	font-family: "Avenir";
-	font-size: 20pt;
-	color: #70C2B8;
+	font-size: 2.5vmin;
+	color: #C96178;
 }
 
 

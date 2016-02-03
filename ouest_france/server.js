@@ -10,7 +10,6 @@ var donnees;
 fs.readFile('./ouest_france/data/data.json', 'utf-8', function(err, data){
 	if(err) throw err;
 	else donnees = JSON.parse(data);
-	console.log("Données chargées");
 });
 
 // Minimum routing: serve static content from the html directory
