@@ -605,6 +605,33 @@ Elements de la question 4
 	bottom: 70%;
 }
 
+#perso1_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 2.5%;
+	left: 94%;
+	bottom: 42%;
+}
+
+#perso2_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 1.5%;
+	left: 83%;
+	bottom: 48%;
+}
+
+#perso3_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 0.8%;
+	left: 92.2%;
+	bottom: 66%;
+}
+
 /*
 DATA 1
 */
@@ -629,7 +656,7 @@ DATA 1
 	width: 30%;
 	height: 25%;
 	left: 10%;
-	top: 20%;
+	top: 15%;
 	font-size: 1vw;
 	color: #002266;
 }
@@ -644,7 +671,7 @@ DATA 1
 	position: absolute;
 	width: 30%;
 	padding: 2%;
-	top: 44%;
+	top: 40%;
 	left: 9.6%;
 	text-align: center;
 }
@@ -1411,10 +1438,14 @@ DATA 1
 
 /* Dataviz 2 */
 
-/*.arc-text
+#titre_data2
 {
-    transform: rotate(180deg);
-}*/
+    position: absolute;
+    width: 35%;
+    left: 10%;
+    top: 2%;
+    text-align: left;
+}
 
 #data2_pale
 {
@@ -1438,7 +1469,7 @@ DATA 1
     position: absolute;
     width: 10%;
     top: 2%;
-    left: 45%;
+    left: 44%;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
@@ -1469,7 +1500,7 @@ DATA 1
     width: 30%;
     height: 25%;
     padding: 2%;
-    top: 45%;
+    top: 25%;
     left: 9.6%;
     text-align: center;
 }
@@ -1491,7 +1522,7 @@ DATA 1
     width: 30%;
     height: 25%;
     padding: 2%;
-    top: 45%;
+    top: 25%;
     left: 9.6%;
     text-align: center;
 }
@@ -1513,7 +1544,7 @@ DATA 1
     width: 30%;
     height: 25%;
     padding: 2%;
-    top: 37%;
+    top: 25%;
     left: 9.6%;
     text-align: center;
 }
@@ -1987,3 +2018,10 @@ DATA 1
 	padding: 2% 0 2% 0;
 }
 
+#logo_univ_nantes
+{
+    position: absolute;
+    width: 8%;
+    top: 85%;
+    left: 45.5%;
+}
