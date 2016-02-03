@@ -9,8 +9,6 @@ $(document).ready(function() {
 	requestGenerateChartDefilement("menage");
 	requestGenerateChartDefilement("parc");
 	requestGenerateChartDefilement("carburant");
-<<<<<<< Updated upstream
-=======
 
 	var test = {
 	  labels: ['Essence', 'GNV', 'Électricité', 'Diesel'],
@@ -19,5 +17,4 @@ $(document).ready(function() {
 	  ]]
 };
 	generateBarChart(test);
->>>>>>> Stashed changes
 });

@@ -17,11 +17,11 @@ html{
     -o-user-select: none;
     user-select: none;
     cursor: default;
-    font-family: "Aldrich",Arial,sans-serif;
+    font-family: "Avenir",Arial,sans-serif;
 }
 
 #container{
-	font-family: "Aldrich",Arial,sans-serif;
+	font-family: "Avenir",Arial,sans-serif;
 	text-align: center;
 	background-color: #FFF;
 }
@@ -31,7 +31,6 @@ a:link{text-decoration:none}
 h1{
 	color: #C2DEBC;
 	font-size: 4vmin;
-	font-weight: 900;
 }
 
 h2{
@@ -163,6 +162,7 @@ h2{
 	top : 15vh;
 	left: 45vw;
 }
+
 #none{
 	z-index: 21;
 	top: 34vh;
@@ -176,7 +176,7 @@ h2{
 }
 
 .ct-chart-donut .ct-series-a .ct-slice-donut {
-	stroke: #E44637;
+	stroke: #C96178;
 }
 /*make b hidden*/
 .ct-chart-donut .ct-series-b .ct-slice-donut {
@@ -192,7 +192,7 @@ h2{
 h3{
 	font-family: "Avenir";
 	font-size: 2.5vmin;
-	color: #E44637;
+	color: #C96178;
 }
 
 
