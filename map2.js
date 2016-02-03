@@ -619,7 +619,7 @@ function draw(config, data) {
 
 
     /*-------------------------------------------*/
-    var data = [{"name":"0-15", "value":0.38}, {"name":"16-25", "value":0.1}, {"name":"26-35", "value":0.16}, 
+    var data = [{"name":"0-15", "value":0.1}, {"name":"16-25", "value":0.1}, {"name":"26-35", "value":0.16}, 
     {"name":"36-55", "value":0.26}, {"name":"56-90", "value":0.09}];
 
     // console.log(window.data);
