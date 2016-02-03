@@ -95,6 +95,39 @@ function requestData(callback, type){
 			}
 		});
 }
+
+function requestChartCarburant(year){
+	if(!data.carburant){
+		requestData(function(){
+			generateBarChart(data.carburant.data[year]);
+		}, "carburant");
+	}else{
+		generateBarChart(data.carburant.data[year]);
+	}
+}
+
+function generateBarChart(serie){
+	var donnees ={
+		labels : ["Diesel", "Essence", "Bicarburant", "Electrique", "Hybride", "Gaz", "Superéthanol"],
+		series :[[serie.diesel.pourcentage,serie.essence.pourcentage,serie.bicarburant.pourcentage,serie.electricite.pourcentage, serie.hybride.pourcentage, serie.gaz.pourcentage, serie.superethanol.pourcentage]]
+	};
+	new Chartist.Bar('#barchart',
+	donnees,
+	{
+		axisX:{
+			showGrid: false,
+			showLabel: false
+		},
+		axisY:{
+			showLabel: true,
+			showGrid: false,
+			offset:100
+		},
+		horizontalBars: true,
+		
+	});
+}
+
 function requestGenerateParcDonutCars(type, year){
 	if(!data[type]){
 		requestData(function(){
@@ -118,8 +151,6 @@ function requestGenerateInfo(type, year, slideId){
 
 function generateInfo(text, slideId){
 	$('#'+slideId+" .info p").html(text);
-	console.log(slideId);
-	console.log(text);
 }
 
 function requestGenerateMenageDonut(type, year){
@@ -336,6 +367,7 @@ function setLabelAnimation(param, categorie){
 				break;
 			case "carburant":
 				requestGenerateInfo(categorie, annee, "s4");
+				requestChartCarburant(annee);
 				break;
 		}
 	});
@@ -393,6 +425,7 @@ function relaunchAnimation(index, nextIndex, direction){
 		case 4:
 			requestGenerateChartDefilement("carburant");
 			requestGenerateInfo("carburant", "1990", "s4");
+			requestChartCarburant("2009");
 			break;
 	}
 	switch(index){
