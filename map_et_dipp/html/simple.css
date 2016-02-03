@@ -246,13 +246,17 @@ nav ul li:not(:first-child)
     font: 20px / 30px museoReg;
 }
 
-.vert {
+
+
+#slide3 .flecheBas p {
+    margin-bottom: 10px;
     font-family: museoBold;
+    font-size: 25px;
     color: #78dc82;
 }
 
 #slide3 .flecheBas {
-    margin-top: -50px;
+    margin-top: -80px;
 }
 
 
