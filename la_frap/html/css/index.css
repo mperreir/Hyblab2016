@@ -266,6 +266,10 @@ div#pieChart{
 	margin-left: 80px;
 }
 
+#legendSvg {
+	transform: translateX(300px) translateY(260px);
+}
+
 g.provenance text{
 	fill:#3bbd31;
 }
