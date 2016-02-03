@@ -175,12 +175,20 @@ nav .boutonMenu
     display: inline-block;
 }
 
-#slide3 .centrer {
-    
+#slide3 .conteneur {
+    height: 90%;
 }
 
+#slide3 .bloc {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+    height: 300px;
+}
 
-
+#slide3 .bloc h2 {
+    margin-bottom: 20%;
+}
 
 /* slide 4 : Joseph */
 
