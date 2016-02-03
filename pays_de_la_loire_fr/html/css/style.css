@@ -2007,6 +2007,23 @@ DATA 1
     font-size: 1.25vw;
 }
 
+#benefice_pale1
+{
+    position: absolute;
+    width: 7%;
+    top : 77%;
+    left: 86.7%;
+}
+
+#benefice_pale2
+{
+    position: absolute;
+    width: 5%;
+    top : 81%;
+    left: 81.8%;
+}
+
+
 .animConcl
 {
 	animation: fadeInDown 2s linear forwards;
