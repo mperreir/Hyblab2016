@@ -1326,6 +1326,7 @@ DATA 1
 
 .chiffre_important
 {
+	font-weight: bold;
 	font-size: 1.5vw;
 	color: #e4685d;
 }

@@ -48,27 +48,74 @@ function animIntro() {
 	$(tracteur)
 		.transition({
 					left: '-15%',
-					delay: 1100 }, 10000, 'linear');
+					delay: 1100 }, 30000, 'linear');
 
 	$(bateau)
 		.transition({
 					left: '110%',
-					delay: 1100 }, 10000, 'linear');
+					delay: 1100 }, 30000, 'linear');
 
 	$(pale1)
 		.transition({
-					rotate: '360deg',
-					delay: 1100 }, 20000, 'linear');
+					rotate: '1440deg',
+					delay: 1100 }, 40000, 'linear');
 
 	$(pale2)
 		.transition({
-					rotate: '360deg',
-					delay: 920 }, 14300, 'linear');
+					rotate: '1440deg',
+					delay: 920 }, 28300, 'linear');
 
 	$(pale3)
 		.transition({
-					rotate: '360deg',
-					delay: 1280 }, 10000, 'linear');
+					rotate: '1440deg',
+					delay: 1280 }, 34500, 'linear');
+}
+
+function resetIntro () {
+	var nuage1 = document.getElementById("nuage1");
+	var nuage2 = document.getElementById("nuage2");
+	var nuage3 = document.getElementById("nuage3");
+	var tracteur = document.getElementById("tracteur_intro");
+	var bateau = document.getElementById("bateau_intro");
+	var panneau1 = document.getElementById("panneau_intro_1");
+	var panneau2 = document.getElementById("panneau_intro_2");
+	var panneau3 = document.getElementById("panneau_intro_3");
+	var pale1 = document.getElementById("pale_intro_1");
+	var pale2 = document.getElementById("pale_intro_2");
+	var pale3 = document.getElementById("pale_intro_3");
+
+	$(nuage1)
+		.transition({
+					opacity: 0,
+					left: '0%' });
+	$(nuage2)
+		.transition({
+					opacity: 1,
+					left: '60%' });
+	$(nuage3)
+		.transition({
+					opacity: 1,
+					left: '80%' });
+
+	$(tracteur)
+		.transition({
+					left: '32.5%' });
+
+	$(bateau)
+		.transition({
+					left: '80%' });
+
+	$(pale1)
+		.transition({
+					rotate: '0deg' });
+
+	$(pale2)
+		.transition({
+					rotate: '0deg' });
+
+	$(pale3)
+		.transition({
+					rotate: '0deg' });
 }
 
 function startQ () {

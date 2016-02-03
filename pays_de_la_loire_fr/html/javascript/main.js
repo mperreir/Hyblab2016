@@ -23,6 +23,7 @@ function updateCurrentSection(){
 	switch(currentSection) {
 
 		case "firstPage" :
+			animIntro();
 		break;
 
 		case "secondPage" :
