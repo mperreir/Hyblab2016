@@ -152,6 +152,34 @@ nav .boutonMenu
 
 
 
+/* slide 3 : pré joseph */
+#slide3 {
+    text-align: center;
+    background-color: #e7ffe0;
+}
+
+#slide3 h2 {
+    color: #78dc82;
+}
+    
+#slide3 h3 {
+    padding: 5px;
+    margin-top: 1%;
+    /* style du texte */
+    color: #78dc82;
+    font: 18px museoReg;
+    /* contour */
+    border: 2px solid #78dc82;
+    border-radius: 5px;
+    /* pour que la largeur du titre soit égale à la taille du texte, et non à la taille de la page */
+    display: inline-block;
+}
+
+#slide3 .centrer {
+    
+}
+
+
 
 
 /* slide 4 : Joseph */
