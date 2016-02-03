@@ -13,12 +13,28 @@ span.ct-label{
 	font-size : 2vmin;
 	display : block;
 	max-width: 2em;
-}
-
-.section{
-	max-height: 100vh;
+	cursor:  pointer;
 }
 
 #chartMotorisation .ct-line, #chartParc .ct-line, #chartCarburant .ct-line{
 	stroke-width: 1px;
+}
+
+.car{
+
+	height: 2.2vh;
+	width: 2.2vw;
+	position: absolute;
+}
+
+#neuf{
+	z-index: 40;
+	top: 20vh;
+	left: 30vw;
+}
+
+#occasion{
+	z-index: 40;
+	top: 50vh;
+	left: 72vw;
 }

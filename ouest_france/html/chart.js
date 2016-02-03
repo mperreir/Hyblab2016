@@ -17,7 +17,82 @@ var dataCars = {
 	neuf : null
 };
 
-function requestGenerateCars(type, year){
+var carPos = {
+	neuf : {
+		deltaNextPos : {
+			top : 0.63,
+			left : 1.05
+		},
+		col : [
+			{
+				origine : {
+					top : 36.1,
+					left : 32
+				},
+				nbPlace : 11
+			},
+			{
+				origine : {
+					top : 34,
+					left : 38
+				},
+				nbPlace : 8
+			},
+			{
+				origine : {
+					top : 32.5,
+					left : 40
+				},
+				nbPlace : 8
+			},
+			{
+				origine : {
+					top : 29.6,
+					left : 43.4
+				},
+				nbPlace : 9
+			}
+		]
+	},
+	occasion : {
+		deltaNextPos : {
+			top : 0.63,
+			left : 1.05
+		},
+		col : [
+			{
+				origine : {
+					top : 46.1,
+					left : 42
+				},
+				nbPlace : 11
+			},
+			{
+				origine : {
+					top : 44,
+					left : 48
+				},
+				nbPlace : 8
+			},
+			{
+				origine : {
+					top : 42.5,
+					left : 50
+				},
+				nbPlace : 8
+			},
+			{
+				origine : {
+					top : 39.6,
+					left : 53.4
+				},
+				nbPlace : 9
+			}
+		]
+	}
+}
+
+function requestGenerateParcDonutCars(type, year){
 	if(!dataCars[type]){
 		var requete = $.ajax({
 			url : "data/parc/"+type,
@@ -25,17 +100,18 @@ function requestGenerateCars(type, year){
 			dataType : "text",
 			success : function(res, statut){
 				dataCars[type] = JSON.parse(res).data[type];
-				generateCars(dataCars[type][year].pourcentage, type);
-				console.log(dataCars[type]);
+				generateParcDonutCars(dataCars[type][year].pourcentage, type);
 			},
 			error : function(res, statut, error){
 				alert(res+" ; "+statut+" ; "+error);
 			}
 		});
-	}else generateCars(dataCars[type][year].pourcentage, type);
+	}else{
+		generateParcDonutCars(dataCars[type][year].pourcentage, type);
+	}
 }
 
-function requestGenerateChartDonut(type, year){
+function requestGenerateMenageDonut(type, year){
 	if(!dataDonuts[type]){
 		var requete = $.ajax({
 			url : "data/menage/"+type,
@@ -43,13 +119,13 @@ function requestGenerateChartDonut(type, year){
 			dataType : "text",
 			success : function(res, statut){
 				dataDonuts[type] = JSON.parse(res).data[type];
-				generateMenageDonut(dataDonuts[type][year].pourcentage, type);
+				generateDonut(dataDonuts[type][year].pourcentage, type);
 			},
 			error : function(res, statut, error){
 				alert(res+" ; "+statut+" ; "+error);
 			}
 		});
-	}else generateMenageDonut(dataDonuts[type][year].pourcentage, type);
+	}else generateDonut(dataDonuts[type][year].pourcentage, type);
 }
 
 
@@ -229,8 +305,8 @@ function setLabelAnimation(param, categorie){
 
 		//Décalage à gauche au fur et à mesure du grossissement du label
 		$(this).parent().stop().animate({ 
-		x : labelParentOriginPos.x-15+"px",
-		y : labelParentOriginPos.y-10+"px"
+		x : labelParentOriginPos.x-10+"px",
+		y : labelParentOriginPos.y-5+"px"
 		}, 300 );
 	});
 	label.mouseleave(function(node){
@@ -258,13 +334,13 @@ function setLabelAnimation(param, categorie){
 		
 		switch(categorie){
 			case "menage":
-				requestGenerateChartDonut("mono", annee);
-				requestGenerateChartDonut("biPlus", annee);
-				requestGenerateChartDonut("none", annee);
-				console.log(categorie);
+				requestGenerateMenageDonut("mono", annee);
+				requestGenerateMenageDonut("biPlus", annee);
+				requestGenerateMenageDonut("none", annee);
 				break;
 			case "parc":
-				console.log(categorie);
+				requestGenerateParcDonutCars("neuf", annee);
+				requestGenerateParcDonutCars("occasion", annee);
 				break;
 			case "carburant":
 				console.log(categorie);
@@ -309,20 +385,27 @@ function relaunchAnimation(index, nextIndex, direction){
 	switch(nextIndex){
 		case 2:
 			requestGenerateChartDefilement("menage");
-			requestGenerateChartDonut("mono", "1990");
-			requestGenerateChartDonut("biPlus", "1990");
-			requestGenerateChartDonut("none", "1990");
+			requestGenerateMenageDonut("mono", "1990");
+			requestGenerateMenageDonut("biPlus", "1990");
+			requestGenerateMenageDonut("none", "1990");
 			break;
 		case 3:
 			requestGenerateChartDefilement("parc");
+			requestGenerateParcDonutCars("neuf", "1990");
+			requestGenerateParcDonutCars("occasion", "1990");
 			break;
 		case 4:
 			requestGenerateChartDefilement("carburant");
 			break;
 	}
+	switch(index){
+		case 3:
+			removeAllCars();
+			break;
+	}
 }
 
-function generateMenageDonut(donnee,id){
+function generateDonut(donnee,id){
 
 
 	var label = '<h3>'+donnee+'%</h3>';
@@ -361,15 +444,12 @@ function fillOptionsDonut(label){
 	return retour;
 }
 function setSliceAnimation(data){
-	// Get the total path length in order to use for dash array animation
 	var pathLength = data.element._node.getTotalLength();
 
-	// Set a dasharray that matches the path length as prerequisite to animate dashoffset
 	data.element.attr({
 	  'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
 	});
 
-	// Create animation definition while also assigning an ID to the animation for later sync usage
 	var animationDefinition = {
 		'stroke-dashoffset': {
 		id: 'anim' + data.index,
@@ -377,28 +457,86 @@ function setSliceAnimation(data){
 		from: -pathLength + 'px',
 		to:  '0px',
 		easing: Chartist.Svg.Easing.easeOutQuint,
-
-		// We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
 		fill: 'freeze'
 		}
 	};
 
-
-	// We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
 	data.element.attr({
 		'stroke-dashoffset': -pathLength + 'px'
 	});
 
-	// We can't use guided mode as the animations need to rely on setting begin manually
-	// See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
 	data.element.animate(animationDefinition, false);
 }
 
-function generateCars(donnee, type){
-	var cars = $('.cars[id='+type+'] .car');
-	cars.css('background-color', 'black');
-	var nbCar = Math.round(donnee/2);
-	console.log(type+" : "+donnee+"% -> "+nbCar+" voitures");
+function generateParcDonutCars(donnee, type){
 
-	cars
+	carDestroyAnimation(type);
+	var newNbCar = Math.round(donnee/2);
+
+	var places = getRandomPlace(type, newNbCar);
+
+	for(var i=0; i<places.length; i++){
+		var place = places[i.toString()];
+		$('.cars[id='+type+']').append('<div class="car" id="'+place.colonne+place.place+'"><img src="images/voitures.svg" alt="voiture"/></div>');
+		var car = $('#'+place.colonne+place.place);
+		var hauteurApparition =((Math.random() * 10)+5);
+		car.css('top', (place.top-hauteurApparition).toString()+"vh").css('left',(place.left).toString()+"vw");
+		car.css("z-index",30+place.place).css("opacity", 0);
+		carSpawnAnimation(car,place);
+		car.removeAttr("id");
+	};
+	generateDonut(donnee, type);
+}
+function getRandomPlace(type, nb){
+	var nbMaxPlaces = 0;
+	var nbCol = carPos[type].col.length;
+	var retour = [];
+
+	for(var i=0; i<nbCol; i++){
+		nbMaxPlaces += carPos[type].col[i].nbPlace;
+	};
+
+	var allPlaces = [];
+	for(var i=0; i<nbCol; i++){
+		for(var j=0; j<carPos[type].col[i].nbPlace; j++){
+			allPlaces.push({
+				colonne : i,
+				place : j
+			});
+		}
+	}
+
+	if(nbMaxPlaces > nb){
+		for(var i=0; i<nb; i++){
+			var randPlaceIndex = Math.round((Math.random() * (allPlaces.length-1)));
+			var place = allPlaces.splice(randPlaceIndex,1)[0];
+			place.top = carPos[type].col[place.colonne].origine.top + (carPos[type].deltaNextPos.top * place.place);
+			place.left = carPos[type].col[place.colonne].origine.left + (carPos[type].deltaNextPos.left * place.place);
+			retour.push(place);
+		}
+	}
+	return retour;
+}
+
+function makeCarsDisappear(carNode){
+	carNode.animate({
+		opacity: 0,
+	}, 1000);
+}
+
+function removeAllCars(){
+	$('.cars .car').remove();
+}
+
+function carDestroyAnimation(type){
+	var carsToDestroy = $('.cars[id='+type+'] .car').stop().animate({
+		opacity : 0
+	}, 1000);
+}
+
+function carSpawnAnimation(car,place){
+	car.stop().animate({
+		opacity : 1,
+		top : (place.top).toString()+"vh"
+	},1500);
 }
