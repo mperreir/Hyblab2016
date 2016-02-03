@@ -21,6 +21,27 @@ iframe {
 .leaflet-popup-pane {
     pointer-events: none;
 }
+
+/* ------------- First Page ----------- */
+
+#first_page {
+    background-color: #B7FDFE;
+}
+
+#first_page .fp-tableCell {
+    vertical-align: bottom;
+}
+
+#first_page h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#first_page p {
+    text-align: justify;
+    padding: 0px 10%;
+}
+
 /*===========Overlay==============*/
 #overlay {
     z-index: 2;
@@ -195,31 +216,6 @@ iframe {
 
 }
 
-#charts {
-    height: 400px;
-}
-
-.chart {
-    width: 49%;
-    height: 100%;
-    display: inline-block;
-}
-
-.chart div {
-    background-color: blue;
-    height: 10%;
-    margin-bottom: 4%;
-    transition: width 0.5s;
-}
-
-#chart_left div {
-    margin-left: auto;
-    margin-right: 0;
-}
-
-#chart_right div {
-}
-
 /* ---------population chart------------- */
 #pop_chart {
     padding: 6px 8px;
@@ -247,4 +243,98 @@ iframe {
   fill: none;
   stroke: #d6e9c6;
   /*shape-rendering: crispEdges;*/
+}
+
+/* ------------ Rope chart ------------- */
+
+#rope {
+    background-color: #00CCFF;
+    color: white;
+}
+
+#rope_left, #rope_right {
+    display: inline-block;
+    width: 48%;
+    height: 100%;
+    vertical-align: top;
+}
+
+#rope_left {
+    width: 40%;
+}
+
+#rope_text img {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+#rope_text h1 {
+    text-align: center;
+}
+
+#rope_text p {
+    text-align: justify;
+    padding: 0 5%;
+    margin: auto;
+}
+
+#rope_right {
+    width: 59%;
+}
+
+
+#charts {
+    height: 400px;
+}
+
+.chart {
+    width: 49%;
+    height: 100%;
+    display: inline-block;
+}
+
+.chart div {
+    background-color: white;
+    height: 5%;
+    margin-bottom: 9%;
+    transition: width 0.5s;
+}
+
+#chart_left div {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#chart_right div {
+}
+
+.vertical_line {
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+}
+
+#chart_imgs {
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+}
+
+#chart_imgs img {
+    display: inline-block;
+    height: 50px;
+    margin-bottom: 3%;
+    transform: 
+}
+
+
+/* -------- last page --------- */
+
+#credits div {
+    display: inline-block;
+    width: 9%;
+    text-align: center;
+    margin: 0 auto;
 }
