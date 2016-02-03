@@ -1492,6 +1492,30 @@ DATA 1
 	left: 38%;
 }
 
+#bouton_eolien_data2
+{
+    position: absolute;
+    width: 5%
+    top: 50%;
+    left: 70%;
+}
+
+#bouton_solaire_data2
+{
+    position: absolute;
+    width: 5%
+    top: 10%;
+    left: 60%;
+}
+
+#bouton_biomasse_data2
+{
+    position: absolute;
+    width: 5%
+    top: 10%;
+    left: 60%;
+}
+
 /*Dataviz3*/
 
 #bloc_data3
