@@ -328,10 +328,10 @@ function fields() {
     
     
     return [
-            {index: .5, text: "", value: 0, previousValue: 0, opacity: 1, year: "2014", val0: "1067", val1: "364", val2: "199", val0max: "1064", val1max: "364", val2max:  "199",col0: color("hsl(214,16%,80%)"), col1: color("hsl(6,78.8%,87.1%)"), col2: color("hsl(73,57.9%,81.4%)")},
-            {index: .4, text: "", value: 0, previousValue: 0, opacity: 1, year: "2013", val0: "981", val1: "299", val2: "182", val0max: "1064", val1max: "364", val2max:  "199", col0: color("hsl(214,16%,63.1%)"), col1: color("hsl(6,78.9%,81.4%)"), col2: color("hsl(76,53.3%,76.5%)")},
-            {index: .3, text: "", value: 0, previousValue: 0, opacity: 1, year: "2012", val0: "884", val1: "266", val2: "114", val0max: "1064", val1max: "364", val2max:  "199", col0: color("hsl(214,16.6%,48.4%)"), col1: color("hsl(6,73.4%,75.3%)"), col2: color("hsl(76,53.9%,70.2%)")},
-            {index: .2, text: "", value: 0, previousValue: 0, opacity: 1, year: "2011", val0: "704", val1: "179", val2: "67", val0max: "1064", val1max: "364", val2max:  "199", col0: color("hsl(213,32.5%,32.5%)"), col1: color("hsl(6,78.5%,70.8%)"), col2: color("hsl(76,53.5%,63.7%)")},
-            {index: .1, text: "", value: 0, previousValue: 0, opacity: 1, year: "2010", val0: "611", val1: "61", val2: "50", val0max: "1064", val1max: "364", val2max:  "199", col0: color("hsl(214,56.4%,21.6%)"), col1: color("hsl(6,78.3%,63.9%)"), col2: color("hsl(76,53.9%,57.5%)")}
+            {index: .5, text: "", value: 0, previousValue: 0, opacity: 1, year: "2014", val0: "1067", val1: "364", val2: "199", val0max: "1064", val1max: "364", val2max:  "199",col1: color("hsl(214,16%,80%)"), col0: color("hsl(6,78.8%,87.1%)"), col2: color("hsl(73,57.9%,81.4%)")},
+            {index: .4, text: "", value: 0, previousValue: 0, opacity: 1, year: "2013", val0: "981", val1: "299", val2: "182", val0max: "1064", val1max: "364", val2max:  "199", col1: color("hsl(214,16%,63.1%)"), col0: color("hsl(6,78.9%,81.4%)"), col2: color("hsl(76,53.3%,76.5%)")},
+            {index: .3, text: "", value: 0, previousValue: 0, opacity: 1, year: "2012", val0: "884", val1: "266", val2: "114", val0max: "1064", val1max: "364", val2max:  "199", col1: color("hsl(214,16.6%,48.4%)"), col0: color("hsl(6,73.4%,75.3%)"), col2: color("hsl(76,53.9%,70.2%)")},
+            {index: .2, text: "", value: 0, previousValue: 0, opacity: 1, year: "2011", val0: "704", val1: "179", val2: "67", val0max: "1064", val1max: "364", val2max:  "199", col1: color("hsl(213,32.5%,32.5%)"), col0: color("hsl(6,78.5%,70.8%)"), col2: color("hsl(76,53.5%,63.7%)")},
+            {index: .1, text: "", value: 0, previousValue: 0, opacity: 1, year: "2010", val0: "611", val1: "61", val2: "50", val0max: "1064", val1max: "364", val2max:  "199", col1: color("hsl(214,56.4%,21.6%)"), col0: color("hsl(6,78.3%,63.9%)"), col2: color("hsl(76,53.9%,57.5%)")}
             ];
 }
