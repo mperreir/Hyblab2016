@@ -225,6 +225,11 @@ function chooseAnswer (prop_id) {
 
 function answerQuestions(prop_id) {
 
+	// Stop les animations de la question 3
+	stopAnimTracteurQ3();
+	stopAnimPanneauQ3();
+	stopAnimPaleQ3();
+
 	// Récupère l'id de l'élément <ul> contenant les propositions
 	var idQ = document.getElementById(prop_id).parentElement.id;
 
@@ -603,30 +608,8 @@ function animQ3 (element) {
 					rotate: '1480deg',
 					delay: 1154 }, 12540, 'linear');
 
-			var panneau1 = document.getElementById("panneau_1_q3");
-			var panneau2 = document.getElementById("panneau_2_q3");
-			var panneau3 = document.getElementById("panneau_3_q3");
-
-			$(panneau1).stop(true, true);
-			$(panneau2).stop(true, true);
-			$(panneau3).stop(true, true);
-
-			$(panneau1).transition({
-				scale: 1
-			});
-			$(panneau2).transition({
-				scale: 1
-			});
-			$(panneau3).transition({
-				scale: 1
-			});
-
-			var tracteur = document.getElementById("tracteur_q3");
-
-			$(tracteur).stop(true, true);
-			$(tracteur).transition({
-				left: '56.5%'
-			});
+			stopAnimPanneauQ3();
+			stopAnimTracteurQ3();
 			break;
 
 		case 2:
@@ -659,30 +642,8 @@ function animQ3 (element) {
 				});
 			}
 
-			var pale1 = document.getElementById("pale_1_q3");
-			var pale2 = document.getElementById("pale_2_q3");
-			var pale3 = document.getElementById("pale_3_q3");
-
-			$(pale1).stop(true, true);
-			$(pale2).stop(true, true);
-			$(pale3).stop(true, true);
-
-			$(pale1).transition({
-				rotate: '0deg'
-			});
-			$(pale2).transition({
-				rotate: '0deg'
-			});
-			$(pale3).transition({
-				rotate: '0deg'
-			});
-
-			var tracteur = document.getElementById("tracteur_q3");
-
-			$(tracteur).stop(true, true);
-			$(tracteur).transition({
-				left: '56.5%'
-			});
+			stopAnimTracteurQ3();
+			stopAnimPaleQ3();			
 			break;
 
 		case 3:
@@ -692,43 +653,59 @@ function animQ3 (element) {
 				left: '47.5%'
 			}, 10000, 'linear');
 
-			var panneau1 = document.getElementById("panneau_1_q3");
-			var panneau2 = document.getElementById("panneau_2_q3");
-			var panneau3 = document.getElementById("panneau_3_q3");
-
-			$(panneau1).stop(true, true);
-			$(panneau2).stop(true, true);
-			$(panneau3).stop(true, true);
-
-			$(panneau1).transition({
-				scale: 1
-			});
-			$(panneau2).transition({
-				scale: 1
-			});
-			$(panneau3).transition({
-				scale: 1
-			});
-
-			var pale1 = document.getElementById("pale_1_q3");
-			var pale2 = document.getElementById("pale_2_q3");
-			var pale3 = document.getElementById("pale_3_q3");
-
-			$(pale1).stop(true, true);
-			$(pale2).stop(true, true);
-			$(pale3).stop(true, true);
-
-			$(pale1).transition({
-				rotate: '0deg'
-			});
-			$(pale2).transition({
-				rotate: '0deg'
-			});
-			$(pale3).transition({
-				rotate: '0deg'
-			});
+			stopAnimPanneauQ3();
+			stopAnimPaleQ3();
 			break;
 	}
+}
+
+function stopAnimPaleQ3 () {
+	var pale1 = document.getElementById("pale_1_q3");
+	var pale2 = document.getElementById("pale_2_q3");
+	var pale3 = document.getElementById("pale_3_q3");
+
+	$(pale1).stop(true, true);
+	$(pale2).stop(true, true);
+	$(pale3).stop(true, true);
+
+	$(pale1).transition({
+		rotate: '0deg'
+	});
+	$(pale2).transition({
+		rotate: '0deg'
+	});
+	$(pale3).transition({
+		rotate: '0deg'
+	});
+}
+
+function stopAnimTracteurQ3 () {
+	var tracteur = document.getElementById("tracteur_q3");
+
+	$(tracteur).stop(true, true);
+	$(tracteur).transition({
+		left: '56.5%'
+	});
+}
+
+function stopAnimPanneauQ3 () {
+	var panneau1 = document.getElementById("panneau_1_q3");
+	var panneau2 = document.getElementById("panneau_2_q3");
+	var panneau3 = document.getElementById("panneau_3_q3");
+
+	$(panneau1).stop(true, true);
+	$(panneau2).stop(true, true);
+	$(panneau3).stop(true, true);
+
+	$(panneau1).transition({
+		scale: 1
+	});
+	$(panneau2).transition({
+		scale: 1
+	});
+	$(panneau3).transition({
+		scale: 1
+	});
 }
 
 function displayHouses (nombre) {
