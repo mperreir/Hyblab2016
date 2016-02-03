@@ -34,6 +34,18 @@
 .chart{
 	background-color: #EEE;
 }
+
+.d3-tip {
+	line-height: 1;
+	font-weight: bold;
+	padding: 12px;
+	margin-top: -12px;
+	background: rgba(255, 255, 255, 0.8);
+	color: #000;
+	border-radius: 2px;
+	pointer-events: none;
+}
+
 /* end svg */
 
 #html{
@@ -147,10 +159,10 @@
 	display:inline-block;
 }
 #div_dv1{
-	
+
 }
 #dv1{
-	
+
 }
 #subdiv3A{
 	vertical-align:top;
