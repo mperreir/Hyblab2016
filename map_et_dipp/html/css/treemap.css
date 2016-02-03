@@ -10,6 +10,9 @@
 	margin-left: auto;
 	margin-right: auto;
 	width: 80%;
+	height: 95%;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 #slide5 #badge {
@@ -91,11 +94,27 @@
 #interview_text {
 	width : 320px;
 	line-height: 20px;
+	margin-right: 10px;
 }
 
-#interview_res {
-	width : 40%;
+#interview_media {
+	width : 256px;
 	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#interview_media img {
+	display: block;
+	width: 36px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+}
+
+#interview_sep {
+	border-right: 1px solid white;
 }
 
 
@@ -115,4 +134,8 @@
 
 #treemap .children:hover rect.parent {
   opacity: 0;
+}
+
+#treemap text {
+	font-family: museoReg;
 }
