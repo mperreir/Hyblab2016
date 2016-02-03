@@ -161,6 +161,7 @@ nav ul li:not(:first-child)
     text-align: center;
     background-color: #e7ffe0;
 }
+
 #slide9
 {
     text-align: center;
@@ -179,6 +180,23 @@ nav ul li:not(:first-child)
     color: #78dc82;
     font: 50px museoBold;
     margin-bottom: 9%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#slide8 p {
+    vertical-align: middle;
+    text-align: center;
+}
+
+#slide8 {
+    background: url(./img/planteshaut.png) top center no-repeat,
+                url(./img/plantesbas.png) bottom center no-repeat,
+                url(./img/plantesgauche.png) left center no-repeat,
+                url(./img/plantedroite.png) right center no-repeat;
+
+    height: 100vh;
+
 }
 
 #slide3 h2{
@@ -227,6 +245,13 @@ nav ul li:not(:first-child)
     color: #4c4c4c;
     font: 20px / 30px museoReg;
 }
+
+.vert {
+    font-family: museoBold;
+    color: #78dc82;
+}
+
+
 
 /* slide 4 : Joseph */
 
@@ -431,6 +456,23 @@ nav ul li:not(:first-child)
                 url(./img/illu_ville_droite.png) bottom right no-repeat;
 }
 
+#slide10 .bandeauBas {
+    background: url(./img/plantes_gauche.png) bottom left no-repeat,
+                url(./img/plantes_droite.png) bottom right no-repeat;
+    /height: 15%;
+    background-color: white;
+    
+    width: 100%;
+	position: absolute;
+	top: 100%;
+	margin-top: -109px;
+}
+
+#slide10 .flecheBas {
+    width: 100px;
+    margin-left: 45%;
+} 
+
 #slide10 section {
     height: auto;
     margin-top: 15px;
@@ -462,10 +504,6 @@ nav ul li:not(:first-child)
     font: 17px / 19px museoReg;
     margin-left: 2%;
     margin-right: 2%;
-}
-
-#slide10 .bandeauBas {
-    
 }
 
 
