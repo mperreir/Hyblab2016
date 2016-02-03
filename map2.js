@@ -979,7 +979,7 @@ function draw(config, data) {
 
     /*
     the chart of the population
-    */
+
     var popChart = L.control({
         position: 'bottomleft'
     });
@@ -1089,6 +1089,7 @@ function draw(config, data) {
 
 
     }
+
 
     // Temporary fix, used util IMD calculation error is fixed
     topoMsoaLayer.eachLayer(function(layer) {

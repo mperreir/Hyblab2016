@@ -1,3 +1,21 @@
+@font-face {
+    font-family: title;
+    src: url(fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: text;
+    src: url(fonts/OpenSans-Semibold.ttf);
+}
+
+* {
+    font-family: text;
+}
+
+h1 {
+    font-family: title;
+}
+
 body {
     margin: 0;
 }
@@ -6,12 +24,22 @@ body {
     height: 100vh;
 }
 
+<<<<<<< HEAD
 #map2 {
     background-color: #00BFFF;
+=======
+#map {
+    background-color: #8DD8F8;
+>>>>>>> 2330e9bec88bbc5a8b7ca02571219950afdf14c1
 }
 
 #rope {
     position: relative;
+}
+
+#last_page {
+    background-color: #0077A3;
+    color: white;
 }
 
 iframe {
@@ -25,6 +53,28 @@ iframe {
 .leaflet-popup-pane {
     pointer-events: none;
 }
+
+/* ------------- First Page ----------- */
+
+#first_page .fp-tableCell {
+    vertical-align: bottom;
+    background-image: url("image/Preston-01.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#first_page h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 80;
+}
+
+#first_page p {
+    text-align: justify;
+    padding: 0px 10%;
+    margin-bottom: 5%;
+}
+
 /*===========Overlay==============*/
 #overlay {
     z-index: 2;
@@ -199,31 +249,6 @@ iframe {
 
 }
 
-#charts {
-    height: 400px;
-}
-
-.chart {
-    width: 49%;
-    height: 100%;
-    display: inline-block;
-}
-
-.chart div {
-    background-color: blue;
-    height: 10%;
-    margin-bottom: 4%;
-    transition: width 0.5s;
-}
-
-#chart_left div {
-    margin-left: auto;
-    margin-right: 0;
-}
-
-#chart_right div {
-}
-
 /* ---------population chart------------- */
 #pop_chart {
     padding: 6px 8px;
@@ -251,4 +276,98 @@ iframe {
   fill: none;
   stroke: #d6e9c6;
   /*shape-rendering: crispEdges;*/
+}
+
+/* ------------ Rope chart ------------- */
+
+#rope {
+    background-color: #57C2F3;
+    color: white;
+}
+
+#rope_left, #rope_right {
+    display: inline-block;
+    width: 48%;
+    height: 100%;
+    vertical-align: top;
+}
+
+#rope_left {
+    width: 40%;
+}
+
+#rope_text img {
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+#rope_text h1 {
+    text-align: center;
+}
+
+#rope_text p {
+    text-align: justify;
+    padding: 0 5%;
+    margin: auto;
+}
+
+#rope_right {
+    width: 59%;
+}
+
+
+#charts {
+    height: 400px;
+}
+
+.chart {
+    width: 49%;
+    height: 100%;
+    display: inline-block;
+}
+
+.chart div {
+    background-color: white;
+    height: 5%;
+    margin-bottom: 9%;
+    transition: width 0.5s;
+}
+
+#chart_left div {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#chart_right div {
+}
+
+.vertical_line {
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+}
+
+#chart_imgs {
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+}
+
+#chart_imgs img {
+    display: inline-block;
+    height: 50px;
+    margin-bottom: 3%;
+    transform: 
+}
+
+
+/* -------- last page --------- */
+
+#credits div {
+    display: inline-block;
+    width: 9%;
+    text-align: center;
+    margin: 0 auto;
 }

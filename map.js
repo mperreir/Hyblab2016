@@ -430,22 +430,23 @@
         onEachFeature: MsoaOnEachFeature
     });
 
+    /*
     var osm = new L.TileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
             minZoom: 11,
             maxZoom: 18,
             attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
         }
-    );
+    );*/
 
     var map = L.map('map', {
         center: [53.85, -2.7],
         zoom: 11,
-        layers: [osm, topoMsoaLayer], // Only Add default layers here
+        layers: [topoMsoaLayer], // Only Add default layers here
         minZoom: 11,
         maxZoom: 16,
         maxBounds: topoMsoaLayer.getBounds(),
-        zoomControl: false
+        zoomControl: true
     });
 
     map.on('zoomend', function(e) {
@@ -489,8 +490,8 @@
         var info = L.control();
         this._div.innerHTML =
             '<h4>Index of Multiple Deprivation Score</h4>' +
-            '<h4 id="idm"></h4> <br/>' +
-            '<h5>How much does each of the following matters to you ?</h5>' +
+            '<h4 id="idm"></h4> <br/>';
+            ''/* +
             '<div class="sliderset">' +
             '   <div class="row"></div><label>Income</label><i class="information" id="icon_income"></i><input id="income" type="range" min="0" max="1000" value="225" class="slider red"/><br/>' +
             '   <div class="row"></div><label>Employment</label><i class="information" id="icon_employment"></i><input id="employment" type="range" min="0" max="1000" value="225" class="slider orange"/><br/>' +
@@ -499,7 +500,7 @@
             '   <div class="row"></div><label>Crime</label><i class="information" id="icon_crime"></i><input id="crime" type="range" min="0" max="1000" value="93" class="slider blue"/><br/>' +
             '   <div class="row"></div><label>Housing</label><i class="information" id="icon_housing"></i><input id="housing" type="range" min="0" max="1000" value="93" class="slider indigo"/><br/>' +
             '   <div class="row"></div><label>Environment</label><i class="information" id="icon_environment"></i><input id="environment" type="range" min="0" max="1000" value="93" class="slider purple"/><br/>' +
-            '</div>';
+            '</div>';*/
         this._div.addEventListener('mousemove', function(e) {
             e.stopPropagation();
         });
