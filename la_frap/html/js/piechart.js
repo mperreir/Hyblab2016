@@ -125,7 +125,7 @@ window.addEventListener('load',function () {
 				var is = d3.select("#infoselected");
 
 				if(!info.expanded) {
-<<<<<<< HEAD
+					pieData = d3.select('#idPieData');
 					pieData.text((100*info.data.value/pie.totalSize).toFixed(0) +'%');
 					is.text(info.data.value + "€")
 						.attr("fill", "white")
@@ -133,22 +133,11 @@ window.addEventListener('load',function () {
 						.attr("font-weight","bold")
 						.attr("y","72%");
 					pieExplains.html(info.data.text);
-=======
-					console.log("couou");
-					pieData = d3.select('#idPieData');
-					pieData.text((100*info.data.value/globalpie.totalSize).toFixed(0) +'%');
->>>>>>> 82640ff13d91b13431be19fa8bfe7abd9fe3dbdd
 				} else {
 					pieData.text("");
 					is.text("");
 					pieExplains.html("");
 				}
-				/*if (!info.expanded) {
-					$("#pieSection").css("visibility", "visible")
-					$("#pieSection").html(info.data.value);
-				} else {
-					$("#pieSection").css("visibility", "hidden");
-				}*/
 			}
 		}
 	});

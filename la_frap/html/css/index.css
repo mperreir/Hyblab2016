@@ -293,7 +293,7 @@ div#pieChart svg{
 
 #pieInfo {
 	padding: 10px; 
-}
+} 
 
 #legendSvg {
 	transform: translateX(300px) translateY(280px);
