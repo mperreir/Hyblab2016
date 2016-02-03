@@ -1,9 +1,9 @@
 "use strict";
 
 
-var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoLegumes.png"},
+var produits = [ {"produit":"Légumes","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoLégumes.png"},
   {"produit":"Fruits", "distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoFruits.png"},
-  {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoBouteille.png"},
+  {"produit": "Produits Laitiers","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoProduits Laitiers.png"},
   {"produit": "Viande","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoViande.png"},
   {"produit": "Miel","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoMiel.png"},
   {"produit": "Autres","distanceMoyenne":9999, "distMin":9999, "distMax":0,"img":"pictoAutres.png"}];
@@ -435,6 +435,7 @@ svg.selectAll("image")
 	.attr("distMoy",function(d){return d.distanceMoyenne.toFixed(2);})
 	.attr("distMax",function(d){return d.distMax.toFixed(2);})
 	.on("mouseover", function(d){
+		d3.select(this).attr("xlink:href", "./img/picto"+d3.select(this).attr("categorie")+"O.png");
 		svgAside.selectAll("text.nomCategorie").text(d3.select(this).attr("categorie"));
 	
 		svgAside.selectAll("text.nomCategorie").attr("x",widthAside/4-(4*(d3.select(this).attr("categorie").length)));
@@ -450,6 +451,7 @@ svg.selectAll("image")
 		//return tooltip.style("left",d3.event.pageX+"px").style("top",d3.event.pageY-50+"px");
 	})
 	.on("mouseout",function(d){
+		d3.select(this).attr("xlink:href", "./img/picto"+d3.select(this).attr("categorie")+".png");
 		svg.selectAll("line.ligneMin[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke",couleurLigneMin);
 		svg.selectAll("line.ligneMoy[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke",couleurLigneMoy);
 		svg.selectAll("line.ligneMax[categorie='"+d3.select(this).attr("categorie")+"']").attr("stroke",couleurLigneMax);
