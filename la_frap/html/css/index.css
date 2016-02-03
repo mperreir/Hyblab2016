@@ -113,18 +113,22 @@ p{
 }
 
 .section{
-	background-color: #031d2a;
-
+	background-image:url("../img/Background-FRAP2.png");
+	background-repeat:no-repeat;
+	background-position: center center;	
+	background-size: cover;
 }
 
 /* Section 0
  * --------------------------------------- */
 #section0{
-
+	background-image:url("../img/Background-FRAP.png");
 }
 
 #section0 h1{
-
+	font-size: 3em;
+	color: white;
+	font-weight: bold;
 }
 
 #section0 p{
@@ -157,19 +161,27 @@ p{
 	font-weight: bold;	
 	display:inline-block;
 	position:absolute;
+
 }
 
 #infodpt h1{
-	background-color:#003f4e;
+	background-color:#053843;
 	font-size: 20px;
 	color: white;
 	margin-bottom: 10px;
 	width: 190px;
+	padding:10px;
+	transform: translateY(30px) translateX(-30px);
+}
+
+#chiffre_cle{
+	transform: translateY(-50px) translateX(200px);
 }
 
 .radios{
 	display: block;
 	height: 30px;
+	margin-top: 45px;
 }
 
 .salarie{
@@ -189,7 +201,7 @@ p{
 
 .chiffre{
 	color: white;
-	font-style: bold;
+	font-weight: 900;
 	font-size: 22px;
 	width:80px;
 	text-align: right;
@@ -198,6 +210,15 @@ p{
 	float:right;
 }
 
+#pieChart h1{
+	padding:10px;
+	background-color:#053843;
+	font-size: 20px;
+	color: white;
+	margin-bottom: 10px;
+	width: 280px;
+	transform:translateY(130px) translateX(-30px);
+}
 .legende{
 	display: inline;
 	position: absolute;
@@ -259,6 +280,10 @@ div#pieChart{
 	display: inline-block;
 }
 
+div#pieChart svg{
+	transform:translateY(-5%);
+}
+
 #financement{
 	clear: left;
 	position: absolute;
@@ -314,31 +339,42 @@ svg {
 	margin-left: 15px;
 }
 
+
+
 .texteintro{
-	padding: 5px;
+	padding: 25px;
 	display: inline-block;
-	text-align: justify;
+	text-align: left;
 	position: absolute;
 	width:70%;
-	background-color: #003f4e;
-	font-size: 18px;
-	right:10%;
-	margin-top: 70px;
+	background-color: rgba(0,0,0,0.3);
+	right:20%;
+	margin-top: 25px;
+	line-height: 25px;
 }
 
 .texteintro p{
 	padding: 10px;
+	font-size: 14px;
 }
 
+.heading p{
+	padding-bottom: 100px;
+}
 
 .bouton{
 	color: #179FAE;
 	background-color: #031d2a;
   	border-color: #179FAE;  
+  	padding-top : 4px;
+  	padding-bottom : 4px;
+  	padding-left : 35px;
+  	padding-right : 35px;
+
 }
 
 #boutonevo{
-  	margin-left: 43%;	
+  	margin-left: 40%;	
 }
 
 .bouton:hover{
@@ -362,11 +398,12 @@ svg {
 .content2 .rightPart{
 	width:40%;
 	height:100%;
-	background-color: #005a6e;
+	background-color:rgba(0,0,0,0.3);
 	margin-right: 5%;
 	margin-bottom: 5%;
-	margin-top: 5%;
+	margin-top: 2%;
 	margin-left: 50px;
+
 }
 
 .choixevolution{
