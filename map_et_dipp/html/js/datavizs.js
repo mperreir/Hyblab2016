@@ -126,6 +126,7 @@ var couleurLigneMoy = "#80cbc4";
 var couleurLigneMax = "#adf0c3"
 
 var svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("height",height).attr("viewbox","0, 0, 650, 600").attr("preserveAspectRatio", "xMinYMin");
+d3.www = svg;
 var svgAside = d3.select("#legendeAraignee").append("svg").attr("width",widthAside).attr("height",heightAside).attr("id","svgAside");
 
 //DESSIN du cercle représentant nantes

@@ -108,7 +108,9 @@
             </div>
         </div>
         
-        <div class="flecheBas"><img src="./img/fleche_bas_de_page_verte.png" onclick="$.fn.fullpage.moveSectionDown();" /></div>
+        <div class="flecheBas">
+            <img src="./img/fleche_bas_de_page_verte.png" onclick="$.fn.fullpage.moveSectionDown();" />
+        </div>
     </div>
     
     
@@ -152,7 +154,13 @@
         <div id="totalJoseph"></div>
         <p id="uniteTotalJoseph">total en kg</p>
         
-        <div class="flecheBas"><img src="./img/fleche_bas_de_page_orange.png" onclick="$.fn.fullpage.moveSectionDown();" /></div>
+        <div class="imageSaisonBas">
+            <img id="imageSaison" src="./img/joseph/background_automne.png" />
+        </div>
+        
+        <div class="flecheBas">
+            <img src="./img/fleche_bas_de_page_orange.png" onclick="$.fn.fullpage.moveSectionDown();" />
+        </div>
     </div>
 	
     
@@ -197,7 +205,9 @@
         </div>
         
         <div class="bandeauBas"></div>
-        <div class="flecheBas"><img src="./img/fleche_bas_de_page_noire.png" onclick="$.fn.fullpage.moveSectionDown();" /></div>
+        <div class="flecheBas">    
+            <img src="./img/fleche_bas_de_page_noire.png" onclick="$.fn.fullpage.moveSectionDown();" />
+        </div>
 	</div>
     
     
@@ -354,8 +364,7 @@ consommateurs d’un territoire sont mis en relation directement.<br/><br/>
     }
     function effetWahoo()
 	{
-		console.log(svg.transition);
-		svg.transition().attr("transform","scale(0.1) translate("+width*3.5+","+height*8+")").ease("linear").duration(1000);
+		d3.www.transition().attr("transform","scale(0.1) translate("+width*11+","+height*12+")").ease("linear").duration(1000);
 	}
     </script>
     
