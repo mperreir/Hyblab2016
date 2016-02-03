@@ -277,7 +277,7 @@ function dataToAdd(donnees, index){
 	var retour = null;
 	switch(donnees.categorie){
 		case "menage":
-			retour = donnees.data[donnees.years[index]].detention.val;
+			retour = donnees.data[donnees.years[index]].biPlus.pourcentage + donnees.data[donnees.years[index]].mono.pourcentage;
 			break;
 
 		case "carburant":
@@ -367,7 +367,8 @@ function setLabelAnimation(param, categorie){
 				requestGenerateMenageDonut("biPlus", annee);
 				requestGenerateMenageDonut("none", annee);
 				requestGenerateInfo(categorie, annee, "s2");
-				$("#phraseMenage p").html("En "+annee+", les ménages français gardaient leur voiture en moyenne durant "+data.menage.data[annee].detention.val+" années");
+				var pourcentage = Math.round(data.menage.data[annee].biPlus.pourcentage + data.menage.data[annee].mono.pourcentage);
+				$("#phraseMenage p").html("En "+annee+", il y avait "+pourcentage+"% de ménages motorisés.");				
 				break;
 			case "parc":
 				requestGenerateParcDonutCars("neuf", annee);
@@ -424,7 +425,8 @@ function relaunchAnimation(index, nextIndex, direction){
 			requestGenerateMenageDonut("biPlus", "1990");
 			requestGenerateMenageDonut("none", "1990");
 			requestGenerateInfo("menage", "1990", "s2");
-			$("#phraseMenage p").html("En "+"1990"+", les ménages français gardaient leur voiture en moyenne durant "+data.menage.data["1990"].detention.val+" années");
+			var pourcentage = data.menage.data["1990"].biPlus.pourcentage + data.menage.data["1990"].mono.pourcentage;
+			$("#phraseMenage p").html("En "+"1990"+", il y avait "+pourcentage+"% de ménages motorisés.");
 			break;
 		case 3:
 			requestGenerateChartDefilement("parc");
