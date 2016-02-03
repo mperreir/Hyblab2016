@@ -471,21 +471,12 @@ function goTo2008 () {
 		num_rand = Math.random();
 
 		// Application d'une animation
-		if(i > 0) {
-			$(elements[i]).transition({
-					left: '+=5%',
-					top: '+=6%',
-					opacity: 0,
-					delay: num_rand*100
-				}, 500)
-		} else {
-			$(elements[i]).transition({
-					right: '+=5%',
-					bottom: '+=6%',
-					opacity: 0,
-					delay: num_rand*100
-				}, 500)
-		}
+		$(elements[i]).transition({
+				left: '+=5%',
+				top: '+=6%',
+				opacity: 0,
+				delay: num_rand*100
+			}, 500)
 	}
 
 	var bouton_2008 = document.getElementById("bouton_2008_data1");
@@ -509,24 +500,16 @@ function goTo2014 () {
 
 	for(var i = 0; i < elements.length; i++)
 	{
+		console.debug($(elements[i]));
 		num_rand = Math.random();
 
 		// Application de l'animation inverse
-		if(i > 0) {
-			$(elements[i]).transition({
-					left: '-=5%',
-					top: '-=6%',
-					opacity: 1,
-					delay: num_rand*100
-				}, 500)
-		} else {
-			$(elements[i]).transition({
-					right: '-=5%',
-					bottom: '-=6%',
-					opacity: 1,
-					delay: num_rand*100
-				}, 500)
-		}
+		$(elements[i]).transition({
+				left: '-=5%',
+				top: '-=6%',
+				opacity: 1,
+				delay: num_rand*100
+			}, 500)
 	}
 
 	var bouton_2008 = document.getElementById("bouton_2008_data1");
