@@ -227,9 +227,12 @@ nav ul li:not(:first-child)
     font: 20px / 30px museoReg;
 }
 
-#slide3 .bandeauBas {
-    background-color: #e7ffe0;;
+.vert {
+    font-family: museoBold;
+    color: #78dc82;
 }
+
+
 
 /* slide 4 : Joseph */
 
