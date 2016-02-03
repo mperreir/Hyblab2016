@@ -88,7 +88,7 @@ function requestData(callback, type){
 			dataType : "text",
 			success : function(res, status){
 				data[type] = JSON.parse(res);
-				calback();
+				callback();
 			},
 			error : function(res, statut, error){
 				alert(res+" ; "+statut+" ; "+error);
@@ -105,13 +105,29 @@ function requestGenerateParcDonutCars(type, year){
 	}
 }
 
+function requestGenerateInfo(type, year, slideId){
+	if(!data[type]){
+		requestData(function(){
+			generateInfo(data[type].yearsComments[year], slideId);
+
+		}, type);
+	}else{
+		generateInfo(data[type].yearsComments[year], slideId);
+	}
+}
+
+function generateInfo(text, slideId){
+	$('#'+slideId+" .info p").html(text);
+	console.log(slideId);
+	console.log(text);
+}
+
 function requestGenerateMenageDonut(type, year){
 	if(!data[type]){
 		requestData(function(){
 			generateDonut(data.menage.data[year][type].pourcentage, type)
 		},type);
-	}
-	}else generateDonut(dataDonuts[type][year].pourcentage, type);
+	}else generateDonut(data.menage.data[year][type].pourcentage, type);
 }
 
 
@@ -123,14 +139,10 @@ function requestGenerateChartDefilement(type){
 	
 };
 function generateChart(res, statut){
-	var donnees;
-	if(typeof res == "string"){
-		donnees = JSON.parse(res);
-		dataCharts[donnees.categorie] = donnees;
-	}else donnees = res;
+	var donnees = res;
 
 	var valeurs = [];
-	var data = generateChartData(donnees);
+	var dataChart = generateChartData(donnees);
 	var options = fillOptions();
 	var chartId;
 	switch(donnees.categorie){
@@ -144,8 +156,8 @@ function generateChart(res, statut){
 			chartId = '#chartParc';
 			break;	
 	};
-	var chart = new Chartist.Line(chartId, data, options);
-
+	var chart = new Chartist.Line(chartId, dataChart, options);
+	
 	var seq = 0;
 	var delays = 80;
 	var durations = 500;
@@ -198,27 +210,27 @@ function fillOptions(){
 };
 
 function generateChartData(donnees){
-	var data = {
+	var dataChart = {
 			labels : [],
 			series : [[]]
 		}; 
 	for(var i=0; i<donnees.years.length; i++){
 		if(i==0){
-			if(jQuery.inArray(donnees.years[0], donnees.yearsToScreen) != -1) data.labels.push(donnees.years[0]);
-			else(data.labels.push(null));
-			data.series[0].push(dataToAdd(donnees, i));
+			if(jQuery.inArray(donnees.years[0], donnees.yearsToScreen) != -1) dataChart.labels.push(donnees.years[0]);
+			else(dataChart.labels.push(null));
+			dataChart.series[0].push(dataToAdd(donnees, i));
 		}
 		else{
 			for(var j=1; j<donnees.years[i]-donnees.years[i-1]; j++){
-				data.labels.push(null);
-				data.series[0].push(null);
+				dataChart.labels.push(null);
+				dataChart.series[0].push(null);
 			}
-			if(jQuery.inArray(donnees.years[i], donnees.yearsToScreen) != -1) data.labels.push(donnees.years[i]);
-			else(data.labels.push(null));
-			data.series[0].push(dataToAdd(donnees, i));
+			if(jQuery.inArray(donnees.years[i], donnees.yearsToScreen) != -1) dataChart.labels.push(donnees.years[i]);
+			else(dataChart.labels.push(null));
+			dataChart.series[0].push(dataToAdd(donnees, i));
 		}
 	}
-	return data;
+	return dataChart;
 };
 
 function dataToAdd(donnees, index){
@@ -226,7 +238,7 @@ function dataToAdd(donnees, index){
 	var retour = null;
 	switch(donnees.categorie){
 		case "menage":
-			retour = donnees.data[donnees.years[index]].detention.valeur;
+			retour = donnees.data[donnees.years[index]].detention.val;
 			break;
 
 		case "carburant":
@@ -268,20 +280,6 @@ function setLabelAnimation(param, categorie){
 		x : parseInt(labelParent.css("x").replace("px","")),
 		y : parseInt(labelParent.css("y").replace("px",""))
 	};
-	$chaine.attr("categorie", categorie);
-	var color;
-	switch(categorie){
-		case "menage":
-				color = "#000000";
-			break;
-		case "parc": 
-				color= "#80BC4E";
-			break;
-		case "carburant":
-				color = "#000000";
-			break;
-	}
-	label.css("color", color);
 
 	//var labelParentOriginPos = labelParent.position();
 	label.mouseenter(function(node){
@@ -324,19 +322,20 @@ function setLabelAnimation(param, categorie){
 
 	label.click(function(){
 		var annee = $(this).html();
-		
 		switch(categorie){
 			case "menage":
 				requestGenerateMenageDonut("mono", annee);
 				requestGenerateMenageDonut("biPlus", annee);
 				requestGenerateMenageDonut("none", annee);
+				requestGenerateInfo(categorie, annee, "s2");
 				break;
 			case "parc":
 				requestGenerateParcDonutCars("neuf", annee);
 				requestGenerateParcDonutCars("occasion", annee);
+				requestGenerateInfo(categorie, annee, "s3");
 				break;
 			case "carburant":
-				console.log(categorie);
+				requestGenerateInfo(categorie, annee, "s4");
 				break;
 		}
 	});
@@ -383,14 +382,17 @@ function relaunchAnimation(index, nextIndex, direction){
 			requestGenerateMenageDonut("mono", "1990");
 			requestGenerateMenageDonut("biPlus", "1990");
 			requestGenerateMenageDonut("none", "1990");
+			requestGenerateInfo("menage", "1990", "s2");
 			break;
 		case 3:
 			requestGenerateChartDefilement("parc");
 			requestGenerateParcDonutCars("neuf", "1990");
 			requestGenerateParcDonutCars("occasion", "1990");
+			requestGenerateInfo("parc", "1990", "s3");
 			break;
 		case 4:
 			requestGenerateChartDefilement("carburant");
+			requestGenerateInfo("carburant", "1990", "s4");
 			break;
 	}
 	switch(index){

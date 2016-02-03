@@ -10,11 +10,12 @@ $(document).ready(function() {
 	requestGenerateChartDefilement("parc");
 	requestGenerateChartDefilement("carburant");
 
-	var test = {
+	/*var test = {
 	  labels: ['Essence', 'GNV', 'Électricité', 'Diesel'],
 	  series: [[
 	    1,2,3,4
 	  ]]
-};
-	generateBarChart(test);
+	};
+	generateBarChart(test);*/
+
 });
