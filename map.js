@@ -442,19 +442,18 @@
         onEachFeature: MsoaOnEachFeature
     });
 
-    /*
     var osm = new L.TileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
             minZoom: 11,
             maxZoom: 18,
             attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
         }
-    );*/
+    );
 
     var map = L.map('map', {
         center: [53.85, -2.7],
         zoom: 11,
-        layers: [topoMsoaLayer], // Only Add default layers here
+        layers: [osm, topoMsoaLayer], // Only Add default layers here
         minZoom: 11,
         maxZoom: 16,
         maxBounds: topoMsoaLayer.getBounds(),
