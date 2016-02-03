@@ -661,17 +661,17 @@ function setPDLSize (grosseur) {
 		case 1:
 			$(paysdelaloire).transition({
 				scale: 1
-			})
+			},500, 'easeInOutCubic')
 			break;
 		case 2:
 			$(paysdelaloire).transition({
 				scale: 1.3
-			})
+			},500, 'easeInOutCubic')
 			break;
 		case 3:
 			$(paysdelaloire).transition({
 				scale: 1.6
-			})
+			},500, 'easeInOutCubic')
 			break;
 	}
 }
