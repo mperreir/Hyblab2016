@@ -33,32 +33,38 @@ window.addEventListener('load',function () {
 				{
 					"label": "Subventions",
 					"value": 68,
-					"color": "#ff314f"
+					"color": "#ff314f",
+					"text":"texte subventions"
 				},
 				{
 					"label": "Aides à l'emploi",
 					"value": 10,
-					"color": "#954fd1"
+					"color": "#954fd1",
+					"text":"texte aides"
 				},
 				{
 					"label": "Publicité",
 					"value": 7,
-					"color": "#004fa9"
+					"color": "#004fa9",
+					"text":"texte pub"
 				},
 				{
 					"label": "Evenements",
 					"value": 2,
-					"color": "#3bbd31"
+					"color": "#3bbd31",
+					"text":"texte event"
 				},
 				{
 					"label": "Cotisations et dons ",
 					"value": 2,
-					"color": "#00c7e5"
+					"color": "#00c7e5",
+					"text":"texte dons"
 				},
 				{
 					"label": "Autre",
 					"value": 20,
-					"color": "#ff8b1d"
+					"color": "#ff8b1d",
+					"text":"texte autre"
 				}
 			]
 		},
@@ -115,7 +121,14 @@ window.addEventListener('load',function () {
 				console.log(info);
 				console.log(info.data.value);
 				console.log(pie.total);
-				
+
+				var is = d3.select("#infoselected");
+				is.text(info.data.value + "€")
+					.attr("fill", "white")	
+					.attr("font-size","16px")
+					.attr("font-weight","bold")
+					.attr("y","72%");
+
 				if(!info.expanded) {
 					pieData.text((100*info.data.value/pie.totalSize).toFixed(0) +'%');
 				} else {
@@ -142,11 +155,12 @@ window.addEventListener('load',function () {
 					.attr("dy", "10px");
 					 
 	var pieClick = svg.append("text")
+					.attr("id","infoselected")
 					.attr("fill", "#179fae")
-					.attr("font-size", "14px")
+					.attr("font-size", "12px")
 					.attr("text-anchor", "middle")
 					.attr("x", "50%")
-					.attr("y", "75%")
+					.attr("y", "70%")
 					.text("Cliquez pour afficher les valeurs");
 
 	svg.select('.p0_pieChart').attr("transform","scale(0.8)");
