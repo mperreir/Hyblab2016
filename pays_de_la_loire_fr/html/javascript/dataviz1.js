@@ -84,17 +84,26 @@ function resetIntro () {
 	var pale2 = document.getElementById("pale_intro_2");
 	var pale3 = document.getElementById("pale_intro_3");
 
+	$(nuage1).stop(true, true);
+	$(nuage2).stop(true, true);
+	$(nuage3).stop(true, true);
+	$(tracteur).stop(true, true);
+	$(bateau).stop(true, true);
+	$(pale1).stop(true, true);
+	$(pale2).stop(true, true);
+	$(pale3).stop(true, true);
+
 	$(nuage1)
 		.transition({
 					opacity: 0,
 					left: '0%' });
 	$(nuage2)
 		.transition({
-					opacity: 1,
+					opacity: 0,
 					left: '60%' });
 	$(nuage3)
 		.transition({
-					opacity: 1,
+					opacity: 0,
 					left: '80%' });
 
 	$(tracteur)
@@ -726,7 +735,7 @@ function animQ3 (element) {
 			var tracteur = document.getElementById("tracteur_q3");
 
 			$(tracteur).transition({
-				left: '47.5%'
+				left: '61%'
 			}, 10000, 'linear');
 
 			stopAnimPanneauQ3();
@@ -760,7 +769,7 @@ function stopAnimTracteurQ3 () {
 
 	$(tracteur).stop(true, true);
 	$(tracteur).transition({
-		left: '56.5%'
+		left: '65%'
 	});
 }
 

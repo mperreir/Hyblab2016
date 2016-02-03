@@ -1,4 +1,11 @@
 /* just a sample css rule to show that everything works */
+
+
+body
+{
+	font-family: 'Ubuntu'!important;
+}
+
 footer p
 {
   font-size: small;
@@ -32,7 +39,7 @@ li
 
 span>ul>li
 {
-	border: solid 1px blue;
+	border: solid 1px #245186;
 	background-color: #E1F1F3;
 	border-radius: 1vw;
 	color: black;
@@ -107,7 +114,7 @@ span>ul>li>p
 	bottom: 75.6%;
 	left: 32%;
 	font-size: 2vw;
-	color: #ffbf00;
+	color: #ADCC58;
 	font-weight: bold;
 }
 
@@ -645,7 +652,7 @@ DATA 1
 .petit_mot
 {
 	font-size: 1.25vw;
-	color: #da3325;
+	color: #e4685d;
 }
 
 #saviez_vous>p
@@ -690,6 +697,63 @@ DATA 1
 	cursor: pointer;
 	transform: scale(0.7);
 	opacity: 0.8;
+}
+
+#legende_eolienne_data1
+{
+	position: absolute;
+	width: 6%;
+	left: 45%;
+	bottom: 5%;
+}
+
+#legende_eolienne
+{
+	position: absolute;
+	width: 20%;
+	left: 50%;
+	bottom: 6%;
+	font-size: 1vw;
+	color: #002266;
+	font-weight: bold;
+}
+
+#legende_panneau_data1
+{
+	position: absolute;
+	width: 6%;
+	left: 63%;
+	bottom: 5%;
+}
+
+#legende_panneau
+{
+	position: absolute;
+	width: 20%;
+	left: 69%;
+	bottom: 6%;
+	font-size: 1vw;
+	color: #002266;
+	font-weight: bold;
+}
+
+#legende_tracteur_data1
+{
+	position: absolute;
+	width: 6%;
+	left: 81%;
+	bottom: 5%;
+}
+
+#legende_tracteur
+{
+	position: absolute;
+	width: 20%;
+	left: 88%;
+	bottom: 6%;
+	font-size: 1vw;
+	color: #002266;
+	font-weight: bold;
 }
 
 #tracteur1_data1
