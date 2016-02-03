@@ -66,23 +66,22 @@ var line = d3.svg.line()
 	.x(function(d) { return scale_x(d.Hour); })
 	.y(function(d) { return scale_y(d.NO2); });
 
-chart.append("linearGradient")                
-        .attr("id", "line-gradient-d3")            
-        .attr("gradientUnits", "userSpaceOnUse")    
-        .attr("x1", 0).attr("y1", 0)         
-        .attr("x2", 0).attr("y2", height)      
-    .selectAll("stop")                      
-        .data([                             
-            {offset: "0%", color: "rgb(249,98,90)"},       
-            {offset: "30%", color: "rgb(249,98,90)"},  
-            {offset: "30%", color: "rgb(255,167,136)"},        
-            {offset: "60%", color: "rgb(255,167,136)"},        
-            {offset: "60%", color: "rgb(28,247,168)"},    
-            {offset: "100%", color: "rgb(28,247,168)"}    
-        ])                  
-    .enter().append("stop")         
-        .attr("offset", function(d) { return d.offset; })   
-        .attr("stop-color", function(d) { return d.color; }); 
+chart.select("#line-gradient-d3")                          
+        .attr("gradientUnits", "userSpaceOnUse")
+        .attr("x1", 0).attr("y1", 0)
+        .attr("x2", 0).attr("y2", height)
+    .selectAll("stop")
+        .data([
+            {offset: "0%", color: "rgb(249,98,90)"},
+            {offset: "30%", color: "rgb(249,98,90)"},
+            {offset: "30%", color: "rgb(255,167,136)"},
+            {offset: "60%", color: "rgb(255,167,136)"},
+            {offset: "60%", color: "rgb(28,247,168)"},
+            {offset: "100%", color: "rgb(28,247,168)"}
+        ])
+    .enter().append("stop")
+        .attr("offset", function(d) { return d.offset; })
+        .attr("stop-color", function(d) { return d.color; });
 /*
 chart.selectAll('.bg_square').data(utils.pollution_values.filter((d) => (d != utils.max_NO2)))
 	.enter()

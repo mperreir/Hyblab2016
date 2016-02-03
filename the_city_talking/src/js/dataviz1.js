@@ -75,8 +75,7 @@ d3.csv("per_month_kerbside.csv",(err,data_csv) => {
     var seuilmoyen=(100-offsets(110,min_NO2,max_NO2))+"%";
     var seuilmauvais=(100-offsets(200,min_NO2,max_NO2))+"%";
 
-   	chart.append("linearGradient")
-        .attr("id", "line-gradient-d1")
+   	chart.select("#line-gradient-d1")
         .attr("gradientUnits", "userSpaceOnUse")
         .attr("x1", 0).attr("y1", 0)
         .attr("x2", 0).attr("y2", height)
