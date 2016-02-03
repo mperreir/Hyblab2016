@@ -1,12 +1,8 @@
 'use strict';
 
 var margin = {top: 30, right: 0, bottom: 20, left: 0},
-    //width = 960,
-    //width = (window.screen.availWidth * 50/100),
-    width = 300,
-    height = 200,
-    //height = 500 - margin.top - margin.bottom,
-    //height = (window.screen.availHeight * 40/100) - margin.top - margin.bottom,
+    width = (window.screen.availWidth * 40/100),
+    height = (window.screen.availHeight * 40/100) - margin.top - margin.bottom,
     transitioning;
 
 // sets x and y scale to determine size of visible boxes
@@ -31,8 +27,8 @@ var treemap = d3.layout.treemap()
     .round(false);
 
 var svgtm = d3.select('#treemap').append('svg')
-    .attr('viewbox', '0, 0, ' + (width + margin.left + margin.right) + ', ' + (height + margin.bottom + margin.top))
-    .attr('preserveAspectRatio', 'xMinYMin')
+    .attr('viewBox', '0 0 ' + Math.round(width + margin.left + margin.right) + ' ' + Math.round(height + margin.bottom + margin.top))
+    .attr('preserveAspectRatio', 'xMinYMin meet')
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.bottom + margin.top)
     .style('margin-left', -margin.left + 'px')
@@ -114,8 +110,7 @@ d3.json('json/treemap.json', function(root) {
         .on('click', transition)
       .select('text')
         .text(name(d))
-        .attr('fill', '#fff')
-        .attr('font-size', '12px');
+        .attr('fill', '#fff');
 
     grandparent // Ajout de la couleur de la balise 'grandparent'
         .datum(d.parent)
@@ -241,6 +236,7 @@ d3.json('json/treemap.json', function(root) {
   function text(text) {
     text.attr('x', function(d) { return x(d.x) + 6; })
         .attr('y', function(d) { return y(d.y) + 6; })
+        .attr('font-size', '0.7em')
         .attr('fill', function (d) { return (d.major == 'SG') ? '#3f6660' : '#fff'; });
   }
 
