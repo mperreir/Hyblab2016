@@ -72,13 +72,13 @@ function animIntro() {
 }
 
 function startQ () {
-	console.debug("Start");
 	//document.getElementById("sectionQ").style.display = "block";
 	$.fn.fullpage.moveSectionDown();
 }
 
 /* Fonction passant à la slide suivante (scroll horizontal) */
 function moveNextQ (button) {
+	console.debug("Next Q");
 	$.fn.fullpage.moveSlideRight();
 	var idQ = button[0]+button[1];
 	resetSlide(idQ);
@@ -116,11 +116,11 @@ function resetSlide (idQ) {
 			var france = document.getElementById("france");
 			var paysdelaloire = document.getElementById("pays_de_la_loire");
 			$(france).transition({
-				left: '6.5%'
+				left: '25%'
 			})
 			$(paysdelaloire).transition({
 				scale: 1,
-				left: '9.05%'
+				left: '27.1%'
 			})
 			break;
 
@@ -131,15 +131,15 @@ function resetSlide (idQ) {
 
 			$(ampoule).transition({
 				scale: 1,
-				left: '29.5%'
+				left: '44%'
 			})
 			$(batiment).transition({
 				scale: 1,
-				left: '35.5%'
+				left: '48%'
 			})
 			$(euro).transition({
 				scale: 1,
-				left: '42%'
+				left: '52%'
 			})
 			break;
 
@@ -155,38 +155,38 @@ function resetSlide (idQ) {
 
 			$(elements_q3).transition({
 				scale: 1,
-				left: '50%'
+				left: '60%'
 			})
 			$(panneau1).transition({
 				scale: 1,
-				left: '64%'
+				left: '70.75%'
 			})
 			$(panneau2).transition({
 				scale: 1,
-				left: '65%'
+				left: '71.5%'
 			})
 			$(panneau3).transition({
 				scale: 1,
-				left: '63%'
+				left: '70%'
 			})
 			$(tracteur).transition({
 				scale: 1,
-				left: '56.5%'
+				left: '65%'
 			})
 			$(pale1).transition({
 				scale: 1,
-				left: '63.6%',
-				top: '31.5%'
+				left: '70.8%',
+				top: '30.8%'
 			})
 			$(pale2).transition({
 				scale: 1,
-				left: '64.94%',
-				top: '34.4%'
+				left: '73.02%',
+				top: '30.7%'
 			})
 			$(pale3).transition({
 				scale: 1,
-				left: '66.4%',
-				top: '31.5%'
+				left: '71.87%',
+				top: '33.7%'
 			})
 			break;
 
@@ -283,10 +283,10 @@ function answerQuestions(prop_id) {
 		$(paysdelaloire).stop(true, true);
 
 		$(france).transition({
-			left: '1%'
+			left: '20%'
 		})
 		$(paysdelaloire).transition({
-			left: '3.55%'
+			left: '22.1%'
 		})
 	}
 
@@ -297,15 +297,15 @@ function answerQuestions(prop_id) {
 
 		$(ampoule).transition({
 			scale: 0.6,
-			left: '26.5%'
+			left: '40%'
 		})
 		$(batiment).transition({
 			scale: 0.5,
-			left: '29%'
+			left: '42%'
 		})
 		$(euro).transition({
 			scale: 0.5,
-			left: '32%'
+			left: '44%'
 		})
 	}
 
@@ -320,40 +320,40 @@ function answerQuestions(prop_id) {
 		var pale3 = document.getElementById("pale_3_q3");
 
 		$(elements_q3).transition({
-			scale: 0.8,
-			left: '44%'
+			scale: 0.7,
+			left: '55%'
 		})
 		$(panneau1).transition({
 			scale: 0.8,
-			left: '58%'
+			left: '65.5%'
 		})
 		$(panneau2).transition({
 			scale: 0.8,
-			left: '59%'
+			left: '66.5%'
 		})
 		$(panneau3).transition({
 			scale: 0.8,
-			left: '57%'
+			left: '65%'
 		})
 		$(tracteur).transition({
 			scale: 0.8,
-			left: '50.5%',
+			left: '61%',
 			top: '54%'
 		})
 		$(pale1).transition({
-			scale: 0.8,
-			left: '57.2%',
-			top: '34.8%'
+			scale: 0.7,
+			left: '65.31%',
+			top: '35.8%'
 		})
 		$(pale2).transition({
-			scale: 0.8,
-			left: '58.29%',
-			top: '37.2%'
+			scale: 0.7,
+			left: '66.06%',
+			top: '37.7%'
 		})
 		$(pale3).transition({
-			scale: 0.8,
-			left: '59.42%',
-			top: '34.8%'
+			scale: 0.7,
+			left: '66.87%',
+			top: '35.7%'
 		})
 	}
 
