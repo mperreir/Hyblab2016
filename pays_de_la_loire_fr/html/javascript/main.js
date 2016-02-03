@@ -23,9 +23,11 @@ function updateCurrentSection(){
 	switch(currentSection) {
 
 		case "firstPage" :
+			
 		break;
 
 		case "secondPage" :
+			reset3();
 		break;
 
 		case "3rdPage" :
@@ -49,9 +51,6 @@ function updateCurrentSection(){
 
 		case "8thPage" :
 		break;
-
-		case "lastPage" :
-		break;
 	}
 
 	// Actions effectuées lorsqu'on quitte la section
@@ -59,6 +58,7 @@ function updateCurrentSection(){
 		switch(previousSection) {
 
 			case "firstPage" :
+
 			break;
 
 			case "secondPage" :
@@ -68,6 +68,7 @@ function updateCurrentSection(){
 			break;
 
 			case "4thPage" :
+
 			break;
 
 			case "5thPage" :
@@ -75,7 +76,7 @@ function updateCurrentSection(){
 			break;
 
 			case "6thPage" :
-				reset3();
+				//reset3();
 			break;
 
 			case "7thPage" :
@@ -86,8 +87,6 @@ function updateCurrentSection(){
 			case "8thPage" :
 			break;
 
-			case "lastPage" :
-			break;
 		}
 	}
 

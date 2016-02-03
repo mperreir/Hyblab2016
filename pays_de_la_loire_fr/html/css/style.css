@@ -1644,7 +1644,7 @@ DATA 1
 	font-size: 0.8vw;
 	background-color: #2f4767;
 	width: 3.5%;
-    height: 4%;
+    height: auto;
     padding: 0.3%;
 	color: white;
 	display: block;
