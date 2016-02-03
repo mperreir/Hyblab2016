@@ -547,7 +547,11 @@ nav ul li:not(:first-child)
     letter-spacing: 3px;
 	color: #fdbe63;
 }
-
+#texteAvantSurvol
+{
+    margin-top: 25px;
+    padding: 15px;
+}
 #slide7 #lebadge
 {
 	margin-top: 1%;
@@ -569,9 +573,9 @@ nav ul li:not(:first-child)
 {
     border-radius: 10px;
     border: 1px solid #fdbe63;
-
+    height: 350px;
 }
-#slide7 #legendeAr p
+#slide7 #legendeAr p:not(#texteAvantSurvol)
 {
     padding: 5px;
 }

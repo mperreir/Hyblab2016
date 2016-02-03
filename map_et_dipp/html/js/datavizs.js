@@ -435,6 +435,8 @@ svg.selectAll("image")
 	.attr("distMoy",function(d){return d.distanceMoyenne.toFixed(2);})
 	.attr("distMax",function(d){return d.distMax.toFixed(2);})
 	.on("mouseover", function(d){
+		$("#texteAvantSurvol").hide();
+		$("#svgAside").show();
 		d3.select(this).attr("xlink:href", "./img/picto"+d3.select(this).attr("categorie")+"O.png");
 		svgAside.selectAll("text.nomCategorie").text(d3.select(this).attr("categorie"));
 	

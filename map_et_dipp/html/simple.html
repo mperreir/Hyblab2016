@@ -308,12 +308,12 @@
 		</div>
 		<div id="legendeAr" class="coteDroit">
 			<div id="entoureOrange">
-			<div id="legendeAraignee"><!-- Survolez <petit curseur> les catégories de produits proposées par les <b>AMAP</b> pour savoir à quelle distance de Nantes ils sont produits --></div>
-			<hr color="orange" style="width: 80%;margin: auto;"/>
+			<div id="legendeAraignee"><p id="texteAvantSurvol">Survolez <img style="display:inline;" src="./img/flèche.png" /> les catégories de produits proposées par les <b>AMAP</b> pour savoir à quelle distance de Nantes ils sont produits</p></div>
+			<hr color="orange" style="margin: 17px auto;width: 80%;"/>
 			<p>Consommer en circuit classique implique des distances bien supérieurs !<br/><br/>
 				Pour les visualiser cliquez</p>
 <div id="boutonIci" onclick="effetWahoo();"></div></div>
-		<p style="text-align: left;margin-top:15px;">
+		<p style="text-align: justify;margin-top:15px;">
 Les AMAP* sont destinées à favoriser l'agriculture paysanne et biologique en distribuant en ville des légumes
 frais récoltés à proximité. Le principe : s’engager à acheter
 un panier de provisions à un prix équitable, payé à
@@ -380,7 +380,11 @@ consommateurs d’un territoire sont mis en relation directement.<br/><br/>
     <script src="js/diagrammeJoseph.js"></script>
     <script src="js/datavizs.js"></script>
     <script type="text/javascript">$("nav").slideUp();
-
+    $(document).ready(function(){
+    	setTimeout(function(){
+    	$("#svgAside").hide();
+    	}, 700);
+    });
     function toggleMenu()
     {
     	/*if($("nav").is(":visible"))
