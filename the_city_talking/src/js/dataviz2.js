@@ -1,8 +1,8 @@
 const d3 = require('d3');
 d3.tip = require('d3-tip');
 
-var width=1000,
-	height=400;
+var width=500,
+	height=250;
 
 var chart = d3.select(".dataviz2")
 	.attr("width",width)

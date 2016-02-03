@@ -120,6 +120,13 @@ app.get('/json_kerbside/:json',(req,res) => {
 	}
 })
 
+app.get('/per_month_centre.csv',(req,res) => {
+	res.sendFile(path.join(__dirname,'data/per_month_centre.csv'));
+})
+
+app.get('/per_month_kerbside.csv',(req,res) => {
+	res.sendFile(path.join(__dirname,'data/per_month_kerbside.csv'));
+})
 
 app.use(express.static(path.join(__dirname, 'html')));
 
