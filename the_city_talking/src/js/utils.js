@@ -1,4 +1,4 @@
-let max_NO2_ = 350 ;
+let max_NO2_ = 350;
 let pollution_classes_ = ['pollution_good','pollution_poor','pollution_terrible']
 let pollution_values_ = [0,110,200,max_NO2_]
 module.exports = {

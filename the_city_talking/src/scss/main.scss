@@ -74,13 +74,38 @@
 
 .d3-tip {
 	line-height: 1;
-	font-weight: bold;
+	// font-weight: bold;
+	font: 12px Helvetica;
 	padding: 12px;
+	text-align:center;
 	margin-top: -12px;
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.7);
 	color: #000;
 	border-radius: 2px;
 	pointer-events: none;
+}
+
+.x_axis path,
+.x_axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x_axis path {
+  display: none;
+}
+
+.x_axis text {
+  fill: black;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+.line5y {
+	fill:none;
+	stroke:url(#line-gradient-d1);
+	stroke-width:2px;
 }
 
 /* end svg */

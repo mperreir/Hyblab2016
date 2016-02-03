@@ -1,0 +1,22 @@
+/* just a sample css rule to show that everything works */
+footer p
+{
+  font-size: small;
+}
+
+.line {
+  fill: none;
+  stroke: url(#line-gradient);
+  stroke-width: 2px;
+}
+
+.lineb {
+  fill: none;
+  stroke-width: 0.5px;
+}
+
+.chart text {
+  fill: black;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
