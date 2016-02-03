@@ -85,6 +85,25 @@
 
 /* end svg */
 
+.text{
+	text-align:center;
+	font-family: 'Roboto', sans-serif;
+	font-weight:400;
+	line-height: 1.5;
+}
+.paragraph{
+	@extend .text;
+	text-align:justify;
+	text-align-last: center;
+	font-weight:600;
+}
+.titles{
+	@extend .text;
+	line-height: 1;
+	display:inline-block;
+	font-weight:900;
+}
+
 #html{
     border:0 none;
     margin:0;
@@ -101,13 +120,18 @@
 }
 #div{
     border:0 none;
-    margin:0;
+    margin:0 auto;
     padding:0;
 }
 
-#blue_header{
-	background-color:rgb(61,16,224);
+.div{
+	margin:0 auto;
 	width:1100px;
+}
+
+#blue_header{
+	@extend .div;
+	background-color:rgb(61,16,224);
 	height:265.606px;
 }
 #blue_img{
@@ -117,14 +141,15 @@
 	height:auto;
 }
 #blue_text{
-	text-align:center;
+	@extend .text;
 	margin-left:45%;
 	margin-top:1.35px;
 	width:10%;
 	color:white;
 }
 #div2{
-	width:1100px;
+	@extend .div;
+	height:535.4px;
 }
 #text01{
 	margin-top:10px;
@@ -140,11 +165,11 @@
 	display:inline-block;
 }
 #title1{
+	@extend .titles;
 	color:rgb(61,16,224);
-	text-align:center;
-	display:inline-block;
 	width:18%;
-	margin-bottom:30px;
+	margin-bottom:32px;
+	
 }
 #blue_bracket2{
 	vertical-align:top;
@@ -153,8 +178,9 @@
 	display:inline-block;
 }
 #text1{
+	@extend .paragraph;
+	font-weight:300;
 	color:rgb(61,16,224);
-	text-align:justify;
 	width:40%;
 	margin-left:30%;
 }
@@ -164,7 +190,7 @@
 	margin-left:47%;
 }
 #div3{
-	width:1100px;
+	@extend .div;
 }
 #text02{
 	margin-top:10px;
@@ -180,10 +206,9 @@
 	display:inline-block;
 }
 #title2{
+	@extend .titles;
 	color:rgb(61,16,224);
 	width:23%;
-	text-align:center;
-	display:inline-block;
 	margin-bottom:30px;
 }
 #div3_bracket2{
@@ -193,46 +218,55 @@
 	display:inline-block;
 }
 #div_dv1{
-
+	@extend .div;
+	height:300px;
 }
 #dv1{
 
 }
 #subdiv3A{
+	@extend .div;
 	vertical-align:top;
 	display:inline-block;
 	width:35%;
 }
 #text2_title{
+	@extend .text;
+	font-weight:600;
 	color:rgb(61,16,224);
 	text-align:center;
 }
 #text2{
+	@extend .paragraph;
 	color:rgb(61,16,224);
-	text-align:justify;
+	font-weight:300;
 	width:80%;
 	margin-left:10%;
 	margin-top:1px;
 }
 #subdiv3B{
+	@extend .div;
 	vertical-align:top;
 	display:inline-block;
 	width:55%;
 }
 #text3_title{
+	@extend .text;
+	font-weight:600;
 	color:rgb(61,16,224);
 	text-align:center;
 }
 #text3{
+	@extend .paragraph;
+	font-weight:300;
 	color:rgb(61,16,224);
-	text-align:justify;
 	width:80%;
 	margin-left:10%;
 	margin-top:1px;
 }
 #div4{
-	width:1100px;
-	height:400px;
+	@extend .div;
+	height:700px;
 }
 #text03{
 	margin-top:10px;
@@ -248,10 +282,9 @@
 	display:inline-block;
 }
 #title3{
+	@extend .titles;
 	color:rgb(61,16,224);
 	width:18%;
-	display:inline-block;
-	text-align:center;
 	margin-bottom:30px;
 }
 #div4_bracket2{
@@ -270,22 +303,25 @@
 	width:49%;
 }
 #text4{
+	@extend .paragraph;
+	font-weight:600;
 	color:rgb(61,16,224);
 	text-align:center;
-	width:40%;
-	margin-left:30%;
+	width:50%;
+	margin-left:25%;
 	margin-top:5%;
 }
 #text5{
+	@extend .paragraph;
+	font-weight:400;
 	color:rgb(61,16,224);
-	text-align:justify;
 	width:70%;
 	margin-left:15%;
 	margin-top:1px;
 }
 #div5{
-	width:1100px;
-	height:718px;
+	@extend .div;
+	height:850px;
 	background-color:rgb(61,16,224);
 }
 #text04{
@@ -302,11 +338,10 @@
 	display:inline-block;
 }
 #title4{
+	@extend .titles;
 	color:rgb(61,16,224);
 	width:35%;
-	display:inline-block;
 	color:white;
-	text-align:center;
 	margin-bottom:30px;
 }
 #div5_bracket2{
@@ -322,22 +357,26 @@
 	vertical-align:top;
 }
 #studyA1{
+	@extend .text;
+	font-weight:800;
 	color:rgb(61,16,224);
-	text-align:center;
 	color:white;
 	width:50%;
 	margin-left:25%;
-	margin-top:1px;
 }
 #studyA2{
+	@extend .text;
+	font-weight:600;
 	color:rgb(61,16,224);
 	text-align:center;
 	color:white;
 	width:50%;
 	margin-left:25%;
-	margin-top:1px;
 }
 #studyA3{
+	@extend .text;
+	line-height: 1;
+	font-weight:300;
 	color:rgb(61,16,224);
 	text-align:center;
 	color:white;
@@ -346,14 +385,18 @@
 	margin-top:-25px;
 }
 #studyA4{
+	@extend .text;
+	font-weight:600;
 	color:rgb(61,16,224);
 	text-align:center;
 	color:white;
 	width:50%;
 	margin-left:25%;
-	margin-top:1px;
 }
 #studyA5{
+	@extend .text;
+	line-height: 1;
+	font-weight:300;
 	color:rgb(61,16,224);
 	text-align:center;
 	color:white;
@@ -362,12 +405,14 @@
 	margin-top:-25px;
 }
 #studyA6{
+	@extend .text;
+	line-height: 1;
+	font-weight:400;
 	color:rgb(61,16,224);
 	text-align:center;
 	color:white;
 	width:50%;
 	margin-left:25%;
-	margin-top:1px;
 }
 #studyB{
 	display:inline-block;
@@ -377,18 +422,20 @@
 }
 #studyC{
 	display:inline-block;
+	margin-top:30px;
 	width:545px;
 	height:300px;
 	vertical-align:top;
 }
 #studyD{
 	display:inline-block;
+	margin-top:30px;
 	width:545px;
 	height:300px;
 	vertical-align:top;
 }
 #div6{
-	width:1100px;
+	@extend .div;
 }
 #text05{
 	margin-top:10px;
@@ -404,10 +451,9 @@
 	display:inline-block;
 }
 #title5{
+	@extend .titles;
 	color:rgb(61,16,224);
 	width:22%;
-	text-align:center;
-	display:inline-block;
 	margin-bottom:30px;
 }
 #div6_bracket2{
@@ -417,6 +463,7 @@
 	display:inline-block;
 }
 #div_dv3{
+	@extend .div;
 	height:350px;
 }
 #dv3{
@@ -428,11 +475,11 @@
 	width:545px;
 }
 #text12{
+	@extend .paragraph;
+	line-height:1;
 	color:rgb(61,16,224);
-	text-align:justify;
 	width:60%;
 	margin-left:20%;
-	margin-top:1px;
 }
 #div_text13{
 	vertical-align:top;
@@ -440,14 +487,14 @@
 	width:545px;
 }
 #text13{
+	@extend .paragraph;
+	line-height:1;
 	color:rgb(61,16,224);
-	text-align:justify;
 	width:60%;
 	margin-left:20%;
-	margin-top:1px;
 }
 #div7{
-	width:1100px;
+	@extend .div;
 }
 #text06{
 	margin-top:10px;
@@ -463,10 +510,9 @@
 	display:inline-block;
 }
 #title6{
+	@extend .titles;
 	color:rgb(61,16,224);
 	width:18%;
-	display:inline-block;
-	text-align:center;
 	margin-bottom:30px;
 }
 #div7_bracket2{
@@ -488,7 +534,7 @@
 	}
 }
 #div8{
-	width:1100px;
+	@extend .div;
 	height:420px;
 	background-color:rgb(255,177,138);
 }
@@ -561,17 +607,19 @@
     border-width: 2px;
 }
 #text14_title{
+	@extend .titles;
+	margin-left:42%;
 	color:rgb(61,16,224);
-	text-align:center;
 }
 #text14{
+	@extend .paragraph;
+	line-height:1;
 	color:rgb(61,16,224);
-	text-align:justify;
 	width:80%;
 	margin-left:10%;
 }
 #div9{
-	width:1100px;
+	@extend .div;
 	height:420px;
 }
 #subdiv9{
@@ -589,12 +637,14 @@
     border-width: 2px;
 }
 #text15_title{
+	@extend .titles;
+	margin-left:38%;
 	color:rgb(61,16,224);
-	text-align:center;
 }
 #text15{
+	@extend .paragraph;
+	line-height:1;
 	color:rgb(61,16,224);
-	text-align:justify;
 	width:80%;
 	margin-left:10%;
 }
@@ -603,13 +653,13 @@
 	display:inline-block;
 }
 #bubble_building{
-	margin-top:30%;
+	margin-top:25%;
 	margin-left:20%;
 	width:450px;
 	height:auto;
 }
 #div10{
-	width:1100px;
+	@extend .div;
 	height:420px;
 	background-color:rgb(255,177,138);
 }
@@ -619,7 +669,7 @@
 }
 #bubble_factory{
 	margin-top:20%;
-	margin-left:20%;
+	margin-left:18%;
 	width:450px;
 	height:auto;
 }
@@ -638,17 +688,19 @@
     border-width: 2px;
 }
 #text16_title{
+	@extend .titles;
+	margin-left:38%;
 	color:rgb(61,16,224);
-	text-align:center;
 }
 #text16{
+	@extend .paragraph;
+	line-height:1;
 	color:rgb(61,16,224);
-	text-align:justify;
 	width:80%;
 	margin-left:10%;
 }
 #div11{
-	width:1100px;
+	@extend .div;
 }
 #text07{
 	margin-top:10px;
@@ -662,11 +714,12 @@
 	background-color:rgb(28,247,168);
 }
 #cells_title{
+	@extend .titles;
+	margin-left:11%;
 	color:rgb(61,16,224);
-	text-align:center;
 }
 #cells{
-	margin-left:30%;
+	margin-left:35%;
 }
 #div_text17{
 	vertical-align:top;
@@ -674,14 +727,14 @@
 	width:545px;
 }
 #text17{
+	@extend .paragraph;
 	color:rgb(61,16,224);
-	text-align:justify;
 	width:60%;
 	margin-left:20%;
 	margin-top:20%;
 }
 #div12{
-	width:1100px;
+	@extend .div;
 }
 #subdiv12{
 	width:545px;
@@ -689,41 +742,38 @@
 	background-color:rgb(28,247,168);
 }
 #lungs_title{
+	@extend .titles;
 	color:rgb(61,16,224);
-	text-align:center;
+	margin-left:33%;
 	margin-top:30px;
 }
 #lungs{
-	margin-left:30%;
+	margin-left:35%;
 }
 #div_text18{
 	vertical-align:top;
 	display:inline-block;
 	width:545px;
 }
-#text18A{
+.text18{
+	@extend .paragraph;
+	line-height:1;
 	color:rgb(61,16,224);
-	text-align:justify;
 	width:60%;
 	margin-left:20%;
 	margin-top:5%;
+}
+#text18A{
+	@extend .text18;
 }
 #text18B{
-	color:rgb(61,16,224);
-	text-align:justify;
-	width:60%;
-	margin-left:20%;
-	margin-top:5%;
+	@extend .text18;
 }
 #text18C{
-	color:rgb(61,16,224);
-	text-align:justify;
-	width:60%;
-	margin-left:20%;
-	margin-top:5%;
+	@extend .text18;
 }
 #div13{
-	width:1100px;
+	@extend .div;
 }
 #div13_bracket{
 	vertical-align:top;
@@ -733,11 +783,10 @@
 	display:inline-block;
 }
 #title13{
+	@extend .titles;
 	margin-top:60px;
 	color:rgb(61,16,224);
 	width:18%;
-	display:inline-block;
-	text-align:center;
 	margin-bottom:100px;
 }
 #div13_bracket2{
