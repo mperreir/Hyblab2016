@@ -95,16 +95,31 @@ function updateChart(month_n = null ,year_n = null ,facility_n = null ,loop = tr
 function selectMonth(n){
 	current_month = n ;
 	updateChart();
+	var list = document.getElementsByClassName('dataviz2_month') ;
+	for (var i = 0 ; i < list.length ; i++){
+		list.item(i).classList.remove('selected');
+	}
+	list.item(n).classList.add('selected');
 }
 
 function selectYear(n){
 	current_year = n ;
 	updateChart();
+	var list = document.getElementsByClassName('dataviz2_year') ;
+	for (var i = 0 ; i < list.length ; i++){
+		list.item(i).classList.remove('selected');
+	}
+	list.item(n).classList.add('selected');
 }
 
 function selectFacility(n){
 	current_facility = n ;
 	updateChart();
+	var list = document.getElementsByClassName('dataviz2_facility') ;
+	for (var i = 0 ; i < list.length ; i++){
+		list[i].classList.remove('selected');
+	}
+	list[n].classList.add('selected');
 }
 
 updateChart();
@@ -114,6 +129,7 @@ months.forEach((e,i) => {
 	button.innerHTML = e.short ;
 	button.setAttribute("title",e.name);
 	button.classList.add("dataviz2_button");
+	button.classList.add("dataviz2_month");
 	button.addEventListener("click",selectMonth.bind(null,i));
 	document.getElementById("buttons_dataviz2_months").appendChild(button);
 })
@@ -122,6 +138,7 @@ years.forEach((e,i) => {
 	var button = document.createElement("button");
 	button.innerHTML = e ;
 	button.classList.add("dataviz2_button");
+	button.classList.add("dataviz2_year");
 	button.addEventListener("click",selectYear.bind(null,i));
 	document.getElementById("buttons_dataviz2_years").appendChild(button);
 })
@@ -130,6 +147,7 @@ facilities.forEach((e,i) => {
 	button.innerHTML = e.short ;
 	button.setAttribute("title",e.name);
 	button.classList.add("dataviz2_button");
+	button.classList.add("dataviz2_facility");
 	button.addEventListener("click",selectFacility.bind(null,i));
 	document.getElementById("buttons_dataviz2_facilities").appendChild(button);
 });
