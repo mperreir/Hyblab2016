@@ -567,7 +567,7 @@ DATA 1
 .petit_mot
 {
 	font-size: 1.25vw;
-	color: #e4685d;
+	color: #da3325;
 }
 
 #saviez_vous>p
@@ -1244,6 +1244,12 @@ DATA 1
 	width: 2.5%;
 	left: 55.7%;
 	bottom: 32.8%;
+}
+
+.chiffre_important
+{
+	font-size: 1.5vw;
+	color: #e4685d;
 }
 
 #svg_dataviz3

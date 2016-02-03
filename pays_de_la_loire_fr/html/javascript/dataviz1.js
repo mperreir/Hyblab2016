@@ -500,6 +500,7 @@ function goTo2014 () {
 
 	for(var i = 0; i < elements.length; i++)
 	{
+		console.debug($(elements[i]));
 		num_rand = Math.random();
 
 		// Application de l'animation inverse
