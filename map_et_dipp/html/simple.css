@@ -39,6 +39,7 @@ nav
 	width: 100%;
 	text-align: center;
 	margin-top: 25px;
+    position: absolute;
 }
 
 nav ul li
@@ -52,11 +53,13 @@ nav ul li:not(:first-child)
 	margin-left: 12%;
 }
 
-nav .boutonMenu
+.boutonMenu
 {
+    display: inline;
 	float: right;
 	margin-right: 25px;
-	margin-top: -25px;
+	margin-top: 12px;
+    z-index: 1000000;
 }
 
 .section
@@ -152,7 +155,49 @@ nav .boutonMenu
 
 
 
+/* slide 3 : pré joseph */
+#slide3 {
+    text-align: center;
+    background-color: #e7ffe0;
+}
 
+#slide3 h2 {
+    color: #78dc82;
+    font: 40px museoReg;
+    margin-bottom: 9%;
+}
+    
+#slide3 h3 {
+    padding: 5px;
+    margin-top: 1%;
+    /* style du texte */
+    color: #78dc82;
+    font: 18px museoReg;
+    /* contour */
+    border: 2px solid #78dc82;
+    border-radius: 5px;
+    /* pour que la largeur du titre soit égale à la taille du texte, et non à la taille de la page */
+    display: inline-block;
+}
+
+#slide3 .conteneur {
+    position: relative;
+    height: 85%;    
+}
+
+#slide3 .bloc {
+    position: absolute;
+    top: 15%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#slide3 .bloc p {
+    margin-left: 20%;
+    margin-right: 20%;
+    color: #4c4c4c;
+    font: 20px / 30px museoReg;
+}
 
 /* slide 4 : Joseph */
 
@@ -160,39 +205,17 @@ nav .boutonMenu
     text-align: center;
 }
 
-#slide4 header {
-    
-}
-
-#slide4 header h2 {
-    color: #fdbe63;
-    font: 40px museoReg;
-    margin-top: 0;
-}
-
-#slide4 header h3 {
-    padding: 5px;
-    /* style du texte */
-    color: #fdbe63;
-    font: 18px museoReg;
-    /* contour */
-    border: 2px solid #fdbe63;
-    border-radius: 5px;
-    /* pour que la largeur du titre soit égale à la taille du texte, et non à la taille de la page */
-    display: inline-block;
-}
-
 #slide4 article {
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 10px;
+    padding: 1%; /* 30px 30px 30px 10px */
+    margin: 0 auto;
+    margin-top: 3%;
+    width: 50%;
     /* style du texte */
     color: #4c4c4c;
     font: 15px / 19px museoReg;
     /* contour */
     border: 2px solid #fdbe63;
-    border-radius: 50px;
+    border-radius: 30px;
     /* permet de centrer verticalement les balises, doit être utilisé sur toutes les balises du même row */
     display: inline-block;
     vertical-align: middle;
@@ -212,8 +235,8 @@ nav .boutonMenu
 */
 
 #totalJoseph {
-    margin: 0;
     padding: 0;
+    margin-top: 2%;
 }
 
 #totalJoseph p {
@@ -233,7 +256,7 @@ nav .boutonMenu
 
 
 #diagrammeJoseph {
-    margin-top: 15px;
+    margin-top: 3%;
     margin-bottom: 0;
     padding: 0;
 }
@@ -249,12 +272,14 @@ nav .boutonMenu
     height: 150px;
 }
 
+
+
+
 .baliseJauge svg {
     display: inline-block;
     position: relative;
     width: 100%;
     vertical-align: middle;
-    
 }
 
 .baliseJauge svg g {

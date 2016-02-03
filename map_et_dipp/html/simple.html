@@ -38,12 +38,12 @@
 	<div class="section active" id="slide1">
 		<nav>
 			<ul>
-				<li>Présentation</li>
-				<li>Les différents visages</li>
-				<li>Remerciements</li>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Les différents visages</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(10);">Remerciements</a></li>
 			</ul>
-		<div class="boutonMenu"><img src="./img/menu.png" /></div>
 		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
 
 
 		<div id="titreSite">
@@ -56,14 +56,14 @@
 
 
 	<div class="section" id="slide2">
-				<nav>
+		<nav>
 			<ul>
-				<li>Présentation</li>
-				<li>Les différents visages</li>
-				<li>Remerciements</li>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Les différents visages</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(10);">Remerciements</a></li>
 			</ul>
-		<div class="boutonMenu"><img src="./img/menu.png" /></div>
 		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
 		<div class="container">
 			<div class="coteGauche">
 				<h2>L'agriculture urbaine</h2>
@@ -89,18 +89,38 @@
     
     
 	<div class="section" id="slide3">
+        <nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Les différents visages</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(10);">Remerciements</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
+
+        <h3>EN AUTONOMIE</h3>
         
-        <p>Il habite à trois heures d’ici, mais cela pourrait se passer chez un nantais. Joseph Chauffrey, qui n’y connaissait rien, a réussi à produire 252 kilos de fruits et légumes dans ses 150m2 de terrain, dont seulement 25m2 de potager.</p>
-        <p>Son mot d’ordre ? <strong>Permaculture</strong>, soit une forme respectueuse et écologique de production.</p>
-    
+        <div class="conteneur">
+            <div class="bloc">
+                <h2>Un jardin de 338kg de légumes urbains</h2>
+
+                <p>Il habite à trois heures d'ici, mais cela pourrait se passer chez un nantais. Joseph Chauffrey, qui n'y connaissait rien, à réussi à produire 338 kilos de fruits et légumes dans ses 150m2 de terrain, dont seulement 25m2 de potager. Son mot d'ordre ? Permaculture, soit une forme respectueuse et écologique de production.</p>
+            </div>
+        </div>
+        
+        <div class="flecheBas"><img src="./img/fleche_bas_de_page_verte.png" onclick="$.fn.fullpage.moveSectionDown();" /></div>
     </div>
     
     
 	<div class="section" id="slide4">
-        <header>
-            <h3 class="">TOUT SEUL</h3>
-            <h2 class="">Un jardin et 252kg de légumes urbains</h2>
-        </header>
+        <nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Les différents visages</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(10);">Remerciements</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
         
         <article>
             <p>Joseph et sa famille ont pu manger des légumes toute l’année. Cliquez sur chaque saison pour découvrir le poids des récoltes et constater les effets de la permaculture en ville !</p>
@@ -137,6 +157,14 @@
 	
     
 	<div class="section" id="slide10">
+				<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Les différents visages</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(10);">Remerciements</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
         <div class="container">
             <h1>Tout le monde peut s’y mettre !</h1>
             <h2>Zoom sur les techniques de Joseph pour obtenir un super potager</h2>
@@ -175,6 +203,14 @@
     
     
 	<div class="section" id="slide5">
+				<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Les différents visages</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(10);">Remerciements</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
 		<div id="absSlide5">
 			<p id="badge" class="fullCentre">EN COLLECTIF</p>
 	        <h2>Les jardins gagnent du terrain en ville !</h2>
@@ -226,8 +262,27 @@
 	    </div>
 	</div>
 
-	<div class="section" id="slide6"><h1>No wraps, no extra markup</h1></div>
+	<div class="section" id="slide6">
+		<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Les différents visages</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(10);">Remerciements</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
+		<h1>No wraps, no extra markup</h1>
+
+	</div>
 	<div class="section" id="slide7">
+				<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Les différents visages</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(10);">Remerciements</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
 		<p id="lebadge" class="fullCentre">AVEC LES PROS</p>
 		<h1>Les agriculteurs <span style="font-family: museoBold;">s'enracinent en ville</span></h1>
 		<div class="coteGauche">
@@ -237,8 +292,29 @@
 
 		</div>
 	</div>
-	<div class="section" id="slide8"><h1>No wraps, no extra markup</h1></div>
-	<div class="section" id="slide9"><h1>Just the simplest demo ever</h1></div>
+	<div class="section" id="slide8">
+				<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Les différents visages</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(10);">Remerciements</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
+		<h1>No wraps, no extra markup</h1>
+	</div>
+	<div class="section" id="slide9">
+				<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Les différents visages</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(10);">Remerciements</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
+		<h1>Just the simplest demo ever</h1>
+
+	</div>
 </div>
 
 	<script src="js/d3.js"></script>
@@ -246,6 +322,21 @@
 	<script src="js/treemap.js"></script>
     <script src="js/diagrammeJoseph.js"></script>
     <script src="js/datavizs.js"></script>
+    <script type="text/javascript">$("nav").slideUp();
+
+    function toggleMenu()
+    {
+    	/*if($("nav").is(":visible"))
+    	{
+    		$('.boutonMenu').animate({'margin-top':'12px'});
+    	}
+    	else
+    	{
+    		$('.boutonMenu').animate({'margin-top':'-31px'});
+    	}*/
+    	$("nav").slideToggle();
+    }
+    </script>
     
 </body>
 </html>
