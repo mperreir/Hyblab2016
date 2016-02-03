@@ -114,26 +114,24 @@
                 </div>
                 <div id="rope_right">
                     <div id="rope_selectors">
-                        <select id="which_left">
-                            <option value="max">Max</option>
-                            <option value="min">Min</option>
-                            <option value="mean">Mean</option>
-                            <option value="custom">Custom</option>
-                        </select>
-                        <select id="which_right">
-                            <option value="max">Max</option>
-                            <option value="min">Min</option>
-                            <option value="mean">Mean</option>
-                            <option value="custom">Custom</option>
-                        </select>
-                        <input type="text"
-                               id="left_postcode_rope"
-                               pattern="[A-Z]{2}[0-9] *[0-9][A-Z]{2}"
-                               placeholder="Enter your postcode"></input>
-                        <input type="text"
-                               id="right_postcode_rope"
-                               pattern="[A-Z]{2}[0-9] *[0-9][A-Z]{2}"
-                               placeholder="Enter the other postcode"></input>
+                        <div>
+                            <input type="text"
+                                   id="left_postcode_rope"
+                                   pattern="[A-Z]{2}[0-9] *[0-9][A-Z]{2}"
+                                   placeholder="Enter your postcode"></input>
+                        </div>
+                        <div>
+                            <input type="text"
+                                   id="right_postcode_rope"
+                                   pattern="[A-Z]{2}[0-9] *[0-9][A-Z]{2}"
+                                   placeholder="Enter the other postcode"></input>
+                            <select id="which_right">
+                                <option value="max">Max</option>
+                                <option value="min">Min</option>
+                                <option value="mean">Mean</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div id="charts">
@@ -146,15 +144,15 @@
                             <div style="width: 5%;" id="left_housing"></div>
                             <div style="width: 5%;" id="left_environment"></div>
                         </div>
-                        <div class="vertical_line"></div>
+                        <!--<div class="vertical_line"></div>-->
                         <div id="chart_imgs">
-                            <img src="image/crime.svg" />
-                            <img src="image/income.svg" />
-                            <img src="image/employment.svg" />
-                            <img src="image/education.svg" />
-                            <img src="image/health.svg" />
-                            <img src="image/housing.svg" />
-                            <img src="image/environment.svg" />
+                            <img src="image/icones-dataviz2/crime.svg" />
+                            <img src="image/icones-dataviz2/income.svg" />
+                            <img src="image/icones-dataviz2/employment.svg" />
+                            <img src="image/icones-dataviz2/education.svg" />
+                            <img src="image/icones-dataviz2/health.svg" />
+                            <img src="image/icones-dataviz2/housing.svg" />
+                            <img src="image/icones-dataviz2/environment.svg" />
                         </div>
                         <div id="chart_right" class="chart">
                             <div style="width: 5%;" id="right_crime"></div>

@@ -89,8 +89,9 @@
         }
     }
 
+    //$("#which_left").change(onSelectChange.bind(undefined, "left"));
+    $("#which_right").change(onSelectChange.bind(undefined, "right"));
     $("#left_postcode_rope").change(updateChart.bind(undefined, "left"));
     $("#right_postcode_rope").change(updateChart.bind(undefined, "right"));
-    $("#which_left").change(onSelectChange.bind(undefined, "left"));
-    $("#which_right").change(onSelectChange.bind(undefined, "right"));
+    $("#which_right").change();
 }());

@@ -328,9 +328,20 @@ input[type="checkbox"] {
     width: 59%;
 }
 
+#rope_selectors div {
+    display: inline-block;
+    width: 49%;
+}
+
+#left_postcode_rope {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 0px;
+}
 
 #charts {
-    height: 400px;
+    margin-top: 5%;
+    height: 80%;
 }
 
 .chart {
@@ -344,6 +355,10 @@ input[type="checkbox"] {
     height: 5%;
     margin-bottom: 9%;
     transition: width 0.5s;
+}
+
+.chart div:first-child {
+    margin-top: 9%;
 }
 
 #chart_left div {
@@ -363,15 +378,18 @@ input[type="checkbox"] {
 
 #chart_imgs {
     display: inline-block;
+    z-index: 15;
     width: 1px;
     height: 100%;
 }
 
 #chart_imgs img {
     display: inline-block;
-    height: 50px;
-    margin-bottom: 3%;
-    transform: 
+    height: 10%;
+    margin-bottom: 8px;
+    position: relative;
+    top: -5%;
+    left: -20px;
 }
 
 
