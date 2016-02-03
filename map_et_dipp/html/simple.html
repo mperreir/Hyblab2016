@@ -289,8 +289,21 @@
 		<div class="coteGauche">
 			<div id="araigneeAMAP"></div>
 		</div>
-		<div id="legendeAraignee" class="coteDroit">
-
+		<div id="legendeAr" class="coteDroit">
+			<div id="entoureOrange">
+			<div id="legendeAraignee"></div>
+			<p>Comparez avec la distance moyenne
+parcourue par les produits industriels
+importés en France en cliquant</p>
+<div id="boutonIci" onclick="effetWahoo();"></div></div>
+		<p style="text-align: left;margin-top:15px;">
+Les AMAP* sont destinées à favoriser l'agriculture paysanne et biologique en distribuant en ville des légumes
+frais récoltés à proximité. Le principe : s’engager à acheter
+un panier de provisions à un prix équitable, payé à
+l’avance. Cela crée un circuit court : les paysans et les
+consommateurs d’un territoire sont mis en relation directement.<br/><br/>
+<span style="font-size:12px;">*Associations pour le maintien d'une agriculture paysanne</span>
+		</p>
 		</div>
 	</div>
 	<div class="section" id="slide8">
@@ -337,6 +350,11 @@
     	}*/
     	$("nav").slideToggle();
     }
+    function effetWahoo()
+	{
+		console.log(svg.transition);
+		svg.transition().attr("transform","scale(0.1) translate("+width*3.5+","+height*8+")").ease("linear").duration(1000);
+	}
     </script>
     
 </body>

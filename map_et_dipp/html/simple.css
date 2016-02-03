@@ -447,10 +447,30 @@ nav ul li:not(:first-child)
 	text-align: center;
 	font-family: museoReg;
 }
-#slide7 #legendeAraignee
+#slide7 #legendeAr
 {
-	width: 350px;
-	border-radius: 10px;
-	border: 1px solid #fdbe63;
-	margin-top: 1%;
+    width: 350px;
+    margin-top: 1%;
+}
+#slide7 #entoureOrange
+{
+    border-radius: 10px;
+    border: 1px solid #fdbe63;
+
+}
+#slide7 #legendeAr p
+{
+    padding: 5px;
+}
+#slide7 #boutonIci
+{
+    background: url('./img/boutonICIInactif.png');
+    width: 52px;
+    height: 52px;
+    margin: auto;
+    cursor: pointer;
+}
+#slide7 #boutonIci:hover
+{
+    background: url('./img/boutonICISurvol.png');
 }
