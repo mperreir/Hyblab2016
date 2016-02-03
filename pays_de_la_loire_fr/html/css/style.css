@@ -1330,6 +1330,11 @@ DATA 1
 
 /* Dataviz 2 */
 
+/*.arc-text
+{
+    transform: rotate(180deg);
+}*/
+
 #data2_pale
 {
     position: absolute;

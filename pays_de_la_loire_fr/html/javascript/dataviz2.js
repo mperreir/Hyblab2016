@@ -45,7 +45,7 @@ var field = svg.selectAll("g")
 //arc data
 field.append("path")
 .on("mouseover", function(d){
-    d.text = Math.round(d.val1);
+    d.text = Math.round(d["val"+pos]);
     for (var i = 0; i<field.data().length; i++){
     if(i != field.data().indexOf(d)){
     field.data()[i].opacity = opacity;
@@ -67,13 +67,11 @@ field.append("path")
 
 //text data
 field.append("text")
-//.attr("transform", function(d) { console.log(this); })
 .attr("dy", ".35em")
-//.attr("dy", function(d,i) { console.log(this); })
 .attr("dx", ".75em")
 .style("text-anchor", "start")
 .append("textPath")
-.attr("startOffset", "50%")
+.attr("startOffset", "25%")
 .attr("class", "arc-text")
 .attr("fill", colText)
 .attr("xlink:href", function(d, i) { return "#arc-center-" + i; });
@@ -81,13 +79,21 @@ field.append("text")
 
 //affichage des année
 field.append("text")
-//inversion du text
 .attr("dy", "0.35em")
 .attr("dx", "0.75em")
 .attr("fill", colText)
 .style("text-anchor", "start")
 .attr("y", function (d) { return (d.index + 0.05) * (radius + spacing); })
 .attr("class", "year-text");
+
+//affichage des data
+field.append("text")
+.attr("dy", "0.35em")
+.attr("dx", "4.75em")
+.attr("fill", colText)
+.style("text-anchor", "start")
+.attr("y", function (d) { return (d.index + 0.05) * (radius + spacing); })
+.attr("class", "data-text");
 
 //gestion des pales
 var pales = d3.select("#data2_pale");
@@ -114,9 +120,9 @@ bouton_solaire
                     //$(img).css({ rotate: '-120deg'})
                     })
         //remise a zéro des valeurs
-        zero(toS);
+        zero();
         //transition
-        //toS();
+        toS();
         //on eleve l'animation
         bouton_solaire.attr("class", "");
     }
@@ -191,7 +197,7 @@ function zero(callback) {
 	//mise à zéro des valeurs
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
-		field.data()[i].value = 0.2;
+		field.data()[i].value = 0;
         field.data()[i].opacity = 1;
     }
 	//transition
@@ -199,7 +205,7 @@ function zero(callback) {
 		.transition()
 		.duration(500)
         .each(fieldTransition)
-        .call(endall, callback);
+        //.call(endall, callback);
 }
 
 function toE() {
@@ -207,7 +213,7 @@ function toE() {
 	//calcule de la nouvelle valeur
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
-        field.data()[i].value = (field.data()[i].val1*posMax)/field.data()[0].val1;
+        field.data()[i].value = (field.data()[i].val0*posMax)/field.data()[0].val0;
         field.data()[i].opacity = 1;
     }
 	//transition
@@ -224,7 +230,7 @@ function toS() {
 	//calcule de la nouvelle valeur
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
-		field.data()[i].value = (field.data()[i].val2*posMax)/field.data()[0].val2;
+		field.data()[i].value = (field.data()[i].val1*posMax)/field.data()[0].val1;
         console.log(field.data()[i].previousValue + '-' + field.data()[i].value);
         field.data()[i].opacity = 1;
     }
@@ -241,7 +247,7 @@ function toB() {
     //calcule de la nouvelle valeur
     for (var i = 0; i < 5; i++) {
         field.data()[i].previousValue = field.data()[i].value;
-        field.data()[i].value = (field.data()[i].val3*posMax)/field.data()[0].val3;
+        field.data()[i].value = (field.data()[i].val2*posMax)/field.data()[0].val2;
         field.data()[i].opacity = 1;
     }
     //transition
@@ -270,21 +276,31 @@ function fieldTransition() {
     field.select(".arc-body")
     .attrTween("d", arcTween(arcBody))
     .style("fill-opacity", function(d) { return d.opacity;})
-    .style("fill", function(d) { return d.color(d.value);});
+    .style("fill", function(d) {
+           console.log("color : " + d.value * (1/(d["val"+pos]*posMax/d["val"+pos+"max"])));
+           return d["col"+pos](d.value * (1/(d["val"+pos]*posMax/d["val"+pos+"max"])));});
     
     field.select(".arc-center")
     .attrTween("d", arcTween(arcCenter));
     
     
     //text sur les data
-    field.select(".arc-text")
-    .text(function(d) {return d.text; });
+    /*field.select(".arc-text")
+    .text(function(d) { return d.text=="" ? "" : d.text+"GWh";});
+    console.log("truc");
+    console.log(field.select(".arc-text"));*/
     
     
     //affichage des années
     field.select(".year-text")
     .style("fill-opacity", function(d) { return d.opacity;})
     .text(function(d) {return d.year; });
+    
+    //affichage data
+    field.select(".data-text")
+    .style("fill-opacity", function(d) { return d.opacity;})
+    .style("fill", "hsla(356, 100%, 50%, 1)")
+    .text(function(d) { return d.text=="" ? "" : d.text+"GWh";});
 }
 
 function arcTween(arc) {
@@ -300,34 +316,22 @@ function arcTween(arc) {
 }
 
 //model
-//valeurs entre 0-1
 function fields() {
-    var col1 = d3.scale.linear()
-    .range(["hsl(-180,60%,50%)", "hsl(180,60%,50%)"])
-    .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
     
-    var col2 = d3.scale.linear()
-    .range(["hsl(-180,60%,50%)", "hsl(180,60%,50%)"])
-    .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
-    
-    var col3 = d3.scale.linear()
-    .range(["hsl(-180,60%,50%)", "hsl(180,60%,50%)"])
-    .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
-    
-    var col4 = d3.scale.linear()
-    .range(["hsl(-180,60%,50%)", "hsl(180,60%,50%)"])
-    .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
-    
-    var col5 = d3.scale.linear()
-    .range(["hsl(-180,60%,50%)", "hsl(180,60%,50%)"])
-    .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
+    function color(c)
+    {
+        var col = d3.scale.linear()
+        .range(["hsl(-180,60%,50%)", c])
+        .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
+        return col;
+    }
     
     
     return [
-            {index: .5, text: "", value: 0, previousValue: 0, opacity: 1, year: "2014", val1: "1067", val2: "364", val3: "199", color: col1},
-            {index: .4, text: "", value: 0, previousValue: 0, opacity: 1, year: "2013", val1: "981", val2: "299", val3: "182", color: col2},
-            {index: .3, text: "", value: 0, previousValue: 0, opacity: 1, year: "2012", val1: "884", val2: "266", val3: "114", color: col3},
-            {index: .2, text: "", value: 0, previousValue: 0, opacity: 1, year: "2011", val1: "704", val2: "179", val3: "67", color: col4},
-            {index: .1, text: "", value: 0, previousValue: 0, opacity: 1, year: "2010", val1: "611", val2: "61", val3: "50", color: col5}
+            {index: .5, text: "", value: 0, previousValue: 0, opacity: 1, year: "2014", val0: "1067", val1: "364", val2: "199", val0max: "1064", val1max: "364", val2max:  "199",col0: color("hsl(214,16%,80%)"), col1: color("hsl(6,78.8%,87.1%)"), col2: color("hsl(73,57.9%,81.4%)")},
+            {index: .4, text: "", value: 0, previousValue: 0, opacity: 1, year: "2013", val0: "981", val1: "299", val2: "182", val0max: "1064", val1max: "364", val2max:  "199", col0: color("hsl(214,16%,63.1%)"), col1: color("hsl(6,78.9%,81.4%)"), col2: color("hsl(76,53.3%,76.5%)")},
+            {index: .3, text: "", value: 0, previousValue: 0, opacity: 1, year: "2012", val0: "884", val1: "266", val2: "114", val0max: "1064", val1max: "364", val2max:  "199", col0: color("hsl(214,16.6%,48.4%)"), col1: color("hsl(6,73.4%,75.3%)"), col2: color("hsl(76,53.9%,70.2%)")},
+            {index: .2, text: "", value: 0, previousValue: 0, opacity: 1, year: "2011", val0: "704", val1: "179", val2: "67", val0max: "1064", val1max: "364", val2max:  "199", col0: color("hsl(213,32.5%,32.5%)"), col1: color("hsl(6,78.5%,70.8%)"), col2: color("hsl(76,53.5%,63.7%)")},
+            {index: .1, text: "", value: 0, previousValue: 0, opacity: 1, year: "2010", val0: "611", val1: "61", val2: "50", val0max: "1064", val1max: "364", val2max:  "199", col0: color("hsl(214,56.4%,21.6%)"), col1: color("hsl(6,78.3%,63.9%)"), col2: color("hsl(76,53.9%,57.5%)")}
             ];
 }
