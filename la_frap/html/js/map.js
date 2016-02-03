@@ -110,7 +110,7 @@ window.addEventListener('load', function () {
 
 
 var infofunction = function (d) {
-	d3.select("#nomdpt").html("<img src=\"img/Loc_26.png\"> " + d.n + "<span> " + d.num +"</span>");
+	d3.select("#nomdpt").html("<img src=\"img/Loc_26.png\"> " +	 d.n + "<span> " + d.num +"</span>");
 	info.style("visibility" ,"visible");
 	d3.select(".radios").select(".chiffre").html(d.r+" ");
 	d3.select(".salarie").select(".chiffre").html(d.s+" ");
@@ -138,6 +138,7 @@ var infofunction = function (d) {
 					.attr("x", "50%")
 					.attr("y", "70%")
 					.text("Cliquez pour afficher les valeurs");
+
 
 	d3.select('#pieExplains').style("visibility","hidden");
 }

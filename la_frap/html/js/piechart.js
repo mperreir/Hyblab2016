@@ -200,7 +200,8 @@ window.addEventListener('load',function () {
 					
 	var pieExplains = d3.select("#pieText").append("p")
 					.attr("id","pieExplains")
-					.style("font-weight", "bold");
+					.style("font-weight", "bold")
+					.style("visibility", "hidden");
 	
 
 	/*pie = d3.select("#pieChart").select("svg");
