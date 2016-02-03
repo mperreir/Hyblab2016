@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function() {
   //current menu (to know where we are from clicking on menus' elements)
   var currentNav=0;
@@ -17,55 +19,7 @@ $(document).ready(function() {
   }
   $(arr[0]).show("slow");
 
-  // $('#submenu1').hover(function(){
-  //       console.log('current Nav : ' + currentNav);
-  //       switch(currentNav){
-  //         case 0:
-  //           $(this).css('background-color', '#F7931E');
-  //           break;
-  //         case 1:
-  //           $(this).css('background-color', '#FF605E');
-  //           break;
-  //         case 2:
-  //           $(this).css('background-color', '#42B69E');
-  //           break;
-  //       }
-  //     }, function() {$(this).css('background-color', '');
-  //   });
-
-  // $('#submenu2').hover(function(){
-  //       console.log('current Nav : ' + currentNav);
-  //       switch(currentNav){
-  //         case 0:
-  //           $(this).css('background-color', '#F7931E');
-  //           break;
-  //         case 1:
-  //           $(this).css('background-color', '#FF605E');
-  //           break;
-  //         case 2:
-  //           $(this).css('background-color', '#42B69E');
-  //           break;
-  //       }
-  //     }, function() {$(this).css('background-color', '');
-  //   });
-
-  // $('#submenu3').hover(function(){
-  //       console.log('current Nav : ' + currentNav);
-  //       switch(currentNav){
-  //         case 0:
-  //           $(this).css('background-color', '#F7931E');
-  //           break;
-  //         case 1:
-  //           $(this).css('background-color', '#FF605E');
-  //           break;
-  //         case 2:
-  //           $(this).css('background-color', '#42B69E');
-  //           break;
-  //       }
-  //     }, function() {$(this).css('background-color', '');
-  //   });
-
-
+  $("#submenu li").css("border-right", "2px solid #F7931E");
 
 
   // Events handling
@@ -130,6 +84,8 @@ $(document).ready(function() {
   $("#menu2").click( function() {
     console.log('clic menu2');
 
+    $("#submenu li").css("border-right", "2px solid #FF605E");
+
     switch(currentNav){
       case 0:
         $("#menu1").removeClass("active");
@@ -182,6 +138,8 @@ $(document).ready(function() {
 
   $("#menu3").click( function() {
     console.log('clic menu3');
+
+    $("#submenu li").css("border-right", "2px solid #42B69E");
 
     switch(currentNav){
       case 0:

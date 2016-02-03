@@ -4,7 +4,7 @@
 var map = new GLMap('map', {
     position: { latitude:48.4082, longitude:-4.4982 },
     zoom: 16,
-    minZoom: 12,
+    minZoom: 5,
     maxZoom: 20,
     state: true // stores map position/rotation in url
 });
@@ -12,7 +12,7 @@ var map = new GLMap('map', {
 
 //Creation of the map
 var osmb = new OSMBuildings({
-  minZoom: 15,
+  minZoom: 8,
   maxZoom: 22,
   attribution: '© 3D <a href="http://osmbuildings.org/copyright/">OSM Buildings</a>',
 }).addTo(map);

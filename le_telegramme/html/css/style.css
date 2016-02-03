@@ -35,6 +35,7 @@
 /*General properties*/
 html, body {
   height: 100%;
+  overflow: hidden;
   font-family: SourceSansProRegular;
 }
 
@@ -55,18 +56,21 @@ iframe {
 
 /* Left panel */
 #navbar_left {
-  padding: 10% 0;
+  padding: 0;
   height: 100vh;
   background-color: #313232;
 }
 
 #left {
   height: 33%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #left li {
-  padding-top: 30%;
-  height: 100%;
+  /*padding-top: 30%;*/
+  height: 33%;
   border-bottom: 2px solid #666666;
   font-size: 20px;
 }
@@ -107,6 +111,8 @@ iframe {
 #middle {
   height : 100%;
   background-color : #F7931E;
+  overflow-y: scroll;
+  overflow-x: hidden;
   padding: 0;
 }
 
@@ -148,7 +154,7 @@ iframe {
   text-align: center;
   font-family: SantEliaScriptBoldDEMO;
   font-size: 14px;
-  border-right: 2px solid #F7931E;
+/*  border-right: 2px solid #F7931E;*/
   padding: 0;
 }
 
