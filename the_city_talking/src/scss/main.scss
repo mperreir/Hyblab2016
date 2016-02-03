@@ -85,11 +85,10 @@
 
 .x_axis line,
 .y_axis path,
-.y_axis line {
-.x_axis path,
-.y_axis path {
-.x_axis text,
-.y_axis text {
+.y_axis line,
+.x_axis path{
+	stroke:#000;
+}
 /* end svg */
 
 .text{
