@@ -605,6 +605,33 @@ Elements de la question 4
 	bottom: 70%;
 }
 
+#perso1_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 2.5%;
+	left: 94%;
+	bottom: 42%;
+}
+
+#perso2_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 1.5%;
+	left: 83%;
+	bottom: 48%;
+}
+
+#perso3_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 0.8%;
+	left: 92.2%;
+	bottom: 66%;
+}
+
 /*
 DATA 1
 */
@@ -629,7 +656,7 @@ DATA 1
 	width: 30%;
 	height: 25%;
 	left: 10%;
-	top: 20%;
+	top: 15%;
 	font-size: 1vw;
 	color: #002266;
 }
@@ -644,7 +671,7 @@ DATA 1
 	position: absolute;
 	width: 30%;
 	padding: 2%;
-	top: 44%;
+	top: 40%;
 	left: 9.6%;
 	text-align: center;
 }
@@ -1889,10 +1916,43 @@ DATA 1
 #titre_i3
 {
 	width: 100%;
-	top:47.5%;
+	top:48.5%;
 	z-index: 3;
 	font-size: 1.5vw;
 }
+
+#pan1_i3
+{
+	width: 100%;
+	top:14%;
+	z-index: 3;
+	font-size: 1vw;
+}
+
+#pan2_i3
+{
+	width: 100%;
+	top:21%;
+	z-index: 3;
+	font-size: 1vw;
+}
+
+#pan3_i3
+{
+	width: 100%;
+	top:28%;
+	z-index: 3;
+	font-size: 1vw;
+}
+
+#pan4_i3
+{
+	width: 100%;
+	top: 34.5%;
+	z-index: 3;
+	font-size: 1vw;
+}
+
 
 /*bénéfices*/
 
