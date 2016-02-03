@@ -76,10 +76,15 @@ span>ul>li>p
 	color: #002266;
 }
 
+#fond_intercal_q
+{
+	left: -39.9%;	
+}
+
 #titre_intercalaire_questionnaire
 {
-	left: 31.5%;
-	bottom: 74.5%;
+	left: 6.5%;
+	bottom: 72.5%;
 }
 
 .text-left
@@ -114,7 +119,7 @@ span>ul>li>p
 
 .propositions
 {
-	top: 82.5%;
+	top: 80.5%;
 	width: 25%;
 	margin-right:15px;
 	margin-left:15px;
@@ -122,16 +127,18 @@ span>ul>li>p
 
 .liste_propositions
 {
+	z-index: 1;
 	position: absolute;
-	left: 17%;
+	left: 8%;
 	width: 60%;
 }
 
 .bloc_reponse
 {
+	z-index: 1;
 	position: absolute;
 	top: 30%;
-	left: 12%;
+	left: 28.5%;
 	background-color: #365471;
 	width: 10%;
 	height: 35%;
@@ -159,35 +166,35 @@ span>ul>li>p
 
 #q2
 {
-	left: 17%;
+	left: 8%;
 	z-index: 1;
 }
 
 #q3
 {
-	left: 17.5%;
+	left: 7.7%;
 	z-index: 1;
 }
 
 #q4
 {
-	left: 17.5%;
+	left: 7.6%;
 }
 
 .q2
 {
-	left: 37.5%;
+	left: 48.5%;
 	z-index: 1;
 }
 
 .q3
 {
-	left: 62.5%;
+	left: 68.5%;
 }
 
 .q4
 {
-	left: 87.5%;
+	left: 88.5%;
 }
 
 .bouton
@@ -198,11 +205,12 @@ span>ul>li>p
 
 .bouton_demarrer
 {
+	z-index: 1;
 	color: white;
 	position: absolute;
 	top : 80%;
-	left: 42.5%;
-	width: 15%;
+	left: 8.25%;
+	width: 3.5%;
 	font-size: 1.5vw;
 	background-color:#e4685d;
 	border:1px solid #ffffff;
@@ -240,7 +248,7 @@ span>ul>li>p
 {
 	position: absolute;
 	bottom: 85.5%;
-	left: 3.5%;
+	left: 20.5%;
 	width: 20%;
 }
 
@@ -274,22 +282,23 @@ span>ul>li>p
 #fond_q1
 {
 	z-index: 0;
-	left: -37.5%;
+	left: -19.9%;
 }
 
 #fond_q2
 {
-	left: -12.5%;
+	left: 0%;
 }
 
 #fond_q3
 {
-	left: 12.5%;
+	z-index: 0;
+	left: 20%;
 }
 
 #fond_q4
 {
-	left: 37.5%;
+	left: 40%;
 }
 
 #nuage1
@@ -391,23 +400,23 @@ span>ul>li>p
 #france
 {
 	position: absolute;
-	width: 12%;
+	width: 10%;
 	bottom: 5%;
-	left: 6.5%;
+	left: 25%;
 }
 
 #pays_de_la_loire
 {
 	position: absolute;
-	width: 3%;
-	left: 9.05%;
-	bottom: 43.5%;
+	width: 2.5%;
+	left: 27.1%;
+	bottom: 45%;
 }
 
 #ampoule_q2
 {
 	position: absolute;
-	left: 29.5%;
+	left: 44%;
 	width: 4%;
 	top: 32.5%;
 	height: auto;
@@ -416,7 +425,7 @@ span>ul>li>p
 #batiment_q2
 {
 	position: absolute;
-	left: 35.5%;
+	left: 48%;
 	width: 4%;
 	top: 32.5%;
 	height: auto;
@@ -425,7 +434,7 @@ span>ul>li>p
 #euro_q2
 {
 	position: absolute;
-	left: 42%;
+	left: 52%;
 	width: 4%;
 	top: 32.5%;
 	height: auto;
@@ -433,7 +442,8 @@ span>ul>li>p
 
 #titre_q2
 {
-	left: 33%;
+	z-index: 5;
+	left: 45%;
 	bottom: 85.5%;
 	width: 10%;
 }
@@ -441,9 +451,9 @@ span>ul>li>p
 #elements_q3
 {
 	position: absolute;
-	width: 25%;
+	width: 20%;
 	height: auto;
-	left: 50%;
+	left: 60%;
 	bottom: -10%;
 }
 
@@ -452,7 +462,7 @@ span>ul>li>p
 	position: absolute;
 	width: 2%;
 	height: auto;
-	left: 56.5%;
+	left: 65%;
 	bottom: 25%;
 }
 
@@ -461,8 +471,8 @@ span>ul>li>p
 	position: absolute;
 	width: 1.5%;
 	height: auto;
-	bottom: 18%;
-	left: 64%;
+	bottom: 20%;
+	left: 70.75%;
 }
 
 #panneau_2_q3
@@ -470,8 +480,8 @@ span>ul>li>p
 	position: absolute;
 	width: 1.5%;
 	height: auto;
-	bottom: 24%;
-	left: 65%;
+	bottom: 26%;
+	left: 71.5%;
 }
 
 #panneau_3_q3
@@ -479,37 +489,37 @@ span>ul>li>p
 	position: absolute;
 	width: 1.5%;
 	height: auto;
-	bottom: 24%;
-	left: 63%;
+	bottom: 26%;
+	left: 70%;
 }
 
 #pale_1_q3
 {
 	position: absolute;
-	width: 1.8%;
-	bottom: 55.8%;
-	left: 63.6%;
+	width: 1.6%;
+	bottom: 55.1%;
+	left: 70.8%;
 }
 
 #pale_2_q3
 {
 	position: absolute;
-	width: 1.8%;
-	bottom: 52.78%;
-	left: 64.94%;
+	width: 1.6%;
+	bottom: 55.2%;
+	left: 73.02%;
 }
 
 #pale_3_q3
 {
 	position: absolute;
-	width: 1.8%;
-	bottom: 55.8%;
-	left: 66.4%;
+	width: 1.6%;
+	bottom: 52.2%;
+	left: 71.87%;
 }
 
 #titre_q3
 {
-	left: 55%;
+	left: 62%;
 	bottom: 85.5%;
 	width: 15%;
 }
@@ -527,10 +537,10 @@ Elements de la question 4
 #elements_q4
 {
 	position: absolute;
-	width: 10%;
+	width: 9%;
 	height: auto;
-	left: 82.5%;
-	bottom: 7%;
+	left: 85.5%;
+	bottom: 5%;
 }
 
 #maison1_q4
@@ -538,7 +548,7 @@ Elements de la question 4
 	opacity: 0;
 	position: absolute;
 	width: 2%;
-	left: 80%;
+	left: 81%;
 	bottom: 55%;
 }
 
@@ -547,8 +557,8 @@ Elements de la question 4
 	opacity: 0;
 	position: absolute;
 	width: 2%;
-	left: 90%;
-	bottom: 50%;
+	left: 84%;
+	bottom: 48%;
 }
 
 #maison3_q4
@@ -565,8 +575,8 @@ Elements de la question 4
 	opacity: 0;
 	position: absolute;
 	width: 5%;
-	left: 77.5%;
-	bottom: 28%;
+	left: 81.5%;
+	bottom: 12%;
 }
 
 #maison5_q4
@@ -574,7 +584,7 @@ Elements de la question 4
 	opacity: 0;
 	position: absolute;
 	width: 1.5%;
-	left: 84.5%;
+	left: 92.5%;
 	bottom: 65%;
 }
 
@@ -583,8 +593,8 @@ Elements de la question 4
 	opacity: 0;
 	position: absolute;
 	width: 1%;
-	left: 92.5%;
-	bottom: 65%;
+	left: 88.5%;
+	bottom: 70%;
 }
 
 /*
