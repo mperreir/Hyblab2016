@@ -1449,7 +1449,7 @@ DATA 1
     width: 30%;
     height: 25%;
     padding: 2%;
-    top: 40%;
+    top: 37%;
     left: 9.6%;
     text-align: center;
 }
@@ -1815,79 +1815,4 @@ DATA 1
 #titre_concl
 {
 	width: 100%;
-}
-
-
-/*logo*/
-
-#logo_polytech
-{
-    position: absolute;
-    width: 5%;
-    top: 10%;
-    left: 10%;
-}
-
-#logo_agr
-{
-    position: absolute;
-    width: 1%;
-    top: 10%;
-    left: 60%;
-}
-
-#logo_sciencecom
-{
-    position: absolute;
-    width: 5%;
-    top: 10%;
-    left: 60%;
-}
-
-#logo_cc
-{
-    position: absolute;
-    width: 5%;
-    top: 10%;
-    left: 60%;
-}
-
-#logo_hebe
-{
-    position: absolute;
-    width: 5%;
-    top: 10%;
-    left: 60%;
-}
-
-#logo_hyblab
-{
-    position: absolute;
-    width: 5%;
-    top: 10%;
-    left: 60%;
-}
-
-#logo_mis
-{
-    position: absolute;
-    width: 5%;
-    top: 10%;
-    left: 60%;
-}
-
-#logo_osi
-{
-    position: absolute;
-    width: 5%;
-    top: 10%;
-    left: 60%;
-}
-
-#logo_medialab
-{
-    position: absolute;
-    width: 5%;
-    top: 10%;
-    left: 60%;
 }
