@@ -1557,3 +1557,68 @@ DATA 1
   stroke-width:4;
   stroke-dasharray:15;		
 }
+
+
+.bloc_annee
+{
+	position: absolute;
+	font-size: 0.8vw;
+	background-color: #2f4767;
+	width: 3.5%;
+    height: 4%;
+    padding: 0.3%;
+	color: white;
+	display: block;
+	vertical-align: middle;
+	text-align: center;
+	animation: flipInX 1s linear forwards;
+}
+
+#annee2008_3
+{
+    top: 76%;
+    left: 14.6%;
+}
+
+#annee2011_3
+{
+    top: 76%;
+    left: 30.2%;
+}
+
+#annee2014_3
+{
+    top: 76%;
+    left: 44.5%;
+}
+
+#annee2022_3
+{
+    top: 76%;
+    left: 59.5%;
+}
+
+#annee2030_3
+{
+    top: 76%;
+    left: 74.3%;
+}
+
+.animAnnee
+{
+	animation: flipInX 1s linear forwards;	
+}
+
+.animPale_3
+{
+	animation: rotatePale 5s linear infinite;	
+}
+
+@keyframes rotatePale {
+  from {
+  	transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
