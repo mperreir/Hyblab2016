@@ -169,6 +169,7 @@ window.addEventListener('load',function () {
 					.attr('x', legendCircleSize + legendSpacing)
 					.attr('y', legendCircleSize - legendSpacing)
 					.attr("fill", "white")
+					.atr('font-weight', 'bold')
 					.attr("font-size", "14px")
 					.text(function(d) { return d.label; });
 					 
