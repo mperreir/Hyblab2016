@@ -1346,6 +1346,11 @@ DATA 1
 
 /* Dataviz 2 */
 
+/*.arc-text
+{
+    transform: rotate(180deg);
+}*/
+
 #data2_pale
 {
     position: absolute;
@@ -1493,6 +1498,30 @@ DATA 1
 	left: 38%;
 }
 
+#bouton_eolien_data2
+{
+    position: absolute;
+    width: 5%
+    top: 50%;
+    left: 70%;
+}
+
+#bouton_solaire_data2
+{
+    position: absolute;
+    width: 5%
+    top: 10%;
+    left: 60%;
+}
+
+#bouton_biomasse_data2
+{
+    position: absolute;
+    width: 5%
+    top: 10%;
+    left: 60%;
+}
+
 /*Dataviz3*/
 
 #bloc_data3
@@ -1532,24 +1561,24 @@ DATA 1
 #eolienne_mat4_3
 {
 	position: absolute;
-	width: 38%;
-	top : 19.5%;
-	left: 45.1%;
+	width: 42%;
+	top : 15.5%;
+	left: 42.8%;
 }
 
 #eolienne_mat5_3
 {
 	position: absolute;
-	width: 42%;
-	top : 12.5%;
-	left: 58%;
+	width: 45%;
+	top : 9.5%;
+	left: 56.4%;
 }
 
 #eolienne_pale1_3
 {
 	position: absolute;
 	width: 13%;
-	top : 41.5%;
+	top : 44%;
 	left: 13%;
 }
 
@@ -1557,7 +1586,7 @@ DATA 1
 {
 	position: absolute;
 	width: 16%;
-	top : 30%;
+	top : 33.2%;
 	left: 27%;
 }
 
@@ -1565,24 +1594,24 @@ DATA 1
 {
 	position: absolute;
 	width: 18%;
-	top : 19.5%;
-	left: 40.5%;
+	top : 22.7%;
+	left: 40.7%;
 }
 
 #eolienne_pale4_3
 {
 	position: absolute;
 	width: 20%;
-	top : 13.5%;
-	left: 55%;
+	top : 11%;
+	left: 54.7%;
 }
 
 #eolienne_pale5_3
 {
 	position: absolute;
 	width: 20%;
-	top : 8.5%;
-	left: 70%;
+	top : 5.5%;
+	left: 69.7%;
 }
 
 #line_data3_1
@@ -1769,11 +1798,20 @@ DATA 1
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
 }
 
-#saviez_vous3
+#bloc_data3
 {
 	display: block;
-	width: 10%;
-	height: 10%;
-	left: 10%;
-	top: 10%;
+	width: 47%;
+	padding :9px 48px 0px 39px;
+	height: auto;
+	left: 40%;
+	top: 30vw;
+	border-radius: 2vw;
+	font-size: 1vw;
 }
+
+#titre_concl
+{
+	width: 100%;
+}
+

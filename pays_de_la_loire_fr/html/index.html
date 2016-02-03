@@ -437,11 +437,19 @@
       <section class="section section_perso">
         <span class="responsive_container" style="overflow: visible;">
             <img class="image_fond" src="../resources/images/Backgrounds/background3-08.svg" alt="Fond" id="fond_intro" />
+            <h2 class="text-center titre" id="titre_data1">
+                LES DIFFÉRENTES SOURCES</br>D'<span class="mot_important">ÉNERGIES RENOUVELABLES</span> </br>DE LA RÉGION <b>PAYS DE LA LOIRE</b>
+            </h2>
             <img src="../resources/images/data2/pale-bleu.svg" alt="pale" id="data2_pale" />
             <svg id="svg_dataviz2" viewbox="0 0 730 730" version="1.1" xmlns="http://www.w3.org/2000/svg" />
             <img src="../resources/images/data2/eolien.svg" alt="bouton eolien" id="data2_eolien" />
             <img src="../resources/images/data2/solaire.svg" alt="bouton solaire" id="data2_solaire" class="animated infinite bounce" />
             <img src="../resources/images/data2/biomasse.svg" alt="bouton biomasse" id="data2_biomasse" class="animated infinite bounce" />
+            
+            <span  id="bouton_eolien_data2" ><img src="../resources/images/data1/2008-bouton.svg" alt="Bouton eolien" /> Eolien </span>
+            <span  id="bouton_solaire_data2" ><img src="../resources/images/data1/2008-bouton.svg" alt="Bouton solaire" /> Solaire </span>
+            <span  id="bouton_biomasse_data2" ><img src="../resources/images/data1/2008-bouton.svg" alt="Bouton biomasse" /> Biomasse </span>
+            
             <span class="bloc_reponse" id="saviez_vous_eolienne">
                 <b>LE SAVIEZ-VOUS ?</b><br/><br/>
                 <p>L'éolien est une source d’énergie électrique renouvelable,
@@ -462,16 +470,9 @@
         </span>
       </section>
 
-      <!--<section class="section section_perso">
-        <svg id="svg_i3" style="margin: 0 40% 0;overflow:visible" width="200px" height="200px">
-          <!--<img id="trotteuse" style="margin: 0 47% 0;" src="../resources/images/previsions/aiguille-horloge.svg" alt="trotteuse"/>-->
-        <!--</svg>
-      </section>-->
       <section class="section section_perso" style="">
         <span class="responsive_container">
-          <h2 class="text-center titre" id="titre_data1">
-            LES <b>PAYS DE LA LOIRE</b>: UNE RÉGION <br/>DE PLUS EN PLUS <span class="mot_important">DYNAMIQUE</span> !
-          </h2>
+          
           <img class="image_fond" src="../resources/images/Backgrounds/background3-09.svg" alt="Fond"/>
           <img class="" src="../resources/images/previsions/aiguille.svg" alt="trotteuse" id="trotteuse" />
           <img class="" src="../resources/images/previsions/bandeaublanc.svg" alt="Pour demain, quelles prévisions ?" id="bandeau_i3" />
@@ -521,19 +522,27 @@
           <span class="bloc_valeur" id="valeur2_2030_3">+45%</span>
           <!--<button class="bouton_demarrer" onclick="stopAnims()">Stopper</button>-->
           <span class="text-center bloc_reponse" id="bloc_data3" >
-            <p class="text-center contenu_reponse">
-            <b>BONNE RÉPONSE</b><br/></br>
-            Bravo ! Les Pays de la Loire se positionnaient en 2013 à la <span class="chiffre_important">5ème</span> place !
+            <p class="text-center" style="font-size:1vw;">
+            <b>EN SAVOIR PLUS</b><br/></br>
+            La production d’énergies renouvelables issue des trois sources principales 
+            (l’éolienne, le photovoltaïque et la biomasse) a été <span style="font-size:1vw;" class="chiffre_important">multipliée par 6</span> entre 2008 et 2014 et pourrait 
+            être <span style="font-size:1vw;" class="chiffre_important">multipliée par 2,4</span> d’ici 2030
+            ! 
+            Deux champs d’éoliennes off-shore seront implantés d’ici 2020 et permettront d’améliorer la 
+            production d’énergies renouvelables de la région ! 
             </p>
-            <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="this.parentElement.style.display='none';" id="button_fermer" />
+            <img class="bouton_continuer" style="position:absolute;margin-top:-13%;right:0%;width:12%;" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="this.parentElement.style.display='none';" id="button_fermer" />
           </span>
         </span>
       </section>
 
       <section class="section section_perso">
-        <h2 class="contenu">
-          Blanc
-        </h2>
+        <span class="responsive_container" style="overflow:hidden;">
+          <h2 class="text-center titre" id="titre_concl">
+            QUELS <span class="mot_important">BÉNÉFICES</span> <b>POUR LA REGION PAYS DE LA LOIRE ?</b><br/>
+          </h2>
+          <img class="image_fond" style="z-index:-1" src="../resources/images/Backgrounds/background3-12.svg" alt="Fond"/>
+        </span>
       </section>
 
       <section class="section section_perso">
@@ -559,7 +568,7 @@
     <script type="text/javascript">
     $(document).ready(function() {
       $('#container').fullpage({
-        anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage', 'lastPage'],
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage'],
         
         slidesNavigation: true,
         slidesNavPosition: 'bottom',

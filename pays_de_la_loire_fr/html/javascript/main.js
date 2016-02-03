@@ -32,18 +32,19 @@ function updateCurrentSection(){
 		break;
 
 		case "4thPage" :
+
 		break;
 
 		case "5thPage" :
+			initI3();
 		break;
 
 		case "6thPage" :
-			initI3();
+			init3();
 		break;
 
 		case "7thPage" :
 		//alert("start");
-			init3();
 		break;
 
 		case "8thPage" :
@@ -70,15 +71,16 @@ function updateCurrentSection(){
 			break;
 
 			case "5thPage" :
+				stopAnims();
 			break;
 
 			case "6thPage" :
-				stopAnims();
+				reset3();
 			break;
 
 			case "7thPage" :
 				//alert("reset");
-				reset3();
+				
 			break;
 
 			case "8thPage" :
