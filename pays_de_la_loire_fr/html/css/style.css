@@ -1513,7 +1513,7 @@ DATA 1
     width: 30%;
     height: 25%;
     padding: 2%;
-    top: 40%;
+    top: 37%;
     left: 9.6%;
     text-align: center;
 }
@@ -1558,9 +1558,9 @@ DATA 1
 #bandeau_i3
 {
 	position: absolute;
-	width: 56%;
-	top : 4.5%;
-	left: 22.5%;
+	width: 78%;
+	top : 6.5%;
+	left: 11.5%;
 }
 
 #trotteuse
@@ -1576,7 +1576,7 @@ DATA 1
 	position: absolute;
 	width: 6%;
 	top : 32.5%;
-	left: 32%;
+	left: 31.7%;
 }
 
 
@@ -1879,5 +1879,64 @@ DATA 1
 #titre_concl
 {
 	width: 100%;
+}
+
+
+#titre_i3
+{
+	width: 100%;
+	top:47.5%;
+	z-index: 3;
+	font-size: 1.5vw;
+}
+
+/*bénéfices*/
+
+#emploi
+{
+    position: absolute;
+    width: 30%;
+    height: 25%;
+    left: 18%;
+    top: 30%;
+    font-size: 1vw;
+    color: #002266;
+}
+
+#emploi>b
+{
+    font-size: 1.25vw;
+}
+
+#propre
+{
+    position: absolute;
+    width: 40%;
+    height: 25%;
+    left: 41%;
+    top: 30%;
+    font-size: 1vw;
+    color: #002266;
+}
+
+#propre>b
+{
+    font-size: 1.25vw;
+}
+
+#eco
+{
+    position: absolute;
+    width: 30%;
+    height: 25%;
+    left: 65%;
+    top: 30%;
+    font-size: 1vw;
+    color: #002266;
+}
+
+#eco>b
+{
+    font-size: 1.25vw;
 }
 
