@@ -110,7 +110,8 @@ d3.json('json/treemap.json', function(root) {
         .on('click', transition)
       .select('text')
         .text(name(d))
-        .attr('fill', '#fff');
+        .attr('fill', '#fff')
+        .attr('font-size', '12px');
 
     grandparent // Ajout de la couleur de la balise 'grandparent'
         .datum(d.parent)
