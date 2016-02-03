@@ -111,6 +111,7 @@
             <img class="image_fond" src="../resources/images/Backgrounds/background3-04.svg" alt="Fond" id="fond_q1" />
           
             <img class="" src="../resources/images/questionnaire/france.svg" alt="Fond" id="france" />
+            <img class="" src="../resources/images/questionnaire/paysdelaloire.svg" alt="Fond" id="pays_de_la_loire" />
 
             <h2 class="text-center titre" id="titre_q1">
               EN 2012 LE <span class="mot_important">NOMBRE D'HABITANTS</span> EN PAYS DE LA LOIRE ÉTAIT DE : 
@@ -134,9 +135,9 @@
 
             <span class="contenu propositions">
               <ul class=" text-center liste_propositions" id="q1">
-                <li onclick="chooseAnswer(this.id)" id="q1_p1"><p>2 100 000</p></li>
-                <li onclick="chooseAnswer(this.id)" id="q1_p2"><p>2 900 000</p></li>
-                <li onclick="chooseAnswer(this.id)" id="q1_p3"><p>3 600 000</p></li>
+                <li onclick="chooseAnswer(this.id); setPDLSize(1);" id="q1_p1" ><p>2 100 000</p></li>
+                <li onclick="chooseAnswer(this.id); setPDLSize(2);" id="q1_p2"><p>2 900 000</p></li>
+                <li onclick="chooseAnswer(this.id); setPDLSize(3);" id="q1_p3"><p>3 600 000</p></li>
 
                 <img class="bouton_valider" id="q1_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
               </ul>

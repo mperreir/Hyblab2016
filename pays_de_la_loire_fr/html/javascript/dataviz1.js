@@ -113,8 +113,13 @@ function resetSlide (idQ) {
 	switch(idQ) {
 		case "q1":
 			var france = document.getElementById("france");
+			var paysdelaloire = document.getElementById("pays_de_la_loire");
 			$(france).transition({
 				left: '6.5%'
+			})
+			$(paysdelaloire).transition({
+				scale: 1,
+				left: '9.05%'
 			})
 			break;
 
@@ -267,9 +272,15 @@ function answerQuestions(prop_id) {
 
 	function animFrance() {
 		var france = document.getElementById("france");
+		var paysdelaloire = document.getElementById("pays_de_la_loire");
+
+		$(paysdelaloire).stop(true, true);
 
 		$(france).transition({
 			left: '1%'
+		})
+		$(paysdelaloire).transition({
+			left: '3.55%'
 		})
 	}
 
@@ -525,4 +536,26 @@ function goTo2014 () {
 
 	document.getElementById("bouton_2008_data1").style.pointerEvents = "auto";
 	document.getElementById("bouton_2014_data1").style.pointerEvents = "none";
+}
+
+function setPDLSize (grosseur) {
+	var paysdelaloire = document.getElementById("pays_de_la_loire");
+	console.debug("setPDLSize : "+grosseur);
+	switch(grosseur) {
+		case 1:
+			$(paysdelaloire).transition({
+				scale: 1
+			})
+			break;
+		case 2:
+			$(paysdelaloire).transition({
+				scale: 1.3
+			})
+			break;
+		case 3:
+			$(paysdelaloire).transition({
+				scale: 1.6
+			})
+			break;
+	}
 }
