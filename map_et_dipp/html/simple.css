@@ -283,7 +283,7 @@ nav ul li:not(:first-child)
     padding: 1%; /* 30px 30px 30px 10px */
     margin: 0 auto;
     margin-top: 1%;
-    width: 35%;
+    width: 26%;
     /* style du texte */
     color: #4c4c4c;
     font: 15px / 19px museoReg;
@@ -310,7 +310,7 @@ nav ul li:not(:first-child)
 
 #totalJoseph {
     padding: 0;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 #totalJoseph p {
@@ -330,7 +330,7 @@ nav ul li:not(:first-child)
 
 
 #diagrammeJoseph {
-    margin-top: 3%;
+    margin-top: 1%;
     margin-bottom: 0;
     padding: 0;
 }
