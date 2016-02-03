@@ -159,7 +159,7 @@ window.addEventListener('load',function () {
 	var legendsvg = d3.select("#pieInfo").append('svg')
 					.attr('id', 'legendSvg')
 					.attr('width', 300)
-					.attr('height', 300)
+					.attr('height', 300);
 	var legend = legendsvg.selectAll('.legend')
 					.data(globalpie.options.data.content)
 					.enter()
@@ -176,8 +176,7 @@ window.addEventListener('load',function () {
 					.attr('cx', legendCircleSize/2)
 					.attr('r', legendCircleSize/2)
 					.style('fill', function(d) { return d.color; })
-					.style('stroke', function(d) { return d.color; })	
-	
+					.style('stroke', function(d) { return d.color; });
 	legend.append('text')
 					.attr('x', legendCircleSize + legendSpacing)
 					.attr('y', legendCircleSize - legendSpacing)
@@ -197,7 +196,8 @@ window.addEventListener('load',function () {
 					
 					
 	var pieExplains = d3.select("#pieInfo").append("p")
-					.style("font-weight", "bold")
+					.style('id', 'pieExplains')
+					.style("font-weight", "bold");
 	
 	svg.select('.p0_pieChart').attr("transform","scale(0.8)");
 

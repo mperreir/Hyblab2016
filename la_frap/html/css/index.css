@@ -295,6 +295,10 @@ div#pieChart svg{
 	padding: 10px; 
 } 
 
+#pieExplains {
+	position: absolute;
+}
+
 #legendSvg {
 	transform: translateX(300px) translateY(280px);
 }
