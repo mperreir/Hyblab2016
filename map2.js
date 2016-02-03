@@ -1,3 +1,230 @@
+function defaultSetting() {
+    return {
+        radius: 250,
+        width: "100%",
+        height: "100%",
+        backgroundColor: "#00BFFF",
+        textColor: "#8A2908",
+        circleColor: "#81DAF5",
+        fontSize: "120px",
+        valueCount: true,
+        countTime: 1000,
+        xPosition: 900,     //le x position de svg de population percentage
+        yPosition: 100        //le y position de svg de population percentage
+
+    };
+}
+
+function defaultSettingText() {
+    return {
+        width: "100%",
+        height: "50%",
+        widthText: 100,
+        heightText: 50,
+        widthContenu: 200,
+        heightContenu: 400,
+        fontSizeTitle: "30px",
+        fontSizeContenu: "20px",
+        fontColor: "#FFFFFF"
+
+    }
+}
+
+function drawDescription(config, data) {
+    console.log(data);
+    var g = d3.select("#contenu").append("g")
+        .attr("width", config.widthContenu)
+        .attr("height", config.heightContenu);
+
+    var text1 = g.append("svg:text")
+        .attr("width", config.widthText)
+        .attr("height", config.heightText)
+        .attr("transform", "translate(50, 50)")
+        .attr("font-size", config.fontSizeTitle)
+        .style("color", config.fontColor)
+        .text(data[0]);
+
+    var text2 = g.append("svg:text")
+        .attr("width", config.widthText)
+        .attr("height", config.heightText)
+        .attr("transform", "translate(50, 100)")
+        .attr("font-size", config.fontSizeContenu)
+        .style("color", config.fontColor)
+        .text(data[1]);
+
+
+}
+
+function draw(config, data) {
+
+    // console.log(data);
+
+    var r = d3.scale.linear()
+        .range([0, config.radius])
+        .domain([0, 1]);
+
+    var cx = d3.scale.linear()
+        .range([0, config.radius])
+        .domain([0, 1]);
+
+    function cxPosition(d, i) {
+        if(i == 0) 
+            return cx(d.value);
+        else {
+            var x = cx(data[0].value);
+            for(var n = 1; n <= i; n++) {
+                x += .7 * Math.pow(-1, n-1)* (r(data[n-1].value) + r(data[n].value));
+            }
+            console.log("x=" + x);
+            return x;
+        }
+    }   
+
+    var cy = d3.scale.linear()
+        .range([0, config.radius])
+        .domain([0, 1]);
+
+    function cyPosition(d, i) {
+        if(i == 0) 
+            return cy(d.value);
+        else {
+            var y = cy(data[0].value);
+            for(var n = 1; n <= i; n++) {
+                y += .7 * (r(data[n-1].value) + r(data[n].value));
+            }
+            console.log("y=" + y);
+            return y;
+        }
+        return cy(d.value);
+    }
+    function a(i) {
+        var circle = document.getElementById("circle-0" + i);
+        return circle.getAttribute("r")*1.41;       
+    }
+
+
+    function b(i) {
+        var circle = document.getElementById("circle-0" + i);
+        return circle.getAttribute("r");        
+    }
+
+    var c = d3.scale.linear()
+        .range([0, .41*config.radius])
+        .domain([0, 1]);
+
+    var d = d3.scale.linear()
+        .range([0, 1.41*config.radius])
+        .domain([0, 1]);
+
+    var xText = d3.scale.linear()
+        .range([0, .3*config.radius])
+        .domain([0, 1]);
+
+    var yText = d3.scale.linear()
+        .range([0, 1.3*config.radius])
+        .domain([0, 1]);
+
+    var fontSize = d3.scale.linear()
+        .range([0, config.fontSize])
+        .domain([0, 1]);
+
+    var svg = d3.select("#map2")
+        .append("svg")
+        .attr("id", "contenu")
+        .attr("width", config.width)
+        .attr("height", config.height)
+        .style("background-color", config.backgroundColor);
+
+    var g = svg.append("g")
+        .attr("width", 200)
+        .attr("height", 500)
+        .style("background-color", config.backgroundColor)
+        .attr("transform", "translate(" + config.xPosition + "," + config.yPosition +")");
+
+    var circle = g.selectAll(".circleBackground")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("id", function(d, i) {
+            return "circle-0" + i;
+        })
+        .attr("cx", function(d, i) {
+            return cxPosition(d, i);
+        })
+        .attr("cy", function(d, i) {
+            return cyPosition(d, i);
+        })
+        .attr("r", function(d) {
+            return r(d.value);
+        })
+        .style("fill", config.circleColor);
+
+    var image = g.selectAll("image")
+        .data(data)
+        .enter().append("svg:image")
+        .attr("transform", function(d, i) {
+            var circle = document.getElementById("circle-0" + i);
+            return "translate(" + circle.getAttribute("cx") + "," + circle.getAttribute("cy") + ")";
+        })
+        .attr("x", function(d, i) {
+            return -a(i) / 2;
+        })
+        .attr("y", function(d, i) {
+            return -b(i)*.8;
+        })
+        .attr("width", function(d, i) {
+            return a(i);
+        })
+        .attr("height", function(d, i) {
+            return b(i);
+        })
+        .attr("xlink:href", function(d, i) {
+            return "image/perso-0" + i + ".svg";
+        });
+
+    var text = g.selectAll("text")
+        .data(data)
+        .enter().append("svg:text")
+        .attr("transform", function(d, i) {
+            var circle = document.getElementById("circle-0" + i);
+            return "translate(" + circle.getAttribute("cx") + "," + circle.getAttribute("cy") + ")";
+        })
+        .attr("x", function(d, i) {
+            return -.2*a(i);
+        })
+        .attr("y", function(d, i) {
+            return b(i) / 1.5;
+        })
+        .attr("width", function(d, i) {
+            return a(i);
+        })
+        .attr("height", function(d, i) {
+            return b(i);
+        })
+        .attr("font-size", function(d, i) {
+            return fontSize(d.value);
+        })
+        .text(function(d, i) {
+            return d.value * 100 + "%";
+        })
+        .attr("fill", config.textColor);
+
+    if(config.valueCount) {
+        g.selectAll("text")
+            .data(data)
+            .enter().append("svg:text")
+            .transition()
+            .duration(config.countTime)
+            .tween("text", function(d, i) {
+                var inter = d3.interpolate(this.textContent, d.value);
+                return function(t) { this.textContent = Math.round(inter(t)) + "%"; }               
+            });
+    }
+
+}
+
+
+
 (function() {
     "use strict";
 
@@ -317,8 +544,8 @@
             // sanity check, in case that barchart not cleaned previously
             map.removeControl(barchart);
         }
-        barchart.addTo(map);
-        barchart.draw(deciles);
+        // barchart.addTo(map);
+        // barchart.draw(deciles);
 
         var CD;
         var NM;
@@ -357,13 +584,13 @@
             } 
         }
 
-        console.log(popChart);
+
         if (popChart._map != undefined) {
             map.removeControl(popChart);
         };
 
-        popChart.addTo(map);  
-        popChart.draw(ages);
+        // popChart.addTo(map);  
+        // popChart.draw(ages);
 
         // add overlay (note: effect not good, disabled)
         // overlay.setAttribute('class', 'show');
@@ -390,7 +617,7 @@
     }
 
     function OnLsoaClick(e) {
-        console.log(window.data[e.target.feature.properties.LSOA11CD]);
+        // console.log(window.data[e.target.feature.properties.LSOA11CD]);
         map.fitBounds(e.target.getBounds());
     }
 
@@ -441,12 +668,14 @@
     var map = L.map('map2', {
         center: [53.85, -2.7],
         zoom: 11,
-        layers: [osm, topoMsoaLayer], // Only Add default layers here
+        // layers: [osm, topoMsoaLayer], // Only Add default layers here
+        layers: [topoMsoaLayer],
         minZoom: 11,
         maxZoom: 16,
         maxBounds: topoMsoaLayer.getBounds(),
         zoomControl: false
     });
+
 
     map.on('zoomend', function(e) {
         if (map.getZoom() >= 13) {
@@ -587,7 +816,7 @@
         }
     };
 
-    info.addTo(map);
+    // info.addTo(map);
 
     var searchbar = {};
     searchbar.create = function(map) {
@@ -602,7 +831,7 @@
 
         this._div.appendChild(this._input);
 
-        document.getElementById('map').appendChild(this._div);
+        document.getElementById('map2').appendChild(this._div);
 
         return this._div;
     };
@@ -626,7 +855,7 @@
                                 'indicator': indicator.toUpperCase(),
                                 'decile': window.data[lsoa11cd][indicator]['decile']
                             });
-                            console.log(window.data[lsoa11cd][indicator]['decile']);
+                            // console.log(window.data[lsoa11cd][indicator]['decile']);
                         }
                         if (barchart._map != undefined) {
                             map.removeControl(barchart);
@@ -649,8 +878,8 @@
             input.removeEventListener('keyup', keypressEventListener);
         });
     };
-    searchbar.create(map);
-    searchbar.configEventListener();
+    // searchbar.create(map);
+    // searchbar.configEventListener();
 
 
     var colorsOfIndicators = {
@@ -744,7 +973,7 @@
             '<div class="legend-label"><strong>least</strong> deprived</div>';
         return this._div;
     };
-    legend.addTo(map);
+    // legend.addTo(map);
 
 
 
@@ -861,42 +1090,6 @@
 
     }
 
-
-    /* ------------information icon--------- */
-    console.log(data);
-    var icon = d3.selectAll(".information")
-        .append("svg")
-        .attr("width", 20)
-        .attr("height", 15)
-        .append("image")
-        .attr("class", "icon_info")
-        .attr("x", 5)
-        .attr("y", 0)
-        .attr("width", 15)
-        .attr("height", 15)
-        .attr("xlink:href", "image/info28.png")
-        .append("title")
-        .text(function(d, i) {
-            return SUBDOMAIN[i];
-        });
-
-    function addEventListenerByClass(className, event, fn) {
-        var list = document.getElementsByClassName(className);
-        for (var i = 0, len = list.length; i < len; i++) {
-            list[i].addEventListener(event, fn, true);
-        }
-    }
-
-    addEventListenerByClass("icon_info", 'mouseover', function(e) {
-        d3.select(e.target)       
-            .attr("xlink:href", "image/info29.png");
-    });
-
-    addEventListenerByClass("icon_info", 'mouseout', function(e) {
-        d3.select(e.target)
-            .attr("xlink:href", "image/info28.png");
-    });
-
     // Temporary fix, used util IMD calculation error is fixed
     topoMsoaLayer.eachLayer(function(layer) {
         topoMsoaLayer.resetStyle(layer);
@@ -904,4 +1097,17 @@
     topoLsoaLayer.eachLayer(function(layer) {
         topoLsoaLayer.resetStyle(layer);
     });
+
+
+    /*-------------------------------------------*/
+    var data = [{"name":"0-15", "value":0.38}, {"name":"16-25", "value":0.1}, {"name":"26-35", "value":0.16}, 
+    {"name":"36-55", "value":0.26}, {"name":"56-90", "value":0.09}];
+
+    var description = ["THE AGE OF PRESTON", "description..................."];
+
+    draw(defaultSetting(), data);
+
+    drawDescription(defaultSettingText(), description);
+
 }());
+
