@@ -119,15 +119,12 @@ iframe {
 }
 /*==========Info Panel============*/
 .svg-btn {
-    float: left;
+   margin: 0 3px;
 }
 input[type="checkbox"] {
     display: none;
     width: 100px;
     height: 100px;
-}
-.svg-btn {
-    margin: -10px -10px;
 }
 .info {
     z-index: 3;
@@ -178,6 +175,9 @@ input[type="checkbox"] {
     background: rgba(255,255,255,0.8);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
+}
+.chartDescriptor h4{
+    color: #777;
 }
 .bar {
     fill: steelblue;

@@ -511,13 +511,16 @@
             '   <input id="environment" type="checkbox"/>' +
             '   <input id="housing" type="checkbox"/>' +
             '   <input id="crime" type="checkbox"/>' +
+            '   <div class="row">' +
             '   <img class="svg-btn" id="income-svg" src="documents/mapIcons/income-active.svg"/>' +
             '   <img class="svg-btn" id="health-svg" src="documents/mapIcons/health-active.svg"/>' +
             '   <img class="svg-btn" id="education-svg" src="documents/mapIcons/education-active.svg"/>' +
             '   <img class="svg-btn" id="employment-svg" src="documents/mapIcons/employment-active.svg"/>' +
+            '   </div><div class="row">' +
             '   <img class="svg-btn" id="environment-svg" src="documents/mapIcons/environment-active.svg"/>' +
             '   <img class="svg-btn" id="housing-svg" src="documents/mapIcons/housing-active.svg"/>' +
             '   <img class="svg-btn" id="crime-svg" src="documents/mapIcons/crime-active.svg"/>' +
+            '   </div>' +
             '</div>';
             ''/* +
             '<div class="sliderset">' +
@@ -884,6 +887,12 @@
     barchart.onAdd = function(map) {
         this._chartContainer = L.DomUtil.create('div', '');
         this._chartContainer.setAttribute('id', 'chartContainer');
+
+        this._chartDescriptor = L.DomUtil.create('div', 'chartDescriptor');
+        this._chartDescriptor.innerHTML = '<h4>Performance (10: Best, 0, Worst)</h4>';
+
+        this._chartContainer.appendChild(this._chartDescriptor);
+
         return this._chartContainer;
     };
     // deciles
