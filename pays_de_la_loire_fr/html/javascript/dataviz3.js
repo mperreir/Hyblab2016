@@ -127,7 +127,10 @@ function reset3() {
 	var annee2022 = document.getElementById("annee2022_3");
 	annee2022.style.display = "none";
 	var annee2030 = document.getElementById("annee2030_3");
-	annee2030.style.display = "none"; 
+	annee2030.style.display = "none";
+
+	var bloc_data3 = document.getElementById("bloc_data3");
+	bloc_data3.style.display = "none"; 
 
 	document.getElementById("valeur2008_3").style.display = "none";
 	document.getElementById("valeur2011_3").style.display = "none";
@@ -148,7 +151,7 @@ function animEolienne3_1(){
 	$(eolienne_pale1_3)
 	.transition({
 				opacity: 1,
-				top:'41.5%'
+				top:'44%'
 				}, 1000, 'easeOutCubic',function(){
 					if(stop3) { return;}
 					animEolienne3_2();
@@ -287,7 +290,10 @@ function animEolienne3_5(){
   					var valeur2_2030_3 = document.getElementById("valeur2_2030_3");
 					valeur2_2030_3.classList.remove("animValeur");
   					setTimeout(function(){valeur2_2030_3.classList.add("animValeur");valeur2_2030_3.style.display = "block";},1);
-				
+					
+					var bloc_data3 = document.getElementById("bloc_data3");
+					bloc_data3.classList.remove("animValeur");
+  					setTimeout(function(){bloc_data3.classList.add("animValeur");bloc_data3.style.display = "block";},1);
 				});
 }
 
@@ -316,10 +322,10 @@ function addRotation(id)
 	valeur2008_3.innerHTML = "";
 	valeur2011_3.innerHTML = "+237%";
 	valeur2014_3.innerHTML = "+72%";
-	valeur2022_3.innerHTML = "32%";
-	valeur2_2022_3.innerHTML = "62%";
-	valeur2030_3.innerHTML = "+29%";
-	valeur2_2030_3.innerHTML = "+45%";
+	valeur2022_3.innerHTML = "62%";
+	valeur2_2022_3.innerHTML = "32%";
+	valeur2030_3.innerHTML = "+45%";
+	valeur2_2030_3.innerHTML = "+29%";
 
 	var pale = document.getElementById(id);
 	setTimeout(function(){pale.classList.add("animPale_3");pale.style.animationPlayState="running";},1);
