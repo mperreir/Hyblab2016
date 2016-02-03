@@ -2,15 +2,15 @@ function defaultSetting() {
     return {
         radius: 250,
         width: "40%",
-        height: "500px",
+        height: "100%",
         backgroundColor: "#00BFFF",
         textColor: "#8A2908",
         circleColor: "#81DAF5",
         fontSize: "120px",
         valueCount: true,
         countTime: 1000,
-        xPosition: 120,     //le x position de svg de population percentage
-        yPosition: 50        //le y position de svg de population percentage
+        xPosition: 150,     //le x position de svg de population percentage
+        yPosition: 75        //le y position de svg de population percentage
 
     };
 }
@@ -127,7 +127,8 @@ function draw(config, data) {
         .range([0, config.fontSize])
         .domain([0, 1]);
 
-    var svg = d3.select("#page3")
+
+    var svg = d3.select("#page3").select(".fp-tableCell")
         .append("svg")
         .attr("id", "contenu")
         .attr("width", config.width)
@@ -325,20 +326,8 @@ function draw(config, data) {
             }).reduce(function(a, b) {
                 return a + b;
             });
-
         return result;
     }
-
-    // // calculate total agegroup for MSOA
-    // (function() {
-    //     for (var MSOA11CD in MSOA) {
-    //         MSOA[MSOA11CD]["ages"] = {};
-    //         for (var group in AGES) {
-    //             MSOA[MSOA11CD]["ages"][AGES[group]] = totalAges(AGES[group], MSOA[MSOA11CD]["LSOAs"]);
-    //         }
-    //     }
-        
-    // }());
 
     // calculate total number of people for MSOA
 
@@ -357,10 +346,10 @@ function draw(config, data) {
             MSOA[msoa11cd]["ages"] = {};
             var total = totalPeople(msoa11cd);  //total number of the total msoa11cd
             for (var group in GROUPS) {
-                console.log(total);              
                 MSOA[msoa11cd]["ages"][AGES[group]] = totalAges(GROUPS[group], MSOA[msoa11cd]["LSOAs"]) / total;
             }
         }
+        console.log(MSOA);
 
         
     }());
@@ -447,46 +436,24 @@ function draw(config, data) {
     var msoaLayersNum = Object.keys(MSOA).length;
 
     function LsoaStyle(feature) {
-        if (lsoaInitializedStyleCount < lsoaLayersNum) {
-            var d = window.data[feature.properties.LSOA11CD];
-            lsoaInitializedStyleCount++;
             return {
-                fillColor: getColor(d["IMD"]["raw"]),
+                // fillColor: getColor(d["IMD"]["raw"]),
+                fillColor: "#088A08",
                 weight: 2,
                 opacity: 0.5,
                 color: 'black',
                 fillOpacity: 0.7
             };
-        } else {
-            return {
-                fillColor: getColor(calculateIMD(feature.properties.LSOA11CD)),
-                weight: 2,
-                opacity: 0.5,
-                color: 'black',
-                fillOpacity: 0.7
-            };
-        }
     }
 
     function MsoaStyle(feature) {
-        if (msoaInitializedStyleCount < msoaLayersNum) {
-            msoaInitializedStyleCount++;
             return {
-                fillColor: getColor(MSOA[feature.properties.MSOA11CD]["IMD"]),
+                fillColor: "#088A08",
                 weight: 1,
                 opacity: 0.5,
                 color: 'black',
                 fillOpacity: 0.7
             };
-        } else {
-            return {
-                fillColor: getColor(calculateMsoaIMD(feature.properties.MSOA11CD)),
-                weight: 1,
-                opacity: 0.5,
-                color: 'black',
-                fillOpacity: 0.7
-            };
-        }
     }
 
     function getMsoaPopupContent(CD, NM) {
@@ -513,9 +480,6 @@ function draw(config, data) {
         if (!L.Browser.ie && !L.Browser.opera) {
             layer.bringToFront();
         }
-
-        // barchart.addTo(map);
-        // barchart.draw(deciles);
 
         var CD;
         var NM;
@@ -553,12 +517,10 @@ function draw(config, data) {
                 })
             } 
         }
-        // console.log(ages);
-        var page3 = document.getElementById("page3");
-        var contenu = document.getElementById("contenu");
-        if (page3 != undefined && contenu != undefined) {
-            page3.removeChild(contenu);
-        }
+        var contenu = d3.select("#contenu");
+        if (contenu != undefined) {
+            contenu.remove();
+        };
         // console.log(ages);
         draw(defaultSetting(), ages);
 

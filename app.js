@@ -59,9 +59,9 @@ function PCDtoLSOA11CD(PCD) {
 
 
 
-// (function() {
-//     $("#fullpage").fullpage({
-//         scrollBar: true,
-//         scrollingSpeed: 300
-//     });
-// }())
+(function() {
+    $("#fullpage").fullpage({
+        scrollBar: true,
+        scrollingSpeed: 300
+    });
+}())
