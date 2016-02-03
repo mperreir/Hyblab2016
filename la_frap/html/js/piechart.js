@@ -34,46 +34,46 @@ window.addEventListener('load',function () {
 			"content": [
 				{
 					"label": "Subventions",
-					"value": 68,
+					"value": 968517,
 					"color": "#ff314f",
-					"text":"texte sub"
+					"text":"Les radios de Loire-Atlantique  reçoivent en moyenne autant de subventions que le reste de la région. Dans le détail, Jet FM reçoit beaucoup plus de subventions de la région  et du département que les autres radios et  La Tribu de subventions de sa commune (Saint Nazaire). Prun’ et Sun sont quant à eux très soutenus par le département."
 				},
 				{
 					"label": "Aides à l'emploi",
-					"value": 10,
+					"value": 148239,
 					"color": "#954fd1",
-					"text":"texte aide"
+					"text":"Les aides à l’emploi sont les dispositifs de financement partiel mis en place par l’État ou les organismes sociaux  dont les radios associatives peuvent bénéficier."
 				},
 				{
 					"label": "Publicité",
-					"value": 7,
+					"value": 98791,
 					"color": "#004fa9",
-					"text":"texte pub"
+					"text":"Les ressources commerciales provenant de la publicité ou du parrainage doivent être inférieures à 20 % du chiffre d’affaires total des radios associative.  Seuls 3 des 11 radios de Loire-Atlantique produisent des messages publicitaires mais toutes diffusent des M.I.C ou M.I.G. (Messages d’Intérêt Général ou Collectifs ). Dans l’ensemble, les radios de Loire-Atlantique sont dans la moyenne régionale en ce qui concerne la publicité."
 				},
 				{
 					"label": "Evenements et ateliers",
-					"value": 2,
+					"value": 62257,
 					"color": "#3bbd31",
-					"text":"texte event"
+					"text":"Les radios associatives interviennent en dehors de leurs antennes pour des événements et des ateliers radios, source de diversification de leurs recettes.  Seuls 4 des 11 radios du département organisent des ateliers et 2 seulement des événements. La part des recettes liées aux ateliers radios et à des événements est alors plus élevée dans les radios mayennaises que dans le reste de la région."
 				},
 				{
 					"label": "Cotisations et dons ",
-					"value": 2,
+					"value": 38180,
 					"color": "#00c7e5",
-					"text":"texte dons"
+					"text":"Les dons sont une des spécificités des radios confessionnelles néanmoins en Loire-Atlantique la radio SUN en reçoit également mais de manière non significative par rapport à Fidélité. 8 des 11 radios du département bénéficient de cotisations. Dans l’ensemble, les radios de Loire-Atlantique reçoivent moins (4x moins) de dons et cotisations que le reste de la région."
 				},
 				{
 					"label": "Autre",
-					"value": 20,
+					"value": 183222,
 					"color": "#ff8b1d",
-					"text":"texte autre"
+					"text":"Comprend les ressources propres des radios et autres financements."
 				}
 			]
 		},
 		"labels": {
 			"outer": {
 				"format": "none",
-				"pieDistance": 20
+				"pieDistance": 15
 			},
 			"inner": {
 				"format": "none"

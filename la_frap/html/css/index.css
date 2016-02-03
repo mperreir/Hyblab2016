@@ -297,7 +297,7 @@ div#pieChart svg{
 
 #pieText {
 	position: absolute;
-	top: 500px;
+	top: 460px;
 }
 
 #legendSvg {
@@ -492,4 +492,10 @@ svg {
 
 #partenaire img{
 	margin:10px; 
+}
+
+#pieExplains{
+	color:white;
+	font-size: 12px;
+	font-weight: lighter;
 }
