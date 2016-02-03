@@ -32,6 +32,7 @@ li
 
 span>ul>li
 {
+	border: solid 1px blue;
 	background-color: #E1F1F3;
 	border-radius: 1vw;
 	color: black;
@@ -600,6 +601,11 @@ Elements de la question 4
 /*
 DATA 1
 */
+
+.element_decor
+{
+	opacity: 0.6;
+}
 
 #titre_data1
 {
@@ -1490,6 +1496,30 @@ DATA 1
 	width: 6%;
 	top : 31.5%;
 	left: 38%;
+}
+
+#bouton_eolien_data2
+{
+    position: absolute;
+    width: 5%
+    top: 50%;
+    left: 70%;
+}
+
+#bouton_solaire_data2
+{
+    position: absolute;
+    width: 5%
+    top: 10%;
+    left: 60%;
+}
+
+#bouton_biomasse_data2
+{
+    position: absolute;
+    width: 5%
+    top: 10%;
+    left: 60%;
 }
 
 /*Dataviz3*/

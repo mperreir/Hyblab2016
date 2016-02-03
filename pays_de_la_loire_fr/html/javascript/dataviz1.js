@@ -195,7 +195,7 @@ function resetSlide (idQ) {
 
 			$(elements_q4).transition({
 				scale: 1,
-				left: '82.5%'
+				left: '85.5%'
 			})
 			break;
 	}
@@ -362,7 +362,7 @@ function answerQuestions(prop_id) {
 
 		$(elements_q4).transition({
 			scale: 0.8,
-			left: '77%'
+			left: '80.5%'
 		})
 
 		var maison3 = document.getElementById("maison3_q4");
@@ -507,7 +507,8 @@ function goTo2008 () {
 	var elements = document.getElementsByClassName("elem_14");
 	var num_rand;
 
-	console.debug("Go To 2008");
+	var bouton_2008 = document.getElementById("bouton_2008_data1");
+	$(bouton_2008).stop(true, true);
 
 	for(var i = 0; i < elements.length; i++)
 	{
@@ -522,7 +523,6 @@ function goTo2008 () {
 			}, 500)
 	}
 
-	var bouton_2008 = document.getElementById("bouton_2008_data1");
 	var bouton_2014 = document.getElementById("bouton_2014_data1");
 	$(bouton_2014).transition({
 		scale: 0.8,
@@ -532,6 +532,15 @@ function goTo2008 () {
 		scale: 1.3,
 		opacity: 1
 	})
+
+	for(i = 0; i < 10; i++) {
+		$(bouton_2014).transition({
+			scale: 1.2,
+		})
+		$(bouton_2014).transition({
+			scale: 0.8,
+		}, 800)
+	}
 
 	document.getElementById("bouton_2008_data1").style.pointerEvents = "none";
 	document.getElementById("bouton_2014_data1").style.pointerEvents = "auto";
@@ -541,30 +550,49 @@ function goTo2014 () {
 	var elements = document.getElementsByClassName("elem_14");
 	var num_rand;
 
+	var bouton_2014 = document.getElementById("bouton_2014_data1");
+	$(bouton_2014).stop(true, true);
+
 	for(var i = 0; i < elements.length; i++)
 	{
-		console.debug($(elements[i]));
 		num_rand = Math.random();
 
 		// Application de l'animation inverse
-		$(elements[i]).transition({
-				left: '-=5%',
-				top: '-=6%',
-				opacity: 1,
-				delay: num_rand*100
-			}, 500)
+		if($(elements[i]).hasClass("element_decor")) {
+			$(elements[i]).transition({
+					left: '-=5%',
+					top: '-=6%',
+					opacity: 0.6,
+					delay: num_rand*100
+				}, 500)
+		} else {
+			$(elements[i]).transition({
+					left: '-=5%',
+					top: '-=6%',
+					opacity: 1,
+					delay: num_rand*100
+				}, 500)
+		}
 	}
 
 	var bouton_2008 = document.getElementById("bouton_2008_data1");
-	var bouton_2014 = document.getElementById("bouton_2014_data1");
 	$(bouton_2014).transition({
 		scale: 1.3,
 		opacity: 1
 	})
-	$(bouton_2008_data1).transition({
+	$(bouton_2008).transition({
 		scale: 0.8,
 		opacity: 0.5
 	})
+
+	for(i = 0; i < 10; i++) {
+		$(bouton_2008).transition({
+			scale: 1.2,
+		})
+		$(bouton_2008).transition({
+			scale: 0.8,
+		}, 800)
+	}
 
 	document.getElementById("bouton_2008_data1").style.pointerEvents = "auto";
 	document.getElementById("bouton_2014_data1").style.pointerEvents = "none";
