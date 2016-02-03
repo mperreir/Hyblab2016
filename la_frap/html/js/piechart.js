@@ -126,7 +126,7 @@ window.addEventListener('load',function () {
 
 				if(!info.expanded) {
 					pieData = d3.select('#idPieData');
-					pieData.text((100*info.data.value/pie.totalSize).toFixed(0) +'%');
+					pieData.text((100*info.data.value/globalpie.totalSize).toFixed(0) +'%');
 					is.text(info.data.value + "€")
 						.attr("fill", "white")
 						.attr("font-size","16px")
