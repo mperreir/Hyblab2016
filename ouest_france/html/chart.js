@@ -117,7 +117,9 @@ function requestGenerateInfo(type, year, slideId){
 }
 
 function generateInfo(text, slideId){
-	$('#'+slideId+" info p").html(text);
+	$('#'+slideId+" .info p").html(text);
+	console.log(slideId);
+	console.log(text);
 }
 
 function requestGenerateMenageDonut(type, year){
@@ -154,7 +156,6 @@ function generateChart(res, statut){
 			chartId = '#chartParc';
 			break;	
 	};
-	if(donnees.categorie == "menage") console.log(dataChart);
 	var chart = new Chartist.Line(chartId, dataChart, options);
 	
 	var seq = 0;
@@ -218,7 +219,6 @@ function generateChartData(donnees){
 			if(jQuery.inArray(donnees.years[0], donnees.yearsToScreen) != -1) dataChart.labels.push(donnees.years[0]);
 			else(dataChart.labels.push(null));
 			dataChart.series[0].push(dataToAdd(donnees, i));
-			console.log(dataToAdd(donnees, i));
 		}
 		else{
 			for(var j=1; j<donnees.years[i]-donnees.years[i-1]; j++){
@@ -238,7 +238,7 @@ function dataToAdd(donnees, index){
 	var retour = null;
 	switch(donnees.categorie){
 		case "menage":
-			retour = donnees.data[donnees.years[index]].detention.valeur;
+			retour = donnees.data[donnees.years[index]].detention.val;
 			break;
 
 		case "carburant":
@@ -327,15 +327,15 @@ function setLabelAnimation(param, categorie){
 				requestGenerateMenageDonut("mono", annee);
 				requestGenerateMenageDonut("biPlus", annee);
 				requestGenerateMenageDonut("none", annee);
-				//requestGenerateInfo(categorie, annee, "s2");
+				requestGenerateInfo(categorie, annee, "s2");
 				break;
 			case "parc":
 				requestGenerateParcDonutCars("neuf", annee);
 				requestGenerateParcDonutCars("occasion", annee);
-				//requestGenerateInfo(categorie, annee, "s3");
+				requestGenerateInfo(categorie, annee, "s3");
 				break;
 			case "carburant":
-				//requestGenerateInfo(categorie, annee, "s4");
+				requestGenerateInfo(categorie, annee, "s4");
 				break;
 		}
 	});
@@ -382,17 +382,17 @@ function relaunchAnimation(index, nextIndex, direction){
 			requestGenerateMenageDonut("mono", "1990");
 			requestGenerateMenageDonut("biPlus", "1990");
 			requestGenerateMenageDonut("none", "1990");
-			//requestGenerateInfo("menage", "1990", "s2");
+			requestGenerateInfo("menage", "1990", "s2");
 			break;
 		case 3:
 			requestGenerateChartDefilement("parc");
 			requestGenerateParcDonutCars("neuf", "1990");
 			requestGenerateParcDonutCars("occasion", "1990");
-			//requestGenerateInfo("parc", "1990", "s3");
+			requestGenerateInfo("parc", "1990", "s3");
 			break;
 		case 4:
 			requestGenerateChartDefilement("carburant");
-			//requestGenerateInfo("carburant", "1990", "s4");
+			requestGenerateInfo("carburant", "1990", "s4");
 			break;
 	}
 	switch(index){
