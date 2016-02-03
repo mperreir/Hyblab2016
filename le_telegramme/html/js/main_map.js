@@ -5,7 +5,7 @@ function doMap( url )
 //zoom, rotation ...
 var map = new GLMap('map', {
     position: { latitude:48.4082, longitude:-4.4982 },
-    zoom: 16,
+    zoom: 12,
     minZoom: 5,
     maxZoom: 20,
     state: true // stores map position/rotation in url
@@ -16,7 +16,7 @@ var map = new GLMap('map', {
 var osmb = new OSMBuildings({
   minZoom: 8,
   maxZoom: 22,
-  attribution: '© 3D <a href="https://osmbuildings.org/copyright/">OSM Buildings</a>',
+  attribution: '© 3D <a href="http://osmbuildings.org/copyright/">OSM Buildings</a>',
 }).addTo(map);
 
 
@@ -24,7 +24,7 @@ var osmb = new OSMBuildings({
 osmb.addMapTiles(
   'https://{s}.tiles.mapbox.com/v3/osmbuildings.kbpalbpk/{z}/{x}/{y}.png',
   {
-    attribution: '© Data <a href="https://openstreetmap.org/copyright/">OpenStreetMap</a> · © Map <a href="https://mapbox.com">MapBox</a>'
+    attribution: '© Data <a href="http://openstreetmap.org/copyright/">OpenStreetMap</a> · © Map <a href="http://mapbox.com">MapBox</a>'
   }
 );
 
@@ -35,16 +35,16 @@ osmb.addMapTiles(
 
   /* JSON File loading */
   console.log( "loading data from server..." );
-  $.get('data/cbats1.geojson', function(data) { // JQuery HTTP GET request to the server
+  $.get(url, function(data) { // JQuery HTTP GET request to the server
       //If the request is OK :
 
       var constrBats = JSON.parse(data); // parse json string answer to get a javascript object
       osmb.addGeoJSON(constrBats);
-      osmb.addGeoJSONTiles('https://{s}.data.osmbuildings.org/0.2/anonymous/tile/{z}/{x}/{y}.json');
+       osmb.addGeoJSONTiles('http://{s}.data.osmbuildings.org/0.2/anonymous/tile/{z}/{x}/{y}.json');
   });
 
 /* ANIMATIONS */
-  var valuesFrom = {latitude: 48.3714, longitude: -4.4849, rotation: 0, zoom: 12, tilt: 10},
+  /*var valuesFrom = {latitude: 48.3714, longitude: -4.4849, rotation: 0, zoom: 12, tilt: 10},
     valuesTo = {latitude: 48.39074, longitude: -4.48574, rotation: 40, zoom: 16, tilt: 30},
     animationTime = 15000;
 
@@ -64,7 +64,7 @@ osmb.addMapTiles(
   function animate(time) {
       requestAnimationFrame(animate);
       TWEEN.update(time);
-  }
+  }*/
 
   //***************************************************************************
 

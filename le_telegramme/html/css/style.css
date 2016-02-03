@@ -109,7 +109,7 @@ iframe {
 /*Middle panel */
 
 #middle {
-  width: 35%;
+  /*width: 35%; never ever put this !!!! */ 
   height : 100%;
   background-color : #F7931E;
   overflow-y: scroll;
