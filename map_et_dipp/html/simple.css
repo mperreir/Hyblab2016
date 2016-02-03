@@ -165,7 +165,8 @@ nav ul li:not(:first-child)
 #slide9
 {
     text-align: center;
-    background-color: #78dc82;
+    
+    background: url("./img/derniereslide.png") no-repeat center bottom, #90D7DF;
 }
 #slide9 h2
 {
@@ -173,15 +174,19 @@ nav ul li:not(:first-child)
     font: 50px museoBold;
     margin-bottom: 9%;    
 }
-#slide9 img:not(:first-child)
-{
-    margin-left: 3%;
-}
+
 #slide8 h2
 {
     color: #78dc82;
     font: 50px museoBold;
     margin-bottom: 9%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#slide8 p {
+    vertical-align: middle;
+    text-align: center;
 }
 
 #slide8 {
@@ -190,12 +195,14 @@ nav ul li:not(:first-child)
                 url(./img/plantesgauche.png) left center no-repeat,
                 url(./img/plantedroite.png) right center no-repeat;
 
+    height: 100vh;
+
 }
 
 #slide3 h2{
     color: #78dc82;
     font: 40px museoReg;
-    margin-bottom: 9%;
+    margin-bottom: 4%;
 }
     
 #slide3 h3, #slide8 h3{
@@ -217,10 +224,13 @@ nav ul li:not(:first-child)
 }
 #slide9 .bloc
 {
-    position: absolute;
-    top: 15%;
-    padding-left: 20%;
-    
+
+    margin-top: 1%;    
+}
+#slide2 .coteGauche
+{
+    width: 500px;
+    text-align: justify;
 }
 #slide3 .bloc, #slide8 .bloc{
     position: absolute;
