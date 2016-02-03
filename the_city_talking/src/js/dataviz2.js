@@ -14,22 +14,22 @@ let scale_y = d3.scale.linear().range([height,0]).domain([0,utils.max_NO2]);
 let scale_x = d3.scale.ordinal().rangePoints([0, width],0.5);
 
 let months = [
-	{name:'J',uri:'01'},
-	{name:'F',uri:'02'},
-	{name:'M',uri:'03'},
-	{name:'A',uri:'04'},
-	{name:'M',uri:'05'},
-	{name:'J',uri:'06'},
-	{name:'J',uri:'07'},
-	{name:'A',uri:'09'},
-	{name:'S',uri:'08'},
-	{name:'O',uri:'10'},
-	{name:'N',uri:'11'},
-	{name:'D',uri:'12'}];
+	{short:'J',name:"January",uri:'01'},
+	{short:'F',name:"February",uri:'02'},
+	{short:'M',name:"March",uri:'03'},
+	{short:'A',name:"April",uri:'04'},
+	{short:'M',name:"May",uri:'05'},
+	{short:'J',name:"June",uri:'06'},
+	{short:'J',name:"July",uri:'07'},
+	{short:'A',name:"August",uri:'09'},
+	{short:'S',name:"September",uri:'08'},
+	{short:'O',name:"October",uri:'10'},
+	{short:'N',name:"November",uri:'11'},
+	{short:'D',name:"December",uri:'12'}];
 let years = [2010,2011,2012,2013,2014,2015]
 let facilities = [
-	{name:"Centre",uri:"json_centre/"},
-	{name:"Headingley Kerbside",uri:"json_kerbside/"}]
+	{short:"C",name:"Centre",uri:"json_centre/"},
+	{short:"H K",name:"Headingley Kerbside",uri:"json_kerbside/"}]
 let current_month = 0 ;
 let current_year = 0 ;
 let current_facility = 0 ;
@@ -111,7 +111,8 @@ updateChart();
 
 months.forEach((e,i) => {
 	var button = document.createElement("button");
-	button.innerHTML = e.name ;
+	button.innerHTML = e.short ;
+	button.setAttribute("title",e.name);
 	button.classList.add("dataviz2_button");
 	button.addEventListener("click",selectMonth.bind(null,i));
 	document.getElementById("buttons_dataviz2_months").appendChild(button);
@@ -126,7 +127,8 @@ years.forEach((e,i) => {
 })
 facilities.forEach((e,i) => {
 	var button = document.createElement("button");
-	button.innerHTML = e.name ;
+	button.innerHTML = e.short ;
+	button.setAttribute("title",e.name);
 	button.classList.add("dataviz2_button");
 	button.addEventListener("click",selectFacility.bind(null,i));
 	document.getElementById("buttons_dataviz2_facilities").appendChild(button);
