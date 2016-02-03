@@ -605,6 +605,33 @@ Elements de la question 4
 	bottom: 70%;
 }
 
+#perso1_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 2.5%;
+	left: 94%;
+	bottom: 42%;
+}
+
+#perso2_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 1.5%;
+	left: 83%;
+	bottom: 48%;
+}
+
+#perso3_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 0.8%;
+	left: 92.2%;
+	bottom: 66%;
+}
+
 /*
 DATA 1
 */

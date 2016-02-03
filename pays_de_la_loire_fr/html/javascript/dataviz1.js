@@ -808,6 +808,10 @@ function displayHouses (nombre) {
 			var maison5 = document.getElementById("maison5_q4");
 			var maison6 = document.getElementById("maison6_q4");
 
+			var perso1 = document.getElementById("perso1_q4");
+			var perso2 = document.getElementById("perso2_q4");
+			var perso3 = document.getElementById("perso3_q4");
+
 			$(maison1).transition({
 				opacity: 0
 			}, 500)
@@ -823,6 +827,15 @@ function displayHouses (nombre) {
 			$(maison6).transition({
 				opacity: 0
 			}, 500)
+			$(perso1).transition({
+				opacity: 0
+			}, 500)
+			$(perso2).transition({
+				opacity: 0
+			}, 500)
+			$(perso3).transition({
+				opacity: 0
+			}, 500)
 			break;
 
 		case 2:
@@ -830,10 +843,15 @@ function displayHouses (nombre) {
 			var maison1 = document.getElementById("maison1_q4");
 			var maison4 = document.getElementById("maison4_q4");
 
+			var perso1 = document.getElementById("perso1_q4");
+
 			$(maison1).transition({
 				opacity: 1
 			}, 500)
 			$(maison4).transition({
+				opacity: 1
+			}, 500)
+			$(perso1).transition({
 				opacity: 1
 			}, 500)
 			break;
@@ -844,6 +862,9 @@ function displayHouses (nombre) {
 			var maison5 = document.getElementById("maison5_q4");
 			var maison6 = document.getElementById("maison6_q4");
 
+			var perso2 = document.getElementById("perso2_q4");
+			var perso3 = document.getElementById("perso3_q4");
+
 			$(maison2).transition({
 				opacity: 1
 			}, 500)
@@ -851,6 +872,12 @@ function displayHouses (nombre) {
 				opacity: 1
 			}, 500)
 			$(maison6).transition({
+				opacity: 1
+			}, 500)
+			$(perso2).transition({
+				opacity: 1
+			}, 500)
+			$(perso3).transition({
 				opacity: 1
 			}, 500)
 			break;
