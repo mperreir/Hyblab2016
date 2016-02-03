@@ -123,9 +123,11 @@ window.addEventListener('load',function () {
 
 				console.log(info);
 				var is = d3.select("#infoselected");
-
+				pieData = d3.select('#idPieData');
+				pieExplains = d3.select('#pieExplains');
+				
 				if(!info.expanded) {
-					pieData = d3.select('#idPieData');
+
 					pieData.text((100*info.data.value/globalpie.totalSize).toFixed(0) +'%');
 					is.text(info.data.value + "€")
 						.attr("fill", "white")
@@ -197,9 +199,9 @@ window.addEventListener('load',function () {
 					
 					
 	var pieExplains = d3.select("#pieInfo").append("p")
-					.style("font-weight", "bold")
+					.attr("id","pieExplains")
+					.style("font-weight", "bold");
 	
-	svg.select('.p0_pieChart').attr("transform","scale(0.8)");
 
 	/*pie = d3.select("#pieChart").select("svg");
 	pie.attr("height",300)*/
