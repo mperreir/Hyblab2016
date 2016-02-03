@@ -128,8 +128,14 @@
 	stroke-width:2px;
 }
 
+.linemonth {
+	fill:none;
+	stroke:url(#line-gradient-d3);
+	stroke-width:2px;
+}
+
 .pollution{
-	fill:rgba(124, 252, 0, 1);
+	fill:rgba(150, 255, 0, 1);
 }
 
 .prescription{
