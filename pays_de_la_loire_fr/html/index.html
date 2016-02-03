@@ -120,7 +120,7 @@
             <span class="text-center answers bloc_reponse" id="q1_ag">
               <p class="text-center contenu_reponse">
               <b>BONNE RÉPONSE</b><br/></br>
-              Bravo ! La région compte plus de <br/>3 600 000 habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
+              Bravo ! La région compte plus de <br/><span class="chiffre_important">3 600 000</span> habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
               </p>
               <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q1_ag_button" />
             </span>
@@ -128,7 +128,7 @@
             <span class="text-center answers bloc_reponse" id="q1_ab">
               <p class="text-center contenu_reponse">
               <b>MAUVAISE RÉPONSE</b><br/><br/>
-              Eh non ! La région compte plus de <br/>3 600 000 habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
+              Eh non ! La région compte plus de <br/><span class="chiffre_important">3 600 000</span> habitants. Cette population augmente chaque année, tout comme son besoin en énergie !
               </p>
               <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q1_ab_button" />
             </span>
@@ -164,7 +164,7 @@
               <span class="text-center answers bloc_reponse q2" id="q2_ag">
                 <p class="text-center contenu_reponse">
                 <b>BONNE RÉPONSE</b><br/></br>
-                Bravo ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
+                Bravo ! Les Pays de la Loire se positionnaient en 2013 à la <span class="chiffre_important">5ème</span> place !
                 </p>
                 <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q2_ag_button" />
               </span>
@@ -172,7 +172,7 @@
               <span class="text-center answers bloc_reponse q2" id="q2_ab">
                 <p class="text-center contenu_reponse">
                 <b>MAUVAISE RÉPONSE</b><br/></br>
-                Eh non ! Les Pays de la Loire se positionnaient en 2013 en 5ème place !
+                Eh non ! Les Pays de la Loire se positionnaient en 2013 à la <span class="chiffre_important">5ème</span> place !
                 </p>
                 <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q2_ab_button" />
               </span>
@@ -218,7 +218,7 @@
             <span class="text-center answers bloc_reponse q3" id="q3_ag">
               <p class="text-center contenu_reponse">
               <b>BONNE RÉPONSE</b><br/></br>
-              Bravo ! En effet, la région compte 62 parcs éoliens.
+              Bravo ! En effet, la région compte <span class="chiffre_important">62</span> parcs éoliens.
               </p>
               <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q3_ag_button" />
             </span>
@@ -226,17 +226,16 @@
             <span class="text-center answers bloc_reponse q3" id="q3_ab">
               <p class="text-center contenu_reponse">
               <b>MAUVAISE RÉPONSE</b><br/></br>
-              Eh non ! Il s’agissait de l’énergie éolienne. En effet, la région compte 62
-  parcs éoliens.
+              Eh non ! Il s’agissait de l’énergie éolienne. En effet, la région compte <span class="chiffre_important">62</span> parcs éoliens.
               </p>
               <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextQ(this.id)" id="q3_ab_button" />
             </span>
 
             <span class="contenu propositions">
               <ul class="text-center liste_propositions" id="q3">
-                <li onclick="chooseAnswer(this.id)" id="q3_p1"><p>Eolienne</p></li>
-                <li onclick="chooseAnswer(this.id)" id="q3_p2"><p>Photovoltaïque</p></li>
-                <li onclick="chooseAnswer(this.id)" id="q3_p3"><p>Biomasse</p></li>
+                <li onclick="chooseAnswer(this.id); animQ3(1);" id="q3_p1"><p>Eolienne</p></li>
+                <li onclick="chooseAnswer(this.id); animQ3(2);" id="q3_p2"><p>Photovoltaïque</p></li>
+                <li onclick="chooseAnswer(this.id); animQ3(3);" id="q3_p3"><p>Biomasse</p></li>
 
                 <img class="bouton_valider" id="q3_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
               </ul>
@@ -250,7 +249,13 @@
             <span class="">
               <img class="image_fond" src="../resources/images/Backgrounds/background3-04.svg" alt="Fond" id="fond_q4" />
 
-              <img class="" src="../resources/images/questionnaire/maison+perso.svg" alt="Fond" id="elements_q4" />
+              <img class="" src="../resources/images/questionnaire/maison+perso.svg" alt="Maison et 2 personnes" id="elements_q4" />
+              <img class="" src="../resources/images/questionnaire/maison2.svg" alt="Maison" id="maison1_q4" />
+              <img class="" src="../resources/images/questionnaire/maison3.svg" alt="Maison" id="maison2_q4" />
+              <img class="" src="../resources/images/questionnaire/maison4.svg" alt="Maison" id="maison3_q4" />
+              <img class="" src="../resources/images/questionnaire/maison1.svg" alt="Maison" id="maison4_q4" />
+              <img class="" src="../resources/images/questionnaire/maison3.svg" alt="Maison" id="maison5_q4" />
+              <img class="" src="../resources/images/questionnaire/maison2.svg" alt="Maison" id="maison6_q4" />
 
               <h2 class="text-center titre" id="titre_q4">
                 EN UN AN, LES <span class="mot_important">ÉNERGIES RENOUVELABLES PRODUITES</span> EN PAYS DE LA LOIRE ALIMENTENT L'ÉQUIVALENT DE...
@@ -259,7 +264,7 @@
               <span class="text-center answers bloc_reponse q4" id="q4_ag">
                 <p class="text-center contenu_reponse">
                 <b>BONNE RÉPONSE</b><br/></br>
-                Bravo ! La production d’énergie de la région était estimée à 1654GW en 2014.<br/>Cette production permet donc d’alimenter 165 400 foyers !
+                Bravo ! La production d’énergie de la région était estimée à 1654 GW en 2014.<br/>Cette production permet donc d’alimenter <br/><span class="chiffre_important">165 400</span> foyers !
                 </p>
                 <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextS(this.id)" id="q4_ag_button" />
               </span>
@@ -267,17 +272,16 @@
               <span class="text-center answers bloc_reponse q4" id="q4_ab">
                 <p class="text-center contenu_reponse">
                 <b>MAUVAISE RÉPONSE</b><br/></br>
-                Eh non ! La production d’énergie de la région était estimée à 1654GW en
-    2014.<br/>Cette production permet donc d’alimenter 165 400 foyers !
+                Eh non ! La production d’énergie de la région était estimée à 1654 GW en 2014.<br/>Cette production permet donc d’alimenter <br/><span class="chiffre_important">165 400</span> foyers !
                 </p>
                 <img class="bouton_continuer" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="moveNextS(this.id)" id="q4_ab_button" />
               </span>
 
               <span class="contenu propositions">
                 <ul class="text-center liste_propositions" id="q4">
-                  <li onclick="chooseAnswer(this.id)" id="q4_p1"><p>115 700<br/>foyers</p></li>
-                  <li onclick="chooseAnswer(this.id)" id="q4_p2"><p>153 000<br/>foyers</p></li>
-                  <li onclick="chooseAnswer(this.id)" id="q4_p3"><p>165 400<br/>foyers</p></li>
+                  <li onclick="chooseAnswer(this.id); displayHouses(1);" id="q4_p1"><p>115 700<br/>foyers</p></li>
+                  <li onclick="chooseAnswer(this.id); displayHouses(2);" id="q4_p2"><p>153 000<br/>foyers</p></li>
+                  <li onclick="chooseAnswer(this.id); displayHouses(3);" id="q4_p3"><p>165 400<br/>foyers</p></li>
 
                   <img class="bouton_valider" id="q4_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
                 </ul>
@@ -308,9 +312,9 @@
           <span class="bloc_reponse" id="saviez_vous">
             <b>LE SAVIEZ-VOUS ?</b><br/><br/>
             <p>En Pays de la Loire, la production d'énergie renouvelable sous obligation d'achat en Gw/h a été multipliée par 6 en 6 ans ! (entre 2008 et 2014)<br/>
-            <b class="petit_mot">Eolien</b>: la production a été multipliée par 4 entre 2008 et 2014<br/>
-            <b class="petit_mot">Photovoltaïque</b>: la production a été multipliée par 72 entre 2008 et 2014<br/>
-            <b class="petit_mot">Biomasse</b>: la production a été multipliée par 66 entre 2008 et 2014<br/>
+            <b class="petit_mot">Eolien</b>: la production a été multipliée par <span class="chiffre_important">4</span> entre 2008 et 2014<br/>
+            <b class="petit_mot">Photovoltaïque</b>: la production a été multipliée par <span class="chiffre_important">72</span> entre 2008 et 2014<br/>
+            <b class="petit_mot">Biomasse</b>: la production a été multipliée par <span class="chiffre_important">66</span> entre 2008 et 2014<br/>
             <cite>Source: ores.paysdelaloire.fr</cite></p>
           </span>
 
@@ -442,32 +446,20 @@
             <img src="../resources/images/data2/biomasse.svg" alt="bouton biomasse" id="data2_biomasse" class="animated infinite bounce" />
             <span class="bloc_reponse" id="saviez_vous_eolienne">
                 <b>LE SAVIEZ-VOUS ?</b><br/><br/>
-                <p>Les éoliennes sont une source d’énergie électrique renouvelable,
-                elles permettent d’exploiter la force du vent. En Pays de Loire, on compte plus de 62 parcs
-                éoliens raccordés au réseau.
-                En 2014, la part de l’énergie sous obligation d’achat produite par les éoliennes représentait 64,5%
-                de la production des énergies renouvelables en région.<br/>
-                <cite>Source: ores.paysdelaloire.fr</cite></p>
+                <p>L'éolien est une source d’énergie électrique renouvelable,
+                elle permet d’exploiter la force du vent. En Pays de Loire, on compte plus de <span class="chiffre_important">62</span> parcs éoliens raccordés au réseau. En 2014, la part de l’énergie sous obligation d’achat produite par les éoliennes représentait <span class="chiffre_important">64,5%</span> de la production des énergies renouvelables en région.<br/><cite>Source: ores.paysdelaloire.fr</cite></p>
             </span>
             <span class="bloc_reponse" id="saviez_vous_solaire" style="display: none">
                 <b>LE SAVIEZ-VOUS ?</b><br/><br/>
                 <p>L’énergie photovoltaïque permet de produire de
-                l’électricité en utilisant le rayonnement solaire. Elle connaît un fort développement. En Pays de la
-                Loire, on compte plus de 38 000 sites raccordés au réseau.<br/>
-                En 2014, la part de l’énergie sous obligation d’achat produite par les installations photovoltaïques
-                représentait 22% de la production des énergies renouvelables en région.<br/>
-                <cite>Source: ores.paysdelaloire.fr</cite></p>
+                l’électricité en utilisant le rayonnement solaire. Elle connaît un fort développement. En Pays de la Loire, on compte plus de <span class="chiffre_important">38 000</span> sites raccordés au réseau.<br/> En 2014, la part de l’énergie sous obligation d’achat produite par les installations photovoltaïques
+                représentait <span class="chiffre_important">22%</span> de la production des énergies renouvelables en région.<br/><cite>Source: ores.paysdelaloire.fr</cite></p>
             </span>
             <span class="bloc_reponse" id="saviez_vous_biomasse" style="display: none">
                 <b>LE SAVIEZ-VOUS ?</b><br/><br/>
                 <p> La biomasse permet de générer de la chaleur à partir de
-                matières organiques vivantes, d’origine végétale ou animale. Cette chaleur permet de produire de
-                l’électricité. Elle dégage très peu de gaz à effet de serre, cette source d’énergie naturelle, participe
-                au traitement et à la destruction des déchets organiques. En pays de la Loire, on compte plus de
-                26 installations de méthanisation (biomasse).<br/>
-                En 2014, la part de l’énergie sous obligation d’achat produite par les installations photovoltaïques
-                représentait 12% de la production des énergies renouvelables en région.<br/>
-                <cite>Source: ores.paysdelaloire.fr</cite></p>
+                matières organiques vivantes, d’origine végétale ou animale. Cette chaleur permet de produire de l’électricité. Elle dégage très peu de gaz à effet de serre, cette source d’énergie naturelle, participe
+                au traitement et à la destruction des déchets organiques. En pays de la Loire, on compte plus de <span class="chiffre_important">26</span> installations de méthanisation (biomasse).<br/> En 2014, la part de l’énergie sous obligation d’achat produite par les installations photovoltaïques représentait <span class="chiffre_important">12%</span> de la production des énergies renouvelables en région.<br/><cite>Source: ores.paysdelaloire.fr</cite></p>
             </span>
         </span>
       </section>
