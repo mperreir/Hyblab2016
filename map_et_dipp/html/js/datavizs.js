@@ -363,7 +363,7 @@ svgAside.append("line").attr("x1", widthAside/2).attr("y1", 35).attr("x2",widthA
 svgAside.append("text").attr("x",widthAside-(widthAside/3)-20)
 	.attr("y",40)
 	.text("MAX")
-	.attr("fill","#1badbd")
+	.attr("fill",couleurLigneMax)
 	.attr("stroke-width","1px");
 
 svgAside.append("text")
