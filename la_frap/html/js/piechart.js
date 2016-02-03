@@ -153,6 +153,37 @@ window.addEventListener('load',function () {
 					.attr("y", "50%")
 					.attr("dx", "0px")
 					.attr("dy", "10px");
+	
+	var legendCircleSize = 14;
+	var legendSpacing = 8;
+	var legendsvg = d3.select("#pieInfo").append('svg')
+					.attr('id', 'legendSvg')
+					.attr('width', 300)
+					.attr('height', 300)
+	var legend = legendsvg.selectAll('.legend')
+					.data(pie.options.data.content)
+					.enter()
+					.append('g')
+					.attr('class', 'legend')
+					.attr('transform', function(d, i) {
+						var height = legendCircleSize + legendSpacing;
+						var horiz = -2*legendCircleSize;
+						var vert = 	legendCircleSize + i*height;
+						return 'translate('+'0'+','+vert+')';
+					});
+	
+	legend.append('circle')
+					.attr('cx', legendCircleSize/2)
+					.attr('r', legendCircleSize/2)
+					.style('fill', function(d) { return d.color; })
+					.style('stroke', function(d) { return d.color; })	
+	
+	legend.append('text')
+					.attr('x', legendCircleSize + legendSpacing)
+					.attr('y', legendCircleSize - legendSpacing)
+					.attr("fill", "white")
+					.attr("font-size", "14px")
+					.text(function(d) { return d.label; });
 					 
 	var pieClick = svg.append("text")
 					.attr("id","infoselected")
