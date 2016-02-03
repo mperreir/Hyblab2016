@@ -95,6 +95,7 @@ function requestData(callback, type){
 			dataType : "text",
 			success : function(res, status){
 				data[type] = JSON.parse(res);
+				console.log(data);
 				callback();
 			},
 			error : function(res, statut, error){
@@ -366,6 +367,7 @@ function setLabelAnimation(param, categorie){
 				requestGenerateMenageDonut("biPlus", annee);
 				requestGenerateMenageDonut("none", annee);
 				requestGenerateInfo(categorie, annee, "s2");
+				$("#phraseMenage p").html("En "+annee+", les ménages français gardaient leur voiture en moyenne durant "+data.menage.data[annee].detention.val+" années");
 				break;
 			case "parc":
 				requestGenerateParcDonutCars("neuf", annee);
@@ -422,6 +424,7 @@ function relaunchAnimation(index, nextIndex, direction){
 			requestGenerateMenageDonut("biPlus", "1990");
 			requestGenerateMenageDonut("none", "1990");
 			requestGenerateInfo("menage", "1990", "s2");
+			$("#phraseMenage p").html("En "+"1990"+", les ménages français gardaient leur voiture en moyenne durant "+data.menage.data["1990"].detention.val+" années");
 			break;
 		case 3:
 			requestGenerateChartDefilement("parc");
@@ -431,7 +434,7 @@ function relaunchAnimation(index, nextIndex, direction){
 			break;
 		case 4:
 			requestGenerateChartDefilement("carburant");
-			requestGenerateInfo("carburant", "1990", "s4");
+			requestGenerateInfo("carburant", "2009", "s4");
 			requestChartCarburant("2009");
 			break;
 	}

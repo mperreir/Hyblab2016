@@ -32,20 +32,6 @@ span .ct-label{
 	width: 2.2vw;
 	position: absolute;
 }
-/*#c1{
-	height: 2.2vh;
-	width: 2.2vw;
-	position: absolute;
-	top:47.2vh;
-	left:62.5vw;
-}
-#c2{
-	height: 2.2vh;
-	width: 2.2vw;
-	position: absolute;
-	top:vh;
-	left:60.4vw;
-}*/
 #neuf{
 	z-index: 40;
 	top: 20vh;
@@ -56,4 +42,11 @@ span .ct-label{
 	z-index: 40;
 	top: 50vh;
 	left: 72vw;
+}
+
+.panneauAnnees{
+	position: absolute;
+	width: 10vw;
+	bottom: 10vh;
+	right: 15vw;
 }

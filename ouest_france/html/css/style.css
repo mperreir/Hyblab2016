@@ -45,6 +45,11 @@ h2{
 	color: #5794B2;
 }
 
+h4{
+	margin : 0 0 0 0;
+	padding : 0 0 0 0;
+}
+
 #scroll{
 	height: 10vh;
 }
@@ -109,7 +114,7 @@ h2{
 	left: 4vw;
 	padding: 10px;
 	width: 20vw;
-	height: 30vh;
+	height: 35vh;
 	overflow: auto;
 	border-radius: 10px;
 	//box-shadow: 5px 7px 0px rgba(233, 164, 129, 0.7);
@@ -124,7 +129,7 @@ h2{
 	left: 7vw;
 	padding: 10px;
 	width: 20vw;
-	height: 30vh;
+	height: 40vh;
 	overflow: auto;
 	border-radius: 10px;
 	//box-shadow: 5px 7px 0px rgba(233, 164, 129, 0.7);

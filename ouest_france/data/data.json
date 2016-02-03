@@ -20,17 +20,17 @@
             "2014"
         ],
         "yearsComments":{
-          "1990" : "En 1990, 76,8% des ménages sont équipés d’au moins une voiture. La tendance est aux ménages mono-motorisés (50,5%), tandis les ménages bi-motorisés ou plus sont minoritaires (26,3%). La part des ménages non-motorisés s’élève à 23,2%.",
-          "2000" : "La part des ménages motorisés augmente légèrement, en raison notamment des aides de l’Etat mises en place dans les années 90 pour acquérir un véhicule. La part de ménages bi-motorisés ou plus augmente, passant de 26,3% à 29,6%. La part des ménages non-motorisés diminue, baissant de 23,2% à 19,7%.",
+          "1990" : "<h4>1990</h4></br>En 1990, 76,8% des ménages sont équipés d’au moins une voiture. La tendance est aux ménages mono-motorisés (50,5%), tandis les ménages bi-motorisés ou plus sont minoritaires (26,3%). La part des ménages non-motorisés s’élève à 23,2%.",
+          "2000" : "<h4>2000</h4></br>La part des ménages motorisés augmente légèrement, en raison notamment des aides de l’Etat mises en place dans les années 90 pour acquérir un véhicule. La part de ménages bi-motorisés ou plus augmente, passant de 26,3% à 29,6%. La part des ménages non-motorisés diminue, baissant de 23,2% à 19,7%.",
           "2006" : "",
           "2007" : "",
           "2008" : "",
           "2009" : "",
-          "2010" : "La part des ménages motorisés continue d’augmenter, passant de 80,3% à 83,5%. Les ménages disposent de plus en plus d’une seconde voiture : la part des bi-motorisés ou plus grimpe de 29,6% à 35,9%.",
+          "2010" : "<h4>2010</h4></br>La part des ménages motorisés continue d’augmenter, passant de 80,3% à 83,5%. Les ménages disposent de plus en plus d’une seconde voiture : la part des bi-motorisés ou plus grimpe de 29,6% à 35,9%.",
           "2011" : "",
           "2012" : "",
           "2013" : "",
-          "2014" : "Pour la première fois, la part des ménages motorisés recule, passant de 83,5% à 82,8%. La part des ménages mono-motorisés remonte, passant de 47,6% à 48,8%."
+          "2014" : "<h4>2014</h4></br>Pour la première fois, la part des ménages motorisés recule, passant de 83,5% à 82,8%. La part des ménages mono-motorisés remonte, passant de 47,6% à 48,8%."
         },
         "data": {
             "mono": {
@@ -237,12 +237,12 @@
             "2014"
         ],
         "yearsComments":{
-          "2009" : "Le diesel est déjà le carburant préféré des Français : moins cher à la consommation et moins energivore, il est la boisson de 1 635 542 véhicules en France. L’essence n’est pas en reste, mais tous les autres types d’énergies sont à la peine. L’électricité et le gaz sont quasi inexistants, et les voitures hybrides ou bicarburant ne représentent qu’à peine 1% du parc français.",
-          "2010" : "Les nouvelles énergies tentent une percée : elles passent de 1.5 % du parc automobile français à 4 %, soit 50 000 voitures de plus qui roulent écolo. La préférence va au bicarburant électricité + essence qui concerne 75 568 unités sur plus de deux millions véhicules.",
-          "2011" : "Les nouvelles énergies retombent comme un soufflé : elles passent de 4 % à 1,3 %. Le bicarburant est complètement délaissé au profit du tout électrique qui commence à se faire connaître et évoluera doucement jusqu’à ce jour. Indétrônable, le diesel gagne 2 points de plus.",
-          "2012" : "L’électrique poursuit lentement sa percée avec 5.663 français convaincus tandis que l’hybride triple ses ventes avec presque 30 000 véhicules, encouragé par des aides incitatives de l’Etat. Le superhétanol est à son apogée en 4 ans, en atteignant... 0.4 % du parc automobile. Par la suite, il va chuter fortement.",
-          "2013" : "2013, année du changement : le diesel est en berne. De plus en plus accusé de polluer, et de moins en moins compétitif, il perd 6 % du marché. L’essence en profite pour atteindre 29 % du parc automobile. Le superhétanol, lui, n’est plus qu’un lointain souvenir avec 240 voitures concernées sur quasiment 1,8 million d’autos.",
-          "2014" : "La tendance se confirme : l’énergie diesel est toujours plus délaissée (64 %) au profit de l’essence (33 %), de l’hybride et de l’électricité."
+          "2009" : "<h4>2009</h4></br>Le diesel est déjà le carburant préféré des Français : moins cher à la consommation et moins energivore, il est la boisson de 1 635 542 véhicules en France. L’essence n’est pas en reste, mais tous les autres types d’énergies sont à la peine. L’électricité et le gaz sont quasi inexistants, et les voitures hybrides ou bicarburant ne représentent qu’à peine 1% du parc français.",
+          "2010" : "<h4>2010</h4></br>Les nouvelles énergies tentent une percée : elles passent de 1.5 % du parc automobile français à 4 %, soit 50 000 voitures de plus qui roulent écolo. La préférence va au bicarburant électricité + essence qui concerne 75 568 unités sur plus de deux millions véhicules.",
+          "2011" : "<h4>2011</h4></br>Les nouvelles énergies retombent comme un soufflé : elles passent de 4 % à 1,3 %. Le bicarburant est complètement délaissé au profit du tout électrique qui commence à se faire connaître et évoluera doucement jusqu’à ce jour. Indétrônable, le diesel gagne 2 points de plus.",
+          "2012" : "<h4>2012</h4></br>L’électrique poursuit lentement sa percée avec 5.663 français convaincus tandis que l’hybride triple ses ventes avec presque 30 000 véhicules, encouragé par des aides incitatives de l’Etat. Le superhétanol est à son apogée en 4 ans, en atteignant... 0.4 % du parc automobile. Par la suite, il va chuter fortement.",
+          "2013" : "<h4>2013</h4></br>2013, année du changement : le diesel est en berne. De plus en plus accusé de polluer, et de moins en moins compétitif, il perd 6 % du marché. L’essence en profite pour atteindre 29 % du parc automobile. Le superhétanol, lui, n’est plus qu’un lointain souvenir avec 240 voitures concernées sur quasiment 1,8 million d’autos.",
+          "2014" : "<h4>2014</h4></br>La tendance se confirme : l’énergie diesel est toujours plus délaissée (64 %) au profit de l’essence (33 %), de l’hybride et de l’électricité."
         },
         "data": {
             "diesel": {
@@ -450,17 +450,17 @@
             "2014"
         ],
         "yearsComments":{
-          "1990" : "En 1990, le marché de l’occasion représente la moitié des voitures particulières vendues en France.  La durée moyenne de détention d’un véhicule par ménage est de 3,7 ans.",
-          "2000" : "Le marché des véhicules d’occasion connait une croissance soutenue avec une progression de 6,1% en 10 ans qui coïncide avec la durée de détention du véhicule qui passe à 4,4 ans. ",
+          "1990" : "<h4>1990</h4></br>En 1990, le marché de l’occasion représente la moitié des voitures particulières vendues en France.  La durée moyenne de détention d’un véhicule par ménage est de 3,7 ans.",
+          "2000" : "<h4>2000</h4></br>Le marché des véhicules d’occasion connait une croissance soutenue avec une progression de 6,1% en 10 ans qui coïncide avec la durée de détention du véhicule qui passe à 4,4 ans. ",
           "2006" : "",
           "2007" : "",
           "2008" : "",
           "2009" : "",
-          "2010" : "En 2010, le marché de l’occasion s’élargit car les modèles gagnent en durabilité grâce à une meilleure qualité des voitures. La situation économique explique également ce succès, les consommateurs cherchent des produits moins coûteux.",
+          "2010" : "<h4>2010</h4></br>En 2010, le marché de l’occasion s’élargit car les modèles gagnent en durabilité grâce à une meilleure qualité des voitures. La situation économique explique également ce succès, les consommateurs cherchent des produits moins coûteux.",
           "2011" : "",
           "2012" : "",
           "2013" : "",
-          "2014" : "Légère baisse du marché notamment due à l’augmentation des prix des véhicules d’occasion en 2014, l'offre étant plus étroite, ce qui a conduit à une hausse des prix. La durée moyenne de détention du véhicule passe à 5,4 ans."
+          "2014" : "<h4>2014</h4></br>Légère baisse du marché notamment due à l’augmentation des prix des véhicules d’occasion en 2014, l'offre étant plus étroite, ce qui a conduit à une hausse des prix. La durée moyenne de détention du véhicule passe à 5,4 ans."
         },
         "data": {
             "neuf": {
