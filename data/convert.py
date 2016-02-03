@@ -118,7 +118,8 @@ def main():
             "16-25.p",
             "26-35.p",
             "36-55.p",
-            "56-90.p"
+            "56-90.p",
+            "ages.average"
         ]
 
         data[lsoa11cd]["ages"] = {key: row[key] for key in keys}
