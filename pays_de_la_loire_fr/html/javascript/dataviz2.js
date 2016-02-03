@@ -10,12 +10,6 @@ colText = "hsl(0,0%,0%)",
 pos = 0,
 deg = 0;
 
-
-/*var color = d3.scale.linear()
-.range(["hsl(-180,60%,50%)", "hsl(180,60%,50%)"])
-.interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
-*/
-
 //arc des data
 var arcBody = d3.svg.arc()
 .startAngle(Math.PI)
@@ -225,13 +219,11 @@ function toE() {
 }
 
 function toS() {
-    console.log("toS");
     pos = 1;
 	//calcule de la nouvelle valeur
 	for (var i = 0; i < 5; i++) {
 		field.data()[i].previousValue = field.data()[i].value;
 		field.data()[i].value = (field.data()[i].val1*posMax)/field.data()[0].val1;
-        console.log(field.data()[i].previousValue + '-' + field.data()[i].value);
         field.data()[i].opacity = 1;
     }
 	//transition
@@ -268,16 +260,11 @@ function fieldTransition() {
     
     var field = d3.select(this).transition();
     
-    //for (var i =0; i < 5; i++){
-    field.each(function(d) { console.log(d); });
-    //}
-    
     //data
     field.select(".arc-body")
     .attrTween("d", arcTween(arcBody))
     .style("fill-opacity", function(d) { return d.opacity;})
     .style("fill", function(d) {
-           console.log("color : " + d.value * (1/(d["val"+pos]*posMax/d["val"+pos+"max"])));
            return d["col"+pos](d.value * (1/(d["val"+pos]*posMax/d["val"+pos+"max"])));});
     
     field.select(".arc-center")
@@ -305,7 +292,6 @@ function fieldTransition() {
 
 function arcTween(arc) {
     return function(d) {
-        console.log( d.previousValue + "-" + d.value);
         var i = d3.interpolateNumber(d.previousValue, d.value);
         return function(t) {
 			d.previousValue = d.value;
