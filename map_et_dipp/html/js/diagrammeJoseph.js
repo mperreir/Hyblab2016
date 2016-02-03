@@ -139,8 +139,8 @@ donneesActuelles.forEach(function(element, index, tableau) {
     var svgJauge = baliseJauge.append("svg").attr({
         "id": idJauge,
         "viewBox": "0 0 100 150",
-        "height": 150,
-        "width": 100
+        //"height": 150,
+        //"width": 100
     });
     //"id", idJauge).attr("width", 100).attr("height", 150); svgJauge.attr("viewBox", "0, 0, 100 150");
     // <svg id="fillgauge6" width="19%" height="300" onclick="gauge6.update(NewValue());"></svg>
@@ -176,7 +176,17 @@ donneesActuelles.forEach(function(element, index, tableau) {
     
     // ajout de l'image dans la jauge
     // <image x="200" y="200" width="100px" height="100px" xlink:href="myimage.png"> 
-    svgJauge.select("g").append("image").attr("x", 25).attr("y", 25).attr("xlink:href", infoElement.cheminImage).attr("width", 50).attr("height", 50);
+    //svgJauge.select("g").append("image").attr("x", 25).attr("y", 25).attr("xlink:href", infoElement.cheminImage).attr("width", 50).attr("height", 50);
+    
+    svgJauge.select("g").append("image").attr({
+        "xlink:href": infoElement.cheminImage,
+        "x": 0,
+        "y": 0,
+        "height": 50,
+        "width": 50,
+        "transform": "translate(25, 25)",
+    });
+    //"x", 0).attr("y", 25).attr("xlink:href", infoElement.cheminImage).attr("width", 50).attr("height", 50);
 });
 
 

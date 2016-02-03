@@ -213,8 +213,8 @@ nav .boutonMenu
 */
 
 #totalJoseph {
-    margin: 0;
     padding: 0;
+    margin-top: 3%;
 }
 
 #totalJoseph p {
@@ -250,12 +250,14 @@ nav .boutonMenu
     height: 150px;
 }
 
+
+
+
 .baliseJauge svg {
     display: inline-block;
     position: relative;
     width: 100%;
     vertical-align: middle;
-    
 }
 
 .baliseJauge svg g {
