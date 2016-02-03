@@ -123,16 +123,19 @@ window.addEventListener('load',function () {
 				console.log(pie.total);
 
 				var is = d3.select("#infoselected");
-				is.text(info.data.value + "€")
-					.attr("fill", "white")	
-					.attr("font-size","16px")
-					.attr("font-weight","bold")
-					.attr("y","72%");
 
 				if(!info.expanded) {
 					pieData.text((100*info.data.value/pie.totalSize).toFixed(0) +'%');
+					is.text(info.data.value + "€")
+						.attr("fill", "white")
+						.attr("font-size","16px")
+						.attr("font-weight","bold")
+						.attr("y","72%");
+					pieExplains.html(info.data.text);
 				} else {
 					pieData.text("");
+					is.text("");
+					pieExplains.html("");
 				}
 				/*if (!info.expanded) {
 					$("#pieSection").css("visibility", "visible")
@@ -153,6 +156,7 @@ window.addEventListener('load',function () {
 					.attr("y", "50%")
 					.attr("dx", "0px")
 					.attr("dy", "10px");
+					
 	
 	var legendCircleSize = 14;
 	var legendSpacing = 8;
@@ -194,7 +198,11 @@ window.addEventListener('load',function () {
 					.attr("x", "50%")
 					.attr("y", "70%")
 					.text("Cliquez pour afficher les valeurs");
-
+					
+					
+	var pieExplains = d3.select("#pieInfo").append("p")
+					.style("font-weight", "bold")
+	
 	svg.select('.p0_pieChart').attr("transform","scale(0.8)");
 
 	/*pie = d3.select("#pieChart").select("svg");

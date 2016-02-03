@@ -281,7 +281,7 @@ div#pieChart{
 }
 
 div#pieChart svg{
-	transform:translateY(-5%);
+	transform: translateY(-5%);
 }
 
 #financement{
@@ -289,6 +289,10 @@ div#pieChart svg{
 	position: absolute;
 	margin-top:160px;
 	margin-left: 80px;
+}
+
+#pieInfo {
+	padding: 10px; 
 }
 
 #legendSvg {
