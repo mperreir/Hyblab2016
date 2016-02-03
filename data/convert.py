@@ -114,11 +114,11 @@ def main():
     for row in ages:
         lsoa11cd = row["LSOA11CD"]
         keys = [
-            "0-15",
-            "16-25",
-            "26-35",
-            "36-55",
-            "56-90"
+            "0-15.p",
+            "16-25.p",
+            "26-35.p",
+            "36-55.p",
+            "56-90.p"
         ]
 
         data[lsoa11cd]["ages"] = {key: row[key] for key in keys}

@@ -361,7 +361,7 @@
         if (popChart._map != undefined) {
             map.removeControl(popChart);
         };
-
+        console.log(ages);
         popChart.addTo(map);  
         popChart.draw(ages);
 
