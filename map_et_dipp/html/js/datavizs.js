@@ -113,8 +113,8 @@ produits.forEach(function(p)
 
 
 var nantesRadius = [30];
-var width = 650;
-var height = 600;
+var width = 650;//*(Math.max(document.documentElement.clientWidth, window.innerWidth || 0))/1600;
+var height = 600;//*(Math.max(document.documentElement.clientHeight, window.innerWidth || 0))/1600;
 var ratio = 1.3;
 //var ratio = 1.3*(Math.max(document.documentElement.clientWidth, window.innerWidth || 0))/1600;
 
