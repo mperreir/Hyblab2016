@@ -438,7 +438,7 @@
         }
     );
 
-    var map = L.map('map', {
+    var map = L.map('map2', {
         center: [53.85, -2.7],
         zoom: 11,
         layers: [osm, topoMsoaLayer], // Only Add default layers here
