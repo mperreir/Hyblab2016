@@ -1326,6 +1326,7 @@ DATA 1
 
 .chiffre_important
 {
+	font-weight: bold;
 	font-size: 1.5vw;
 	color: #e4685d;
 }
@@ -1448,7 +1449,7 @@ DATA 1
     width: 30%;
     height: 25%;
     padding: 2%;
-    top: 40%;
+    top: 37%;
     left: 9.6%;
     text-align: center;
 }
@@ -1816,6 +1817,7 @@ DATA 1
 	width: 100%;
 }
 
+
 #titre_i3
 {
 	width: 100%;
@@ -1823,3 +1825,22 @@ DATA 1
 	z-index: 3;
 	font-size: 1.5vw;
 }
+
+/*bénéfices*/
+
+#emploi
+{
+    position: absolute;
+    width: 30%;
+    height: 25%;
+    left: 10%;
+    top: 20%;
+    font-size: 1vw;
+    color: #002266;
+}
+
+#emploi>b
+{
+    font-size: 1.25vw;
+}
+
