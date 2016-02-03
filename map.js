@@ -191,7 +191,7 @@
     function getColor(score) {
         //score = (score - 4) / 67 * 0xfffff;
         //return "#" + ("0" + Math.trunc(score)).slice(-6);
-        score = (1 - ((score - LSOA_Limits["IMD"].min) / (LSOA_Limits["IMD"].max - LSOA_Limits["IMD"].min))) / 6.0;
+        score = (1- ((score - LSOA_Limits["IMD"].min) / (LSOA_Limits["IMD"].max - LSOA_Limits["IMD"].min))) / 3.0;
         var rgb = HSVtoRGB(score, 1, 1);
         return RGBtoHEX(rgb.r, rgb.g, rgb.b);
     }
