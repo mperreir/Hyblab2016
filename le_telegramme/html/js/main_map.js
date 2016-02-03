@@ -16,15 +16,15 @@ var map = new GLMap('map', {
 var osmb = new OSMBuildings({
   minZoom: 8,
   maxZoom: 22,
-  attribution: '© 3D <a href="http://osmbuildings.org/copyright/">OSM Buildings</a>',
+  attribution: '© 3D <a href="https://osmbuildings.org/copyright/">OSM Buildings</a>',
 }).addTo(map);
 
 
 //remote call to an API to collect the tiles of the looked area
 osmb.addMapTiles(
-  'http://{s}.tiles.mapbox.com/v3/osmbuildings.kbpalbpk/{z}/{x}/{y}.png',
+  'https://{s}.tiles.mapbox.com/v3/osmbuildings.kbpalbpk/{z}/{x}/{y}.png',
   {
-    attribution: '© Data <a href="http://openstreetmap.org/copyright/">OpenStreetMap</a> · © Map <a href="http://mapbox.com">MapBox</a>'
+    attribution: '© Data <a href="https://openstreetmap.org/copyright/">OpenStreetMap</a> · © Map <a href="https://mapbox.com">MapBox</a>'
   }
 );
 
@@ -40,7 +40,7 @@ osmb.addMapTiles(
 
       var constrBats = JSON.parse(data); // parse json string answer to get a javascript object
       osmb.addGeoJSON(constrBats);
-      osmb.addGeoJSONTiles('http://{s}.data.osmbuildings.org/0.2/anonymous/tile/{z}/{x}/{y}.json');
+      osmb.addGeoJSONTiles('https://{s}.data.osmbuildings.org/0.2/anonymous/tile/{z}/{x}/{y}.json');
   });
 
 /* ANIMATIONS */
