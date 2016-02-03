@@ -135,7 +135,7 @@ p{
 
 }
 
-/* Section 1
+/* Reste
  * --------------------------------------- */
 .content1{
 
@@ -292,7 +292,7 @@ div#pieChart svg{
 }
 
 #legendSvg {
-	transform: translateX(300px) translateY(260px);
+	transform: translateX(300px) translateY(280px);
 }
 
 g.provenance text{
