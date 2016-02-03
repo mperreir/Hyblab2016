@@ -48,6 +48,8 @@ function updateCurrentSection(){
 		case "7thPage" :
 		//alert("start");
 			reset3();
+			initConcl();
+			
 		break;
 
 		case "8thPage" :

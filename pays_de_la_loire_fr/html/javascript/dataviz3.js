@@ -355,6 +355,13 @@ function addRotation(id)
 	}
 }
 
+function initConcl()
+{
+	setTimeout(function(){document.getElementById('emploi').classList.add("animConcl")},1);
+	setTimeout(function(){document.getElementById('propre').classList.add("animConcl")},1);
+	setTimeout(function(){document.getElementById('eco').classList.add("animConcl")},1);
+}
+
 function rand(min,max){
 	return(Math.round((Math.random()*(max-min))+min));
 }

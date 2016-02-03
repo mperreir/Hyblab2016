@@ -1981,7 +1981,7 @@ DATA 1
     top: 30%;
     font-size: 1vw;
     color: #002266;
-    animation: 0.5s;
+   
 }
 
 #propre>b
@@ -1998,7 +1998,7 @@ DATA 1
     top: 30%;
     font-size: 1vw;
     color: #002266;
-    animation: 1s;
+
     
 }
 
@@ -2009,7 +2009,7 @@ DATA 1
 
 .animConcl
 {
-	animation: fadeIn 10s linear forwards;
+	animation: fadeInDown 2s linear forwards;
 }
 
 .image_concl
