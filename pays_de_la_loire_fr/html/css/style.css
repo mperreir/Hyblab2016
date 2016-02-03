@@ -2004,3 +2004,12 @@ DATA 1
     font-size: 1.25vw;
 }
 
+#logo_univ_nantes
+{
+    position: absolute;
+    width: 8%;
+    top: 85%;
+    left: 45.5%;
+}
+
+
