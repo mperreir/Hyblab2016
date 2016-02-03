@@ -1,8 +1,10 @@
 "use strict";
 
+var globalpie;
+
 window.addEventListener('load',function () {
 	
-	var pie = new d3pie("pieChart", {
+	globalpie = new d3pie("#pieChartSvg", {
 		/*"header": {
 			"title": {
 				"fontSize": 34,
@@ -28,19 +30,19 @@ window.addEventListener('load',function () {
 			"pieOuterRadius": "66%"
 		},
 		"data": {
-			"sortOrder": "label-desc",
+			"sortOrder": "value-desc",
 			"content": [
 				{
 					"label": "Subventions",
 					"value": 68,
 					"color": "#ff314f",
-					"text":"texte subventions"
+					"text":"texte sub"
 				},
 				{
 					"label": "Aides à l'emploi",
 					"value": 10,
 					"color": "#954fd1",
-					"text":"texte aides"
+					"text":"texte aide"
 				},
 				{
 					"label": "Publicité",
@@ -49,7 +51,7 @@ window.addEventListener('load',function () {
 					"text":"texte pub"
 				},
 				{
-					"label": "Evenements",
+					"label": "Evenements et ateliers",
 					"value": 2,
 					"color": "#3bbd31",
 					"text":"texte event"
@@ -118,10 +120,8 @@ window.addEventListener('load',function () {
 		},
 		"callbacks":{
 			onClickSegment: function (info){
-				console.log(info);
-				console.log(info.data.value);
-				console.log(pie.total);
 
+				console.log(info);
 				var is = d3.select("#infoselected");
 				is.text(info.data.value + "€")
 					.attr("fill", "white")	
@@ -130,7 +130,9 @@ window.addEventListener('load',function () {
 					.attr("y","72%");
 
 				if(!info.expanded) {
-					pieData.text((100*info.data.value/pie.totalSize).toFixed(0) +'%');
+					console.log("couou");
+					pieData = d3.select('#idPieData');
+					pieData.text((100*info.data.value/globalpie.totalSize).toFixed(0) +'%');
 				} else {
 					pieData.text("");
 				}
@@ -144,8 +146,9 @@ window.addEventListener('load',function () {
 		}
 	});
 	
-	var svg = d3.select("#pieChart").select("svg");
+	var svg = d3.select("#pieChartSvg").select("svg");
 	var pieData = svg.append("text")
+					.attr("id","idPieData")
 					.attr("fill", "white")
 					.attr("font-size", "30px")
 					.attr("text-anchor", "middle")
@@ -161,7 +164,7 @@ window.addEventListener('load',function () {
 					.attr('width', 300)
 					.attr('height', 300)
 	var legend = legendsvg.selectAll('.legend')
-					.data(pie.options.data.content)
+					.data(globalpie.options.data.content)
 					.enter()
 					.append('g')
 					.attr('class', 'legend')

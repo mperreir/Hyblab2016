@@ -116,19 +116,49 @@ var infofunction = function (d) {
 	d3.select(".salarie").select(".chiffre").html(d.s+" ");
 	d3.select(".benevole").select(".chiffre").html(d.b+" ");
 	d3.select(".servicecivique").select(".chiffre").html(d.sc+" ");
+
+	globalpie.updateProp("data.content",d.datapie);
+
+	var svg = d3.select("#pieChartSvg").select("svg");
+	var pieData = svg.append("text")
+					.attr("id","idPieData")
+					.attr("fill", "white")
+					.attr("font-size", "30px")
+					.attr("text-anchor", "middle")
+					.attr("x", "50%")
+					.attr("y", "50%")
+					.attr("dx", "0px")
+					.attr("dy", "10px");
+	
+	var pieClick = svg.append("text")
+					.attr("id","infoselected")
+					.attr("fill", "#179fae")
+					.attr("font-size", "12px")
+					.attr("text-anchor", "middle")
+					.attr("x", "50%")
+					.attr("y", "70%")
+					.text("Cliquez pour afficher les valeurs");
+
+	console.log($("#infoselected"));
 }
 
 
 
+/*	var jsonDptInfo = [
+		{"n":"LA VENDEE","num":"85","id":"#jqvmap2_FR-85","r":4,"s":18,"b":181,"sc":0,"datapie":[{"label":"Subventions","value": 374727,"color":"#ff314f","text":"texte subvention"},{"label":"Aides à l'emploi","value": 4150,"color":"#954fd1","text":"texte aide"},{"label":"Publicité","value":95645,"color":"#004fa9","text":"texte pub"},{"label":"Evenements et ateliers","value": 9996, "color":"#3bbd31", "text":"texte event"},{"label": "Cotisations et dons ","value": 117618,"color": "#00c7e5","text":"texte dons"},{"label": "Autre","value": 79819,"color": "#ff8b1d","text":"texte autre"}]},				
+		{"n":"LA LOIRE ATLANTIQUE","num":"44","id":"#jqvmap2_FR-44","r":11,"s":57,"b":738,"sc":7,"datapie":[{"label":"Subventions","value": 968517,"color":"#ff314f","text":"texte subvention"},{"label":"Aides à l'emploi","value": 148239,"color":"#954fd1","text":"texte aide"},{"label":"Publicité","value":98791,"color":"#004fa9","text":"texte pub"},{"label":"Evenements et ateliers","value": 62257, "color":"#3bbd31", "text":"texte event"},{"label": "Cotisations et dons ","value": 38180,"color": "#00c7e5","text":"texte dons"},{"label": "Autre","value": 183222,"color": "#ff8b1d","text":"texte autre"}]},
+		{"n":"LE MAINE ET LOIRE","num":"49","id":"#jqvmap2_FR-49","r":4,"s":16,"b":311,"sc":3,"datapie":[{"label":"Subventions","value": 248217,"color":"#ff314f","text":"texte subvention"},{"label":"Aides à l'emploi","value": 44321,"color":"#954fd1","text":"texte aide"},{"label":"Publicité","value":29658,"color":"#004fa9","text":"texte pub"},{"label":"Evenements et ateliers","value": 18690, "color":"#3bbd31", "text":"texte event"},{"label": "Cotisations et dons ","value": 14345,"color": "#00c7e5","text":"texte dons"},{"label": "Autre","value": 122834,"color": "#ff8b1d","text":"texte autre"}]},
+		{"n":"LA MAYENNE","num":"53","id":"#jqvmap2_FR-53","r":2,"s":9,"b":117,"sc":2,"datapie":[{"label":"Subventions","value": 108167,"color":"#ff314f","text":"texte subvention"},{"label":"Aides à l'emploi","value": 15665,"color":"#954fd1","text":"texte aide"},{"label":"Publicité","value":10479,"color":"#004fa9","text":"texte pub"},{"label":"Evenements et ateliers","value": 8738, "color":"#3bbd31", "text":"texte event"},{"label": "Cotisations et dons ","value": 38546,"color": "#00c7e5","text":"texte dons"},{"label": "Autre","value": 44683,"color": "#ff8b1d","text":"texte autre"}]},
+		{"n":"LA SARTHE","num":"72","id":"#jqvmap2_FR-72","r":1,"s":7,"b":60,"sc":0,"datapie":[{"label":"Subventions","value": 58893,"color":"#ff314f","text":"texte subvention"},{"label":"Aides à l'emploi","value": 0,"color":"#954fd1","text":"texte aide"},{"label":"Publicité","value":2384,"color":"#004fa9","text":"texte pub"},{"label":"Evenements et ateliers","value": 0, "color":"#3bbd31", "text":"texte event"},{"label": "Cotisations et dons ","value": 44623,"color": "#00c7e5","text":"texte dons"},{"label": "Autre","value": 95,"color": "#ff8b1d","text":"texte autre"}]}
+	];*/
+
 	var jsonDptInfo = [
-		{"n":"LA VENDEE","num":"85","id":"#jqvmap2_FR-85","r":4,"s":18,"b":181,"sc":0},				
-		{"n":"LA LOIRE ATLANTIQUE","num":"44","id":"#jqvmap2_FR-44","r":11,"s":57,"b":738,"sc":7},
-		{"n":"LE MAINE ET LOIRE","num":"49","id":"#jqvmap2_FR-49","r":4,"s":16,"b":311,"sc":3},
-		{"n":"LA MAYENNE","num":"53","id":"#jqvmap2_FR-53","r":2,"s":9,"b":117,"sc":2},
-		{"n":"LA SARTHE","num":"72","id":"#jqvmap2_FR-72","r":1,"s":7,"b":60,"sc":0}
-
-
-	]
+		{"n":"LA VENDEE","num":"85","id":"#jqvmap2_FR-85","r":4,"s":18,"b":181,"sc":0,"datapie":[{"label":"Subventions","value": 374727,"color":"#ff314f","text":"texte subvention"},{"label":"Aides à l'emploi","value": 4150,"color":"#954fd1","text":"texte aide"},{"label":"Publicité","value":95645,"color":"#004fa9","text":"texte pub"},{"label":"Evenements et ateliers","value": 9996, "color":"#3bbd31", "text":"texte event"},{"label": "Cotisations et dons ","value": 117618,"color": "#00c7e5","text":"texte dons"},{"label": "Autre","value": 79819,"color": "#ff8b1d","text":"texte autre"}]},				
+		{"n":"LA LOIRE ATLANTIQUE","num":"44","id":"#jqvmap2_FR-44","r":11,"s":57,"b":738,"sc":7,"datapie":[{"label":"Subventions","value": 968517,"color":"#ff314f","text":"texte subvention"},{"label":"Aides à l'emploi","value": 148239,"color":"#954fd1","text":"texte aide"},{"label":"Publicité","value":98791,"color":"#004fa9","text":"texte pub"},{"label":"Evenements et ateliers","value": 62257, "color":"#3bbd31", "text":"texte event"},{"label": "Cotisations et dons ","value": 38180,"color": "#00c7e5","text":"texte dons"},{"label": "Autre","value": 183222,"color": "#ff8b1d","text":"texte autre"}]},
+		{"n":"LE MAINE ET LOIRE","num":"49","id":"#jqvmap2_FR-49","r":4,"s":16,"b":311,"sc":3,"datapie":[{"label":"Subventions","value": 248217,"color":"#ff314f","text":"texte subvention"},{"label":"Aides à l'emploi","value": 44321,"color":"#954fd1","text":"texte aide"},{"label":"Publicité","value":29658,"color":"#004fa9","text":"texte pub"},{"label":"Evenements et ateliers","value": 18690, "color":"#3bbd31", "text":"texte event"},{"label": "Cotisations et dons ","value": 14345,"color": "#00c7e5","text":"texte dons"},{"label": "Autre","value": 122834,"color": "#ff8b1d","text":"texte autre"}]},
+		{"n":"LA MAYENNE","num":"53","id":"#jqvmap2_FR-53","r":2,"s":9,"b":117,"sc":2,"datapie":[{"label":"Subventions","value": 108167,"color":"#ff314f","text":"texte subvention"},{"label":"Aides à l'emploi","value": 15665,"color":"#954fd1","text":"texte aide"},{"label":"Publicité","value":10479,"color":"#004fa9","text":"texte pub"},{"label":"Evenements et ateliers","value": 8738, "color":"#3bbd31", "text":"texte event"},{"label": "Cotisations et dons ","value": 38546,"color": "#00c7e5","text":"texte dons"},{"label": "Autre","value": 44683,"color": "#ff8b1d","text":"texte autre"}]},
+		{"n":"LA SARTHE","num":"72","id":"#jqvmap2_FR-72","r":1,"s":7,"b":60,"sc":0,"datapie":[{"label":"Subventions","value": 58893,"color":"#ff314f","text":"texte subvention"},{"label":"Publicité","value":2384,"color":"#004fa9","text":"texte pub"},{"label": "Cotisations et dons ","value": 44623,"color": "#00c7e5","text":"texte dons"},{"label": "Autre","value": 95,"color": "#ff8b1d","text":"texte autre"}]}
+	];
 
 	var dpt = d3.select("#carte").selectAll("path")
 							  .data(jsonDptInfo);
