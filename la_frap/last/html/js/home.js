@@ -85,6 +85,7 @@ window.addEventListener('load', function (){
 		sub.style("color","#179fae");
 		rh.style("background-color","#02141e");
 		rh.style("color","#324c5a");
+		cumule('sub');
 	});
 
 	rh.on('mouseover', function (){
@@ -107,5 +108,6 @@ window.addEventListener('load', function (){
 		rh.style("color","#179fae");
 		sub.style("background-color","#02141e");
 		sub.style("color","#324c5a");
+		cumule('rh');
 	});
 });
