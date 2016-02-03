@@ -1,6 +1,16 @@
 (function() {
     "use strict";
 
+    var INDICATORS = {
+        crime: "Crime",
+        income: "Income",
+        employment: "Employment",
+        education: "Education, Skills and Training",
+        health: "Health Deprivation and Disability",
+        housing: "Barriers to Housing and Services",
+        environment: "Living Environment"
+    };
+
     // Utility variable storing the max & min value of each indicator and IMD as well
     var LSOA_Limits = (function() {
         var result = {};
@@ -196,11 +206,12 @@
         return RGBtoHEX(rgb.r, rgb.g, rgb.b);
     }
 
-    window.calculateIMD = function(lsoa11cd) {
+    var calculateIMD = function(lsoa11cd) {
+        //console.log(INDICATORS);
         var sum = 1;
-        return Object.keys(INDICATORS).map(function(id) {
-            var val = document.getElementById(id).checked === true ? 1 : 0;
-            console.log(document.getElementById(id).checked);
+        return LSOA_Limits["IMD"].max - Object.keys(INDICATORS).map(function(id) {
+            //console.log(document.getElementById(id).checked);
+            var val = document.getElementById(id).checked === true ? 2 : 1;
             sum += val;
             return window.data[lsoa11cd][id]["exp"] * val;
         }).map(function(val) {
@@ -210,7 +221,7 @@
         });
     };
 
-    window.calculateMsoaIMD = function(msoa11cd) {
+    var calculateMsoaIMD = function(msoa11cd) {
         var LSOAs = MSOA[msoa11cd]["LSOAs"];
         return LSOAs
             .map(calculateIMD)
@@ -238,6 +249,8 @@
                 fillOpacity: 0.7
             };
         } else {
+            //console.log(calculateIMD);
+            console.log('lsoa s2: ' + calculateIMD(feature.properties.LSOA11CD));
             return {
                 fillColor: getColor(calculateIMD(feature.properties.LSOA11CD)),
                 weight: 2,
@@ -250,6 +263,7 @@
 
     function MsoaStyle(feature) {
         if (msoaInitializedStyleCount < msoaLayersNum) {
+            //console.log('msoa style 1:' + getColor(MSOA[feature.properties.MSOA11CD]["IMD"]));
             msoaInitializedStyleCount++;
             return {
                 fillColor: getColor(MSOA[feature.properties.MSOA11CD]["IMD"]),
@@ -259,6 +273,7 @@
                 fillOpacity: 0.7
             };
         } else {
+            //console.log("msoa style 2:" + getColor(calculateMsoaIMD(feature.properties.MSOA11CD)));
             return {
                 fillColor: getColor(calculateMsoaIMD(feature.properties.MSOA11CD)),
                 weight: 1,
@@ -295,7 +310,7 @@
         }
 
         // info update
-        info.update(e.target.feature.properties);
+        //info.update(e.target.feature.properties);
         // barchart update
         var deciles = [];
         if (isLsoaLayer) {
@@ -489,13 +504,20 @@
             '<h4>Index of Multiple Deprivation Score</h4>' +
             '<h4 id="idm"></h4> <br/>' +
             '<div class="buttons-set">' +
-            '   <div class="svg-btn"><input id="income" type="checkbox"/><img id="income-svg" src="documents/mapIcons/income-active.svg"/></div>' +
-            '   <div class="svg-btn"><input id="health" type="checkbox"/><img id="health-svg" src="documents/mapIcons/health-active.svg"/></div>' +
-            '   <div class="svg-btn"><input id="education" type="checkbox"/><img id="education-svg" src="documents/mapIcons/education-active.svg"/></div>' +
-            '   <div class="svg-btn"><input id="employment" type="checkbox"/><img id="employment-svg" src="documents/mapIcons/employment-active.svg"/></div>' +
-            '   <div class="svg-btn"><input id="environment" type="checkbox"/><img id="environment-svg" src="documents/mapIcons/environment-active.svg"/></div>' +
-            '   <div class="svg-btn"><input id="housing" type="checkbox"/><img id="housing-svg" src="documents/mapIcons/housing-active.svg"/></div>' +
-            '   <div class="svg-btn"><input id="crime" type="checkbox"/><img id="crime-svg" src="documents/mapIcons/crime-active.svg"/></div>' +
+            '   <input id="income" type="checkbox"/>' +
+            '   <input id="health" type="checkbox"/>' +
+            '   <input id="education" type="checkbox"/>' +
+            '   <input id="employment" type="checkbox"/>' +
+            '   <input id="environment" type="checkbox"/>' +
+            '   <input id="housing" type="checkbox"/>' +
+            '   <input id="crime" type="checkbox"/>' +
+            '   <img class="svg-btn" id="income-svg" src="documents/mapIcons/income-active.svg"/>' +
+            '   <img class="svg-btn" id="health-svg" src="documents/mapIcons/health-active.svg"/>' +
+            '   <img class="svg-btn" id="education-svg" src="documents/mapIcons/education-active.svg"/>' +
+            '   <img class="svg-btn" id="employment-svg" src="documents/mapIcons/employment-active.svg"/>' +
+            '   <img class="svg-btn" id="environment-svg" src="documents/mapIcons/environment-active.svg"/>' +
+            '   <img class="svg-btn" id="housing-svg" src="documents/mapIcons/housing-active.svg"/>' +
+            '   <img class="svg-btn" id="crime-svg" src="documents/mapIcons/crime-active.svg"/>' +
             '</div>';
             ''/* +
             '<div class="sliderset">' +
@@ -512,6 +534,128 @@
         });
 
         return this._div;
+    };
+
+    info.configEventListener = function() {
+        document.getElementById("income-svg").addEventListener('click', function(e) {
+            topoLsoaLayer.eachLayer(function(layer) {
+                topoLsoaLayer.resetStyle(layer);
+            });
+            topoMsoaLayer.eachLayer(function(layer) {
+                topoMsoaLayer.resetStyle(layer);
+            });
+            var el = document.getElementById("income");
+            if (el.checked === false) {
+                e.target.setAttribute('src', "documents/mapIcons/income.svg");
+                el.checked = true;
+            }
+            else {
+                e.target.setAttribute('src', "documents/mapIcons/income-active.svg");
+                el.checked = false;
+            }
+        });
+        document.getElementById("employment-svg").addEventListener('click', function(e) {
+            topoLsoaLayer.eachLayer(function(layer) {
+                topoLsoaLayer.resetStyle(layer);
+            });
+            topoMsoaLayer.eachLayer(function(layer) {
+                topoMsoaLayer.resetStyle(layer);
+            });
+            var el = document.getElementById("employment");
+            if (el.checked === false) {
+                e.target.setAttribute('src', "documents/mapIcons/employment.svg");
+                el.checked = true;
+            }
+            else {
+                e.target.setAttribute('src', "documents/mapIcons/employment-active.svg");
+                el.checked = false;
+            }
+        });
+        document.getElementById("education-svg").addEventListener('click', function(e) {
+            topoLsoaLayer.eachLayer(function(layer) {
+                topoLsoaLayer.resetStyle(layer);
+            });
+            topoMsoaLayer.eachLayer(function(layer) {
+                topoMsoaLayer.resetStyle(layer);
+            });
+            var el = document.getElementById("education");
+            if (el.checked === false) {
+                e.target.setAttribute('src', "documents/mapIcons/education.svg");
+                el.checked = true;
+            }
+            else {
+                e.target.setAttribute('src', "documents/mapIcons/education-active.svg");
+                el.checked = false;
+            }
+        });
+        document.getElementById("health-svg").addEventListener('click', function(e) {
+            topoLsoaLayer.eachLayer(function(layer) {
+                topoLsoaLayer.resetStyle(layer);
+            });
+            topoMsoaLayer.eachLayer(function(layer) {
+                topoMsoaLayer.resetStyle(layer);
+            });
+            var el = document.getElementById("health");
+            if (el.checked === false) {
+                e.target.setAttribute('src', "documents/mapIcons/health.svg");
+                el.checked = true;
+            }
+            else {
+                e.target.setAttribute('src', "documents/mapIcons/health-active.svg");
+                el.checked = false;
+            }
+        });
+        document.getElementById("crime-svg").addEventListener('click', function(e) {
+            topoLsoaLayer.eachLayer(function(layer) {
+                topoLsoaLayer.resetStyle(layer);
+            });
+            topoMsoaLayer.eachLayer(function(layer) {
+                topoMsoaLayer.resetStyle(layer);
+            });
+            var el = document.getElementById("crime");
+            if (el.checked === false) {
+                e.target.setAttribute('src', "documents/mapIcons/crime.svg");
+                el.checked = true;
+            }
+            else {
+                e.target.setAttribute('src', "documents/mapIcons/crime-active.svg");
+                el.checked = false;
+            }
+        });
+        document.getElementById("housing-svg").addEventListener('click', function(e) {
+            topoLsoaLayer.eachLayer(function(layer) {
+                topoLsoaLayer.resetStyle(layer);
+            });
+            topoMsoaLayer.eachLayer(function(layer) {
+                topoMsoaLayer.resetStyle(layer);
+            });
+            var el = document.getElementById("housing");
+            if (el.checked === false) {
+                e.target.setAttribute('src', "documents/mapIcons/housing.svg");
+                el.checked = true;
+            }
+            else {
+                e.target.setAttribute('src', "documents/mapIcons/housing-active.svg");
+                el.checked = false;
+            }
+        });
+        document.getElementById("environment-svg").addEventListener('click', function(e) {
+            topoLsoaLayer.eachLayer(function(layer) {
+                topoLsoaLayer.resetStyle(layer);
+            });
+            topoMsoaLayer.eachLayer(function(layer) {
+                topoMsoaLayer.resetStyle(layer);
+            });
+            var el = document.getElementById("environment");
+            if (el.checked === false) {
+                e.target.setAttribute('src', "documents/mapIcons/environment.svg");
+                el.checked = true;
+            }
+            else {
+                e.target.setAttribute('src', "documents/mapIcons/environment-active.svg");
+                el.checked = false;
+            }
+        });
     };
 
     info.update = function(props) {
@@ -650,6 +794,7 @@
                 document.getElementById("idm").innerHTML = ": " +
                     parseInt(calculateIMD(props["LSOA11CD"]).toPrecision(1) / 10);
             else {
+                console.log('info-listener');
                 //document.getElementById("idm").innerHTML = ": " + calculateMsoaIMD(props["MSOA11CD"]).toFixed(1) + "%";
                 document.getElementById("idm").innerHTML = ": " +
                     parseInt(calculateMsoaIMD(props["MSOA11CD"]).toPrecision(1) / 10);
@@ -658,6 +803,7 @@
     };
 
     info.addTo(map);
+    info.configEventListener();
     //info.update();
 
     var searchbar = {};
