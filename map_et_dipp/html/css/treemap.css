@@ -10,9 +10,6 @@
 	margin-left: auto;
 	margin-right: auto;
 	width: 80%;
-	height: 95%;
-	margin-top: auto;
-	margin-bottom: auto;
 }
 
 #slide5 #badge {
@@ -30,18 +27,18 @@
 	color: white;
 	font-size: 33px;
 	letter-spacing: 3px;
-	margin-top: 1%;
+	margin-top: 3%;
 }
 
 #slide5 #caption {
 	font-size: 14px;
 	text-align: justify;
 	width: 510px;
-	margin-top: 1%;
+	margin-top: 3%;
 }
 
 #slide5 #treemap {
-	width: 60%;
+	width: 71%;
 	display: inline-block;
 	margin-top: 1%;
 }
@@ -78,7 +75,6 @@
 	display: inline-block;
 	vertical-align: middle;
 }
-
 
 #slide5 #interview {
 	border: 1px solid white;
