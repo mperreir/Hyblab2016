@@ -195,7 +195,7 @@ function resetSlide (idQ) {
 
 			$(elements_q4).transition({
 				scale: 1,
-				left: '82.5%'
+				left: '85.5%'
 			})
 			break;
 	}
@@ -362,7 +362,7 @@ function answerQuestions(prop_id) {
 
 		$(elements_q4).transition({
 			scale: 0.8,
-			left: '77%'
+			left: '80.5%'
 		})
 
 		var maison3 = document.getElementById("maison3_q4");
