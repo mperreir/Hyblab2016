@@ -7,7 +7,7 @@ let tip = d3.tip().attr('class', 'd3-tip').html(function(d) { return formatDateS
 var o_width=950,
 	o_height=400;
 
-var margin = {top: 20, right: 20, bottom: 20, left: 20},
+var margin = {top: 20, right: 20, bottom: 0, left: 50},
     width = o_width - margin.left - margin.right,
     height = o_height - margin.top - margin.bottom;
 
@@ -28,11 +28,10 @@ d3.csv("per_month_kerbside.csv",(err,data_csv) => {
 	.attr("width",o_width)
 	.attr("height",o_height);
 
-	var min_NO2 = 20;
+	var min_NO2 = 0;
 	var max_NO2 = 250;
 
     let scale_y = d3.scale.linear().range([height,0]).domain([min_NO2,max_NO2]);
-    //let scale_x = d3.scale.ordinal().rangePoints([0, width],1).domain(data.map((d) => d.Date));
     let scale_x = d3.time.scale()
 		.range([0,width]).domain(d3.extent(data,function(d){return d.Date;}))
 
@@ -40,10 +39,25 @@ d3.csv("per_month_kerbside.csv",(err,data_csv) => {
 	    .scale(scale_x)
 	    .orient("bottom");
 
+	var yAxis = d3.svg.axis()
+	    .scale(scale_y)
+	    .orient("left");
+
 	chart.append("g")
       .attr("class", "x_axis")
       .attr("transform", "translate("+margin.left+"," + height + ")")
       .call(xAxis);
+
+    chart.append("g")
+      .attr("class", "y_axis")
+      .attr("transform","translate("+margin.left+",0)")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "translate(-"+margin.left+","+height/3+") rotate(-90)")
+      .attr("y",0)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("NO2 (microgram per cubic meter)");
 
     var line = d3.svg.line()
 		.interpolate("cardinal")

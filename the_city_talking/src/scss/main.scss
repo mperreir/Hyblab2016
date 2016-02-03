@@ -101,17 +101,21 @@
 }
 
 .x_axis path,
-.x_axis line {
+.x_axis line,
+.y_axis path,
+.y_axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
 }
 
-.x_axis path {
+.x_axis path,
+.y_axis path {
   display: none;
 }
 
-.x_axis text {
+.x_axis text,
+.y_axis text {
   fill: black;
   font: 10px sans-serif;
   text-anchor: end;
