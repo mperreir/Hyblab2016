@@ -39,6 +39,7 @@ nav
 	width: 100%;
 	text-align: center;
 	margin-top: 25px;
+    position: absolute;
 }
 
 nav ul li
@@ -57,6 +58,7 @@ nav ul li:not(:first-child)
 	float: right;
 	margin-right: 25px;
 	margin-top: 12px;
+    z-index: 1000000;
 }
 
 .section
