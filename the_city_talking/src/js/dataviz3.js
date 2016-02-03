@@ -59,7 +59,7 @@ d3.csv("prescriptions.csv",(err,data_csv) => {
 
     chart.append("path")
       .datum(data)
-      .attr("class", "area_pres")   
+      .attr("class", "area_pres")
       .attr("transform","translate("+margin.left+","+margin.top+")")
       .attr("d", area);
 
@@ -72,9 +72,10 @@ d3.csv("prescriptions.csv",(err,data_csv) => {
         .classed("prescription",true)
         .on('mouseover', tip_prescriptions.show)
         .on('mouseout', tip_prescriptions.hide)
+    d3.csv("per_month_kerbside.csv",printPollutionData);
 });
 
-d3.csv("per_month_kerbside.csv",(err,data_csv) => {
+function printPollutionData(err,data_csv) {
     let data = data_csv.map((datum) => {
         return {
             "Date":formatDate.parse(datum.Date),
@@ -93,7 +94,7 @@ d3.csv("per_month_kerbside.csv",(err,data_csv) => {
 
     chart.append("path")
       .datum(data)
-      .attr("class", "area_poll")   
+      .attr("class", "area_poll")
       .attr("transform","translate("+margin.left+","+margin.top+")")
       .attr("d", area);
 
@@ -106,4 +107,4 @@ d3.csv("per_month_kerbside.csv",(err,data_csv) => {
         .classed("pollution",true)
         .on('mouseover', tip_pollution.show)
         .on('mouseout', tip_pollution.hide)
-});
+};
