@@ -286,6 +286,7 @@ function answerQuestions(prop_id) {
 	stopAnimTracteurQ3();
 	stopAnimPanneauQ3();
 	stopAnimPaleQ3();
+	hidePerso();
 
 	// Récupère l'id de l'élément <ul> contenant les propositions
 	var idQ = document.getElementById(prop_id).parentElement.id;
@@ -557,6 +558,23 @@ function answerQuestions(prop_id) {
 			}
 			break;
 	}
+}
+
+function hidePerso () {
+
+			var perso1 = document.getElementById("perso1_q4");
+			var perso2 = document.getElementById("perso2_q4");
+			var perso3 = document.getElementById("perso3_q4");
+
+			$(perso1).transition({
+				opacity: 0
+			}, 500)
+			$(perso2).transition({
+				opacity: 0
+			}, 500)
+			$(perso3).transition({
+				opacity: 0
+			}, 500)
 }
 
 function goTo2008 () {
