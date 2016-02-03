@@ -47,6 +47,7 @@ function updateCurrentSection(){
 
 		case "7thPage" :
 		//alert("start");
+			reset3();
 		break;
 
 		case "8thPage" :
@@ -76,7 +77,7 @@ function updateCurrentSection(){
 			break;
 
 			case "6thPage" :
-				//reset3();
+				reset3();
 			break;
 
 			case "7thPage" :

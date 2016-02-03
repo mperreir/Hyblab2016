@@ -1494,9 +1494,9 @@ DATA 1
 #bandeau_i3
 {
 	position: absolute;
-	width: 56%;
-	top : 4.5%;
-	left: 22.5%;
+	width: 78%;
+	top : 6.5%;
+	left: 11.5%;
 }
 
 #trotteuse
@@ -1512,7 +1512,7 @@ DATA 1
 	position: absolute;
 	width: 6%;
 	top : 32.5%;
-	left: 32%;
+	left: 31.7%;
 }
 
 
@@ -1817,6 +1817,15 @@ DATA 1
 	width: 100%;
 }
 
+
+#titre_i3
+{
+	width: 100%;
+	top:47.5%;
+	z-index: 3;
+	font-size: 1.5vw;
+}
+
 /*bénéfices*/
 
 #emploi
@@ -1866,3 +1875,4 @@ DATA 1
 {
     font-size: 1.25vw;
 }
+
