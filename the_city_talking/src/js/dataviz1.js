@@ -32,8 +32,7 @@ d3.csv("per_month_kerbside.csv",(err,data_csv) => {
 	var max_NO2 = 250;
 
     let scale_y = d3.scale.linear().range([height,0]).domain([min_NO2,max_NO2]);
-    let scale_x = d3.time.scale()
-		.range([0,width]).domain(d3.extent(data,function(d){return d.Date;}))
+    let scale_x = d3.time.scale().range([0,width]).domain(d3.extent(data,function(d){return d.Date;}))
 
     var xAxis = d3.svg.axis()
 	    .scale(scale_x)
@@ -45,7 +44,7 @@ d3.csv("per_month_kerbside.csv",(err,data_csv) => {
 
 	chart.append("g")
       .attr("class", "x_axis")
-      .attr("transform", "translate("+margin.left+"," + height + ")")
+      .attr("transform", "translate("+margin.left+"," + (height) + ")")
       .call(xAxis);
 
     chart.append("g")
@@ -57,7 +56,7 @@ d3.csv("per_month_kerbside.csv",(err,data_csv) => {
       .attr("y",0)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("NO2 (microgram per cubic meter)");
+      .text("Air Quality");
 
     var line = d3.svg.line()
 		.interpolate("cardinal")
@@ -96,7 +95,7 @@ d3.csv("per_month_kerbside.csv",(err,data_csv) => {
     path.datum(data)
 		.transition()
 		.attr("d",line)
-		.attr("transform","translate("+margin.left+",0)")
+		.attr("transform","translate("+margin.left+","+margin.top+")")
 		.attr("class","line5y");
 
     var circles = chart.selectAll("circle").data(data);
@@ -104,7 +103,7 @@ d3.csv("per_month_kerbside.csv",(err,data_csv) => {
         .attr("cy", (d,i) => { return scale_y(d.NO2) })
         .attr("cx", (d,i) => { return scale_x(d.Date) })
         .attr("r", 3)
-        .attr("transform","translate("+margin.left+",0)")
+        .attr("transform","translate("+margin.left+","+margin.top+")")
         .attr("class","dot_pollution")
         .each(function (d,i){
             d3.select(this)
