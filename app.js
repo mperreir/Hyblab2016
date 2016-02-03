@@ -73,4 +73,4 @@ function PCDtoLSOA11CD(PCD) {
         scrollBar: true,
         scrollingSpeed: 300
     });
-})
+}())
