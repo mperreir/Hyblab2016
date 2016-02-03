@@ -91,19 +91,27 @@
 #interview_text {
 	width : 320px;
 	line-height: 20px;
+	margin-right: 10px;
 }
 
-#interview_res {
-	width : 200px;
+#interview_media {
+	width : 256px;
 	display: inline-block;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 }
 
-#interview_res img {
+#interview_media img {
+	display: block;
 	width: 36px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 5px;
+}
+
+#interview_sep {
+	border-right: 1px solid white;
 }
 
 
