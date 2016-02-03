@@ -40,7 +40,7 @@ osmb.addMapTiles(
 
       var constrBats = JSON.parse(data); // parse json string answer to get a javascript object
       osmb.addGeoJSON(constrBats);
-      // osmb.addGeoJSONTiles('http://{s}.data.osmbuildings.org/0.2/anonymous/tile/{z}/{x}/{y}.json');
+      osmb.addGeoJSONTiles('http://{s}.data.osmbuildings.org/0.2/anonymous/tile/{z}/{x}/{y}.json');
   });
 
 /* ANIMATIONS */
