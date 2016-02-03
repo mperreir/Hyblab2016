@@ -52,11 +52,11 @@ nav ul li:not(:first-child)
 	margin-left: 12%;
 }
 
-nav .boutonMenu
+.boutonMenu
 {
 	float: right;
 	margin-right: 25px;
-	margin-top: -25px;
+	margin-top: 12px;
 }
 
 .section
