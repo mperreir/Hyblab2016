@@ -409,6 +409,23 @@ nav ul li:not(:first-child)
                 url(./img/illu_ville_droite.png) bottom right no-repeat;
 }
 
+#slide10 .bandeauBas {
+    background: url(./img/plantes_gauche.png) bottom left no-repeat,
+                url(./img/plantes_droite.png) bottom right no-repeat;
+    height: 15%;
+    background-color: white;
+    
+    width: 100%;
+	position: absolute;
+	top: 100%;
+	margin-top: -135px;
+}
+
+#slide10 .flecheBas {
+    width: 100px;
+    margin-left: 45%;
+} 
+
 #slide10 section {
     height: auto;
     margin-top: 15px;
@@ -440,10 +457,6 @@ nav ul li:not(:first-child)
     font: 17px / 19px museoReg;
     margin-left: 2%;
     margin-right: 2%;
-}
-
-#slide10 .bandeauBas {
-    
 }
 
 
