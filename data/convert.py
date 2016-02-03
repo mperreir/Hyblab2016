@@ -124,6 +124,19 @@ def main():
 
         data[lsoa11cd]["ages"] = {key: row[key] for key in keys}
 
+    for row in ages:
+        lsoa11cd = row["LSOA11CD"]
+        keys = [
+            "0-15",
+            "16-25",
+            "26-35",
+            "36-55",
+            "56-90",
+            "ages.average"
+        ]
+
+        data[lsoa11cd]["groups"] = {key: row[key] for key in keys}
+
     convert_numbers(data)
 
     calculate_exp(data)

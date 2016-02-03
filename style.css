@@ -26,11 +26,14 @@ body {
 
 #map2 {
     background-color: #00BFFF;
+    height: 300px;
+    width: 250px;
 }
 
 #map {
     background-color: #8DD8F8;
 }
+
 
 #rope {
     position: relative;
