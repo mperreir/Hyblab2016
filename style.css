@@ -24,8 +24,17 @@ body {
     height: 100vh;
 }
 
+#map {
+    background-color: #8DD8F8;
+}
+
 #rope {
     position: relative;
+}
+
+#last_page {
+    background-color: #0077A3;
+    color: white;
 }
 
 iframe {
@@ -42,22 +51,23 @@ iframe {
 
 /* ------------- First Page ----------- */
 
-#first_page {
-    background-color: #B7FDFE;
-}
-
 #first_page .fp-tableCell {
     vertical-align: bottom;
+    background-image: url("image/Preston-01.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 #first_page h1 {
     text-transform: uppercase;
     text-align: center;
+    font-size: 80;
 }
 
 #first_page p {
     text-align: justify;
     padding: 0px 10%;
+    margin-bottom: 5%;
 }
 
 /*===========Overlay==============*/
@@ -266,7 +276,7 @@ iframe {
 /* ------------ Rope chart ------------- */
 
 #rope {
-    background-color: #00CCFF;
+    background-color: #57C2F3;
     color: white;
 }
 
