@@ -119,14 +119,7 @@ def main():
             "26-35.p",
             "36-55.p",
             "56-90.p",
-            "ages.average"
-        ]
-
-        data[lsoa11cd]["ages"] = {key: row[key] for key in keys}
-
-    for row in ages:
-        lsoa11cd = row["LSOA11CD"]
-        keys = [
+            "ages.average",
             "0-15",
             "16-25",
             "26-35",
@@ -135,7 +128,7 @@ def main():
             "ages.average"
         ]
 
-        data[lsoa11cd]["groups"] = {key: row[key] for key in keys}
+        data[lsoa11cd]["ages"] = {key: row[key] for key in keys}
 
     convert_numbers(data)
 
