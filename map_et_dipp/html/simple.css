@@ -161,6 +161,7 @@ nav ul li:not(:first-child)
     text-align: center;
     background-color: #e7ffe0;
 }
+
 #slide9
 {
     text-align: center;
@@ -181,6 +182,14 @@ nav ul li:not(:first-child)
     color: #78dc82;
     font: 50px museoBold;
     margin-bottom: 9%;
+}
+
+#slide8 {
+    background: url(./img/planteshaut.png) top center no-repeat,
+                url(./img/plantesbas.png) bottom center no-repeat,
+                url(./img/plantesgauche.png) left center no-repeat,
+                url(./img/plantedroite.png) right center no-repeat;
+
 }
 
 #slide3 h2{
