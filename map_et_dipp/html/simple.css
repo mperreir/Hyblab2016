@@ -156,18 +156,25 @@ nav ul li:not(:first-child)
 
 
 /* slide 3 : pré joseph */
-#slide3 {
+#slide3,#slide8 {
     text-align: center;
     background-color: #e7ffe0;
 }
 
-#slide3 h2 {
+#slide8 h2
+{
+    color: #78dc82;
+    font: 50px museoBold;
+    margin-bottom: 9%;
+}
+
+#slide3 h2{
     color: #78dc82;
     font: 40px museoReg;
     margin-bottom: 9%;
 }
     
-#slide3 h3 {
+#slide3 h3, #slide8 h3{
     padding: 5px;
     margin-top: 1%;
     /* style du texte */
@@ -180,19 +187,19 @@ nav ul li:not(:first-child)
     display: inline-block;
 }
 
-#slide3 .conteneur {
+#slide3 .conteneur, #slide8 .conteneur {
     position: relative;
     height: 85%;    
 }
 
-#slide3 .bloc {
+#slide3 .bloc, #slide8 .bloc{
     position: absolute;
     top: 15%;
     padding-left: 20%;
     padding-right: 20%;
 }
 
-#slide3 .bloc p {
+#slide3 .bloc p, #slide8 .bloc p{
     margin-left: 20%;
     margin-right: 20%;
     color: #4c4c4c;
@@ -205,11 +212,17 @@ nav ul li:not(:first-child)
     text-align: center;
 }
 
+#slide4 h1 {
+    color: #fdbe63; 
+    font: museoReg;
+    margin-top: 2%;
+}
+
 #slide4 article {
     padding: 1%; /* 30px 30px 30px 10px */
     margin: 0 auto;
-    margin-top: 3%;
-    width: 50%;
+    margin-top: 1%;
+    width: 35%;
     /* style du texte */
     color: #4c4c4c;
     font: 15px / 19px museoReg;
@@ -228,11 +241,6 @@ nav ul li:not(:first-child)
     font: 400 17px / 21px Arial;
 }
 
-.imageSaisonBas {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
 
 
 /*
@@ -278,7 +286,13 @@ nav ul li:not(:first-child)
 }
 
 
+.imageSaisonBas {
+    padding-top: 2%;
+}
 
+#imageSaison {
+    height: 100px; 
+}
 
 .baliseJauge svg {
     display: inline-block;
@@ -371,9 +385,6 @@ nav ul li:not(:first-child)
     background: url(./img/joseph/total_checked.png) left top no-repeat;
 }
 
-.test {
-    background: url(../img/diagramme/joseph/background_printemps.png)
-}
 
 
 /* slide10 */
@@ -386,12 +397,23 @@ nav ul li:not(:first-child)
     background-color: white;
 }
 
+#slide10 .titre {
+    margin-left: 5%;
+}
 
 
+
+#slide10 .container {
+    height: 78%;
+    background: url(./img/illu_ville_gauche.png) bottom left no-repeat,
+                url(./img/illu_ville_droite.png) bottom right no-repeat;
+}
 
 #slide10 section {
     height: auto;
     margin-top: 15px;
+    margin-left: 25%;
+    margin-right: 25%;
     padding: 15px;
     background-color: inherit;
     /* contour */
@@ -400,23 +422,29 @@ nav ul li:not(:first-child)
 }
 
 #slide10 section header {
-    background-color: inherit;
     color: #4c4c4c;
-    font: 15px / 14px museoReg;
+    font: 15px / 18px museoReg;
     text-align: left;
+    margin-bottom: 15px;
 }
 
 #slide10 section article {
     color: #4c4c4c;
-    font: 400 12px / 14px Arial;
+    font: 400 15px / 18px Arial;
+    margin-bottom: 15px;
 }
 
 #slide10 section aside {
     /* correspond à la citation */
     color: #ffffff;
     font: 17px / 19px museoReg;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
+#slide10 .bandeauBas {
+    
+}
 
 
 /* flèche du bas */
