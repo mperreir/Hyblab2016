@@ -1,16 +1,16 @@
 function defaultSetting() {
     return {
         radius: 250,
-        width: "100%",
-        height: "100%",
+        width: "40%",
+        height: "500px",
         backgroundColor: "#00BFFF",
         textColor: "#8A2908",
         circleColor: "#81DAF5",
         fontSize: "120px",
         valueCount: true,
         countTime: 1000,
-        xPosition: 900,     //le x position de svg de population percentage
-        yPosition: 100        //le y position de svg de population percentage
+        xPosition: 120,     //le x position de svg de population percentage
+        yPosition: 50        //le y position de svg de population percentage
 
     };
 }
@@ -31,7 +31,6 @@ function defaultSettingText() {
 }
 
 function drawDescription(config, data) {
-    console.log(data);
     var g = d3.select("#contenu").append("g")
         .attr("width", config.widthContenu)
         .attr("height", config.heightContenu);
@@ -75,7 +74,7 @@ function draw(config, data) {
             for(var n = 1; n <= i; n++) {
                 x += .7 * Math.pow(-1, n-1)* (r(data[n-1].value) + r(data[n].value));
             }
-            console.log("x=" + x);
+            // console.log("x=" + x);
             return x;
         }
     }   
@@ -92,7 +91,7 @@ function draw(config, data) {
             for(var n = 1; n <= i; n++) {
                 y += .7 * (r(data[n-1].value) + r(data[n].value));
             }
-            console.log("y=" + y);
+            // console.log("y=" + y);
             return y;
         }
         return cy(d.value);
@@ -128,7 +127,7 @@ function draw(config, data) {
         .range([0, config.fontSize])
         .domain([0, 1]);
 
-    var svg = d3.select("#map2")
+    var svg = d3.select("#page3")
         .append("svg")
         .attr("id", "contenu")
         .attr("width", config.width)
@@ -136,6 +135,7 @@ function draw(config, data) {
         .style("background-color", config.backgroundColor);
 
     var g = svg.append("g")
+        .attr("id", "groupGraph")
         .attr("width", 200)
         .attr("height", 500)
         .style("background-color", config.backgroundColor)
@@ -179,7 +179,8 @@ function draw(config, data) {
             return b(i);
         })
         .attr("xlink:href", function(d, i) {
-            return "image/perso-0" + i + ".svg";
+            if (i != 5)
+                return "image/perso-0" + i + ".svg";
         });
 
     var text = g.selectAll("text")
@@ -205,7 +206,8 @@ function draw(config, data) {
             return fontSize(d.value);
         })
         .text(function(d, i) {
-            return d.value * 100 + "%";
+            // console.log("value=" + Math.ceil(d.value));
+            return Math.round(d.value * 100) + "%";
         })
         .attr("fill", config.textColor);
 
@@ -273,15 +275,6 @@ function draw(config, data) {
     }
 
 
-
-    /*
-    var pushArray = function(oldArr) {
-        var toPush = oldArr.concat.apply([], arguments);
-        for (var i = 0, len = toPush.length; i < len; ++i) {
-            this.push(toPush[i]);
-        }
-    };*/
-
     // Utility variable for storing MSOA's properties
     var MSOA = {};
     (function() {
@@ -336,42 +329,43 @@ function draw(config, data) {
         return result;
     }
 
-    // calculate total agegroup for MSOA
-    (function() {
-        for (var MSOA11CD in MSOA) {
-            MSOA[MSOA11CD]["ages"] = {};
-            for (var group in AGES) {
-                MSOA[MSOA11CD]["ages"][AGES[group]] = totalAges(AGES[group], MSOA[MSOA11CD]["LSOAs"]);
-            }
-        }
-        
-    }());
-
-    function totalPeople(lsoa11cd) {
-        var result = AGES
-            .map(function(group) {
-                return window.data[lsoa11cd]["ages"][AGES[group]];
-            }).reduce(function(a, b) {
-                return a + b;
-            });
-        return result;
-    }
-
-    // /*calculate the average age for the msoa*/
+    // // calculate total agegroup for MSOA
     // (function() {
-    //     var LSOAs = MSOA[msoa11cd]["LSOAs"];        
     //     for (var MSOA11CD in MSOA) {
-    //         var totalAges = 0;
-    //         var totalPeople = 0;
-    //         for (var LSOA11CD in LSOAs) {
-    //             count++;
-    //             totalPeople += totalPeople(LSOA11CD);
-    //             totalAges += totalPeople * window.data[lsoa11cd]["ages.average"];
+    //         MSOA[MSOA11CD]["ages"] = {};
+    //         for (var group in AGES) {
+    //             MSOA[MSOA11CD]["ages"][AGES[group]] = totalAges(AGES[group], MSOA[MSOA11CD]["LSOAs"]);
     //         }
-    //         MSOA[MSOA11CD]["ages.average"] = totalAges / totalPeople;
     //     }
         
     // }());
+
+    // calculate total number of people for MSOA
+
+    function totalPeople(msoa11cd) {
+        var result = 0;
+        for(var lsoa11cd in MSOA[msoa11cd]["LSOAs"]) {
+            for (var group in GROUPS) {
+                result += window.data[MSOA[msoa11cd]["LSOAs"][lsoa11cd]]["ages"][GROUPS[group]];
+            }
+        }
+        return result;
+    }
+
+    (function() {
+        for (var msoa11cd in MSOA) {
+            MSOA[msoa11cd]["ages"] = {};
+            var total = totalPeople(msoa11cd);  //total number of the total msoa11cd
+            for (var group in GROUPS) {
+                console.log(total);              
+                MSOA[msoa11cd]["ages"][AGES[group]] = totalAges(GROUPS[group], MSOA[msoa11cd]["LSOAs"]) / total;
+            }
+        }
+
+        
+    }());
+
+
 
     // Convert HSV to RGB
     function HSVtoRGB(h, s, v) {
@@ -520,30 +514,6 @@ function draw(config, data) {
             layer.bringToFront();
         }
 
-        // info update
-        info.update(e.target.feature.properties);
-        // barchart update
-        var deciles = [];
-        if (isLsoaLayer) {
-            for (var indicator in INDICATORS) {
-                deciles.push({
-                    'indicator': indicator.toUpperCase(),
-                    'decile': window.data[e.target.feature.properties["LSOA11CD"]][indicator]['decile']
-                })
-            }
-        } else {
-            for (var indicator in INDICATORS) {
-                deciles.push({
-                    'indicator': indicator.toUpperCase(),
-                    'decile': MSOA[e.target.feature.properties["MSOA11CD"]][indicator]["decile"]
-                })
-            }
-        }
-
-        if (barchart._map != undefined) {
-            // sanity check, in case that barchart not cleaned previously
-            map.removeControl(barchart);
-        }
         // barchart.addTo(map);
         // barchart.draw(deciles);
 
@@ -583,33 +553,29 @@ function draw(config, data) {
                 })
             } 
         }
+        // console.log(ages);
+        var page3 = document.getElementById("page3");
+        var contenu = document.getElementById("contenu");
+        if (page3 != undefined && contenu != undefined) {
+            page3.removeChild(contenu);
+        }
+        // console.log(ages);
+        draw(defaultSetting(), ages);
 
-
-        if (popChart._map != undefined) {
-            map.removeControl(popChart);
-        };
-
-        // popChart.addTo(map);  
-        // popChart.draw(ages);
-
-        // add overlay (note: effect not good, disabled)
-        // overlay.setAttribute('class', 'show');
     }
 
     function LsoaResetHighlight(e) {
         topoLsoaLayer.resetStyle(e.target);
-
-        if (barchart._map != undefined) {
-            map.removeControl(barchart);
-        }
+        var page3 = document.getElementById("page3");
+        var contenu = document.getElementById("contenu");
+        page3.removeChild(contenu);
     }
 
     function MsoaResetHighlight(e) {
         topoMsoaLayer.resetStyle(e.target);
-
-        if (barchart._map != undefined) {
-            map.removeControl(barchart);
-        }
+        var page3 = document.getElementById("page3");
+        var contenu = document.getElementById("contenu");
+        page3.removeChild(contenu);
     }
 
     function updatePopup(e) {
@@ -657,18 +623,10 @@ function draw(config, data) {
         onEachFeature: MsoaOnEachFeature
     });
 
-    var osm = new L.TileLayer(
-        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            minZoom: 11,
-            maxZoom: 18,
-            attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-        }
-    );
 
     var map = L.map('map2', {
         center: [53.85, -2.7],
         zoom: 11,
-        // layers: [osm, topoMsoaLayer], // Only Add default layers here
         layers: [topoMsoaLayer],
         minZoom: 11,
         maxZoom: 16,
@@ -694,421 +652,22 @@ function draw(config, data) {
     topoMsoaLayer.on('mouseout', function(e) {
         map.closePopup(popup);
     });
-    /*
-    L.control.layers(
-        { "Map": osm },
-        { "MSOA": topoMsoaLayer, "LSOA": topoLsoaLayer }
-    ).addTo(map);*/
-    //L.control.scale().addTo(map);
-
-    // Create overlay for later use
-    /*
-    var overlay = (function() {
-        var _div = L.DomUtil.create('div', '');
-        _div.setAttribute('id', 'overlay');
-        document.getElementById('map').appendChild(_div);
-        return _div;
-    }());*/
-
-    var info = L.control();
-
-    var sliderListenersAdded = false;
-    info.onAdd = function(map) {
-        this._div = L.DomUtil.create('div', 'info');
-        var info = L.control();
-        this._div.innerHTML =
-            '<h4>Index of Multiple Deprivation Score</h4>' +
-            '<h4 id="idm"></h4> <br/>' +
-            '<h5>How much does each of the following matters to you ?</h5>' +
-            '<div class="sliderset">' +
-            '   <div class="row"></div><label>Income</label><i class="information" id="icon_income"></i><input id="income" type="range" min="0" max="1000" value="225" class="slider red"/><br/>' +
-            '   <div class="row"></div><label>Employment</label><i class="information" id="icon_employment"></i><input id="employment" type="range" min="0" max="1000" value="225" class="slider orange"/><br/>' +
-            '   <div class="row"></div><label>Education</label><i class="information" id="icon_education"></i><input id="education" type="range" min="0" max="1000" value="135" class="slider yellow"/><br/>' +
-            '   <div class="row"></div><label>Health</label><i class="information" id="icon_health"></i><input id="health" type="range" min="0" max="1000" value="135" class="slider green"/><br/>' +
-            '   <div class="row"></div><label>Crime</label><i class="information" id="icon_crime"></i><input id="crime" type="range" min="0" max="1000" value="93" class="slider blue"/><br/>' +
-            '   <div class="row"></div><label>Housing</label><i class="information" id="icon_housing"></i><input id="housing" type="range" min="0" max="1000" value="93" class="slider indigo"/><br/>' +
-            '   <div class="row"></div><label>Environment</label><i class="information" id="icon_environment"></i><input id="environment" type="range" min="0" max="1000" value="93" class="slider purple"/><br/>' +
-            '</div>';
-        this._div.addEventListener('mousemove', function(e) {
-            e.stopPropagation();
-        });
-
-        return this._div;
-    };
-
-    info.update = function(props) {
-
-        if (sliderListenersAdded == false) {
-            document.getElementById("income").addEventListener('change', function(e) {
-                info.update(props);
-                topoLsoaLayer.eachLayer(function(layer) {
-                    topoLsoaLayer.resetStyle(layer);
-                });
-                topoMsoaLayer.eachLayer(function(layer) {
-                    topoMsoaLayer.resetStyle(layer);
-                });
-            });
-            document.getElementById("employment").addEventListener('change', function(e) {
-                info.update(props);
-                topoLsoaLayer.eachLayer(function(layer) {
-                    topoLsoaLayer.resetStyle(layer);
-                });
-                topoMsoaLayer.eachLayer(function(layer) {
-                    topoMsoaLayer.resetStyle(layer);
-                });
-            });
-            document.getElementById("education").addEventListener('change', function(e) {
-                info.update(props);
-                topoLsoaLayer.eachLayer(function(layer) {
-                    topoLsoaLayer.resetStyle(layer);
-                });
-                topoMsoaLayer.eachLayer(function(layer) {
-                    topoMsoaLayer.resetStyle(layer);
-                });
-            });
-            document.getElementById("health").addEventListener('change', function(e) {
-                info.update(props);
-                topoLsoaLayer.eachLayer(function(layer) {
-                    topoLsoaLayer.resetStyle(layer);
-                });
-                topoMsoaLayer.eachLayer(function(layer) {
-                    topoMsoaLayer.resetStyle(layer);
-                });
-            });
-            document.getElementById("crime").addEventListener('change', function(e) {
-                info.update(props);
-                topoLsoaLayer.eachLayer(function(layer) {
-                    topoLsoaLayer.resetStyle(layer);
-                });
-                topoMsoaLayer.eachLayer(function(layer) {
-                    topoMsoaLayer.resetStyle(layer);
-                });
-            });
-            document.getElementById("housing").addEventListener('change', function(e) {
-                info.update(props);
-                topoLsoaLayer.eachLayer(function(layer) {
-                    topoLsoaLayer.resetStyle(layer);
-                });
-                topoMsoaLayer.eachLayer(function(layer) {
-                    topoMsoaLayer.resetStyle(layer);
-                });
-            });
-            document.getElementById("environment").addEventListener('change', function(e) {
-                info.update(props);
-                topoLsoaLayer.eachLayer(function(layer) {
-                    topoLsoaLayer.resetStyle(layer);
-                });
-                topoMsoaLayer.eachLayer(function(layer) {
-                    topoMsoaLayer.resetStyle(layer);
-                });
-            });
-            sliderListenersAdded = true;
-        } else if (props !== undefined) {
-            if (props.hasOwnProperty("LSOA11CD"))
-                //document.getElementById("idm").innerHTML = ": " + calculateIMD(props["LSOA11CD"]).toFixed(1) + "%";
-                document.getElementById("idm").innerHTML = ": " +
-                    parseInt(calculateIMD(props["LSOA11CD"]).toPrecision(1) / 10);
-            else {
-                //document.getElementById("idm").innerHTML = ": " + calculateMsoaIMD(props["MSOA11CD"]).toFixed(1) + "%";
-                document.getElementById("idm").innerHTML = ": " +
-                    parseInt(calculateMsoaIMD(props["MSOA11CD"]).toPrecision(1) / 10);
-            }
-        }
-    };
-
-    // info.addTo(map);
-
-    var searchbar = {};
-    searchbar.create = function(map) {
-        this._div = L.DomUtil.create('div', 'searchbar');
-        this._div.innerHTML = '';
-
-        this._input = L.DomUtil.create('input', '');
-        this._input.setAttribute('type', 'text');
-        this._input.setAttribute('id', 'searchbox');
-        this._input.setAttribute('placeholder', 'TRY YOUR POSTCODE HERE :)');
-        this._input.setAttribute('maxlength', 8);
-
-        this._div.appendChild(this._input);
-
-        document.getElementById('map2').appendChild(this._div);
-
-        return this._div;
-    };
-    searchbar.configEventListener = function() {
-        var input = document.getElementById("searchbox");
-        var keypressEventListener = function(e) {
-            var pcd = input.value.replace(/ /g, '');
-            if (pcd.length === 6) {
-                pcd = pcd.toUpperCase();
-                var lsoa11cd = PCDtoLSOA11CD(pcd);
-                for (var layer in topoLsoaLayer["_layers"]) {
-                    if (topoLsoaLayer["_layers"][layer].feature.properties.LSOA11CD === lsoa11cd) {
-                        map.fitBounds(topoLsoaLayer["_layers"][layer].getBounds());
-                        popup
-                            .setLatLng(topoLsoaLayer["_layers"][layer].getBounds().getCenter())
-                            .setContent(topoLsoaLayer["_layers"][layer].feature.properties.LSOA11NM)
-                            .openOn(map);
-                        var deciles = [];
-                        for (var indicator in INDICATORS) {
-                            deciles.push({
-                                'indicator': indicator.toUpperCase(),
-                                'decile': window.data[lsoa11cd][indicator]['decile']
-                            });
-                            // console.log(window.data[lsoa11cd][indicator]['decile']);
-                        }
-                        if (barchart._map != undefined) {
-                            map.removeControl(barchart);
-                        }
-                        barchart.addTo(map);
-                        barchart.draw(deciles);
-                        topoLsoaLayer["_layers"][layer].setStyle({
-                            weight: 5,
-                            color: '#fff',
-                            opacity: 1
-                        });
-                    }
-                }
-            }
-        };
-        input.addEventListener('focus', function(focusEvent) {
-            input.addEventListener('keyup', keypressEventListener);
-        });
-        input.addEventListener('focusout', function(focusoutEvent) {
-            input.removeEventListener('keyup', keypressEventListener);
-        });
-    };
-    // searchbar.create(map);
-    // searchbar.configEventListener();
 
 
-    var colorsOfIndicators = {
-        'INCOME': '#805501',
-        'HEALTH': '#029FDA',
-        'EDUCATION': '#5203FF',
-        'EMPLOYMENT': '#DAA643',
-        'ENVIRONMENT': '#276880',
-        'HOUSING': '#864FFF',
-        'CRIME': '#FFDD9A'
-    };
-
-    var barchart = L.control({position : 'bottomright'});
-    barchart.onAdd = function(map) {
-        this._chartContainer = L.DomUtil.create('div', '');
-        this._chartContainer.setAttribute('id', 'chartContainer');
-        return this._chartContainer;
-    };
-    // deciles
-    barchart.draw = function(deciles) {
-
-        var margin = {top: 10, right: 0, bottom: 55, left: 20},
-            width = 320 - margin.left - margin.right,
-            height = 250 - margin.top - margin.bottom;
-
-        var x = d3.scale.ordinal()
-            .rangeRoundBands([0, width], .1);
-
-        var y = d3.scale.linear()
-            .range([height, 0]);
-
-        var xAxis = d3.svg.axis()
-            .scale(x)
-            .orient("bottom");
-
-        var yAxis = d3.svg.axis()
-            .scale(y)
-            .orient("left")
-            .ticks(10);
-
-        var svg = d3.select("#chartContainer").append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-        x.domain(['INCOME', 'HEALTH', 'EDUCATION', 'EMPLOYMENT', 'ENVIRONMENT', 'HOUSING', 'CRIME']);
-        y.domain([0, 10]);
-
-        svg.append('g')
-            .attr('class', 'x axis')
-            .attr('transform', 'translate(0,' + height + ')')
-            .call(xAxis)
-            .selectAll('text')
-            .style('text-anchor', 'end')
-            .attr('class', 'x-axis-label')
-            .attr('dx', '0em')
-            .attr('dy', '.8em')
-            .attr('transform', 'rotate(-30)');
-
-        svg.append("g")
-            .attr("class", "y axis")
-            .call(yAxis);
-        /* Label for y-axis
-        .append("text")
-        .attr("transform", "rotate(-90)")
-        .attr("y", -10)
-        .attr("dy", "-1em")
-        .style("text-anchor", "end")
-        .text("Performance");*/
-
-        svg.selectAll('.bar')
-            .data(deciles)
-            .enter().append('rect')
-              .attr('class', function(d) { return 'bar'; })
-            .attr('style', function(d) { return 'fill:' + colorsOfIndicators[d.indicator];})
-            .attr('x', function(d) { return x(d.indicator); })
-            .attr('width', x.rangeBand())
-            .attr('y', height)
-            .attr('height', '1')
-            .transition()
-            .attr('y', function(d) { return y(d.decile); })
-            .attr('height', function(d) {return height - y(d.decile); });
-    };
-
-    var legend = L.control({ position: 'bottomleft' });
-    legend.onAdd = function(map) {
-        this._div = L.DomUtil.create('div', 'legendContainer');
-        this._div.innerHTML = '<div class="legend-label"><strong>most</strong> deprived</div>' +
-            '<div class="legend"></div>' +
-            '<div class="legend-label"><strong>least</strong> deprived</div>';
-        return this._div;
-    };
-    // legend.addTo(map);
-
-
-
-    /*
-    the chart of the population
-
-    var popChart = L.control({
-        position: 'bottomleft'
-    });
-
-    popChart.onAdd = function(map) {
-        this._chartContainer = L.DomUtil.create('div', '');
-        this._chartContainer.setAttribute('id', 'pop_chart');
-        return this._chartContainer;
-    };
-    //we get ages here
-    popChart.draw = function(data) {
-
-        var margin = {
-                top: 20,
-                right: 30,
-                bottom: 30,
-                left: 40
-            },
-            width = 460 - margin.left - margin.right,
-            height = 300 - margin.bottom - margin.top;
-
-        var x = d3.scale.ordinal()
-            .domain(data.map(function(d) {
-                return d.name;
-            }))
-            .rangeRoundBands([0, width], .1);
-
-
-        var y = d3.scale.linear()
-            .domain([0, d3.max(data, function(d) {
-                return d.value;
-            })])
-            .range([height, 0]);
-
-        var colors = d3.scale.linear()
-            .domain([0, data.length * .33, data.length * .66, data.length])
-            .range(['#d6e9c6', '#bce8f1', '#faebcc', '#ebccd1']);
-
-        var xAxis = d3.svg.axis()
-            .scale(x)
-            .orient("bottom");
-
-        var yAxis = d3.svg.axis()
-            .scale(y)
-            .orient("left")
-            .ticks(5)
-            .tickSize(-width);
-
-
-        var chart = d3.select("#pop_chart")
-            .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-
-        chart.selectAll(".groupLogo")
-            .data(data)
-            .enter().append("svg:image")
-            .attr("x", function(d, i) {
-                return x(d.name);
-            })
-            .attr("y", height)
-            .attr("width", x.rangeBand())
-            .attr("height", 30)
-            // .attr("xlink:href", function(d, i) {
-            //     return "image/axis" + i + ".png");
-            // });
-            .attr("xlink:href", "image/info28.png");
-
-        chart.append("g")
-            .attr("class", "y axis")
-            .call(yAxis)
-            .append("text")
-            .attr("transform", "translate(10, -10)")
-            .attr("y", 0)
-            .attr("dy", ".71em")
-            .style("text-anchor", "end")
-            .text("Number");
-
-        var bar = chart.selectAll(".bar")
-            .data(data)
-            .enter().append("rect")
-            .style({
-                'fill': function(d, i) {
-                    return colors(i);
-                }
-            })
-            .attr("class", "bar")
-            .attr("x", function(d) {
-                return x(d.name);
-            })
-            .attr("y", function(d) {
-                return y(d.value);
-            })
-            .attr("height", function(d) {
-                return height - y(d.value);
-            })
-            .attr("width", x.rangeBand());
-
-
-        bar.append("title")
-            .text(function(d) {
-                return d.name + ":" + d.value;
-            });
-
-
-    }
-
-
-    // Temporary fix, used util IMD calculation error is fixed
-    topoMsoaLayer.eachLayer(function(layer) {
-        topoMsoaLayer.resetStyle(layer);
-    });
-    topoLsoaLayer.eachLayer(function(layer) {
-        topoLsoaLayer.resetStyle(layer);
-    });
 
 
     /*-------------------------------------------*/
     var data = [{"name":"0-15", "value":0.38}, {"name":"16-25", "value":0.1}, {"name":"26-35", "value":0.16}, 
     {"name":"36-55", "value":0.26}, {"name":"56-90", "value":0.09}];
 
+    // console.log(window.data);
+
     var description = ["THE AGE OF PRESTON", "description..................."];
 
     draw(defaultSetting(), data);
 
-    drawDescription(defaultSettingText(), description);
+    // drawDescription(defaultSettingText(), description);
 
 }());
 
+    
