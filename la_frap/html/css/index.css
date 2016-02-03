@@ -260,6 +260,7 @@ div.jqvmap-label{
 
 div.leftPart{
 	width:50%;
+	height: 100%;
 	left:0%;
 	position:absolute;
 	display: inline-block;
@@ -287,8 +288,9 @@ div#pieChart svg{
 #financement{
 	clear: left;
 	position: absolute;
-	margin-top:160px;
-	margin-left: 80px;
+	margin-top:200px;
+	height:60%;
+	width: 100%;
 }
 
 #pieInfo {
@@ -498,4 +500,38 @@ svg {
 	color:white;
 	font-size: 12px;
 	font-weight: lighter;
+}
+
+#finance{
+	padding: 3px;
+	text-align: left;
+	width:95%;
+	background-color: rgba(0,0,0,0.3);
+	display: block;
+	position: absolute;
+	margin-top:180px;
+	line-height: 17px;
+}
+
+#finance p{
+	padding: 3px;
+	height: 100%;
+	font-size: 15px;
+}
+
+#rh{
+	padding: 5px;
+	text-align: left;
+	width:95%;
+	background-color: rgba(0,0,0,0.3);
+	display: block;
+	margin-top:180px;
+	line-height: 19px;
+	position: absolute;
+}
+
+#rh p{
+	padding: 5px;
+	height: 100%;
+	font-size: 17px;
 }

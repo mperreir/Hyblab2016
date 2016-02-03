@@ -15,6 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 
+	
 
 		<script src="jquery/jquery-1.12.0.min.js"></script>
 		<script src="jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
@@ -26,7 +27,9 @@
 		<script src="js/map_pays_de_la_loire4.js"></script>	
 		<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
 		<script src="d3/d3pie.min.js"></script>
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+   		<link href="d3/nv.d3.css" rel="stylesheet" type="text/css">	
+		<script src="d3/nv.d3.js"></script>
 
 		<script src="js/map.js"></script>	
 		<script src="js/piechart.js"></script>
@@ -39,8 +42,8 @@
 		<div id="fullpage">
 			<div class="section " id="section0">
 				<div class="heading">
-					<h1>LES RADIOS LOCALES</h1>
-					<p>L'impact des radios associatives sur la région Pays de la Loire</p>
+					<h1>LES RADIOS LOCALES DES PAYS DE LA LOIRE</h1>
+					<p>Les ondes de la région décryptées</p>
 					<form>
 						<input type="button" class="bouton" name="boutoncarte" value="Voir la carte" onclick="self.location.href='index.html#firstPage'">
 					</form>
@@ -66,7 +69,7 @@
 							</svg>
 						</div>
 						<div class="texteheader">
-							<p class="titre1">LES MISSIONS DES RADIOS LOCALES</p>
+							<p class="titre1">DES RADIOS ASSOCIATIVES A L’UNISSON</p>
 							<p class="soustitre">Pourquoi se sont elles fédérées ?</p>
 						</div>
 						<div class="evolution">
@@ -146,7 +149,7 @@
 								</svg>
 							</div>
 						<div class="texteheader">
-							<p class="titre1">LES DEPARTEMENTS</p>
+							<p class="titre1">FOCUS PAR DEPARTEMENT</p>
 							<p class="soustitre">Quelles sont les différences entre les départements ?</p>
 						</div>
 						<div class="evolution">
@@ -217,7 +220,7 @@
 						</div>
 						<div id="pieInfo">
 							<p id="pieSection"></p>
-							<div id=pieText></div>
+							<div id="pieText"></div>
 						</div>
 					</div>
 				</div>
@@ -240,21 +243,34 @@
 						</svg>
 					</div>
 					<div class="texteheader">
-						<p class="titre1">EVOLUTION</p>
-						<p class="soustitre">De 2006 à 2014</p>
+						<p class="titre1">LES EVOLUTIONS AU NIVEAU REGIONAL</p>
+						<p class="soustitre">Qu’en est-il dix ans après ?</p>
+					</div>
+				</div>
+				<div class="leftPart">
+					<svg id="financement" onload="cumule('sub')"></svg>
+				</div>
+				<div class="rightPart">
+					<div id="finance">
+							<p>Concernant les financements publics, la tendance se traduit par une courbe positive en net progrès pour la majorité des financeurs.
+							On constate par exemple que, depuis 2006, les financements provenant de la région ont été multipliés par 7. Il passe de 18 202€ soit 910€ par radio à 127 448€ soit un total de 5793€ pour chaque radio.</p>
+							<p>Autre acteur incontournable, le FSER (Fond de soutien à l’expression radiophonique locale), mobilise de gros moyens financiers depuis 10 ans qui ne cessent d’augmenter pour passer le cap du million aujourd’hui. Il y a 10 ans, le fonds versait  un total 835 046€ à partager entre 20 radios. En 2014, on compte désormais un somme de 1 067 652€ pour les 22 radios associatives.</p>
+							<p> En 2006, en moyenne chaque département subventionnait à auteur de 42 000€ les 20 radios de la FRAP. Pour l’année 2014, le chiffre est évalué à 66 060€ pour les 22 radios adhérentes.</p>
+							<p>Concernant le cas des communautés de communes et communes des Pays de la Loire, elles allouent en 2006, 323 305€ de budget global.
+8 ans plus tard, le budget a été réévalué à la hausse pour un total de 492 361€. Quant aux communes seules, on relève une moyenne de 154 520€ de subventions en 2006. Et en 2014 la moyenne s’élève à 367 861€ de budget.</p>
+							<p>Pour assister les radios associatives dans leurs missions, les aides à l’emploi font parties des aides débloquées par les collectivités. Pour la première année, ont été attribué 228 613€ d’aides. Les derniers chiffres relevés s’élève à 212 374€. Ce qui constitue une légère baisse pour le fonctionnement de chaque radio mais qui s’explique par la transformation des postes. En effet, les radios ont tendance à pérenniser les postes.</p></div>
+					<div id="rh" visibility="hidden">
+							<p>Le nombre de bénévoles a pris une ampleur considérable en 8 ans. Malgré une légère baisse en 2014, qui fait chuter le nombre de bénévoles quasiment à son niveau initial. Socle structurel des radios, en 2006 sur les 20 radios interrogées on comptait 1255 bénévoles. On dénombre en 2014, 1407  au sein des rédactions des 22 radios de la FRAP.  On remarque que le nombre de bénévoles par radio varient énormément, par exemple Prun’ travaille avec plus de 270 bénévoles quant à Atlantis FM,  de son coté, travaille avec 5 bénévoles en moyenne 2014.</p>
+							<p>Du coté des salariés, leur nombre augmente de 50,7% durant ces 8 dernières années. En 2006, 65 salariés travaillent dans les rédactions de 19 radios. Pour l’année 2014, ils sont 98 dans 22 radios ligériennes. L’augmentation est surtout visible de 2012 à 2014 où l’équivalent temps plein passe de 2,7 à 4,1 personnes embauchées en moyenne.</p>
+							<p> Enfin, dernier acteur non négligeable, l’apparition des services civiques depuis 2010 dans les radios. La première année, la FRAP en compte 3. S’en suit une très nette augmentation en 2014 avec 12 services civiques  au sein de 5 radios.</p>
 					</div>
 				</div>
 				<div class="choixevolution">
 					<div id="choixsubvention">Subventions</div>
 					<div id="choixrh">Ressources Humaines</div>
 				</div>
-				<div class="leftPart">
-					<div id="financement"></div>
-				</div>
-				<div class="rightPart">
-
-				</div>
 			</div>
+
 
 			<div class="section " id="section4">
 				<div class="header">
@@ -305,15 +321,8 @@
 			fullpage.initialize('#fullpage', {
 				anchors: ['title','firstPage', 'secondPage','thirdPage','credits'],
 				menu: '#menu',
-				css3:true,
-				afterLoad: function(anchorLink, index){
-					var loadedSection = $(this);
-
-					//using anchorLink
-					if(anchorLink === 'thirdPage'){
-						cumule();
-					}
-				}
+				css3:true
+				
 			});
 
 
