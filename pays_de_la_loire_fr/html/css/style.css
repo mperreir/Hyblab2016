@@ -1521,18 +1521,18 @@ DATA 1
 
 .dash_line
 {
-	stroke-dasharray:100;
-	stroke-dashoffset: 100;
+	stroke-dasharray:50;
+	stroke-dashoffset: 50;
 	animation: dash 1s linear forwards;
 }
 
 @keyframes dash {
   from {
-  	stroke-dasharray:100;
+  	stroke-dasharray:50;
   }
   to {
     stroke-dasharray:15;
-    stroke-dashoffset: -100;
+    stroke-dashoffset: -50;
   }
 }
 
