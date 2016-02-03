@@ -361,9 +361,9 @@
         if (popChart._map != undefined) {
             map.removeControl(popChart);
         };
-        console.log(ages);
-        popChart.addTo(map);  
-        popChart.draw(ages);
+        // console.log(ages);
+        // popChart.addTo(map);  
+        // popChart.draw(ages);
 
         // add overlay (note: effect not good, disabled)
         // overlay.setAttribute('class', 'show');
