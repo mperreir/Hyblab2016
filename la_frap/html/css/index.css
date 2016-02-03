@@ -295,8 +295,9 @@ div#pieChart svg{
 	padding: 10px; 
 } 
 
-#pieExplains {
+#pieText {
 	position: absolute;
+	top: 500px;
 }
 
 #legendSvg {

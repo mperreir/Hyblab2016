@@ -135,10 +135,11 @@ window.addEventListener('load',function () {
 						.attr("font-weight","bold")
 						.attr("y","72%");
 					pieExplains.html(info.data.text);
+					pieExplains.style('visibility', 'visible')
 				} else {
 					pieData.text("");
 					is.text("");
-					pieExplains.html("");
+					pieExplains.style('visibility', 'hidden')
 				}
 			}
 		}
@@ -197,7 +198,7 @@ window.addEventListener('load',function () {
 					.text("Cliquez pour afficher les valeurs");
 					
 					
-	var pieExplains = d3.select("#pieInfo").append("p")
+	var pieExplains = d3.select("#pieText").append("p")
 					.attr("id","pieExplains")
 					.style("font-weight", "bold");
 	
