@@ -1625,7 +1625,6 @@ DATA 1
 	display: block;
 	vertical-align: middle;
 	text-align: center;
-	animation: flipInX 1s linear forwards;
 }
 
 #annee2008_3
@@ -1663,6 +1662,11 @@ DATA 1
 	animation: flipInX 1s linear forwards;	
 }
 
+.animValeur
+{
+	animation: fadeIn 1s linear forwards;	
+}
+
 .animPale_3
 {
 	animation: rotatePale 5s linear infinite;	
@@ -1675,4 +1679,66 @@ DATA 1
   to {
     transform: rotate(360deg);
   }
+}
+
+.bloc_valeur
+{
+	position: absolute;
+	font-size: 0.8vw;
+	width: 11.5%;
+    height: 4%;
+    padding: 0.3%;
+	color: rgb(237,121,107);
+	font-weight: bolder;
+	display: block;
+	vertical-align: middle;
+	text-align: center;
+	z-index: 4;
+	text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+}
+
+#valeur2008_3
+{
+    top: 48%;
+    left: 14%;
+}
+
+#valeur2011_3
+{
+    top: 39%;
+    left: 29.6%;
+}
+
+#valeur2014_3
+{
+    top: 30.2%;
+    left: 43.6%;
+}
+
+#valeur2022_3
+{
+    top: 20%;
+    left: 59%;
+}
+
+#valeur2_2022_3
+{
+    top: 34%;
+    left: 59%;
+    color: rgb(174,219,222);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+}
+
+#valeur2030_3
+{
+    top: 14%;
+    left: 74%;
+}
+
+#valeur2_2030_3
+{
+    top: 29.5%;
+    left: 74%;
+    color: rgb(174,219,222);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
 }

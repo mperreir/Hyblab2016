@@ -128,6 +128,14 @@ function reset3() {
 	annee2022.style.display = "none";
 	var annee2030 = document.getElementById("annee2030_3");
 	annee2030.style.display = "none"; 
+
+	document.getElementById("valeur2008_3").style.display = "none";
+	document.getElementById("valeur2011_3").style.display = "none";
+	document.getElementById("valeur2014_3").style.display = "none";
+	document.getElementById("valeur2022_3").style.display = "none";
+	document.getElementById("valeur2_2022_3").style.display = "none";
+	document.getElementById("valeur2030_3").style.display = "none";
+	document.getElementById("valeur2_2030_3").style.display = "none";
 }
 
 function animEolienne3_1(){
@@ -148,6 +156,10 @@ function animEolienne3_1(){
 					annee2008.classList.remove("animAnnee");
 					document.getElementById("eolienne_pale1_3").style.zIndex = 3;
   					setTimeout(function(){annee2008.classList.add("animAnnee");annee2008.style.display = "block";},1);
+
+  					var valeur2008_3 = document.getElementById("valeur2008_3");
+					valeur2008_3.classList.remove("animValeur");
+  					setTimeout(function(){valeur2008_3.classList.add("animValeur");valeur2008_3.style.display = "block";},1);
 				});
 }
 
@@ -169,7 +181,10 @@ function animEolienne3_2(){
 					annee2011.classList.remove("animAnnee");
   					document.getElementById("eolienne_pale2_3").style.zIndex = 3;
   					setTimeout(function(){annee2011.classList.add("animAnnee");annee2011.style.display = "block";},1);
-				
+					
+					var valeur2011_3 = document.getElementById("valeur2011_3");
+					valeur2011_3.classList.remove("animValeur");
+  					setTimeout(function(){valeur2011_3.classList.add("animValeur");valeur2011_3.style.display = "block";},1);
 				});
 }
 
@@ -201,6 +216,10 @@ function animEolienne3_3(){
 					annee2014.classList.remove("animAnnee");
   					document.getElementById("eolienne_pale3_3").style.zIndex = 3;
   					setTimeout(function(){annee2014.classList.add("animAnnee");annee2014.style.display = "block";},1);
+
+  					var valeur2014_3 = document.getElementById("valeur2014_3");
+					valeur2014_3.classList.remove("animValeur");
+  					setTimeout(function(){valeur2014_3.classList.add("animValeur");valeur2014_3.style.display = "block";},1);
 				  					
 				});
 }
@@ -223,6 +242,14 @@ function animEolienne3_4(){
 					annee2022.classList.remove("animAnnee");
   					document.getElementById("eolienne_pale4_3").style.zIndex = 3;
   					setTimeout(function(){annee2022.classList.add("animAnnee");annee2022.style.display = "block";},1);
+
+  					var valeur2022_3 = document.getElementById("valeur2022_3");
+					valeur2022_3.classList.remove("animValeur");
+  					setTimeout(function(){valeur2022_3.classList.add("animValeur");valeur2022_3.style.display = "block";},1);
+
+  					var valeur2_2022_3 = document.getElementById("valeur2_2022_3");
+					valeur2_2022_3.classList.remove("animValeur");
+  					setTimeout(function(){valeur2_2022_3.classList.add("animValeur");valeur2_2022_3.style.display = "block";},1);
 				
 				});
 }
@@ -252,12 +279,21 @@ function animEolienne3_5(){
 					annee2030.classList.remove("animAnnee");
   					document.getElementById("eolienne_pale5_3").style.zIndex = 3;
   					setTimeout(function(){annee2030.classList.add("animAnnee");annee2030.style.display = "block";},1);
+
+  					var valeur2030_3 = document.getElementById("valeur2030_3");
+					valeur2030_3.classList.remove("animValeur");
+  					setTimeout(function(){valeur2030_3.classList.add("animValeur");valeur2030_3.style.display = "block";},1);
+
+  					var valeur2_2030_3 = document.getElementById("valeur2_2030_3");
+					valeur2_2030_3.classList.remove("animValeur");
+  					setTimeout(function(){valeur2_2030_3.classList.add("animValeur");valeur2_2030_3.style.display = "block";},1);
 				
 				});
 }
 
 function addRotation(id)
 {
+	var temp ="";
 	document.getElementById("eolienne_pale1_3").classList.remove("animPale");
 	document.getElementById("eolienne_pale1_3").style.animationPlayState="paused";
 	document.getElementById("eolienne_pale2_3").classList.remove("animPale");
@@ -268,9 +304,49 @@ function addRotation(id)
 	document.getElementById("eolienne_pale4_3").style.animationPlayState="paused";
 	document.getElementById("eolienne_pale5_3").classList.remove("animPale");
 	document.getElementById("eolienne_pale5_3").style.animationPlayState="paused";
-	
+
+	var valeur2008_3 = document.getElementById("valeur2008_3");
+	var valeur2011_3 = document.getElementById("valeur2011_3");
+	var valeur2014_3 = document.getElementById("valeur2014_3");
+	var valeur2022_3 = document.getElementById("valeur2022_3");
+	var valeur2_2022_3 = document.getElementById("valeur2_2022_3");
+	var valeur2030_3 = document.getElementById("valeur2030_3");
+	var valeur2_2030_3 = document.getElementById("valeur2_2030_3");
+
+	valeur2008_3.innerHTML = "";
+	valeur2011_3.innerHTML = "+237%";
+	valeur2014_3.innerHTML = "+72%";
+	valeur2022_3.innerHTML = "32%";
+	valeur2_2022_3.innerHTML = "62%";
+	valeur2030_3.innerHTML = "+29%";
+	valeur2_2030_3.innerHTML = "+45%";
+
 	var pale = document.getElementById(id);
 	setTimeout(function(){pale.classList.add("animPale_3");pale.style.animationPlayState="running";},1);
+	switch(id)
+	{
+		case('eolienne_pale1_3'):
+			valeur2008_3.innerHTML = "285GWh";
+		break;
+
+		case('eolienne_pale2_3'):
+			valeur2011_3.innerHTML = "961GWh";
+		break;
+
+		case('eolienne_pale3_3'):
+			valeur2014_3.innerHTML = "1654GWh";
+		break;
+
+		case('eolienne_pale4_3'):
+			valeur2022_3.innerHTML = "2683GWh";
+			valeur2_2022_3.innerHTML = "2181GWh";
+		break;
+
+		case('eolienne_pale5_3'):
+			valeur2030_3.innerHTML = "3893GWh";
+			valeur2_2030_3.innerHTML = "2810GWh";
+		break;
+	}
 }
 
 function rand(min,max){
