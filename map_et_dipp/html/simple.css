@@ -422,6 +422,14 @@ nav ul li:not(:first-child)
     margin-left: 5%;
 }
 
+
+
+#slide10 .container {
+    height: 78%;
+    background: url(./img/illu_ville_gauche.png) bottom left no-repeat,
+                url(./img/illu_ville_droite.png) bottom right no-repeat;
+}
+
 #slide10 section {
     height: auto;
     margin-top: 15px;

@@ -1,8 +1,8 @@
 'use strict';
 
 var margin = {top: 30, right: 0, bottom: 20, left: 0},
-    width = (window.screen.availWidth * 40/100),
-    height = (window.screen.availHeight * 40/100) - margin.top - margin.bottom,
+    width = (window.screen.availWidth * 70/100),
+    height = (window.screen.availHeight * 50/100) - margin.top - margin.bottom,
     transitioning;
 
 // sets x and y scale to determine size of visible boxes
@@ -236,7 +236,7 @@ d3.json('json/treemap.json', function(root) {
   function text(text) {
     text.attr('x', function(d) { return x(d.x) + 6; })
         .attr('y', function(d) { return y(d.y) + 6; })
-        .attr('font-size', '0.7em')
+        .attr('font-size', '1em')
         .attr('fill', function (d) { return (d.major == 'SG') ? '#3f6660' : '#fff'; });
   }
 
