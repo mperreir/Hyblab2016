@@ -250,7 +250,7 @@
             };
         } else {
             //console.log(calculateIMD);
-            console.log('lsoa s2: ' + calculateIMD(feature.properties.LSOA11CD));
+            //console.log('lsoa s2: ' + calculateIMD(feature.properties.LSOA11CD));
             return {
                 fillColor: getColor(calculateIMD(feature.properties.LSOA11CD)),
                 weight: 2,

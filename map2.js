@@ -357,7 +357,7 @@ function draw(config, data) {
             MSOA[msoa11cd]["ages"] = {};
             var total = totalPeople(msoa11cd);  //total number of the total msoa11cd
             for (var group in GROUPS) {
-                console.log(total);              
+                //console.log(total);
                 MSOA[msoa11cd]["ages"][AGES[group]] = totalAges(GROUPS[group], MSOA[msoa11cd]["LSOAs"]) / total;
             }
         }
@@ -669,5 +669,3 @@ function draw(config, data) {
     // drawDescription(defaultSettingText(), description);
 
 }());
-
-    
