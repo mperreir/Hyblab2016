@@ -55,6 +55,7 @@ nav ul li:not(:first-child)
 
 .boutonMenu
 {
+    display: inline;
 	float: right;
 	margin-right: 25px;
 	margin-top: 12px;
