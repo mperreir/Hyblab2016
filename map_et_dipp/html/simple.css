@@ -402,15 +402,14 @@ nav ul li:not(:first-child)
 }
 
 #slide10 section header {
-    /background-color: inherit;
     color: #4c4c4c;
-    font: 15px / 14px museoReg;
+    font: 15px / 18px museoReg;
     text-align: left;
 }
 
 #slide10 section article {
     color: #4c4c4c;
-    font: 400 12px / 14px Arial;
+    font: 400 15px / 18px Arial;
 }
 
 #slide10 section aside {
@@ -419,6 +418,9 @@ nav ul li:not(:first-child)
     font: 17px / 19px museoReg;
 }
 
+#slide10 .bandeauBas {
+    
+}
 
 
 /* flèche du bas */
