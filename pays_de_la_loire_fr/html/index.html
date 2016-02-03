@@ -47,9 +47,9 @@
         Slide introduction
       **********************
       -->
-      <section class="section section_perso">
+      <section class="section section_perso" onclick="startQ()">
         <span class="responsive_container">
-          <img class="image_fond" src="../resources/images/Backgrounds/background3-01.svg" alt="Fond" id="fond_intro" />
+          <img class="image_fond" src="../resources/images/Backgrounds/background3-01.svg" alt="Fond" />
 
           <img class="element_fond" src="../resources/images/1ere-page-home/nuage1.svg" alt="Nuage" id="nuage1" />
 
@@ -82,27 +82,25 @@
       </section>
 
       <!-- 
-      *********************************
-        Slide intercalaire, dataviz 1
-      *********************************
-      -->
-      <section class="section section_perso">
-        <span class="responsive_container">
-          <img class="image_fond" src="../resources/images/Backgrounds/background3-02.svg" alt="Fond" />
-          <h2 class="titre" id="titre_intercalaire_questionnaire" >
-            CONNAISSEZ-VOUS VOTRE RÉGION ?
-          </h2>
-          <button class="bouton_demarrer" onclick="startQ()" >DÉMARRER</button>
-        </span>
-      </section>
-
-      <!-- 
       *****************
         Questionnaire
       *****************
       -->
       <section class="section section_perso" id="sectionQ">
         <span class="responsive_container">
+
+          <!-- 
+          *********************************
+            Slide intercalaire, dataviz 1
+          *********************************
+          -->
+          <section class="slide">
+            <img class="image_fond" src="../resources/images/Backgrounds/background3-02.svg" alt="Fond" id="fond_intercal_q" />
+            <h2 class="titre" id="titre_intercalaire_questionnaire" >
+              CONNAISSEZ-VOUS VOTRE RÉGION ?
+            </h2>
+            <button class="bouton_demarrer" onclick="moveNextQ('q1')" >DÉMARRER</button>
+          </section>
 
           <!-- 
             Question 1
@@ -301,20 +299,20 @@
           <img class="image_fond" src="../resources/images/Backgrounds/background3-07.svg" alt="Fond" />
 
           <h2 class="text-center titre" id="titre_data1">
-            LES <b>PAYS DE LA LOIRE</b>: UNE RÉGION <br/>DE PLUS EN PLUS <span class="mot_important">DYNAMIQUE</span> !
+            LES <b>PAYS DE LA LOIRE</b> : UNE RÉGION <br/>DE PLUS EN PLUS <span class="mot_important">DYNAMIQUE</span> !
           </h2>
 
           <span id="data1_infos">
             <b>LA RÉGION SE DÉVELOPPE DE MANIÈRE IMPORTANTE</b><br/>
-            <p>De nouvelles activités voient le jour, des entreprises apparaissent et la population augmente. Le besoin en énergie est de plus en plus important et nécessite des solutions environnementales adaptées: les énergies renouvelables se développent !</p>
+            <p>De nouvelles activités voient le jour, des entreprises apparaissent et la population augmente. Le besoin en énergie est de plus en plus important et nécessite des solutions environnementales adaptées : les énergies renouvelables se développent !</p>
           </span>
 
           <span class="bloc_reponse" id="saviez_vous">
             <b>LE SAVIEZ-VOUS ?</b><br/><br/>
             <p>En Pays de la Loire, la production d'énergie renouvelable sous obligation d'achat en Gw/h a été multipliée par 6 en 6 ans ! (entre 2008 et 2014)<br/>
-            <b class="petit_mot">Eolien</b>: la production a été multipliée par <span class="chiffre_important">4</span> entre 2008 et 2014<br/>
-            <b class="petit_mot">Photovoltaïque</b>: la production a été multipliée par <span class="chiffre_important">72</span> entre 2008 et 2014<br/>
-            <b class="petit_mot">Biomasse</b>: la production a été multipliée par <span class="chiffre_important">66</span> entre 2008 et 2014<br/>
+            <b class="petit_mot">Eolien</b> : la production a été multipliée par <span class="chiffre_important">4</span> entre 2008 et 2014<br/>
+            <b class="petit_mot">Photovoltaïque</b> : la production a été multipliée par <span class="chiffre_important">72</span> entre 2008 et 2014<br/>
+            <b class="petit_mot">Biomasse</b> : la production a été multipliée par <span class="chiffre_important">66</span> entre 2008 et 2014<br/>
             <cite>Source: ores.paysdelaloire.fr</cite></p>
           </span>
 
@@ -525,7 +523,7 @@
           <span class="bloc_valeur" id="valeur2030_3">+29%</span>
           <span class="bloc_valeur" id="valeur2_2030_3">+45%</span>
           <!--<button class="bouton_demarrer" onclick="stopAnims()">Stopper</button>-->
-          <span class="text-center answers bloc_reponse" id="q2_ag" style="display:block;">
+          <span class="text-center bloc_reponse" id="bloc_data3" >
             <p class="text-center contenu_reponse">
             <b>BONNE RÉPONSE</b><br/></br>
             Bravo ! Les Pays de la Loire se positionnaient en 2013 à la <span class="chiffre_important">5ème</span> place !
