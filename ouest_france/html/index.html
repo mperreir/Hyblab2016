@@ -10,19 +10,21 @@
     <!-- Déclaration de la feuille de style du document-->
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" href="script/chartist/dist/chartist.min.css"/>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styleChartDefilement.css">
+    <link rel="stylesheet" href="css/styleChartDefilement.css"/>
+    <link rel="stylesheet" href="script/chartist/dist/chartist.min.css"/>
+
+    <link rel="stylesheet" href="css/style.css"/>
+
+
     <!-- Déclaration des scripts js et librairies -->
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="script/jquery.fullPage.min.js"></script>
-
-    <!--********************** TEST ************************-->
     <script type="text/javascript" src="script/chartist/dist/chartist.min.js"></script>
     <script type="text/javascript" src="script/chartist-plugin-fill-donut.min.js"></script>
-    <link rel="stylesheet" href="script/chartist/dist/chartist.min.css"
 
-    <script type="text/javascript" src="script/chartist/dist/chartist.min.js"></script>
+    <script type="text/javascript" src="script/chart.js"></script>
+
   </head>
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
@@ -58,6 +60,15 @@
           <div class="ct-chart donut" id="biPlus"></div>
 
           <div class="ct-chart barreDefilement" id="chartMotorisation"></div>
+
+          <div class="info">
+            <p>
+              Notre texte explicatif pour l'année 1990.<br/>
+              En 1990, on a plein de voitures !!!
+              Souvent 2 voitures ou plus même !
+              INCROYABLE !
+            </p>
+          </div>
         </div>
 
 
@@ -73,6 +84,14 @@
           </div>
           <div class="cars" id="neuf">
           </div>
+          <div class="info">
+            <p>
+              Notre texte explicatif pour l'année 1990.<br/>
+              En 1990, on a plein de voitures !!!
+              Souvent 2 voitures ou plus même !
+              INCROYABLE !
+            </p>
+          </div>
         </div>
 
 
@@ -82,6 +101,14 @@
           <h1>À QUOI TU CARBURES ?</h1>
           <img class="svg" src="images/pompe.svg" alt="Pompe"/>
           <div class="ct-chart barreDefilement" id="chartCarburant"></div>
+          <div class="info">
+            <p>
+              Notre texte explicatif pour l'année 1990.<br/>
+              En 1990, on a plein de voitures !!!
+              Souvent 2 voitures ou plus même !
+              INCROYABLE !
+            </p>
+          </div>
         </div>
 
 
@@ -132,7 +159,6 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="chart.js"></script>
     <script type='text/javascript' src="global.js"></script>
   </body>
 </html>
