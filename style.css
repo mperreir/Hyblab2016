@@ -1,13 +1,45 @@
+@font-face {
+    font-family: title;
+    src: url(fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: text;
+    src: url(fonts/OpenSans-Semibold.ttf);
+}
+
+* {
+    font-family: text;
+}
+
+h1 {
+    font-family: title;
+}
+
 body {
     margin: 0;
 }
-#map, #rope {
+#map, #rope, #map2 {
     overflow: hidden;
     height: 100vh;
 }
 
+<<<<<<< HEAD
+#map2 {
+    background-color: #00BFFF;
+=======
+#map {
+    background-color: #8DD8F8;
+>>>>>>> 2330e9bec88bbc5a8b7ca02571219950afdf14c1
+}
+
 #rope {
     position: relative;
+}
+
+#last_page {
+    background-color: #0077A3;
+    color: white;
 }
 
 iframe {
@@ -24,22 +56,23 @@ iframe {
 
 /* ------------- First Page ----------- */
 
-#first_page {
-    background-color: #B7FDFE;
-}
-
 #first_page .fp-tableCell {
     vertical-align: bottom;
+    background-image: url("image/Preston-01.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 #first_page h1 {
     text-transform: uppercase;
     text-align: center;
+    font-size: 80;
 }
 
 #first_page p {
     text-align: justify;
     padding: 0px 10%;
+    margin-bottom: 5%;
 }
 
 /*===========Overlay==============*/
@@ -254,7 +287,7 @@ input[type="checkbox"] {
 /* ------------ Rope chart ------------- */
 
 #rope {
-    background-color: #00CCFF;
+    background-color: #57C2F3;
     color: white;
 }
 

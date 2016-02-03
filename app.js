@@ -70,6 +70,7 @@ function PCDtoLSOA11CD(PCD) {
 
 (function() {
     $("#fullpage").fullpage({
-        scrollBar: true
+        scrollBar: true,
+        scrollingSpeed: 300
     });
 })
