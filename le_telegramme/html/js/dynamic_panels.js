@@ -21,10 +21,10 @@ $(document).ready(function() {
 
   $("#submenu li").css("border-right", "2px solid #F7931E");
 
-
   // Events handling
   $("#menu1").click( function() {
     console.log('clic menu1');
+    $("#right iframe").attr("src", "map.html");
 
     switch(currentNav){
       case 0:
@@ -84,6 +84,8 @@ $(document).ready(function() {
   $("#menu2").click( function() {
     console.log('clic menu2');
 
+    $("#right iframe").attr("src", "map2.html");
+
     $("#submenu li").css("border-right", "2px solid #FF605E");
 
     switch(currentNav){
@@ -139,6 +141,7 @@ $(document).ready(function() {
   $("#menu3").click( function() {
     console.log('clic menu3');
 
+    $("#right iframe").attr("src", "map3.html");
     $("#submenu li").css("border-right", "2px solid #42B69E");
 
     switch(currentNav){

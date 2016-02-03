@@ -1,3 +1,5 @@
+function doMap( url )
+{
 
 //Handle the map controls
 //zoom, rotation ...
@@ -33,16 +35,17 @@ osmb.addMapTiles(
 
   /* JSON File loading */
   console.log( "loading data from server..." );
-  $.get('data/cbats.geojson', function(data) { // JQuery HTTP GET request to the server
+  $.get('data/cbats1.geojson', function(data) { // JQuery HTTP GET request to the server
       //If the request is OK :
 
       var constrBats = JSON.parse(data); // parse json string answer to get a javascript object
       osmb.addGeoJSON(constrBats);
+      osmb.addGeoJSONTiles('http://{s}.data.osmbuildings.org/0.2/anonymous/tile/{z}/{x}/{y}.json');
   });
 
 /* ANIMATIONS */
-  var valuesFrom = {latitude: 48.431108484872624, longitude: -4.351628300245521, rotation: 0, zoom: 15, tilt: 10},
-    valuesTo = {latitude: 48.410756673651527, longitude: -4.457091276180201, rotation: -25, zoom: 15, tilt: 10},
+  var valuesFrom = {latitude: 48.3714, longitude: -4.4849, rotation: 0, zoom: 12, tilt: 10},
+    valuesTo = {latitude: 48.39074, longitude: -4.48574, rotation: 40, zoom: 16, tilt: 30},
     animationTime = 15000;
 
   var tween = new TWEEN.Tween(valuesFrom)
@@ -54,7 +57,7 @@ osmb.addMapTiles(
           map.setZoom(this.zoom);
           map.setTilt(this.tilt);
       })
-      .start(5000);
+      .start(13000);
 
   requestAnimationFrame(animate);
 
@@ -106,3 +109,4 @@ osmb.addMapTiles(
       }
     });
   }
+}

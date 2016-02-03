@@ -8,6 +8,7 @@
   <!-- bootstrap -->
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.3.0/ekko-lightbox.min.css">
 </head>
   <body>
       <!-- Container -->
@@ -30,7 +31,7 @@
           </div>
 
           <!-- Middle -->
-          <div class="col-md-4" id="middle">
+          <div id="middle">
 
               <!-- Middle panel navbar -->
               <div id="navbar" class="navbar-collapse collapse">
@@ -56,9 +57,11 @@
                 </div>
 
                 <p class="mp_intro">
-                  En quinze ans, beaucoup de beaux projets ont vu le jour,
-                  mais également de nombreux édifices ont été batis. Eux
-                  aussi ont beaucoup contribué à la floraison Brestoise !
+                  Des zones industrielles, des ports, des lotissements, des
+                  quartiers, un stade, des ensembles immobiliers… des
+                  milliers de nouveaux bâtiments ont vu le jour entre 2000
+                  et 2015. Métamorphosant en profondeur Brest et les
+                  sept communes de la métropole.
                 </p>
 
                 <img src="img/ca_pousse_edito.png">
@@ -72,45 +75,80 @@
                   </p>
                 </div> -->
 
-                <img src="img/ca_pousse_sondage.png">
+                <!-- <img src="img/ca_pousse_sondage.png"> -->
+
+                <img class="header_sondage" src="img/question_ca_pousse.png">
+                <img class="sondage" src="img/gif_ca_pousse.gif">
+                <img class="commentaire_sondage" src="img/commentaire_ca_pousse.png">
               </div>
 
-              <div id="ca_pousse_photos" class="mp_content">
-                <p>
-                  Quelques photos de Brest :
-                </p>
+              <div id="ca_pousse_photos" class="row">
+                <div class="col-md-10">
+                  <div class="row">
+                    <a href="img/brest/ca_pousse/fullsize/bellevue.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="" class="col-sm-4">
+                      <img src="img/brest/ca_pousse/miniatures/bellevue.jpg" class="img-responsive hoverZoomLink"> 
+                    </a>
 
-                <img src="img/ca_pousse_edito.png">
+                    <a href="img/brest/ca_pousse/fullsize/capucins.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="" class="col-sm-4">
+                      <img src="img/brest/ca_pousse/miniatures/capucins.jpg" class="img-responsive hoverZoomLink"> 
+                    </a>
+
+                    <a href="img/brest/ca_pousse/fullsize/capucins.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="" class="col-sm-4">
+                      <img src="img/brest/ca_pousse/miniatures/capucins.jpg" class="img-responsive hoverZoomLink"> 
+                    </a>
+                  </div>
+                  <div class="row"></div>
+                  <div class="row"></div>
+                  <div class="row"></div>
+                </div>
+
+                <!-- <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/bellevue.jpg" alt="Bellevue"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/capucins.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/gouesnou.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/guipavas.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/lambezellec.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/plougastel.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/plouzan.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/pontanezen.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/pontrecou.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/relecq.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/saintmarc.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/stadeFrancisleble.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/strasbourg.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/technopole.jpg" alt="Tigre"></div> -->
               </div>
               <!--  FIN  CA POUSSE  -->
 
               <!-- DEBUT ECLOSIONS -->
               <div id="eclosions_edito" class="mp_content">
-                <div class="mp_header">
+                <div id="header_eclosions">
                   <p class="text-center text-uppercase">10 éclosions</p>
                 </div>
 
                 <p class="mp_intro">
-                  Brest se transforme et avec elle, de grands projets
-                  se développent. Précurseur de la métamorphose
-                  Brestoise, le multiplexe Liberté fut le premier
-                  projet à sortir des terres Bretonnes en 2005.
-                  L’inauguration du tramway en 2012, longtemps
-                  plébiscité par les habitants, est le plus grand
-                  projet d’entre eux.
-                  Par la suite, les aménagements se suivent mais ne
-                  se ressemblent pas : le port, l’aéroport, le polder,
-                  la réhabiliation de Pontanézen, Brest Arena, le
-                  téléphérique, la Carène et enfin la zone du Froutven.
-                  Tous ces projets, étendus sur un quart de
-                  siècle, font de Brest une métropole d’envergure.
+                  Brest renaît et avec elle, de grands projets fleurissent.
+                  Précurseurs de la métamorphose, le multiplex
+                  Liberté fut le premier projet à sortir de terre
+                  en 2005. Par la suite, d’autres équipements loisir
+                  se développent, comme la Carène ou le Brest
+                  Arena. L’inauguration du tramway, plébiscité par
+                  les Brestois, est le plus grand projet érigé par la
+                  ville. Celui-ci a d’ailleurs engendré la réhabilitation
+                  de Pontanezen. L’aéroport et le téléphérique ont
+                  accompagné cette révolution des transports. <br> <br>
+                  Les projets comme celui du port, de la zone Froutven
+                  et du Polder ont renforcé l’attractivité du territoire.
+                  Ces projets font de Brest une ville qui tend vers
+                  une métropole d’envergure.
                 </p>
 
                 <img src="img/eclosions_edito.png">
               </div>
 
               <div id="eclosions_sondage" class="mp_sondage">
-                <img src="img/eclosions_sondage.png">
+                <img class="header_sondage" src="img/question_eclosions.png">
+                <img class="sondage" src="img/gif_eclosions.gif">
+                <img class="commentaire_sondage" src="img/commentaire_eclosions.png">
               </div>
 
               <div id="eclosions_photos" class="mp_content">
@@ -121,8 +159,8 @@
 
               <!-- DEBUT QUARTIERS -->
               <div id="quartiers_edito" class="mp_content">
-                <div class="mp_header">
-                  <p class="text-center text-uppercase">quartiers</p>
+                <div id="header_quartiers">
+                  <p class="text-center text-uppercase">Top / Flop</p>
                 </div>
 
                 <p class="mp_intro">
@@ -133,7 +171,7 @@
                   en tête des territoires les plus fertiles du
                   siècle. Ce qui démontre bien, si cela était encore
                   nécessaire, une lourde tendance à l’étalement
-                  urbain.
+                  urbain. <br> <br>
                   Et à Brest mêm’, comme on dit dans le coin ? Le
                   changement se concentre toujours sur les exté-
                   rieurs avec comme principales métamorphoses :
@@ -147,7 +185,8 @@
               </div>
 
               <div id="quartiers_sondage" class="mp_sondage">
-                <img src="img/quartiers_sondage.png">
+                <img class="header_sondage" src="img/question_quartiers.png">
+                <img class="sondage" src="img/gif_quartiers.gif">
               </div>
 
               <div id="quartiers_photos" class="mp_content">
@@ -167,5 +206,6 @@
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
       <script type="text/javascript" src="js/dynamic_panels.js"></script>
+      <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.3.0/ekko-lightbox.min.js"></script> -->
   </body>
 </html>
