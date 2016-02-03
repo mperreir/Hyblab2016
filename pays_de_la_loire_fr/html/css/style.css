@@ -1497,15 +1497,14 @@ DATA 1
 }
 
 
-.draw_line1
+.draw_line
 {
-
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 5s linear forwards;
+  animation: draw 5s linear forwards;
 }
 
-@keyframes dash {
+@keyframes draw {
   from {
   	stroke-dashoffset: 1000;
   }
@@ -1514,12 +1513,31 @@ DATA 1
   }
 }
 
+.dash_line
+{
+	stroke-dasharray:1000;
+	animation: dash 1s linear forwards;
+}
+
+@keyframes dash {
+  from {
+  	stroke-dasharray:1000;
+  }
+  to {
+    stroke-dasharray:15;
+  }
+}
+
 #line_data3_2
+{
+}
+
+.lines
 {
   stroke-opacity: 1;
   fill-opacity: 0.2;
   fill:rgb(237,121,107);
   stroke:rgb(237,121,107);
   stroke-width:4;
-  stroke-dasharray:15;	
+  stroke-dasharray:15;		
 }
