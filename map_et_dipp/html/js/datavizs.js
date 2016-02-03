@@ -125,7 +125,7 @@ var couleurLigneMin = "#38615a";
 var couleurLigneMoy = "#80cbc4";
 var couleurLigneMax = "#adf0c3"
 
-svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("height",height);
+svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("height",height).attr("viewbox","0, 0, 650, 600").attr("preserveAspectRatio", "xMinYMin");
 var svgAside = d3.select("#legendeAraignee").append("svg").attr("width",widthAside).attr("height",heightAside).attr("id","svgAside");
 
 //DESSIN du cercle représentant nantes
@@ -557,8 +557,7 @@ var villesNoms = echelle.append("text").attr("x",(width/2)-15).attr("y",function
 var moscou = gmoscou.append("circle").attr("cx",width/2).attr("cy",height/2).attr("r",function(d){return d.distance;}).attr("fill","none").attr("stroke","black").attr("stroke-width",4);
 gmoscou.append("text").attr("x",(width/2)-750).attr("y",-1650).text("Moyenne nationale").attr("font-size","200px");
 
-/*
 gmoscou.append("text").attr("x",-2000).attr("y",-2000).text("Revenir à Nantes").attr("font-size","100px").on("click",function(){
 	return svg.transition().attr("transform","scale(1) translate("+(0-(width/1000))+","+(0-(height/1000))+")").ease("linear").duration(1000).delay(100);
-});*/
+});
 });
