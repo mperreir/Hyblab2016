@@ -162,6 +162,8 @@ nav ul li:not(:first-child)
 
 #slide3 h2 {
     color: #78dc82;
+    font: 40px museoReg;
+    margin-bottom: 9%;
 }
     
 #slide3 h3 {
@@ -178,18 +180,21 @@ nav ul li:not(:first-child)
 }
 
 #slide3 .conteneur {
-    height: 90%;
+    position: relative;
+    height: 85%;    
 }
 
 #slide3 .bloc {
-    display: inline-block;
-    vertical-align: middle;
-    width: 70%;
-    height: 300px;
+    position: absolute;
+    top: 25%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
-#slide3 .bloc h2 {
-    margin-bottom: 20%;
+#slide3 .bloc p {
+    margin-left: 20%;
+    margin-right: 20%;
+    
 }
 
 /* slide 4 : Joseph */
