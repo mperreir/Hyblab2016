@@ -116,6 +116,8 @@ var nantesRadius = [30];
 var width = 650;
 var height = 600;
 var ratio = 1.3;
+//var ratio = 1.3*(Math.max(document.documentElement.clientWidth, window.innerWidth || 0))/1600;
+
 
 var widthAside = 350;
 var heightAside = 170;
@@ -123,7 +125,7 @@ var couleurLigneMin = "#38615a";
 var couleurLigneMoy = "#80cbc4";
 var couleurLigneMax = "#adf0c3"
 
-var svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("height",height);
+svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("height",height);
 var svgAside = d3.select("#legendeAraignee").append("svg").attr("width",widthAside).attr("height",heightAside).attr("id","svgAside");
 
 //DESSIN du cercle représentant nantes
@@ -456,7 +458,7 @@ svg.selectAll("image")
 
 
 //bouton changement d'échelle
-svg.selectAll("text")
+/*svg.selectAll("text")
 	.data(wahoo)
 	.enter()
 	.append("text")
@@ -465,7 +467,8 @@ svg.selectAll("text")
 	.attr("y",100)
 	.on("click",function(){
 	return svg.transition().attr("transform","scale(0.1) translate("+width*4.5+","+height*4.5+")").ease("linear").duration(1000).delay(100);
-});
+*/
+
 
 /*
 //dessin des triangles :)
@@ -552,8 +555,10 @@ var villesNoms = echelle.append("text").attr("x",(width/2)-15).attr("y",function
 }).attr("font-size","10px").attr("fill","grey").text(function(d){return d.nom;});
 
 var moscou = gmoscou.append("circle").attr("cx",width/2).attr("cy",height/2).attr("r",function(d){return d.distance;}).attr("fill","none").attr("stroke","black").attr("stroke-width",4);
-gmoscou.append("text").attr("x",(width/2)-400).attr("y",-2200).text("Moyenne nationale").attr("font-size","200px");
+gmoscou.append("text").attr("x",(width/2)-750).attr("y",-1650).text("Moyenne nationale").attr("font-size","200px");
+
+/*
 gmoscou.append("text").attr("x",-2000).attr("y",-2000).text("Revenir à Nantes").attr("font-size","100px").on("click",function(){
 	return svg.transition().attr("transform","scale(1) translate("+(0-(width/1000))+","+(0-(height/1000))+")").ease("linear").duration(1000).delay(100);
-});
+});*/
 });
