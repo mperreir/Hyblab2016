@@ -94,8 +94,16 @@
 }
 
 #interview_res {
-	width : 40%;
+	width : 200px;
 	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#interview_res img {
+	width: 36px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
