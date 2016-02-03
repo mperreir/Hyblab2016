@@ -123,6 +123,11 @@ iframe {
 }
 input[type="checkbox"] {
     display: none;
+    width: 100px;
+    height: 100px;
+}
+.svg-btn {
+    margin: -10px -10px;
 }
 .info {
     z-index: 3;
@@ -132,6 +137,8 @@ input[type="checkbox"] {
     background: rgba(255,255,255,0.8);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
+    width: 320px;
+    float: left;
 }
 .info h4 {
     margin: 0 5px 10px 0;
@@ -214,7 +221,7 @@ input[type="checkbox"] {
 .legend {
     width: 50px;
     height: 200px;
-    background: linear-gradient(red, yellow);
+    background: linear-gradient(red, yellow, greenyellow);
     opacity: 0.7;
     display: table;
     margin: 0 auto;
