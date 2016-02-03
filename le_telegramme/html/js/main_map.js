@@ -5,7 +5,7 @@ function doMap( url )
 //zoom, rotation ...
 var map = new GLMap('map', {
     position: { latitude:48.4082, longitude:-4.4982 },
-    zoom: 12,
+    zoom: 14,
     minZoom: 5,
     maxZoom: 20,
     state: true // stores map position/rotation in url
@@ -40,7 +40,7 @@ osmb.addMapTiles(
 
       var constrBats = JSON.parse(data); // parse json string answer to get a javascript object
       osmb.addGeoJSON(constrBats);
-       osmb.addGeoJSONTiles('http://{s}.data.osmbuildings.org/0.2/anonymous/tile/{z}/{x}/{y}.json');
+      // osmb.addGeoJSONTiles('http://{s}.data.osmbuildings.org/0.2/anonymous/tile/{z}/{x}/{y}.json');
   });
 
 /* ANIMATIONS */
