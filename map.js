@@ -199,7 +199,8 @@
     window.calculateIMD = function(lsoa11cd) {
         var sum = 1;
         return Object.keys(INDICATORS).map(function(id) {
-            var val = Number.parseFloat(document.getElementById(id).value);
+            var val = document.getElementById(id).checked === true ? 1 : 0;
+            console.log(document.getElementById(id).checked);
             sum += val;
             return window.data[lsoa11cd][id]["exp"] * val;
         }).map(function(val) {
@@ -230,7 +231,7 @@
             var d = window.data[feature.properties.LSOA11CD];
             lsoaInitializedStyleCount++;
             return {
-                fillColor: getColor(d["IMD"]["raw"]),
+                fillColor: getColor(1),
                 weight: 2,
                 opacity: 0.5,
                 color: 'black',
@@ -357,10 +358,6 @@
             } 
         }
 
-        console.log(popChart);
-        if (popChart._map != undefined) {
-            map.removeControl(popChart);
-        };
         // console.log(ages);
         // popChart.addTo(map);  
         // popChart.draw(ages);
@@ -490,7 +487,16 @@
         var info = L.control();
         this._div.innerHTML =
             '<h4>Index of Multiple Deprivation Score</h4>' +
-            '<h4 id="idm"></h4> <br/>';
+            '<h4 id="idm"></h4> <br/>' +
+            '<div class="buttons-set">' +
+            '   <div class="svg-btn"><input id="income" type="checkbox"/><img id="income-svg" src="documents/mapIcons/income-active.svg"/></div>' +
+            '   <div class="svg-btn"><input id="health" type="checkbox"/><img id="health-svg" src="documents/mapIcons/health-active.svg"/></div>' +
+            '   <div class="svg-btn"><input id="education" type="checkbox"/><img id="education-svg" src="documents/mapIcons/education-active.svg"/></div>' +
+            '   <div class="svg-btn"><input id="employment" type="checkbox"/><img id="employment-svg" src="documents/mapIcons/employment-active.svg"/></div>' +
+            '   <div class="svg-btn"><input id="environment" type="checkbox"/><img id="environment-svg" src="documents/mapIcons/environment-active.svg"/></div>' +
+            '   <div class="svg-btn"><input id="housing" type="checkbox"/><img id="housing-svg" src="documents/mapIcons/housing-active.svg"/></div>' +
+            '   <div class="svg-btn"><input id="crime" type="checkbox"/><img id="crime-svg" src="documents/mapIcons/crime-active.svg"/></div>' +
+            '</div>';
             ''/* +
             '<div class="sliderset">' +
             '   <div class="row"></div><label>Income</label><i class="information" id="icon_income"></i><input id="income" type="range" min="0" max="1000" value="225" class="slider red"/><br/>' +
@@ -511,7 +517,7 @@
     info.update = function(props) {
 
         if (sliderListenersAdded == false) {
-            document.getElementById("income").addEventListener('change', function(e) {
+            document.getElementById("income-svg").addEventListener('click', function(e) {
                 info.update(props);
                 topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
@@ -519,8 +525,17 @@
                 topoMsoaLayer.eachLayer(function(layer) {
                     topoMsoaLayer.resetStyle(layer);
                 });
+                var el = document.getElementById("income");
+                if (el.checked === false) {
+                    e.target.setAttribute('src', "documents/mapIcons/income.svg");
+                    el.checked = true;
+                }
+                else {
+                    e.target.setAttribute('src', "documents/mapIcons/income-active.svg");
+                    el.checked = false;
+                }
             });
-            document.getElementById("employment").addEventListener('change', function(e) {
+            document.getElementById("employment-svg").addEventListener('click', function(e) {
                 info.update(props);
                 topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
@@ -528,8 +543,17 @@
                 topoMsoaLayer.eachLayer(function(layer) {
                     topoMsoaLayer.resetStyle(layer);
                 });
+                var el = document.getElementById("employment");
+                if (el.checked === false) {
+                    e.target.setAttribute('src', "documents/mapIcons/employment.svg");
+                    el.checked = true;
+                }
+                else {
+                    e.target.setAttribute('src', "documents/mapIcons/employment-active.svg");
+                    el.checked = false;
+                }
             });
-            document.getElementById("education").addEventListener('change', function(e) {
+            document.getElementById("education-svg").addEventListener('click', function(e) {
                 info.update(props);
                 topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
@@ -537,8 +561,17 @@
                 topoMsoaLayer.eachLayer(function(layer) {
                     topoMsoaLayer.resetStyle(layer);
                 });
+                var el = document.getElementById("education");
+                if (el.checked === false) {
+                    e.target.setAttribute('src', "documents/mapIcons/education.svg");
+                    el.checked = true;
+                }
+                else {
+                    e.target.setAttribute('src', "documents/mapIcons/education-active.svg");
+                    el.checked = false;
+                }
             });
-            document.getElementById("health").addEventListener('change', function(e) {
+            document.getElementById("health-svg").addEventListener('click', function(e) {
                 info.update(props);
                 topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
@@ -546,8 +579,17 @@
                 topoMsoaLayer.eachLayer(function(layer) {
                     topoMsoaLayer.resetStyle(layer);
                 });
+                var el = document.getElementById("health");
+                if (el.checked === false) {
+                    e.target.setAttribute('src', "documents/mapIcons/health.svg");
+                    el.checked = true;
+                }
+                else {
+                    e.target.setAttribute('src', "documents/mapIcons/health-active.svg");
+                    el.checked = false;
+                }
             });
-            document.getElementById("crime").addEventListener('change', function(e) {
+            document.getElementById("crime-svg").addEventListener('click', function(e) {
                 info.update(props);
                 topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
@@ -555,8 +597,17 @@
                 topoMsoaLayer.eachLayer(function(layer) {
                     topoMsoaLayer.resetStyle(layer);
                 });
+                var el = document.getElementById("crime");
+                if (el.checked === false) {
+                    e.target.setAttribute('src', "documents/mapIcons/crime.svg");
+                    el.checked = true;
+                }
+                else {
+                    e.target.setAttribute('src', "documents/mapIcons/crime-active.svg");
+                    el.checked = false;
+                }
             });
-            document.getElementById("housing").addEventListener('change', function(e) {
+            document.getElementById("housing-svg").addEventListener('click', function(e) {
                 info.update(props);
                 topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
@@ -564,8 +615,17 @@
                 topoMsoaLayer.eachLayer(function(layer) {
                     topoMsoaLayer.resetStyle(layer);
                 });
+                var el = document.getElementById("housing");
+                if (el.checked === false) {
+                    e.target.setAttribute('src', "documents/mapIcons/housing.svg");
+                    el.checked = true;
+                }
+                else {
+                    e.target.setAttribute('src', "documents/mapIcons/housing-active.svg");
+                    el.checked = false;
+                }
             });
-            document.getElementById("environment").addEventListener('change', function(e) {
+            document.getElementById("environment-svg").addEventListener('click', function(e) {
                 info.update(props);
                 topoLsoaLayer.eachLayer(function(layer) {
                     topoLsoaLayer.resetStyle(layer);
@@ -573,6 +633,15 @@
                 topoMsoaLayer.eachLayer(function(layer) {
                     topoMsoaLayer.resetStyle(layer);
                 });
+                var el = document.getElementById("environment");
+                if (el.checked === false) {
+                    e.target.setAttribute('src', "documents/mapIcons/environment.svg");
+                    el.checked = true;
+                }
+                else {
+                    e.target.setAttribute('src', "documents/mapIcons/environment-active.svg");
+                    el.checked = false;
+                }
             });
             sliderListenersAdded = true;
         } else if (props !== undefined) {
@@ -589,6 +658,7 @@
     };
 
     info.addTo(map);
+    //info.update();
 
     var searchbar = {};
     searchbar.create = function(map) {
@@ -627,7 +697,7 @@
                                 'indicator': indicator.toUpperCase(),
                                 'decile': window.data[lsoa11cd][indicator]['decile']
                             });
-                            console.log(window.data[lsoa11cd][indicator]['decile']);
+                            //console.log(window.data[lsoa11cd][indicator]['decile']);
                         }
                         if (barchart._map != undefined) {
                             map.removeControl(barchart);
@@ -746,157 +816,6 @@
         return this._div;
     };
     legend.addTo(map);
-
-
-
-    /*
-    the chart of the population
-    */
-    var popChart = L.control({
-        position: 'bottomleft'
-    });
-
-    popChart.onAdd = function(map) {
-        this._chartContainer = L.DomUtil.create('div', '');
-        this._chartContainer.setAttribute('id', 'pop_chart');
-        return this._chartContainer;
-    };
-    //we get ages here
-    popChart.draw = function(data) {
-
-        var margin = {
-                top: 20,
-                right: 30,
-                bottom: 30,
-                left: 40
-            },
-            width = 460 - margin.left - margin.right,
-            height = 300 - margin.bottom - margin.top;
-
-        var x = d3.scale.ordinal()
-            .domain(data.map(function(d) {
-                return d.name;
-            }))
-            .rangeRoundBands([0, width], .1);
-
-
-        var y = d3.scale.linear()
-            .domain([0, d3.max(data, function(d) {
-                return d.value;
-            })])
-            .range([height, 0]);
-
-        var colors = d3.scale.linear()
-            .domain([0, data.length * .33, data.length * .66, data.length])
-            .range(['#d6e9c6', '#bce8f1', '#faebcc', '#ebccd1']);
-
-        var xAxis = d3.svg.axis()
-            .scale(x)
-            .orient("bottom");
-
-        var yAxis = d3.svg.axis()
-            .scale(y)
-            .orient("left")
-            .ticks(5)
-            .tickSize(-width);
-
-
-        var chart = d3.select("#pop_chart")
-            .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-
-        chart.selectAll(".groupLogo")
-            .data(data)
-            .enter().append("svg:image")
-            .attr("x", function(d, i) {
-                return x(d.name);
-            })
-            .attr("y", height)
-            .attr("width", x.rangeBand())
-            .attr("height", 30)
-            // .attr("xlink:href", function(d, i) {
-            //     return "image/axis" + i + ".png");
-            // });
-            .attr("xlink:href", "image/info28.png");
-
-        chart.append("g")
-            .attr("class", "y axis")
-            .call(yAxis)
-            .append("text")
-            .attr("transform", "translate(10, -10)")
-            .attr("y", 0)
-            .attr("dy", ".71em")
-            .style("text-anchor", "end")
-            .text("Number");
-
-        var bar = chart.selectAll(".bar")
-            .data(data)
-            .enter().append("rect")
-            .style({
-                'fill': function(d, i) {
-                    return colors(i);
-                }
-            })
-            .attr("class", "bar")
-            .attr("x", function(d) {
-                return x(d.name);
-            })
-            .attr("y", function(d) {
-                return y(d.value);
-            })
-            .attr("height", function(d) {
-                return height - y(d.value);
-            })
-            .attr("width", x.rangeBand());
-
-
-        bar.append("title")
-            .text(function(d) {
-                return d.name + ":" + d.value;
-            });
-
-
-    }
-
-
-    /* ------------information icon--------- */
-    console.log(data);
-    var icon = d3.selectAll(".information")
-        .append("svg")
-        .attr("width", 20)
-        .attr("height", 15)
-        .append("image")
-        .attr("class", "icon_info")
-        .attr("x", 5)
-        .attr("y", 0)
-        .attr("width", 15)
-        .attr("height", 15)
-        .attr("xlink:href", "image/info28.png")
-        .append("title")
-        .text(function(d, i) {
-            return SUBDOMAIN[i];
-        });
-
-    function addEventListenerByClass(className, event, fn) {
-        var list = document.getElementsByClassName(className);
-        for (var i = 0, len = list.length; i < len; i++) {
-            list[i].addEventListener(event, fn, true);
-        }
-    }
-
-    addEventListenerByClass("icon_info", 'mouseover', function(e) {
-        d3.select(e.target)       
-            .attr("xlink:href", "image/info29.png");
-    });
-
-    addEventListenerByClass("icon_info", 'mouseout', function(e) {
-        d3.select(e.target)
-            .attr("xlink:href", "image/info28.png");
-    });
 
     // Temporary fix, used util IMD calculation error is fixed
     topoMsoaLayer.eachLayer(function(layer) {

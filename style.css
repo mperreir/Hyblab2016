@@ -86,6 +86,12 @@ iframe {
     }
 }
 /*==========Info Panel============*/
+.svg-btn {
+    float: left;
+}
+input[type="checkbox"] {
+    display: none;
+}
 .info {
     z-index: 3;
     padding: 6px 8px;

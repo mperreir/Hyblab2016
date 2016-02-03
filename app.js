@@ -72,4 +72,4 @@ function PCDtoLSOA11CD(PCD) {
     $("#fullpage").fullpage({
         scrollBar: true
     });
-}())
+})
