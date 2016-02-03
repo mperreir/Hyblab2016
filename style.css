@@ -53,6 +53,18 @@ iframe {
     pointer-events: none;
 }
 
+
+.next-slide {
+    display: block;
+    position: absolute;
+    bottom: 2%;
+    width: 40px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    z-index: 1000;
+}
+
 /* ------------- First Page ----------- */
 
 #first_page .fp-tableCell {

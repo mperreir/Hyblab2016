@@ -73,4 +73,8 @@ function PCDtoLSOA11CD(PCD) {
         scrollBar: true,
         scrollingSpeed: 300
     });
+
+    $(".next-slide").click(function () {
+        $.fn.fullpage.moveSectionDown();
+    });
 }())
