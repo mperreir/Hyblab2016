@@ -24,11 +24,7 @@ body {
     height: 100vh;
 }
 
-#map2 {
-    background-color: #00BFFF;
-    height: 300px;
-    width: 250px;
-}
+
 
 #map {
     background-color: #8DD8F8;
@@ -410,6 +406,35 @@ input[type="checkbox"] {
     margin-bottom: 8px;
 }
 
+/*--------page3-----------*/
+#title {
+    height: 40vh; 
+    width: 60%; 
+    background-color: #00BFFF; 
+    float:left;
+}
+
+#page3 h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 80;
+}
+
+#page3 p{
+    text-align: justify;
+    padding: 0px 10%;
+    /*margin-bottom: 5%; */
+}
+
+#cadre {
+    background-color: #00BFFF;
+}
+
+#map2 {
+    background-color: #00BFFF;
+    height: 60vh;
+    width: 60%; 
+}
 
 /* -------- last page --------- */
 
