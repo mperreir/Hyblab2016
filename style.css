@@ -370,3 +370,23 @@ iframe {
     text-align: center;
     margin: 0 auto;
 }
+
+#credits h1 {
+    font-size: 15;
+}
+
+#credits p {
+    font-size: 9;
+}
+
+#last_page p {
+    text-align: center;
+}
+
+#sponsors {
+    position: absolute;
+    bottom: 0px;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+}
