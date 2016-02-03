@@ -212,10 +212,16 @@ nav ul li:not(:first-child)
     text-align: center;
 }
 
+#slide4 h1 {
+    color: #fdbe63; 
+    font: museoReg;
+    margin-top: 2%;
+}
+
 #slide4 article {
     padding: 1%; /* 30px 30px 30px 10px */
     margin: 0 auto;
-    margin-top: 3%;
+    margin-top: 1%;
     width: 50%;
     /* style du texte */
     color: #4c4c4c;
@@ -281,11 +287,11 @@ nav ul li:not(:first-child)
 
 
 .imageSaisonBas {
-    
+    padding-top: 2%;
 }
 
 #imageSaison {
-    height: 100px;
+    height: 100px; 
 }
 
 .baliseJauge svg {
