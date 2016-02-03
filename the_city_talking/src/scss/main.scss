@@ -178,7 +178,7 @@
 
 .div{
 	margin:0 auto;
-	width:1100px;
+	width:100%;
 }
 
 #blue_header{
@@ -272,6 +272,9 @@
 }
 #div_dv1{
 	@extend .div;
+	margin-top: 10px;
+	margin-left:14%;
+	width : 70%;
 	height:500px;
 }
 #dv1{
@@ -281,7 +284,7 @@
 	@extend .div;
 	vertical-align:top;
 	display:inline-block;
-	margin-left:12%;
+	margin-left:15%;
 	width:30%;
 }
 #text2_title{
@@ -302,7 +305,7 @@
 	@extend .div;
 	vertical-align:top;
 	display:inline-block;
-	width:45%;
+	width:40%;
 }
 #text3_title{
 	@extend .text;
@@ -323,7 +326,7 @@
 	height:700px;
 }
 #text03{
-	margin-top:10px;
+	margin-top:20px;
 	margin-left:48%;
 	margin-right:48%;
 	width:30px;
@@ -349,11 +352,12 @@
 }
 #div_dv2{
 	display:inline-block;
-	width:40%;
-	margin-left:7%;
+	width:42%;
+	margin-left:5%;
 }
 #div_text4-5{
 	vertical-align:top;
+	margin-top:2%;
 	display:inline-block;
 	width:49%;
 }
@@ -528,7 +532,7 @@
 #div_text12{
 	vertical-align:top;
 	display:inline-block;
-	width:545px;
+	width:49%;
 }
 #text12{
 	@extend .paragraph;
@@ -540,7 +544,7 @@
 #div_text13{
 	vertical-align:top;
 	display:inline-block;
-	width:545px;
+	width:49%;
 }
 #text13{
 	@extend .paragraph;
@@ -664,17 +668,17 @@
 }
 #bulles1{
 	height:60px;
-	margin-left:15%;
+	margin-left:20%;
 	margin-bottom:-40px;
 }
 #bulles2{
 	height:60px;
-	margin-left:47%;
+	margin-left:52%;
 	margin-bottom:-130px;
 }
 #bulles3{
 	height:60px;
-	margin-left:78%;
+	margin-left:83%;
 	margin-bottom:-50px;
 }
 .bulle{
@@ -824,14 +828,19 @@
 	animation-timing-function:ease-in;
 	z-index: 101;
 }
+#div_big_img{
+	width:100%;
+}
 #big_img_bg{
-	margin-top:-350px;
+	margin-left:1%;
+	margin-top:-450px;
 	width:98%;
 	height:auto;
 	z-index:102;
 }
 #big_img{
-	margin-top:-750px;
+	margin-left:1%;
+	margin-top:-910px;
 	width:98%;
 	height:auto;
 	z-index:100;
@@ -843,12 +852,15 @@
 	margin-left:13%;
 	margin-right:13%;
 }
+#div9{
+	@extend .div;
+	height:220px;
+}
 #subdiv8{
 	width:32%;
 	display:inline-block;
-	margin-top:10%;
 	vertical-align:top;
-	margin-top:20px;
+	margin-top:85px;
 }
 #subdiv8B{
 	width:60%;
@@ -878,16 +890,13 @@
 	width:80%;
 	margin-left:10%;
 }
-#div9{
-	@extend .div;
-	height:220px;
-}
+
 #subdiv9{
 	width:32%;
 	display:inline-block;
 	margin-top:10%;
 	vertical-align:top;
-	margin-top:20px;
+	margin-top:85px;
 }
 #subdiv9B{
 	width:60%;
@@ -918,7 +927,7 @@
 	display:inline-block;
 	margin-top:10%;
 	vertical-align:top;
-	margin-top:20px;
+	margin-top:85px;
 }
 #subdiv10B{
 	width:60%;
@@ -942,7 +951,7 @@
 #div11{
 	@extend .div;
 	width:100%;
-	margin-top:60px;
+	margin-top:140px;
 }
 #text07{
 	margin-top:10px;
@@ -963,6 +972,7 @@
 }
 #cells{
 	margin-left:35%;
+	margin-bottom:40px;
 }
 #div_text17{
 	vertical-align:top;
@@ -994,6 +1004,7 @@
 }
 #lungs{
 	margin-left:35%;
+	margin-bottom:40px;
 }
 #div_text18{
 	vertical-align:top;
