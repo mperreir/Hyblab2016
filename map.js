@@ -511,14 +511,14 @@
             '   <input id="housing" type="checkbox"/>' +
             '   <input id="crime" type="checkbox"/>' +
             '   <div class="row">' +
-            '   <img class="svg-btn" id="income-svg" src="documents/mapIcons/income-active.svg"/>' +
-            '   <img class="svg-btn" id="health-svg" src="documents/mapIcons/health-active.svg"/>' +
-            '   <img class="svg-btn" id="education-svg" src="documents/mapIcons/education-active.svg"/>' +
-            '   <img class="svg-btn" id="employment-svg" src="documents/mapIcons/employment-active.svg"/>' +
+            '   <img class="svg-btn" title="Income" id="income-svg" src="documents/mapIcons/income-active.svg"/>' +
+            '   <img class="svg-btn" title="Health Deprivation and Disability" id="health-svg" src="documents/mapIcons/health-active.svg"/>' +
+            '   <img class="svg-btn" title="Education, Skills and Training" id="education-svg" src="documents/mapIcons/education-active.svg"/>' +
+            '   <img class="svg-btn" title="Employment" id="employment-svg" src="documents/mapIcons/employment-active.svg"/>' +
             '   </div><div class="row">' +
-            '   <img class="svg-btn" id="environment-svg" src="documents/mapIcons/environment-active.svg"/>' +
-            '   <img class="svg-btn" id="housing-svg" src="documents/mapIcons/housing-active.svg"/>' +
-            '   <img class="svg-btn" id="crime-svg" src="documents/mapIcons/crime-active.svg"/>' +
+            '   <img class="svg-btn" title="Living Environment" id="environment-svg" src="documents/mapIcons/environment-active.svg"/>' +
+            '   <img class="svg-btn" title="Barriers to Housing and Services" id="housing-svg" src="documents/mapIcons/housing-active.svg"/>' +
+            '   <img class="svg-btn" title="Crime" id="crime-svg" src="documents/mapIcons/crime-active.svg"/>' +
             '   </div>' +
             '</div>';
             ''/* +
