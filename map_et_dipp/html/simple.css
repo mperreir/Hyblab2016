@@ -392,6 +392,8 @@ nav ul li:not(:first-child)
 #slide10 section {
     height: auto;
     margin-top: 15px;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 15px;
     background-color: inherit;
     /* contour */
@@ -400,7 +402,7 @@ nav ul li:not(:first-child)
 }
 
 #slide10 section header {
-    background-color: inherit;
+    /background-color: inherit;
     color: #4c4c4c;
     font: 15px / 14px museoReg;
     text-align: left;
