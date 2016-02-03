@@ -273,7 +273,13 @@ nav ul li:not(:first-child)
 }
 
 
+.imageSaisonBas {
+    
+}
 
+#imageSaison {
+    height: 100px;
+}
 
 .baliseJauge svg {
     display: inline-block;
@@ -378,14 +384,15 @@ nav ul li:not(:first-child)
     background-color: white;
 }
 
-
-
+#slide10 .titre {
+    margin-left: 20%;
+}
 
 #slide10 section {
     height: auto;
     margin-top: 15px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
     padding: 15px;
     background-color: inherit;
     /* contour */
@@ -397,17 +404,21 @@ nav ul li:not(:first-child)
     color: #4c4c4c;
     font: 15px / 18px museoReg;
     text-align: left;
+    margin-bottom: 15px;
 }
 
 #slide10 section article {
     color: #4c4c4c;
     font: 400 15px / 18px Arial;
+    margin-bottom: 15px;
 }
 
 #slide10 section aside {
     /* correspond à la citation */
     color: #ffffff;
     font: 17px / 19px museoReg;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 #slide10 .bandeauBas {
