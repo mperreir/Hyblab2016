@@ -9,4 +9,5 @@ $(document).ready(function() {
 	requestGenerateChartDefilement("menage");
 	requestGenerateChartDefilement("parc");
 	requestGenerateChartDefilement("carburant");
+	
 });
