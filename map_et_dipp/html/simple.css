@@ -228,11 +228,6 @@ nav ul li:not(:first-child)
     font: 400 17px / 21px Arial;
 }
 
-.imageSaisonBas {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
 
 
 /*
@@ -306,74 +301,71 @@ nav ul li:not(:first-child)
 
 /* radio printemps */
 #labelJoseph_printemps {
-    background: url(./img/joseph/printemps.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/printemps.png) left top no-repeat;
 }
 
 #labelJoseph_printemps:hover {  
-    background: url(./img/joseph/printemps_hover.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/printemps_hover.png) left top no-repeat;
 }
 
 #radioJoseph_printemps:checked + .labelRadioJoseph {
-    background: url(./img/joseph/printemps_checked.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/printemps_checked.png) left top no-repeat;
 }
 
 /* radio été */
 #labelJoseph_ete {
-    background: url(./img/joseph/ete.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/ete.png) left top no-repeat;
 }
 
 #labelJoseph_ete:hover {  
-    background: url(./img/joseph/ete_hover.png) top no-repeat;
+    background: url(./img/diagrammes/joseph/ete_hover.png) top no-repeat;
 }
 
 #radioJoseph_ete:checked + .labelRadioJoseph {
-    background: url(./img/joseph/ete_checked.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/ete_checked.png) left top no-repeat;
 }
 
 /* radio automne */
 #labelJoseph_automne {
-    background: url(./img/joseph/automne.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/automne.png) left top no-repeat;
 }
 
 #labelJoseph_automne:hover {  
-    background: url(./img/joseph/automne_hover.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/automne_hover.png) left top no-repeat;
 }
 
 #radioJoseph_automne:checked + .labelRadioJoseph {
-    background: url(./img/joseph/automne_checked.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/automne_checked.png) left top no-repeat;
 }
 
 /* radio hiver */
 #labelJoseph_hiver {
-    background: url(./img/joseph/hiver.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/hiver.png) left top no-repeat;
 }
 
 #labelJoseph_hiver:hover {  
-    background: url(./img/joseph/hiver_hover.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/hiver_hover.png) left top no-repeat;
 }
 
 #radioJoseph_hiver:checked + .labelRadioJoseph {
-    background: url(./img/joseph/hiver_checked.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/hiver_checked.png) left top no-repeat;
 }
 
 /* radio total */
 #labelJoseph_total {
-    background: url(./img/joseph/total.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/total.png) left top no-repeat;
     width: 75px;
     height: 75px;
 }
 
 #labelJoseph_total:hover {  
-    background: url(./img/joseph/total_hover.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/total_hover.png) left top no-repeat;
 }
 
 #radioJoseph_total:checked + .labelRadioJoseph {
-    background: url(./img/joseph/total_checked.png) left top no-repeat;
+    background: url(./img/diagrammes/joseph/total_checked.png) left top no-repeat;
 }
 
-.test {
-    background: url(../img/diagramme/joseph/background_printemps.png)
-}
 
 
 /* slide10 */

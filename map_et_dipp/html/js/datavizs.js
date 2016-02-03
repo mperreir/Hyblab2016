@@ -125,7 +125,7 @@ var couleurLigneMin = "#38615a";
 var couleurLigneMoy = "#80cbc4";
 var couleurLigneMax = "#adf0c3"
 
-var svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("height",height).attr("viewbox","0, 0, 650, 600").attr("preserveAspectRatio", "xMinYMin");
+var svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("height",height).attr("viewBox","0, 0, 650, 600").attr("preserveAspectRatio", "xMinYMin");
 d3.www = svg;
 var svgAside = d3.select("#legendeAraignee").append("svg").attr("width",widthAside).attr("height",heightAside).attr("id","svgAside");
 
@@ -556,7 +556,15 @@ var villesNoms = echelle.append("text").attr("x",(width/2)-15).attr("y",function
 }).attr("font-size","10px").attr("fill","grey").text(function(d){return d.nom;});
 
 var moscou = gmoscou.append("circle").attr("cx",width/2).attr("cy",height/2).attr("r",function(d){return d.distance;}).attr("fill","none").attr("stroke","black").attr("stroke-width",4);
-gmoscou.append("text").attr("x",(width/2)-750).attr("y",-1650).text("Moyenne nationale").attr("font-size","200px");
+
+//texte dans le cercle
+/*
+Quinoa, rhum, riz ... Ces produits parcourent en moyenne 9000 km jusqu'à notre assiette !
+*/
+gmoscou.append("text").attr("x",(width/2)-750).attr("y",-1650).text("Quinoa, rhum, riz ...").attr("font-size","150px");
+gmoscou.append("text").attr("x",(width/2)-1200).attr("y",-1500).text("Ces produits parcourent 9000 km").attr("font-size","150px");
+gmoscou.append("text").attr("x",(width/2)-1200).attr("y",-1350).text("jusqu'à notre assiette !").attr("font-size","150px");
+
 
 gmoscou.append("text").attr("x",-2000).attr("y",-2000).text("Revenir à Nantes").attr("font-size","100px").on("click",function(){
 	return svg.transition().attr("transform","scale(1) translate("+(0-(width/1000))+","+(0-(height/1000))+")").ease("linear").duration(1000).delay(100);
