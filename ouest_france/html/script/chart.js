@@ -423,6 +423,24 @@ function generateDonut(donnee,id){
 	});
 };
 
+function generateBarChart(donnee){
+	new Chartist.Bar('#barchart',
+	donnee,
+	{
+		axisX:{
+			showGrid: false,
+			showLabel: false
+		},
+		axisY:{
+			showLabel: true,
+			showGrid: false,
+			offset:80
+		},
+		horizontalBars: true,
+		
+	});
+}
+
 function fillOptionsDonut(label){
 	var retour ={
 		donut: true,
