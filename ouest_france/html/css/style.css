@@ -17,11 +17,11 @@ html{
     -o-user-select: none;
     user-select: none;
     cursor: default;
-    font-family: "Aldrich",Arial,sans-serif;
+    font-family: "Avenir",Arial,sans-serif;
 }
 
 #container{
-	font-family: "Aldrich",Arial,sans-serif;
+	font-family: "Avenir",Arial,sans-serif;
 	text-align: center;
 	background-color: #FFF;
 }
@@ -31,7 +31,6 @@ a:link{text-decoration:none}
 h1{
 	color: #C2DEBC;
 	font-size: 4vmin;
-	font-weight: 900;
 }
 
 h2{
@@ -72,6 +71,10 @@ h2{
 	margin-right: auto;
 }
 
+.team{
+	margin-right: 8vw;
+}
+
 .lets_text{
     font-family: "Aldrich", sans-serif;
 }
@@ -85,6 +88,9 @@ h2{
     background-color: #D3E6FF;
 }
 
+#s5{
+	vertical-align: top;
+}
 
 .info{
 	background-color: rgba(254, 231, 201, 0.5);
@@ -102,10 +108,53 @@ h2{
 	color: #70C2B8;
 }
 
+.info_carbu{
+	background-color: rgba(254, 231, 201, 0.5);
+	position: absolute;
+	top: 30vh;
+	left: 7vw;
+	padding: 10px;
+	width: 20vw;
+	height: 30vh;
+	overflow: auto;
+	font-size: 1.6vmin;
+	border-radius: 10px;
+	//box-shadow: 5px 7px 0px rgba(233, 164, 129, 0.7);
+	text-align: justify;
+	color: #70C2B8;
+}
+
 .donut{
 	position: absolute;
 	width: 11vh;
 	height: 11vh;
+}
+
+#pompe{
+	width:100%;
+	height: 100%;
+}
+
+#barchart{
+	background-color: rgba(254, 231, 201, 0.5);
+	position: absolute;
+	top: 23vh;
+	right: 7vw;
+	padding: 10px;
+	width: 30vw;
+	height: 44vh;
+	color: #70C2B8;
+}
+
+#barchart .ct-label{
+	font-family: "Avenir";
+	font-size: 1em;
+	justify-content: flex-start;
+}
+
+
+#barchart .ct-series-a .ct-bar {
+  stroke: #9BD0B8;
 }
 
 #mono{
@@ -113,6 +162,7 @@ h2{
 	top : 15vh;
 	left: 45vw;
 }
+
 #none{
 	z-index: 21;
 	top: 34vh;
@@ -126,7 +176,7 @@ h2{
 }
 
 .ct-chart-donut .ct-series-a .ct-slice-donut {
-	stroke: #E44637;
+	stroke: #C96178;
 }
 /*make b hidden*/
 .ct-chart-donut .ct-series-b .ct-slice-donut {
@@ -142,7 +192,7 @@ h2{
 h3{
 	font-family: "Avenir";
 	font-size: 2.5vmin;
-	color: #E44637;
+	color: #C96178;
 }
 
 
