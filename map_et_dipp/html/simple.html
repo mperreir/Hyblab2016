@@ -89,7 +89,7 @@
     
     
 	<div class="section" id="slide3">
-        		<nav>
+        <nav>
 			<ul>
 				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
 				<li><a onclick="$.fn.fullpage.moveTo(3);">Les différents visages</a></li>
@@ -100,10 +100,12 @@
 
         <h3>EN AUTONOMIE</h3>
         
-        <div class="centrer">
-            <h2>Un jardin de 338kg de légumes urbains</h2>
-        
-            <p>Il habite à trois heures d'ici, mais cela pourrait se passer chez un nantais. Joseph Chauffrey, qui n'y connaissait rien, à réussi à produire 338 kilos de fruits et légumes dans ses 150m2 de terrain, dont seulement 25m2 de potager. Son mot d'ordre ? Permaculture, soit une forme respectueuse et écologique de production.</p>
+        <div class="conteneur">
+            <div class="bloc">
+                <h2>Un jardin de 338kg de légumes urbains</h2>
+
+                <p>Il habite à trois heures d'ici, mais cela pourrait se passer chez un nantais. Joseph Chauffrey, qui n'y connaissait rien, à réussi à produire 338 kilos de fruits et légumes dans ses 150m2 de terrain, dont seulement 25m2 de potager. Son mot d'ordre ? Permaculture, soit une forme respectueuse et écologique de production.</p>
+            </div>
         </div>
         
         <div class="flecheBas"><img src="./img/fleche_bas_de_page_verte.png" onclick="$.fn.fullpage.moveSectionDown();" /></div>
@@ -111,7 +113,7 @@
     
     
 	<div class="section" id="slide4">
-				<nav>
+        <nav>
 			<ul>
 				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
 				<li><a onclick="$.fn.fullpage.moveTo(3);">Les différents visages</a></li>
@@ -119,10 +121,6 @@
 			</ul>
 		</nav>
 		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
-        <header style="display: inline-block;">
-            <h3 class="">TOUT SEUL</h3>
-            <h2 class="">Un jardin et 252kg de légumes urbains</h2>
-        </header>
         
         <article>
             <p>Joseph et sa famille ont pu manger des légumes toute l’année. Cliquez sur chaque saison pour découvrir le poids des récoltes et constater les effets de la permaculture en ville !</p>
@@ -218,9 +216,9 @@
 	        <h2>Les jardins gagnent du terrain en ville !</h2>
 
 
-	        <p id="caption">Partager un jardin, c’est possible, et les options sont multiples dans la métropole<br/> nantaise. Pour cultiver les tomates en même temps que le lien social, différentes<br/> solutions existent selon les villes et les quartiers...</p>
+	        <p id="caption">Partager un jardin, c’est possible, et les options sont multiples dans la métropole nantaise. Pour cultiver les tomates en même temps que le lien social, différentes solutions existent selon les villes et les quartiers...</p>
 
-	        <div id="treemap_legend" class="coteGauche">
+	        <div id="treemap_legend">
 	            <div class="legend_bullet">
 	                <img src="img/treemap/bulletJF_24.png">
 	                <p>Jardins <span class="boldy">Familiaux</span></p>
@@ -249,15 +247,19 @@
 	        <div id="treemap"></div>
 	        
 	        <div id="interview">
-	        	<div id="interview_text">
-	        		<p>Il y a aussi une autre façon de partager les jardins : mettre à disposition à des passionnés le terrain de sa propre maison ! C'est ce que propose l'association ECOS.</p>
-	        	</div>
-
-	        	<div id="interview_res">
-	        		<p>Fanny Courieult au micro</p>
-	        	</div>
+	        	<table>
+	        		<tr>
+	        			<td id="interview_text">
+	        				<p>Il y a aussi une autre façon de partager les jardins : mettre à disposition à des passionnés le terrain de sa propre maison ! C'est ce que propose l'association ECOS.</p>
+	        			</td>
+	        			<td id="interview_res"> 
+	        				<img src="img/treemap/pictoSon.png" class="bulletRight">
+	        				<p>Fanny Courieult au micro</p>
+	        			</td>
+	        		</tr>
+	        	</table>
 	        </div>
-        </div>
+	    </div>
 	</div>
 
 	<div class="section" id="slide6">

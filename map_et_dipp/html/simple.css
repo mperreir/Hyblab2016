@@ -163,6 +163,8 @@ nav ul li:not(:first-child)
 
 #slide3 h2 {
     color: #78dc82;
+    font: 40px museoReg;
+    margin-bottom: 9%;
 }
     
 #slide3 h3 {
@@ -178,12 +180,24 @@ nav ul li:not(:first-child)
     display: inline-block;
 }
 
-#slide3 .centrer {
-    
+#slide3 .conteneur {
+    position: relative;
+    height: 85%;    
 }
 
+#slide3 .bloc {
+    position: absolute;
+    top: 15%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
 
-
+#slide3 .bloc p {
+    margin-left: 20%;
+    margin-right: 20%;
+    color: #4c4c4c;
+    font: 20px / 30px museoReg;
+}
 
 /* slide 4 : Joseph */
 
@@ -191,33 +205,10 @@ nav ul li:not(:first-child)
     text-align: center;
 }
 
-#slide4 header {
-    
-}
-
-#slide4 header h2 {
-    color: #fdbe63;
-    font: 40px museoReg;
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-
-#slide4 header h3 {
-    padding: 5px;
-    margin-top: 1%;
-    /* style du texte */
-    color: #fdbe63;
-    font: 18px museoReg;
-    /* contour */
-    border: 2px solid #fdbe63;
-    border-radius: 5px;
-    /* pour que la largeur du titre soit égale à la taille du texte, et non à la taille de la page */
-    display: inline-block;
-}
-
 #slide4 article {
-    padding: 2%; /* 30px 30px 30px 10px */
+    padding: 1%; /* 30px 30px 30px 10px */
     margin: 0 auto;
+    margin-top: 3%;
     width: 50%;
     /* style du texte */
     color: #4c4c4c;
@@ -245,7 +236,7 @@ nav ul li:not(:first-child)
 
 #totalJoseph {
     padding: 0;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 #totalJoseph p {

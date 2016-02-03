@@ -2,11 +2,14 @@
 	height: 100vh;
 	background-color: #90D7DF;
 	color: #4c4c4c;	
+	font-family: museoReg;
 	
 }
 
 #slide5 #absSlide5 {
-	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
 }
 
 #slide5 #badge {
@@ -22,34 +25,30 @@
 
 #slide5 h2 {
 	color: white;
-	font-family: museoReg;
 	font-size: 33px;
 	letter-spacing: 3px;
-	margin-left: 10%;
 	margin-top: 1%;
 }
 
 #slide5 #caption {
-	font-family: "arial";
 	font-size: 14px;
 	text-align: justify;
-	width: 45%;
-	margin-left: 10%;
+	width: 510px;
 	margin-top: 1%;
 }
 
 #slide5 #treemap {
 	width: 60%;
 	display: inline-block;
-	margin-left: 5%;
 	margin-top: 1%;
 }
 
 #slide5 #treemap_legend {
-	width: 17%;
+	width: 21%;
 	display: inline-block;
-	margin-left: 10%;
 	margin-top: 20px;
+	margin-right: 7%;
+	vertical-align: top;
 }
 
 .legend_bullet {
@@ -81,13 +80,17 @@
 #slide5 #interview {
 	border: 1px solid white;
 	border-radius: 6px;
-	padding: 5px;
-	width: 50%;
+	width: 600px;
+	font-size: 12px;
+	float: right;
 }
 
+#interview td {
+	padding: 3px;
+}
 #interview_text {
-	width : 60%;
-	display: inline-block;
+	width : 320px;
+	line-height: 20px;
 }
 
 #interview_res {
