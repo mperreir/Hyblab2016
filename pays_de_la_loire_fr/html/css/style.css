@@ -1411,10 +1411,14 @@ DATA 1
 
 /* Dataviz 2 */
 
-/*.arc-text
+#titre_data2
 {
-    transform: rotate(180deg);
-}*/
+    position: absolute;
+    width: 35%;
+    left: 10%;
+    top: 2%;
+    text-align: left;
+}
 
 #data2_pale
 {
@@ -1438,7 +1442,7 @@ DATA 1
     position: absolute;
     width: 10%;
     top: 2%;
-    left: 45%;
+    left: 44%;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
@@ -1469,7 +1473,7 @@ DATA 1
     width: 30%;
     height: 25%;
     padding: 2%;
-    top: 45%;
+    top: 25%;
     left: 9.6%;
     text-align: center;
 }
@@ -1491,7 +1495,7 @@ DATA 1
     width: 30%;
     height: 25%;
     padding: 2%;
-    top: 45%;
+    top: 25%;
     left: 9.6%;
     text-align: center;
 }
@@ -1513,7 +1517,7 @@ DATA 1
     width: 30%;
     height: 25%;
     padding: 2%;
-    top: 37%;
+    top: 25%;
     left: 9.6%;
     text-align: center;
 }
