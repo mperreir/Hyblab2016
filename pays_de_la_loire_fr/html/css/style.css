@@ -396,6 +396,14 @@ span>ul>li>p
 	left: 6.5%;
 }
 
+#pays_de_la_loire
+{
+	position: absolute;
+	width: 3%;
+	left: 9.05%;
+	bottom: 43.5%;
+}
+
 #ampoule_q2
 {
 	position: absolute;
