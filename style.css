@@ -1,3 +1,21 @@
+@font-face {
+    font-family: title;
+    src: url(fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: text;
+    src: url(fonts/OpenSans-Semibold.ttf);
+}
+
+* {
+    font-family: text;
+}
+
+h1 {
+    font-family: title;
+}
+
 body {
     margin: 0;
 }
