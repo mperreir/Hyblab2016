@@ -107,6 +107,10 @@ nav ul li:not(:first-child)
 	text-align: center;
 }
 
+#slide2 .container {
+    padding-top: 5%;
+}
+
 #slide2 h2, #slide2 h1, #slide10 h2, #slide10 h1
 {
 	text-align: left;
@@ -164,8 +168,7 @@ nav ul li:not(:first-child)
 
 #slide9
 {
-    text-align: center;
-    
+    text-align: center;    
     background: url("./img/derniereslide.png") no-repeat center bottom, #90D7DF;
 }
 #slide9 h2
@@ -180,23 +183,27 @@ nav ul li:not(:first-child)
     color: #78dc82;
     font: 50px museoBold;
     margin-bottom: 5%;
-    text-align: center;
-    vertical-align: middle;
+    width: 20;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#slide8 p {
-    vertical-align: middle;
-    text-align: center;
-}
 
 #slide8 {
     background: url(./img/planteshaut.png) top center no-repeat,
                 url(./img/plantesbas.png) bottom center no-repeat,
                 url(./img/plantesgauche.png) left center no-repeat,
-                url(./img/plantedroite.png) right center no-repeat;
+                url(./img/plantedroite.png) right center no-repeat, 
+                #e7ffe0;
 
     height: 100vh;
+    text-align: center;
+}
 
+#slide8 .bloc {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #slide3 h2{
@@ -233,7 +240,7 @@ nav ul li:not(:first-child)
     text-align: justify;
 }
 #slide3 .bloc, #slide8 .bloc{
-    position: absolute;
+    /* position: absolute; */
     margin-top: 15%;
     padding-left: 20%;
     padding-right: 20%;
