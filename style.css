@@ -384,6 +384,10 @@ input[type="checkbox"] {
     margin: 0 auto;
 }
 
+#credits {
+    text-align: center;
+}
+
 #credits h1 {
     font-size: 15;
 }
@@ -394,12 +398,33 @@ input[type="checkbox"] {
 
 #last_page p {
     text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#last_page p:first-child {
+    position: absolute;
+    top: 0px;
+}
+
+#center {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#external_links a {
+    display: block;
+    text-align: center;
 }
 
 #sponsors {
     position: absolute;
-    bottom: 0px;
-    left: 5%;
-    right: 5%;
-    width: 90%;
+    bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+#sponsors img {
+    display: inline-block;
+    height: 40px;
 }
