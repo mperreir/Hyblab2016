@@ -249,7 +249,13 @@
             <span class="">
               <img class="image_fond" src="../resources/images/Backgrounds/background3-04.svg" alt="Fond" id="fond_q4" />
 
-              <img class="" src="../resources/images/questionnaire/maison+perso.svg" alt="Fond" id="elements_q4" />
+              <img class="" src="../resources/images/questionnaire/maison+perso.svg" alt="Maison et 2 personnes" id="elements_q4" />
+              <img class="" src="../resources/images/questionnaire/maison2.svg" alt="Maison" id="maison1_q4" />
+              <img class="" src="../resources/images/questionnaire/maison3.svg" alt="Maison" id="maison2_q4" />
+              <img class="" src="../resources/images/questionnaire/maison4.svg" alt="Maison" id="maison3_q4" />
+              <img class="" src="../resources/images/questionnaire/maison1.svg" alt="Maison" id="maison4_q4" />
+              <img class="" src="../resources/images/questionnaire/maison3.svg" alt="Maison" id="maison5_q4" />
+              <img class="" src="../resources/images/questionnaire/maison2.svg" alt="Maison" id="maison6_q4" />
 
               <h2 class="text-center titre" id="titre_q4">
                 EN UN AN, LES <span class="mot_important">ÉNERGIES RENOUVELABLES PRODUITES</span> EN PAYS DE LA LOIRE ALIMENTENT L'ÉQUIVALENT DE...
@@ -273,9 +279,9 @@
 
               <span class="contenu propositions">
                 <ul class="text-center liste_propositions" id="q4">
-                  <li onclick="chooseAnswer(this.id)" id="q4_p1"><p>115 700<br/>foyers</p></li>
-                  <li onclick="chooseAnswer(this.id)" id="q4_p2"><p>153 000<br/>foyers</p></li>
-                  <li onclick="chooseAnswer(this.id)" id="q4_p3"><p>165 400<br/>foyers</p></li>
+                  <li onclick="chooseAnswer(this.id); displayHouses(1);" id="q4_p1"><p>115 700<br/>foyers</p></li>
+                  <li onclick="chooseAnswer(this.id); displayHouses(2);" id="q4_p2"><p>153 000<br/>foyers</p></li>
+                  <li onclick="chooseAnswer(this.id); displayHouses(3);" id="q4_p3"><p>165 400<br/>foyers</p></li>
 
                   <img class="bouton_valider" id="q4_b" src="../resources/images/questionnaire/fleche-validation-questionnaire.svg" alt="Valider" onclick="answerQuestions(this.id)"/>
                 </ul>

@@ -533,6 +533,60 @@ Elements de la question 4
 	bottom: 7%;
 }
 
+#maison1_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 2%;
+	left: 80%;
+	bottom: 55%;
+}
+
+#maison2_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 2%;
+	left: 90%;
+	bottom: 50%;
+}
+
+#maison3_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 3.5%;
+	left: 94.5%;
+	bottom: 42%;
+}
+
+#maison4_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 5%;
+	left: 77.5%;
+	bottom: 28%;
+}
+
+#maison5_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 1.5%;
+	left: 84.5%;
+	bottom: 65%;
+}
+
+#maison6_q4
+{
+	opacity: 0;
+	position: absolute;
+	width: 1%;
+	left: 92.5%;
+	bottom: 65%;
+}
+
 /*
 DATA 1
 */
