@@ -59,7 +59,7 @@ function updateCurrentSection(){
 		switch(previousSection) {
 
 			case "firstPage" :
-
+				resetIntro();
 			break;
 
 			case "secondPage" :
