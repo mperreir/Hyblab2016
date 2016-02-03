@@ -189,6 +189,8 @@ donneesActuelles.forEach(function(element, index, tableau) {
         "transform": "translate(25, 25)",
     });
     //"x", 0).attr("y", 25).attr("xlink:href", infoElement.cheminImage).attr("width", 50).attr("height", 50);
+    
+    
 });
 
 
