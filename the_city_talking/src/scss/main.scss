@@ -43,15 +43,6 @@
 		border-top-right-radius:$radius;
 		border-bottom-right-radius:$radius;
 	}
-
-	&:hover{
-		background-color:rgb(190,175,245);
-	}
-
-	&.selected{
-		background-color:rgb(61,16,224);
-		color:white;
-	}
 }
 
 .dot_pollution{
@@ -128,14 +119,8 @@
 	stroke-width:2px;
 }
 
-.linemonth {
-	fill:none;
-	stroke:url(#line-gradient-d3);
-	stroke-width:2px;
-}
-
 .pollution{
-	fill:rgba(150, 255, 0, 1);
+	fill:rgba(124, 252, 0, 1);
 }
 
 .prescription{
@@ -237,7 +222,7 @@
 	color:rgb(61,16,224);
 	width:18%;
 	margin-bottom:32px;
-
+	
 }
 #blue_bracket2{
 	vertical-align:top;
