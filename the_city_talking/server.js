@@ -128,6 +128,10 @@ app.get('/per_month_kerbside.csv',(req,res) => {
 	res.sendFile(path.join(__dirname,'data/per_month_kerbside.csv'));
 })
 
+app.get('/prescriptions.csv',(req,res) => {
+	res.sendFile(path.join(__dirname,'data/prescriptions.csv'));
+})
+
 app.use(express.static(path.join(__dirname, 'html')));
 
 // You can then add whatever routing code you need
