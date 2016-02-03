@@ -34,7 +34,7 @@ function makeAnAverageDay(multipleDays){
 	}
 	multipleDays.forEach( (dataOneHour) => {
 		dataOneHour.hours.forEach((particlesOneHour,hour) => {
-			for (particle in particlesOneHour){
+			for ( let particle in particlesOneHour){
 				if (!isNaN(particlesOneHour[particle])){
 					array_data_oneDay[hour][particle] += particlesOneHour[particle];
 					countParticles[hour][particle] += 1 ;

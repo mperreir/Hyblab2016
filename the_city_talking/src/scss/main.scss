@@ -1,3 +1,41 @@
+
+/* svg */
+
+.dot_pollution{
+	stroke:#000;
+	stroke-width:1px;
+	cursor:pointer;
+	&:hover{
+		stroke-width:3px;
+	}
+	&.pollution_good{
+		fill: rgb(28,247,168);
+	}
+	&.pollution_poor{
+		fill: rgb(255,167,136);
+	}
+	&.pollution_terrible{
+		fill:rgb(249,98,90);
+	}
+}
+
+.bg_square{
+	&.pollution_good{
+		fill: rgb(28,247,168);
+	}
+	&.pollution_poor{
+		fill: rgb(255,167,136);
+	}
+	&.pollution_terrible{
+		fill:rgb(249,98,90);
+	}
+}
+
+.chart{
+	background-color: #EEE;
+}
+/* end svg */
+
 #html{
     border:0 none;
     margin:0;
