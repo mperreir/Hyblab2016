@@ -236,6 +236,10 @@ nav ul li:not(:first-child)
     font: 20px / 30px museoReg;
 }
 
+#slide3 .bandeauBas {
+    background-color: #e7ffe0;;
+}
+
 /* slide 4 : Joseph */
 
 #slide4 {
@@ -442,13 +446,13 @@ nav ul li:not(:first-child)
 #slide10 .bandeauBas {
     background: url(./img/plantes_gauche.png) bottom left no-repeat,
                 url(./img/plantes_droite.png) bottom right no-repeat;
-    height: 15%;
+    /height: 15%;
     background-color: white;
     
     width: 100%;
 	position: absolute;
 	top: 100%;
-	margin-top: -135px;
+	margin-top: -109px;
 }
 
 #slide10 .flecheBas {
