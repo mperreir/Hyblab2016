@@ -971,6 +971,15 @@
     };
     legend.addTo(map);
 
+    var intro = L.control({position:'topleft'});
+    intro.onAdd = function(map) {
+        this._div = L.DomUtil.create('div', 'info');
+        this._div.innerHTML = 'ajoute ici';
+        return this._div;
+    };
+
+    intro.addTo(map);
+
     // Temporary fix, used util IMD calculation error is fixed
     topoMsoaLayer.eachLayer(function(layer) {
         topoMsoaLayer.resetStyle(layer);
