@@ -156,18 +156,25 @@ nav ul li:not(:first-child)
 
 
 /* slide 3 : pré joseph */
-#slide3 {
+#slide3,#slide8 {
     text-align: center;
     background-color: #e7ffe0;
 }
 
-#slide3 h2 {
+#slide8 h2
+{
+    color: #78dc82;
+    font: 50px museoBold;
+    margin-bottom: 9%;
+}
+
+#slide3 h2{
     color: #78dc82;
     font: 40px museoReg;
     margin-bottom: 9%;
 }
     
-#slide3 h3 {
+#slide3 h3, #slide8 h3{
     padding: 5px;
     margin-top: 1%;
     /* style du texte */
@@ -180,19 +187,19 @@ nav ul li:not(:first-child)
     display: inline-block;
 }
 
-#slide3 .conteneur {
+#slide3 .conteneur, #slide8 .conteneur {
     position: relative;
     height: 85%;    
 }
 
-#slide3 .bloc {
+#slide3 .bloc, #slide8 .bloc{
     position: absolute;
     top: 15%;
     padding-left: 20%;
     padding-right: 20%;
 }
 
-#slide3 .bloc p {
+#slide3 .bloc p, #slide8 .bloc p{
     margin-left: 20%;
     margin-right: 20%;
     color: #4c4c4c;
