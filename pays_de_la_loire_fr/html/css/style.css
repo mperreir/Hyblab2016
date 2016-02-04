@@ -1438,10 +1438,14 @@ DATA 1
 
 /* Dataviz 2 */
 
-/*.arc-text
+#titre_data2
 {
-    transform: rotate(180deg);
-}*/
+    position: absolute;
+    width: 35%;
+    left: 10%;
+    top: 2%;
+    text-align: left;
+}
 
 #data2_pale
 {
@@ -1465,7 +1469,7 @@ DATA 1
     position: absolute;
     width: 10%;
     top: 2%;
-    left: 45%;
+    left: 44%;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
@@ -1496,7 +1500,7 @@ DATA 1
     width: 30%;
     height: 25%;
     padding: 2%;
-    top: 45%;
+    top: 25%;
     left: 9.6%;
     text-align: center;
 }
@@ -1518,7 +1522,7 @@ DATA 1
     width: 30%;
     height: 25%;
     padding: 2%;
-    top: 45%;
+    top: 25%;
     left: 9.6%;
     text-align: center;
 }
@@ -1540,7 +1544,7 @@ DATA 1
     width: 30%;
     height: 25%;
     padding: 2%;
-    top: 37%;
+    top: 25%;
     left: 9.6%;
     text-align: center;
 }
@@ -1832,7 +1836,7 @@ DATA 1
 .bloc_valeur
 {
 	position: absolute;
-	font-size: 0.8vw;
+	font-size: 1.4vw;
 	width: 11.5%;
     height: 4%;
     padding: 0.3%;
@@ -1844,6 +1848,14 @@ DATA 1
 	z-index: 4;
 	text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
 }
+
+#H1_3
+{
+	top: 19%;
+    left: 10%;
+}
+
+
 
 #valeur2008_3
 {
@@ -1949,18 +1961,17 @@ DATA 1
 	font-size: 1vw;
 }
 
-
 /*bénéfices*/
 
 #emploi
 {
     position: absolute;
-    width: 30%;
+    width: 20%;
     height: 25%;
     left: 18%;
     top: 30%;
     font-size: 1vw;
-    color: #002266;
+    color: #002266;	
 }
 
 #emploi>b
@@ -1971,12 +1982,13 @@ DATA 1
 #propre
 {
     position: absolute;
-    width: 40%;
+    width: 20%;
     height: 25%;
     left: 41%;
     top: 30%;
     font-size: 1vw;
     color: #002266;
+   
 }
 
 #propre>b
@@ -1987,12 +1999,14 @@ DATA 1
 #eco
 {
     position: absolute;
-    width: 30%;
+    width: 20%;
     height: 25%;
     left: 65%;
     top: 30%;
     font-size: 1vw;
     color: #002266;
+
+    
 }
 
 #eco>b
@@ -2000,3 +2014,38 @@ DATA 1
     font-size: 1.25vw;
 }
 
+#benefice_pale1
+{
+    position: absolute;
+    width: 7%;
+    top : 77%;
+    left: 86.7%;
+}
+
+#benefice_pale2
+{
+    position: absolute;
+    width: 5%;
+    top : 81%;
+    left: 81.8%;
+}
+
+
+.animConcl
+{
+	animation: fadeInDown 2s linear forwards;
+}
+
+.image_concl
+{
+	width: 35%;
+	padding: 2% 0 2% 0;
+}
+
+#logo_univ_nantes
+{
+    position: absolute;
+    width: 8%;
+    top: 85%;
+    left: 45.5%;
+}

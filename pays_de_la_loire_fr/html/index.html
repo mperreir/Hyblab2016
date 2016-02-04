@@ -450,30 +450,30 @@
       <section class="section section_perso">
         <span class="responsive_container" style="overflow: visible;">
             <img class="image_fond" src="../resources/images/Backgrounds/background3-08.svg" alt="Fond" id="fond_intro" />
-            <h2 class="text-center titre" id="titre_data1">
-                LES DIFFÉRENTES SOURCES</br>D'<span class="mot_important">ÉNERGIES RENOUVELABLES</span> </br>DE LA RÉGION <b>PAYS DE LA LOIRE</b>
+            <h2 class="text-center titre" id="titre_data2">
+                LES DIFFÉRENTES SOURCES</br>D'<span class="mot_important">ÉNERGIES RENOUVELABLES</span> </br>DES <b>PAYS DE LA LOIRE</b>
             </h2>
             <img src="../resources/images/data2/pale-bleu.svg" alt="pale" id="data2_pale" />
             <svg id="svg_dataviz2" viewbox="0 0 730 730" version="1.1" xmlns="http://www.w3.org/2000/svg" />
-            <img src="../resources/images/data2/eolien.svg" alt="bouton eolien" id="data2_eolien" />
-            <img src="../resources/images/data2/solaire.svg" alt="bouton solaire" id="data2_solaire" class="animated infinite bounce" />
-            <img src="../resources/images/data2/biomasse.svg" alt="bouton biomasse" id="data2_biomasse" class="animated infinite bounce" />
+            <img style="cursor:pointer;" src="../resources/images/data2/eolien.svg" alt="bouton eolien" id="data2_eolien" />
+            <img style="cursor:pointer;" src="../resources/images/data2/solaire.svg" alt="bouton solaire" id="data2_solaire" class="animated infinite bounce" />
+            <img style="cursor:pointer;" src="../resources/images/data2/biomasse.svg" alt="bouton biomasse" id="data2_biomasse" class="animated infinite bounce" />
             <span class="bloc_reponse" id="saviez_vous_eolienne">
                 <b>LE SAVIEZ-VOUS ?</b><br/><br/>
                 <p>L'éolien est une source d’énergie électrique renouvelable,
-                elle permet d’exploiter la force du vent. En Pays de Loire, on compte plus de <span class="chiffre_important">62</span> parcs éoliens raccordés au réseau. En 2014, la part de l’énergie sous obligation d’achat produite par les éoliennes représentait <span class="chiffre_important">64,5%</span> de la production des énergies renouvelables en région.<br/><cite>Source: ores.paysdelaloire.fr</cite></p>
+                elle permet d’exploiter la force du vent. En Pays de Loire, on compte plus de <span class="chiffre_important">62</span> parcs éoliens raccordés au réseau. En 2014, la part de l’énergie sous obligation d’achat produite par les éoliennes représentait <span class="chiffre_important">64,5%</span> de la production des énergies renouvelables en région.<br/><cite>Source : ores.paysdelaloire.fr</cite></p>
             </span>
             <span class="bloc_reponse" id="saviez_vous_solaire" style="display: none">
                 <b>LE SAVIEZ-VOUS ?</b><br/><br/>
                 <p>L’énergie photovoltaïque permet de produire de
                 l’électricité en utilisant le rayonnement solaire. Elle connaît un fort développement. En Pays de la Loire, on compte plus de <span class="chiffre_important">38 000</span> sites raccordés au réseau.<br/> En 2014, la part de l’énergie sous obligation d’achat produite par les installations photovoltaïques
-                représentait <span class="chiffre_important">22%</span> de la production des énergies renouvelables en région.<br/><cite>Source: ores.paysdelaloire.fr</cite></p>
+                représentait <span class="chiffre_important">22%</span> de la production des énergies renouvelables en région.<br/><cite>Source : ores.paysdelaloire.fr</cite></p>
             </span>
             <span class="bloc_reponse" id="saviez_vous_biomasse" style="display: none">
                 <b>LE SAVIEZ-VOUS ?</b><br/><br/>
                 <p> La biomasse permet de générer de la chaleur à partir de
                 matières organiques vivantes, d’origine végétale ou animale. Cette chaleur permet de produire de l’électricité. Elle dégage très peu de gaz à effet de serre, cette source d’énergie naturelle, participe
-                au traitement et à la destruction des déchets organiques. En pays de la Loire, on compte plus de <span class="chiffre_important">26</span> installations de méthanisation (biomasse).<br/> En 2014, la part de l’énergie sous obligation d’achat produite par la biomasse représentait <span class="chiffre_important">12%</span> de la production des énergies renouvelables en région.<br/><cite>Source: ores.paysdelaloire.fr</cite></p>
+                au traitement et à la destruction des déchets organiques. En pays de la Loire, on compte plus de <span class="chiffre_important">26</span> installations de méthanisation (biomasse).<br/> En 2014, la part de l’énergie sous obligation d’achat produite par la biomasse représentait <span class="chiffre_important">12%</span> de la production des énergies renouvelables en région.<br/><cite>Source : ores.paysdelaloire.fr</cite></p>
             </span>
         </span>
       </section>
@@ -497,12 +497,18 @@
 
       <section class="section section_perso">
         <span class="responsive_container" style="overflow:hidden;">
-          <h2 class="text-center titre" id="titre_data1">
+          <h2 class="text-center titre" id="titre_data2">
             DES <b>ÉNERGIES RENOUVELABLES</b><br/><span class="mot_important">PROMETTEUSES</span> !
           </h2>
           <img class="image_fond" style="z-index:-1" src="../resources/images/Backgrounds/background3-10.svg" alt="Fond"/>
+          <h2 class="text-center titre" id="H1_3">Évolution de la production d'énergie renouvelable</h2>
+          <h2 class="text-center titre" id="legend1_3" style="font-size:1.3vw;top:13%;left:85%;color:rgb(237,121,107);">Estimation haute</h2>
+          <h2 class="text-center titre" id="legend2_3" style="font-size:1.3vw;top:23%;left:88%;color:rgb(174,219,222);">Estimation basse</h2>    
+      
 
           <svg style="position:absolute; width=100%;"  viewbox="0 0 1280 800">
+             <!-- <line class="" x1="635" y1="278" x2="830" y2="180" style="stroke-linecap:round;stroke-dasharray: 50;stroke:rgb(237,121,107);stroke-width:4" />
+              <line class="" x1="635" y1="278" x2="830" y2="180" style="stroke-linecap:round;stroke-dasharray: 50;stroke:rgb(174,219,222);stroke-width:4" />-->
               <polyline class="" id="line_data3_1" points="109,500 250,399 450,339 635,278" style="stroke-linecap:round;fill:none;stroke:rgb(237,121,107);stroke-width:4" />
               <!--<polyline class="draw_line2" id="line_data3_2" points="635,278 830,180 1056,130 1056,200 830,230 635,278" style="" />-->
               <polyline class="draw_line2" id="line_data3_2" points="635,278 830,180 1056,130" style="stroke-linecap:round;fill:none;stroke:rgb(237,121,107);stroke-width:4" />
@@ -529,8 +535,8 @@
           <span class="bloc_valeur" id="valeur2008_3"></span>
           <span class="bloc_valeur" id="valeur2011_3">+237%</span>
           <span class="bloc_valeur" id="valeur2014_3">+72%</span>
-          <span class="bloc_valeur" id="valeur2022_3">32%</span>
-          <span class="bloc_valeur" id="valeur2_2022_3">62%</span>
+          <span class="bloc_valeur" id="valeur2022_3">+32%</span>
+          <span class="bloc_valeur" id="valeur2_2022_3">+62%</span>
           <span class="bloc_valeur" id="valeur2030_3">+29%</span>
           <span class="bloc_valeur" id="valeur2_2030_3">+45%</span>
           <!--<button class="bouton_demarrer" onclick="stopAnims()">Stopper</button>-->
@@ -542,7 +548,8 @@
             être <span style="font-size:1vw;" class="chiffre_important">multipliée par 2,4</span> d’ici 2030
             ! 
             Deux champs d’éoliennes off-shore seront implantés d’ici 2020 et permettront d’améliorer la 
-            production d’énergies renouvelables de la région ! 
+            production d’énergies renouvelables de la région !
+            </br>Source : <cite>D.R.E.A.L Pays de la Loire</cite>
             </p>
             <img class="bouton_continuer" style="position:absolute;margin-top:-13%;right:0%;width:12%;" src="../resources/images/questionnaire/bouton-orange-reponse.svg" alt="Continuer" onclick="this.parentElement.style.display='none';" id="button_fermer" />
           </span>
@@ -555,28 +562,30 @@
             QUELS <span class="mot_important">BÉNÉFICES</span> <b>POUR LA REGION PAYS DE LA LOIRE ?</b><br/>
           </h2>
           <img class="image_fond" style="z-index:-1" src="../resources/images/Backgrounds/background3-12.svg" alt="Fond"/>
+          <img src="../resources/images/previsions/pale.svg" alt="pale" id="benefice_pale1"/>
+          <img src="../resources/images/previsions/pale.svg" alt="pale" id="benefice_pale2"/>
           <span id="emploi">
               <b>LA CRÉATION</br>D’EMPLOIS</br></b>
-              <img src="../resources/images/bénéfices/malette.svg" alt="Emplois"/>
-              <p>La création et la maintenance de nouvelles</br>
-              structures d’énergies nécessiterait un besoin</br>
+              <img class="image_concl" src="../resources/images/bénéfices/malette.svg" alt="Emplois"/>
+              <p>La création et la maintenance de nouvelles
+              structures d’énergies nécessiterait un besoin
               humain plus important.</p>
           </span>
           <span id="propre">
               <b>UNE RÉGION
                   PLUS</br>PROPRE</br></b>
-              <img src="../resources/images/bénéfices/feuille.svg" alt="Emplois"/>
-              <p>Le développement des énergies renouvelables</br>
-              participera au rayonnement de la région en</br>
-              offrant à ses citoyens une meilleure qualité de</br>
+              <img class="image_concl" src="../resources/images/bénéfices/feuille.svg" alt="Emplois"/>
+              <p>Le développement des énergies renouvelables
+              participera au rayonnement de la région en
+              offrant à ses citoyens une meilleure qualité de
               vie..</p>
           </span>
           <span id="eco">
               <b>UN DÉVELOPPEMENT</br>
               D’ACTIVITÉS ÉCONOMIQUES</br></b>
-              <img src="../resources/images/bénéfices/monnaie-bleu.svg" alt="Emplois"/>
-              <p>L’exploitation des énergies renouvelables,</br>
-              renforce la dynamique économique de la</br>
+              <img class="image_concl" src="../resources/images/bénéfices/monnaie-bleu.svg" alt="Emplois"/>
+              <p>L’exploitation des énergies renouvelables,
+              renforce la dynamique économique de la
               région.</p>
           </span>
         </span>
@@ -585,6 +594,7 @@
       <section class="section section_perso">
         <span class="responsive_container" style="overflow:hidden;">
                 <img class="image_fond" style="z-index:-1" src="../resources/images/Backgrounds/background3-13.svg" alt="Fond"/>
+                <img src="../resources/images/Backgrounds/logo-univ-nantes.png" alt="Logo univ nantes" id="logo_univ_nantes"/>
         </span>
       </section>
 

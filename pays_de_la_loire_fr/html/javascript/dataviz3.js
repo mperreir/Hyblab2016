@@ -139,6 +139,9 @@ function reset3() {
 	document.getElementById("valeur2_2022_3").style.display = "none";
 	document.getElementById("valeur2030_3").style.display = "none";
 	document.getElementById("valeur2_2030_3").style.display = "none";
+
+	document.getElementById("legend1_3").style.display = "none";
+	document.getElementById("legend2_3").style.display = "none";
 }
 
 function animEolienne3_1(){
@@ -294,6 +297,9 @@ function animEolienne3_5(){
 					var bloc_data3 = document.getElementById("bloc_data3");
 					bloc_data3.classList.remove("animValeur");
   					setTimeout(function(){bloc_data3.classList.add("animValeur");bloc_data3.style.display = "block";},1);
+
+  					document.getElementById("legend1_3").style.display = "block";
+  					document.getElementById("legend2_3").style.display = "block";
 				});
 }
 
@@ -353,6 +359,13 @@ function addRotation(id)
 			valeur2_2030_3.innerHTML = "2810GWh";
 		break;
 	}
+}
+
+function initConcl()
+{
+	setTimeout(function(){document.getElementById('emploi').classList.add("animConcl")},1);
+	setTimeout(function(){document.getElementById('propre').classList.add("animConcl")},1);
+	setTimeout(function(){document.getElementById('eco').classList.add("animConcl")},1);
 }
 
 function rand(min,max){
