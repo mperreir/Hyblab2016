@@ -17,18 +17,6 @@ $(document).ready( function () {
 })
 
 function animIntro() {
-	var nuage1 = document.getElementById("nuage1");
-	var nuage2 = document.getElementById("nuage2");
-	var nuage3 = document.getElementById("nuage3");
-	var tracteur = document.getElementById("tracteur_intro");
-	var bateau = document.getElementById("bateau_intro");
-	var panneau1 = document.getElementById("panneau_intro_1");
-	var panneau2 = document.getElementById("panneau_intro_2");
-	var panneau3 = document.getElementById("panneau_intro_3");
-	var pale1 = document.getElementById("pale_intro_1");
-	var pale2 = document.getElementById("pale_intro_2");
-	var pale3 = document.getElementById("pale_intro_3");
-
 	$(nuage1)
 		.transition({
 					opacity: 1,
@@ -45,53 +33,42 @@ function animIntro() {
 					left: '65%',
 					delay: 500 }, 1000, 'linear');
 
-	$(tracteur)
+	$(tracteur_intro)
 		.transition({
 					left: '-15%',
 					delay: 1100 }, 30000, 'linear');
 
-	$(bateau)
+	$(bateau_intro)
 		.transition({
 					left: '110%',
 					delay: 1100 }, 30000, 'linear');
 
-	$(pale1)
+	$(pale_intro_1)
 		.transition({
 					rotate: '1440deg',
 					delay: 1100 }, 40000, 'linear');
 
-	$(pale2)
+	$(pale_intro_2)
 		.transition({
 					rotate: '1440deg',
 					delay: 920 }, 28300, 'linear');
 
-	$(pale3)
+	$(pale_intro_3)
 		.transition({
 					rotate: '1440deg',
 					delay: 1280 }, 34500, 'linear');
 }
 
+/* Remise en place des éléments de l'intro pour pouvoir rejouer l'animation */
 function resetIntro () {
-	var nuage1 = document.getElementById("nuage1");
-	var nuage2 = document.getElementById("nuage2");
-	var nuage3 = document.getElementById("nuage3");
-	var tracteur = document.getElementById("tracteur_intro");
-	var bateau = document.getElementById("bateau_intro");
-	var panneau1 = document.getElementById("panneau_intro_1");
-	var panneau2 = document.getElementById("panneau_intro_2");
-	var panneau3 = document.getElementById("panneau_intro_3");
-	var pale1 = document.getElementById("pale_intro_1");
-	var pale2 = document.getElementById("pale_intro_2");
-	var pale3 = document.getElementById("pale_intro_3");
-
 	$(nuage1).stop(true, true);
 	$(nuage2).stop(true, true);
 	$(nuage3).stop(true, true);
-	$(tracteur).stop(true, true);
-	$(bateau).stop(true, true);
-	$(pale1).stop(true, true);
-	$(pale2).stop(true, true);
-	$(pale3).stop(true, true);
+	$(tracteur_intro).stop(true, true);
+	$(bateau_intro).stop(true, true);
+	$(pale_intro_1).stop(true, true);
+	$(pale_intro_2).stop(true, true);
+	$(pale_intro_3).stop(true, true);
 
 	$(nuage1)
 		.transition({
@@ -106,29 +83,29 @@ function resetIntro () {
 					opacity: 0,
 					left: '80%' });
 
-	$(tracteur)
+	$(tracteur_intro)
 		.transition({
 					left: '32.5%' });
 
-	$(bateau)
+	$(bateau_intro)
 		.transition({
 					left: '80%' });
 
-	$(pale1)
+	$(pale_intro_1)
 		.transition({
 					rotate: '0deg' });
 
-	$(pale2)
+	$(pale_intro_2)
 		.transition({
 					rotate: '0deg' });
 
-	$(pale3)
+	$(pale_intro_3)
 		.transition({
 					rotate: '0deg' });
 }
 
+/* Fonction passant à la section suivante (scroll vertical) */
 function startQ () {
-	//document.getElementById("sectionQ").style.display = "block";
 	$.fn.fullpage.moveSectionDown();
 }
 
@@ -147,6 +124,7 @@ function moveNextS (button) {
 	resetSlide(idQ);
 }
 
+/* Remise en place des éléments d'une slide pour pouvoir rejouer la question et les animations */
 function resetSlide (idQ) {	
 	// Cacher les blocs réponses
 	var bad_block = document.getElementById(idQ+"_ab");
@@ -169,77 +147,62 @@ function resetSlide (idQ) {
 
 	switch(idQ) {
 		case "q1":
-			var france = document.getElementById("france");
-			var paysdelaloire = document.getElementById("pays_de_la_loire");
 			$(france).transition({
 				left: '25%'
 			})
-			$(paysdelaloire).transition({
+			$(pays_de_la_loire).transition({
 				scale: 1,
 				left: '27.1%'
 			})
 			break;
 
 		case "q2":
-			var ampoule = document.getElementById("ampoule_q2");
-			var batiment = document.getElementById("batiment_q2");
-			var euro = document.getElementById("euro_q2");
-
-			$(ampoule).transition({
+			$(ampoule_q2).transition({
 				scale: 1,
 				left: '44%'
 			})
-			$(batiment).transition({
+			$(batiment_q2).transition({
 				scale: 1,
 				left: '48%'
 			})
-			$(euro).transition({
+			$(euro_q2).transition({
 				scale: 1,
 				left: '52%'
 			})
 			break;
 
 		case "q3":
-			var elements = document.getElementById("elements_q3");
-			var panneau1 = document.getElementById("panneau_1_q3");
-			var panneau2 = document.getElementById("panneau_2_q3");
-			var panneau3 = document.getElementById("panneau_3_q3");
-			var tracteur = document.getElementById("tracteur_q3");
-			var pale1 = document.getElementById("pale_1_q3");
-			var pale2 = document.getElementById("pale_2_q3");
-			var pale3 = document.getElementById("pale_3_q3");
-
 			$(elements_q3).transition({
 				scale: 1,
 				left: '60%'
 			})
-			$(panneau1).transition({
+			$(panneau_1_q3).transition({
 				scale: 1,
 				left: '70.75%'
 			})
-			$(panneau2).transition({
+			$(panneau_2_q3).transition({
 				scale: 1,
 				left: '71.5%'
 			})
-			$(panneau3).transition({
+			$(panneau_3_q3).transition({
 				scale: 1,
 				left: '70%'
 			})
-			$(tracteur).transition({
+			$(tracteur_q3).transition({
 				scale: 1,
 				left: '65%'
 			})
-			$(pale1).transition({
+			$(pale_1_q3).transition({
 				scale: 1,
 				left: '70.8%',
 				top: '30.8%'
 			})
-			$(pale2).transition({
+			$(pale_2_q3).transition({
 				scale: 1,
 				left: '73.02%',
 				top: '30.7%'
 			})
-			$(pale3).transition({
+			$(pale_3_q3).transition({
 				scale: 1,
 				left: '71.87%',
 				top: '33.7%'
@@ -247,8 +210,6 @@ function resetSlide (idQ) {
 			break;
 
 		case "q4":
-			var elements = document.getElementById("elements_q4");
-
 			$(elements_q4).transition({
 				scale: 1,
 				left: '85.5%'
@@ -333,80 +294,64 @@ function answerQuestions(prop_id) {
 	}
 
 	function animFrance() {
-		var france = document.getElementById("france");
-		var paysdelaloire = document.getElementById("pays_de_la_loire");
-
-		$(paysdelaloire).stop(true, true);
+		$(pays_de_la_loire).stop(true, true);
 
 		$(france).transition({
 			left: '20%'
 		})
-		$(paysdelaloire).transition({
+		$(pays_de_la_loire).transition({
 			left: '22.1%'
 		})
 	}
 
 	function animEuro() {
-		var ampoule = document.getElementById("ampoule_q2");
-		var batiment = document.getElementById("batiment_q2");
-		var euro = document.getElementById("euro_q2");
-
-		$(ampoule).transition({
+		$(ampoule_q2).transition({
 			scale: 0.6,
 			left: '40%'
 		})
-		$(batiment).transition({
+		$(batiment_q2).transition({
 			scale: 0.5,
 			left: '42%'
 		})
-		$(euro).transition({
+		$(euro_q2).transition({
 			scale: 0.5,
 			left: '44%'
 		})
 	}
 
 	function animElementsQ3 () {
-		var elements = document.getElementById("elements_q3");
-		var panneau1 = document.getElementById("panneau_1_q3");
-		var panneau2 = document.getElementById("panneau_2_q3");
-		var panneau3 = document.getElementById("panneau_3_q3");
-		var tracteur = document.getElementById("tracteur_q3");
-		var pale1 = document.getElementById("pale_1_q3");
-		var pale2 = document.getElementById("pale_2_q3");
-		var pale3 = document.getElementById("pale_3_q3");
-
 		$(elements_q3).transition({
 			scale: 0.7,
 			left: '55%'
 		})
-		$(panneau1).transition({
+		$(panneau_1_q3).transition({
 			scale: 0.8,
 			left: '65.5%'
 		})
-		$(panneau2).transition({
+		$(panneau_2_q3).transition({
 			scale: 0.8,
 			left: '66.5%'
 		})
-		$(panneau3).transition({
+		$(panneau_3_q3).transition({
 			scale: 0.8,
 			left: '65%'
 		})
-		$(tracteur).transition({
+		$(tracteur_q3).transition({
 			scale: 0.8,
 			left: '61%',
 			top: '54%'
 		})
-		$(pale1).transition({
+		$(pale_1_q3).transition({
 			scale: 0.7,
 			left: '65.31%',
 			top: '35.8%'
 		})
-		$(pale2).transition({
+		$(pale_2_q3).transition({
 			scale: 0.7,
 			left: '66.06%',
 			top: '37.7%'
 		})
-		$(pale3).transition({
+		$(pale_3_q3).transition({
 			scale: 0.7,
 			left: '66.87%',
 			top: '35.7%'
@@ -414,36 +359,27 @@ function answerQuestions(prop_id) {
 	}
 
 	function animElementsQ4 () {
-		var elements = document.getElementById("elements_q4");
-
 		$(elements_q4).transition({
 			scale: 0.8,
 			left: '80.5%'
 		})
 
-		var maison3 = document.getElementById("maison3_q4");
-		var maison1 = document.getElementById("maison1_q4");
-		var maison4 = document.getElementById("maison4_q4");
-		var maison2 = document.getElementById("maison2_q4");
-		var maison5 = document.getElementById("maison5_q4");
-		var maison6 = document.getElementById("maison6_q4");
-
-		$(maison1).transition({
+		$(maison1_q4).transition({
 			opacity: 0
 		}, 500)
-		$(maison2).transition({
+		$(maison2_q4).transition({
 			opacity: 0
 		}, 500)
-		$(maison3).transition({
+		$(maison3_q4).transition({
 			opacity: 0
 		}, 500)
-		$(maison4).transition({
+		$(maison4_q4).transition({
 			opacity: 0
 		}, 500)
-		$(maison5).transition({
+		$(maison5_q4).transition({
 			opacity: 0
 		}, 500)
-		$(maison6).transition({
+		$(maison6_q4).transition({
 			opacity: 0
 		}, 500)
 	}
@@ -563,8 +499,7 @@ function goTo2008 () {
 	var elements = document.getElementsByClassName("elem_14");
 	var num_rand;
 
-	var bouton_2008 = document.getElementById("bouton_2008_data1");
-	$(bouton_2008).stop(true, true);
+	$(bouton_2008_data1).stop(true, true);
 
 	for(var i = 0; i < elements.length; i++)
 	{
@@ -579,8 +514,7 @@ function goTo2008 () {
 			}, 500)
 	}
 
-	var bouton_2014 = document.getElementById("bouton_2014_data1");
-	$(bouton_2014).transition({
+	$(bouton_2014_data1).transition({
 		scale: 0.8,
 		opacity: 0.5
 	})
@@ -590,10 +524,10 @@ function goTo2008 () {
 	})
 
 	for(i = 0; i < 10; i++) {
-		$(bouton_2014).transition({
+		$(bouton_2014_data1).transition({
 			scale: 1.2,
 		})
-		$(bouton_2014).transition({
+		$(bouton_2014_data1).transition({
 			scale: 0.8,
 		}, 800)
 	}
@@ -606,8 +540,7 @@ function goTo2014 () {
 	var elements = document.getElementsByClassName("elem_14");
 	var num_rand;
 
-	var bouton_2014 = document.getElementById("bouton_2014_data1");
-	$(bouton_2014).stop(true, true);
+	$(bouton_2014_data1).stop(true, true);
 
 	for(var i = 0; i < elements.length; i++)
 	{
@@ -631,21 +564,20 @@ function goTo2014 () {
 		}
 	}
 
-	var bouton_2008 = document.getElementById("bouton_2008_data1");
-	$(bouton_2014).transition({
+	$(bouton_2014_data1).transition({
 		scale: 1.3,
 		opacity: 1
 	})
-	$(bouton_2008).transition({
+	$(bouton_2008_data1).transition({
 		scale: 0.8,
 		opacity: 0.5
 	})
 
 	for(i = 0; i < 10; i++) {
-		$(bouton_2008).transition({
+		$(bouton_2008_data1).transition({
 			scale: 1.2,
 		})
-		$(bouton_2008).transition({
+		$(bouton_2008_data1).transition({
 			scale: 0.8,
 		}, 800)
 	}
@@ -655,21 +587,19 @@ function goTo2014 () {
 }
 
 function setPDLSize (grosseur) {
-	var paysdelaloire = document.getElementById("pays_de_la_loire");
-	console.debug("setPDLSize : "+grosseur);
 	switch(grosseur) {
 		case 1:
-			$(paysdelaloire).transition({
+			$(pays_de_la_loire).transition({
 				scale: 1
 			})
 			break;
 		case 2:
-			$(paysdelaloire).transition({
+			$(pays_de_la_loire).transition({
 				scale: 1.3
 			})
 			break;
 		case 3:
-			$(paysdelaloire).transition({
+			$(pays_de_la_loire).transition({
 				scale: 1.6
 			})
 			break;
@@ -679,17 +609,13 @@ function setPDLSize (grosseur) {
 function animQ3 (element) {
 	switch(element) {
 		case 1:
-			var pale1 = document.getElementById("pale_1_q3");
-			var pale2 = document.getElementById("pale_2_q3");
-			var pale3 = document.getElementById("pale_3_q3");
-
-			$(pale1).transition({
+			$(pale_1_q3).transition({
 					rotate: '1480deg',
 					delay: 920 }, 18100, 'linear');
-			$(pale2).transition({
+			$(pale_2_q3).transition({
 					rotate: '1480deg',
 					delay: 710 }, 9800, 'linear');
-			$(pale3).transition({
+			$(pale_3_q3).transition({
 					rotate: '1480deg',
 					delay: 1154 }, 12540, 'linear');
 
@@ -698,31 +624,27 @@ function animQ3 (element) {
 			break;
 
 		case 2:
-			var panneau1 = document.getElementById("panneau_1_q3");
-			var panneau2 = document.getElementById("panneau_2_q3");
-			var panneau3 = document.getElementById("panneau_3_q3");
-
 			for(var i = 0; i < 5; i++) {
-				$(panneau1).transition({
+				$(panneau_1_q3).transition({
 						scale: 1.2,
 						delay: 920
 				});
-				$(panneau2).transition({
+				$(panneau_2_q3).transition({
 						scale: 1.4,
 						delay: 710
 				});
-				$(panneau3).transition({
+				$(panneau_3_q3).transition({
 						scale: 1.1,
 						delay: 1154
 				});
 
-				$(panneau1).transition({
+				$(panneau_1_q3).transition({
 						scale: 1
 				});
-				$(panneau2).transition({
+				$(panneau_2_q3).transition({
 						scale: 1
 				});
-				$(panneau3).transition({
+				$(panneau_3_q3).transition({
 						scale: 1
 				});
 			}
@@ -732,9 +654,7 @@ function animQ3 (element) {
 			break;
 
 		case 3:
-			var tracteur = document.getElementById("tracteur_q3");
-
-			$(tracteur).transition({
+			$(tracteur_q3).transition({
 				left: '61%'
 			}, 10000, 'linear');
 
@@ -745,50 +665,40 @@ function animQ3 (element) {
 }
 
 function stopAnimPaleQ3 () {
-	var pale1 = document.getElementById("pale_1_q3");
-	var pale2 = document.getElementById("pale_2_q3");
-	var pale3 = document.getElementById("pale_3_q3");
+	$(pale_1_q3).stop(true, true);
+	$(pale_2_q3).stop(true, true);
+	$(pale_3_q3).stop(true, true);
 
-	$(pale1).stop(true, true);
-	$(pale2).stop(true, true);
-	$(pale3).stop(true, true);
-
-	$(pale1).transition({
+	$(pale_1_q3).transition({
 		rotate: '0deg'
 	});
-	$(pale2).transition({
+	$(pale_2_q3).transition({
 		rotate: '0deg'
 	});
-	$(pale3).transition({
+	$(pale_3_q3).transition({
 		rotate: '0deg'
 	});
 }
 
 function stopAnimTracteurQ3 () {
-	var tracteur = document.getElementById("tracteur_q3");
-
-	$(tracteur).stop(true, true);
-	$(tracteur).transition({
+	$(tracteur_q3).stop(true, true);
+	$(tracteur_q3).transition({
 		left: '65%'
 	});
 }
 
 function stopAnimPanneauQ3 () {
-	var panneau1 = document.getElementById("panneau_1_q3");
-	var panneau2 = document.getElementById("panneau_2_q3");
-	var panneau3 = document.getElementById("panneau_3_q3");
+	$(panneau_1_q3).stop(true, true);
+	$(panneau_2_q3).stop(true, true);
+	$(panneau_3_q3).stop(true, true);
 
-	$(panneau1).stop(true, true);
-	$(panneau2).stop(true, true);
-	$(panneau3).stop(true, true);
-
-	$(panneau1).transition({
+	$(panneau_1_q3).transition({
 		scale: 1
 	});
-	$(panneau2).transition({
+	$(panneau_2_q3).transition({
 		scale: 1
 	});
-	$(panneau3).transition({
+	$(panneau_3_q3).transition({
 		scale: 1
 	});
 }
@@ -796,88 +706,66 @@ function stopAnimPanneauQ3 () {
 function displayHouses (nombre) {
 	switch(nombre) {
 		case 1:
-			var maison3 = document.getElementById("maison3_q4");
-
-			$(maison3).transition({
+			$(maison3_q4).transition({
 				opacity: 1
 			}, 500)
 
-			var maison1 = document.getElementById("maison1_q4");
-			var maison4 = document.getElementById("maison4_q4");
-			var maison2 = document.getElementById("maison2_q4");
-			var maison5 = document.getElementById("maison5_q4");
-			var maison6 = document.getElementById("maison6_q4");
-
-			var perso1 = document.getElementById("perso1_q4");
-			var perso2 = document.getElementById("perso2_q4");
-			var perso3 = document.getElementById("perso3_q4");
-
-			$(maison1).transition({
+			$(maison1_q4).transition({
 				opacity: 0
 			}, 500)
-			$(maison4).transition({
+			$(maison4_q4).transition({
 				opacity: 0
 			}, 500)
-			$(maison2).transition({
+			$(maison2_q4).transition({
 				opacity: 0
 			}, 500)
-			$(maison5).transition({
+			$(maison5_q4).transition({
 				opacity: 0
 			}, 500)
-			$(maison6).transition({
+			$(maison6_q4).transition({
 				opacity: 0
 			}, 500)
-			$(perso1).transition({
+			$(perso1_q4).transition({
 				opacity: 0
 			}, 500)
-			$(perso2).transition({
+			$(perso2_q4).transition({
 				opacity: 0
 			}, 500)
-			$(perso3).transition({
+			$(perso3_q4).transition({
 				opacity: 0
 			}, 500)
 			break;
 
 		case 2:
 			displayHouses(1);
-			var maison1 = document.getElementById("maison1_q4");
-			var maison4 = document.getElementById("maison4_q4");
 
-			var perso1 = document.getElementById("perso1_q4");
-
-			$(maison1).transition({
+			$(maison1_q4).transition({
 				opacity: 1
 			}, 500)
-			$(maison4).transition({
+			$(maison4_q4).transition({
 				opacity: 1
 			}, 500)
-			$(perso1).transition({
+			$(perso1_q4).transition({
 				opacity: 1
 			}, 500)
 			break;
 
 		case 3:
 			displayHouses(2);
-			var maison2 = document.getElementById("maison2_q4");
-			var maison5 = document.getElementById("maison5_q4");
-			var maison6 = document.getElementById("maison6_q4");
 
-			var perso2 = document.getElementById("perso2_q4");
-			var perso3 = document.getElementById("perso3_q4");
-
-			$(maison2).transition({
+			$(maison2_q4).transition({
 				opacity: 1
 			}, 500)
-			$(maison5).transition({
+			$(maison5_q4).transition({
 				opacity: 1
 			}, 500)
-			$(maison6).transition({
+			$(maison6_q4).transition({
 				opacity: 1
 			}, 500)
-			$(perso2).transition({
+			$(perso2_q4).transition({
 				opacity: 1
 			}, 500)
-			$(perso3).transition({
+			$(perso3_q4).transition({
 				opacity: 1
 			}, 500)
 			break;
