@@ -25,7 +25,6 @@ body {
 }
 
 
-
 #map {
     background-color: #8DD8F8;
 }
@@ -272,35 +271,6 @@ input[type="checkbox"] {
 
 }
 
-/* ---------population chart------------- */
-#pop_chart {
-    padding: 6px 8px;
-    font: 14px/16px Arial, Helvetica, sans-serif;
-    background: white;
-    background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    border-radius: 5px;
-}
-
-.bar text {
-    fill: white;
-    font: 10px sans-serif;
-    text-anchor: end;
-}
-
-.axis text {
-  font: 10px sans-serif;
-}
-
-.axis path {
-    display: none;
-}
-.axis line {
-  fill: none;
-  stroke: #d6e9c6;
-  /*shape-rendering: crispEdges;*/
-}
-
 /* ------------ Rope chart ------------- */
 
 #rope {
@@ -418,12 +388,13 @@ input[type="checkbox"] {
     text-transform: uppercase;
     text-align: center;
     font-size: 80;
+    /*font-family: title;*/
 }
 
 #page3 p{
     text-align: justify;
     padding: 0px 10%;
-    /*margin-bottom: 5%; */
+    /*font-family: text;*/
 }
 
 #cadre {

@@ -1,70 +1,37 @@
 function defaultSetting() {
     return {
-        radius: 250,
+        radius: .1 * window.screen.width,
+        radiusMin: .01 * window.screen.width,
+        radiusMedium: .06 * window.screen.width,
         width: "40%",
         height: "100%",
+        widthG: "80%",
+        heightG: "100%",
         backgroundColor: "#00BFFF",
         textColor: "#8A2908",
         circleColor: "#81DAF5",
         fontSize: "120px",
         valueCount: true,
         countTime: 1000,
-        xPosition: 150,     //le x position de svg de population percentage
-        yPosition: 75        //le y position de svg de population percentage
+        xPosition: .1 * window.screen.width,     //le x position de svg de population percentage
+        yPosition: .1 * window.screen.height        //le y position de svg de population percentage
 
     };
 }
 
-function defaultSettingText() {
-    return {
-        width: "100%",
-        height: "50%",
-        widthText: 100,
-        heightText: 50,
-        widthContenu: 200,
-        heightContenu: 400,
-        fontSizeTitle: "30px",
-        fontSizeContenu: "20px",
-        fontColor: "#FFFFFF"
-
-    }
-}
-
-function drawDescription(config, data) {
-    var g = d3.select("#contenu").append("g")
-        .attr("width", config.widthContenu)
-        .attr("height", config.heightContenu);
-
-    var text1 = g.append("svg:text")
-        .attr("width", config.widthText)
-        .attr("height", config.heightText)
-        .attr("transform", "translate(50, 50)")
-        .attr("font-size", config.fontSizeTitle)
-        .style("color", config.fontColor)
-        .text(data[0]);
-
-    var text2 = g.append("svg:text")
-        .attr("width", config.widthText)
-        .attr("height", config.heightText)
-        .attr("transform", "translate(50, 100)")
-        .attr("font-size", config.fontSizeContenu)
-        .style("color", config.fontColor)
-        .text(data[1]);
-
+function getMaxPercentage(data) {
 
 }
 
 function draw(config, data) {
 
-    // console.log(data);
-
     var r = d3.scale.linear()
-        .range([0, config.radius])
-        .domain([0, 1]);
+        .range([config.radiusMin, config.radiusMedium, config.radius])
+        .domain([0, 0.2, 0.9]);
 
     var cx = d3.scale.linear()
-        .range([0, config.radius])
-        .domain([0, 1]);
+        .range([config.radiusMin, config.radiusMedium, config.radius])
+        .domain([0, 0.2, 0.9]);
 
     function cxPosition(d, i) {
         if(i == 0) 
@@ -74,14 +41,13 @@ function draw(config, data) {
             for(var n = 1; n <= i; n++) {
                 x += .7 * Math.pow(-1, n-1)* (r(data[n-1].value) + r(data[n].value));
             }
-            // console.log("x=" + x);
             return x;
         }
     }   
 
     var cy = d3.scale.linear()
-        .range([0, config.radius])
-        .domain([0, 1]);
+        .range([config.radiusMin, config.radiusMedium, config.radius])
+        .domain([0, 0.2, 0.9]);
 
     function cyPosition(d, i) {
         if(i == 0) 
@@ -91,7 +57,6 @@ function draw(config, data) {
             for(var n = 1; n <= i; n++) {
                 y += .7 * (r(data[n-1].value) + r(data[n].value));
             }
-            // console.log("y=" + y);
             return y;
         }
         return cy(d.value);
@@ -107,23 +72,21 @@ function draw(config, data) {
         return circle.getAttribute("r");        
     }
 
-    var c = d3.scale.linear()
-        .range([0, .41*config.radius])
-        .domain([0, 1]);
-
-    var d = d3.scale.linear()
-        .range([0, 1.41*config.radius])
-        .domain([0, 1]);
-
     var xText = d3.scale.linear()
-        .range([0, .3*config.radius])
-        .domain([0, 1]);
+        .range([.3*config.radiusMin, .3*config.radiusMedium, .3*config.radius])
+        .domain([0, 0.2, 0.9]);
+        // .range([0, .3*config.radius])
+        // .domain([0, 1]);
 
     var yText = d3.scale.linear()
-        .range([0, 1.3*config.radius])
-        .domain([0, 1]);
+        .range([1.3*config.radiusMin, 1.3*config.radiusMedium, 1.3*config.radius])
+        .domain([0, 0.2, 0.9]);
+        // .range([0, 1.3*config.radius])
+        // .domain([0, 1]);
 
     var fontSize = d3.scale.linear()
+        // .range([.1*config.fontSize, .6*config.fontSize, config.fontSize])
+        // .domain([0, 0.2, 0.9]);
         .range([0, config.fontSize])
         .domain([0, 1]);
 
@@ -137,10 +100,11 @@ function draw(config, data) {
 
     var g = svg.append("g")
         .attr("id", "groupGraph")
-        .attr("width", 200)
-        .attr("height", 500)
+        .attr("width", config.widthG)
+        .attr("height", config.heightG)
         .style("background-color", config.backgroundColor)
         .attr("transform", "translate(" + config.xPosition + "," + config.yPosition +")");
+
 
     var circle = g.selectAll(".circleBackground")
         .data(data)
@@ -206,8 +170,8 @@ function draw(config, data) {
         .attr("font-size", function(d, i) {
             return fontSize(d.value);
         })
+        .attr("text-align", "center")
         .text(function(d, i) {
-            // console.log("value=" + Math.ceil(d.value));
             return Math.round(d.value * 100) + "%";
         })
         .attr("fill", config.textColor);
@@ -229,52 +193,6 @@ function draw(config, data) {
 
 
 (function() {
-    "use strict";
-
-    // Utility variable storing the max & min value of each indicator and IMD as well
-    var LSOA_Limits = (function() {
-        var result = {};
-        result["IMD"] = {
-            min: 100,
-            max: 0
-        };
-        for (var indicator in INDICATORS) {
-            result[indicator] = {
-                min: 100,
-                max: 0
-            };
-        }
-        for (var lsoa11cd in window.data) {
-            for (var indicator in INDICATORS) {
-                if (result[indicator].max < window.data[lsoa11cd][indicator]["raw"]) {
-                    result[indicator].max = window.data[lsoa11cd][indicator]["raw"];
-                }
-                if (result[indicator].min > window.data[lsoa11cd][indicator]["raw"]) {
-                    result[indicator].min = window.data[lsoa11cd][indicator]["raw"];
-                }
-            }
-            if (result["IMD"].max < window.data[lsoa11cd]["IMD"]["raw"]) {
-                result["IMD"].max = window.data[lsoa11cd]["IMD"]["raw"];
-            }
-            if (result["IMD"].min > window.data[lsoa11cd]["IMD"]["raw"]) {
-                result["IMD"].min = window.data[lsoa11cd]["IMD"]["raw"];
-            }
-        }
-        return result;
-    }());
-
-    function meanLSOAs(indicator, LSOAs, type) {
-        var count = 0;
-        var result = LSOAs
-            .map(function(lsoa11cd) {
-                count += 1;
-                return window.data[lsoa11cd][indicator][type];
-            }).reduce(function(a, b) {
-                return a + b;
-            }) / count;
-        return result;
-    }
-
 
     // Utility variable for storing MSOA's properties
     var MSOA = {};
@@ -298,24 +216,6 @@ function draw(config, data) {
         }
         for (var MSOA11CD in MSOA) {
             MSOA[MSOA11CD]["PCD7s"].sort();
-        }
-    }());
-    // Store indicators of MSOA
-    (function() {
-        for (var MSOA11CD in MSOA) {
-            var count = 0;
-            MSOA[MSOA11CD]["IMD"] = MSOA[MSOA11CD]["LSOAs"]
-                .map(function(lsoa11cd) {
-                    count += 1;
-                    return window.data[lsoa11cd]["IMD"]["raw"];
-                }).reduce(function(a, b) {
-                    return a + b;
-                }) / count;
-            for (var indicator in INDICATORS) {
-                MSOA[MSOA11CD][indicator] = {};
-                MSOA[MSOA11CD][indicator]["raw"] = meanLSOAs(indicator, MSOA[MSOA11CD]["LSOAs"], "raw");
-                MSOA[MSOA11CD][indicator]["decile"] = meanLSOAs(indicator, MSOA[MSOA11CD]["LSOAs"], "decile");
-            }
         }
     }());
 
@@ -354,82 +254,6 @@ function draw(config, data) {
         
     }());
 
-
-
-    // Convert HSV to RGB
-    function HSVtoRGB(h, s, v) {
-        var r, g, b, i, f, p, q, t;
-        if (arguments.length === 1) {
-            s = h.s, v = h.v, h = h.h;
-        }
-        i = Math.floor(h * 6);
-        f = h * 6 - i;
-        p = v * (1 - s);
-        q = v * (1 - f * s);
-        t = v * (1 - (1 - f) * s);
-        switch (i % 6) {
-            case 0:
-                r = v, g = t, b = p;
-                break;
-            case 1:
-                r = q, g = v, b = p;
-                break;
-            case 2:
-                r = p, g = v, b = t;
-                break;
-            case 3:
-                r = p, g = q, b = v;
-                break;
-            case 4:
-                r = t, g = p, b = v;
-                break;
-            case 5:
-                r = v, g = p, b = q;
-                break;
-        }
-        return {
-            r: Math.round(r * 255),
-            g: Math.round(g * 255),
-            b: Math.round(b * 255)
-        };
-    }
-    // Convert RGB to HEX
-    function RGBtoHEX(r, g, b) {
-        return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-    }
-
-    function getColor(score) {
-        //score = (score - 4) / 67 * 0xfffff;
-        //return "#" + ("0" + Math.trunc(score)).slice(-6);
-        score = (1- ((score - LSOA_Limits["IMD"].min) / (LSOA_Limits["IMD"].max - LSOA_Limits["IMD"].min))) / 3.0;
-        var rgb = HSVtoRGB(score, 1, 1);
-        return RGBtoHEX(rgb.r, rgb.g, rgb.b);
-    }
-
-    window.calculateIMD = function(lsoa11cd) {
-        var sum = 1;
-        return Object.keys(INDICATORS).map(function(id) {
-            var val = Number.parseFloat(document.getElementById(id).value);
-            sum += val;
-            return window.data[lsoa11cd][id]["exp"] * val;
-        }).map(function(val) {
-            return val / sum;
-        }).reduce(function(a, b) {
-            return a + b;
-        });
-    };
-
-    window.calculateMsoaIMD = function(msoa11cd) {
-        var LSOAs = MSOA[msoa11cd]["LSOAs"];
-        return LSOAs
-            .map(calculateIMD)
-            .reduce(function(a, b) {
-                return a + b;
-            }) / LSOAs.length;
-    };
-
-
-
     var lsoaInitializedStyleCount = 0;
     var msoaInitializedStyleCount = 0;
     var lsoaLayersNum = window.topo_lsoa.objects["E07000123"]["geometries"].length;
@@ -437,7 +261,6 @@ function draw(config, data) {
 
     function LsoaStyle(feature) {
             return {
-                // fillColor: getColor(d["IMD"]["raw"]),
                 fillColor: "#088A08",
                 weight: 2,
                 opacity: 0.5,
@@ -521,23 +344,16 @@ function draw(config, data) {
         if (contenu != undefined) {
             contenu.remove();
         };
-        // console.log(ages);
         draw(defaultSetting(), ages);
 
     }
 
     function LsoaResetHighlight(e) {
         topoLsoaLayer.resetStyle(e.target);
-        var page3 = document.getElementById("page3");
-        var contenu = document.getElementById("contenu");
-        page3.removeChild(contenu);
     }
 
     function MsoaResetHighlight(e) {
         topoMsoaLayer.resetStyle(e.target);
-        var page3 = document.getElementById("page3");
-        var contenu = document.getElementById("contenu");
-        page3.removeChild(contenu);
     }
 
     function updatePopup(e) {
@@ -545,7 +361,6 @@ function draw(config, data) {
     }
 
     function OnLsoaClick(e) {
-        // console.log(window.data[e.target.feature.properties.LSOA11CD]);
         map.fitBounds(e.target.getBounds());
     }
 
@@ -622,12 +437,6 @@ function draw(config, data) {
     var data = [{"name":"0-15", "value":0.1}, {"name":"16-25", "value":0.1}, {"name":"26-35", "value":0.16}, 
     {"name":"36-55", "value":0.26}, {"name":"56-90", "value":0.09}];
 
-    // console.log(window.data);
-
-    var description = ["THE AGE OF PRESTON", "description..................."];
-
     draw(defaultSetting(), data);
-
-    // drawDescription(defaultSettingText(), description);
 
 }());
