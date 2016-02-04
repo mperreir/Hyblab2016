@@ -497,18 +497,13 @@ function answerQuestions(prop_id) {
 }
 
 function hidePerso () {
-
-			var perso1 = document.getElementById("perso1_q4");
-			var perso2 = document.getElementById("perso2_q4");
-			var perso3 = document.getElementById("perso3_q4");
-
-			$(perso1).transition({
+			$(perso1_q4).transition({
 				opacity: 0
 			}, 500)
-			$(perso2).transition({
+			$(perso2_q4).transition({
 				opacity: 0
 			}, 500)
-			$(perso3).transition({
+			$(perso3_q4).transition({
 				opacity: 0
 			}, 500)
 }
