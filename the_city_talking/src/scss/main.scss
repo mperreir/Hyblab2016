@@ -147,12 +147,16 @@
 	@extend .text;
 	text-align:justify;
 	text-align-last: center;
-	font-weight:600;
+	font-weight:500;
 }
 .titles{
 	@extend .text;
 	line-height: 1;
 	display:inline-block;
+	font-weight:300;
+}
+
+#bold{
 	font-weight:900;
 }
 
@@ -160,15 +164,15 @@
     border:0 none;
     margin:0;
     padding:0;
-	width:1100px;
-	height:7000px;
+	width:100%;
+	height:100%;
 }
 #body{
     border:0 none;
     margin:0;
     padding:0;
 	width:100%;
-	height:7000px;
+	height:100%;
 }
 #div{
     border:0 none;
@@ -185,7 +189,7 @@
 	@extend .div;
 	width:100%;
 	background-color:rgb(61,16,224);
-	height:200px;
+	height:7%;
 }
 #blue_img{
 	margin-left:45%;
@@ -196,7 +200,7 @@
 #blue_text{
 	@extend .text;
 	margin-left:45%;
-	margin-top:1.35px;
+	margin-top:0.5%;
 	width:10%;
 	color:white;
 }
@@ -205,14 +209,14 @@
 	height:535.4px;
 }
 #text01{
-	margin-top:20px;
+	margin-top:2%;
 	margin-left:48%;
 	margin-right:48%;
-	width:30px;
+	width:2.5%;
 }
 #blue_bracket{
 	vertical-align:top;
-	margin-top: 40px;
+	margin-top: 3%;
 	margin-left:33%;
 	margin-right:5%;
 	display:inline-block;
@@ -221,12 +225,12 @@
 	@extend .titles;
 	color:rgb(61,16,224);
 	width:18%;
-	margin-bottom:32px;
+	margin-bottom:3%;
 	
 }
 #blue_bracket2{
 	vertical-align:top;
-	margin-top: 40px;
+	margin-top: 3%;
 	margin-left:5%;
 	display:inline-block;
 }
@@ -238,22 +242,22 @@
 	margin-left:30%;
 }
 #arrow{
-	margin-top:40px;
-	margin-bottom:40px;
+	margin-top:3%;
+	margin-bottom:3%;
 	margin-left:47%;
 }
 #div3{
 	@extend .div;
 }
 #text02{
-	margin-top:10px;
+	margin-top:2%;
 	margin-left:48%;
 	margin-right:48%;
-	width:30px;
+	width:2.5%;
 }
 #div3_bracket{
 	vertical-align:top;
-	margin-top: 40px;
+	margin-top: 3%;
 	margin-left:30.5%;
 	margin-right:5%;
 	display:inline-block;
@@ -262,30 +266,29 @@
 	@extend .titles;
 	color:rgb(61,16,224);
 	width:23%;
-	margin-bottom:30px;
+	margin-bottom:1%;
 }
 #div3_bracket2{
 	vertical-align:top;
-	margin-top: 40px;
+	margin-top: 3%;
 	margin-left:5%;
 	display:inline-block;
 }
 #div_dv1{
 	@extend .div;
-	margin-top: 10px;
+	margin-top: 0.5%;
 	margin-left:14%;
 	width : 70%;
-	height:500px;
 }
 #dv1{
-
 }
 #subdiv3A{
 	@extend .div;
 	vertical-align:top;
 	display:inline-block;
+	margin-top: 2%;
 	margin-left:15%;
-	width:30%;
+	width:25%;
 }
 #text2_title{
 	@extend .text;
@@ -299,13 +302,13 @@
 	font-weight:300;
 	width:80%;
 	margin-left:10%;
-	margin-top:1px;
+	margin-top:0.2%;
 }
 #subdiv3B{
 	@extend .div;
 	vertical-align:top;
 	display:inline-block;
-	width:40%;
+	width:50%;
 }
 #text3_title{
 	@extend .text;
@@ -319,21 +322,20 @@
 	color:rgb(61,16,224);
 	width:80%;
 	margin-left:10%;
-	margin-top:1px;
+	margin-top:0.2%;
 }
 #div4{
 	@extend .div;
-	height:700px;
 }
 #text03{
-	margin-top:20px;
+	margin-top:2%;
 	margin-left:48%;
 	margin-right:48%;
-	width:30px;
+	width:2.5%;
 }
 #div4_bracket{
 	vertical-align:top;
-	margin-top: 40px;
+	margin-top: 3%;
 	margin-left:31%;
 	margin-right:5%;
 	display:inline-block;
@@ -342,22 +344,25 @@
 	@extend .titles;
 	color:rgb(61,16,224);
 	width:22%;
-	margin-bottom:30px;
+	margin-bottom:6%;
 }
 #div4_bracket2{
 	vertical-align:top;
-	margin-top: 40px;
+	margin-top: 3%;
 	margin-left:5%;
 	display:inline-block;
 }
 #div_dv2{
 	display:inline-block;
 	width:42%;
-	margin-left:5%;
+	margin-left:7%;
+	margin-bottom:6%;
+}
+#dv_2{
 }
 #div_text4-5{
 	vertical-align:top;
-	margin-top:2%;
+	margin-top:1%;
 	display:inline-block;
 	width:49%;
 }
@@ -368,7 +373,7 @@
 	text-align:center;
 	width:50%;
 	margin-left:25%;
-	margin-top:5%;
+	margin-top:2%;
 }
 #text5{
 	@extend .paragraph;
@@ -376,23 +381,22 @@
 	color:rgb(61,16,224);
 	width:70%;
 	margin-left:15%;
-	margin-top:1px;
+	margin-top:0.3%;
 }
 #div5{
 	@extend .div;
-	height:800px;
 	width:100%;
 	background-color:rgb(61,16,224);
 }
 #text04{
-	margin-top:10px;
+	margin-top:1%;
 	margin-left:48%;
 	margin-right:48%;
-	width:30px;
+	width:2.5%;
 }
 #div5_bracket{
 	vertical-align:top;
-	margin-top: 50px;
+	margin-top: 4%;
 	margin-left:25%;
 	margin-right:5%;
 	display:inline-block;
@@ -402,18 +406,17 @@
 	color:rgb(61,16,224);
 	width:35%;
 	color:white;
-	margin-bottom:30px;
+	margin-bottom:2%;
 }
 #div5_bracket2{
 	vertical-align:top;
-	margin-top: 50px;
+	margin-top: 4%;
 	margin-left:5%;
 	display:inline-block;
 }
 #studyA{
 	display:inline-block;
 	width:45%;
-	height:300px;
 	vertical-align:top;
 	margin-left:8%;
 }
@@ -443,7 +446,7 @@
 	color:white;
 	width:50%;
 	margin-left:25%;
-	margin-top:-25px;
+	margin-top:-2%;
 }
 #studyA4{
 	@extend .text;
@@ -463,7 +466,7 @@
 	color:white;
 	width:50%;
 	margin-left:25%;
-	margin-top:-25px;
+	margin-top:-2%;
 }
 #studyA6{
 	@extend .text;
@@ -473,44 +476,42 @@
 	text-align:center;
 	color:white;
 	width:50%;
-	margin-left:25%;
+	margin-left:40%;
 }
 #studyB{
 	display:inline-block;
 	width:45%;
-	height:300px;
 	vertical-align:top;
 	margin-left:-7%;
 	
 }
 #studyC{
 	display:inline-block;
-	margin-top:30px;
+	margin-top:2%;
 	width:45%;
-	height:300px;
 	vertical-align:top;
 	margin-left:8%;
 }
 #studyD{
 	display:inline-block;
-	margin-top:30px;
+	margin-top:2%;
 	width:45%;
-	height:300px;
 	vertical-align:top;
 	margin-left:-7%;
+	margin-bottom:5%;
 }
 #div6{
 	@extend .div;
 }
 #text05{
-	margin-top:10px;
+	margin-top:2%;
 	margin-left:48%;
 	margin-right:48%;
-	width:30px;
+	width:2.5%;
 }
 #div6_bracket{
 	vertical-align:top;
-	margin-top: 65px;
+	margin-top: 5%;
 	margin-left:31%;
 	margin-right:5%;
 	display:inline-block;
@@ -519,18 +520,18 @@
 	@extend .titles;
 	color:rgb(61,16,224);
 	width:22%;
-	margin-bottom:30px;
+	margin-bottom:3%;
 }
 #div6_bracket2{
 	vertical-align:top;
-	margin-top: 65px;
+	margin-top: 5%;
 	margin-left:5%;
 	display:inline-block;
 }
 #div_dv3{
 	@extend .div;
-	margin-left:150px;
-	height:350px;
+	margin-left:12%;
+	margin-bottom:2.5%;
 }
 #dv3{
 
@@ -542,7 +543,7 @@
 }
 #text12{
 	@extend .paragraph;
-	line-height:1;
+	line-height:1.08;
 	color:rgb(61,16,224);
 	width:60%;
 	margin-left:30%;
@@ -554,7 +555,7 @@
 }
 #text13{
 	@extend .paragraph;
-	line-height:1;
+	line-height:1.08;
 	color:rgb(61,16,224);
 	width:60%;
 	margin-left:10%;
@@ -563,14 +564,14 @@
 	@extend .div;
 }
 #text06{
-	margin-top:10px;
+	margin-top:1%;
 	margin-left:48%;
 	margin-right:48%;
-	width:35px;
+	width:3%;
 }
 #div7_bracket{
 	vertical-align:top;
-	margin-top: 40px;
+	margin-top: 3%;
 	margin-left:33%;
 	margin-right:5%;
 	display:inline-block;
@@ -579,113 +580,115 @@
 	@extend .titles;
 	color:rgb(61,16,224);
 	width:18%;
-	margin-bottom:80px;
 }
 #div7_bracket2{
 	vertical-align:top;
-	margin-top: 40px;
+	margin-top: 3%;
 	margin-left:5%;
 	display:inline-block;
 }
 @keyframes bulles_anim{
 	0% {
-		margin-bottom:-150px;
-		margin-left:0px;
+		margin-bottom:-11%;
+		margin-left:0%;
 		opacity:1.0;
 	}
 	25%{
-		margin-bottom:-112.5px;
-		margin-left:20px;
+		margin-bottom:-8%;
+		margin-left:2%;
 		opacity:1.0;
 	}
 	50%{
-		margin-bottom:-75px;
-		margin-left:40px;
+		margin-bottom:-6%;
+		margin-left:4%;
 		opacity:1.0;
 	}
 	75%{
-		margin-bottom:-37.5px;
-		margin-left:60px;
+		margin-bottom:-5%;
+		margin-left:6%;
 		opacity:1.0;
 	}
 	100% {
-		margin-bottom:0px;
-		margin-left:80px;
+		margin-bottom:-4%;
+		margin-left:8%;
 		opacity:0;
 	}
 }
 @keyframes bulles_anim2{
 	0% {
-		margin-bottom:-250px;
-		margin-left:0px;
+		margin-bottom:-34%;
+		margin-left:0%;
 		opacity:1.0;
 	}
 	25%{
-		margin-bottom:-190px;
-		margin-left:20px;
+		margin-bottom:-28%;
+		margin-left:2%;
 		opacity:1.0;
 	}
 	50%{
-		margin-bottom:-125px;
-		margin-left:40px;
+		margin-bottom:-22%;
+		margin-left:4%;
 		opacity:1.0;
 	}
 	75%{
-		margin-bottom:-67.5px;
-		margin-left:60px;
+		margin-bottom:-18%;
+		margin-left:6%;
 		opacity:1.0;
 	}
 	100% {
-		margin-bottom:0px;
-		margin-left:80px;
+		margin-bottom:-15%;
+		margin-left:8%;
 		opacity:0;
 	}
 }
 @keyframes bulles_anim3{
 	0% {
-		margin-bottom:-150px;
-		margin-left:0px;
+		margin-bottom:-38%;
+		margin-left:0%;
 		opacity:1.0;
 	}
 	25%{
-		margin-bottom:-112.5px;
-		margin-left:10px;
+		margin-bottom:-32%;
+		margin-left:4%;
 		opacity:1.0;
 	}
 	50%{
-		margin-bottom:-75px;
-		margin-left:20px;
+		margin-bottom:-27%;
+		margin-left:8%;
 		opacity:1.0;
 	}
 	75%{
-		margin-bottom:-37.5px;
-		margin-left:30px;
+		margin-bottom:-23%;
+		margin-left:12%;
 		opacity:1.0;
 	}
 	100% {
-		margin-bottom:0px;
-		margin-left:40px;
+		margin-bottom:-20%;
+		margin-left:16%;
 		opacity:0;
 	}
 }
 #div8{
 	@extend .div;
-	height:420px;
+	height:20%;
 }
 #bulles1{
-	height:60px;
+	height:6%;
+	margin-top:5%;
 	margin-left:20%;
-	margin-bottom:-40px;
+	margin-bottom:-4%;
 }
 #bulles2{
-	height:60px;
+	height:6%;
+	margin-top:5%;
 	margin-left:52%;
-	margin-bottom:-130px;
+	margin-bottom:-13%;
 }
 #bulles3{
-	height:60px;
-	margin-left:83%;
-	margin-bottom:-50px;
+	height:6%;
+	margin-top:5%;
+	margin-left:86%;
+	margin-bottom:-5%;
 }
 .bulle{
 	animation-name: bulles_anim;
@@ -712,7 +715,7 @@
 }
 #bulle_301{
 	@extend .bulle;
-	margin-left:-10px;
+	margin-left:-1%;
 	height:30px;
     animation-duration: 4s;
     animation-delay: 0.1s;
@@ -735,39 +738,6 @@
 	animation-timing-function:ease-in;
 	z-index: 101;
 }
-#bulle_4013{
-	@extend .bulle3;
-	height:40px;
-    animation-duration: 4s;
-	animation-delay: 0.1s;
-	animation-timing-function:ease-out;
-	z-index: 101;
-}
-#bulle_3013{
-	@extend .bulle3;
-	margin-left:-10px;
-	height:30px;
-    animation-duration: 4s;
-    animation-delay: 0.1s;
-	animation-timing-function:ease-out;
-	z-index: 101;
-}
-#bulle_2013{
-	@extend .bulle3;
-	height:20px;
-    animation-duration: 4s;
-	animation-delay: 0.1s;
-	animation-timing-function:linear;
-	z-index: 101;
-}
-#bulle_1013{
-	@extend .bulle3;
-	height:10px;
-    animation-duration: 4s;
-    animation-delay: 0.1s;
-	animation-timing-function:ease-in;
-	z-index: 101;
-}
 #bulle_402{
 	@extend .bulle2;
 	height:40px;
@@ -778,7 +748,7 @@
 }
 #bulle_302{
 	@extend .bulle2;
-	margin-left:-10px;
+	margin-left:-1%;
 	height:30px;
     animation-duration: 4s;
     animation-delay: 0.1s;
@@ -811,7 +781,7 @@
 }
 #bulle_303{
 	@extend .bulle3;
-	margin-left:-10px;
+	margin-left:-1%;
 	height:30px;
     animation-duration: 4s;
     animation-delay: 0.1s;
@@ -835,63 +805,49 @@
 	z-index: 101;
 }
 #div_big_img{
+	margin-top:7%;
 	width:100%;
 }
-#big_img_bg{
-	margin-left:1%;
-	margin-top:-450px;
-	width:98%;
-	height:auto;
-	z-index:102;
-}
 #big_img{
+	margin-top:10%;
 	margin-left:1%;
-	margin-top:-910px;
 	width:98%;
 	height:auto;
 	z-index:100;
 }
-#pic{
-	display:inline-block;
-	vertical-align:top;
-	margin-top:-70px;
-	margin-left:13%;
-	margin-right:13%;
-}
+
 #div9{
 	@extend .div;
-	height:220px;
 }
 #subdiv8{
 	width:32%;
 	display:inline-block;
 	vertical-align:top;
-	margin-top:85px;
+	margin-top:1%;
 }
 #subdiv8B{
 	width:60%;
 	height:30%;
 	margin-left:20%;
-	margin-top:35px;
 }
 #text14_title{
 	@extend .titles;
 	margin-left:33%;
 	color:rgb(61,16,224);
-	margin-bottom:50px;
+	margin-bottom:20%;
 }
 #text14{
 	@extend .paragraph;
-	line-height:1;
+	line-height:1.08;
 	color:rgb(61,16,224);
-	width:80%;
-	margin-left:10%;
-	margin-top:-15px;
+	width:70%;
+	margin-left:15%;
+	margin-top:-2%;
 }
 #text14B{
 	@extend .paragraph;
-	line-height:1;
-	margin-top:-25px;
+	line-height:1.08;
+	margin-top:-7%;
 	color:rgb(61,16,224);
 	width:80%;
 	margin-left:10%;
@@ -901,70 +857,63 @@
 	width:32%;
 	display:inline-block;
 	vertical-align:top;
-	margin-top:85px;
+	margin-top:1%;
 }
 #subdiv9B{
 	width:60%;
 	height:30%;
 	margin-left:20%;
-	margin-top:35px;
 }
 #text15_title{
 	@extend .titles;
 	margin-left:26.5%;
 	color:rgb(61,16,224);
-	margin-bottom:50px;
+	margin-bottom:20%;
 }
 #text15{
 	@extend .paragraph;
-	line-height:1;
+	line-height:1.08;
 	color:rgb(61,16,224);
 	width:80%;
 	margin-left:9%;
-	margin-top:-15px;
-}
-#div10{
-	@extend .div;
-	height:420px;
-	background-color:rgb(255,177,138);
+	margin-top:-2%;
 }
 #subdiv10{
 	width:32%;
 	display:inline-block;
-	margin-top:10%;
 	vertical-align:top;
-	margin-top:85px;
+	margin-top:1%;
 }
 #subdiv10B{
 	width:60%;
 	height:30%;
 	margin-left:20%;
-	margin-top:35px;
+	margin-top:1%;
 }
 #text16_title{
 	@extend .titles;
 	margin-left:23%;
 	color:rgb(61,16,224);
-	margin-bottom:50px;
+	margin-bottom:20%;
 }
 #text16{
 	@extend .paragraph;
-	line-height:1;
+	line-height:1.08;
 	color:rgb(61,16,224);
 	width:80%;
 	margin-left:10%;
-	margin-top:-15px;
+	margin-top:-2%;
 }
 #div11{
 	@extend .div;
 	width:100%;
-	margin-top:190px;
+	margin-top:2%;
 }
 #text07{
-	margin-top:20px;
-	margin-left:97.75%;
-	margin-right:550px;
-	width:30px;
+	margin-top:2%;
+	margin-left:97.45%;
+	margin-right:44%;
+	width:5%;
 }
 #subdiv11{
 	width:50%;
@@ -974,13 +923,15 @@
 }
 #cells_title{
 	@extend .titles;
-	width:30%;
-	margin-left:35%;
+	width:50%;
+	margin-left:25%;
 	color:rgb(61,16,224);
 }
 #cells{
-	margin-left:35%;
-	margin-bottom:40px;
+	margin-left:30%;
+	width:40%;
+	height:auto;
+	margin-bottom:4%;
 }
 #div_text17{
 	vertical-align:top;
@@ -989,7 +940,7 @@
 }
 #text17{
 	@extend .paragraph;
-	line-height:1;
+	line-height:1.08;
 	color:rgb(61,16,224);
 	width:60%;
 	margin-left:20%;
@@ -1008,11 +959,13 @@
 	@extend .titles;
 	color:rgb(61,16,224);
 	margin-left:33%;
-	margin-top:30px;
+	margin-top:3%;
 }
 #lungs{
-	margin-left:35%;
-	margin-bottom:40px;
+	width:40%;
+	height:auto;
+	margin-left:31%;
+	margin-bottom:4%;
 }
 #div_text18{
 	vertical-align:top;
@@ -1021,7 +974,7 @@
 }
 .text18{
 	@extend .paragraph;
-	line-height:1;
+	line-height:1.08;
 	color:rgb(61,16,224);
 	width:60%;
 	margin-left:20%;
@@ -1040,7 +993,7 @@
 	@extend .div;
 }
 #partners{
-	margin-top:50px;
+	margin-top:5%;
 	width:60%;
 	height:auto;
 	margin-left:20%;
