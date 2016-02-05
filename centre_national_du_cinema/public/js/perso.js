@@ -190,7 +190,7 @@ $(document).ready(function() {
             if(rme_region.toFixed(2) < moy_nat_rme.toFixed(2)){
               var diff = moy_nat_rme.toFixed(2) - rme_region.toFixed(2);
               $('.section3_dataviz').append('<div class="circle-prix"><div>'+rme_region.toFixed(2).replace('.',',')+'€ SOIT -'+diff.toFixed(2).replace('.',',')+'€ </div></div><div class="circle-prix-moyen"><div>MOYENNE NATIONALE <br> '+moy_nat_rme.toFixed(2).replace('.',',')+'€</div></div>');
-              $(".circle-prix").css({'opacity':0.7,'z-index':2,'width': 200 - rme_region.toFixed(1)+"px"});
+              $(".circle-prix").css({'opacity':0.7,'z-index':2,'width': 200 - diff.toFixed(1)*100/2+"px"});
               $(".circle-prix-moyen").css({'z-index':1,'width':200+"px"});
               $(".section3_dataviz").css('height','215px');          
             }
@@ -198,7 +198,7 @@ $(document).ready(function() {
               var diff = rme_region.toFixed(2) - moy_nat_rme.toFixed(2);
               $('.section3_dataviz').append('<div class="circle-prix"><div>'+rme_region.toFixed(2).replace('.',',')+'€ SOIT +'+diff.toFixed(2).replace('.',',')+'€</div></div><div class="circle-prix-moyen"><div>MOYENNE NATIONALE <br> '+moy_nat_rme.toFixed(2).replace('.',',')+'€</div></div>');
               $(".circle-prix").css({'z-index':1,'width': 200+"px"});
-              $(".circle-prix-moyen").css({'opacity':0.7,'z-index':2,'width':200 - moy_nat_rme.toFixed(1)+"px"});
+              $(".circle-prix-moyen").css({'opacity':0.7,'z-index':2,'width':200 - diff.toFixed(1)*100/2+"px"});
               $(".section3_dataviz").css('height','215px');          
             }
           });
@@ -211,13 +211,29 @@ $(document).ready(function() {
 
             $('.section3_dataviz').append('<div class="circle-indice"><div>'+indice_region.toFixed(2).replace('.',',')+'</div></div><div class="circle-indice-moyen"><div>MOYENNE NATIONALE <br> '+moy_nat_indice.toFixed(2).replace('.',',')+'</div></div>');
             if((indice_region.toFixed(1)*10) < (moy_nat_indice.toFixed(1)*10)){
-              $(".circle-indice").css({'opacity':0.7,'z-index':2,'width': 200 -indice_region.toFixed(1)*10+"px"});
+              var diff = moy_nat_indice.toFixed(2) - indice_region.toFixed(2);
+              console.log(moy_nat_indice.toFixed(2) +" "+ indice_region.toFixed(2));
+              console.log(diff);
+              if(diff<1){
+                diff = diff.toFixed(1)*100
+              }else{
+                diff = diff.toFixed(1)*100 - 100
+              }
+              $(".circle-indice").css({'opacity':0.7,'z-index':2,'width': 200 -diff+"px"});
               $(".circle-indice-moyen").css({'z-index':1,'width':200+"px"});
               $(".section3_dataviz").css('height','215px');
             }
             else{
+              var diff = indice_region.toFixed(2) -moy_nat_indice.toFixed(2);
+              console.log(moy_nat_indice.toFixed(2) +" "+ indice_region.toFixed(2));
+              console.log(diff);
+              if(diff<1){
+                diff = diff.toFixed(1)*100
+              }else{
+                diff = diff.toFixed(1)*100 - 100
+              }
               $(".circle-indice").css({'z-index':1,'width': 200+"px"});
-              $(".circle-indice-moyen").css({'opacity':0.7,'z-index':2,'width':200-moy_nat_indice.toFixed(1)*10+"px"});
+              $(".circle-indice-moyen").css({'opacity':0.7,'z-index':2,'width':200-diff.toFixed(1)*10+"px"});
               $(".section3_dataviz").css('height','215px');          
             }
           }); 
