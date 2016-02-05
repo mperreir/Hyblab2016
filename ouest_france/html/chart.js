@@ -617,14 +617,14 @@ function generateBarChart(serie){
 
 			var label = $('#'+param.axisY.ticks[param.index]);
 			
-			label.delay(500).animate({
+			label.delay(1000).animate({
 				opacity : 1,
 			},500);
 			
 			param.element.animate({
 				x2: {
 					begin: 0,
-					dur: 500,
+					dur: 1000,
 					from: param.x1,
 					to: param.x2,
 					easing: 'easeOutQuart'
