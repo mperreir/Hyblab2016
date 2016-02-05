@@ -1,0 +1,29 @@
+extends layout
+
+append stylesheets
+    link(rel='stylesheet', href='/stylesheets/nav.css')
+
+append js
+    script(src='/js/nav.js')
+
+block content
+    ul#menu
+        li(data-menuanchor="1stPage"): a(href="#1stPage") 01
+        li(data-menuanchor="2ndPage"): a(href="#2ndPage") 02
+        li(data-menuanchor="3rdPage"): a(href="#3rdPage") 03
+        li(data-menuanchor="4thPage"): a(href="#4thPage") 04
+        li(data-menuanchor="5thPage"): a(href="#5thPage") 05
+        li(data-menuanchor="6thPage"): a(href="#6thPage") 06
+    #fullpage
+        #page1.section
+            h1 Page 1
+        #page2.section
+            h1 Page 2
+        #page3.section
+            h1 Page 3
+        #page4.section
+            h1 Page 4
+        #page5.section
+            h1 Page 5
+        #page6.section
+            h1 Page 6
