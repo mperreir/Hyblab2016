@@ -974,7 +974,7 @@
     var intro = L.control({position:'topleft'});
     intro.onAdd = function(map) {
         this._div = L.DomUtil.create('div', 'info');
-        this._div.innerHTML = '<p><a href=http://www.blogpreston.co.uk/2016/01/mental­health­service­in­preston­struggling­t-o-cope­as­appointments­cancelled>Mental health services in Preston struggling to cope as appointmentscanceled</a></p><p>This unique visualisation can now shed light on which neighbourhoods you may want to live in, goes beyond the figures to bring in news and information about the areas and lets you compare the city postcode by postcode. So go ahead, type in your postcode and see how your neighbourhood fares.</p>';
+        this._div.innerHTML = '<p>This unique visualisation can now shed light on which neighbourhoods you may want to live in, goes beyond the figures to bring in news and information about the areas and lets you compare the city postcode by postcode. So go ahead, type in your postcode and see how your neighbourhood fares.</p>';
         return this._div;
     };
 
