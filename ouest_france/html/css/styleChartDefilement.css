@@ -1,19 +1,20 @@
 .barreDefilement{
 	width: 50vw;
 	height: 15vh;
-	bottom: 8vh;
+	bottom: 2vh;
 	left: 25vw;
 	position : absolute;
 	margin-left: auto;
-	margin-right: auto;*
+	margin-right: auto;
 }
 
-span .ct-label{
+.barreDefilement span{
 	font-weight: bold;
 	font-size : 2vmin;
 	display : block;
 	max-width: 2em;
 }
+
 #chartParc .ct-label, #chartMotorisation .ct-label, #chartCarburant .ct-label{
 	color: #80BC4E;
 }
@@ -47,6 +48,16 @@ span .ct-label{
 .panneauAnnees{
 	position: absolute;
 	width: 10vw;
-	bottom: 10vh;
+	bottom: 5vh;
 	right: 15vw;
+}
+
+.phrase{
+	position: absolute;
+	bottom: 15vh;
+	display: block;
+	text-align : center;
+	width : 99vw;
+	color: #70C2B8;
+
 }

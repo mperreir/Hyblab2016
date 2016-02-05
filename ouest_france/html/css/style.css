@@ -32,6 +32,7 @@ h1{
 	color: #C2DEBC;
 	font-size: 4vmin;
 }
+
 #s4 h1{
 
 	position : absolute;
@@ -41,6 +42,7 @@ h1{
 	margin-left:auto;
 	margin-right:auto;
 }
+
 h2{
 	color: #5794B2;
 }
@@ -60,10 +62,13 @@ h4{
 }
 
 
-
 .isles{
 	position:relative;
-	top:-12vh;
+	top:-11vh;
+}
+
+.accueil{
+	top : 10vh;
 }
 
 .logo{
@@ -99,17 +104,6 @@ h4{
 	top: 8vh;
 }
 
-#s1 {
-
-
-}
-#s2 {
-
-}
-#s5{
-	vertical-align: top;
-}
-
 .info{
 	background-color: rgba(254, 231, 201, 0.5);
 	position: absolute;
@@ -120,30 +114,22 @@ h4{
 	height: 35vh;
 	overflow: auto;
 	border-radius: 10px;
-	//box-shadow: 5px 7px 0px rgba(233, 164, 129, 0.7);
 	text-align: justify;
 	color: #70C2B8;
+	font-size: 2vmin;
 }
 
-.info_carbu{
-	background-color: rgba(254, 231, 201, 0.5);
-	position: absolute;
-	top: 30vh;
+#info_carbu{
 	left: 7vw;
-	padding: 10px;
-	width: 20vw;
 	height: 40vh;
 	overflow: auto;
-	border-radius: 10px;
-	//box-shadow: 5px 7px 0px rgba(233, 164, 129, 0.7);
-	text-align: justify;
-	color: #70C2B8;
 }
 
 .donut{
 	position: absolute;
 	width: 11vh;
 	height: 11vh;
+	font-size: 2vmin;
 }
 
 #pompe{
@@ -167,10 +153,10 @@ h4{
 
 #barchart .ct-label{
 	font-family: "Avenir";
-	font-size: 1em;
+	font-weight : bold;
+	font-size : 2vmin;
 	justify-content: flex-start;
 }
-
 
 #barchart .ct-series-a .ct-bar {
   stroke: #9BD0B8;
@@ -225,6 +211,8 @@ h3{
 	position: relative;
 	top: 31vh;
 }
+
+
 
 /* Fixed header and footer.
 * --------------------------------------- */

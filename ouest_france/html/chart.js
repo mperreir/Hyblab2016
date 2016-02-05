@@ -1,5 +1,5 @@
 "use strict";
-
+/*global Chartist*/
 var data = {
 	menage : null,
 	parc : null,
@@ -15,7 +15,7 @@ var carPos = {
 		col : [
 			{
 				origine : {
-					top : 36.1,
+					top : 36,
 					left : 32
 				},
 				nbPlace : 11
@@ -37,7 +37,7 @@ var carPos = {
 			{
 				origine : {
 					top : 29.6,
-					left : 43.4
+					left : 43.2
 				},
 				nbPlace : 9
 			}
@@ -45,57 +45,58 @@ var carPos = {
 	},
 	occasion : {
 		deltaNextPos : {
-			top : 0.68,
-			left : 1.08
+			top : 0.64,
+			left : 1.06
 		},
 		col : [
 			{
 				origine : {
-					top : 45.2,
+					top : 45,
 					left : 51.2
 				},
 				nbPlace : 1
 			},
 			{
 				origine : {
-					top : 47.7,
+					top : 47.5,
 					left : 55.3
 				},
 				nbPlace : 6
 			},
 			{
 				origine : {
-					top : 43,
-					left : 56
+					top : 42.8,
+					left : 55.8
 				},
 				nbPlace : 7
 			},
 			{
 				origine : {
-					top : 41.9,
+					top : 41.5,
 					left : 57.9
 				},
 				nbPlace : 7
 			},
 			{
 				origine : {
-					top : 39.4,
+					top : 38.8,
 					left : 60.4
 				},
 				nbPlace : 10
 			}
 		]
 	}
-}
+};
+
+var allPlaces = null;
 
 function requestData(callback, type){
-	var requete = $.ajax({
+	$.ajax({
 			url : "data/"+type+"/years",
 			type : "GET",
 			dataType : "text",
 			success : function(res, status){
 				data[type] = JSON.parse(res);
-				console.log(data);
 				callback();
 			},
 			error : function(res, statut, error){
@@ -112,28 +113,6 @@ function requestChartCarburant(year){
 	}else{
 		generateBarChart(data.carburant.data[year]);
 	}
-}
-
-function generateBarChart(serie){
-	var donnees ={
-		labels : ["Diesel", "Essence", "Bicarburant", "Electrique", "Hybride", "Gaz", "Superéthanol"],
-		series :[[serie.diesel.pourcentage,serie.essence.pourcentage,serie.bicarburant.pourcentage,serie.electricite.pourcentage, serie.hybride.pourcentage, serie.gaz.pourcentage, serie.superethanol.pourcentage]]
-	};
-	new Chartist.Bar('#barchart',
-	donnees,
-	{
-		axisX:{
-			showGrid: false,
-			showLabel: false
-		},
-		axisY:{
-			showLabel: true,
-			showGrid: false,
-			offset:100
-		},
-		horizontalBars: true,
-		
-	});
 }
 
 function requestGenerateParcDonutCars(type, year){
@@ -164,7 +143,7 @@ function generateInfo(text, slideId){
 function requestGenerateMenageDonut(type, year){
 	if(!data[type]){
 		requestData(function(){
-			generateDonut(data.menage.data[year][type].pourcentage, type)
+			generateDonut(data.menage.data[year][type].pourcentage, type);
 		},type);
 	}else generateDonut(data.menage.data[year][type].pourcentage, type);
 }
@@ -176,11 +155,11 @@ function requestGenerateChartDefilement(type){
 	},type);
 	else generateChart(data[type], "200");
 	
-};
+}
+
 function generateChart(res, statut){
 	var donnees = res;
 
-	var valeurs = [];
 	var dataChart = generateChartData(donnees);
 	var options = fillOptions();
 	var chartId;
@@ -194,7 +173,7 @@ function generateChart(res, statut){
 		case "parc":
 			chartId = '#chartParc';
 			break;	
-	};
+	}
 	var chart = new Chartist.Line(chartId, dataChart, options);
 	
 	var seq = 0;
@@ -214,12 +193,12 @@ function generateChart(res, statut){
 
 			if(jQuery.inArray(param.text, donnees.yearsToScreen == -1)){
 				setLabelAnimation(param, donnees.categorie);
-			};
+		}
 		}else if(param.type === 'point'){
 			setPointAnimation(param,donnees.categorie,seq,delays,durations);
 		}
 	});
-};
+}
 
 
 function fillOptions(){
@@ -246,7 +225,7 @@ function fillOptions(){
 		}
 	};
 	return retour;
-};
+}
 
 function generateChartData(donnees){
 	var dataChart = {
@@ -270,7 +249,7 @@ function generateChartData(donnees){
 		}
 	}
 	return dataChart;
-};
+}
 
 function dataToAdd(donnees, index){
 	
@@ -289,12 +268,12 @@ function dataToAdd(donnees, index){
 			break;
 
 		case "parc":
-			retour = donnees.data[donnees.years[index]].occasion.pourcentage;
+			retour = data.menage.data[donnees.years[index]].detention.val;
 			
 			break;
 	}
 	return retour;
-};
+}
 
 function setLineAnimation(param, seq, delay, duration){
 	param.element.animate({
@@ -308,6 +287,7 @@ function setLineAnimation(param, seq, delay, duration){
 }
 
 function setLabelAnimation(param, categorie){
+	
 	var chaine = 'foreignobject[x="'+param.x+'"]'+
 				'[y="'+param.y+'"]'+
 				'[width="'+param.width+'"]'+
@@ -319,7 +299,7 @@ function setLabelAnimation(param, categorie){
 		x : parseInt(labelParent.css("x").replace("px","")),
 		y : parseInt(labelParent.css("y").replace("px",""))
 	};
-
+	
 	//var labelParentOriginPos = labelParent.position();
 	label.mouseenter(function(node){
 		//Grossissement et changement de couleur du point
@@ -368,16 +348,23 @@ function setLabelAnimation(param, categorie){
 				requestGenerateMenageDonut("none", annee);
 				requestGenerateInfo(categorie, annee, "s2");
 				var pourcentage = Math.round(data.menage.data[annee].biPlus.pourcentage + data.menage.data[annee].mono.pourcentage);
-				$("#phraseMenage p").html("En "+annee+", il y avait "+pourcentage+"% de ménages motorisés.");				
+				$("#phraseMenage p").html("En "+annee+", il y avait "+pourcentage+"% de ménages motorisés.");			
 				break;
 			case "parc":
 				requestGenerateParcDonutCars("neuf", annee);
 				requestGenerateParcDonutCars("occasion", annee);
 				requestGenerateInfo(categorie, annee, "s3");
+				$("#phraseDetention p").html("En "+annee+",les français gardaient leur voiture "+data.menage.data[annee].detention.val+" ans en moyenne.");			
 				break;
 			case "carburant":
 				requestGenerateInfo(categorie, annee, "s4");
 				requestChartCarburant(annee);
+				var cleanEnergies = ["electricite","hybride","gaz","superethanol","bicarburant"];
+				var value = 0;
+				cleanEnergies.forEach(function(carburant){
+					value += data.carburant.data[annee][carburant].pourcentage;
+				});
+				$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % de voitures vendues utilisent des énergies propres.");					
 				break;
 		}
 	});
@@ -390,8 +377,7 @@ function setPointAnimation(param, categorie, seq, delay, duration){
 					'[x1="'+param.x+'"]'+
 					'[y1="'+param.y+'"]';
 
-	$(chaine).attr("year", annee).attr("categorie", categorie).attr("yolo", categorie);
-
+	$(chaine).attr("year", annee).attr("categorie", categorie);
 	param.element.animate({
 	      x1: {
 	        begin: seq * delay,
@@ -433,11 +419,19 @@ function relaunchAnimation(index, nextIndex, direction){
 			requestGenerateParcDonutCars("neuf", "1990");
 			requestGenerateParcDonutCars("occasion", "1990");
 			requestGenerateInfo("parc", "1990", "s3");
+			$("#phraseDetention p").html("En 1990,les français gardaient leur voiture "+data.menage.data["1990"].detention.val+" ans en moyenne.");			
 			break;
 		case 4:
 			requestGenerateChartDefilement("carburant");
 			requestGenerateInfo("carburant", "2009", "s4");
 			requestChartCarburant("2009");
+			var cleanEnergies = ["electricite","hybride","gaz","superethanol","bicarburant"];
+			var value = 0;
+			cleanEnergies.forEach(function(carburant){
+				value += data.carburant.data["2009"][carburant].pourcentage;
+			});
+			$("#phraseCarburant p").html("En 2009, "+Math.round(value*10)/10+" % de voitures vendues utilisent des énergies propres.");					
+				
 			break;
 	}
 	switch(index){
@@ -453,7 +447,7 @@ function generateDonut(donnee,id){
 	var label = '<h3>'+donnee+'%</h3>';
 	var idStr = '#'+id;
 	var options = fillOptionsDonut(label);
-	var data
+
 	var chart = new Chartist.Pie(idStr, {
 		series: [donnee]
 	}, options);
@@ -463,16 +457,15 @@ function generateDonut(donnee,id){
 			setSliceAnimation(data);
 	  	}
 	});
-};
+}
 
 function fillOptionsDonut(label){
 	var retour ={
 		donut: true,
-		showLabel: true,
+		showLabel: false,
 		total: 100,
 		donutWidth: 8,
 		chartPadding: 0,
-		showLabel: false,
 		startAngle: 190,
 		plugins: [
             Chartist.plugins.fillDonut({
@@ -526,7 +519,7 @@ function generateParcDonutCars(donnee, type){
 		car.css("z-index",30+place.place).css("opacity", 0);
 		carSpawnAnimation(car,place);
 		car.removeAttr("id");
-	};
+	}
 	generateDonut(donnee, type);
 }
 function getRandomPlace(type, nb){
@@ -536,22 +529,25 @@ function getRandomPlace(type, nb){
 
 	for(var i=0; i<nbCol; i++){
 		nbMaxPlaces += carPos[type].col[i].nbPlace;
-	};
-
-	var allPlaces = [];
-	for(var i=0; i<nbCol; i++){
-		for(var j=0; j<carPos[type].col[i].nbPlace; j++){
-			allPlaces.push({
-				colonne : i,
-				place : j
-			});
-		}
 	}
 
+	if(!allPlaces){
+		var allPlaces = [];
+		for(i=0; i<nbCol; i++){
+			for(var j=0; j<carPos[type].col[i].nbPlace; j++){
+				allPlaces.push({
+					colonne : i,
+					place : j
+				});
+			}
+		}
+	}
+	
+	var copieAllPlaces = allPlaces;
 	if(nbMaxPlaces > nb){
-		for(var i=0; i<nb; i++){
-			var randPlaceIndex = Math.round((Math.random() * (allPlaces.length-1)));
-			var place = allPlaces.splice(randPlaceIndex,1)[0];
+		for(i=0; i<nb; i++){
+			var randPlaceIndex = Math.round((Math.random() * (copieAllPlaces.length-1)));
+			var place = copieAllPlaces.splice(randPlaceIndex,1)[0];
 			place.top = carPos[type].col[place.colonne].origine.top + (carPos[type].deltaNextPos.top * place.place);
 			place.left = carPos[type].col[place.colonne].origine.left + (carPos[type].deltaNextPos.left * place.place);
 			retour.push(place);
@@ -560,18 +556,12 @@ function getRandomPlace(type, nb){
 	return retour;
 }
 
-function makeCarsDisappear(carNode){
-	carNode.animate({
-		opacity: 0,
-	}, 1000);
-}
-
 function removeAllCars(){
 	$('.cars .car').remove();
 }
 
 function carDestroyAnimation(type){
-	var carsToDestroy = $('.cars[id='+type+'] .car').stop().animate({
+	$('.cars[id='+type+'] .car').stop().animate({
 		opacity : 0
 	}, 1000);
 }
@@ -582,3 +572,84 @@ function carSpawnAnimation(car,place){
 		top : (place.top).toString()+"vh"
 	},1500);
 }
+
+
+function generateBarChart(serie){
+	var donnees ={
+		labels : ["Diesel", "Essence", "Bicarburant", "Electrique", "Hybride", "Gaz", "Superéthanol"],
+		series :[[serie.diesel.pourcentage,serie.essence.pourcentage,serie.bicarburant.pourcentage,serie.electricite.pourcentage, serie.hybride.pourcentage, serie.gaz.pourcentage, serie.superethanol.pourcentage]]
+	
+	};
+	var chart = new Chartist.Bar('#barchart',
+	donnees,
+	{
+		axisX:{
+			showGrid: false,
+			showLabel: false
+		},
+		axisY:{
+			showLabel: true,
+			showGrid: false,
+			offset:100
+		},
+		horizontalBars: true,
+			chartPadding: {
+		    top: 15,
+		    right: 35,
+		    bottom: 5,
+		    left: 10
+  		}
+		
+	});
+	
+	chart.on('draw', function(param){
+		if(param.type === 'bar'){
+						
+			var valeur = $("#barchart svg");
+
+			valeur.appendSvg('text', {
+				id : param.axisY.ticks[param.index],
+				x : param.x2 + 1,
+				y : param.y2 + 5,
+				class : "ct-label",
+				opacity : 0,
+			}, Math.round(param.value.x * 10)/10+'%');
+
+			var label = $('#'+param.axisY.ticks[param.index]);
+			
+			label.delay(500).animate({
+				opacity : 1,
+			},500);
+			
+			param.element.animate({
+				x2: {
+					begin: 0,
+					dur: 500,
+					from: param.x1,
+					to: param.x2,
+					easing: 'easeOutQuart'
+					
+				}
+			});
+		}
+	});
+}
+
+jQuery.fn.extend({
+    appendSvg:function (nom,attributs,text)
+              {
+                  var svg = document.createElementNS("http://www.w3.org/2000/svg",nom);
+                  for (var cle in attributs)
+                  {
+                          var valeur = attributs[cle];
+                          svg.setAttribute(cle,valeur);
+                  }
+                  var appendices = this.length;
+                  for (var i = 0; i < appendices; i++)
+                  {
+                          this[i].appendChild(svg);
+                  }
+                  svg.appendChild(document.createTextNode(text));
+                  return svg;
+              }
+}); 

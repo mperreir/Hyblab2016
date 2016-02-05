@@ -1,5 +1,8 @@
 "use strict";
 
+/*global requestGenerateChartDefilement*/
+/*global relaunchAnimation*/
+
 $(document).ready(function() {
     $('#fullpage').fullpage({
     	navigation : true,
@@ -9,13 +12,4 @@ $(document).ready(function() {
 	requestGenerateChartDefilement("menage");
 	requestGenerateChartDefilement("parc");
 	requestGenerateChartDefilement("carburant");
-
-	/*var test = {
-	  labels: ['Essence', 'GNV', 'Électricité', 'Diesel'],
-	  series: [[
-	    1,2,3,4
-	  ]]
-	};
-	generateBarChart(test);*/
-
 });

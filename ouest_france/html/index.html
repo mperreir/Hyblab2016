@@ -29,7 +29,8 @@
 		<script type="text/javascript" src="script/chartist/dist/chartist.min.js"></script>
 		<script type="text/javascript" src="script/chartist-plugin-fill-donut.min.js"></script>
 
-		<script type="text/javascript" src="script/chart.js"></script>
+		
+		<script type='text/javascript' src="chart.js"></script>
 
 	</head>
 	<body>
@@ -46,41 +47,14 @@
 			<!--First page-->
 
 				<div class="section" id="s1">
-
-				<!-- The clouds and the background svg-->
 				
-					<div style="position: relative;"> 
-							<!--First cloud-->               
-							<div id="nuage1">              
-								<img src="images/nuage_1.svg" alt="nuage"/>
-							</div>
-
-							<!--Second cloud-->
-							<div id="nuage2">
-								<img src="images/nuage_2.svg" alt="nuage"/>
-							</div>
-
-							<!--third cloud-->
-							<div id="nuage3">
-								<img src="images/nuage_3.svg" alt="nuage"/>
-							</div>
-
-							<!--4th cloud-->
-							<!--div style="position: absolute;left:-150px;top:-450px;z-index:80">
-								<img src="images/nuage_4.svg" alt="nuage4"/>
-							</div>
-
-							<!--5th cloud-->
-							<!--div style="position: absolute;left:200px;top:-100px;z-index:80">
-								<img src="images/nuage_5.svg" alt="nuage5"/>
-							</div>
-
-						<!--back ground svg-->
-						<img class="svg" src="images/accueil-01.svg" alt="En voiture Simone !"/>
-					</div> 
-				
+					<img class="svg isles accueil" src="images/accueil-01.svg" alt="En voiture Simone !"/>
 					<h2>LES FRANÇAIS ET L’AUTOMOBILE : QUELLES HABITUDES DE CONSOMMATION ?</h2>
-				
+					
+					<!--
+					<div id="nuage1"><img src="images/nuage_1.svg" alt="nuage"/></div>
+					<div id="nuage2"><img src="images/nuage_2.svg" alt="nuage"/></div>
+					<div id="nuage3"><img src="images/nuage_3.svg" alt="nuage"/></div>-->
 					
 					<a href="#2"><img  id="scroll" src="images/scroll_bas.svg" alt="Slide suivante"/></a>
 
@@ -89,86 +63,59 @@
 
 				</div>
 
-
-
-
-
 				<!--second page-->
 
 				<div class="section" id="s2">
 
-
-					<div style="position: relative;"> 
-							<!--First cloud-->               
-							<div id="nuage4">              
-								<img src="images/nuage_1.svg" alt="nuage"/>
-							</div>
-              <!--Second cloud-->
-              <div id="nuage5">
-                <img src="images/nuage_2.svg" alt="nuage"/>
-              </div>
-
-              <!--third cloud-->
-              <div id="nuage6">
-                <img src="images/nuage_3.svg" alt="nuage"/>
-              </div>
-   <!--third cloud-->
-                <div id="nuage6">
-                  <img src="images/nuage_3.svg" alt="nuage"/>
-                </div>
-          </div>
-
-                <h1>COMBIEN DE VOITURES PAR MÉNAGE ?</h1>
-                <img class="svg isles"  src="images/motor.svg" alt="Ménages motorisés"/>
-                <div class="ct-chart donut" id="mono"></div>
-                <div class="ct-chart donut" id="none"></div>
-                <div class="ct-chart donut" id="biPlus"></div>
-                <div class="info-phrase"><p></p></div>
-                <div class="ct-chart barreDefilement" id="chartMotorisation"></div>
-
-                <div class="info"><p></p></div>
-                <div class="phrase" id="phraseMenage"><p></p></div>
-                <img class="panneauAnnees" src="images/cliquer_annees.svg" alt="cliquez sur les années"/>
-        </div>
+	                <h1>COMBIEN DE VOITURES PAR MÉNAGE ?</h1>
+	                <!--
+	               	<div id="nuage4"><img src="images/nuage_1.svg" alt="nuage"/></div>
+					<div id="nuage5"><img src="images/nuage_2.svg" alt="nuage"/></div>
+					<div id="nuage6"><img src="images/nuage_3.svg" alt="nuage"/></div>-->
+					
+	                <img class="svg isles"  src="images/motor.svg" alt="Ménages motorisés"/>
+	                
+	                <div class="ct-chart donut" id="mono"></div>
+	                <div class="ct-chart donut" id="none"></div>
+	                <div class="ct-chart donut" id="biPlus"></div>
+	                
+	                <div class="ct-chart barreDefilement" id="chartMotorisation"></div>
+	
+	                <div class="info"><p></p></div>
+	                <div class="phrase" id="phraseMenage"><p></p></div>
+	                <img class="panneauAnnees" src="images/cliquer_annees.svg" alt="cliquez sur les années"/>
+        		</div>
 					
 
 
-        <div class="section" id="s3">
-          <h1>PLUTÔT NEUF OU OCCASION ?</h1>
-          <img class="svg isles" src="images/neuf_occaz2.svg" alt="Neuf ou occasion ?"/>
-          <div class="ct-chart donut" id="occasion"></div>
-          <div class="ct-chart donut" id="neuf"></div>
-          <div class="ct-chart barreDefilement" id="chartParc"></div>
-          <div class="cars" id="occasion">
-          </div>
-          <div class="cars" id="neuf">
-            <!--<img id="c1" src="images/voitures.svg" alt="voiture"/>
-            <img id="c2" src="images/voitures.svg" alt="voiture"/>-->
-          </div>
-          <div class="info"><p></p>
-          </div>
-
-          <img class="panneauAnnees" src="images/cliquer_annees.svg" alt="cliquez sur les années"/>
-          <div class="phrase" id="phraseParc"><p></p></div>
-        </div>
+		        <div class="section" id="s3">
+					<h1>PLUTÔT NEUF OU OCCASION ?</h1>
+		          	<img class="svg isles" src="images/neuf_occaz2.svg" alt="Neuf ou occasion ?"/>
+		          	<div class="ct-chart donut" id="occasion"></div>
+		          	<div class="ct-chart donut" id="neuf"></div>
+		          	<div class="ct-chart barreDefilement" id="chartParc"></div>
+		          	<div class="cars" id="occasion"></div>
+		          	<div class="cars" id="neuf"></div>
+		          	<div class="info"><p></p></div>
+		
+		          	<img class="panneauAnnees" src="images/cliquer_annees.svg" alt="cliquez sur les années"/>
+		          	<div class="phrase" id="phraseDetention"><p></p></div>
+		        </div>
 
 
 
-        <div class="section" id="s4">
-          <h1>À QUOI TU CARBURES ?</h1>
-          <img class="svg" id="pompe" src="images/pompe.svg" alt="Pompe"/>
-          <div class="ct-chart barreDefilement" id="chartCarburant"></div>
+				<div class="section" id="s4">
+          			<h1>À QUOI TU CARBURES ?</h1>
+          			<img class="svg" id="pompe" src="images/pompe.svg" alt="Pompe"/>
+	          		<div class="ct-chart barreDefilement" id="chartCarburant"></div>
 
-          <div class="info info_carbu">
-            <p>
-            </p>
+          			<div class="info" id="info_carbu"><p></p></div>
+          			<div id="barchart"></div>
 
-          </div>
-          <div id="barchart"></div>
-
-          <img class="panneauAnnees" src="images/cliquer_annees.svg" alt="cliquez sur les années"/>
-          <div class="phrase" id="phraseCarburant"><p></p></div>
-        </div>
+          			<img class="panneauAnnees" src="images/cliquer_annees.svg" alt="cliquez sur les années"/>
+          			<div class="phrase" id="phraseCarburant"><p></p></div>
+          			<div id="values"></div>
+        		</div>
 
 
 				<div class="section" id="s5">
@@ -227,6 +174,5 @@
 			</div>
 		</div>
 		<script type='text/javascript' src="global.js"></script>
-		<script type='text/javascript' src="chart.js"></script>
 	</body>
 </html>
