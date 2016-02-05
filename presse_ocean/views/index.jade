@@ -1,0 +1,34 @@
+extends layout
+
+include utils/mixins
+
+append stylesheets
+  link(rel='stylesheet', href='/stylesheets/main.css')
+
+append js
+  script(src="/js/main.js")
+  script(src="/js/map.js")
+  script(src="/js/MapObject.js")
+  script(src="/js/circle.js")
+  script(src="/js/histogram.js")
+
+block content
+  ul#menu
+    li(data-menuanchor="IntroLogements"): a(href="#IntroLogements") 01
+    li(data-menuanchor="CarteLogements"): a(href="#CarteLogements") 02
+    li(data-menuanchor="IntroLocataires"): a(href="#IntroLocataires") 03
+    li(data-menuanchor="CarteLocataires"): a(href="#CarteLocataires") 04
+    li(data-menuanchor="CarteSecondaires"): a(href="#CarteSecondaires") 05
+    li(data-menuanchor="Reportage"): a(href="#Reportage") 06
+    li(data-menuanchor="Conclusion"): a(href="#Conclusion") 07
+
+  #fullpage
+    include pages/intro
+    include pages/map1_intro
+    include pages/logementsMap
+    include pages/map2_intro
+    include pages/locatairesMap
+    include pages/secondairesMap
+    include pages/interview
+    include pages/credit
+

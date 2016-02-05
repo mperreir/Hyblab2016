@@ -1,0 +1,23 @@
+#map3-map.section
+    +header("secondaires","Papy boomers et tourisme fiscal","dopent le résidentiel secondaire","(entre 2006 et 2011)")
+    #map3.map
+    .legend.secondaires
+        ul
+            li < 0%
+            li Entre 0% et 60%
+            li Entre 60% et 120%
+            li > 120%
+    .sidebar
+        +placeholder()
+        h1 None
+        fieldset
+            label(for="map3-2006")
+                input#map3-2006(type="radio" value="2006" name="map3" checked)
+                span 2006
+            label(for="map3-2011")
+                input#map3-2011(type="radio" value="2011" name="map3")
+                span 2011
+        h2 Part des logements secondaires par rapport à la totalité des logements secondaires nantais
+        .graph
+        h2 évolution
+        .graph
