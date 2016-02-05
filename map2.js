@@ -241,15 +241,28 @@ function draw(config, data) {
         return result;
     }
 
+    function totalPeopleLSOA(lsoa11cd) {
+        var result = 0;
+        for (var group in GROUPS) {
+            result += window.data[lsoa11cd]["ages"][GROUPS[group]];
+        }
+        return result;
+    }
+
     (function() {
         for (var msoa11cd in MSOA) {
             MSOA[msoa11cd]["ages"] = {};
             var total = totalPeople(msoa11cd);  //total number of the total msoa11cd
+            MSOA[msoa11cd]["ages"]["totalPeople"] = total;
             for (var group in GROUPS) {
                 MSOA[msoa11cd]["ages"][AGES[group]] = totalAges(GROUPS[group], MSOA[msoa11cd]["LSOAs"]) / total;
             }
         }
-        console.log(MSOA);
+
+        for (var lsoa11cd in window.data) {
+            window.data[lsoa11cd]["ages"]["totalPeople"] = totalPeopleLSOA(lsoa11cd);
+        }
+        // console.log(window.data);
 
         
     }());
@@ -279,14 +292,16 @@ function draw(config, data) {
             };
     }
 
+
+
     function getMsoaPopupContent(CD, NM) {
-        var arr = MSOA[CD]["PCD7s"];
-        return '<h4>' + NM + '</h4><div>( ' + arr[0] + ' - ' + arr[arr.length - 1] + ' )</div>';
+        var totalPeople = MSOA[CD]["ages"]["totalPeople"];
+        return '<h4>' + NM + '</h4><div>( Resident:    ' + totalPeople + ' )</div>';
     }
 
     function getLsoaPopupContent(CD, NM) {
-        var arr = window.data[CD]["PCD7s"];
-        return '<h4>' + NM + '</h4><div>( ' + arr[0] + ' - ' + arr[arr.length - 1] + ' )</div>';
+        var totalPeople = window.data[CD]["ages"]["totalPeople"];
+        return '<h4>' + NM + '</h4><div>( Resident:    ' + totalPeople + ' )</div>';
     }
 
     function highlightFeature(e) {
