@@ -212,8 +212,7 @@ $(document).ready(function() {
             $('.section3_dataviz').append('<div class="circle-indice"><div>'+indice_region.toFixed(2).replace('.',',')+'</div></div><div class="circle-indice-moyen"><div>MOYENNE NATIONALE <br> '+moy_nat_indice.toFixed(2).replace('.',',')+'</div></div>');
             if((indice_region.toFixed(1)*10) < (moy_nat_indice.toFixed(1)*10)){
               var diff = moy_nat_indice.toFixed(2) - indice_region.toFixed(2);
-              console.log(moy_nat_indice.toFixed(2) +" "+ indice_region.toFixed(2));
-              console.log(diff);
+
               if(diff<1){
                 diff = diff.toFixed(1)*100
               }else{
@@ -225,15 +224,13 @@ $(document).ready(function() {
             }
             else{
               var diff = indice_region.toFixed(2) -moy_nat_indice.toFixed(2);
-              console.log(moy_nat_indice.toFixed(2) +" "+ indice_region.toFixed(2));
-              console.log(diff);
               if(diff<1){
                 diff = diff.toFixed(1)*100
               }else{
                 diff = diff.toFixed(1)*100 - 100
               }
               $(".circle-indice").css({'z-index':1,'width': 200+"px"});
-              $(".circle-indice-moyen").css({'opacity':0.7,'z-index':2,'width':200-diff.toFixed(1)*10+"px"});
+              $(".circle-indice-moyen").css({'opacity':0.7,'z-index':2,'width':200-diff+"px"});
               $(".section3_dataviz").css('height','215px');          
             }
           }); 
