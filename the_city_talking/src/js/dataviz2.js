@@ -137,7 +137,7 @@ function updateChart(month_n = null ,year_n = null ,facility_n = null ,loop = tr
 			.attr("cx", (d,i) => { return scale_x(d.Hour); })
 			.attr("cy", (d,i) => { return scale_y(d.NO2) })
 			.attr("r", 3)
-			.attr("transform","translate("+margin.left+","+margin.top+")")
+			.attr("transform","translate("+margin.left+",0)")
 			.attr("class","dot_pollution")
 			.each(function (d,i){
 				d3.select(this)
@@ -163,7 +163,7 @@ function updateChart(month_n = null ,year_n = null ,facility_n = null ,loop = tr
 	    path.datum(data)
 			.transition()
 			.attr("d",line)
-			.attr("transform","translate("+margin.left+","+margin.top+")")
+			.attr("transform","translate("+margin.left+",0)")
 			.attr("class","line5y");
 
 	});
