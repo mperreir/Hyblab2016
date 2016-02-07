@@ -2,7 +2,7 @@ const d3 = require('d3');
 d3.tip = require('d3-tip');
 const utils = require("./utils.js");
 
-var o_width=500,
+var o_width=600,
 	o_height=280;
 
 var margin = {top: 20, right: 20, bottom: 20, left: 50},
@@ -59,7 +59,7 @@ chart.append("text")
 	.attr("x",5+margin.left)
 	.attr("y",5+margin.top)
 	.attr("id","tooltip-d2")
-	.text("kek");
+	.text("");
 
 var line = d3.svg.line()
 	.interpolate("cardinal")
@@ -172,59 +172,38 @@ function updateChart(month_n = null ,year_n = null ,facility_n = null ,loop = tr
 function selectMonth(n){
 	current_month = n ;
 	updateChart();
-	var list = document.getElementsByClassName('dataviz2_month') ;
-	for (var i = 0 ; i < list.length ; i++){
-		list.item(i).classList.remove('selected');
-	}
-	list.item(n).classList.add('selected');
 }
 
 function selectYear(n){
 	current_year = n ;
 	updateChart();
-	var list = document.getElementsByClassName('dataviz2_year') ;
-	for (var i = 0 ; i < list.length ; i++){
-		list.item(i).classList.remove('selected');
-	}
-	list.item(n).classList.add('selected');
 }
 
 function selectFacility(n){
 	current_facility = n ;
 	updateChart();
-	var list = document.getElementsByClassName('dataviz2_facility') ;
-	for (var i = 0 ; i < list.length ; i++){
-		list[i].classList.remove('selected');
-	}
-	list[n].classList.add('selected');
 }
 
 updateChart();
 
 months.forEach((e,i) => {
-	var button = document.createElement("button");
-	button.innerHTML = e.short ;
-	button.setAttribute("title",e.name);
-	button.classList.add("dataviz2_button");
-	button.classList.add("dataviz2_month");
-	button.addEventListener("click",selectMonth.bind(null,i));
-	document.getElementById("buttons_dataviz2_months").appendChild(button);
+	var option = document.createElement("option");
+	option.innerHTML = e.name ;
+	option.setAttribute("title",e.name);
+	option.addEventListener("click",selectMonth.bind(null,i));
+	document.getElementById("select_dataviz2_months").appendChild(option);
 })
 
 years.forEach((e,i) => {
-	var button = document.createElement("button");
-	button.innerHTML = e ;
-	button.classList.add("dataviz2_button");
-	button.classList.add("dataviz2_year");
-	button.addEventListener("click",selectYear.bind(null,i));
-	document.getElementById("buttons_dataviz2_years").appendChild(button);
+	var option = document.createElement("option");
+	option.innerHTML = e ;
+	option.addEventListener("click",selectYear.bind(null,i));
+	document.getElementById("select_dataviz2_years").appendChild(option);
 })
 facilities.forEach((e,i) => {
-	var button = document.createElement("button");
-	button.innerHTML = e.short ;
-	button.setAttribute("title",e.name);
-	button.classList.add("dataviz2_button");
-	button.classList.add("dataviz2_facility");
-	button.addEventListener("click",selectFacility.bind(null,i));
-	document.getElementById("buttons_dataviz2_facilities").appendChild(button);
+	var option = document.createElement("option");
+	option.innerHTML = e.name ;
+	option.setAttribute("title",e.name);
+	option.addEventListener("click",selectFacility.bind(null,i));
+	document.getElementById("select_dataviz2_facilities").appendChild(option);
 });

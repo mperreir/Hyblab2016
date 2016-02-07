@@ -1,47 +1,19 @@
 
 /* svg */
 
-#buttons_dataviz2 > div{
-	display:inline-block;
-	margin-top:2px;
-	margin-bottom:2px;
+#selects_dataviz2{
 
-	&.small{
-		//width:20px;
-	}
+	text-align:center;
 
-	&.large{
-		//width:120px;
-	}
-}
-
-.dataviz2_button{
-	color:rgb(61,16,224);
-	background-color: #FFFFFF ;
-	font-size:0.8em ;
-	$border:1px solid rgb(61,16,224) ;
-	$radius: 4px;
-	border-top: $border ;
-	border-bottom: $border ;
-	border-right: $border ;
-	border-left:none;
-	cursor:pointer;
-	padding-left:2px;
-	padding-right:2px;
-	&.vertical{
-		display:block;
-		width:100%;
-	}
-
-	&:first-of-type{
-		border-top-left-radius:$radius;
-		border-bottom-left-radius:$radius;
-		border-left:$border;
-	}
-
-	&:last-of-type{
-		border-top-right-radius:$radius;
-		border-bottom-right-radius:$radius;
+	&>select{
+		color:rgb(61,16,224);
+		background-color: #FFFFFF ;
+		font-size:0.8em ;
+		border-radius: 3px;
+		border:1px solid rgb(61,16,224) ;
+		display:inline-block;
+		margin-top:2px;
+		margin-bottom:2px;
 	}
 }
 
