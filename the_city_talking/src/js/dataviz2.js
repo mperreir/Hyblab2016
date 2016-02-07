@@ -6,8 +6,8 @@ var o_width=600,
 	o_height=280;
 
 var margin = {top: 20, right: 20, bottom: 20, left: 50},
-    width = o_width - margin.left - margin.right,
-    height = o_height - margin.top - margin.bottom;
+	width = o_width - margin.left - margin.right,
+	height = o_height - margin.top - margin.bottom;
 
 var chart = d3.select(".dataviz2")
 	.attr("width",o_width)
@@ -66,22 +66,22 @@ var line = d3.svg.line()
 	.x(function(d) { return scale_x(d.Hour); })
 	.y(function(d) { return scale_y(d.NO2); });
 
-chart.select("#line-gradient-d3")                          
-        .attr("gradientUnits", "userSpaceOnUse")
-        .attr("x1", 0).attr("y1", 0)
-        .attr("x2", 0).attr("y2", height)
-    .selectAll("stop")
-        .data([
-            {offset: "0%", color: "rgb(249,98,90)"},
-            {offset: "30%", color: "rgb(249,98,90)"},
-            {offset: "30%", color: "rgb(255,167,136)"},
-            {offset: "60%", color: "rgb(255,167,136)"},
-            {offset: "60%", color: "rgb(28,247,168)"},
-            {offset: "100%", color: "rgb(28,247,168)"}
-        ])
-    .enter().append("stop")
-        .attr("offset", function(d) { return d.offset; })
-        .attr("stop-color", function(d) { return d.color; });
+chart.select("#line-gradient-d3")
+		.attr("gradientUnits", "userSpaceOnUse")
+		.attr("x1", 0).attr("y1", 0)
+		.attr("x2", 0).attr("y2", height)
+	.selectAll("stop")
+		.data([
+			{offset: "0%", color: "rgb(249,98,90)"},
+			{offset: "30%", color: "rgb(249,98,90)"},
+			{offset: "30%", color: "rgb(255,167,136)"},
+			{offset: "60%", color: "rgb(255,167,136)"},
+			{offset: "60%", color: "rgb(28,247,168)"},
+			{offset: "100%", color: "rgb(28,247,168)"}
+		])
+	.enter().append("stop")
+		.attr("offset", function(d) { return d.offset; })
+		.attr("stop-color", function(d) { return d.color; });
 /*
 chart.selectAll('.bg_square').data(utils.pollution_values.filter((d) => (d != utils.max_NO2)))
 	.enter()
@@ -98,12 +98,12 @@ var path = chart.append("path")
 
 
 var xAxis = d3.svg.axis()
-    .scale(scale_x)
-    .orient("bottom");
+	.scale(scale_x)
+	.orient("bottom");
 
 var yAxis = d3.svg.axis()
-    .scale(scale_y)
-    .orient("left");
+	.scale(scale_y)
+	.orient("left");
 
 chart.append("g")
   .attr("class", "x_axis")
@@ -160,7 +160,7 @@ function updateChart(month_n = null ,year_n = null ,facility_n = null ,loop = tr
 		chart.select("text#tooltip-d2")
 			.text(months[current_month].name+" "+years[current_year]+", "+facilities[current_facility].name+" facility")
 
-	    path.datum(data)
+		path.datum(data)
 			.transition()
 			.attr("d",line)
 			.attr("transform","translate("+margin.left+",0)")

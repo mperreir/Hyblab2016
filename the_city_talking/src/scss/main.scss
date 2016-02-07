@@ -133,23 +133,23 @@
 }
 
 #html{
-    border:0 none;
-    margin:0;
-    padding:0;
+	border:0 none;
+	margin:0;
+	padding:0;
 	width:100%;
 	height:100%;
 }
 #body{
-    border:0 none;
-    margin:0;
-    padding:0;
+	border:0 none;
+	margin:0;
+	padding:0;
 	width:100%;
 	height:100%;
 }
 #div{
-    border:0 none;
-    margin:0 auto;
-    padding:0;
+	border:0 none;
+	margin:0 auto;
+	padding:0;
 }
 
 .div{
@@ -198,7 +198,7 @@
 	color:rgb(61,16,224);
 	width:18%;
 	margin-bottom:3%;
-	
+
 }
 #blue_bracket2{
 	vertical-align:top;
@@ -455,7 +455,7 @@
 	width:45%;
 	vertical-align:top;
 	margin-left:-7%;
-	
+
 }
 #studyC{
 	display:inline-block;
@@ -680,7 +680,7 @@
 #bulle_401{
 	@extend .bulle;
 	height:40px;
-    animation-duration: 4s;
+	animation-duration: 4s;
 	animation-delay: 0.1s;
 	animation-timing-function:ease-out;
 	z-index: 101;
@@ -689,15 +689,15 @@
 	@extend .bulle;
 	margin-left:-1%;
 	height:30px;
-    animation-duration: 4s;
-    animation-delay: 0.1s;
+	animation-duration: 4s;
+	animation-delay: 0.1s;
 	animation-timing-function:ease-out;
 	z-index: 101;
 }
 #bulle_201{
 	@extend .bulle;
 	height:20px;
-    animation-duration: 4s;
+	animation-duration: 4s;
 	animation-delay: 0.1s;
 	animation-timing-function:linear;
 	z-index: 101;
@@ -705,15 +705,15 @@
 #bulle_101{
 	@extend .bulle3;
 	height:10px;
-    animation-duration: 4s;
-    animation-delay: 0.1s;
+	animation-duration: 4s;
+	animation-delay: 0.1s;
 	animation-timing-function:ease-in;
 	z-index: 101;
 }
 #bulle_402{
 	@extend .bulle2;
 	height:40px;
-    animation-duration: 4s;
+	animation-duration: 4s;
 	animation-delay: 0.1s;
 	animation-timing-function:ease-out;
 	z-index: 101;
@@ -722,15 +722,15 @@
 	@extend .bulle2;
 	margin-left:-1%;
 	height:30px;
-    animation-duration: 4s;
-    animation-delay: 0.1s;
+	animation-duration: 4s;
+	animation-delay: 0.1s;
 	animation-timing-function:ease-out;
 	z-index: 101;
 }
 #bulle_202{
 	@extend .bulle2;
 	height:20px;
-    animation-duration: 4s;
+	animation-duration: 4s;
 	animation-delay: 0.1s;
 	animation-timing-function:linear;
 	z-index: 101;
@@ -738,15 +738,15 @@
 #bulle_102{
 	@extend .bulle2;
 	height:10px;
-    animation-duration: 4s;
-    animation-delay: 0.1s;
+	animation-duration: 4s;
+	animation-delay: 0.1s;
 	animation-timing-function:ease-in;
 	z-index: 101;
 }
 #bulle_403{
 	@extend .bulle3;
 	height:40px;
-    animation-duration: 4s;
+	animation-duration: 4s;
 	animation-delay: 0.1s;
 	animation-timing-function:ease-out;
 	z-index: 101;
@@ -755,15 +755,15 @@
 	@extend .bulle3;
 	margin-left:-1%;
 	height:30px;
-    animation-duration: 4s;
-    animation-delay: 0.1s;
+	animation-duration: 4s;
+	animation-delay: 0.1s;
 	animation-timing-function:ease-out;
 	z-index: 101;
 }
 #bulle_203{
 	@extend .bulle3;
 	height:20px;
-    animation-duration: 4s;
+	animation-duration: 4s;
 	animation-delay: 0.1s;
 	animation-timing-function:linear;
 	z-index: 101;
@@ -771,8 +771,8 @@
 #bulle_103{
 	@extend .bulle3;
 	height:10px;
-    animation-duration: 4s;
-    animation-delay: 0.1s;
+	animation-duration: 4s;
+	animation-delay: 0.1s;
 	animation-timing-function:ease-in;
 	z-index: 101;
 }
