@@ -1,29 +1,26 @@
 .barreDefilement{
 	width: 50vw;
 	height: 15vh;
-	bottom: 2vh;
+	bottom: 5vh;
 	left: 25vw;
 	position : absolute;
-	margin-left: auto;
-	margin-right: auto;
 }
 
-.barreDefilement span{
+.barreDefilement .ct-label{
+	color: #80BC4E;
 	font-weight: bold;
 	font-size : 2vmin;
-	display : block;
-	max-width: 2em;
 }
 
-#chartParc .ct-label, #chartMotorisation .ct-label, #chartCarburant .ct-label{
-	color: #80BC4E;
+.barreDefilement .ct-line{
+	stroke-width: 0.25%;
 }
 
-#chartMotorisation .ct-line, #chartParc .ct-line, #chartCarburant .ct-line{
-	stroke-width: 1px;
+.barreDefilement .ct-point{
+	stroke-width : 2%;
 }
 
-#chartParc .ct-line, #chartParc .ct-point, #chartMotorisation .ct-line, #chartCarburant .ct-line, #chartMotorisation .ct-point, #chartCarburant .ct-point{
+.barreDefilement .ct-line,.barreDefilement .ct-point{
 	stroke: #80BC4E;
 }
 
@@ -35,29 +32,80 @@
 }
 #neuf{
 	z-index: 40;
-	top: 20vh;
+	top: 26vh;
 	left: 30vw;
 }
 
 #occasion{
 	z-index: 40;
-	top: 50vh;
+	top: 56vh;
 	left: 72vw;
 }
 
 .panneauAnnees{
 	position: absolute;
-	width: 10vw;
+	width: 20vmin;
 	bottom: 5vh;
 	right: 15vw;
 }
 
 .phrase{
 	position: absolute;
-	bottom: 15vh;
-	display: block;
+	bottom: 17vh;
+	font-size : 2vmin;
 	text-align : center;
-	width : 99vw;
+	width : 75vw;
+	margin : 0 12.5vw;
 	color: #70C2B8;
 
+}
+
+.labelDefilement{
+	position : absolute;
+	bottom : 0vh;
+	text-align: center;
+	width: 75vw;
+	font-size : 2vmin;
+	margin: 0 12.5vw;
+	color: #80BC4E;
+	font-weight: bold;
+}
+
+.labelDonut{
+	position: absolute;
+	text-align: center;
+	width: 10vw;
+	font-size: 2vmin;
+	color : #E44637;
+	font-weight: bold;
+	background-color: rgba(254, 231, 201, 0.5);
+	border-radius: 2vmin;
+}
+
+.labelDonut p{
+}
+
+#labelDonutMono{
+	top : 17vh;
+	left: 53vw;
+}
+
+#labelDonutNone{
+	top: 57vh;
+	left: 28vw;
+}
+
+#labelDonutBiPlus{
+	top: 60vh;
+	left: 50vw;
+}
+
+#labelDonutOccasion{
+	top: 62vh;
+	left: 77vw;
+}
+
+#labelDonutNeuf{
+	top: 21vh;
+	left: 21vw;
 }

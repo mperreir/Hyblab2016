@@ -15,28 +15,28 @@ var carPos = {
 		col : [
 			{
 				origine : {
-					top : 36,
+					top : 40.7,
 					left : 32
 				},
 				nbPlace : 11
 			},
 			{
 				origine : {
-					top : 34,
+					top : 38.7,
 					left : 38
 				},
 				nbPlace : 8
 			},
 			{
 				origine : {
-					top : 32.5,
+					top : 37.2,
 					left : 40
 				},
 				nbPlace : 8
 			},
 			{
 				origine : {
-					top : 29.6,
+					top : 34.3,
 					left : 43.2
 				},
 				nbPlace : 9
@@ -51,35 +51,35 @@ var carPos = {
 		col : [
 			{
 				origine : {
-					top : 45,
+					top : 49.7,
 					left : 51.2
 				},
 				nbPlace : 1
 			},
 			{
 				origine : {
-					top : 47.5,
+					top : 52.2,
 					left : 55.3
 				},
 				nbPlace : 6
 			},
 			{
 				origine : {
-					top : 42.8,
+					top : 47.5,
 					left : 55.8
 				},
 				nbPlace : 7
 			},
 			{
 				origine : {
-					top : 41.5,
+					top : 46.2,
 					left : 57.9
 				},
 				nbPlace : 7
 			},
 			{
 				origine : {
-					top : 38.8,
+					top : 43.5,
 					left : 60.4
 				},
 				nbPlace : 10
@@ -92,17 +92,48 @@ var allPlaces = null;
 
 function requestData(callback, type){
 	$.ajax({
-			url : "data/"+type+"/years",
-			type : "GET",
-			dataType : "text",
-			success : function(res, status){
-				data[type] = JSON.parse(res);
-				callback();
-			},
-			error : function(res, statut, error){
-				alert(res+" ; "+statut+" ; "+error);
-			}
-		});
+		url : "data/"+type+"/years",
+		type : "GET",
+		dataType : "text",
+		success : function(res, status){
+			data[type] = JSON.parse(res);
+			callback();
+		},
+		error : function(res, statut, error){
+			alert(res+" ; "+statut+" ; "+error);
+		}
+	});
+}
+
+function requestGeneratePhrase(type, annee){
+	if(!data[type]){
+		requestData(function(){
+			generatePhrase(type,annee);
+		}, "carburant");
+	}else{
+		generatePhrase(type,annee);
+	}
+}
+
+function generatePhrase(type, annee){
+	switch(type){
+		case "menage":
+			var pourcentage = Math.round(data.menage.data[annee].biPlus.pourcentage + data.menage.data[annee].mono.pourcentage);
+				$("#phraseMenage p").html("En "+annee+", il y avait "+pourcentage+"% de ménages motorisés.");	
+			break;
+		case "parc":
+			$("#phraseDetention p").html("En "+annee+",les français gardaient leur voiture "+data.menage.data[annee].detention.val+" ans en moyenne.");			
+			break;
+
+		case "carburant":
+			var cleanEnergies = ["electricite","hybride","gaz","superethanol","bicarburant"];
+			var value = 0;
+			cleanEnergies.forEach(function(carburant){
+				value += data.carburant.data[annee][carburant].pourcentage;
+			});
+			$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % de voitures vendues utilisaient des énergies propres.");		
+			break;
+	}
 }
 
 function requestChartCarburant(year){
@@ -161,8 +192,8 @@ function generateChart(res, statut){
 	var donnees = res;
 
 	var dataChart = generateChartData(donnees);
-	var options = fillOptions();
 	var chartId;
+	var chartLabel;
 	switch(donnees.categorie){
 		case "menage":
 			chartId = '#chartMotorisation';
@@ -174,6 +205,7 @@ function generateChart(res, statut){
 			chartId = '#chartParc';
 			break;	
 	}
+	var options = fillOptions(chartLabel);
 	var chart = new Chartist.Line(chartId, dataChart, options);
 	
 	var seq = 0;
@@ -347,24 +379,18 @@ function setLabelAnimation(param, categorie){
 				requestGenerateMenageDonut("biPlus", annee);
 				requestGenerateMenageDonut("none", annee);
 				requestGenerateInfo(categorie, annee, "s2");
-				var pourcentage = Math.round(data.menage.data[annee].biPlus.pourcentage + data.menage.data[annee].mono.pourcentage);
-				$("#phraseMenage p").html("En "+annee+", il y avait "+pourcentage+"% de ménages motorisés.");			
+				requestGeneratePhrase("menage", annee)			
 				break;
 			case "parc":
 				requestGenerateParcDonutCars("neuf", annee);
 				requestGenerateParcDonutCars("occasion", annee);
 				requestGenerateInfo(categorie, annee, "s3");
-				$("#phraseDetention p").html("En "+annee+",les français gardaient leur voiture "+data.menage.data[annee].detention.val+" ans en moyenne.");			
+				requestGeneratePhrase("parc", annee);				
 				break;
 			case "carburant":
 				requestGenerateInfo(categorie, annee, "s4");
 				requestChartCarburant(annee);
-				var cleanEnergies = ["electricite","hybride","gaz","superethanol","bicarburant"];
-				var value = 0;
-				cleanEnergies.forEach(function(carburant){
-					value += data.carburant.data[annee][carburant].pourcentage;
-				});
-				$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % de voitures vendues utilisent des énergies propres.");					
+				requestGeneratePhrase("carburant", annee)					
 				break;
 		}
 	});
@@ -405,41 +431,46 @@ function setPointAnimation(param, categorie, seq, delay, duration){
 
 function relaunchAnimation(index, nextIndex, direction){
 	switch(nextIndex){
+		case 1:
+			animateCloud(".nuage");
+			animateImage(".acceuil");
+			break;
 		case 2:
 			requestGenerateChartDefilement("menage");
 			requestGenerateMenageDonut("mono", "1990");
 			requestGenerateMenageDonut("biPlus", "1990");
 			requestGenerateMenageDonut("none", "1990");
 			requestGenerateInfo("menage", "1990", "s2");
-			var pourcentage = data.menage.data["1990"].biPlus.pourcentage + data.menage.data["1990"].mono.pourcentage;
-			$("#phraseMenage p").html("En "+"1990"+", il y avait "+pourcentage+"% de ménages motorisés.");
+			animateCloud(".nuage2");
+			requestGeneratePhrase("menage", "1990");
 			break;
 		case 3:
 			requestGenerateChartDefilement("parc");
 			requestGenerateParcDonutCars("neuf", "1990");
 			requestGenerateParcDonutCars("occasion", "1990");
 			requestGenerateInfo("parc", "1990", "s3");
-			$("#phraseDetention p").html("En 1990,les français gardaient leur voiture "+data.menage.data["1990"].detention.val+" ans en moyenne.");			
-			break;
+			requestGeneratePhrase("parc", "1990");
 		case 4:
 			requestGenerateChartDefilement("carburant");
 			requestGenerateInfo("carburant", "2009", "s4");
 			requestChartCarburant("2009");
-			var cleanEnergies = ["electricite","hybride","gaz","superethanol","bicarburant"];
-			var value = 0;
-			cleanEnergies.forEach(function(carburant){
-				value += data.carburant.data["2009"][carburant].pourcentage;
-			});
-			$("#phraseCarburant p").html("En 2009, "+Math.round(value*10)/10+" % de voitures vendues utilisent des énergies propres.");					
-				
+			requestGeneratePhrase("carburant", "2009")
 			break;
 	}
 	switch(index){
+		case 1:
+			animateStop($('.nuage'));
+			break;
+		case 2:
+			animateStop($('.nuage2'));
+			break;
 		case 3:
 			removeAllCars();
 			break;
 	}
 }
+
+
 
 function generateDonut(donnee,id){
 
@@ -464,7 +495,7 @@ function fillOptionsDonut(label){
 		donut: true,
 		showLabel: false,
 		total: 100,
-		donutWidth: 8,
+		donutWidth: "20%",
 		chartPadding: 0,
 		startAngle: 190,
 		plugins: [
@@ -557,20 +588,30 @@ function getRandomPlace(type, nb){
 }
 
 function removeAllCars(){
-	$('.cars .car').remove();
+	$(".cars .car").remove();
+}
+
+function removeACar(car){
+	car.remove();
 }
 
 function carDestroyAnimation(type){
-	$('.cars[id='+type+'] .car').stop().animate({
+	var car = $('.cars[id='+type+'] .car');
+	car.stop().animate({
 		opacity : 0
-	}, 1000);
+	}, 800, removeACar.bind(undefined, car));
 }
 
 function carSpawnAnimation(car,place){
 	car.stop().animate({
-		opacity : 1,
 		top : (place.top).toString()+"vh"
-	},1500);
+	},{
+		duration : Math.random()*500+1250,
+		easing : "easeOutBounce",
+		queue : false
+	}).animate({
+		opacity : 1
+	}, 3000);
 }
 
 
@@ -635,21 +676,130 @@ function generateBarChart(serie){
 	});
 }
 
+function animateStop(obj){
+	obj.stop();
+}
+function animateImage(className){
+	var obj = $(className);
+	animateTop(obj, 6000, 1);
+	obj.dequeue("top");
+	animateLeft(obj, 7500, 2);
+	obj.dequeue("left");
+}
+
+function animateCloud(className){
+	var obj = $(className);
+	animateTop(obj, 2000, 1);
+	obj.dequeue("top");
+	animateSize(obj, 3000, 3);
+	obj.dequeue("size");
+	animateLeft(obj, 2500, 2);
+	obj.dequeue("left");
+}
+function animateSize(obj, duration_factor, random_factor){
+	
+	obj.each(function(){
+
+		var seed = getPartiallyRandomSeed(random_factor);
+		var duration = getPartiallyRandomDuration(duration_factor);
+
+		$(this).animate({
+			width : seed[0]+"vw",
+			height : seed[0]+"vh"
+		},{
+			queue : "size",
+			duration : duration,
+		}).animate({
+			width : seed[1]+"vw",
+			height : seed[1]+"vh"
+		},{
+			queue : "size",
+			duration : duration,
+			done: animateSize.bind(undefined, obj, duration_factor, random_factor)
+		});
+	})
+}
+
+function animateTop(obj, duration_factor, random_factor){
+
+	obj.each(function(){
+
+		var seed = getPartiallyRandomSeed(random_factor);
+		var duration = getPartiallyRandomDuration(duration_factor);
+
+		$(this).animate({
+			top : seed[0]+"vh"
+		},{
+			queue : "top",
+			duration : duration,
+		}).animate({
+			top : seed[1]+"vh"
+		},{
+			queue : "top",
+			duration : duration,
+			done: animateTop.bind(undefined, obj, duration_factor, random_factor)
+		});
+	})
+}
+
+function animateLeft(obj, duration_factor, random_factor){
+
+	obj.each(function(){
+
+		var seed = getPartiallyRandomSeed(random_factor);
+		var duration = getPartiallyRandomDuration(duration_factor);
+
+		$(this).animate({
+			left : seed[0]+"vw"
+		},{
+			queue : "left",
+			duration : duration,
+			easing : "easeInOutBack"
+		}).animate({
+			left : seed[1]+"vw"
+		},{
+			queue : "left",
+			duration : duration,
+			easing : "easeInOutBack",
+			done: animateLeft.bind(undefined, obj, duration_factor, random_factor)
+		});
+	})
+}
+
+function getPartiallyRandomDuration(duration){
+	return Math.round((Math.random()-0.5)*duration/2+duration);
+}
+
+function getPartiallyRandomSeed(random){
+	var retour = [];
+
+	var seed = (Math.random()-0.5)*random*2;
+	if(seed > 0){
+		retour[0] = "+="+seed;
+		retour[1] = "-="+seed;
+	}else{
+		var absSeed = Math.abs(seed);
+		retour[0] = "-="+seed;
+		retour[1] = "+="+seed;
+	}
+	return retour;
+}
 jQuery.fn.extend({
     appendSvg:function (nom,attributs,text)
               {
-                  var svg = document.createElementNS("http://www.w3.org/2000/svg",nom);
-                  for (var cle in attributs)
+                  var newSvgNode = document.createElementNS("http://www.w3.org/2000/svg",nom);
+                  for (var attr in attributs)
                   {
-                          var valeur = attributs[cle];
-                          svg.setAttribute(cle,valeur);
+                          var valeur = attributs[attr];
+                          newSvgNode.setAttribute(attr,valeur);
                   }
-                  var appendices = this.length;
-                  for (var i = 0; i < appendices; i++)
+                  var size = this.length;
+                  for (var i = 0; i < size; i++)
                   {
-                          this[i].appendChild(svg);
+                          this[i].appendChild(newSvgNode);
                   }
-                  svg.appendChild(document.createTextNode(text));
-                  return svg;
+                  newSvgNode.appendChild(document.createTextNode(text));
+                  return newSvgNode;
               }
-}); 
+});
+

@@ -1,42 +1,48 @@
-#nuage1{
+
+.nuage, .nuage2{
 	position: absolute;
-	left:13vw;
-	top:-20vh;
-	z-index:80; 
+	z-index: 20;
+}
+
+#nuage1{
+	width: 7vw;
+	height: 10vh;
+	left:40vw;
+	top: 65vh;
 	
 }
 
 #nuage2{
-	position: absolute;
-	left:3vw;
-	top:0vh;
-	z-index:80; 
+	width: 9vw;
+	height: 10vh;
+	left:30vw;
+	top:50vh;
 }
 
 #nuage3{
-	position: absolute;
-	left:-10vw;
-	top:-15vh;
-	z-index:80; 
+	width: 8vw;
+	height: 11vh;
+	left:50vw;
+	top:50vh;
 }
 
 #nuage4{
-	position: absolute;
-	left:-10vw;
-	top:-34vh;
-	z-index:80; 
+	width: 4vw;
+	height: 5;
+	left:25vw;
+	top:25vh;
 }
 
 #nuage5{
-	position: absolute;
-	left:12vw;
-	top:-30vh;
-	z-index:80; 
+	width: 7vw;
+	height: 6vh;
+	left:45vw;
+	top:35vh;
 }
 
 #nuage6{
-	position: absolute;
-	left:2vw;
-	top:-50vh;
-	z-index:80; 
+	width: 9vw;
+	height: 11vh;
+	left:55vw;
+	top:60vh;
 }

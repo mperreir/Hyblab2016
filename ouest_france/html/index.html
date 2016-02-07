@@ -15,9 +15,6 @@
 		<link rel="stylesheet" href="css/styleChartDefilement.css">
 		<link rel="stylesheet" href="css/nuage.css">
 
-		<link rel="stylesheet" href="css/styleChartDefilement.css"/>
-		<link rel="stylesheet" href="script/chartist/dist/chartist.min.css"/>
-
 		<link rel="stylesheet" href="css/style.css"/>
 
 
@@ -28,7 +25,7 @@
 		<script type="text/javascript" src="script/jquery.fullPage.min.js"></script>
 		<script type="text/javascript" src="script/chartist/dist/chartist.min.js"></script>
 		<script type="text/javascript" src="script/chartist-plugin-fill-donut.min.js"></script>
-
+		<script type="text/javascript" src="script/jquery.easing.1.3.js"></script>
 		
 		<script type='text/javascript' src="chart.js"></script>
 
@@ -47,18 +44,20 @@
 			<!--First page-->
 
 				<div class="section" id="s1">
-				
+					
+					<img class="nuage" id="nuage1"src="images/nuages.svg" alt="nuage">
+					<img class="nuage" id="nuage2"src="images/nuages.svg" alt="nuage">
+					<img class="nuage" id="nuage3"src="images/nuages.svg" alt="nuage">
 					<img class="svg isles accueil" src="images/accueil-01.svg" alt="En voiture Simone !"/>
 					<h2>LES FRANÇAIS ET L’AUTOMOBILE : QUELLES HABITUDES DE CONSOMMATION ?</h2>
-					
 					<!--
 					<div id="nuage1"><img src="images/nuage_1.svg" alt="nuage"/></div>
 					<div id="nuage2"><img src="images/nuage_2.svg" alt="nuage"/></div>
 					<div id="nuage3"><img src="images/nuage_3.svg" alt="nuage"/></div>-->
 					
-					<a href="#2"><img  id="scroll" src="images/scroll_bas.svg" alt="Slide suivante"/></a>
+					<a href="#2" ><img id="scroll" src="images/scroll_bas.svg" alt="Slide suivante"/></a>
 
-					<div class="arrow bounce"></div>
+					<!--<div class="arrow bounce"></div>-->
 					<div></div>
 
 				</div>
@@ -72,15 +71,20 @@
 	               	<div id="nuage4"><img src="images/nuage_1.svg" alt="nuage"/></div>
 					<div id="nuage5"><img src="images/nuage_2.svg" alt="nuage"/></div>
 					<div id="nuage6"><img src="images/nuage_3.svg" alt="nuage"/></div>-->
-					
+									<img class="nuage2" id="nuage4"src="images/nuages.svg" alt="nuage">
+									<img class="nuage2" id="nuage5"src="images/nuages.svg" alt="nuage">
+									<img class="nuage2" id="nuage6"src="images/nuages.svg" alt="nuage">
 	                <img class="svg isles"  src="images/motor.svg" alt="Ménages motorisés"/>
 	                
 	                <div class="ct-chart donut" id="mono"></div>
+	                <div class="labelDonut" id='labelDonutMono'><p>Ménages mono-motorisés</p></div>
 	                <div class="ct-chart donut" id="none"></div>
+	                <div class="labelDonut" id='labelDonutNone'><p>Ménages non motorisés</p></div>
 	                <div class="ct-chart donut" id="biPlus"></div>
+	                <div class="labelDonut" id='labelDonutBiPlus'><p>Ménages bi-motorisés ou plus</p></div>
 	                
 	                <div class="ct-chart barreDefilement" id="chartMotorisation"></div>
-	
+	                <div class="labelDefilement" id='labelChartMotorisation'><p>Evolution du pourcentage de ménages motorisés.</p></div>
 	                <div class="info"><p></p></div>
 	                <div class="phrase" id="phraseMenage"><p></p></div>
 	                <img class="panneauAnnees" src="images/cliquer_annees.svg" alt="cliquez sur les années"/>
@@ -92,8 +96,11 @@
 					<h1>PLUTÔT NEUF OU OCCASION ?</h1>
 		          	<img class="svg isles" src="images/neuf_occaz2.svg" alt="Neuf ou occasion ?"/>
 		          	<div class="ct-chart donut" id="occasion"></div>
+	              <div class="labelDonut" id='labelDonutOccasion'><p>Véhicules d'occasion</p></div>
 		          	<div class="ct-chart donut" id="neuf"></div>
+	              <div class="labelDonut" id='labelDonutNeuf'><p>Véhicules neufs</p></div>
 		          	<div class="ct-chart barreDefilement" id="chartParc"></div>
+	              <div class="labelDefilement" id='labelChartParc'><p>Evolution de la durée de détention d'un véhicule au sein d'un ménage.</p></div>
 		          	<div class="cars" id="occasion"></div>
 		          	<div class="cars" id="neuf"></div>
 		          	<div class="info"><p></p></div>
@@ -108,6 +115,7 @@
           			<h1>À QUOI TU CARBURES ?</h1>
           			<img class="svg" id="pompe" src="images/pompe.svg" alt="Pompe"/>
 	          		<div class="ct-chart barreDefilement" id="chartCarburant"></div>
+	              <div class="labelDefilement" id='labelChartCarburant'><p>Evolution du pourcentage de véhicules propres vendus.</p></div>
 
           			<div class="info" id="info_carbu"><p></p></div>
           			<div id="barchart"></div>
@@ -121,7 +129,7 @@
 				<div class="section" id="s5">
 					<h2>Cette datavisuation a été réalisée dans le cadre du HybLab 2016 par l’équipe K2000 composée de :</h2>
 
-					<img id="foooter" src="images/foooter.svg" alt="TEAM K2000"/>
+					<img id="foooter" src="images/foooter2.svg" alt="TEAM K2000"/>
 
 					<div id="logo">
 						<div>
