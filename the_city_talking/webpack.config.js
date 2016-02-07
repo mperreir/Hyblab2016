@@ -4,7 +4,8 @@ const webpack = require("webpack");
 module.exports = {
     entry: "client.js",
     resolve: {
-        root: path.resolve("src/js")
+        root: path.resolve(__dirname,"src/js"),
+        modulesDirectory:path.resolve(__dirname,"node_modules")
     },
     output: {
         path: path.join(__dirname,'html/js'),

@@ -2,6 +2,32 @@
 
 const fs = require('fs');
 const moment = require('moment');
+const webpack = require('webpack');
+const npm = require('npm');
+
+// BUILDING CLIENT SIDE JAVASCRIPT
+npm.load({loglevel:"silent",progress:false},() => {
+	console.info("the_city_talking : Building client .js");
+	console.info("the_city_talking : Installing npm dependencies");
+	npm.commands.install([],(err,data) => {
+		if (err) {
+			console.error(err);
+		}
+		console.info("the_city_talking : Done installing npm dependencies, running webpack");
+		webpack(require(path.resolve(__dirname,"webpack.config.js")),(err,stats) => {
+			if (err){
+				console.error(err);
+			}
+			if (stats.hasErrors()){
+				console.error("the_city_talking : webpack encoutered an error");
+				console.error(stats.toString());
+			}else{
+				console.info("the_city_talking : Successfully built client .js");
+			}
+		})
+	})
+})
+// END BUILDING CLIENT SIDE JAVASCRIPT
 
 function truncate(value){
 	return Math.round(100 * value) / 100 ;
