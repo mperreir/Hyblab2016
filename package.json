@@ -6,7 +6,10 @@
   "repository": "",
   "dependencies": {
     "basic-auth-connect": "^1.0.0",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "moment": "^2.11.1",
+    "npm": "^3.7.1",
+    "webpack": "^1.12.13"
   },
   "author": "Matthieu PERREIRA DA SILVA",
   "license": "MIT"
