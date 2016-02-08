@@ -1,0 +1,35 @@
+/** FONTS FROM FONT SQUIRREL **/
+
+@font-face {
+    font-family: 'PTSansRegular';
+    src: url('PTS55F-webfont.eot');
+    src: url('PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PTS55F-webfont.woff') format('woff'),
+         url('PTS55F-webfont.ttf') format('truetype'),
+         url('PTS55F-webfont.svg#PTSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pt_sansitalic';
+    src: url('PTS56F-webfont.eot');
+    src: url('PTS56F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PTS56F-webfont.woff') format('woff'),
+         url('PTS56F-webfont.ttf') format('truetype'),
+         url('PTS56F-webfont.svg#pt_sansitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Museo500Regular';
+    src: url('Museo500-Regular-webfont.eot');
+    src: url('Museo500-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Museo500-Regular-webfont.woff') format('woff'),
+         url('Museo500-Regular-webfont.ttf') format('truetype'),
+         url('Museo500-Regular-webfont.svg#Museo500Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

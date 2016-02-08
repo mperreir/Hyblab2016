@@ -1,0 +1,603 @@
+[
+    {
+        "name" : "Choisissez un thème :",
+        "pos_button_y" : 1000000,
+        "texte_button" : "",
+        "data_centrale" :[],
+        "data":[
+            {
+                "name" : "",
+                "value" : 50,
+                "color" : "#ffd300",
+                "affiche" : false
+            }
+        ]
+    },
+    {
+        "id": "data_sexe",
+        "name": "Répartition par sexe",
+        "adresse_picto": "./profilDatas/icone/sexe.png",
+        "adresse_picto_hoover" : "./profilDatas/icone/sexehoover.png",
+        "texte_data": "48% d'hommes ; 52 % de femmes",
+        "pos_button_x" : -25,
+        "pos_button_y" : -225,
+        "texte_button" : "Sexe",
+        "data_centrale":[
+            {
+                "type" : "image",
+                "pos_x" : 155,
+                "pos_y" : -20,
+                "width" : 80,
+                "height" : 40,
+                "image" : "/profilDatas/pourcentage/pourcentage.gif"
+            },
+            {
+                "type" : "image",
+                "pos_x" : -225,
+                "pos_y" : -20,
+                "width" : 80,
+                "height" : 40,
+                "image" : "/profilDatas/pourcentage/pourcentage1.gif"
+            },
+            {
+                "type" : "image",
+                "pos_x" : 25,
+                "pos_y" : -150,
+                "width" : 250,
+                "height" : 300,
+                "image" : "/profilDatas/Profil_illustration/homme.gif"
+            },
+            {
+                "type" : "image",
+                "pos_x" : -150,
+                "pos_y" : -150,
+                "width" : 250,
+                "height" : 300,
+                "image" : "/profilDatas/Profil_illustration/femme.gif"
+            }
+        ],
+        "titre_commentaire" : "Une quasi-parité homme/femme",
+        "commentaire": "La proportion homme/femme est quasiment égale, même si celles-ci ont une légère supériorité numérique. Au national, l'écart s'accentue de 5 points. Cela peut s'expliquer par l'origine du RSA : fusion du RMI et Allocation Parent Isolé (API). Les femmes qui élèvent seules leur(s) enfant(s) sont plus nombreuses que les hommes.  ",
+        "data": [
+          {
+            "name": "Homme",
+            "value": 48,
+            "color":"#007aae",
+            "affiche" : true
+          },
+          {
+            "name": "Femme",
+            "value": 52,
+            "color":"#aec900",
+            "affiche" : true
+          }
+        ]
+    },
+    {
+        "id":"data_age",
+        "name":"Répartition par tranche d'âge",
+        "adresse_picto": "./profilDatas/icone/Age.png",
+        "adresse_picto_hoover" : "./profilDatas/icone/Agehoover.png",
+        "texte_data" : "1/2 a moins de 35 ans",
+        "pos_button_x" : 125,
+        "pos_button_y" : -165,
+        "texte_button" : "Age",
+        "data_centrale":[
+            {
+                "type" : "image",
+                "pos_x" : -50,
+                "pos_y" : -150,
+                "width" : 250,
+                "height" : 300,
+                "image" : "/profilDatas/Profil_illustration/Age.gif"
+            },
+            {
+                "type" : "text",
+                "pos_x" : -200,
+                "pos_y" : -40,
+                "width" : 200,
+                "height" : 200,
+                "text" : [
+                    {
+                        "type" : "normal",
+                        "text" : "La moitié des",
+                        "y" : -40,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "allocataires a moins de",
+                        "y" : -10,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "bold",
+                        "text" : "35",
+                        "y" : 20,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "ans",
+                        "y" : 20,
+                        "x" : -170
+                    }
+                ]
+            }
+        ],
+        "titre_commentaire":"Jeune et précaire",
+        "commentaire":"Le moins de 35 ans représentent la grande majorité des allocataires car les jeunes sont les plus touchés par la crise. Les raisons sont multiples : manque de formation, de qualifications, d’expérience, contrats précaires, salaires peu élevés",
+        "data": [
+            {
+                "name" : "Moins de 25 ans",
+                "value" : 7,
+                "color":"#1abaff",
+                "affiche" : true
+            },
+            {
+                "name" : "De 25 à 34 ans",
+                "value" : 40,
+                "color":"#008fcc",
+                "affiche" : true
+            },
+            {
+                "name" : "De 35 à 44 ans",
+                "value" : 26,
+                "color" : "#007aae",
+                "affiche" : true
+            },
+            {
+                "name" : "De 45 à 54 ans",
+                "value" : 18,
+                "color" : "#005980",
+                "affiche" : true
+            },
+            {
+                "name" : "De 55 à 64 ans",
+                "value" : 9,
+                "color" : "#00354d",
+                "affiche" : true
+            },
+            {
+                "name" : "Plus de 65 ans ",
+                "value" : 0,
+                "color" : "#00121a",
+                "affiche" : true
+            }
+        ]
+    },
+    {
+        "id":"data_famille",
+        "name":"Vie familiale",
+        "adresse_picto": "./profilDatas/icone/viefamille.png",
+        "adresse_picto_hoover" : "./profilDatas/icone/viefamillehoover.png",
+        "texte_data" : "-> 84% de celibataires; -> 64% nationnal",
+        "pos_button_x" : 165,
+        "pos_button_y" : -25,
+        "texte_button" : "Famille",
+        "data_centrale":[
+            {
+                "type" : "image",
+                "pos_x" : 50,
+                "pos_y" : -150,
+                "width" : 250,
+                "height" : 300,
+                "image" : "/profilDatas/Profil_illustration/Vie.gif"
+            },
+            {
+                "type" : "image",
+                "pos_x" : -50,
+                "pos_y" : -150,
+                "width" : 250,
+                "height" : 300,
+                "image" : "/profilDatas/Profil_illustration/Vie-2.gif"
+            },
+            {
+                "type" : "text",
+                "pos_x" : -200,
+                "pos_y" : -40,
+                "width" : 200,
+                "height" : 200,
+                "text" : [
+                    {
+                        "type" : "bold",
+                        "text" : "84%",
+                        "y" : -40,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "des allocataires ",
+                        "y" : -40,
+                        "x" : -150
+                    },{
+                        "type" : "normal",
+                        "text" : "sont célibataires en",
+                        "y" : -10,
+                        "x" : -200
+                    },{
+                        "type" : "normal",
+                        "text" : "Loire-Atlantique",
+                        "y" : 20,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "En France, ils sont",
+                        "y" : 50,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "bold",
+                        "text" : "64%",
+                        "y" : 80,
+                        "x" : -200
+                    }
+                ]
+            }
+        ],
+        "titre_commentaire":"Un isolement marqué",
+        "commentaire":"60 % des allocataires sont des personnes célibataires, divorcées ou séparées. La question de l’accompagnement de ces publics est donc primordiale. Le Département organise des ateliers d’aide à la création d’entreprise, de recherche d’emploi ou encore de d’amélioration de CV qui visent un retour à l’emploi par le biais d’une aide personnalisée.",
+        "data": [
+            {
+                "name" : "Célibataire",
+                "value" : 84,
+                "color":"#aec900",
+                "affiche" : true
+            },
+            {
+                "name" : "En couple",
+                "value" : 16,
+                "color":"#098e2c",
+                "affiche" : true
+            }
+        ]
+    },
+    {
+        "id":"data_enfants",
+        "name":"Avec ou sans enfant",
+        "adresse_picto": "./profilDatas/icone/enfant.png",
+        "adresse_picto_hoover" : "./profilDatas/icone/enfanthoover.png",
+        "texte_data" : "1 enfant par foyer",
+        "pos_button_x" : 95,
+        "pos_button_y" : 95,
+        "texte_button" : "Enfants",
+        "col_button" : "#de007c",
+        "data_centrale":[
+            {
+                "type" : "image",
+                "pos_x" : 50,
+                "pos_y" : -150,
+                "width" : 250,
+                "height" : 300,
+                "image" : "/profilDatas/Profil_illustration/Enfant.gif"
+            },
+            {
+                "type" : "text",
+                "pos_x" : -200,
+                "pos_y" : 0,
+                "width" : 200,
+                "height" : 200,
+                "text" : [
+                    {
+                        "type" : "bold",
+                        "text" : "0,7",
+                        "y" : 0,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "enfant par foyer",
+                        "y" : 0,
+                        "x" : -167
+                    },{
+                        "type" : "normal",
+                        "text" : "en moyenne",
+                        "y" : 30,
+                        "x" : -200
+                    }
+                ]
+            }
+        ],
+        "titre_commentaire" : "Peu d'enfants à charge",
+        "commentaire":"17 316 personnes n’ont pas d’enfants sur les 23 970 allocataires. Cependant, dans les allocataires ayant plus de 3 enfants, 45% en ont plus de trois. Ce sont donc des jeunes ou des familles nombreuses qui sont les allocataires les plus nombreux.",
+        "data": [
+            {
+                "name" : "Sans enfant",
+                "value" : 61.5,
+                "color":"#b37700",
+                "affiche" : true
+            },
+            {
+                "name" : "Avec enfant",
+                "value" : 38.5,
+                "color":"#f7a400",
+                "affiche" : true
+            }
+            
+        ]
+    },
+    {
+        "id":"data_ancienneté",
+        "name":"Depuis combien de temps ?",
+        "adresse_picto": "./profilDatas/icone/calendrier.png",
+        "adresse_picto_hoover" : "./profilDatas/icone/calendrierhoover.png",
+        "pos_button_x" : -155,
+        "pos_button_y" : 95,
+        "texte_button" : "Ancienneté",
+        "data_centrale":[
+            {
+                "type" : "image",
+                "pos_x" : -55,
+                "pos_y" : -118,
+                "width" : 286,
+                "height" : 237,
+                "image" : "/profilDatas/Profil_illustration/calendrier.gif"
+            },
+            {
+                "type" : "text",
+                "pos_x" : -200,
+                "pos_y" : -40,
+                "width" : 200,
+                "height" : 200,
+                "text" : [
+                    {
+                        "type" : "bold",
+                        "text" : "64%",
+                        "y" : -40,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "sont ",
+                        "y" : -40,
+                        "x" : -155
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "allocataires depuis",
+                        "y" : -10,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "moins de",
+                        "y" : 20,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "bold",
+                        "text" : "2",
+                        "y" : 20,
+                        "x" : -113
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "ans",
+                        "y" :20,
+                        "x" : -97
+                    }
+                ]
+            }
+        ],
+        "titre_commentaire":"Allocataires depuis peu",
+        "commentaire":"La Loire-Atlantique compte peu d’allocataires longue durée. Seulement 13% sont dans le dispositif RSA depuis plus de cinq ans, ce qui est en dessous de la moyenne nationale. Une des explications est que la crise a touché la Loire-Atlantique plus tardivement comparé au territoire national.",
+        "data": [
+            {
+                "name" : "Moins d'un an",
+                "value" : 42,
+                "color":"#ff4d54",
+                "affiche" : true
+            },
+            {
+                "name" : "De 1 à 2 ans ",
+                "value" : 22,
+                "color":"#ff1a24",
+                "affiche" : true
+            },
+            {
+                "name" : "De 2 à 5 ans",
+                "value" : 23,
+                "color" : "#e2000a",
+                "affiche" : true
+            },
+            {
+                "name" : "Plus 5 ans",
+                "value" : 13,
+                "color" : "#990007",
+                "affiche" : true
+            }
+        ]
+    },
+    {
+        "id":"data_activités",
+        "name":"Activité des travailleurs pauvres",
+        "adresse_picto": "./profilDatas/icone/travailleur.png",
+        "adresse_picto_hoover" : "./profilDatas/icone/travailleurhoover.png",
+        "texte_data" : "5000 ont une activité",
+        "pos_button_x" : -225,
+        "pos_button_y" : -25,
+        "texte_button" : "Activité",
+        "data_centrale":[
+            {
+                "type" : "image",
+                "pos_x" : -50,
+                "pos_y" : -118,
+                "width" : 189,
+                "height" : 231,
+                "image" : "/profilDatas/Profil_illustration/Nb-dossier.gif"
+            },
+            {
+                "type" : "text",
+                "pos_x" : -200,
+                "pos_y" : -40,
+                "width" : 200,
+                "height" : 200,
+                "text" : [
+                    {
+                        "type" : "bold",
+                        "text" : "5000",
+                        "y" : -70,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "allocataires ont",
+                        "y" : -40,
+                        "x" : -200
+                    },{
+                        "type" : "normal",
+                        "text" : "une activité",
+                        "y" :-10,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "professionnelle ",
+                        "y" : 20,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "avec un revenu",
+                        "y" : 50,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "faible",
+                        "y" : 80,
+                        "x" : -200
+                    }
+                ]
+            }
+        ],
+        "titre_commentaire" :"18% de travailleurs pauvres",
+        "commentaire":"Le département compte 5 000 allocataires en activité. Ce sont pour beaucoup des auto-entrepreneurs, des travailleurs indépendants, salariés à temps partiel ou temps très partiel. L’allocation du RSA compense la faiblesse des revenus issus de leur travail qui ne leur permet pas d’assurer le quotidien.",
+        "data": [
+            {
+                "name" : "Inactifs",
+                "value" : 51,
+                "color":"#660039",
+                "affiche" : true
+            },
+            {
+                "name" : "Chômeur",
+                "value" : 31,
+                "color":"#b30064",
+                "affiche" : true
+            },
+            {
+                "name" : "En activité",
+                "value" : 11,
+                "color" : "#de007c",
+                "affiche" : true
+            },
+            {
+                "name" : "Entrepreneur",
+                "value" : 7,
+                "color" : "#ff4db0",
+                "affiche" : true
+            }
+        ]
+    },
+    {
+        "id":"data_revenu",
+        "name":"Revenu en fonction du nombre de bénéficiaires",
+        "adresse_picto": "./profilDatas/icone/revenu.png",
+        "adresse_picto_hoover" : "./profilDatas/icone/revenuhoover.png",
+        "texte_data" : "648€ chiffre 2012",
+        "pos_button_x" : -165,
+        "pos_button_y" : -165,
+        "texte_button" : "Revenu",
+        "data_centrale":[
+            {
+                "type" : "image",
+                "pos_x" : 0,
+                "pos_y" : -89,
+                "width" : 170,
+                "height" : 179,
+                "image" : "/profilDatas/Profil_illustration/revenu.gif"
+            },
+            {
+                "type" : "text",
+                "pos_x" : -200,
+                "pos_y" : 0,
+                "width" : 200,
+                "height" : 200,
+                "text" : [
+                    {
+                        "type" : "normal",
+                        "text" : "En moyenne, un allocataire",
+                        "y" : -80,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "gagne",
+                        "y" : -50,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "bold",
+                        "text" : "648 € par mois",
+                        "y" : -50,
+                        "x" : -138
+                    },{
+                        "type" : "normal",
+                        "text" : "Par comparaison,",
+                        "y" : 10,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "le revenu médian",
+                        "y" : 40,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "Loire-Atlantique",
+                        "y" : 70,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "normal",
+                        "text" : "est de ",
+                        "y" : 100,
+                        "x" : -200
+                    },
+                    {
+                        "type" : "bold",
+                        "text" : "1600 €",
+                        "y" : 100,
+                        "x" : -140
+                    }
+                ]
+            }
+        ],
+        "titre_commentaire" : "90% des allocataires sous le seuil pauvreté",
+        "commentaire":"650€ c’est le revenu moyen de ceux qui perçoivent le RSA, et 9 allocataire sur 10 vivent sous le seuil de pauvreté. Ces chiffres démentent la croyance selon laquelle les allocataires du RSA vivent confortablement.",
+        "data": [
+             {
+                "name" : "moins de 500€",
+                "value" : 19,
+                "color":"#fdf39b",
+                "affiche" : true
+            },
+            {
+                "name" : "500€ - 1000€",
+                "value" : 72,
+                "color":"#ffd94e",
+                "affiche" : true
+            },
+            {
+                "name" : "plus de 1000€",
+                "value" : 9,
+                "color" : "#fbbb10",
+                "affiche" : true
+            }
+        ]
+    }
+
+]
