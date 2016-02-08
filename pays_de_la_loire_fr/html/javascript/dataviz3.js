@@ -363,9 +363,18 @@ function addRotation(id)
 
 function initConcl()
 {
+	document.getElementById('emploi').style.display = "block";
+	document.getElementById('propre').style.display = "block";
+	document.getElementById('eco').style.display = "block";
 	setTimeout(function(){document.getElementById('emploi').classList.add("animConcl")},1);
 	setTimeout(function(){document.getElementById('propre').classList.add("animConcl")},1);
 	setTimeout(function(){document.getElementById('eco').classList.add("animConcl")},1);
+}
+
+function hideConcl() {
+	document.getElementById('emploi').style.display = "none";
+	document.getElementById('propre').style.display = "none";
+	document.getElementById('eco').style.display = "none";
 }
 
 function rand(min,max){

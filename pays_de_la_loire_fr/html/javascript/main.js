@@ -39,14 +39,15 @@ function updateCurrentSection(){
 
 		case "5thPage" :
 			initI3();
+			hideConcl();
 		break;
 
 		case "6thPage" :
 			init3();
+			hideConcl();
 		break;
 
 		case "7thPage" :
-		//alert("start");
 			reset3();
 			initConcl();
 			
@@ -80,11 +81,11 @@ function updateCurrentSection(){
 
 			case "6thPage" :
 				reset3();
+				
 			break;
 
 			case "7thPage" :
-				//alert("reset");
-				
+				hideConcl();				
 			break;
 
 			case "8thPage" :
