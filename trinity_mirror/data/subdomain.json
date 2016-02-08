@@ -1,0 +1,9 @@
+window.subdomain = {
+	"income": "income ..............",
+	"employment": "employment............",
+	"education": "education...........",
+	"health": "health.............",
+	"crime": "crime.............",
+	"housing": "housing...............",
+	"environment": "environment................"
+}
