@@ -111,9 +111,9 @@ h4{
 }
 
 .info{
-	background-color: rgba(254, 231, 201, 0.5);
+	background-color: rgb(254, 231, 201);
+	opacity:  0.6;
 	position: absolute;
-	top: vh;
 	left: 4vw;
 	padding: 2vmin;
 	width: 18vw;
@@ -124,6 +124,11 @@ h4{
 	color: #70C2B8;
 	font-size: 2vmin;
 	top : 30vh;
+}
+
+#info_carbu{
+	height: 50vh;
+	top : 25vh;
 }
 
 .donut{

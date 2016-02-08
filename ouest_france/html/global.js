@@ -10,10 +10,11 @@ $(document).ready(function() {
     	navigation : true,
     	onLeave : relaunchAnimation
     });
-
+    counterSoldCars();
 	requestGenerateChartDefilement("menage");
 	requestGenerateChartDefilement("parc");
 	requestGenerateChartDefilement("carburant");
 	animateCloud(".nuage");
 	animateImage(".accueil");
+	animateMethodo();
 });

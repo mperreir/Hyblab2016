@@ -459,10 +459,11 @@ function relaunchAnimation(index, nextIndex, direction){
 	}
 	switch(index){
 		case 1:
-			animateStop($('.nuage'));
+			animateStop('.nuage');
+			animateStop('.acceuil');
 			break;
 		case 2:
-			animateStop($('.nuage2'));
+			animateStop('.nuage2');
 			break;
 		case 3:
 			removeAllCars();
@@ -676,14 +677,16 @@ function generateBarChart(serie){
 	});
 }
 
-function animateStop(obj){
-	obj.stop();
+function animateStop(className){
+	$(className).stop();
 }
 function animateImage(className){
 	var obj = $(className);
-	animateTop(obj, 6000, 1);
+	animateTop(obj, 4000, 1);
 	obj.dequeue("top");
-	animateLeft(obj, 7500, 2);
+	animateSize(obj, 2000, 1);
+	obj.dequeue("size");
+	animateLeft(obj, 4500, 2);
 	obj.dequeue("left");
 }
 
@@ -691,7 +694,7 @@ function animateCloud(className){
 	var obj = $(className);
 	animateTop(obj, 2000, 1);
 	obj.dequeue("top");
-	animateSize(obj, 3000, 3);
+	animateSize(obj, 3000, 2.5);
 	obj.dequeue("size");
 	animateLeft(obj, 2500, 2);
 	obj.dequeue("left");
@@ -709,12 +712,14 @@ function animateSize(obj, duration_factor, random_factor){
 		},{
 			queue : "size",
 			duration : duration,
+			easing : "easeInOutSine"
 		}).animate({
 			width : seed[1]+"vw",
 			height : seed[1]+"vh"
 		},{
 			queue : "size",
 			duration : duration,
+			easing : "easeInOutSine",
 			done: animateSize.bind(undefined, obj, duration_factor, random_factor)
 		});
 	})
@@ -732,11 +737,13 @@ function animateTop(obj, duration_factor, random_factor){
 		},{
 			queue : "top",
 			duration : duration,
+			easing : "easeInOutSine"
 		}).animate({
 			top : seed[1]+"vh"
 		},{
 			queue : "top",
 			duration : duration,
+			easing : "easeInOutSine",
 			done: animateTop.bind(undefined, obj, duration_factor, random_factor)
 		});
 	})
@@ -754,13 +761,13 @@ function animateLeft(obj, duration_factor, random_factor){
 		},{
 			queue : "left",
 			duration : duration,
-			easing : "easeInOutBack"
+			easing : "easeInOutSine"
 		}).animate({
 			left : seed[1]+"vw"
 		},{
 			queue : "left",
 			duration : duration,
-			easing : "easeInOutBack",
+			easing : "easeInOutSine",
 			done: animateLeft.bind(undefined, obj, duration_factor, random_factor)
 		});
 	})
@@ -803,3 +810,57 @@ jQuery.fn.extend({
               }
 });
 
+function counterSoldCars(){
+	var counter = 0;
+	$("#carCounter").html("Depuis votre arrivée sur cette page, aucune voiture n'a été vendue.");
+	setInterval(function(){
+		if(counter < 0) counter = 0;
+		counter++;
+		if(counter > 1) $("#carCounter").html("Depuis votre arrivée sur cette page, "+counter+" voitures ont été vendues.");
+		else if(counter == 1) $("#carCounter").html("Depuis votre arrivée sur cette page, une voiture a été vendue.");
+		
+	},4200);
+}
+
+function animateMethodo(){
+	$("#methodo").click(function(){
+		if($(this).attr("statut") == "small"){
+
+			$(this).attr("statut", "big");
+			$(this).animate({
+				left : "20vw"
+			},1000).animate({
+				height : "80vh",
+				width : "60vw"
+			},1000).animate({
+				opacity : 1
+			}, 500, function(){
+				$("#textMethodo").css("display", "block");
+			});
+
+			$("#textMethodo").delay(2500).animate({
+				opacity : 1
+			},1000);
+		}
+		else{
+			$(this).attr("statut", "small");
+
+			$("#textMethodo").animate({
+				opacity : 0
+			},1000, function(){
+				$(this).css("display", "none");
+			});
+
+			$(this).delay(1000).animate({
+				opacity : 0.6
+			},500).animate({
+				height : "5ch",
+				width : "10vw"
+			},1000).animate({
+				left: "75vw"
+			}, 1000);
+
+			
+		}
+	});
+}

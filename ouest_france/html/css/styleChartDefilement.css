@@ -109,3 +109,39 @@
 	top: 21vh;
 	left: 21vw;
 }
+
+#blocCarCounter{
+	position: absolute;
+	height: 20vh;
+	width: 30vw;
+	top : 5vh;
+	left : 2.5vw;
+}
+
+
+#methodo{
+	position: absolute;
+	height: 5vh;
+	width: 10vw;
+	top : 10vh;
+	left : 75vw;
+	vertical-align: center;
+	cursor : pointer;
+	z-index: 20;
+}
+
+#methodo>div{
+	display : none;
+	opacity: 0;
+	font-size : 1.6vmin;
+}
+
+#methodo h4{
+	text-align: center;
+}
+
+
+#methodo h3{
+	color: #70C2B8;
+	font-size: 2vmin;
+}
