@@ -328,8 +328,8 @@ function addRotation(id)
 	valeur2008_3.innerHTML = "";
 	valeur2011_3.innerHTML = "+237%";
 	valeur2014_3.innerHTML = "+72%";
-	valeur2022_3.innerHTML = "62%";
-	valeur2_2022_3.innerHTML = "32%";
+	valeur2022_3.innerHTML = "+62%";
+	valeur2_2022_3.innerHTML = "+32%";
 	valeur2030_3.innerHTML = "+45%";
 	valeur2_2030_3.innerHTML = "+29%";
 
