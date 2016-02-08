@@ -1,30 +1,348 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-      <h1>Hyblab 2016</h1>
-    </header>
+		<div id="blue_header">
+			<img id="blue_img" src="res/g51.png"></img>
+			<h5 id="blue_text">AIR POLLUTION.</h5>
+		</div>
 
-    <!-- Le contenu du site -->
-    <p>replace this content by your web app !</p>
+		<div id="div2">
+			<img id="text01" src="res/text01.png"></img>
+			<img id="blue_bracket" src="res/line103.png"></img>
+			<h2 id="title1"><strong id="bold">A LENS ON LEEDS AIR POLLUTION</strong></h2>
+			<img id="blue_bracket2" src="res/line103.png"></img>
+			<h6 id="text1">AIR POLLUTION IN LEEDS HAS BEEN A GROWING CONCERN FOR OUR
+			READERS FOR SOME TIME. HERE, WE PRESENT FOR THE FIRST TIME A
+			STUDY REVIEWING TWO TYPES OF DATA: AVAILABLE AIR QUALITY
+			DATA FROM METEREOLOGICAL SENSOR STATIONS IN THE CITY
+			CENTRE OVER FIVE YEARS AND MEDICAL PRESCRIPTION DATA FOR
+			RESPIRATORY PROBLEMS OVER THE SAME PERIOD. WE HAVE ANALYSED
+			THE DATA FOR TRENDS TO SEE IF THERE IS A CORRELATION AS
+			RESEARCH TO DATE WOULD SUGGEST. WE FIND THAT, IT IS NOT QUITE
+			AS SIMPLE AS IT MIGHT APPEAR. </h6>
+			<img id="arrow" src="res/g33.png"></img>
+		</div>
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2016</p>
-    </footer>
-    </div>
-  </body>
+		<div id="div3">
+			<img id="text02" src="res/text02.png"></img>
+			<img id="div3_bracket" src="res/line103.png"></img>
+			<h2 id="title2"><strong id="bold">AIR POLLUTION</strong> IN <strong id="bold">LEEDS</strong> <strong id="bold">5</strong> YEAR STUDY</h2>
+			<img id="div3_bracket2" src="res/line103.png"></img>
+
+			<div id="div_dv1">
+				<svg class="dataviz1" id="dv1"><linearGradient id="line-gradient-d1"></linearGradient></svg>
+			</div>
+
+			<div id=subdiv3A>
+				<h4 id="text2_title">YEAR CURVE</h4>
+				<h5 id="text2">Yearly data shows the average NO2
+				and PM2.5 levels over a 5 year period.
+				Results tend to suggest the tendency
+				of air being polluted at the highest
+				level during the winter months when
+				the air temperature traditionally gets
+				lower.
+				</h5>
+				<h5 id="text2">In contrast, the levels of NO2 and
+				PM2.5 are signifcantly lower during
+				summer months when air temperature
+				increases.
+				</h5>
+			</div>
+
+			<div id=subdiv3B>
+				<h4 id="text3_title">WEATHER IMPACT ON AIR QUALITY</h4>
+				<h5 id="text3">Analysing air pollution data for Leeds on an hourly and daily basis covering a
+				period of 2010 to 2015, several important facts emerge afecting the health of
+				all those living and working in the area. From the data we are able to see particular
+				seasonal trends, these show increased levels of dangerous small particle
+				matter during the winter months. Levels generally show an upward trend
+				throughout autumn as the weather temperatures drop, this trend is reversed in
+				the spring as temperatures begin increasing toward summer. In general the
+				summer months show the lowest levels dangerous air pollution.
+				</h5>
+				<h5 id="text3">There have been periods over the period under study, which show unexplainable
+				days of extreme contamination. However, the met ofce reported that
+				particularly bad storms struck the Yorkshire area around the three most prominent
+				events of very high contamination. Although no direct cause is possible
+				to attribute to the events, the recurrence of similar outcomes tends to suggest
+				the thee could be a relationship between the events.</h5>
+			</div>
+		</div>
+
+		<div id="div4">
+			<img id="text03" src="res/text03.png"></img>
+			<img id="div4_bracket" src="res/line103.png"></img>
+			<h2 id="title3"><strong id="bold">DAILY</strong> AIR QUALITY IN <strong id="bold">LEEDS</strong></h2>
+			<img id="div4_bracket2" src="res/line103.png"></img>
+
+			<div id="div_dv2">
+				<svg class="dataviz2" id="dv2"><linearGradient id="line-gradient-d3"></linearGradient></svg>
+				<div id="selects_dataviz2">
+					<select id="select_dataviz2_years"></select>
+					<select id="select_dataviz2_months"></select>
+					<select id="select_dataviz2_facilities"></select>
+				</div>
+			</div>
+
+			<div id="div_text4-5">
+				<h4 id="text4"><strong id="bold">Daily Graphic data offers information
+				regarding daily NO2 levels in Leeds throughout a five year period
+				(2010-2015).</strong></h4>
+				<h5 id="text5">Results inticate that the highest concentration of NO2 on average
+				working days can be observed during the peak hours, that
+				is between the hours of 8-9am in mornings and 5-6pm in the
+				evening, probably due to the highest circulation of motor
+				vehicles during these hours.
+				</h5>
+				<h5 id="text5">The lowest levels of air pollution are during a period of late night
+				and early morning when there traditionally is much lower motor
+				vehicle usage.</h5>
+			</div>
+		</div>
+
+		<div id="div5">
+			<img id="text04" src="res/text04.png"></img>
+			<img id="div5_bracket" src="res/g25205.png"></img>
+			<h2 id="title4"><strong id="bold">SEVERAL STUDIES</strong> TO DATE SUGGEST A RELATION <strong id="bold">BETWEEN</strong> POLLUTION AND THE SYMPTOMS OF ASTHMA</h2>
+			<img id="div5_bracket2" src="res/g25205.png"></img>
+
+			<div id="studyA">
+				<h4 id="studyA1">STANFORD UNIVERSITY &
+				UNIVERSITY OF CALIFORNIA, BERKELEY. (2010) </h4>
+				<h4 id="studyA2"><strong id="bold">WHAT :</strong></h4>
+				<h5 id="studyA3">181 children, with and without asthma in the California
+				cities of Fresno & Palo Alto. </h5>
+				<h4 id="studyA4"><strong id="bold">CONCLUSIONS :</strong></h4>
+				<h5 id="studyA5">The researchers found that air pollution exposure suppressed
+				the immune system’s regulatory T cells, which
+				leads to greater severity of asthma symptoms.</h5>
+				<a id="studyA6" href="http://www.news.berkeley.edu/2010/10/05/asthma/">Link to the study</a>
+			</div>
+
+			<div id="studyB">
+				<h4 id="studyA1">CINCINNATI CHILDHOOD ALLERGY
+				AND AIR POLLUTION STUDY
+				 (CCAAPS)</h4>
+				<h4 id="studyA2"><strong id="bold">WHAT :</strong></h4>
+				<h5 id="studyA3">Children were followed from infancy through 7 years of
+				age. </h5>
+				<h4 id="studyA4"><strong id="bold">CONCLUSIONS :</strong></h4>
+				<h5 id="studyA5">The risks observed suggest that air pollution exposure
+				contributes to new onset asthma.</h5>
+				<a id="studyA6" href="http://ehp.niehs.nih.gov/wp-content/uploads/121/6/ehp.1205555.pdf">Link to the study</a>
+			</div>
+
+			<div id="studyC">
+				<h4 id="studyA1">HASSELT UNIVERSITY
+				IN BELGIUM.</h4>
+				<h4 id="studyA2"><strong id="bold">WHAT :</strong></h4>
+				<h5 id="studyA3">Association between air polluant and asthma emergency
+				room visits & hospital admissions.</h5>
+				<h4 id="studyA4"><strong id="bold">CONCLUSIONS :</strong></h4>
+				<h5 id="studyA5">Short-term exposures to air pollutants
+				account for increased risks of asthma.</h5>
+				<a id="studyA6" href="http://www.journals.pols.org">Link to the study</a>
+			</div>
+
+			<div id="studyD">
+				<h4 id="studyA1">DEPARTMENT OF COMMUNITY
+				AND FAMILY MEDICINE. </h4>
+				<h4 id="studyA2"><strong id="bold">HOW :</strong></h5>
+				<h5 id="studyA3">Association between air pollution and asthma admission
+				among children in Hong-Kong (2008).</h5>
+				<h4 id="studyA4"><strong id="bold">WHAT DID THE STUDY SHOW ?</strong></h4>
+				<h5 id="studyA5">Ambient levels of PM10, PM2.5, NO2 and O3 were associated
+				with childhood asthma hospital admission in Hong
+				Kong.</h5>
+				<a id="studyA6" href="http://ncbi.nlm.nih.gov">Link to the study</a>
+			</div>
+
+		</div>
+
+		<div id="div6">
+			<img id="text05" src="res/text05.png"></img>
+			<img id="div6_bracket" src="res/line103.png"></img>
+			<h2 id="title5"><strong id="bold">AIR POLLUTION</strong> IN <strong id="bold">LEEDS</strong> COMPARED WITH <strong id="bold">ASTHMA MEDICATION</strong> COVERING <strong id="bold">5</strong> YEARS</h2>
+			<img id="div6_bracket2" src="res/line103.png"></img>
+
+			<div id="div_dv3">
+				<svg class="dataviz3" id="dv3"></svg>
+			</div>
+
+			<div id="div_text12">
+				<h5 id="text12">This graph specifcally shows the cost of the medication prescribed
+				for all respiratory problems in Leeds, from 2010 to 2015.
+				 </h5>
+				<h5 id="text12">The evolution of the curve informs us of a substantial upward
+				trend in the cost of prescribed medication for Asthma or respiratory
+				problem drugs and that there is a progressive rise of those
+				costs through the years within the study. Additionally, the graphic
+				shows the amount of medication prescribed to patients in
+				Leeds over a period of fve years.
+				</h5>
+				<h5 id="text12">Our principal conclusion is that no specifc pattern can be observed
+				 to explain any signifcant change in asthma medication
+				prescribed during this period as it relates to air pollution.
+				</h5>
+			</div>
+
+			<div id="div_text12">
+				<h5 id="text13">The comparative chart depicting air pollution in Leeds, along
+				with the data concerning asthma medication prescribing during
+				5 years, is presented as a means of demonstrating graphically
+				the diference in incidence of high levels of air pollution and the
+				timing of the prescribing of the medications within the study.
+				</h5>
+				<h5 id="text13">Correlating the statistics provided, the results show that there is
+				no direct relationship between the two data sets. The amount of
+				medications prescribed to patients increase in a period during
+				late spring and early fall, when the level of air pollution is
+				traditionally lower.
+				</h5>
+				<h5 id="text13">Therefore the results contradict the primary hypothesis much
+				further research in this area is needed to establish the factors
+				and causal relationships. Several avenues of exploration are pos-
+				sible, but weather data covering the period in question must be
+				a consideration to provide information on another of the
+				contributing factors involved.
+				</h5>
+			</div>
+		</div>
+
+		<div id="div7">
+			<img id="text06" src="res/text06.png"></img>
+			<img id="div7_bracket" src="res/line103.png"></img>
+			<h2 id="title6"><strong id="bold">CAUSES</strong> OF AIR POLLUTION</h2>
+			<img id="div7_bracket2" src="res/line103.png"></img>
+		</div>
+
+		<div id="div8">
+
+			<div id=bulles2>
+				<img id="bulle_102" src="res/bulle.png"></img>
+				<img id="bulle_202" src="res/bulle.png"></img>
+				<img id="bulle_302" src="res/bulle.png"></img>
+				<img id="bulle_102" src="res/bulle.png"></img>
+			</div>
+
+			<div id=bulles1>
+				<img id="bulle_301" src="res/bulle.png"></img>
+				<img id="bulle_201" src="res/bulle.png"></img>
+				<img id="bulle_401" src="res/bulle.png"></img>
+				<img id="bulle_301" src="res/bulle.png"></img>
+
+			</div>
+
+			<div id=bulles3>
+				<img id="bulle_203" src="res/bulle.png"></img>
+			</div>
+
+			<div id=bulles3>
+				<img id="bulle_103" src="res/bulle.png"></img>
+				<img id="bulle_203" src="res/bulle.png"></img>
+				<img id="bulle_303" src="res/bulle.png"></img>
+			</div>
+
+			<img id="big_img" src="res/big_img.png"></img>
+			
+		</div>
+
+		<div id="div9">
+
+			<div id="subdiv8">
+				<div id="subdiv8B">
+					<h2 id="text14_title"><strong id="bold">CARS</strong></h2>
+					<h5 id="text14">Most cars use internal
+					combustion engines. This leads to the production of
+					several pollutants, such as :</h5>
+					<h5 id="text14B">carbon monoxide</h5>
+					<h5 id="text14B">oxides of nitrogen</h5>
+					<h5 id="text14B">un-burnt hydrocarbons</h5>
+					<h5 id="text14B">particulate matter</h5>
+				</div>
+			</div>
+
+			<div id="subdiv9">
+				<div id="subdiv9B">
+					<h2 id="text15_title"><strong id="bold">HEATING</strong></h2>
+					<h5 id="text15">The use of solid fuel such as coal or
+					wood for house heating produces
+					pollutants.</h5>
+					<h5 id="text15">This pollution can highly vary from
+					one fuel to another. For example, the
+					use unseasoned (also called green)
+					wood which results in a lower temperature
+					combustion consequently produces
+					way more pollutants than dry
+					firewood.</h5>
+				</div>
+			</div>
+
+			<div id="subdiv10">
+				<div id="subdiv10B">
+					<h2 id="text16_title"><strong id="bold">FACTORY</strong></h2>
+					<h5 id="text16">The industries are known to be pollutants,
+					due to their activities and transformations.
+					Many of them have need
+					of power generation, combustion processes
+					and massive heating requirements. </h5>
+					<h5 id="text16">When efforts are made to
+					reduce these releases and use more
+					green energy, they still emit a mixture
+					of nitrogen oxide (NOx) and nitrogen
+					dioxide (NO2).</h5>
+				</div>
+			</div>
+		</div>
+
+		<div id="div11">
+			<div id="subdiv11">
+				<img id="text07" src="res/text07.png"></img>
+				<h2 id="cells_title">COMPOSITION OF <strong id="bold">CONTAMINATION PARTICLES</strong></h2>
+				<img id="cells" src="res/cells.png"></img>
+			</div>
+			<div id="div_text17">
+				<h4 id="text17">PM2.5 stands for particulate matter with less than 2.5 µm diameter (for information, the diameter of a hair is 50 to 70 µm). They are also referred to as “fine particles” and stay in suspension in the atmosphere. 43% of them are the result of wood combustion, coal combustion or oil combustion. The manufacturing industry represents 9.5%, diesel vehicles 8.4%, construction sector 6.6%, and agriculture and forestry 4.7%.</h4>
+			</div>
+		</div>
+
+		<div id="div12">
+			<div id="subdiv12">
+				<h2 id="lungs_title"><strong id="bold">EFFECTS</strong> ON LUNGS</h2>
+				<img id="lungs" src="res/lungs.png"></img>
+			</div>
+			<div id="div_text18">
+				<h4 id="text18A">The effects of pollution on the body : every year, <strong id="bold">3 millions</strong>
+				people die from diseases caused by air pollution :
+				that's 5% of the annual global deaths.
+				As a matter of fact, pollution brings allergies & problems
+				that can have an impact on the respiratory system. A
+				long -term exposure can lead to asthma, chronic bronchitis,
+				lung cancer...
+				</h4>
+				<h4 id="text18B">As a matter of fact, pollution brings allergies & problems
+				that can have an impact on the respiratory system. A
+				long -term exposure can lead to asthma, chronic bronchitis,
+				lung cancer...
+				</h4>
+				<h4 id="text18C">The consequences are diferent depending on people,
+				but some groups of population are more at risk : children,
+				elderly persons, or deprived families with less
+				access to healthcare.</h4>
+			</div>
+		</div>
+
+		<div id="div13">
+			<img id="partners" src="res/partners.png"></img>
+		</div>
+
+		<script src="js/bundle.js"></script>
+
+	</body>
 </html>

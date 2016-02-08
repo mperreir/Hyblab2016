@@ -15,9 +15,14 @@
 
 #sectors{
 	background-image: url(../img/fond_slide_5.svg);
+<<<<<<< HEAD
 	background-size: auto 100%;
 	background-repeat: no-repeat;
 	background-position: center auto;
+=======
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+>>>>>>> master
 }
 
 #definition {
