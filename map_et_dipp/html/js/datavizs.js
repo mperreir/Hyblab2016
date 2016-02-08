@@ -22,6 +22,14 @@ var wahoo = [{"nom":"Moyenne nationale", "distance":2494}];
 
 
 
+
+/**
+ * Retourne la distance en kilomètres entre deux points géographiques
+ * @param   {number} lat1 latitude du premier point géographique
+ * @param   {number} lon1 longitude du premier point géographique
+ * @param   {number} lat2 latitude du second point géographique
+ * @param   {number} lon2 longitutude du second point géographique
+ */
 function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
   var R = 6371; // Radius of the earth in km
   var dLat = deg2rad(lat2-lat1);  // deg2rad below
@@ -69,7 +77,8 @@ $.getJSON('./json/donneesAMAPSProducteurs.js', function(data){
 
 
 
-//établissement des distances min,moy et max entre les amaps/producteurs
+// Calcul et enregistrement des des distances entre les AMAPS et les producteurs
+//	distances min,moyenne et max
 dataset.forEach(function (d) {
 	d.Distance = getDistanceFromLatLonInKm(d.LATProd, d.LONGProd, d.LATAMAP, d.LONGAMAP);
 });
@@ -79,15 +88,7 @@ var qte = -1;
 var moy = -1;
 
 var lesp = [];
-/*quartiers.forEach(function(q){
-	q.produits = [];
-	produits.forEach(function(p){
-		q.produits.push({"nom":p.produit, "min":9999,"max":0,"moy":9999});
-		dataset.forEach(function(d){
-			if(d.Produits == p.produit && )
-		});
-	});
-});*/
+
 
 produits.forEach(function(p)
 {
@@ -110,45 +111,48 @@ produits.forEach(function(p)
 	
 });
 
+// ####################################################
+// ####################################################
 
-
+//radius du rond au centre de l'image
 var nantesRadius = [30];
-var width = 650;//*(Math.max(document.documentElement.clientWidth, window.innerWidth || 0))/1600;
-var height = 600;//*(Math.max(document.documentElement.clientHeight, window.innerWidth || 0))/1600;
+var width = 650;
+var height = 600;
+//ratio d'échelle du svg
 var ratio = 1.3;
-//var ratio = 1.3*(Math.max(document.documentElement.clientWidth, window.innerWidth || 0))/1600;
 
-
+// constantes de la datavisualisation
 var widthAside = 350;
 var heightAside = 170;
 var couleurLigneMin = "#38615a";
 var couleurLigneMoy = "#80cbc4";
-var couleurLigneMax = "#adf0c3"
+var couleurLigneMax = "#adf0c3";
 
+//définition des images svg
 var svg = d3.select("#araigneeAMAP").append("svg").attr("width",width).attr("height",height).attr("viewBox","0, 0, 650, 600").attr("preserveAspectRatio", "xMinYMin");
+// on enregistre le svg dans la variable globale d3 pour pouvoir y appliquer des transformations dans un autre scope
 d3.www = svg;
 var svgAside = d3.select("#legendeAraignee").append("svg").attr("width",widthAside).attr("height",heightAside).attr("id","svgAside");
 
 //DESSIN du cercle représentant nantes
 svg.selectAll("circle").data(nantesRadius).enter().append("circle").attr("cx", width/2).attr("cy",height/2).attr("r",nantesRadius).attr("fill","teal");
-//svg.selectAll("image").data(nantesRadius).enter().append("svg:image").attr("x",(width/2)-(150/2)).attr("y",(height/2)-(150/2)).attr("width", 150).attr("height",150).attr("xlink:href","../img/nantesRond.png");
 
-
+//définition de groupes dans le svg pour appliquer des attributs communs
 var groupes = svg.selectAll("g").data(produitsDebut).enter();
 var pictoAside = svgAside.selectAll("g").data(wahoo).enter();
 
 var echelle = svg.selectAll("g").data(villes).enter();
 var gmoscou = svg.selectAll("g").data(wahoo).enter();
 
-var triangles = svg.selectAll("g").data(produits).enter();
 
-var angleActuMax = 0;
-var angleActuMoy = 0;
-var angleActuMin = 0;
-
+//tooltip au survol des distances
 var tooltip = d3.select("#araigneeAMAP").append("div").attr("class","dataTooltip");//style("background-color","black").style("position","absolute").style("z-index","100000").style("visibility","hidden").text("simple tooltip");
 
 
+
+// #################################################################//
+//				DESSIN DES LIGNES SELON LES DISTANCES
+// #################################################################//
 //##### LIGNES MIN
 var lignesMin = groupes.append("line").attr("categorie",function(d){return d.produit;}).attr("x1", function(d, i) {
 	var x = (width/2) - nantesRadius;
@@ -320,39 +324,14 @@ var lignesMax = groupes.append("line").attr("categorie",function(d){return d.pro
 		return rotatePoint(x, y, (width/2), (height/2), angle).y;
 	});
 
-/*
-//bout de ligne qui dépasse après le max
-var lignesApresMax = groupes.append("line").attr("x1", function(d, i) {
-	var x = (width/2) - nantesRadius-(d.distMax*ratio);
-	var y = (height/2);i
-	var angle = i*(Math.PI*2)/produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).x;
-
-}).attr("y1", function(d, i) {
-	var x = (width/2) - nantesRadius-(d.distMax*ratio);
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-
-	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("x2",function(d,i){
-	var x = (width/2) - nantesRadius - (d.distMax*ratio)-20;
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).x;
-}).attr("y2",function(d,i){
-	var x = (width/2) - nantesRadius - (d.distMax*ratio)-20;
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("stroke-width",1).attr("stroke","black");
-*/
+// ###########################################################################
+// ###########################################################################
+// ###########################################################################
 
 
 
 
-
-
-
+// ajout d'une catégorie par défaut 
 svgAside.append("svg:image").attr("x",widthAside/4-25).attr("y",40).attr("width",50).attr("height",50).attr("xlink:href","./img/pictoFruits.png");
 svgAside.append("text").attr("class","nomCategorie").text("Fruits").attr("x",function(){
 
@@ -462,94 +441,6 @@ svg.selectAll("image")
 	});
 
 
-//bouton changement d'échelle
-/*svg.selectAll("text")
-	.data(wahoo)
-	.enter()
-	.append("text")
-	.text("changer l'échelle")
-	.attr("x",0)
-	.attr("y",100)
-	.on("click",function(){
-	return svg.transition().attr("transform","scale(0.1) translate("+width*4.5+","+height*4.5+")").ease("linear").duration(1000).delay(100);
-*/
-
-
-/*
-//dessin des triangles :)
-var trianglesMax = triangles.append("polyline").style("stroke","#fecccb").style("fill","#fecccb").attr("points",function(d,i){
-	var x1,y1,x2,y2,x3,y3,pointx1,pointx2,pointx3,pointy1,pointy2,pointy3;
-	//utilisable : d.xmax et y.xmax les coords du point représentant la distance max+20
-	
-    var x = (width/2) - nantesRadius - (d.distMax*ratio);
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-
-	x1 = x;
-	y1 = y-10;
-
-	x2 = x;
-	y2 = y+10;
-
-	x3 = x+10;
-	y3 = y;
-
-	pointx1 = rotatePoint(x1, y1, (width/2), (height/2), angle).x;
-	pointy1 = rotatePoint(x1, y1, (width/2), (height/2), angle).y;
-
-	pointx2 = rotatePoint(x2, y2, (width/2), (height/2), angle).x;
-	pointy2 = rotatePoint(x2, y2, (width/2), (height/2), angle).y;
-
-	pointx3 = rotatePoint(x3, y3, (width/2), (height/2), angle).x;
-	pointy3 = rotatePoint(x3, y3, (width/2), (height/2), angle).y;
-
-	return pointx1+","+pointy1+", "+pointx2+","+pointy2+", "+pointx3+","+pointy3;
-});
-var trianglesMin = triangles.append("polyline").style("stroke","#addfeb").style("fill","#addfeb").attr("points",function(d,i){
-	var x1,y1,x2,y2,x3,y3,pointx1,pointx2,pointx3,pointy1,pointy2,pointy3;
-	//utilisable : d.xmax et y.xmax les coords du point représentant la distance max+20
-	
-    var x = (width/2) - nantesRadius - ((d.distMin)*ratio);
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-
-	x1 = x;
-	y1 = y-10;
-
-	x2 = x;
-	y2 = y+10;
-
-	x3 = x-10;
-	y3 = y;
-
-	pointx1 = rotatePoint(x1, y1, (width/2), (height/2), angle).x;
-	pointy1 = rotatePoint(x1, y1, (width/2), (height/2), angle).y;
-
-	pointx2 = rotatePoint(x2, y2, (width/2), (height/2), angle).x;
-	pointy2 = rotatePoint(x2, y2, (width/2), (height/2), angle).y;
-
-	pointx3 = rotatePoint(x3, y3, (width/2), (height/2), angle).x;
-	pointy3 = rotatePoint(x3, y3, (width/2), (height/2), angle).y;
-
-	return pointx1+","+pointy1+", "+pointx2+","+pointy2+", "+pointx3+","+pointy3;
-});
-//##########################################################################
-
-
-// ######### DESSIN DES CERCLES
-
-var pointsMoy = triangles.append("circle").attr("cx", function(d, i) {
-    var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).x;
-}).attr("cy", function(d, i) {
-    var x = (width/2) - nantesRadius - (d.distanceMoyenne*ratio);
-	var y = (height/2);
-	var angle = i*(Math.PI*2)/produits.length;
-	return rotatePoint(x, y, (width/2), (height/2), angle).y;
-}).attr("r", 3).attr("fill","black");
-*/
 
 
 var villesDistances = echelle.append("circle").attr("cx",width/2).attr("cy",height/2).attr("r",function(d){
