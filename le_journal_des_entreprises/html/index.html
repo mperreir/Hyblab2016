@@ -6,7 +6,7 @@
 	<script src="lib/jquery.js"></script>
 	<script src="lib/fullpage.js"></script>
 	<script src="lib/d3.js"type="text/javascript"></script>
-	<link href="css/test.css" rel="stylesheet">
+	<link href="css/ring.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/Hyblab.css" rel="stylesheet">
 	<link href="lib/fullpage.css" rel="stylesheet">
@@ -18,7 +18,8 @@
 				anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
 				sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
 				
-				navigation: true
+				navigation: true,
+				loopHorizontal: false
 			});
 		});
 		
@@ -141,6 +142,34 @@
 		<div class="section" id="introduction">
 		</div>
 		<div class="section" id="definition">
+			<div class="slide">
+				<div id="infosContainer">
+					<div class="bulleInfo" id="bulleInfo1" onclick="$.fn.fullpage.moveTo(3, 1)">
+						Le CROWDFUNDING
+					</div>
+					
+					<div class="bulleInfo" id="bulleInfo2" onclick="$.fn.fullpage.moveTo(3, 2)">
+						Le CROWDEQUITY
+					</div>
+				</div>
+			</div>
+			<div class="slide">
+				<div id="defCrowdFunding">
+				</div>
+				
+				<div class="bulleInfo" id="retour" onclick="$.fn.fullpage.moveTo(3, 0)">
+					Retour
+				</div>
+			</div>
+			<div class="slide">
+				<div id="defCrowdEquity">
+				</div>
+				<div class="bulleInfo" id="retour" onclick="$.fn.fullpage.moveTo(3, 0)">
+					Retour
+				</div>
+			</div>
+			<div class="slide">
+			</div>
 		</div>
 		
 		<div class="section" id="presentation">
@@ -148,11 +177,11 @@
 				<div id="boardZone" onclick="zoomBoard(event);" onmouseover="jump();">
 					<div id="chartZone">
 						<div id="filterSelector">
-						  <input type="radio" name="filter" onclick="changeData(event, subscribersCount, '')" checked> Adhérents
-						  <input type="radio" name="filter" onclick="changeData(event, totalFunds, '€')"> Fonds totaux
-						  <input type="radio" name="filter" onclick="changeData(event,  meanTicket, '€')"> Ticket moyen
-						  <input type="radio" name="filter" onclick="changeData(event,  successRate, '%')"> Taux réussite
-						  <input type="radio" name="filter" onclick="changeData(event,  acceptRate, '%')"> Taux acceptation
+							<input type="radio" name="filter" onclick="changeData(event, subscribersCount, '')" checked> Adhérents
+							<input type="radio" name="filter" onclick="changeData(event, totalFunds, '€')"> Fonds totaux
+							<input type="radio" name="filter" onclick="changeData(event,  meanTicket, '€')"> Ticket moyen
+							<input type="radio" name="filter" onclick="changeData(event,  successRate, '%')"> Taux réussite
+							<input type="radio" name="filter" onclick="changeData(event,  acceptRate, '%')"> Taux acceptation
 						</div>
 						
 						<div id="platform">
@@ -164,48 +193,45 @@
 			</div>
 		</div>
 		<div class="section" id="sectors">
-			<div class="selection">
-				<span>Plateforme : </span>
-				<select id="selPlat">
-					<option value="Wiseed" selected="selected">Wiseed</option>
-					<option value="Anaxago">Anaxago</option>
-					<option value="Sowefund">Sowefund</option>
-					<option value="HappyCapital">Happy Capital</option>
-					<option value="ABFunding">AB Funding</option>
-					<option value="SmartAngels">SmartAngels</option>
-					<option value="BulbInTown">BulbInTown</option>
-					<option value="MyNewStartUp">My New StartUp</option>
-					<option value="Letitseed">Letitseed</option>
-					<option value="Proximea">Proximea</option>
-					<option value="Raizers">Raizers</option>
-				</select>
-	
-				<span>Secteur d'acitivité : </span>
-				<select id="selPlat2">
-					<option value="Immobilier" selected="selected">Immobilier</option>
-					<option value="Santé">Santé (médicaments, technologie médicale)</option>
-					<option value="Cleantech">CleanTech (technologie, écologie, énergies renouvelables)</option>
-					<option value="Service_web">Services web, digital</option>
-					<option value="E_commerce">E-commerce</option>
-					<option value="Economie_collaborative">Economie collaborative</option>
-					<option value="Mode">Mode, design, cosmétiques, vêtements, mobilier</option>
-					<option value="Objets_connectés">Objets connectés</option>
-					<option value="Services_numériques">Services numériques (logiciels, maquettes 3D...)</option>
-					<option value="Foodtech">Alimentation, agroalimentaire, foodtech</option>
-					<option value="Service_personne">Services à la personne</option>
-					<option value="Service_entreprise">Services à l'entreprise (moins numériques, plus traditionnels)</option>
-					<option value="Autre">Autres</option>
-				</select>
-			</div>
-			<br/>
-			<div class="title">
-				<h3 id="title1">Wiseed</h3>
-				<h3 id="title2">Immobilier</h3>
-			</div>
+			<div id="whiteboard">
+				<div class="selection">
+					<span>Plateforme : </span>
+					<select id="selPlat">
+						<option value="Wiseed" selected="selected">Wiseed</option>
+						<option value="Anaxago">Anaxago</option>
+						<option value="Sowefund">Sowefund</option>
+						<option value="HappyCapital">Happy Capital</option>
+						<option value="ABFunding">AB Funding</option>
+						<option value="SmartAngels">SmartAngels</option>
+						<option value="BulbInTown">BulbInTown</option>
+						<option value="MyNewStartUp">My New StartUp</option>
+						<option value="Letitseed">Letitseed</option>
+						<option value="Proximea">Proximea</option>
+						<option value="Raizers">Raizers</option>
+					</select>
 		
-			<div class="animated-ring">
-				<svg id="animated-ring"></svg>
-				<svg id="animated-ring2"></svg>
+					<span>Secteur d'acitivité : </span>
+					<select id="selPlat2">
+						<option value="Immobilier" selected="selected">Immobilier</option>
+						<option value="Santé">Santé (médicaments, technologie médicale)</option>
+						<option value="Cleantech">CleanTech (technologie, écologie, énergies renouvelables)</option>
+						<option value="Service_web">Services web, digital</option>
+						<option value="E_commerce">E-commerce</option>
+						<option value="Economie_collaborative">Economie collaborative</option>
+						<option value="Mode">Mode, design, cosmétiques, vêtements, mobilier</option>
+						<option value="Objets_connectés">Objets connectés</option>
+						<option value="Services_numériques">Services numériques (logiciels, maquettes 3D...)</option>
+						<option value="Foodtech">Alimentation, agroalimentaire, foodtech</option>
+						<option value="Service_personne">Services à la personne</option>
+						<option value="Service_entreprise">Services à l'entreprise (moins numériques, plus traditionnels)</option>
+						<option value="Autre">Autres</option>
+					</select>
+				</div>
+				
+				<div class="animated-ring">
+					<svg id="animated-ring"></svg>
+					<svg id="animated-ring2"></svg>
+				</div>
 			</div>
 		</div>
 	
@@ -243,5 +269,5 @@
 	</div>
   </body>
   
-  <script src="scripts/test3.js"type="text/javascript"></script>
+  <script src="scripts/ring.js"type="text/javascript"></script>
 </html>

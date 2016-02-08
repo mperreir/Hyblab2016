@@ -9,16 +9,92 @@
 
 #introduction {
 	background-image: url(../img/slide_2.svg);
-	background-size: 100% auto;
+	background-size: auto 100%;
 	background-repeat: no-repeat;
+}
+
+#sectors{
+	background-image: url(../img/fond_slide_5.svg);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center auto;
 }
 
 #definition {
 	background-image: url(../img/slide_3.svg);
-	background-size: 100% auto;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center auto;
+}
+
+#infosContainer {
+	width: 100%;
+	height: 100%;
+}
+
+.bulleInfo {
+	width: 25%;
+	height: 7%;
+	
+	background-color: white;
+	
+	border-style: solid;
+    border-width: 4px;
+	border-color: #002846;
+	
+	text-align: center;
+	
+	padding-top: 1%;
+	
+	font-family: arial;
+	font-weight: bold;
+	
+	font-size: 1.5vw;
+}
+
+#bulleInfo1 {
+	margin-left: 45%;
+	margin-top: 15%;
+}
+
+#bulleInfo2 {
+	margin-left: 64%;
+	margin-top: 2%;
+}
+
+#defCrowdFunding {
+	width: 40%;
+	height: 30%;
+	
+	padding-left: 90%;
+	
+	background-image: url(../img/info2.svg);
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 
+#defCrowdEquity {
+	width: 40%;
+	height: 30%;
+	
+	padding-left: 90%;
+	margin-bottom: 0%;
+	
+	
+	background-image: url(../img/info1.svg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+#retour {
+	margin-left: 80%;
+	margin-right: 20%;
+	margin-bottom: 15%;
+	padding-top: 0%;
+	
+	width: 7%;
+	height: 5%;
+}
 
 #titleText {
 	position: absolute;
@@ -36,7 +112,7 @@
 
 #presentation {
 	background-image: url(../img/slide_4.svg);
-	background-size: 100% auto;
+	background-size: auto 100%;
 	background-repeat: no-repeat;
 	
 	width: 100%;
@@ -89,13 +165,6 @@
   text-anchor: begin;
 }
 
-#sectors {
-	background-image: url(../img/slide_5.svg);
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	background-position: 0% 0%;
-}
-
 #top10 {
 	background-image: url(../img/slide_6.svg);
 	background-size: 100% auto;
@@ -105,7 +174,7 @@
 
 #ending {
 	background-image: url(../img/slide_7.svg);
-	background-size: 100% 100%;
+	background-size: auto 100%;
 	background-repeat: no-repeat;
-	background-position: 0% 0%;
+	background-position: center 0%;
 }

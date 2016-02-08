@@ -60,7 +60,7 @@ var secteur = [
 ]
 
 var maxWidth = 600;
-var maxHeight = 600;
+var maxHeight = 800;
 var outerRadius = 150;
 var ringWidth = 100;
 var label = 230;
@@ -108,6 +108,7 @@ function drawAnimatedRingChart(config) {
 
     // Remove the previous ring
     d3.select(config.el).selectAll('g').remove();
+    d3.select(config.el).selectAll('text').remove();
 
     var svg = d3.select(config.el)
         .attr({
@@ -116,6 +117,15 @@ function drawAnimatedRingChart(config) {
 			preserveAspectRatio: "xMidYMid meet",
             viewBox: "0 0 " + maxWidth + " " + maxHeight
         })
+		
+	svg.append('text')
+	.attr({
+		'font-size': 48,
+		'color':'black',
+		'text-anchor': 'middle',
+		'transform': 'translate(' + (maxWidth/2) + ',' + 50 + ')'
+	})
+	.text(config.selected)
 		
     // Add the groups that will hold the arcs
     var groups = svg.selectAll('g.arc')
@@ -136,7 +146,6 @@ function drawAnimatedRingChart(config) {
 				data: plateforme
 			});
 			adjustSelect("selPlat2",d.data.name);
-			document.getElementById('title2').innerHTML = d.data.name.replace('_',' ');
 		}
 		else{
 			drawAnimatedRingChart({
@@ -147,7 +156,6 @@ function drawAnimatedRingChart(config) {
 				data: secteur
 			});
 			adjustSelect("selPlat",d.data.name);
-			document.getElementById('title1').innerHTML = d.data.name.replace('_',' ');
 		}
 	})
 	.on("mouseover", function(){

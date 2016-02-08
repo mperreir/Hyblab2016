@@ -63,7 +63,7 @@ function zoomBoard(event) {
 			boardZone.style.marginTop = target*10+"px";
 			boardZone.style.marginLeft = 10+target*5+"%";
 			chartDiv.style.width = target*670+"px";
-			boardZone.style.boxShadow = "0px 10px "+(target*100)+"px black";
+			boardZone.style.boxShadow = "0px 100px "+(target*100)+"px black";
 		} else {
 			coef += (target-coef)/4.0;
 			
@@ -74,7 +74,7 @@ function zoomBoard(event) {
 			boardZone.style.marginLeft = 10+coef*5+"%";
 
 			chartDiv.style.width = coef*670+"px";
-			boardZone.style.boxShadow = "0px 10px "+(coef*100)+"px black";
+			boardZone.style.boxShadow = "0px 100px "+(coef*100)+"px black";
 		}
 	}
 }
