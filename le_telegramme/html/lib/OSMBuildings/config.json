@@ -1,0 +1,53 @@
+{
+  "shaders": ["interaction", "buildings", "buildings.shadows", "skydome", "basemap", "texture", "normalmap", "depth", "ambientFromDepth", "blur", "basemap.shadows"],
+
+  "lib": [
+    "lib/earcut.dev.js",
+    "node_modules/Color/dist/Color.debug.js",
+    "lib/GLX.debug.js",
+    "node_modules/suncalc/suncalc.js"
+  ],
+
+  "src": [
+    "src/polyfills.js",
+
+    "src/index.js",
+    "src/Activity.js",
+
+    "src/variables.js",
+    "src/Request.js",
+    "src/util.js",
+    "src/Shaders.min.js",
+
+    "src/Grid.js",
+    "src/Filter.js",
+
+    "src/data/index.js",
+    "src/data/Tile.js",
+
+    "src/mesh/index.js",
+    "src/mesh/GeoJSON.js",
+    "src/mesh/MapPlane.js",
+    "src/mesh/DebugQuad.js",
+    "src/mesh/OBJ.js",
+
+    "src/geometry.js",
+
+    "src/render/index.js",
+    "src/render/Picking.js",
+    "src/render/Sun.js",
+    "src/render/SkyDome.js",
+    "src/render/Buildings.js",
+    "src/render/MapShadows.js",
+    "src/render/Basemap.js",
+    "src/render/HudRect.js",
+    "src/render/NormalMap.js",
+    "src/render/DepthMap.js",
+    "src/render/AmbientMap.js",
+    "src/render/Overlay.js",
+    "src/render/Blur.js",
+
+    "src/basemap/index.js",
+    "src/basemap/Tile.js"
+  ]
+}

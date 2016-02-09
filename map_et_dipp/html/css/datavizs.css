@@ -1,0 +1,381 @@
+.dataTooltip {
+	position: absolute;
+	visibility: hidden;
+	z-index: 1000;
+	background: rgba(0,0,0, 0.3);
+	border-radius: 5px;
+	padding: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    Partie Diagramme de Joseph
+*/
+
+#totalJoseph {
+    margin: 0;
+    padding: 0;
+}
+
+#totalJoseph p {
+    margin: 0;
+    display: inline-block;
+    /* style du texte */
+    color: #666666;
+    font: 300 60px FuturaPT;
+}
+
+#uniteTotalJoseph {
+    margin: 0;
+    color: #fdbe63;
+    font: 18px MuseoSlab;
+    display: inline-block;
+}
+
+
+#diagrammeJoseph {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+
+.baliseJauge {
+    display: inline-block;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 0;
+    
+    /height: 150px;
+    /width: 100px;        
+}
+
+.baliseJauge svg {
+        
+}
+
+.baliseJauge svg g {
+    
+}
+
+.radioJoseph {  
+    display: none;  /* faire disparaître les puces inutiles */
+}
+
+.labelRadioJoseph {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+/* radio printemps */
+#labelJoseph_printemps {
+    background: url(../img/diagrammes/joseph/printemps.png) left top no-repeat;
+}
+
+#labelJoseph_printemps:hover {  
+    background: url(../img/diagrammes/joseph/printemps_hover.png) left top no-repeat;
+}
+
+#radioJoseph_printemps:checked + .labelRadioJoseph {
+    background: url(../img/diagrammes/joseph/printemps_checked.png) left top no-repeat;
+}
+
+/* radio été */
+#labelJoseph_ete {
+    background: url(../img/diagrammes/joseph/ete.png) left top no-repeat;
+}
+
+#labelJoseph_ete:hover {  
+    background: url(../img/diagrammes/joseph/ete_hover.png) top no-repeat;
+}
+
+#radioJoseph_ete:checked + .labelRadioJoseph {
+    background: url(../img/diagrammes/joseph/ete_checked.png) left top no-repeat;
+}
+
+/* radio automne */
+#labelJoseph_automne {
+    background: url(../img/diagrammes/joseph/automne.png) left top no-repeat;
+}
+
+#labelJoseph_automne:hover {  
+    background: url(../img/diagrammes/joseph/automne_hover.png) left top no-repeat;
+}
+
+#radioJoseph_automne:checked + .labelRadioJoseph {
+    background: url(../img/diagrammes/joseph/automne_checked.png) left top no-repeat;
+}
+
+/* radio hiver */
+#labelJoseph_hiver {
+    background: url(../img/diagrammes/joseph/hiver.png) left top no-repeat;
+}
+
+#labelJoseph_hiver:hover {  
+    background: url(../img/diagrammes/joseph/hiver_hover.png) left top no-repeat;
+}
+
+#radioJoseph_hiver:checked + .labelRadioJoseph {
+    background: url(../img/diagrammes/joseph/hiver_checked.png) left top no-repeat;
+}
+
+/* radio total */
+#labelJoseph_total {
+    background: url(../img/diagrammes/joseph/total.png) left top no-repeat;
+    width: 75px;
+    height: 75px;
+}
+
+#labelJoseph_total:hover {  
+    background: url(../img/diagrammes/joseph/total_hover.png) left top no-repeat;
+}
+
+#radioJoseph_total:checked + .labelRadioJoseph {
+    background: url(../img/diagrammes/joseph/total_checked.png) left top no-repeat;
+}
+
+
+
+
+
+
+
+
+section .container {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+section .container .contenu {
+    height: 80%;
+    width: 100%;
+    margin: 0;
+}
+
+
+
+
+
+/* placer la flèche des sections en bas */
+.flecheSlide {
+    /* prendre le reste de la section */
+    height: 20%;
+    /* width: 100%; pas besoin avec boostrap */
+    margin: 0;
+    /* positioner la flèche tout en bas */
+    position: relative;
+}
+
+.flecheSlide div {
+    /* positionner la flèche tout en bas */
+    position: absolute; 
+    bottom: 0;
+}
+
+.flecheSlide div img {
+    margin-bottom: 30px;
+}
+
+
+
+/* slide 3 */
+#slide3 {
+    background-color: white;
+}
+
+#slide3 h2 {
+    color: #fdbe63;
+    font: 40px Museo;
+}
+
+#slide3 h3 {
+    padding: 5px;
+    /* style du texte */
+    color: #fdbe63;
+    font: 18px Museo;
+    /* contour */
+    border: 2px solid #fdbe63;
+    border-radius: 5px;
+    /* pour que la largeur du titre soit égale à la taille du texte, et non à la taille de la page */
+    display: inline-block;
+}
+
+#titreSlide3 {
+    margin-bottom: 10px;
+}
+
+#slide3 div article {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    /* style du texte */
+    color: #4c4c4c;
+    font: 15px / 19px Museo;
+    /* contour */
+    border: 2px solid #fdbe63;
+    border-radius: 50px;
+    /* permet de centrer verticalement les balises, doit être utilisé sur toutes les balises du même row */
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
+#slide3 aside {
+    /* permet de centrer verticalement les balises, doit être utilisé sur toutes les balises du même row */
+    /* http://stackoverflow.com/questions/20547819/vertical-align-with-bootstrap-3 */
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+#slide3 aside p {
+    /* style du texte */
+    color: #4c4c4c;
+    font: 400 17px / 21px Arial;
+}
+
+
+/* slide 4 */
+#slide4 .contenu {
+    background-color: #82e69b;
+    padding-top: 15px;
+}
+
+#slide4 .contenu h1 {
+    color: #ffffff;
+    font: 31px / 34px Museo;
+    margin-bottom: 0;
+}
+
+#slide4 .contenu h2 {
+    margin-top: 0;
+    color: #ffffff;
+    font: 20px / 34px Museo;
+}
+
+#slide4 .contenu section {
+    height: auto;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: inherit;
+    /* contour */
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+}
+
+#slide4 .contenu section header {
+    background-color: inherit;
+    color: #4c4c4c;
+    font: 15px / 14px Museo;
+    text-align: left;
+}
+
+#slide4 .contenu section article {
+    color: #4c4c4c;
+    font: 400 12px / 14px Arial;
+}
+
+#slide4 .contenu section aside {
+    /* correspond à la citation */
+    color: #ffffff;
+    font: 17px / 19px Museo;
+}
+
+#slide4 .flecheSlide {
+    background-color: white;
+}
+
+
+
+/* slide 5 */
+#slide5 {
+    background-color: #90d7df;
+}
+
+
+/* slide 7 */
+#slide7 {
+    background-color: #eaffe4;
+}
+
+#titreSlide7 {
+    color: #82e69b;
+    font: 50px Museo;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#slide7 .container .contenu p {
+    color: #4c4c4c;
+    font: 20px / 30px Museo;
+}
+
+
+
+
+
+
+
+
+/* slide 8 */
+#slide8 {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+#slide8 .container {
+    height: 80%;
+    margin: 0;
+    width: 100%;
+    background-color: #82e69b;
+}
+
+#titreSlide2 {
+    color: #ffffff;
+    font: 41.13px Museo;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.imageContact {
+    height: 40px;
+    width: 40px;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#imageLettre {
+    z-index: 1;
+    /width: 50%;
+}
+
+#titreLettre {
+    color: #4c4c4c;
+    font: 29px / 14px Museo;
+}
+
+#contenuLettre {
+    color: #4c4c4c;
+    font: 400 13px / 21px Arial;
+}

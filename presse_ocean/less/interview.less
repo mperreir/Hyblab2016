@@ -1,0 +1,105 @@
+@import "vars";
+
+#interview-page {
+    position: relative;
+    width: 100%;
+
+    #interview {
+        /*
+        position: absolute;
+        top: 0;
+        left: 0;
+        */
+        width: 80%;
+        height: 100%;
+
+        .text-area {
+            position: relative;
+            //margin-left: 10px;
+            //padding-top: 5px;
+            font-weight: normal;
+            font-size: 11px;
+        }
+
+        @media all and (min-height: 769px) {
+            .text-area {
+                font-size: 12px;
+            }
+        }
+
+        .right-area{
+            display: inline-block;
+            padding: 10px;
+            float: right;
+            width: 30%;
+        }
+
+        .content-area {
+            display: inline-block;
+            float: left;
+            padding: 1%;
+            width: 48%;
+            text-align: justify;
+        }
+
+        .left-area{
+            padding: 10px;
+            float: left;
+            width: 30%;
+            h5 {
+                font-weight: 900;
+            }
+            ul{
+                list-style-type:none;
+                li{
+                    margin: 20px 0;
+                }
+            }
+        }
+
+        .sidebar {
+            h1 {
+                font-size: 14px;
+            }
+            .content {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                font-weight: normal;
+                .item {
+                    text-align: justify;
+                    position: relative;
+                    padding-left: 50%;
+                    padding-bottom: 10%;
+                    padding-top: 10%;
+                    font-size: 10px;
+                }
+                .item::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 50%;
+                    height: 100%;
+                }
+                .item:nth-child(1)::before {
+                    background: url('/media/pic/infographie1.svg') no-repeat top;
+                }
+                .item:nth-child(2)::before {
+                    background: url('/media/pic/infographie2.svg') no-repeat top;
+                }
+                .item:nth-child(3)::before {
+                    background: url('/media/pic/infographie3.svg') no-repeat top;
+                    top: 10%;
+                }
+                .item:nth-child(4)::before {
+                    background: url('/media/pic/infographie4.svg') no-repeat top;
+                }
+                .item:nth-child(5)::before {
+                    background: url('/media/pic/infographie5.svg') no-repeat top;
+                }
+            }
+        }
+    }
+}

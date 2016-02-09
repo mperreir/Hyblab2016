@@ -1,0 +1,147 @@
+.barreDefilement{
+	width: 50vw;
+	height: 15vh;
+	bottom: 5vh;
+	left: 25vw;
+	position : absolute;
+}
+
+.barreDefilement .ct-label{
+	color: #80BC4E;
+	font-weight: bold;
+	font-size : 2vmin;
+}
+
+.barreDefilement .ct-line{
+	stroke-width: 0.25%;
+}
+
+.barreDefilement .ct-point{
+	stroke-width : 2%;
+}
+
+.barreDefilement .ct-line,.barreDefilement .ct-point{
+	stroke: #80BC4E;
+}
+
+.car{
+
+	height: 2.2vh;
+	width: 2.2vw;
+	position: absolute;
+}
+#neuf{
+	z-index: 40;
+	top: 26vh;
+	left: 30vw;
+}
+
+#occasion{
+	z-index: 40;
+	top: 56vh;
+	left: 72vw;
+}
+
+.panneauAnnees{
+	position: absolute;
+	width: 20vmin;
+	bottom: 5vh;
+	right: 15vw;
+}
+
+.phrase{
+	position: absolute;
+	bottom: 17vh;
+	font-size : 2vmin;
+	text-align : center;
+	width : 75vw;
+	margin : 0 12.5vw;
+	color: #70C2B8;
+
+}
+
+.labelDefilement{
+	position : absolute;
+	bottom : 0vh;
+	text-align: center;
+	width: 75vw;
+	font-size : 2vmin;
+	margin: 0 12.5vw;
+	color: #80BC4E;
+	font-weight: bold;
+}
+
+.labelDonut{
+	position: absolute;
+	text-align: center;
+	width: 10vw;
+	font-size: 2vmin;
+	color : #E44637;
+	font-weight: bold;
+	background-color: rgba(254, 231, 201, 0.5);
+	border-radius: 2vmin;
+}
+
+.labelDonut p{
+}
+
+#labelDonutMono{
+	top : 17vh;
+	left: 53vw;
+}
+
+#labelDonutNone{
+	top: 57vh;
+	left: 28vw;
+}
+
+#labelDonutBiPlus{
+	top: 60vh;
+	left: 50vw;
+}
+
+#labelDonutOccasion{
+	top: 62vh;
+	left: 77vw;
+}
+
+#labelDonutNeuf{
+	top: 21vh;
+	left: 21vw;
+}
+
+#blocCarCounter{
+	position: absolute;
+	height: 20vh;
+	width: 30vw;
+	top : 5vh;
+	left : 2.5vw;
+}
+
+
+#methodo{
+	position: absolute;
+	height: 5vh;
+	width: 10vw;
+	top : 10vh;
+	left : 75vw;
+	vertical-align: center;
+	cursor : pointer;
+	z-index: 20;
+}
+
+#methodo>div{
+	display : none;
+	opacity: 0;
+	font-size : 1.6vmin;
+}
+
+#methodo h4{
+	text-align: center;
+}
+
+
+#methodo h3{
+	color: #70C2B8;
+	font-size: 2vmin;
+}
