@@ -1,0 +1,23 @@
+#map2-map.section
+    +header("locataires","Logements locatifs","Disparités entre nord et sud","(entre 2006 et 2011)")
+    #map2.map
+    .legend.locataires
+        ul
+            li < -4%
+            li Entre -4% et 8%
+            li Entre 8% et 12%
+            li > 12%
+    .sidebar
+        +placeholder()
+        h1 None
+        fieldset
+            label(for="map2-2006")
+                input#map2-2006(type="radio" value="2006" name="map2" checked)
+                span 2006
+            label(for="map2-2011")
+                input#map2-2011(type="radio" value="2011" name="map2")
+                span 2011
+        h2 Part de locatif dans Nantes
+        .graph
+        h2 évolution entre 2006 et 2011
+        .graph

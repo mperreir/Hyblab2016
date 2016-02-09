@@ -1,15 +1,16 @@
 # Descriptif du projet
 
-Média :
+####Média : La FRAP
 
-Sujet :
+####Sujet : 
 
-Equipe :
+####Equipe : Radio Stars
 
-Patricipants :
-- AGR :
-- Polytech :  
-- SciencesCom :
+####Patricipants :
+
+- **AGR :** Victor Mtn, Maigane Pilon
+- **Polytech :** Ambre Prsn, Pauline Houlgatte, Kami No Varou, Li.Shiting   
+- **SciencesCom :**Charlène Rollo, Pauline Gougeon
 
 # Installation
 

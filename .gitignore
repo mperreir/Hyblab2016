@@ -1,6 +1,7 @@
+node_modules/
+.idea/
 *~
 temp
-node_modules
 bower_components
 .c9
 

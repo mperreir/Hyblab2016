@@ -5,6 +5,8 @@ var path = require('path');
 var app = express();
 
 // Minimum routing: serve static content from the html directory
+app.use('/resources', express.static(path.join(__dirname, 'resources')));
+app.use('/libraries', express.static(path.join(__dirname, 'libraries')));
 app.use(express.static(path.join(__dirname, 'html')));
 
 // You can then add whatever routing code you need
