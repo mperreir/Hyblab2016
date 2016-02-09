@@ -73,7 +73,7 @@ window.addEventListener('load',function () {
 		"labels": {
 			"outer": {
 				"format": "none",
-				"pieDistance": 15
+				"pieDistance": 13
 			},
 			"inner": {
 				"format": "none"
@@ -99,7 +99,7 @@ window.addEventListener('load',function () {
 			}
 		},
 		"tooltips": {
-			"enabled": true,
+			"enabled": false,
 			"type": "placeholder",
 			"string": "{label}: {value}, {percentage}%",
 			"styles": {
@@ -110,7 +110,7 @@ window.addEventListener('load',function () {
 			"pullOutSegmentOnClick": {
 				"effect": "linear",
 				"speed": 800,
-				"size": 20
+				"size": 15
 			}
 		},
 		"misc": {
