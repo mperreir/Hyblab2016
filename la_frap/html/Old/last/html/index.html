@@ -15,7 +15,6 @@
 		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 
-	
 
 		<script src="jquery/jquery-1.12.0.min.js"></script>
 		<script src="jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
@@ -25,15 +24,18 @@
 		<!-- <script src="jquerysvg/jquery.svg.js"></script> -->
 		<script src="js/map_pays_de_la_loire3.js"></script>
 		<script src="js/map_pays_de_la_loire4.js"></script>	
-		<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+
 		<script src="d3/d3pie.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
    		<link href="d3/nv.d3.css" rel="stylesheet" type="text/css">	
 		<script src="d3/nv.d3.js"></script>
 
+
+		<script src="js/graphcumule.js"></script>
+
 		<script src="js/map.js"></script>	
 		<script src="js/piechart.js"></script>
-		<script src="js/graphcumule.js"></script>
 		<script src="js/home.js"></script>
 
 	</head>
@@ -42,8 +44,8 @@
 		<div id="fullpage">
 			<div class="section " id="section0">
 				<div class="heading">
-					<h1>LES RADIOS LOCALES DES PAYS DE LA LOIRE</h1>
-					<p>Les ondes de la région décryptées</p>
+					<h1>LES RADIOS LOCALES</h1>
+					<p>L'impact des radios associatives sur la région Pays de la Loire</p>
 					<form>
 						<input type="button" class="bouton" name="boutoncarte" value="Voir la carte" onclick="self.location.href='index.html#firstPage'">
 					</form>
@@ -69,7 +71,7 @@
 							</svg>
 						</div>
 						<div class="texteheader">
-							<p class="titre1">DES RADIOS ASSOCIATIVES A L’UNISSON</p>
+							<p class="titre1">LES MISSIONS DES RADIOS LOCALES</p>
 							<p class="soustitre">Pourquoi se sont elles fédérées ?</p>
 						</div>
 						<div class="evolution">
@@ -149,7 +151,7 @@
 								</svg>
 							</div>
 						<div class="texteheader">
-							<p class="titre1">FOCUS PAR DEPARTEMENT</p>
+							<p class="titre1">LES DEPARTEMENTS</p>
 							<p class="soustitre">Quelles sont les différences entre les départements ?</p>
 						</div>
 						<div class="evolution">
@@ -220,7 +222,6 @@
 						</div>
 						<div id="pieInfo">
 							<p id="pieSection"></p>
-							<div id="pieText"></div>
 						</div>
 					</div>
 				</div>
@@ -243,8 +244,8 @@
 						</svg>
 					</div>
 					<div class="texteheader">
-						<p class="titre1">LES EVOLUTIONS AU NIVEAU REGIONAL</p>
-						<p class="soustitre">Qu’en est-il dix ans après ?</p>
+						<p class="titre1">EVOLUTION</p>
+						<p class="soustitre">De 2006 à 2014</p>
 					</div>
 				</div>
 				<div class="leftPart">
@@ -321,8 +322,8 @@
 			fullpage.initialize('#fullpage', {
 				anchors: ['title','firstPage', 'secondPage','thirdPage','credits'],
 				menu: '#menu',
-				css3:true
-				
+				css3:true,
+
 			});
 
 
@@ -333,4 +334,3 @@
 
 	</body>
 </html>
-
