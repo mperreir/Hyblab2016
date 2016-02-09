@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 
 // Minimum routing: serve static content from the html directory
-app.use(express.static(path.join(__dirname, './')));
+app.use(express.static(path.join(__dirname, './html')));
 
 // You can then add whatever routing code you need
 
@@ -14,7 +14,3 @@ app.use(express.static(path.join(__dirname, './')));
 // server and visiting http(s)://127.0.0.1:8080/name_of_you_project/ (if on a local server)
 // or more generally: http(s)://server_name:port/name_of_you_project/
 module.exports = app;
-
-app.listen(8080, function(){
-	console.log("Server launched on port 8080")
-} );

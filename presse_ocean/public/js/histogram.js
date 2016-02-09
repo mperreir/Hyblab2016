@@ -70,7 +70,7 @@ function Histogram(id, dataset, w, h, max, color_type)
   var range = [ "hsl(220,100%,100%)", "hsl(220,100%,75%)" ];
   var thisObject = this;
   queue()
-    .defer(d3.json, "/media/data/data.json")
+    .defer(d3.json, "media/data/data.json")
     .await(function(error, data) {
       range = [
         d3.rgb(data.colors[color_type].range[0]),
