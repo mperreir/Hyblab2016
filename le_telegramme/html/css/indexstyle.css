@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+}
+
+.container-fluid {
+  height: 100vh;
+  background: lightgray;
+}
+
+.container-fluid >.row >#navigation {
+  width: 92px;
+  height: 100vh;
+  text-align: center;
+}
+.container-fluid >.row >#navigation >ul {
+  width: inherit;
+  padding: 0;
+}
+
+.container-fluid >.row >#navigation >ul >li{
+  width: inherit;
+}

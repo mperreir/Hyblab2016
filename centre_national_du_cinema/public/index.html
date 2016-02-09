@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ocean's Seven</title>
+	<meta name="author" content="Simon Vergnaud" />
+	<meta name="description" content="l'histoire du cinéma" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+
+
+	<style>
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	
+	#section1,
+	#section2 {
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	
+	.section{
+		background-size: cover;
+	}
+
+	.slide{
+		background-size: cover;
+	}
+
+	/* Defining each sectino background and styles
+	* --------------------------------------- */
+	#section0{
+		background-image: url(img/day_cinema2.png);
+		padding: 0;
+    }
+	
+	#section1{
+	    background-image: url(img/night_cinema3.png);
+	}
+	
+	#section2{
+	    background-image: url(img/night_cinema3.png);
+	}
+	
+	#section3 {
+	    background-color:#3D4452;
+	}
+	#section3 img {
+	    height:100%;
+	}
+	#section4{
+	    background-color:#3D4452;
+	}
+	
+	#section4 img {
+	    height:100%;
+	}
+	#section5_2{
+	    background-color:#3D4452;
+	}
+
+	#section5, #section6{
+	    background-color:#ea6a58;
+	}
+	
+	#section5 img, #section5_2 img {
+	    height:100%;
+	}
+	
+	#section6 #salleCine_section6 {
+	    height:100%;
+	}
+
+    #section7 {
+	    background-color:#3D4452;
+	}
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/lib/jquery-ui.min.js"></script>
+
+    <script src="js/lib/highcharts.js"></script>
+
+
+	<script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
+	<script type="text/javascript" src="js/function.js"></script>
+
+	<script type="text/javascript" src="js/imgLoaded.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				'verticalCentered': false,
+				navigation: true,
+				css3:false,
+				onLeave: function(index, nextIndex, direction){
+				    if(direction =='down' && nextIndex == 3){
+				        launchAudio();
+				    }
+				    if(direction == 'up' && nextIndex == 3){
+				        launchAudio();
+				    }
+				    if(index == 3 && direction =='down'){
+				        pauseAudio();
+				    }
+				    if(index == 3 && direction == 'up'){
+				        pauseAudio();
+				    }
+
+				    if(direction =='down' && nextIndex == 5){
+				       launchVideo();
+				    }
+				    if(direction == 'up' && nextIndex == 5){
+				        launchVideo();
+				    }
+				    if(index == 5 && direction =='down'){
+				        pauseVideo();
+				    }
+				    if(index == 5 && direction == 'up'){
+				        pauseVideo();
+				    }					            				            
+				}				
+			});
+		});
+		
+	</script>
+
+
+
+</head>
+<body>
+
+    <script src="js/lib/map.js"></script>
+    <script src="js/lib/data.js"></script>
+    <script src="js/lib/drilldown.js"></script>
+    <script src="js/lib/fr-all.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+    <div id="fullpage">
+        
+        <div class="section " id="section0">
+        	<img src="img/day_cinema2.png" alt="" id="fond_slide1">
+			<div id="scene">
+			    <img class="cloud sml" src="img/cloud_sml.png" width="150" height="96"/>
+			    <img class="cloud med" src="img/cloud_med.png" width="192" height="123"/>
+			    <img class="cloud lrg" src="img/cloud_lrg.png" width="224" height="144"/>
+			    <img class="cloud med2" src="img/cloud_med.png" width="192" height="123"/>
+            </div>
+		</div>
+        <div class="section" id="section1">
+            <div class="moon"><img src="img/moon.png" alt="" style="width:90%"></div>
+            <div id="containerStars1">
+                <figure class="star">
+                    <figure class="star-top"></figure>
+                    <figure class="star-bottom"></figure>
+                </figure>
+            </div>
+            <div class="textPresentation">
+                <hr>
+                <p>Chargé de financer les créateurs d’aujourd’hui et de demain, et de réguler les marchés du cinéma et de l’audiovisuel, la mission du Centre national du cinéma et de l’image animée, est aussi d’entretenir et de valoriser la mémoire du passé.</p><br><br>
+                <p>Dans le cadre du projet Hyblab, mené par les étudiants de Polytech, d'AGR et de Sciencescom, le CNC présente aujourd’hui la synthèse d’une quantité de données innombrables récoltées et stockées depuis les années 1960 autour du cinéma. </p>
+                <hr>
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div class="moon"><img src="img/moon.png" alt="" style="width:90%"></div>
+            <div id="containerStars2">
+                <figure class="star">
+                    <figure class="star-top"></figure>
+                    <figure class="star-bottom"></figure>
+                </figure>
+            </div>
+        	<audio id="audioPlayer" src="intro.mp3" ontimeupdate="updateAudio(this)"></audio>
+            <div class="textPresentation">
+                <p id="entrez" >Entrez</p> 
+                <p>le film va commencer...</p>
+            </div>
+		</div>
+        <div class="section" id="section3">
+    		<img src="img/salle_cine2.png" alt="" id="salleCine_section3">
+			<div id="ecran_section3" >	
+				<div class="container-fluid ecran-container">
+					<div class="row">
+						<div class="col-sm-10 col-md-10 section3_title" style="width:100%">
+							<h3 id="cliquezTitre"> Avant que le film ne commence, faisons un tour d’horizon.<br>Qu’en est-il du cinéma dans votre région ?<br>
+							Cliquez sur les différentes régions afin d’afficher les résultats. </h3>
+						</div>
+						<div class="col-sm-2 col-md-2 section3_col_select" style="position:absolute;z-index:5" id="selectgauche">
+							<form>
+								<select id="section3_select" class="form-control" style="display:none">
+									<option>ALSACE</option>
+									<option>AQUITAINE</option>
+									<option>AUVERGNE</option>
+									<option>BASSE-NORMANDIE</option>
+									<option>BOURGOGNE</option>
+									<option>BRETAGNE</option>
+									<option>CENTRE</option>
+									<option>CHAMPAGNE-ARDENNE</option>
+									<option>CORSE</option>
+									<option>FRANCHE-COMTE</option>
+									<option>HAUTE-NORMANDIE</option>
+									<option>ILE-DE-FRANCE</option>
+									<option>LANGUEDOC-ROUSSILLON</option>
+									<option>LIMOUSIN</option>
+									<option>LORRAINE</option>
+									<option>MIDI-PYRENEES</option>
+									<option>NORD-PAS-DE-CALAIS</option>
+									<option>PAYS DE LA LOIRE</option>
+									<option>PICARDIE</option>
+									<option>POITOU-CHARENTES</option>
+									<option>PROVENCE-ALPES-COTE D'AZUR</option>
+									<option>RHONE-ALPES</option>
+								</select>
+							</form>
+							<p class="legend" style="display:none"><span class="leg_blanc">Moyenne nationale</span>/<span class="leg_red">Region</span></p>
+						</div>
+						<div class="row">
+						<div class="col-sm-12 col-md-12" id="selectcentre">
+							<form>
+								<select id="section3_select2" class="form-control">
+                                    <option>Sélectionnez une région...</option>
+									<option>ALSACE</option>
+									<option>AQUITAINE</option>
+									<option>AUVERGNE</option>
+									<option>BASSE-NORMANDIE</option>
+									<option>BOURGOGNE</option>
+									<option>BRETAGNE</option>
+									<option>CENTRE</option>
+									<option>CHAMPAGNE-ARDENNE</option>
+									<option>CORSE</option>
+									<option>FRANCHE-COMTE</option>
+									<option>HAUTE-NORMANDIE</option>
+									<option>ILE-DE-FRANCE</option>
+									<option>LANGUEDOC-ROUSSILLON</option>
+									<option>LIMOUSIN</option>
+									<option>LORRAINE</option>
+									<option>MIDI-PYRENEES</option>
+									<option>NORD-PAS-DE-CALAIS</option>
+									<option>PAYS DE LA LOIRE</option>
+									<option>PICARDIE</option>
+									<option>POITOU-CHARENTES</option>
+									<option>PROVENCE-ALPES-COTE D'AZUR</option>
+									<option>RHONE-ALPES</option>
+								</select>
+							</form>
+						</div>
+						</div>							
+					</div>
+					<div class="row">
+						<div class="col-sm-12 col-md-12 section3_dataviz">						
+						</div>					
+					</div>	
+					<div class="row btns_section3">
+					</div>																			
+				</div>
+			</div>
+
+			<p id="perso1_section3" class="perso" data-region="CORSE"></p>
+			<p id="perso2_section3" class="perso" data-region="MIDI-PYRENEES"></p>
+			<p id="perso3_section3" class="perso" data-region="FRANCHE-COMTE"></p>
+			<p id="perso4_section3" class="perso" data-region="PROVENCE-ALPES-COTE D'AZUR"></p>
+			<p id="perso5_section3" class="perso" data-region="POITOU-CHARENTES"></p>
+			<p id="perso6_section3" class="perso" data-region="PICARDIE"></p>
+			<p id="perso7_section3" class="perso" data-region="PAYS DE LA LOIRE"></p>
+			<p id="perso8_section3" class="perso" data-region="AUVERGNE"></p>
+			<p id="perso9_section3" class="perso" data-region="RHONE-ALPES"></p>
+			<p id="perso10_section3" class="perso" data-region="NORD-PAS-DE-CALAIS"></p>
+			<p id="perso11_section3" class="perso" data-region="BASSE-NORMANDIE"></p>
+			<p id="perso12_section3" class="perso" data-region="LIMOUSIN"></p>
+			<p id="perso13_section3" class="perso" data-region="ILE-DE-FRANCE"></p>
+			<p id="perso14_section3" class="perso" data-region="AQUITAINE"></p>
+			<p id="perso15_section3" class="perso" data-region="BRETAGNE"></p>
+			<p id="perso16_section3" class="perso" data-region="LANGUEDOC-ROUSSILLON"></p>
+			<p id="perso17_section3" class="perso" data-region="CENTRE"></p>
+			<p id="perso18_section3" class="perso" data-region="ALSACE"></p>
+			<p id="perso19_section3" class="perso" data-region="BOURGOGNE"></p>
+			<p id="perso20_section3" class="perso" data-region="LORRAINE"></p>
+			<p id="perso21_section3" class="perso" data-region="CHAMPAGNE-ARDENNE"></p> 
+        </div>
+		<div class="section" id="section4">
+    		<img src="img/fond_dataviz2.png" alt="" id="salleCine_section4">
+    		<div id="ecran_section4">
+    			<video id="videoPlayer" src="cpt.mp4" ontimeupdate="updateVideo(this)"></video>
+				<h3 id="titreDataviz2" class="text_video" style="text-align:center;"><span style="font-weight:bold;font-size:1.8em">Ça commence ! </span><br><br>Découvrez l'influence des grands faits sociaux en France sur les entrées au cinéma de 1960 à aujourd'hui. <br><br>Glissez votre curseur sur la courbe pour retrouver le contexte associé aux entrées selon les années.</h3>    					
+    		</div>
+		</div>
+        <div class="section" id="section5_2">
+    		<img src="img/fond_dataviz2.png" alt="" id="salleCine_section5_2">
+               <div id="ecran_section5_2">
+               	<img id="ecran_section5_2_back" src="img/tv_1963.jpg" alt="">
+               	<div id="chart_section5_2"></div>
+               	
+               </div>
+		</div>        
+        <div class="section" id="section5">
+    		<img src="img/ticket.png" alt="" id="salleCine_section5">
+    		<div id="ecran_section5">
+    			<h3 id="titreDataviz2" style="text-align:center;">
+	                <div id="ecran_section5"></div>
+	                <span style="font-weight:bold;font-size:1.8em">Besoin de précisions ?  </span><br><br>
+					Découvrez et comparez les caractéristiques de vos régions et départements !
+	            </h3>     		    
+    		</div>
+		</div>
+		<div class="section" id="section6">
+		    <img src="img/ticket.png" alt="" id="salleCine_section6">
+			<div id="ecran_section6" >	
+				<div class="container-fluid ecran-container" style="padding:0;">
+					<div class="row section5_row">
+				
+					</div>
+					<div class="row row_slider">
+						<div style="font-family:geosanslightregular;font-size:1.4em">
+						  <label for="data_annee">Année: </label>
+						  <input type="text" id="data_annee" readonly style="border:0; color:#ea6a58; font-weight:bold;background:none;width:6%">
+						</div>
+						<div id="slider-range-max" style="box-shadow:1px 1px 1px #aaa;"></div>						
+					</div>																		
+				</div>
+
+			</div>		    
+		</div>
+		<div class="section" id="section7">
+		    <div id="team">
+		        <h1>L'équipe</h1>
+		        <ul>
+		 			<li>
+		 				<img src="img/logocom.png"/>
+		 				
+		 				<h5> SciencesCom </h5>
+
+		 				<p>
+		 					<a href="#">Marie Briand</a><br/>
+		 					<a href="#">Agathe Merciol</a>
+		 				</p>
+		 			</li>
+		 			<li class="secondli">
+		 				<img src="img/logopopo.png"/>
+		 				
+		 				<h5> Polytech </h5>
+		 				
+		 				<p>
+		 					<a href="#">Benjamin Lelièvre</a><br/>
+		 					<a href="#">Simon Vergnaud</a><br/>
+		 					<a href="#">刘荣波</a>
+		 				</p>
+		 			</li>
+		 			<li class="secondli">
+		 				<img src="img/logoagr.png"/>
+		 				<h5> AGR Nantes </h5>
+		 				<p>
+		 					<a href="#">Léa Guerini</a><br/>
+		 					<a href="#">Vincent Falkowiez</a>
+		 				</p>
+		 			</li>
+		 			<li>
+		 				<img src="img/logocnc.png"/>
+		 				
+		 				<h5> CNC </h5>
+
+		 				<p>
+		 					<a href="#">Sophie Jardillier</a><br/>
+		 					<a href="#">Benoit Danard</a>
+		 				</p>
+		 			</li>
+		 		</ul>
+		    </div>
+		    <div id="bottompage2">
+                <table id="partenaires" border="0" style="width:100%;text-align:center;">
+                    <tr>
+                        <td>
+                            <a href="http://www.agrnantes.fr" title="A.G.R.">
+                                <img src="img/logos/agr_white.png" alt="A.G.R." width="50px" height="auto"/>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="http://web.polytech.univ-nantes.fr" title="Polytech">
+                                <img src="img/logos/polytech_white.png" alt="Polytech" width="70px" height="auto" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="http://www.sciencescom.org" title="Science Com">
+                                <img src="img/logos/sciences_com_white.png" alt="Science Com" width="90px" height="auto" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="http://www.univ-nantes.fr" title="Université de Nantes">
+                                <img src="img/logos/univnantes_white.png" alt="Université de Nantes" width="90px" height="auto" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="http://www.nantesmetropole.fr" title="Nantes Métropole">
+                                <img src="img/logos/nantes-metro.png" alt="Nantes Métropole" width="90px" height="auto" style=" -webkit-filter: invert(100%); filter:invert(100%);-moz-filter:invert(100%);-o-filter:invert(100%)" />
+                            </a>
+                        </td>
+                        <td>
+                            <a href="http://www.paysdelaloire.fr" title="Pays de la Loire">
+                                <img src="img/logos/paysdelaloire2.png" alt="Pays de la Loire" width="90px" height="auto"/>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <table id="partenaires2" border="0" style="width:100%;text-align:center">
+                    <tr>
+                        <td>
+                            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/fr/" title="Creative Commons">
+                                <img src="img/logos/cc_white.png" alt="Creative Commons" width="30px" height="auto"/>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="http://opensource.org" title="Open Source Initiative">
+                                <img src="img/logos/opensource_white.png" alt="Open Source Initiative"  width="40px" height="auto"/>
+                            </a>
+                        </td>
+                        <td style="text-align:right;color:white">
+                            <p>un projet issu des ateliers du</p>
+                        </td>
+                        <td>
+                            <a href="http://www.hyblab.fr">
+                                <img src="img/logos/hyblab_white.png" alt="Hyblab - Data Journalisme">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="http://www.ouestmedialab.fr" title="MediaLab">
+                                <img src="img/logos/medialab_white.png" alt="MediaLab" />
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+		    </div>
+		</div>
+    </div>
+
+	<script type="text/javascript" src="js/sizeWindow.js"></script>
+	<script type="text/javascript" src="js/perso.js"></script>
+	<script type="text/javascript" src="js/round.js"></script>
+	<script type="text/javascript" src="js/courbe.js"></script>
+
+
+	<script type="text/javascript">
+	function launchAudio(){
+		var player = document.querySelector('#audioPlayer');
+		player.play();
+	}
+
+	function pauseAudio(){
+		var player = document.querySelector('#audioPlayer');
+		player.pause();
+		player.currentTime = 0;
+	}
+	function updateAudio(player) {
+	    var duration = player.duration;    // Durée totale
+	    var time     = player.currentTime; // Temps écoulé
+
+	    if(time ==duration){
+	    	$.fn.fullpage.moveSectionDown();
+	    }
+	}	
+
+	function launchVideo(){
+		$('#videoPlayer').css('display','inherit')
+		$('#ecran_section4').css('background-color','#000');
+		$('.text_video').css('display','none')
+		var player = document.querySelector('#videoPlayer');
+		player.play();
+	}	
+	function pauseVideo(){
+		var player = document.querySelector('#videoPlayer');
+		player.pause();
+		player.currentTime = 0
+	}	
+	function updateVideo(player) {
+	    var duration = player.duration;    // Durée totale
+	    var time     = player.currentTime; // Temps écoulé
+	    if(time ==duration){
+	    	$('#videoPlayer').css('display','none');
+	    	$('#ecran_section4').css('background-color','initial');
+	    	$('.text_video').css('display','inherit')
+	    }
+	}	
+    var limit=75, // Max number of starts
+        container1=document.getElementById('containerStars1');
+        loop={
+            //initilizeing
+            start:function(){
+                for (var i=0; i <= limit; i++) {
+                    var star=this.newStar();
+                    star.style.top=this.rand()*100+"%";
+                    star.style.left=this.rand()*100+"%";
+                    star.style.webkitAnimationDelay=this.rand()+"s";
+                    star.style.mozAnimationDelay=this.rand()+"s";
+                    container1.appendChild(star);
+                };
+            },
+            //to get random number
+            rand:function(){
+                return Math.random();
+            },
+            //createing html dom for star
+            newStar:function(){
+                var d = document.createElement('div');
+                d.innerHTML = '<figure class="star"><figure class="star-top"></figure><figure class="star-bottom"></figure></figure>';
+                return d.firstChild;
+            },
+        };
+        loop.start();
+
+	</script>	
+	<script>
+	     var limit=75, // Max number of starts
+        container2=document.getElementById('containerStars2');
+        loop={
+            //initilizeing
+            start:function(){
+                for (var i=0; i <= limit; i++) {
+                    var star=this.newStar();
+                    star.style.top=this.rand()*100+"%";
+                    star.style.left=this.rand()*100+"%";
+                    star.style.webkitAnimationDelay=this.rand()+"s";
+                    star.style.mozAnimationDelay=this.rand()+"s";
+                    container2.appendChild(star);
+                };
+            },
+            //to get random number
+            rand:function(){
+                return Math.random();
+            },
+            //createing html dom for star
+            newStar:function(){
+                var d = document.createElement('div');
+                d.innerHTML = '<figure class="star"><figure class="star-top"></figure><figure class="star-bottom"></figure></figure>';
+                return d.firstChild;
+            },
+        };
+        loop.start();
+	</script>
+</body>
+</html>

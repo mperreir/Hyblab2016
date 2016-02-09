@@ -1,0 +1,9 @@
+mixin header(type,title,subtitle,description)
+    .header(class!=type)
+        h1.title!= title
+        h1.subtitle!= subtitle
+        h2.description!= description
+
+mixin placeholder()
+    .placeholder
+        .icon Selectionnez un quartier

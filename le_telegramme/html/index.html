@@ -1,30 +1,211 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-  </head>
+<html>
+<head>
+  <title>Métagramme</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.3.0/ekko-lightbox.min.css"> -->
+</head>
   <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+      <!-- Container -->
+      <div class="container-fluid">
+        <div id="container" class="row">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-      <h1>Hyblab 2016</h1>
-    </header>
+          <!-- Navigation -->
+          <div class="col-md-1 sidebar" id="navbar_left">
+              <ul class="nav nav-sidebar vertical-center" id="left">
+                <li id="menu1" class="text-center text-uppercase active">
+                  <a href="#">ça pousse</a>
+                </li>
+                <li id="menu2" class="text-center text-uppercase">
+                  <a href="#">10 éclosions</a>
+                </li>
+                <li id="menu3" class="text-center text-uppercase">
+                  <a href="#">Top / Flop</a>
+                </li>
+              </ul>
+          </div>
 
-    <!-- Le contenu du site -->
-    <p>replace this content by your web app !</p>
+          <!-- Middle -->
+          <div class="col-md-4" id="middle">
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2016</p>
-    </footer>
-    </div>
+              <!-- Middle panel navbar -->
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" id="submenu">
+                  <li class="col-md-4 active_j" id="submenu1">
+                    <a href="#"><img src="img/pictos/edito.png"> Gazette</a>
+                  </li>
+                  <li class="col-md-4 noactive_j" id="submenu2">
+                    <a href="#"><img src="img/pictos/sondage.png"> Votre avis</a>
+                  </li>
+                  <li class="col-md-4 noactive_j" id="submenu3">
+                    <a href="#"><img src="img/pictos/photo.png"> Photos</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Middle panel content -->
+
+              <!-- DEBUT CA POUSSE -->
+              <div id="ca_pousse_edito" class="mp_content">
+                <div class="mp_header">
+                  <p class="text-center text-uppercase">ça pousse !</p>
+                </div>
+
+                <p class="mp_intro">
+                  Des zones industrielles, des ports, des lotissements, des
+                  quartiers, un stade, des ensembles immobiliers… des
+                  milliers de nouveaux bâtiments ont vu le jour entre 2000
+                  et 2015. Métamorphosant en profondeur Brest et les
+                  sept communes de la métropole.
+                </p>
+
+                <img src="img/ca_pousse_edito.png">
+              </div>
+
+              <div id="ca_pousse_sondage" class="mp_sondage">
+                <!-- <div class="mp_intro">
+                  <p class="text-center text-uppercase">
+                    Avez-vous ressenti une metamorphose de Brest ces 15
+                    dernières années ?
+                  </p>
+                </div> -->
+
+                <!-- <img src="img/ca_pousse_sondage.png"> -->
+
+                <img class="header_sondage" src="img/question_ca_pousse.png">
+                <img class="sondage" src="img/ca_pousse_sondage.gif">
+                <img class="commentaire_sondage" src="img/commentaire_ca_pousse.png">
+              </div>
+
+              <div id="ca_pousse_photos" class="row">
+                <div class="col-md-10">
+                  <div class="row">
+                    <a href="img/brest/ca_pousse/fullsize/bellevue.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="" class="col-sm-4">
+                      <img src="img/brest/ca_pousse/miniatures/bellevue.jpg" class="img-responsive hoverZoomLink"> 
+                    </a>
+
+                    <a href="img/brest/ca_pousse/fullsize/capucins.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="" class="col-sm-4">
+                      <img src="img/brest/ca_pousse/miniatures/capucins.jpg" class="img-responsive hoverZoomLink"> 
+                    </a>
+
+                    <a href="img/brest/ca_pousse/fullsize/capucins.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="" class="col-sm-4">
+                      <img src="img/brest/ca_pousse/miniatures/capucins.jpg" class="img-responsive hoverZoomLink"> 
+                    </a>
+                  </div>
+                  <div class="row"></div>
+                  <div class="row"></div>
+                  <div class="row"></div>
+                </div>
+
+                <!-- <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/bellevue.jpg" alt="Bellevue"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/capucins.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/gouesnou.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/guipavas.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/lambezellec.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/plougastel.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/plouzan.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/pontanezen.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/pontrecou.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/relecq.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/saintmarc.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/stadeFrancisleble.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/strasbourg.jpg" alt="Tigre"></div>
+                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/technopole.jpg" alt="Tigre"></div> -->
+              </div>
+              <!--  FIN  CA POUSSE  -->
+
+              <!-- DEBUT ECLOSIONS -->
+              <div id="eclosions_edito" class="mp_content">
+                <div id="header_eclosions">
+                  <p class="text-center text-uppercase">10 éclosions</p>
+                </div>
+
+                <p class="mp_intro">
+                  Brest renaît et avec elle, de grands projets fleurissent.
+                  Précurseurs de la métamorphose, le multiplex
+                  Liberté fut le premier projet à sortir de terre
+                  en 2005. Par la suite, d’autres équipements loisir
+                  se développent, comme la Carène ou le Brest
+                  Arena. L’inauguration du tramway, plébiscité par
+                  les Brestois, est le plus grand projet érigé par la
+                  ville. Celui-ci a d’ailleurs engendré la réhabilitation
+                  de Pontanezen. L’aéroport et le téléphérique ont
+                  accompagné cette révolution des transports. <br> <br>
+                  Les projets comme celui du port, de la zone Froutven
+                  et du Polder ont renforcé l’attractivité du territoire.
+                  Ces projets font de Brest une ville qui tend vers
+                  une métropole d’envergure.
+                </p>
+
+                <img src="img/eclosions_edito.png">
+              </div>
+
+              <div id="eclosions_sondage" class="mp_sondage">
+                <img class="header_sondage" src="img/question_eclosions.png">
+                <img class="sondage" src="img/eclosions_sondage.gif">
+                <img class="commentaire_sondage" src="img/commentaire_eclosions.png">
+              </div>
+
+              <div id="eclosions_photos" class="mp_content">
+                <img src="img/eclosions_sondage.png">
+              </div>
+              <!-- FIN ECLOSIONS -->
+
+
+              <!-- DEBUT QUARTIERS -->
+              <div id="quartiers_edito" class="mp_content">
+                <div id="header_quartiers">
+                  <p class="text-center text-uppercase">Top / Flop</p>
+                </div>
+
+                <p class="mp_intro">
+                  Deux tiers des bâtiments construits entre 2000 et
+                  2015 sur le territoire de Brest Métropole l’ont été
+                  dans les communes de la première couronne. Le
+                  Relecq-Kerhuon et Plougastel-Daoulas caracolent
+                  en tête des territoires les plus fertiles du
+                  siècle. Ce qui démontre bien, si cela était encore
+                  nécessaire, une lourde tendance à l’étalement
+                  urbain. <br> <br>
+                  Et à Brest mêm’, comme on dit dans le coin ? Le
+                  changement se concentre toujours sur les exté-
+                  rieurs avec comme principales métamorphoses :
+                  La Cavale-Blanche, Saint-Pierre, Kergaradec et
+                  Bellevue. A noter que les trois quartiers qui ont le
+                  moins évolué sur la période sont le Bouguen, Kerinou
+                  et le Centre-Siam.
+                </p>
+
+                <img src="img/quartiers_edito.png" id="brestmem">
+              </div>
+
+              <div id="quartiers_sondage" class="mp_sondage">
+                <img class="header_sondage" src="img/question_quartiers.png">
+                <img class="sondage" src="img/quartiers_sondage.gif">
+              </div>
+
+              <div id="quartiers_photos" class="mp_content">
+                <img src="img/quartiers_sondage.png">
+              </div>
+              <!-- FIN QUARTIERS -->
+
+          </div>
+
+          <!-- Map -->
+          <div class="col-md-7" id="right">
+            <iframe src="map.html"></iframe>
+          </div>
+
+        </div>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script type="text/javascript" src="js/dynamic_panels.js"></script>
+      <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.3.0/ekko-lightbox.min.js"></script> -->
   </body>
 </html>
