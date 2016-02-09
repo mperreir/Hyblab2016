@@ -1,10 +1,8 @@
 'use strict';
 
 var margin = {top: 30, right: 0, bottom: 20, left: 0},
-    //width = 960,
-    width = (window.screen.availWidth / 2),
-    //height = 500 - margin.top - margin.bottom,
-    height = (window.screen.availHeight / 2) - margin.top - margin.bottom,
+    width = (window.screen.availWidth * 70/100),
+    height = (window.screen.availHeight * 50/100) - margin.top - margin.bottom,
     transitioning;
 
 // sets x and y scale to determine size of visible boxes
@@ -28,7 +26,9 @@ var treemap = d3.layout.treemap()
     .ratio(height / width * 0.5 * (1 + Math.sqrt(5)))
     .round(false);
 
-var svg = d3.select('#treemap').append('svg')
+var svgtm = d3.select('#treemap').append('svg')
+    .attr('viewBox', '0 0 ' + Math.round(width + margin.left + margin.right) + ' ' + Math.round(height + margin.bottom + margin.top))
+    .attr('preserveAspectRatio', 'xMinYMin meet')
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.bottom + margin.top)
     .style('margin-left', -margin.left + 'px')
@@ -39,7 +39,7 @@ var svg = d3.select('#treemap').append('svg')
 
 
 // Ajout d'une balise 'grandparent' permettant au clic de dézoomer le treemap.
-var grandparent = svg.append('g')
+var grandparent = svgtm.append('g')
     .attr('class', 'grandparent');
 
 grandparent.append('rect')
@@ -99,7 +99,6 @@ function layout(d) {
 }
 
 d3.json('json/treemap.json', function(root) {
-  console.log(root)
   initialize(root);
   accumulate(root);
   layout(root);
@@ -118,7 +117,7 @@ d3.json('json/treemap.json', function(root) {
       .select('rect')
         .attr('fill', '#585858');
 
-    var g1 = svg.insert('g', '.grandparent') // Insère une balise 'g' de classe 'depth' avant la balise 'grandparent'.
+    var g1 = svgtm.insert('g', '.grandparent') // Insère une balise 'g' de classe 'depth' avant la balise 'grandparent'.
          .datum(d)
         .attr('class', 'depth');
 
@@ -132,10 +131,6 @@ d3.json('json/treemap.json', function(root) {
         .classed('children', true)
         .on('click', transition); // On pourrait ajouter la propriété CSS OnHover.
 
-
-    console.log('g');
-    console.log(g);
-
     g.selectAll('.child')
         .data(function(d) { return d._children || [d]; })
       .enter().append('rect')
@@ -143,15 +138,15 @@ d3.json('json/treemap.json', function(root) {
         .call(rect);
     
     g.append('rect')
-        .attr('class', 'parent')
-        .call(rect);
+      .attr('class', 'parent')
+      .call(rect);
 
     g.append('text')
         .attr('dy', '.75em')
         .text(function(d) { return d.name; })
         .call(text);
 
-    if (d.value == 10) {
+    if (d.value == 1) {
 
       if (d._children[0].address) {
         g.append('text')
@@ -188,6 +183,17 @@ d3.json('json/treemap.json', function(root) {
           .call(text);
       }
     }
+    else
+    {
+      /*
+      g.append('text')
+        .attr('x', function(d) { return x(d.x) + 6; })
+        .attr('y', function(d) { return y(d.y) + 6; })
+        .text(function(d) { return d.value; })
+        .attr('font-size', '2em')
+        .attr('fill', function (d) { return (d.major == 'SG') ? '#3f6660' : '#fff'; });
+      */
+    }
 
     function transition(d) {
       if (transitioning || !d) return;
@@ -202,10 +208,10 @@ d3.json('json/treemap.json', function(root) {
       y.domain([d.y, d.y + d.dy]);
 
       // Enable anti-aliasing during the transition.
-      svg.style('shape-rendering', null);
+      svgtm.style('shape-rendering', null);
 
       // Draw child nodes on top of parent nodes.
-      svg.selectAll('.depth').sort(function(a, b) { return a.depth - b.depth; });
+      svgtm.selectAll('.depth').sort(function(a, b) { return a.depth - b.depth; });
 
       // Fade-in entering text.
       g2.selectAll('text').style('fill-opacity', 0);
@@ -218,7 +224,7 @@ d3.json('json/treemap.json', function(root) {
 
       // Remove the old node when the transition is finished.
       t1.remove().each('end', function() {
-        svg.style('shape-rendering', 'crispEdges');
+        svgtm.style('shape-rendering', 'crispEdges');
         transitioning = false;
       });
     }
@@ -230,6 +236,7 @@ d3.json('json/treemap.json', function(root) {
   function text(text) {
     text.attr('x', function(d) { return x(d.x) + 6; })
         .attr('y', function(d) { return y(d.y) + 6; })
+        .attr('font-size', '1em')
         .attr('fill', function (d) { return (d.major == 'SG') ? '#3f6660' : '#fff'; });
   }
 
