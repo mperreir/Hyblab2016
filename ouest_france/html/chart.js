@@ -119,10 +119,10 @@ function generatePhrase(type, annee){
 	switch(type){
 		case "menage":
 			var pourcentage = Math.round(data.menage.data[annee].biPlus.pourcentage + data.menage.data[annee].mono.pourcentage);
-				$("#phraseMenage p").html("En "+annee+", il y avait "+pourcentage+"% de ménages motorisés.");	
+				$("#phraseMenage p").html("En "+annee+", il y avait "+pourcentage+"% de ménages motorisés.");
 			break;
 		case "parc":
-			$("#phraseDetention p").html("En "+annee+",les français gardaient leur voiture "+data.menage.data[annee].detention.val+" ans en moyenne.");			
+			$("#phraseDetention p").html("En "+annee+",les français gardaient leur voiture "+data.menage.data[annee].detention.val+" ans en moyenne.");
 			break;
 
 		case "carburant":
@@ -131,7 +131,7 @@ function generatePhrase(type, annee){
 			cleanEnergies.forEach(function(carburant){
 				value += data.carburant.data[annee][carburant].pourcentage;
 			});
-			$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % de voitures vendues utilisaient des énergies propres.");		
+			$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % de voitures vendues utilisaient des énergies propres.");
 			break;
 	}
 }
@@ -149,7 +149,7 @@ function requestChartCarburant(year){
 function requestGenerateParcDonutCars(type, year){
 	if(!data[type]){
 		requestData(function(){
-			generateParcDonutCars(data.parc.data[year][type].pourcentage, type);	
+			generateParcDonutCars(data.parc.data[year][type].pourcentage, type);
 		}, type);
 	}else{
 		generateParcDonutCars(data.parc.data[year][type].pourcentage, type);
@@ -185,7 +185,7 @@ function requestGenerateChartDefilement(type){
 		generateChart(data[type], "200");
 	},type);
 	else generateChart(data[type], "200");
-	
+
 }
 
 function generateChart(res, statut){
@@ -203,11 +203,11 @@ function generateChart(res, statut){
 			break;
 		case "parc":
 			chartId = '#chartParc';
-			break;	
+			break;
 	}
 	var options = fillOptions(chartLabel);
 	var chart = new Chartist.Line(chartId, dataChart, options);
-	
+
 	var seq = 0;
 	var delays = 80;
 	var durations = 500;
@@ -245,7 +245,7 @@ function fillOptions(){
 				x:-16,
 				y:0
 			}
-		}, 
+		},
 		lineSmooth: Chartist.Interpolation.cardinal({
 			fillHoles: true
 		}),
@@ -263,7 +263,7 @@ function generateChartData(donnees){
 	var dataChart = {
 			labels : [],
 			series : [[]]
-		}; 
+		};
 	for(var i=0; i<donnees.years.length; i++){
 		if(i==0){
 			if(jQuery.inArray(donnees.years[0], donnees.yearsToScreen) != -1) dataChart.labels.push(donnees.years[0]);
@@ -284,7 +284,7 @@ function generateChartData(donnees){
 }
 
 function dataToAdd(donnees, index){
-	
+
 	var retour = null;
 	switch(donnees.categorie){
 		case "menage":
@@ -301,7 +301,7 @@ function dataToAdd(donnees, index){
 
 		case "parc":
 			retour = data.menage.data[donnees.years[index]].detention.val;
-			
+
 			break;
 	}
 	return retour;
@@ -319,19 +319,19 @@ function setLineAnimation(param, seq, delay, duration){
 }
 
 function setLabelAnimation(param, categorie){
-	
-	var chaine = 'foreignobject[x="'+param.x+'"]'+
+
+	var chaine = 'foreignObject[x="'+param.x+'"]'+
 				'[y="'+param.y+'"]'+
 				'[width="'+param.width+'"]'+
 				'[height="'+param.height+'"]';
 	var label = $(chaine+" span");
-	var labelParent = $(chaine);	
+	var labelParent = $(chaine);
 
 	var labelParentOriginPos = {
 		x : parseInt(labelParent.css("x").replace("px","")),
 		y : parseInt(labelParent.css("y").replace("px",""))
 	};
-	
+
 	//var labelParentOriginPos = labelParent.position();
 	label.mouseenter(function(node){
 		//Grossissement et changement de couleur du point
@@ -341,12 +341,12 @@ function setLabelAnimation(param, categorie){
 			opacity : 0
 		}, 300);
 		//Grossissement du label
-		$(this).stop().animate({ 
+		$(this).stop().animate({
 			fontSize: "3vmin",
 			}, 300 );
 
 		//Décalage à gauche au fur et à mesure du grossissement du label
-		$(this).parent().stop().animate({ 
+		$(this).parent().stop().animate({
 		x : labelParentOriginPos.x-10+"px",
 		y : labelParentOriginPos.y-5+"px"
 		}, 300 );
@@ -360,12 +360,12 @@ function setLabelAnimation(param, categorie){
 		}, 300);
 
 		//Retrecissement du label
-		$(this).stop().animate({ 
+		$(this).stop().animate({
 			fontSize: "2vmin"
 			}, 300 );
 
 		//Retrecissement du label et retour à la position d'origine
-		$(this).parent().stop().animate({ 
+		$(this).parent().stop().animate({
 		x : labelParentOriginPos.x+"px",
 		y : labelParentOriginPos.y+"px"
 		}, 300 );
@@ -379,18 +379,18 @@ function setLabelAnimation(param, categorie){
 				requestGenerateMenageDonut("biPlus", annee);
 				requestGenerateMenageDonut("none", annee);
 				requestGenerateInfo(categorie, annee, "s2");
-				requestGeneratePhrase("menage", annee)			
+				requestGeneratePhrase("menage", annee)
 				break;
 			case "parc":
 				requestGenerateParcDonutCars("neuf", annee);
 				requestGenerateParcDonutCars("occasion", annee);
 				requestGenerateInfo(categorie, annee, "s3");
-				requestGeneratePhrase("parc", annee);				
+				requestGeneratePhrase("parc", annee);
 				break;
 			case "carburant":
 				requestGenerateInfo(categorie, annee, "s4");
 				requestChartCarburant(annee);
-				requestGeneratePhrase("carburant", annee)					
+				requestGeneratePhrase("carburant", annee)
 				break;
 		}
 	});
@@ -574,7 +574,7 @@ function getRandomPlace(type, nb){
 			}
 		}
 	}
-	
+
 	var copieAllPlaces = allPlaces;
 	if(nbMaxPlaces > nb){
 		for(i=0; i<nb; i++){
@@ -620,7 +620,7 @@ function generateBarChart(serie){
 	var donnees ={
 		labels : ["Diesel", "Essence", "Bicarburant", "Electrique", "Hybride", "Gaz", "Superéthanol"],
 		series :[[serie.diesel.pourcentage,serie.essence.pourcentage,serie.bicarburant.pourcentage,serie.electricite.pourcentage, serie.hybride.pourcentage, serie.gaz.pourcentage, serie.superethanol.pourcentage]]
-	
+
 	};
 	var chart = new Chartist.Bar('#barchart',
 	donnees,
@@ -641,12 +641,12 @@ function generateBarChart(serie){
 		    bottom: 5,
 		    left: 10
   		}
-		
+
 	});
-	
+
 	chart.on('draw', function(param){
 		if(param.type === 'bar'){
-						
+
 			var valeur = $("#barchart svg");
 
 			valeur.appendSvg('text', {
@@ -658,11 +658,11 @@ function generateBarChart(serie){
 			}, Math.round(param.value.x * 10)/10+'%');
 
 			var label = $('#'+param.axisY.ticks[param.index]);
-			
+
 			label.delay(1000).animate({
 				opacity : 1,
 			},500);
-			
+
 			param.element.animate({
 				x2: {
 					begin: 0,
@@ -670,7 +670,7 @@ function generateBarChart(serie){
 					from: param.x1,
 					to: param.x2,
 					easing: 'easeOutQuart'
-					
+
 				}
 			});
 		}
@@ -700,7 +700,7 @@ function animateCloud(className){
 	obj.dequeue("left");
 }
 function animateSize(obj, duration_factor, random_factor){
-	
+
 	obj.each(function(){
 
 		var seed = getPartiallyRandomSeed(random_factor);
@@ -818,7 +818,7 @@ function counterSoldCars(){
 		counter++;
 		if(counter > 1) $("#carCounter").html("Depuis votre arrivée sur cette page, "+counter+" voitures ont été vendues.");
 		else if(counter == 1) $("#carCounter").html("Depuis votre arrivée sur cette page, une voiture a été vendue.");
-		
+
 	},4200);
 }
 
@@ -860,7 +860,7 @@ function animateMethodo(){
 				left: "75vw"
 			}, 1000);
 
-			
+
 		}
 	});
 }
