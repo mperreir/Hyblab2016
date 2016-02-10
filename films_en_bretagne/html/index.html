@@ -1,30 +1,390 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
+<html lang="fr">
   <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
+  	<meta charset="utf-8">
+  	<title>La production documentaire d'une région à l'autre</title>
+  	<link rel="shortcut icon" href="Logos/logo-etude-violet.svg" />
+
+  	<!--stylesheets-->
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="css/dataStyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bar.css">
+    <link rel="stylesheet" href="css/donut2.css">
+
+    <!-- Font family Lato -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,700,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+  	<!--For one page full screen scrolling-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="fullPage.js-master/jquery.fullPage.min.js"></script>
+
+    <!-- module jQuery-->
+    <script src="./jquery/jquery.waypoints.min.js"></script>
+    <script src="./jquery/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="./jquery/jquery-jvectormap-fr_regions-mills.js"></script>
+    <link rel="stylesheet" href="./css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
+
+    <!--Import des scripts -->
+    <script type="text/javascript" src="./scripts/script.js"></script>
+    <script type="text/javascript" src="./scripts/colorMap.js"></script>
+    <script src="scripts/bar.js"></script>
+    <script src="scripts/donut2.js"></script>
+
+    <!-- 3D js module-->
+    <script src="d3/d3.js" charset="utf-8"></script>
+
+    <!-- Bootstrap----->
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
   </head>
+
   <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+    <div id="fullpage">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-      <h1>Hyblab 2016</h1>
-    </header>
+        <!--Page de garde-->
+        <div data-anchor="page_de_garde" class="section" id="page_garde">
 
-    <!-- Le contenu du site -->
-    <p>replace this content by your web app !</p>
+          <!-- Logo de fond -->
+          <img id="logo1garde" src="Logos/logo-etude-blanc.svg" alt="Logo-étude"/>
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2016</p>
-    </footer>
+          <img class="garde" id="films_en_bretagne" src="Logos/logo-films-en-bretagne.svg" alt="Films_en_bretagne"/>
+
+          <!-- Barre de séparation-->
+          <p class="barre_separation_garde" id="barre1"></p>
+
+          <p class="garde" id="texte1garde">LA PRODUCTION<br/>DOCUMENTAIRE<br/>D'UNE RÉGION À L'AUTRE</p>
+
+          <!-- Barre de séparation-->
+          <p class="barre_separation_garde" id="barre2"></p>
+
+          <img class="garde" id="logo2garde" src="Logos/logo-etude-violet.svg" alt="Logo_étude"/>
+          <p class="garde" id="texte2garde">EN <span id="latoBlack">DATAVISUALISATION</span>,<br/>ÇA DONNE QUOI ?</p>
+
+          <!-- flèche -->
+          <a href="index.html#intro"><div class="bounce" id="arrow1"></div></a>
+
+
+        </div>
+
+
+        <!--Intro-->
+        <div data-anchor="intro" class="section" id="introduction">
+
+          <img class="intro" id="logoIntro" src="Logos/logo-etude-blanc.svg" alt="Logo_étude"/>
+
+          <p id="titreIntro">LA PRODUCTION DOCUMENTAIRE<br/>D'UNE RÉGION À L'AUTRE</p>
+
+          <!-- Barre de séparation-->
+          <p class="intro" id="barre_separation_intro"></p>
+
+          <!-- Texte -->
+          <p class="texteIntro">Films en Bretagne, avec l'aide de sept étudiants, vous propose une data visualisation réalisée dans le cadre du projet <span class="definition" id="def1">Hyblab</span> organisé par <span class="definition" id="def2">OuestMédiaLab</span>. Cette étude est le résultat d'un travail collectif entre des étudiants Nantais de <span class="definition" id="def3">Sciences com</span>,  de l'école <span class="definition" id="def4">AGR</span> et de <span class="definition" id="def5">Polytech</span>.</p>
+
+          <p class="texteIntroSuite">Cette nouvelle technique journalistique permet une analyse et une lecture visuelle des données de manière  interactive et personnalisable.</p>
+
+          <p class="texteIntroSuite">Les cartographies interactives, utilisées pour ce projet de data journalisme, illustrent  la réalité de la production documentaire ayant obtenu une aide de collectivités territoriales pour chaque région entre 2012 et 2014. Cette data visualisation s'articule autour de différentes données relatives aux sociétés de production, aux auteurs et aux financements des collectivités territoriales.</p>
+
+          <!-- Flèche -->
+          <a href="index.html#dataviz1"><div class="bounce intro" id="arrow2"></div></a>
+
+
+        </div>
+
+        <!--Dataviz 1-->
+        <div data-anchor="dataviz1" class="section" id="data1">
+
+          <!--Barre du haut-->
+          <div class="barreHaut"></div>
+
+          <!--Barre de navigation en haut à gauche-->
+          <div class="nav">
+            <div class="barreNav"></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#page_de_garde">
+              <img class="logoNav" src="Logos/logo-etude-violet.svg" alt="Logo_étude"/></a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav nav-intro" href="index.html#intro">INTRO</a></p></div>
+            <div class="nav-en-cours"><p><a class="lien-nav-en-cours" href="index.html#dataviz1">Producteurs</a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#dataviz2">Auteurs</a></p></div>
+            <div class="nav-dataviz"><p class="nav-dataviz"><a class="lien-nav" href="index.html#dataviz3">Financement</a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#interview">INTERVIEW<br/><span class="estelle-robin">Estelle ROBIN</span></a></p></div>
+          </div>
+
+          <!-- Barre de description de la dataviz -->
+          <div class="texteDataviz" id="texteDataviz1">
+            <p class="titre">Répartition des sociétés de production de documentaires par région</p>
+            <p class="commentaireDataviz">Cette carte représente la répartition des sociétés de production de documentaires, par région d’établissement et par rapport à l'ensemble des sociétés de production de documentaires.<br/>En cliquant sur la région de votre choix, des données complémentaires vous permettent d'établir des comparaisons entre les régions.</p>
+          </div>
+
+          <!-- Lien vers footer -->
+          <div class="lienFooter" id="lienFooter1">
+            <a href="index.html#footer">SOURCES & CONTACTS</a>
+          </div>
+
+          <div class="fondGris">
+            <div class="map" id="french-map1"><!--Here the 1st map--></div>
+
+            <!-- Dataviz de droite -->
+            <div class="avantRegion1">
+              <img src="./Logos/guide-curseur.svg" alt="Logo" class="logoCliquer" />
+            </div>
+            <div class="apresRegion1">
+                  <p class="texteCliquer">Cliquez sur une région</br> pour plus d'informations</p>
+            </div>
+          </div>
+          <!-- Fleches de navigation-->
+          <div class="flechesDataviz" id="flecheDataviz1">
+            <a href="index.html#intro"><p class="lienFlecheHautDataviz"></p></a>
+            <a href="index.html#dataviz2"><p class="lienFlecheBasDataviz" ></p></a>
+          </div>
+
+          <!-- échelle data1-->
+          <div class="echelle1">
+            <img src="./Logos/legende-data1.svg"/>
+          </div>
+
+        </div>
+
+
+        <!--Dataviz 2-->
+        <div data-anchor="dataviz2" class="section" id="data2">
+
+          <!--Barre du haut-->
+          <div class="barreHaut"></div>
+
+          <!--Barre de navigation en haut à gauche-->
+          <div class="nav">
+            <div class="barreNav"></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#page_de_garde">
+              <img class="logoNav" src="Logos/logo-etude-violet.svg" alt="Logo_étude"/></a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav nav-intro" href="index.html#intro">INTRO</a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#dataviz1">Producteurs</a></p></div>
+            <div class="nav-en-cours"><p><a class="lien-nav-en-cours" href="index.html#dataviz2">Auteurs</a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#dataviz3">Financement</a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#interview">INTERVIEW<br/><span class="estelle-robin">Estelle ROBIN</span></a></p></div>
+          </div>
+
+          <!-- Barre de description de la dataviz -->
+          <div class="texteDataviz" id="texteDataviz2">
+            <p class="titre">Nombre d'auteurs de documentaires audiovisuels par région</p>
+            <p class="commentaireDataviz">Cette carte représente la répartition des auteurs de documentaires audiovisuels par région. Les différentes couleurs illustrent une moyenne sur les trois années 2012-2013-2014.<br/>En cliquant sur la région de votre choix, des données complémentaires vous permettent de découvrir  la part des auteurs d'une région par rapport aux auteurs toutes régions confondues et en Ile-de-France (<span class="italique">Étant donné la concentration des auteurs en Ile-de-France</span>).</p>
+          </div>
+
+          <!-- Lien vers footer -->
+          <div class="lienFooter" id="lienFooter2">
+            <a href="index.html#footer">SOURCES & CONTACTS</a>
+          </div>
+
+          <div class="fondGris">
+            <div class="map" id="french-map2"><!--Here the 2nd map--></div>
+            <div class="avantRegion2">
+              <img src="./Logos/guide-curseur.svg" alt="Logo" class="logoCliquer2"/>
+            </div>
+            <div class="apresRegion2">
+                  <p class="cliquer" id="cliquer2">Cliquez sur une région</br> pour plus d'informations</p>
+                  <div id="histogramme">
+                        <div id="Deux"></div>
+                        <div id="Trois"></div>
+                        <div id="Quatre"></div>
+                  </div>
+                  <div id="titrehisto" >
+                      <p id="titre2">2012</p>
+                      <p id="titre3">2013</p>
+                      <p id="titre4">2014</p>
+                  </div>
+            </div>
+          </div>
+
+           <!-- Fleches de navigation-->
+          <div class="flechesDataviz" id="flecheDataviz2">
+            <a href="index.html#dataviz1"><p class="lienFlecheHautDataviz"></p></a>
+            <a href="index.html#dataviz3"><p class="lienFlecheBasDataviz" ></p></a>
+          </div>
+
+          <!-- échelle data2-->
+          <div class="echelle2">
+            <img src="./Logos/legende-data2.svg"/>
+          </div>
+        </div>
+
+        <!--Dataviz 3-->
+        <div data-anchor="dataviz3" class="section" id="data3">
+
+          <!--Barre du haut-->
+          <div class="barreHaut"></div>
+
+          <!--Barre de navigation en haut à gauche-->
+          <div class="nav">
+            <div class="barreNav"></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#page_de_garde">
+              <img class="logoNav" src="Logos/logo-etude-violet.svg" alt="Logo-étude"/></a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav nav-intro" href="index.html#intro">INTRO</a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#dataviz1">Producteurs</a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#dataviz2">Auteurs</a></p></div>
+            <div class="nav-en-cours"><p><a class="lien-nav-en-cours" href="index.html#dataviz3">Financement</a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#interview">INTERVIEW<br/><span class="estelle-robin">Estelle ROBIN</span></a></p></div>
+          </div>
+
+          <!-- Barre de description de la dataviz -->
+          <div class="texteDataviz" id="texteDataviz3">
+            <p class="titre">Part de financement des collectivités territoriales attribuée à la production régionale</p>
+            <p class="commentaireDataviz">Cette carte représente le budget attribué par chaque collectivité territoriale à sa région pour financer la production audiovisuelle et cinématographique. En   cliquant sur la région de votre choix, des données complémentaires vous permettent de découvrir le montant que la région attribue à la production de documentaires.</p>
+          </div>
+
+          <!-- Lien vers footer -->
+          <div class="lienFooter" id="lienFooter3">
+            <a href="index.html#footer">SOURCES & CONTACTS</a>
+          </div>
+
+          <div class="fondGris">
+            <div class="map" id="french-map3"><!--Here the 2nd map--></div>
+
+            <div class="avantRegion3">
+              <img src="./Logos/guide-curseur.svg" alt="Logo" class="logoCliquer" />
+            </div>
+            <div class="apresRegion3">
+                  <p class="texteCliquer">Cliquez sur une région</br> pour plus d'informations</p>
+            </div>
+          </div>
+          <!-- Fleches de navigation-->
+          <div class="flechesDataviz" id="flecheDataviz3">
+            <a href="index.html#dataviz2"><p class="lienFlecheHautDataviz"></p></a>
+            <a href="index.html#interview"><p class="lienFlecheBasDataviz" ></p></a>
+          </div>
+
+          <!-- échelle data3-->
+          <div class="echelle3">
+            <img src="./Logos/legende-data3.svg"/>
+          </div>
+        </div>
+
+
+        <!-- Interview -->
+        <div data-anchor="interview" class="section" id="Interview">
+
+          <!--Barre du haut-->
+          <div class="barreHaut"></div>
+
+
+          <!-- Vidéo -->
+            <video width=100% height=100% controls>
+              <source src="interview.m4v" name="Interview Estelle ROBIN">
+              Your browser does not support the video tag.
+            </video>
+
+        </div>
+
+
+
+        <!--Footer-->
+        <div data-anchor="footer" class="section" id="Footer">
+
+          <!--Barre du haut-->
+          <div class="barreHaut"></div>
+
+          <!--Barre de navigation en haut à gauche-->
+          <div class="nav" id=navFooter>
+            <div class="barreNav"></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#page_de_garde">
+              <img class="logoNav" src="Logos/logo-etude-violet.svg" alt="Logo-étude"/></a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav nav-intro" href="index.html#intro">INTRO</a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#dataviz1">Producteurs</a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#dataviz2">Auteurs</a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#dataviz3">Financement</a></p></div>
+            <div class="nav-dataviz"><p><a class="lien-nav" href="index.html#interview">INTERVIEW<br/><span class="estelle-robin">Estelle ROBIN</span></a></p></div>
+            <div class="reseauxSociaux">
+              <p><a class="lien-nav" href="http://www.facebook.com"><img id="fb" src="Logos/logo-fb.svg" alt="Facebook"/></a></p>
+              <p><a class="lien-nav" href="http://www.twitter.com"><img id="twit" src="Logos/logo-twit.svg" alt="Twitter"/></a></p>
+            </div>
+          </div>
+
+          <!-- Flèche de retour à l'interview -->
+          <a href="index.html#interview"><div id="flecheFooter"></div></a>
+
+          <!-- Conclusion -->
+          <div class="conclu">
+            <p class="commentaireDataviz">Cette data visualisation permet de rendre compte du dynamisme des régions en matière de production de documentaires audiovisuels et cinématographiques. Elle montre la répartition des acteurs : auteurs et producteurs ; et permet d’obtenir une photographie des politiques territoriales à la veille de la création des nouvelles régions.</p>
+            <p id="sources">Sources :<br>Ciclic, fonds d'aides des collectivités territoriales<br/>SCAM, fichier des auteurs multimédia</p>
+          </div>
+
+          <!-- Logos -->
+          <div class="logos">
+
+            <!-- Logos des écoles et du média partenaire-->
+            <div class="logos_ecoles">
+
+              <div class="divs_logos" id="feb">
+                <a href="http://filmsenbretagne.org/"><p class="conteneur_logo" id="conteneurFEB"><img class="logos_fin" src="Logos/logo-feb-blanc.svg" alt="Logo_film_en_bretagne"/></p></a>
+                <p>Elisabeth CLÉMENT<br/>Sophie FLEISCHL<br/>Isabelle GUIVARC’H</p>
+              </div>
+
+              <div class="divs_logos autres_logos_ecoles" id="sciencescom">
+                <a href="http://www.sciencescom.org/"><p class="conteneur_logo"><img class="logos_fin" src="Logos/logo-scom-blanc.svg" alt="Logo_sciences_com"/></p></a>
+                <p>Sixtine COUDERT<br/>Marine GUILLEMOT</p>
+              </div>
+
+              <div class="divs_logos autres_logos_ecoles" id="agr">
+                <a href="http://www.agrnantes.fr/"><p class="conteneur_logo" id="p_agr"><img class="logos_fin" src="Logos/logo-agr-blanc.svg" alt="Logo_AGR"/></p></a>
+                <p>Manon MOREAU<br/>Vincent MOULINEC</p>
+              </div>
+
+              <div class="divs_logos autres_logos_ecoles" id="popo">
+                <a href="http://www.polytech-reseau.org/"><p class="conteneur_logo"><img class="logos_fin" src="Logos/logo-polytech-blanc.svg" alt="Logo_Polytech"/></p></a>
+                <p id="nos_noms">Laura JACQUEL<br/>Pierre MICHEL<br/>Valentin PREZELIN</p>
+              </div>
+            </div>
+
+            <div id="ateliersHyblab">
+              Un projet issu des ateliers du <a href="http://www.">Hyblab</a>
+            </div>
+
+            <!--Barre-->
+            <img id="barreFooter" src="Logos/barre-footer-orange.svg" alt="Barre"/>
+
+            <!-- Logos des autres partenaires -->
+            <div id="autres_logos">
+              <div class="divs_logos" id="hyblab">
+                <a href="http://www.hyblab.fr/"><img class="logos_fin" src="Logos/logo-hyblab-blanc.svg" alt="Logo_hyblab"/></a>
+              </div>
+
+              <div class="divs_logos autres_logos_partenaires" id="univ-nantes">
+                <a href="http://www.univ-nantes.fr/"><img class="logos_fin" src="Logos/logo-univnantes-blanc.svg" alt="Logo_Univ-Nantes"/></a>
+              </div>
+
+              <div class="divs_logos autres_logos_partenaires" id="pdll">
+                <a href="http://www.paysdelaloire.fr/"><img class="logos_fin" src="Logos/logo-paysloire-blanc.svg" alt="Logo_Pays_de_la_loire"/></a>
+              </div>
+
+              <div class="divs_logos autres_logos_partenaires" id="ouestmedia">
+                <a href="http://www.ouestmedialab.fr/"><img class="logos_fin" src="Logos/logo-ouestmedia-blanc.svg" alt="Logo_Ouest_media_lab"/></a>
+              </div>
+
+              <div class="divs_logos autres_logos_partenaires" id="nantes">
+                <a href="http://www.nantesmetropole.fr/"><img class="logos_fin" src="Logos/logo-nantes-blanc.svg" alt="Logo_Nantes"/></a>
+              </div>
+
+              <div class="divs_logos autres_logos_partenaires" id="audiens">
+                <a href="http://www.audiens.org/"><img class="logos_fin" src="Logos/logo-audiens-blanc.svg" alt="Logo_audiens"/></a>
+              </div>
+
+              <div class="divs_logos autres_logos_partenaires"  id="ciclic">
+                <a href="http://www.ciclic.fr/"><img class="logos_fin" src="Logos/logo-ciclic-blanc.svg" alt="Logo_ciclic"/></a>
+              </div>
+
+              <div class="divs_logos autres_logos_partenaires" id="openSource">
+                <a href="https://opensource.org/"><img class="logos_fin" src="Logos/logo-opensource-blanc.svg" alt="Logo_Open_source"/></a>
+              </div>
+
+              <div class="divs_logos autres_logos_partenaires" id="scam">
+                <a href="http://www.scam.fr/"><img class="logos_fin" src="Logos/logo-scam-blanc.svg" alt="Logo_SCAM"/></a>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
     </div>
   </body>
+
 </html>

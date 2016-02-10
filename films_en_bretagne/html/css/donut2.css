@@ -1,0 +1,72 @@
+.chart {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  left: 30vw;
+  top: -4.5vh;
+ margin: -225px 0 0 -225px;
+  /*border: 1px solid black;*/
+}
+
+.doughnutTip {
+  position: absolute;
+  min-width: 30px;
+  max-width: 300px;
+  padding: 5px 15px;
+  border-radius: 1px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ddd;
+  font-size: 17px;
+  text-shadow: 0 1px 0 #000;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: .06em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+.doughnutTip::after {
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  content: "";
+  height: 0;
+  margin: 0 0 0 -6px;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 6px solid rgba(0, 0, 0, 0.7);
+  line-height: 0;
+}
+
+.doughnutSummary {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  color: #d5d5d5;
+  text-align: center;
+  text-shadow: 0 -1px 0 #111;
+  cursor: default;
+}
+
+.doughnutSummaryTitle {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  margin-top: -27%;
+  font-size: 15px;
+  letter-spacing: .06em;
+}
+
+.doughnutSummaryNumber {
+  position: relative;
+  top:-18vh;
+  left:-2vw;
+  margin-top: 0%;
+  font-size: 55px;
+  font-family: 'Lato_Regular',sans-serif;
+  color:#373763;
+}
+
+.chart path:hover {
+  opacity: 0.65;
+}
