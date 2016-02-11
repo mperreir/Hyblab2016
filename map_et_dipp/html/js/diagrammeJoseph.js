@@ -1,6 +1,7 @@
 "use strict"; 
+// utilisation de : http://bl.ocks.org/brattonc/5e5ce9beee483220e2f6#index.html
 
-
+// les données
 var donneesJardinJoseph = {
     "printemps": [
         {nomProduit: "Racines", poids: 12850}, 
@@ -117,26 +118,20 @@ var infosJardinJoseph = {
 };
 
 
-// utilisation de : http://bl.ocks.org/brattonc/5e5ce9beee483220e2f6#index.html
+// utilisé pour sauvegarder les Jauge Updater (GaugeUpdater)
+var jauges = {};    
 
-var jauges = {};    // utilisé pour sauvegarder les Jauge Updater
-
+// on récupère les données pour la saison actuelle
 var saisonActuelle = getSaisonActuelle();
 var donneesActuelles = donneesJardinJoseph[saisonActuelle];
-$("#radioJoseph_" + saisonActuelle).attr("checked", "");
 
-$("#imageSaison").attr("src", "./img/joseph/background_" + saisonActuelle + ".png");
-
-var total = [ calculerPoidsTotal(donneesActuelles) ];
-d3.select("#totalJoseph").selectAll("p").data(total).enter().append("p").text(function(d) {
-    return d;
-});
-
+// pour chaque produit, on crée une balise
 donneesActuelles.forEach(function(element, index, tableau) {
     
     var infoElement = infosJardinJoseph[element.nomProduit];
     var idJauge = infoElement.idJauge;
     
+    // création de la balise contenant la jauge
     var baliseJauge = d3.select("#diagrammeJoseph").append("div").attr("class", "baliseJauge"); 
     var svgJauge = baliseJauge.append("svg").attr({
         "id": idJauge,
@@ -144,10 +139,8 @@ donneesActuelles.forEach(function(element, index, tableau) {
         //"height": 150,
         //"width": 100
     });
-    //"id", idJauge).attr("width", 100).attr("height", 150); svgJauge.attr("viewBox", "0, 0, 100 150");
-    // <svg id="fillgauge6" width="19%" height="300" onclick="gauge6.update(NewValue());"></svg>
     
-    
+    // configuration de la jauge
     var config = liquidFillGaugeDefaultSettings();
     config.minValue = 0;
     config.maxValue = (infoElement.maximum * 0.001).toFixed(1);
@@ -177,9 +170,6 @@ donneesActuelles.forEach(function(element, index, tableau) {
     svgJauge.select("g").attr("transform", "translate(0, 50)");
     
     // ajout de l'image dans la jauge
-    // <image x="200" y="200" width="100px" height="100px" xlink:href="myimage.png"> 
-    //svgJauge.select("g").append("image").attr("x", 25).attr("y", 25).attr("xlink:href", infoElement.cheminImage).attr("width", 50).attr("height", 50);
-    
     svgJauge.select("g").append("image").attr({
         "xlink:href": infoElement.cheminImage,
         "x": 0,
@@ -187,18 +177,25 @@ donneesActuelles.forEach(function(element, index, tableau) {
         "height": 50,
         "width": 50,
         "transform": "translate(25, 25)",
-    });
-    //"x", 0).attr("y", 25).attr("xlink:href", infoElement.cheminImage).attr("width", 50).attr("height", 50);
-    
+    });    
     
 });
 
+// on pet à jour les données du diagramme avec les données de la saison actuelle
+updateDiagrammeJoseph(saisonActuelle);
 
+
+
+/**
+ * met à jour les données du diagramme de joseph (l'histogramme) en fonction de la saison
+ * @param   {string}   saison peut prendre 5 valeurs: "printemps", "ete", "automne", "hiver", "total"
+ */
 function updateDiagrammeJoseph(saison) {
     
-    // mise à jour des colonnes de l'histogramme
+    // récupération des données selon la saison
     var donneesActuelles = donneesJardinJoseph[saison] || [];
     
+    // mise à jour des colonnes de l'histogramme
     donneesActuelles.forEach(function(element, index, tableau) {
         var infosElement = infosJardinJoseph[element.nomProduit];
         var jauge = jauges[infosElement.idJauge];
@@ -222,7 +219,11 @@ function updateDiagrammeJoseph(saison) {
 }
 
 
-
+/**
+ * retourne le poids total de légumes récoltés pour les données passées en entrées
+ * @param   {Array}  donnees la liste des produits, chaque produit étant enregistrer dans un objet contenant les attrbuts "nomProduit" et "poids"
+ * @returns {number} le poids total 
+ */
 function calculerPoidsTotal(donnees) {
     var total = donnees.reduce(function(prec, elem, indice, tab) {
         return prec + elem.poids;
@@ -232,6 +233,10 @@ function calculerPoidsTotal(donnees) {
 
 
 
+/**
+ * retourne la saison actuelle (la saison en fonction de la date actuelle)
+ * @returns {string} la saison actuelle, peut être "printemps", "ete", "automne", "hiver"
+ */
 function getSaisonActuelle() {
     var today = new Date();
     var mois = today.getMonth();
