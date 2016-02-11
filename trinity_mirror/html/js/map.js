@@ -511,14 +511,14 @@
             '   <input id="housing" type="checkbox"/>' +
             '   <input id="crime" type="checkbox"/>' +
             '   <div class="row">' +
-            '   <img class="svg-btn" title="Income" id="income-svg" src="image/income-active.svg"/>' +
-            '   <img class="svg-btn" title="Health Deprivation and Disability" id="health-svg" src="image/health-active.svg"/>' +
-            '   <img class="svg-btn" title="Education, Skills and Training" id="education-svg" src="image/education-active.svg"/>' +
-            '   <img class="svg-btn" title="Employment" id="employment-svg" src="image/employment-active.svg"/>' +
+            '   <img class="svg-btn" title="Income" id="income-svg" src="../documents/mapIcons/income-active.svg"/>' +
+            '   <img class="svg-btn" title="Health Deprivation and Disability" id="health-svg" src="../documents/mapIcons/health-active.svg"/>' +
+            '   <img class="svg-btn" title="Education, Skills and Training" id="education-svg" src="../documents/mapIcons/education-active.svg"/>' +
+            '   <img class="svg-btn" title="Employment" id="employment-svg" src="../documents/mapIcons/employment-active.svg"/>' +
             '   </div><div class="row">' +
-            '   <img class="svg-btn" title="Living Environment" id="environment-svg" src="image/environment-active.svg"/>' +
-            '   <img class="svg-btn" title="Barriers to Housing and Services" id="housing-svg" src="image/housing-active.svg"/>' +
-            '   <img class="svg-btn" title="Crime" id="crime-svg" src="image/crime-active.svg"/>' +
+            '   <img class="svg-btn" title="Living Environment" id="environment-svg" src="../documents/mapIcons/environment-active.svg"/>' +
+            '   <img class="svg-btn" title="Barriers to Housing and Services" id="housing-svg" src="../documents/mapIcons/housing-active.svg"/>' +
+            '   <img class="svg-btn" title="Crime" id="crime-svg" src="../documents/mapIcons/crime-active.svg"/>' +
             '   </div>' +
             '</div>';
         ''/* +
@@ -548,11 +548,11 @@
             });
             var el = document.getElementById("income");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/income.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/income.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/income-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/income-active.svg");
                 el.checked = false;
             }
         });
@@ -565,11 +565,11 @@
             });
             var el = document.getElementById("employment");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/employment.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/employment.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/employment-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/employment-active.svg");
                 el.checked = false;
             }
         });
@@ -582,11 +582,11 @@
             });
             var el = document.getElementById("education");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/education.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/education.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/education-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/education-active.svg");
                 el.checked = false;
             }
         });
@@ -599,11 +599,11 @@
             });
             var el = document.getElementById("health");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/health.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/health.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/health-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/health-active.svg");
                 el.checked = false;
             }
         });
@@ -616,11 +616,11 @@
             });
             var el = document.getElementById("crime");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/crime.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/crime.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/crime-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/crime-active.svg");
                 el.checked = false;
             }
         });
@@ -633,11 +633,11 @@
             });
             var el = document.getElementById("housing");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/housing.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/housing.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/housing-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/housing-active.svg");
                 el.checked = false;
             }
         });
@@ -650,11 +650,11 @@
             });
             var el = document.getElementById("environment");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/environment.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/environment.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/environment-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/environment-active.svg");
                 el.checked = false;
             }
         });
@@ -673,11 +673,11 @@
                 });
                 var el = document.getElementById("income");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/income.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/income.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/income-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/income-active.svg");
                     el.checked = false;
                 }
             });
@@ -691,11 +691,11 @@
                 });
                 var el = document.getElementById("employment");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/employment.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/employment.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/employment-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/employment-active.svg");
                     el.checked = false;
                 }
             });
@@ -709,11 +709,11 @@
                 });
                 var el = document.getElementById("education");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/education.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/education.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/education-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/education-active.svg");
                     el.checked = false;
                 }
             });
@@ -727,11 +727,11 @@
                 });
                 var el = document.getElementById("health");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/health.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/health.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/health-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/health-active.svg");
                     el.checked = false;
                 }
             });
@@ -745,11 +745,11 @@
                 });
                 var el = document.getElementById("crime");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/crime.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/crime.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/crime-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/crime-active.svg");
                     el.checked = false;
                 }
             });
@@ -763,11 +763,11 @@
                 });
                 var el = document.getElementById("housing");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/housing.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/housing.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/housing-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/housing-active.svg");
                     el.checked = false;
                 }
             });
@@ -781,11 +781,11 @@
                 });
                 var el = document.getElementById("environment");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/environment.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/environment.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/environment-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/environment-active.svg");
                     el.checked = false;
                 }
             });
