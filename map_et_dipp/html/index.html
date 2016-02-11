@@ -1,416 +1,413 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Agriculture urbaine</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Agriculture urbaine</title>
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./jquery.fullPage.css" />
+	<!--<link rel="stylesheet" type="text/css" href="examples.css" />-->
+	<link rel="stylesheet" type="text/css" href="simple.css" />
+	<link href="css/treemap.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
-    <link href="css/datavizs.css" rel="stylesheet">
-    <link href="css/treemap.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
+	<script type="text/javascript" src="./jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+
+			});
+		});
+	</script>
 </head>
+<body>
 
-<body id="page-top" class="index">
-   <!-- Navigation -->
-    <!--<nav class="navbar navbar-fixed-top">
-        <div class="container">
-            
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
+<div id="fullpage">
+
+
+	<div class="section active" id="slide1">
+		<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Cultiver son terrain</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(6);">Partager une parcelle</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(7);">Consommer en circuit court</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
+
+
+		<div id="titreSite">
+			<h1>La ville comestible</h1>
+			<h2>Les différents visages de l'<span style="font-family: museoBold;">agriculture urbaine</span><br/> sur le territoire nantais</h2>
+		</div>
+		<div class="flecheBas"><img src="./img/fleche_bas_de_page_noire.png" onclick="$.fn.fullpage.moveSectionDown();" /></div>
+	</div>
+
+
+
+	<div class="section" id="slide2">
+		<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Cultiver son terrain</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(6);">Partager une parcelle</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(7);">Consommer en circuit court</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
+		<div class="container">
+			<div class="coteGauche">
+				<h2>L'agriculture urbaine</h2>
+				<h1>Un nouvel <span style="font-family: museoBold;">art de vivre</span></h1>
+				<p>
+					Loin des bocages et des champs à labourer,
+					l’agriculture s’implante aussi en ville.
+				</p>
+				<p>
+					Les petits espaces conviennent parfaitement. Ronds-points, jardinets, terrasses, toits... Tout est
+	possible ! L’occasion de se reconnecter à son assiette, de favoriser le local et de rencontrer ses voisins via des jardins collectifs, des réseaux paysans (AMAP), et des potagers individuels.
+				</p>
+			</div>
+			<div class="coteDroit">
+				<img style="width:60vh;" src="img/slide_2_chart.png" />
+			</div>
+		</div>
+		<div class="bandeauBas">
+			<span style="font-family: museoBold;"> </span><br />
+			<span style="font-family: museoBold;">Partez à la découverte de l'agriculture urbaine !</span>
+		</div>
+		<div class="flecheBas"><img src="./img/fleche_bas_de_page_verte.png" onclick="$.fn.fullpage.moveSectionDown();" /></div>
+	</div>
+    
+    
+	<div class="section" id="slide3">
+		<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Cultiver son terrain</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(6);">Partager une parcelle</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(7);">Consommer en circuit court</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
+
+        <h3>CULTIVER SON TERRAIN</h3>
+        
+        <div class="conteneur">
+            <div class="bloc">
+                <h2>L'exemple inspirant du jardin de Joseph</h2>
+
+                <p>Joseph Chauffrey, un rouennais qui n'y connaissait rien à réussi à produire 338 kilos de fruits et légumes sur un coquet jardin de 150m2 en ville. Son astuce : la permaculture, soit une forme respectueuse et écologique de production. Un exemple qui pourrait bien inspirer les Nantais.</p>
             </div>
-            
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            
         </div>
         
-    </nav>-->
-
-        <nav id="lemenu">
-            <ul>
-                <li><a href="#slide1"><b>Présentation</b></a></li>
-                <li><a href="#slide3">Les différents visages</a></li>
-                <li><a href="#slide7">Remerciements</a></li>
-            </ul>
-        </nav>
-        <img src="../img/cross.png" id="croixMenu"/>
-        <img src="../img/menu.png" id="boutonMenu" />
-    <section id="slide1">
-        <div class="row">
-            <div id="slide1Titre" class="col-lg-12 text-center">
-                <h1 id="titreSlide1">La ville comestible</h1>
-                <h2 id="soustitreFirstSlide">Les différents visages de l'agriculture urbaine sur le territoire nantais</h2>
-            </div>
+                
+        <div class="flecheBas">
+            <p class="vert">Découvrez sa récolte !</p>
+            <img src="./img/fleche_bas_de_page_verte.png" onclick="$.fn.fullpage.moveSectionDown();" />
         </div>
-
-        <div class="row" id="slide1Fond">
-        </div>
-
-
-    </section>
-
+    </div>
     
-    <section id="slide2">
+    
+	<div class="section" id="slide4">
+		<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Cultiver son terrain</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(6);">Partager une parcelle</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(7);">Consommer en circuit court</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
+        
+        <h1>Un jardin et 338 kilos de légumes urbains</h1>
+        
+        <article>
+            <p>Joseph et sa famille ont pu manger des légumes toute l’année. Cliquez sur chaque saison pour découvrir le poids des récoltes et constater les effets de la permaculture en ville !</p>
 
-            <div class="row" id="row1slide2">
-        <div class="container" >
+            <div id="boutonDiagrammeJoseph">    
+                <div>
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_total" onclick="updateDiagrammeJoseph('total')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_total" id="labelJoseph_total"></label>
+                </div>
 
+                <div>
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_printemps" onclick="updateDiagrammeJoseph('printemps')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_printemps" id="labelJoseph_printemps"></label>
+
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_ete" onclick="updateDiagrammeJoseph('ete')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_ete" id="labelJoseph_ete"></label>
+
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_automne" onclick="updateDiagrammeJoseph('automne')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_automne" id="labelJoseph_automne"></label>
+
+                    <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_hiver" onclick="updateDiagrammeJoseph('hiver')" />
+                    <label class="labelRadioJoseph" for="radioJoseph_hiver" id="labelJoseph_hiver"></label>
+                </div>
+            </div>
+        </article>
+                
+
+        <div id="diagrammeJoseph"></div>
+        <div id="totalJoseph"></div>
+        <p id="uniteTotalJoseph">total en kg</p>
+        
+        <div class="imageSaisonBas">
+            <img id="imageSaison" src="./img/joseph/background_automne.png" />
+        </div>
+        
+        <div class="flecheBas">
+            <img src="./img/fleche_bas_de_page_orange.png" onclick="$.fn.fullpage.moveSectionDown();" />
+        </div>
+    </div>
+	
+    
+	<div class="section" id="slide10">
+		<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Cultiver son terrain</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(6);">Partager une parcelle</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(7);">Consommer en circuit court</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
+        <div class="container">
+            <div class="titre">
+                <h1>Tout le monde peut s’y mettre !</h1>
+                <h2>Zoom sur les techniques de Joseph pour obtenir un super potager</h2>
+            </div>
+            
+            <section>
+                <header>
+                    <h3>La permaculture pour une meilleure verdure !</h3>
+                </header>
                 <article>
-                    <h2>L’agriculture urbaine</h2>
-                    <h1>Un nouvel art de vivre</h1>
-                    <p>Loin des bocages et des grands champs à labourer, l’agriculture s’implante aussi en ville.
-                    Pour cela, pas de chichis, les petits espaces conviennent parfaitement. Ronds-points, jardinets, terrasses, toits… Tout est possible ! L’occasion de se reconnecter à son assiette, de favoriser le local et de rencontrer ses voisins via des jardins collectifs, des réseaux paysans (AMAP), et des potagers individuels.</p>
+                    <p>Le principe est simple : laisser s’exprimer la nature et sa logique spontanée, notamment en associant des légumes selon leurs affinités. Le but est de créer un écosystème favorable à la pousse des fruits et légumes tout en pensant durable et bio.</p>
                 </article>
-
-                <aside id="slide2Chart">
-                    <!--<img src="img/slide_2_chart.png"/>-->
+                <aside>
+                    <p>"Je n’ai rien inventé, Je mets juste en musique une multitude de pratiques anciennes et de connaissances agronomiques plus récentes, le tout avec avec un peu d’imagination et de bon sens."</p>
                 </aside>
-            </div>
-            
-            <div class="row" id="row2slide2">
-                <div class="container">
-                    <h3>L'agriculture urbaine te botte ?</h3>
-                    <h4>Rejoins le réseau du vert urbain et choisis comment tu vas pécho ton légume !</h4>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    
-    
-    <!-- diagramme de Joseph -->
-    <section class="success" id="slide3">
 
-        <div class="container">
-            <div class="row contenu">
-
-                <div class="col-md-12 text-center" id="titreSlide3">
-                    <h3>TOUT SEUL</h3>
-                    <h2>Un jardin et 252kg de légumes urbains</h2>
-                </div>
-                        
-                <div class="row">
-                
-                    <article class="col-xs-offset-1 col-xs-5 text-center">
-                        <p>Joseph et sa famille ont pu manger des légumes toute l’année. Cliquez sur chaque saison pour découvrir le poids des récoltes et constater les effets de la permaculture en ville !</p>
-                    
-                        <div class="container text-center" id="boutonDiagrammeJoseph">    
-                            <div class="row">
-                                <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_total" onclick="updateDiagrammeJoseph('total')" />
-                                <label class="labelRadioJoseph" for="radioJoseph_total" id="labelJoseph_total"></label>
-                            </div>
-                            
-                            <div class="row text-center">
-                                <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_printemps" onclick="updateDiagrammeJoseph('printemps')" />
-                                <label class="labelRadioJoseph" for="radioJoseph_printemps" id="labelJoseph_printemps"></label>
-
-                                <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_ete" onclick="updateDiagrammeJoseph('ete')" />
-                                <label class="labelRadioJoseph" for="radioJoseph_ete" id="labelJoseph_ete"></label>
-
-                                <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_automne" onclick="updateDiagrammeJoseph('automne')" />
-                                <label class="labelRadioJoseph" for="radioJoseph_automne" id="labelJoseph_automne"></label>
-
-                                <input type="radio" name="groupeJoseph" class="radioJoseph" id="radioJoseph_hiver" onclick="updateDiagrammeJoseph('hiver')" />
-                                <label class="labelRadioJoseph" for="radioJoseph_hiver" id="labelJoseph_hiver"></label>
-                            </div>
-                        </div>
-                    </article>
-                
-                
-                    <aside class="col-xs-offset-1 col-xs-4">
-                        <p>Il habite à trois heures d’ici, mais cela pourrait se passer chez un nantais. Joseph Chauffrey, qui n’y connaissait rien, a réussi à produire 252 kilos de fruits et légumes dans ses 150m2 de terrain, dont seulement 25m2 de potager.</p>
-                        <p>Son mot d’ordre ? <strong>Permaculture</strong>, soit une forme respectueuse et écologique de production.</p>
-                    </aside>
-                
-                
-                </div>
-            
-                <div id="diagrammeJoseph" class="row text-center">
-                </div> <!-- col-lg-4 col-lg-offset-2  -->
-                
-                <div class="row text-center">
-                    <div class="col-md-12" id="totalJoseph"></div>
-                    <p class="col-md-12" id="uniteTotalJoseph">total en kg</p>
-                </div>
-                
-            </div>
-
-            
-            <div class="row flecheSlide">
-                <div class="col-xs-12 text-center">
-                    <img src="./img/fleche_bas_de_page_orange.png" alt="fleche" />
-                </div>
-            </div>
-            
-        </div>        
-    </section>
-    
-    
-    <section class="success" id="slide4">
-
-        <div class="container">
-            <div class="row contenu">
-                <div class=" col-xs-offset-1 col-xs-11">
-                    <h1>Tout le monde peut s’y mettre !</h1>
-                    <h2>Zoom sur les techniques de Joseph pour obtenir un super potager</h2>
-                </div>
-                
-                <div class="row">
-                    <section class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10">
-                        <header>
-                            <p>La permaculture pour une meilleure verdure !<p/>
-                        </header>
-                        <article>
-                            <p>Le principe est simple : laisser s’exprimer la nature et sa logique spontanée, notamment en associant des légumes selon leurs affinités. Le but est de créer un écosystème favorable à la pousse des fruits et légumes tout en pensant durable et bio.</p>
-                        </article>
-                        <aside class="row">
-                            <p class="col-md-offset-1 col-md-10">"Je n’ai rien inventé, Je mets juste en musique une multitude de pratiques anciennes et de connaissances agronomiques plus récentes, le tout avec avec un peu d’imagination et de bon sens."</p>
-                        </aside>
-                    </section>
-                </div>
-                
-                <div class="row">
-                    <section class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10" >
-                        <header>
-                            <p>Faire un tetris de légumes pour optimiser l’espace</p>
-                        </header>
-                        <article>
-                            <p>Une dizaine d’heures par semaine, de bons outils et des bonnes techniques, ont suffit à Joseph pour ne plus avoir à acheter de légumes. Question d’astuces : les courges et les haricots poussent à la verticale le long de sa cabane, les tomates et les choux sont piqués dans des bottes de pailles, etc... Il a tout simplement agencé son mini-jardin pour que chaque parcelle serve à plusieurs cultures, et que les espèces poussent en continu.</p>
-                        </article>
-                        <aside class="row">
-                            <p class="col-md-offset-1 col-md-10">"C’est relativement accessible de pouvoir envisager un jardin qui soit à la fois productif et durable."</p>
-                            <p class="col-md-offset-1 col-md-10">Raconte Joseph Chauffrey.</p>
-                        </aside>
-                    </section>
-                </div>
-            </div>
-            
-            
-            <div class="row flecheSlide">
-                <div class="col-xs-12 text-center">
-                    <p>Calculez votre potentiel de rendement en légumes !</p>
-                    <p>Superficie de ton jardin</p>
-                    <img src="./img/fleche_bas_de_page_noire.png" alt="fleche" />
-                </div>
-            </div>
-            
-        </div>        
-    </section>
-    
-    
-    <section class="success" id="slide5">
-
-        <div class="row contenu">
-            <div class="container">
-
-                <div class="col-lg-12 text-center">
-                    <p id="badge">EN COLLECTIF</p>
-                    <h2>Les jardins gagnent du terrain en ville !</h2>
-                </div>
-
-                <p id="caption">Partager un jardin, c’est possible, et les options sont multiples dans la métropole nantaise. Pour cultiver les tomates en même temps que le lien social, différentes solutions existent selon les villes et les quartiers...</p>
-                
-                <div id="treemap_legend" class="col-md-5">
-                    <div class="legend_bullet">
-                    <img src="img/treemap/bulletJF_24.png">
-                    <p>Jardins Familiaux</p>
-                    <img src="img/treemap/bullet+_24.png">
-                    </div>
-                </div>
-
-                 <div id="treemap" class="col-md-7"> </div>
-                
-            </div>
-        </div>
-                
-        <h3>En collectif</h3>
-        <h2>Les jardins gagnent du terrain en ville !</h2>
-        <p>Partager un jardin, c’est possible, et les options sont multiples dans la métropole nantaise. Pour cultiver les tomates en même temps que le lien social, différentes solutions existent selon les villes et les quartiers...</p>
-        
-        <div class="row text-center">
-            <img src="./img/fleche_bas_de_page_blanche.png" alt="fleche" />
+            <section>
+                <header>
+                    <h3>Un tetris de légumes pour optimiser l’espace</h3>
+                </header>
+                <article>
+                    <p>Une dizaine d’heures par semaine, de bons outils et des bonnes techniques, ont suffit à Joseph pour ne plus avoir à acheter de légumes. Question d’astuces : les courges et les haricots poussent à la verticale le long de sa cabane, les tomates et les choux sont piqués dans des bottes de pailles, etc... Il a tout simplement agencé son mini-jardin pour que chaque parcelle serve à plusieurs cultures, et que les espèces poussent en continu.</p>
+                </article>
+                <aside>
+                    <p>"C’est relativement accessible de pouvoir envisager un jardin qui soit à la fois productif et durable."</p>
+                </aside>
+            </section>
         </div>
         
-    </section>
-    
-    <section id="slide6">
-
-        <div class="contenu">
-            <div class="contaainer">
-                    <h2>Les agriculteurs <b>s'enracinent en ville</b></h2>
-                <div id="contenuDatavizAraignee">
-                    <div id="araigneeAMAP"></div>
-
-                    <div id="infosAraignee">
-                        <div id="legendeAraignee">
-                        </div>
-                        <div id="effetWahoo">
-                            <p>Comparez avec la distance moyenne parcourue par les <b>produits industriels</b> importés en <b>France</b> en cliquant
-                            </p>
-                        </div>
-                        <div id="texteAraignee">
-                            <br /><p style="text-align: justify;">Les AMAP* sont destinées à favoriser l'agriculture paysanne et biologique en distribuant en ville des légumes
-                                frais récoltés à proximité. Le principe : s’engager à acheter un panier de provisions à un prix équitable, payé à l’avance. Cela crée un circuit court : les paysans et les
-                                consommateurs d’un territoire sont mis en relation directement.</p>
-                            <span style="text-align: left;float: left;">*Associations pour le maintien d'une agriculture paysanne</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                        
-            <div class="row flecheSlide">
-                <div class="col-xs-12 text-center">
-                    <img src="./img/fleche_bas_de_page_bleue.png" alt="fleche" />
-                </div>
-            </div>
-        </div>   
-    </section>
+        <div class="bandeauBas">
+			<span style="font-family: museoBold;">Calculer votre potentiel de rendement en légumes !</span><br />
+            
+            <form>
+                <input type="text" placeholder="Superficie de votre jardin" />
+                <label for=""> > </label>
+                <p></p>
+            </form>
+            
+		</div>
+        <div class="flecheBas">    
+            <img src="./img/fleche_bas_de_page_noire.png" onclick="$.fn.fullpage.moveSectionDown();" />
+        </div>
+	</div>
     
     
-    <section class="success" id="slide7">
+    
+	<div class="section" id="slide5">
+		<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Cultiver son terrain</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(6);">Partager une parcelle</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(7);">Consommer en circuit court</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
+		<div id="absSlide5">
 
-        <div class="container">
-            <div class="row text-center contenu">
-                <h2 class="col-lg-12" id="titreSlide7">Silence, ça pousse !</h2>
-                <p class="col-md-offset-4 col-md-4" >À Nantes, collectifs, associations, professionnels et citoyens s’unissent pour continuer à développer de nouvelles formes d’agriculture urbaine. Ruches connectées, fermes verticales, potagers sur les toits, le champs des possibles est loin d’avoir été entièrement cultivé !</p>
-            </div>
-            <div class="row flecheSlide">
-                <div class="col-xs-12 text-center">
-                    <img src="img/fleche_bas_de_page_verte.png" alt="fleche" />
-                </div>
+			<p id="badge" class="fullCentre">PARTAGER UNE PARCELLE</p>
+
+	        <h2>Les jardins gagnent du terrain en ville !</h2>
+
+
+	        <p id="caption">Partager un jardin, c’est possible, et les options sont multiples dans la métropole nantaise. Pour cultiver les tomates en même temps que le lien social, différentes solutions existent selon les villes et les quartiers...</p>
+
+	        <div id="treemap_legend">
+	            <div class="legend_bullet">
+	                <img src="img/treemap/bulletJF_24.png">
+	                <p>Jardins <span class="boldy">Familiaux</span></p>
+	                <img src="img/treemap/bullet+_24.png" class="bulletRight">
+	            </div>
+
+	            <div class="legend_bullet">
+	                <img src="img/treemap/bulletJP_24.png">
+	                <p>Jardins <span class="boldy">Partagés</span></p>
+	                <img src="img/treemap/bullet+_24.png" class="bulletRight">
+	            </div>
+
+	            <div class="legend_bullet">
+	                <img src="img/treemap/bulletJI_24.png">
+	                <p>Jardins d'<span class="boldy">Insertion</span></p>
+	                <img src="img/treemap/bullet+_24.png" class="bulletRight">
+	            </div>
+
+	            <div class="legend_bullet">
+	                <img src="img/treemap/bulletSG_24.png">
+	                <p>Stations <span class="boldy">Gourmandes</span></p>
+	                <img src="img/treemap/bullet+_24.png" class="bulletRight">
+	            </div>
+	        </div>
+
+	        <div id="treemap"></div>
+	        
+	        <div id="interview">
+	        	<table>
+	        		<tr>
+	        			<td id="interview_text">
+	        				<p>Il y a aussi une autre façon de partager les jardins : mettre à disposition à des passionnés le terrain de sa propre maison ! C'est ce que propose l'association ECOS.</p>
+	        			</td>
+	        			<td id="interview_sep"></td>
+	        			<td id="interview_media"> 
+	        				<img src="img/treemap/pictoSon.png">
+	        				<p>Fanny Courieult au micro</p>
+	        			</td>
+	        		</tr>
+	        	</table>
+	        </div>
+	    </div>
+	    <div class="flecheBas"><img src="./img/fleche_bas_de_page_blanche.png" onclick="$.fn.fullpage.moveSectionDown();" /></div>
+	</div>
+
+	<div class="section" id="slide7">
+		<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Cultiver son terrain</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(6);">Partager une parcelle</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(7);">Consommer en circuit court</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
+		<p id="lebadge" class="fullCentre">CONSOMMER EN CIRCUIT COURT</p>
+		<h1>Grâce aux AMAP les agriculteurs <span style="font-family: museoBold;">s'enracinent en ville</span></h1>
+		<div class="coteGauche">
+			<div id="araigneeAMAP"></div>
+		</div>
+		<div id="legendeAr" class="coteDroit">
+			<div id="entoureOrange">
+			<div id="legendeAraignee"><p id="texteAvantSurvol">Survolez <img style="display:inline;" src="./img/flèche.png" /> les catégories de produits proposées par les <b>AMAP</b> pour savoir à quelle distance de Nantes ils sont produits</p></div>
+			<hr color="orange" style="margin: 17px auto;width: 80%;"/>
+			<p>Consommer en circuit classique implique des distances bien supérieurs !<br/><br/>
+				Pour les visualiser cliquez</p>
+<div id="boutonIci" onclick="effetWahoo();"></div></div>
+		<p style="text-align: justify;margin-top:15px;">
+Les AMAP* sont destinées à favoriser l'agriculture paysanne et biologique en distribuant en ville des légumes
+frais récoltés à proximité. Le principe : s’engager à acheter
+un panier de provisions à un prix équitable, payé à
+l’avance. Cela crée un circuit court : les paysans et les
+consommateurs d’un territoire sont mis en relation directement.<br/><br/>
+<span style="font-size:12px;">*Associations pour le maintien d'une agriculture paysanne</span>
+		</p>
+		</div>
+		        <div class="flecheBas">
+            <img src="./img/fleche_bas_de_page_orange.png" onclick="$.fn.fullpage.moveSectionDown();" />
+        </div>
+	</div>
+	<div class="section" id="slide8">
+		<nav>
+			<ul>
+				<li><a onclick="$.fn.fullpage.moveTo(2);">Présentation</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(3);">Cultiver son terrain</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(6);">Partager une parcelle</a></li>
+				<li><a onclick="$.fn.fullpage.moveTo(7);">Consommer en circuit court</a></li>
+			</ul>
+		</nav>
+		<div class="boutonMenu"><img src="./img/menu.png" onclick="toggleMenu();"/></div>
+
+        
+        
+        <div class="conteneur">
+            <div class="bloc">
+                <h2>Silence, ça pousse !</h2>
+
+                <p>A Nantes, collectifs, associations, professionnels et citoyens s'unissent pour continuer à développer de nouvelles formes d'agriculture urbaine. Ruches connectées, fermes verticales, potagers sur les toits, le champs des possibles est loin d'avoir été entièrement cultivé !</p>
             </div>
         </div>
-    </section>
-    
 
-    
-    <!-- Contact Section -->
-    <section id="slide8" class="success">
-        
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 id="titreSlide2" >Suivez-nous !</h2>
-                </div>
-            </div>
-            
-            <div class="row">
-                <img class="imageContact" src="img/contact_facebook.png" alt="facebook" />
-                <img class="imageContact" src="img/contact_tweeter.png" alt="tweeter" />
-                <img class="imageContact" src="img/contact_youtube.png" alt="youtube" />
-            </div>    
-            
-            <article id="lettre" class="">
-                <h1 id="titreLettre">Merci !</h1>
-                <p id="contenuLettre">Le but est de créer un écosystème favorable à la pousse des fruits et légumes tout en pensant durable et bio. Renseigne-toi donc sur les besoins de chaque variété, mais une dose d’écolo et  un  soupçon  de  botaniste  feront  de  toi  un  permaculteur  avise  feront.</p>
-            </article>
-            
+        <div class="flecheBas">
+            <img src="./img/fleche_bas_de_page_verte.png" onclick="$.fn.fullpage.moveSectionDown();" />
         </div>
-        
-        <img id="imageLettre" src="img/contact_lettre.png" alt="lettre" />        
-        
-    </section>
+    </div>
 
-    
-    
-    
-    
-    
-    
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/d3.js"></script>
-    <script src="js/liquidFillGauge.js"></script>
-    <script src="js/datavizs.js"></script>
+
+
+	<div class="section" id="slide9">
+        
+        <div class="conteneur">
+            <div class="bloc">
+                <h2>Suivez nous !</h2>
+
+           
+            </div>
+        </div>
+
+		<!-- Dans l'enveloppe : 
+			SOURCE
+			<b>Nantes</b> Ville Comestible, Ecos, la Seve, la Ville de Nantes, l'Auran, L. Ledo, T. Guesnon, Amap 44, Joseph Chauffrey
+		Liens sociaux : 
+			facebook LE MAP
+		-->
+
+	</div>
+</div>
+
+	<script src="js/d3.js"></script>
+    <script src="js/liquidFillGauge.js"></script>   <!-- utilisé pour le diagramme de joseph -->
+	<script src="js/treemap.js"></script>
     <script src="js/diagrammeJoseph.js"></script>
-    <script src="js/treemap.js"></script>
-    
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
-    <script type="text/javascript">
-        $("#lemenu").slideUp();
-        $("#croixMenu").slideUp();
-        document.getElementById("boutonMenu").addEventListener("click", function(e)
-        {
-            $("#boutonMenu").slideUp(function(){
-
-                    $("#boutonMenu").hide();
-            });
-            document.getElementById("lemenu").style.visibility = "visible";
-            document.getElementById("croixMenu").style.visibility = "visible";
-            $("#lemenu").slideDown();
-            $("#croixMenu").slideDown();
-
-        });
-        document.getElementById("croixMenu").addEventListener("click", function(e)
-        {
-            $("#croixMenu").slideUp(function(){
-                $("#croixMenu").hide();
-            });
-            document.getElementById("boutonMenu").style.visibility = "visible";
-            $("#boutonMenu").slideDown();
-            $("#lemenu").slideUp(function(){
-
-                $("#lemenu").hide();
-            });
-            //document.getElementById("croixMenu").style.visibility = "hidden";
-        });
+    <script src="js/datavizs.js"></script>
+    <script type="text/javascript">$("nav").slideUp();
+    $(document).ready(function(){
+    	setTimeout(function(){
+    	$("#svgAside").hide();
+    	}, 700);
+    });
+    function toggleMenu()
+    {
+    	/*if($("nav").is(":visible"))
+    	{
+    		$('.boutonMenu').animate({'margin-top':'12px'});
+    	}
+    	else
+    	{
+    		$('.boutonMenu').animate({'margin-top':'-31px'});
+    	}*/
+    	$("nav").slideToggle();
+    }
+    function effetWahoo()
+	{
+		d3.www.transition().attr("transform","scale(0.1) translate("+width*3+","+height*7+")").ease("linear").duration(1000);
+	}
     </script>
-
+    
 </body>
-
 </html>
-

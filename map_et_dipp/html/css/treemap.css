@@ -1,5 +1,15 @@
 #slide5 {
 	height: 100vh;
+	background-color: #90D7DF;
+	color: #4c4c4c;	
+	font-family: museoReg;
+	
+}
+
+#slide5 #absSlide5 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
 }
 
 #slide5 #badge {
@@ -8,32 +18,111 @@
 	border: 1px solid white;
 	border-radius: 6px;
 	padding: 5px;
-	width: 120px;
-	margin: auto;
-	margin-top: 3%;
-	margin-bottom: 20px;
+	width: 220px;
+	text-align: center;
+	margin-top: 1%;
 }
 
 #slide5 h2 {
-	margin-bottom: 20px;
+	color: white;
+	font-size: 33px;
+	letter-spacing: 3px;
+	margin-top: 3%;
 }
 
 #slide5 #caption {
-	color: black;
 	font-size: 14px;
 	text-align: justify;
-	width: 45%;
-	margin-left: 5%;
+	width: 510px;
+	margin-top: 3%;
+}
+
+#slide5 #treemap {
+	width: 71%;
+	display: inline-block;
+	margin-top: 1%;
+}
+
+#slide5 #treemap_legend {
+	width: 21%;
+	display: inline-block;
+	margin-top: 20px;
+	margin-right: 7%;
+	vertical-align: top;
 }
 
 .legend_bullet {
-	display: inline-block;
+	margin-bottom: 5%;
+	width: 100%;
 }
+
+.boldy {
+	font-weight: bold;
+}
+
+.bulletRight {
+	float: right;
+}
+
+.legend_bullet p {
+	display: inline-block;
+	font-size: 14px;
+	vertical-align: middle;
+	margin-left: 5%;
+}
+
+.legend_bullet img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#slide5 #interview {
+	border: 1px solid white;
+	border-radius: 6px;
+	width: 600px;
+	font-size: 12px;
+	float: right;
+	padding: 5px;
+}
+
+#interview td {
+	padding: 3px;
+}
+#interview_text {
+	width : 320px;
+	line-height: 20px;
+	margin-right: 10px;
+}
+
+#interview_media {
+	width : 256px;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#interview_media img {
+	display: block;
+	width: 36px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+}
+
+#interview_sep {
+	border-right: 1px solid white;
+}
+
 
 #treemap .grandparent:hover rect {
   fill: darkgrey;
 }
 
+#treemap svg {
+	width: 100%;
+	height: 100%;
+}
 #treemap .children rect.parent,
 .grandparent rect {
   cursor: pointer;
@@ -46,4 +135,8 @@
 
 #treemap .children:hover rect.parent {
   opacity: 0;
+}
+
+#treemap text {
+	font-family: museoReg;
 }

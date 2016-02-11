@@ -64,55 +64,55 @@ var infosJardinJoseph = {
         idJauge: "jauge_racine",
         couleur: "#f7bd48",
         maximum: 20050,
-        cheminImage: "./img/diagrammes/joseph/racine.png"
+        cheminImage: "./img/joseph/racines.svg"
     },
     "Poids et Haricots": { 
         idJauge: "jauge_haricots",
         couleur: "#c96d63", 
         maximum: 16400,
-        cheminImage: "./img/diagrammes/joseph/haricots.png"
+        cheminImage: "./img/joseph/haricots.svg"
     },
     "Choux": { 
         idJauge: "jauge_choux",
         couleur: "#b5ff9c",
         maximum: 14600,
-        cheminImage: "./img/diagrammes/joseph/choux.png"
+        cheminImage: "./img/joseph/choux.svg"
     },
     "Epinards et Salades": { 
         idJauge: "jauge_salades",
         couleur: "#c9ff73",
         maximum: 39755,
-        cheminImage: "./img/diagrammes/joseph/salades.png"
+        cheminImage: "./img/joseph/salades.svg"
     },
     "Courges": { 
         idJauge: "jauge_courges",
         couleur: "#d6ff38",
         maximum: 77400,
-        cheminImage: "./img/diagrammes/joseph/poivron.png"
+        cheminImage: "./img/joseph/courges.svg"
     },
     "Tomates": { 
         idJauge: "jauge_tomates",
         couleur: "#ee7268",
         maximum: 123600,
-        cheminImage: "./img/diagrammes/joseph/tomates.png"
+        cheminImage: "./img/joseph/tomates.svg"
     },
     "Aromatiques": { 
         idJauge: "jauge_aromatiques",
         couleur: "#aef86e",
         maximum: 3800,
-        cheminImage: "./img/diagrammes/joseph/aromatique.png"
+        cheminImage: "./img/joseph/aromatiques.svg"
     },
     "Fruits": { 
         idJauge: "jauge_fruits",
-        couleur: "#f7e957",
+        couleur: "#ffa87b",
         maximum: 30010,
-        cheminImage: "./img/diagrammes/joseph/citron.png"
+        cheminImage: "./img/joseph/fruits.svg"
     },
     "Autres": { 
         idJauge: "jauge_autres",
         couleur: "#f7ff64",
         maximum: 11965,
-        cheminImage: "./img/diagrammes/joseph/mais.png"
+        cheminImage: "./img/joseph/autres.svg"
     }
 };
 
@@ -125,6 +125,8 @@ var saisonActuelle = getSaisonActuelle();
 var donneesActuelles = donneesJardinJoseph[saisonActuelle];
 $("#radioJoseph_" + saisonActuelle).attr("checked", "");
 
+$("#imageSaison").attr("src", "./img/joseph/background_" + saisonActuelle + ".png");
+
 var total = [ calculerPoidsTotal(donneesActuelles) ];
 d3.select("#totalJoseph").selectAll("p").data(total).enter().append("p").text(function(d) {
     return d;
@@ -135,18 +137,16 @@ donneesActuelles.forEach(function(element, index, tableau) {
     var infoElement = infosJardinJoseph[element.nomProduit];
     var idJauge = infoElement.idJauge;
     
-    var baliseJauge = d3.select("#diagrammeJoseph").append("div").attr("class", "baliseJauge"); // col-xs-1
-    var svgJauge = baliseJauge.append("svg").attr("id", idJauge);//.attr("width", 100).attr("height", 150);
-    //svgJauge.attr("viewBox", "90 -80 100 280");
-    
-    svgJauge.attr("viewBox", "0 0 100 150");
-    /*
-    svgJauge.attr({
-        "xmlns": "http://www.w3.org/2000/svg",
-        "version": "1.1"
+    var baliseJauge = d3.select("#diagrammeJoseph").append("div").attr("class", "baliseJauge"); 
+    var svgJauge = baliseJauge.append("svg").attr({
+        "id": idJauge,
+        "viewBox": "0 0 100 150",
+        //"height": 150,
+        //"width": 100
     });
-    */
+    //"id", idJauge).attr("width", 100).attr("height", 150); svgJauge.attr("viewBox", "0, 0, 100 150");
     // <svg id="fillgauge6" width="19%" height="300" onclick="gauge6.update(NewValue());"></svg>
+    
     
     var config = liquidFillGaugeDefaultSettings();
     config.minValue = 0;
@@ -178,7 +178,19 @@ donneesActuelles.forEach(function(element, index, tableau) {
     
     // ajout de l'image dans la jauge
     // <image x="200" y="200" width="100px" height="100px" xlink:href="myimage.png"> 
-    //svgJauge.select("g").append("image").attr("x", 0).attr("y", 0).attr("xlink:href", infoElement.cheminImage).attr("width", 100).attr("height", 100);
+    //svgJauge.select("g").append("image").attr("x", 25).attr("y", 25).attr("xlink:href", infoElement.cheminImage).attr("width", 50).attr("height", 50);
+    
+    svgJauge.select("g").append("image").attr({
+        "xlink:href": infoElement.cheminImage,
+        "x": 0,
+        "y": 0,
+        "height": 50,
+        "width": 50,
+        "transform": "translate(25, 25)",
+    });
+    //"x", 0).attr("y", 25).attr("xlink:href", infoElement.cheminImage).attr("width", 50).attr("height", 50);
+    
+    
 });
 
 
@@ -205,6 +217,8 @@ function updateDiagrammeJoseph(saison) {
     });
     // tween permet d'animer la mise à jour d'un nombre
     
+    // mise à jour de l'image de saison
+    $("#imageSaison").attr("src", "./img/joseph/background_" + saison + ".png");
 }
 
 
