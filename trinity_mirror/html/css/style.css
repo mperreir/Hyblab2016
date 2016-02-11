@@ -116,7 +116,7 @@ iframe {
     border-radius: 3px;
     color: #999;
     font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
-    height: 20px;
+    height: 40px;
     padding: 10px;
     width: 310px;
     opacity: 1;
@@ -129,7 +129,7 @@ iframe {
 }
 /*==========Info Panel============*/
 .svg-btn {
-   margin: 0 3px;
+    margin: 0 3px;
 }
 input[type="checkbox"] {
     display: none;
@@ -144,7 +144,7 @@ input[type="checkbox"] {
     background: rgba(255,255,255,0.8);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
-    width: 330px;
+    width: 340px;
     float: left;
 }
 .info h4 {
@@ -309,19 +309,68 @@ input[type="checkbox"] {
     width: 59%;
 }
 
+#rope_selectors {
+    margin-top: 4%;
+}
+
 #rope_selectors div {
     display: inline-block;
     width: 49%;
 }
 
 #left_postcode_rope {
+    color: white;
     display: inline-block;
     margin-left: auto;
     margin-right: 0px;
+    background-color:rgba(0,0,0,0) !important;
+    border-color: white;
+    border-radius: 100px;
+}
+
+#right_postcode_rope {
+    color: white;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 0px;
+    background-color:rgba(0,0,0,0) !important;
+    border-color: white;
+    border-radius: 100px;
+}
+
+#left_postcode_rope::-webkit-input-placeholder {
+    color: white !important;
+}
+
+#left_postcode_rope:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+#left_postcode_rope::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+#left_postcode_rope:-ms-input-placeholder {
+    color: white !important;
+}
+
+#right_postcode_rope::-webkit-input-placeholder {
+    color: white !important;
+}
+
+#right_postcode_rope:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+#right_postcode_rope::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+#right_postcode_rope:-ms-input-placeholder {
+    color: white !important;
 }
 
 #charts {
-    margin-top: 5%;
     height: 600px;
 }
 
@@ -333,7 +382,7 @@ input[type="checkbox"] {
 
 .chart div {
     background-color: white;
-    height: 5%;
+    height: 4%;
     margin-bottom: 9%;
     transition: width 0.5s;
 }
@@ -378,9 +427,9 @@ input[type="checkbox"] {
 
 /*--------page3-----------*/
 #title {
-    height: 40vh; 
-    width: 60%; 
-    background-color: #00BFFF; 
+    height: 40vh;
+    width: 60%;
+    background-color: #00BFFF;
     float:left;
 }
 
@@ -404,7 +453,7 @@ input[type="checkbox"] {
 #map2 {
     background-color: #00BFFF;
     height: 60vh;
-    width: 60%; 
+    width: 60%;
 }
 
 /* -------- last page --------- */
