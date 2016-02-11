@@ -216,6 +216,9 @@ function updateDiagrammeJoseph(saison) {
     
     // mise à jour de l'image de saison
     $("#imageSaison").attr("src", "./img/joseph/background_" + saison + ".png");
+    
+    // mise à jour du radio sélectionné
+    $("#radioJoseph_" + saisonActuelle).attr("checked", "");
 }
 
 
