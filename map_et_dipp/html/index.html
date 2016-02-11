@@ -289,6 +289,7 @@
 	    <div class="flecheBas"><img src="./img/fleche_bas_de_page_blanche.png" onclick="$.fn.fullpage.moveSectionDown();" /></div>
 	</div>
 
+    
 	<div class="section" id="slide7">
 		<nav>
 			<ul>
@@ -320,6 +321,8 @@
             <img src="./img/fleche_bas_de_page_orange.png" onclick="$.fn.fullpage.moveSectionDown();" />
         </div>
 	</div>
+    
+    
 	<div class="section" id="slide8">
 		<nav>
 			<ul>
@@ -353,8 +356,6 @@
         <div class="conteneur">
             <div class="bloc">
                 <h2>Suivez nous !</h2>
-
-           
             </div>
         </div>
 
@@ -373,28 +374,32 @@
 	<script src="js/treemap.js"></script>
     <script src="js/diagrammeJoseph.js"></script>
     <script src="js/datavizs.js"></script>
-    <script type="text/javascript">$("nav").slideUp();
-    $(document).ready(function(){
-    	setTimeout(function(){
-    	$("#svgAside").hide();
-    	}, 700);
-    });
-    function toggleMenu()
-    {
-    	/*if($("nav").is(":visible"))
-    	{
-    		$('.boutonMenu').animate({'margin-top':'12px'});
-    	}
-    	else
-    	{
-    		$('.boutonMenu').animate({'margin-top':'-31px'});
-    	}*/
-    	$("nav").slideToggle();
-    }
-    function effetWahoo()
-	{
-		d3.www.transition().attr("transform","scale(0.1) translate("+width*3+","+height*7+")").ease("linear").duration(1000);
-	}
+    <script type="text/javascript">
+        $("nav").slideUp();
+        
+        $(document).ready(function(){
+            setTimeout(function(){
+            $("#svgAside").hide();
+            }, 700);
+        });
+        
+        function toggleMenu()
+        {
+            /*if($("nav").is(":visible"))
+            {
+                $('.boutonMenu').animate({'margin-top':'12px'});
+            }
+            else
+            {
+                $('.boutonMenu').animate({'margin-top':'-31px'});
+            }*/
+            $("nav").slideToggle();
+        }
+        
+        function effetWahoo()
+        {
+            d3.www.transition().attr("transform","scale(0.1) translate("+width*3+","+height*7+")").ease("linear").duration(1000);
+        }
     </script>
     
 </body>
