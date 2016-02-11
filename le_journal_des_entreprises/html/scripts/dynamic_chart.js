@@ -1,6 +1,8 @@
 "use strict";
 
 var plateform = ["Wiseed", "Anaxago", "Smart Angels", "Sowefund", "AB Funding", "Bulb in Town", "Happy Capital", "Proximéa", "Raizers", "Letitseed"];
+var plateformId = ["Wiseed", "Anaxago", "Smart_Angels", "Sowefund", "AB_Funding", "Bulb_in_Town", "Happy_Capital", "Proximéa", "Raizers", "Letitseed"];
+
 var subscribersCount = [59000, 55000, 18000, 0, 0, 200000, 20000, 1000, 10000, 0];
 var totalFunds = [40100000, 37590139, 14515496, 2383977, 1291998, 2376770, 1947026, 1816782, 1059531, 1170250];
 var meanTicket = [2000, 10500, 15000, 800, 8000, 0, 4200, 4500, 6000, 50];
@@ -63,7 +65,7 @@ function zoomBoard(event) {
 			boardZone.style.marginTop = target*10+"px";
 			boardZone.style.marginLeft = 10+target*5+"%";
 			chartDiv.style.width = target*670+"px";
-			boardZone.style.boxShadow = "0px 10px "+(target*100)+"px black";
+			boardZone.style.boxShadow = "0px 100px "+(target*100)+"px black";
 		} else {
 			coef += (target-coef)/4.0;
 			
@@ -74,7 +76,7 @@ function zoomBoard(event) {
 			boardZone.style.marginLeft = 10+coef*5+"%";
 
 			chartDiv.style.width = coef*670+"px";
-			boardZone.style.boxShadow = "0px 10px "+(coef*100)+"px black";
+			boardZone.style.boxShadow = "0px 100px "+(coef*100)+"px black";
 		}
 	}
 }
@@ -229,6 +231,8 @@ bar.append("text")
 	.attr("class", "text")
 	.style('fill', 'white')
 	.style('font-weight', 'bold')
+	.attr("id", function(d, i) {return "colBox"+plateformId[i]})
+	.attr("href", function(d, i) {return "#infos_"+plateformId[i]})
 	.text(function(d, i) { return plateform[i]; });
 
 var widthScreen = window.innerWidth
@@ -250,3 +254,12 @@ setInterval(function() {
 	
 	i++;
 }, 16);
+
+$("#colBoxAnaxago").colorbox({inline:true, width:"50%"});
+$("#colBoxSmart_Angels").colorbox({inline:true, width:"50%"});
+$("#colBoxWiseed").colorbox({inline:true, width:"50%"});
+$("#colBoxBulb_in_Town").colorbox({inline:true, width:"50%"});
+$("#colBoxAB_Funding").colorbox({inline:true, width:"50%"});
+$("#colBoxRaizers").colorbox({inline:true, width:"50%"});
+$("#colBoxHappy_Capital").colorbox({inline:true, width:"50%"});
+$("#colBoxProximéa").colorbox({inline:true, width:"50%"});
