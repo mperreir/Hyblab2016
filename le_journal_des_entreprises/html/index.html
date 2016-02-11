@@ -6,10 +6,12 @@
 	<script src="lib/jquery.js"></script>
 	<script src="lib/fullpage.js"></script>
 	<script src="lib/d3.js"type="text/javascript"></script>
-	<link href="css/test.css" rel="stylesheet">
+	<link href="css/ring.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/Hyblab.css" rel="stylesheet">
 	<link href="lib/fullpage.css" rel="stylesheet">
+	<link rel="stylesheet" href="lib/colorbox.css" />
+	<script src="lib/jquery.colorbox.js"></script>
 
 	<script type="text/javascript">
 		"use strict";
@@ -18,7 +20,8 @@
 				anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
 				sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
 				
-				navigation: true
+				navigation: true,
+				loopHorizontal: false
 			});
 		});
 		
@@ -141,18 +144,46 @@
 		<div class="section" id="introduction">
 		</div>
 		<div class="section" id="definition">
+			<div class="slide">
+				<div id="infosContainer">
+					<div class="bulleInfo" id="bulleInfo1" onclick="$.fn.fullpage.moveTo(3, 1)">
+						Le CROWDFUNDING
+					</div>
+					
+					<div class="bulleInfo" id="bulleInfo2" onclick="$.fn.fullpage.moveTo(3, 2)">
+						Le CROWDEQUITY
+					</div>
+				</div>
+			</div>
+			<div class="slide">
+				<div id="defCrowdFunding">
+				</div>
+				
+				<div class="bulleInfo" id="retour" onclick="$.fn.fullpage.moveTo(3, 0)">
+					Retour
+				</div>
+			</div>
+			<div class="slide">
+				<div id="defCrowdEquity">
+				</div>
+				<div class="bulleInfo" id="retour" onclick="$.fn.fullpage.moveTo(3, 0)">
+					Retour
+				</div>
+			</div>
+			<div class="slide">
+			</div>
 		</div>
 		
 		<div class="section" id="presentation">
 			<div class="slide">
-				<div id="boardZone" onclick="zoomBoard(event);" onmouseover="jump();">
+				<div id="boardZone" onclick="zoomBoard(event);">
 					<div id="chartZone">
 						<div id="filterSelector">
-						  <input type="radio" name="filter" onclick="changeData(event, subscribersCount, '')" checked> Adhérents
-						  <input type="radio" name="filter" onclick="changeData(event, totalFunds, '€')"> Fonds totaux
-						  <input type="radio" name="filter" onclick="changeData(event,  meanTicket, '€')"> Ticket moyen
-						  <input type="radio" name="filter" onclick="changeData(event,  successRate, '%')"> Taux réussite
-						  <input type="radio" name="filter" onclick="changeData(event,  acceptRate, '%')"> Taux acceptation
+							<input type="radio" name="filter" onclick="changeData(event, subscribersCount, '')" checked> Adhérents
+							<input type="radio" name="filter" onclick="changeData(event, totalFunds, '€')"> Fonds totaux
+							<input type="radio" name="filter" onclick="changeData(event,  meanTicket, '€')"> Ticket moyen
+							<input type="radio" name="filter" onclick="changeData(event,  successRate, '%')"> Taux réussite
+							<input type="radio" name="filter" onclick="changeData(event,  acceptRate, '%')"> Taux acceptation
 						</div>
 						
 						<div id="platform">
@@ -164,48 +195,45 @@
 			</div>
 		</div>
 		<div class="section" id="sectors">
-			<div class="selection">
-				<span>Plateforme : </span>
-				<select id="selPlat">
-					<option value="Wiseed" selected="selected">Wiseed</option>
-					<option value="Anaxago">Anaxago</option>
-					<option value="Sowefund">Sowefund</option>
-					<option value="HappyCapital">Happy Capital</option>
-					<option value="ABFunding">AB Funding</option>
-					<option value="SmartAngels">SmartAngels</option>
-					<option value="BulbInTown">BulbInTown</option>
-					<option value="MyNewStartUp">My New StartUp</option>
-					<option value="Letitseed">Letitseed</option>
-					<option value="Proximea">Proximea</option>
-					<option value="Raizers">Raizers</option>
-				</select>
-	
-				<span>Secteur d'acitivité : </span>
-				<select id="selPlat2">
-					<option value="Immobilier" selected="selected">Immobilier</option>
-					<option value="Santé">Santé (médicaments, technologie médicale)</option>
-					<option value="Cleantech">CleanTech (technologie, écologie, énergies renouvelables)</option>
-					<option value="Service_web">Services web, digital</option>
-					<option value="E_commerce">E-commerce</option>
-					<option value="Economie_collaborative">Economie collaborative</option>
-					<option value="Mode">Mode, design, cosmétiques, vêtements, mobilier</option>
-					<option value="Objets_connectés">Objets connectés</option>
-					<option value="Services_numériques">Services numériques (logiciels, maquettes 3D...)</option>
-					<option value="Foodtech">Alimentation, agroalimentaire, foodtech</option>
-					<option value="Service_personne">Services à la personne</option>
-					<option value="Service_entreprise">Services à l'entreprise (moins numériques, plus traditionnels)</option>
-					<option value="Autre">Autres</option>
-				</select>
-			</div>
-			<br/>
-			<div class="title">
-				<h3 id="title1">Wiseed</h3>
-				<h3 id="title2">Immobilier</h3>
-			</div>
+			<div id="whiteboard">
+				<div class="selection">
+					<span>Plateforme : </span>
+					<select id="selPlat">
+						<option value="Wiseed" selected="selected">Wiseed</option>
+						<option value="Anaxago">Anaxago</option>
+						<option value="Sowefund">Sowefund</option>
+						<option value="HappyCapital">Happy Capital</option>
+						<option value="ABFunding">AB Funding</option>
+						<option value="SmartAngels">SmartAngels</option>
+						<option value="BulbInTown">BulbInTown</option>
+						<option value="MyNewStartUp">My New StartUp</option>
+						<option value="Letitseed">Letitseed</option>
+						<option value="Proximea">Proximea</option>
+						<option value="Raizers">Raizers</option>
+					</select>
 		
-			<div class="animated-ring">
-				<svg id="animated-ring"></svg>
-				<svg id="animated-ring2"></svg>
+					<span>Secteur d'acitivité : </span>
+					<select id="selPlat2">
+						<option value="Immobilier" selected="selected">Immobilier</option>
+						<option value="Santé">Santé (médicaments, technologie médicale)</option>
+						<option value="Cleantech">CleanTech (technologie, écologie, énergies renouvelables)</option>
+						<option value="Service_web">Services web, digital</option>
+						<option value="E_commerce">E-commerce</option>
+						<option value="Economie_collaborative">Economie collaborative</option>
+						<option value="Mode">Mode, design, cosmétiques, vêtements, mobilier</option>
+						<option value="Objets_connectés">Objets connectés</option>
+						<option value="Services_numériques">Services numériques (logiciels, maquettes 3D...)</option>
+						<option value="Foodtech">Alimentation, agroalimentaire, foodtech</option>
+						<option value="Service_personne">Services à la personne</option>
+						<option value="Service_entreprise">Services à l'entreprise (moins numériques, plus traditionnels)</option>
+						<option value="Autre">Autres</option>
+					</select>
+				</div>
+				
+				<div class="animated-ring">
+					<svg id="animated-ring"></svg>
+					<svg id="animated-ring2"></svg>
+				</div>
 			</div>
 		</div>
 	
@@ -241,7 +269,101 @@
 	</div>
 	<div class="section" id="ending"></div>
 	</div>
+	<div id="infos_Anaxago" style="display-none">
+		<h1>Anaxago</h1>
+		Plateforme « rentable dès la première année » selon son président Joachim Dupont, Anaxago est, avec Wiseed, la plateforme de crowdequity la plus importante en France. En 3 années d’existence, elle a su réunir autour de ses projets plus de 4 500 investisseurs. A l’inverse de bien d’autres, Anaxago exige auprès des entrepreneurs et donc des investisseurs un ticket minimum de 1 000 euros pour entrer dans le capital de l’entreprise en question. En concurrence avec Wiseed présent sur le même secteur d’activité, Anaxago a décidé de lancer une interface sur son site internet en 2014 destiné à l’immobilier : Anaxago Immobilier. Marché porteur puisque les promoteurs immobiliers sont pressés par les banque toujours en demande de plus de fonds propres pour les lancements de projets, l’immobilier est le secteur sur lequel pari Anaxago pour devenir la plateforme de crowdfunding en equity la plus utilisée. C’est pourquoi la plateforme a noué un partenariat avec SFS, un spécialiste de l’assurance construction, pour faire sa promotion et s’intégrer à l’écosystème. Il apporte également son aide dans l’analyse des dossiers et leur assurance.
+		</br>
+		<h2>Chiffres</h2>
+		Nb de personnes inscrites sur le site : 55 000</br>
+		Ticket moyen déclaré : 10 500 €</br>
+		Montant récupéré depuis la création : 37 590 139 €</br>
+		Meilleures opérations : Kalelithos Invest (1 843 628 €) ; Novolyze (1 492 266 €) ; Flashgap (1 430 471 €)</br>
+		Date d’obtention du CIP : 17/10/2014</br>
+	</div>
+	<div id="infos_Smart_Angels" style="display-none">
+		<h1>Smart Angels</h1>
+		Fondée en janvier 2012, cette plateforme de financement participatif pour start-up et projets de PME a su décrocher deux partenariats importants : la banque en ligne Fortuneo et l’assureur Allianz. L’accès à la clientèle d’une banque et d’un assureur a permis à Smart Angels d’acquérir de nombreux projets de financement. Egalement soutenu par 12 donateurs (dont Xavier Niel, directeur de Free et Jacques-Antoine Granjon, fondateur de venteprivée.com), ou « business angels », la plateforme a réussi à lever 1 million d’euros en 2014 pour renforcer son effectif.
+		</br>
+		<h2>Chiffres</h2>
+		Nb de personnes inscrites sur le site : 18 000</br>
+		Ticket moyen déclaré : 15 000 €</br>
+		Montant récupéré depuis la création : 14 515 496 €</br>
+		Meilleures opérations : Canibal (1 701 878€), Ween (1 211 568 €), Numa (1 058 500 €)</br>
+		Date d’obtention du CIP : 06/03/2015</br>
+	</div>
+	<div id="infos_Sowefund" style="display-none">
+		<h1>Sowefund</h1>
+		Lancée en mai 2014 cherche à se différencier des autres plateformes de crowdfunding en equity en proposant un ticket minimum faible et du co-investissement. Chaque investisseur peut alors prendre une part du capital d’une société à partir de 100 ou 200 euros. Sowefund ne s’adresse donc pas simplement aux grands investisseurs et business angels, mais mise sur les particuliers. En partenariat avec Crédit.fr, une plateforme de prêt pour TPE et PME, Sowefund bénéficie d’un portefeuille d’investisseurs élargi depuis fin 2015. Pour développer la confiance de leurs investisseurs, SOwefund a également décroché un partenariat avec une agence de notation, Early Metrics. Cette dernière émet une note et un avis pour chaque projet, permettant aux internautes de se faire une idée de la viabilité d’un projet ou d’une entreprise et donc des dividendes qu’ils pourront recevoir après leur prise de participation au capital.
+		</br>
+		<h2>Chiffres</h2>
+		Ticket moyen déclaré : 800 €</br>
+		Montant récupéré depuis la création : 2 383 977 €</br>
+		Meilleure opération : BlendBow (409 348 €)</br>
+		Date d’obtention du CIP : 17/10/2014</br>
+	</div>
+	<div id="infos_AB_Funding" style="display-none">
+		<h1>AB Funding</h1>
+		Basée à Lyon, cette plateforme privilégie la sélection de projets de la région Rhones-Alpes, Bourgogne et Auvergne. La levée de fonds peut être de 100 000 euros minimum et peut aller jusqu’au plafond de 1 million d’euros. La particularité d’AB Funding, c’est de proposer aux entreprises en cession ou transmission de levée des fonds auprès d’investisseurs sur le web. La plateforme de crowdfunding en equity se revendique comme un conseiller sur le long terme en
+		proposant un suivi de l’entreprise financée. Pour investir dans un projet, le ticket minimum est de 1 000 euros, ce qui signifie que cette plateforme est plus dédiée à un cercle d’investisseurs restreint et importants. Comme gage de sécurité, AB Funding a annoncé vouloir investir dans chaque projet présent sur leur site internet.</br>
+		<h2>Chiffres</h2>
+		Ticket moyen déclaré : 8 000 €</br>
+		Montant récupéré depuis création : 1 291 998 €</br>
+		Meilleure opération : Solight (510 240 €)</br>
+		Date d’obtention du CIP : 27/03/2015</br>
+	</div>
+	<div id="infos_Bulb_in_Town" style="display-none">
+		<h1>Bulb in Town</h1>
+		Plateforme de financement de proximité, Bulbin Town privilégie les commerces ou associations de quartier depuis sa création en octobre 2012. Leur cible d’investisseurs est alors souvent en lien avec le quartier en question, résidents, travailleurs ou connaissance du quartier. Bulbin Town cherche à développer une dimension plus humaine et locale au monde de la finance sur internet. D’abord en don et contrepartie, le modèle de cette plateforme s’est développé en crowdfunding equity quelques temps plus tard. Pourtant, peu de projets sont financés en prise de participation au capital car la plupart des entreprises n’ont pas le profil pour ce type de financement. La plupart des projets sont alors toujours financés en don, et les donateurs bénéficient de services ou produits dédiés et gratuits de la part de l’entreprise bénéficiaire.
+		<h2>Chiffres</h2>
+		Montant récupéré depuis la création : 2 376 770 €</br>
+		Nb de personnes inscrites sur le site : 60 000 actifs</br>
+		Meilleure opération : Moulin de Mourlasse (1 000 000 €)</br>
+		Date d’obtention du CIP : 13/02/2015</br>
+	</div>
+	<div id="infos_Happy_Capital" style="display-none">
+		<h1>Happy Capital</h1>
+		Dans la cadre de leur projet Néobusiness, la Caisse d’Epargne a noué un partenariat avec cette plateforme. Chaque entreprise en besoin de financement qui aura retenu l’attention des commerciaux de la banque verra son dossier transféré vers la plateforme sous forme de projet à financer. Si l’entreprise passe ce stade, elle fera également l’objet d’une contre-expertise par la société de gestion de fonds de capital-innovation Seventure Partners permettant de rassurer les potentiels investisseurs. De plus, cette société pourra décerner le label « coup de coeur » aux meilleurs projets, visible sur le site de Happy Capital. Cette plateforme de crowdfunding en equity propose également une pré-collecte : les projets préselectionnés par la plateforme mais qui ne sont pas encore officiellement des projets proposés aux investisseurs peuvent faire l’objet d’intentions d’investissements de la part des internautes. Cela permet à l’entreprise de voir quel intérêt son projet suscite sans avoir à respecter toutes les règles et documents juridiques nécessaires à une levée de fonds sur internet.
+		Considérant que le crowdfunfing ne doit pas être l’apanage des starts-up et des jeunes entreprises du web, Happy Capital propose à toutes les entreprises de quel que secteur d’activité que ce soit de se financer via leur plateforme. Cette dernière sélectionne également les projets des entreprises à
+		n’importe quel stade de leur développement, que ce soit pour lancer un nouveau produit ou pour une restructuration.
+		<h2>Chiffres</h2>
+		Montant récupéré depuis la création : 1 947 026 €</br>
+		Nb de personnes inscrites sur le site : 20000</br>
+		Ticket Moyen déclaré : 4 200 €</br>
+		Meilleure opération : Biosantech (803 000 €)</br>
+		Date d’obtention du CIP : 06/05/2015</br>
+	</div>
+	<div id="infos_Proximéa" style="display-none">
+		<h1>Proximéa</h1>
+		Dédiée aux entrepreneurs de la région Ouest, Proximéa est la seule plateforme à avoir été directement crée par une banque : la Banque Populaire Atlantique. Filiale à 100% de la banque, Proximea s’est vu financée à hauteur de 200 000 euros par cette dernière pour son lancement. Etant donné qu’elle appartient à une banque régionale, la plateforme de crowdequity basée à Saint-Herblain se concentre sur 5 départements de l’Ouest : Finistère Sud, Loire Atlantique, Maine et Loire, Morbihan et Vendée. Au-delà de ce choix de la localité, Proximea ne restreint pas les secteurs d’activité des projets : immobilier, technologie ou oenologie, la plateforme vise large. L’avantage de la plateforme : elle est à l’image des start-ups qu’elle sélectionne, avec une jeune et petite équipe.
+		<h2>Chiffres</h2>
+		Nb de personnes inscrites sur le site : 1 000</br>
+		Ticket moyen déclaré : 4 500 €</br>
+		Montant récupéré depuis la création : 1 816 782 €</br>
+		Meilleures opérations : Eo-lien (969 600, €) ; 10-vins (847 182 €)</br>
+		Date d’obtention du CIP : 06/05/2015</br>
+	</div>
+	<div id="infos_Wiseed" style="display-none">
+		<h1>Wiseed</h1>
+		Désormais leader dans le domaine du crowdfunding en equity, la plateforme Wiseed fut la première à se lancer sur le marché en 2009. Concentrée essentiellement sur les Medtech (technologies médicales) et les Cleantech (technologies utilisant les ressources naturelles), Wiseed s’est développée, deux ans après sa création, sur le secteur de l’immobilier qui fait désormais office de socle pour la plateforme reconnue comme le leader pour l’investissement en crowdequity sur ce marché. Le constat était clair : étant donné les risques pris par les investisseurs lors d’une entrée au capital de l’entreprise, autant se placer sur un marché stable et des projets plus surs qu’offre le secteur de l’immobilier. Maintenant bien installée sur la marché, la plateforme toulousaine vise plus haut, en cherchant à passer d’un staut e CIP à un statut de PSI (prestataire de services d'investissement) permettant de lever jusqu’à 5 millions d’euros pour chaque ainsi que d’exercer à l’étranger, activité impossible avec le CPI. Pour en arriver là, Wiseed va tenter de récolter des fonds en intégrant la toute première plateforme de financement participatif : la bourse.
+		<h2>Chiffres</h2>
+		Nb de personnes inscrites sur le site : 59 000</br>
+		Ticket moyen déclaré : 2 000 €</br>
+		Montant récupéré depuis la création : 40 100 000 €</br>
+		Meilleures opérations : Capelli (1 000 000 €) ; Poetis (953 000 €) ; Huso (948 000 €)</br>
+		Date d’obtention du CIP : 17/10/2014</br>
+	</div>
+	<div id="infos_Raizers" style="display-none">
+		<h1>Raizers</h1>
+		Cette plateforme lancée en janvier 2015 est une des dernières en date et arrive sur le marché avec un des objectifs les plus colossal : conquérir l’Europe et devenir la première plateforme de crowdfunding sur le vieux continent. En novembre dernier, le chemin a été bel et bien entamé grâce au lancement de leur première opération en Suisse. L’inconvénient de cette ambition, ce sont les complications rencontrées dues aux différences juridiques entre chaque pays. En effet, alors que la France a, depuis octobre 2014, offert la possibilité aux plateformes de se voir accorder un réel statut juridique, rien de tel n’existe en Suisse ou au Danemark, compliquant la tâche des trois dirigeants.
+		D’abord tournée vers le crowdequity, Raizers s’est également spécialisée depuis septembre 2015 dans le crowdlending, ou financement participatif par le prêt permettant de toucher des entreprises plus importantes aux moyens conséquents.
+		<h2>Chiffres</h2>
+		Nb de personnes inscrites sur le site : 10 000</br>
+		Ticket moyen déclaré : 6 000 €</br>
+		Montant récupéré depuis la création : 1 059 531 €</br>
+		Meilleure opération : Guadalupa Immobilier (565 276 €)</br>
+		Date d’obtention du CIP : 28/11/2014</br>
+	</div>
   </body>
   
-  <script src="scripts/test3.js"type="text/javascript"></script>
+  <script src="scripts/ring.js"type="text/javascript"></script>
 </html>
