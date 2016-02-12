@@ -46,24 +46,24 @@
     function meanLSOAs(indicator, LSOAs, type) {
         var count = 0;
         var result = LSOAs
-            .map(function(lsoa11cd) {
-                count += 1;
-                return window.data[lsoa11cd][indicator][type];
-            }).reduce(function(a, b) {
-                return a + b;
-            }) / count;
+                .map(function(lsoa11cd) {
+                    count += 1;
+                    return window.data[lsoa11cd][indicator][type];
+                }).reduce(function(a, b) {
+                    return a + b;
+                }) / count;
         return result;
     }
 
 
 
     /*
-    var pushArray = function(oldArr) {
-        var toPush = oldArr.concat.apply([], arguments);
-        for (var i = 0, len = toPush.length; i < len; ++i) {
-            this.push(toPush[i]);
-        }
-    };*/
+     var pushArray = function(oldArr) {
+     var toPush = oldArr.concat.apply([], arguments);
+     for (var i = 0, len = toPush.length; i < len; ++i) {
+     this.push(toPush[i]);
+     }
+     };*/
 
     // Utility variable for storing MSOA's properties
     var MSOA = {};
@@ -94,12 +94,12 @@
         for (var MSOA11CD in MSOA) {
             var count = 0;
             MSOA[MSOA11CD]["IMD"] = MSOA[MSOA11CD]["LSOAs"]
-                .map(function(lsoa11cd) {
-                    count += 1;
-                    return window.data[lsoa11cd]["IMD"]["raw"];
-                }).reduce(function(a, b) {
-                    return a + b;
-                }) / count;
+                    .map(function(lsoa11cd) {
+                        count += 1;
+                        return window.data[lsoa11cd]["IMD"]["raw"];
+                    }).reduce(function(a, b) {
+                        return a + b;
+                    }) / count;
             for (var indicator in INDICATORS) {
                 MSOA[MSOA11CD][indicator] = {};
                 MSOA[MSOA11CD][indicator]["raw"] = meanLSOAs(indicator, MSOA[MSOA11CD]["LSOAs"], "raw");
@@ -127,7 +127,7 @@
                 MSOA[MSOA11CD]["ages"][AGES[group]] = totalAges(AGES[group], MSOA[MSOA11CD]["LSOAs"]);
             }
         }
-        
+
     }());
 
     function totalPeople(lsoa11cd) {
@@ -153,7 +153,7 @@
     //         }
     //         MSOA[MSOA11CD]["ages.average"] = totalAges / totalPeople;
     //     }
-        
+
     // }());
 
     // Convert HSV to RGB
@@ -210,24 +210,24 @@
         //console.log(INDICATORS);
         var sum = 1;
         return LSOA_Limits["IMD"].max - Object.keys(INDICATORS).map(function(id) {
-            //console.log(document.getElementById(id).checked);
-            var val = document.getElementById(id).checked === true ? 2 : 1;
-            sum += val;
-            return window.data[lsoa11cd][id]["exp"] * val;
-        }).map(function(val) {
-            return val / sum;
-        }).reduce(function(a, b) {
-            return a + b;
-        });
+                //console.log(document.getElementById(id).checked);
+                var val = document.getElementById(id).checked === true ? 2 : 1;
+                sum += val;
+                return window.data[lsoa11cd][id]["exp"] * val;
+            }).map(function(val) {
+                return val / sum;
+            }).reduce(function(a, b) {
+                return a + b;
+            });
     };
 
     var calculateMsoaIMD = function(msoa11cd) {
         var LSOAs = MSOA[msoa11cd]["LSOAs"];
         return LSOAs
-            .map(calculateIMD)
-            .reduce(function(a, b) {
-                return a + b;
-            }) / LSOAs.length;
+                .map(calculateIMD)
+                .reduce(function(a, b) {
+                    return a + b;
+                }) / LSOAs.length;
     };
 
 
@@ -370,7 +370,7 @@
                     'name': AGES[group],
                     'value': MSOA[CD]["ages"][AGES[group]]
                 })
-            } 
+            }
         }
 
         // console.log(ages);
@@ -441,23 +441,23 @@
         style: MsoaStyle,
         onEachFeature: MsoaOnEachFeature
     });
-
-    var osm = new L.TileLayer(
-        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            minZoom: 11,
-            maxZoom: 18,
-            attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-        }
-    );
+    /*
+     var osm = new L.TileLayer(
+     "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+     minZoom: 11,
+     maxZoom: 18,
+     attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+     }
+     );*/
 
     var map = L.map('map', {
         center: [53.85, -2.7],
         zoom: 11,
-        layers: [osm, topoMsoaLayer], // Only Add default layers here
+        layers: [topoMsoaLayer], // Only Add default layers here
         minZoom: 11,
         maxZoom: 16,
         maxBounds: topoMsoaLayer.getBounds(),
-        zoomControl: true
+        zoomControl: false
     });
 
     map.on('zoomend', function(e) {
@@ -478,20 +478,20 @@
         map.closePopup(popup);
     });
     /*
-    L.control.layers(
-        { "Map": osm },
-        { "MSOA": topoMsoaLayer, "LSOA": topoLsoaLayer }
-    ).addTo(map);*/
+     L.control.layers(
+     { "Map": osm },
+     { "MSOA": topoMsoaLayer, "LSOA": topoLsoaLayer }
+     ).addTo(map);*/
     //L.control.scale().addTo(map);
 
     // Create overlay for later use
     /*
-    var overlay = (function() {
-        var _div = L.DomUtil.create('div', '');
-        _div.setAttribute('id', 'overlay');
-        document.getElementById('map').appendChild(_div);
-        return _div;
-    }());*/
+     var overlay = (function() {
+     var _div = L.DomUtil.create('div', '');
+     _div.setAttribute('id', 'overlay');
+     document.getElementById('map').appendChild(_div);
+     return _div;
+     }());*/
 
     var info = L.control();
 
@@ -511,26 +511,26 @@
             '   <input id="housing" type="checkbox"/>' +
             '   <input id="crime" type="checkbox"/>' +
             '   <div class="row">' +
-            '   <img class="svg-btn" title="Income" id="income-svg" src="image/income-active.svg"/>' +
-            '   <img class="svg-btn" title="Health Deprivation and Disability" id="health-svg" src="image/health-active.svg"/>' +
-            '   <img class="svg-btn" title="Education, Skills and Training" id="education-svg" src="image/education-active.svg"/>' +
-            '   <img class="svg-btn" title="Employment" id="employment-svg" src="image/employment-active.svg"/>' +
+            '   <img class="svg-btn" title="Income" id="income-svg" src="../documents/mapIcons/income-active.svg"/>' +
+            '   <img class="svg-btn" title="Health Deprivation and Disability" id="health-svg" src="../documents/mapIcons/health-active.svg"/>' +
+            '   <img class="svg-btn" title="Education, Skills and Training" id="education-svg" src="../documents/mapIcons/education-active.svg"/>' +
+            '   <img class="svg-btn" title="Employment" id="employment-svg" src="../documents/mapIcons/employment-active.svg"/>' +
             '   </div><div class="row">' +
-            '   <img class="svg-btn" title="Living Environment" id="environment-svg" src="image/environment-active.svg"/>' +
-            '   <img class="svg-btn" title="Barriers to Housing and Services" id="housing-svg" src="image/housing-active.svg"/>' +
-            '   <img class="svg-btn" title="Crime" id="crime-svg" src="image/crime-active.svg"/>' +
+            '   <img class="svg-btn" title="Living Environment" id="environment-svg" src="../documents/mapIcons/environment-active.svg"/>' +
+            '   <img class="svg-btn" title="Barriers to Housing and Services" id="housing-svg" src="../documents/mapIcons/housing-active.svg"/>' +
+            '   <img class="svg-btn" title="Crime" id="crime-svg" src="../documents/mapIcons/crime-active.svg"/>' +
             '   </div>' +
             '</div>';
-            ''/* +
-            '<div class="sliderset">' +
-            '   <div class="row"></div><label>Income</label><i class="information" id="icon_income"></i><input id="income" type="range" min="0" max="1000" value="225" class="slider red"/><br/>' +
-            '   <div class="row"></div><label>Employment</label><i class="information" id="icon_employment"></i><input id="employment" type="range" min="0" max="1000" value="225" class="slider orange"/><br/>' +
-            '   <div class="row"></div><label>Education</label><i class="information" id="icon_education"></i><input id="education" type="range" min="0" max="1000" value="135" class="slider yellow"/><br/>' +
-            '   <div class="row"></div><label>Health</label><i class="information" id="icon_health"></i><input id="health" type="range" min="0" max="1000" value="135" class="slider green"/><br/>' +
-            '   <div class="row"></div><label>Crime</label><i class="information" id="icon_crime"></i><input id="crime" type="range" min="0" max="1000" value="93" class="slider blue"/><br/>' +
-            '   <div class="row"></div><label>Housing</label><i class="information" id="icon_housing"></i><input id="housing" type="range" min="0" max="1000" value="93" class="slider indigo"/><br/>' +
-            '   <div class="row"></div><label>Environment</label><i class="information" id="icon_environment"></i><input id="environment" type="range" min="0" max="1000" value="93" class="slider purple"/><br/>' +
-            '</div>';*/
+        ''/* +
+         '<div class="sliderset">' +
+         '   <div class="row"></div><label>Income</label><i class="information" id="icon_income"></i><input id="income" type="range" min="0" max="1000" value="225" class="slider red"/><br/>' +
+         '   <div class="row"></div><label>Employment</label><i class="information" id="icon_employment"></i><input id="employment" type="range" min="0" max="1000" value="225" class="slider orange"/><br/>' +
+         '   <div class="row"></div><label>Education</label><i class="information" id="icon_education"></i><input id="education" type="range" min="0" max="1000" value="135" class="slider yellow"/><br/>' +
+         '   <div class="row"></div><label>Health</label><i class="information" id="icon_health"></i><input id="health" type="range" min="0" max="1000" value="135" class="slider green"/><br/>' +
+         '   <div class="row"></div><label>Crime</label><i class="information" id="icon_crime"></i><input id="crime" type="range" min="0" max="1000" value="93" class="slider blue"/><br/>' +
+         '   <div class="row"></div><label>Housing</label><i class="information" id="icon_housing"></i><input id="housing" type="range" min="0" max="1000" value="93" class="slider indigo"/><br/>' +
+         '   <div class="row"></div><label>Environment</label><i class="information" id="icon_environment"></i><input id="environment" type="range" min="0" max="1000" value="93" class="slider purple"/><br/>' +
+         '</div>';*/
         this._div.addEventListener('mousemove', function(e) {
             e.stopPropagation();
         });
@@ -548,11 +548,11 @@
             });
             var el = document.getElementById("income");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/income.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/income.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/income-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/income-active.svg");
                 el.checked = false;
             }
         });
@@ -565,11 +565,11 @@
             });
             var el = document.getElementById("employment");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/employment.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/employment.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/employment-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/employment-active.svg");
                 el.checked = false;
             }
         });
@@ -582,11 +582,11 @@
             });
             var el = document.getElementById("education");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/education.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/education.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/education-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/education-active.svg");
                 el.checked = false;
             }
         });
@@ -599,11 +599,11 @@
             });
             var el = document.getElementById("health");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/health.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/health.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/health-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/health-active.svg");
                 el.checked = false;
             }
         });
@@ -616,11 +616,11 @@
             });
             var el = document.getElementById("crime");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/crime.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/crime.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/crime-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/crime-active.svg");
                 el.checked = false;
             }
         });
@@ -633,11 +633,11 @@
             });
             var el = document.getElementById("housing");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/housing.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/housing.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/housing-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/housing-active.svg");
                 el.checked = false;
             }
         });
@@ -650,11 +650,11 @@
             });
             var el = document.getElementById("environment");
             if (el.checked === false) {
-                e.target.setAttribute('src', "image/environment.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/environment.svg");
                 el.checked = true;
             }
             else {
-                e.target.setAttribute('src', "image/environment-active.svg");
+                e.target.setAttribute('src', "../documents/mapIcons/environment-active.svg");
                 el.checked = false;
             }
         });
@@ -673,11 +673,11 @@
                 });
                 var el = document.getElementById("income");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/income.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/income.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/income-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/income-active.svg");
                     el.checked = false;
                 }
             });
@@ -691,11 +691,11 @@
                 });
                 var el = document.getElementById("employment");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/employment.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/employment.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/employment-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/employment-active.svg");
                     el.checked = false;
                 }
             });
@@ -709,11 +709,11 @@
                 });
                 var el = document.getElementById("education");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/education.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/education.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/education-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/education-active.svg");
                     el.checked = false;
                 }
             });
@@ -727,11 +727,11 @@
                 });
                 var el = document.getElementById("health");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/health.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/health.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/health-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/health-active.svg");
                     el.checked = false;
                 }
             });
@@ -745,11 +745,11 @@
                 });
                 var el = document.getElementById("crime");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/crime.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/crime.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/crime-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/crime-active.svg");
                     el.checked = false;
                 }
             });
@@ -763,11 +763,11 @@
                 });
                 var el = document.getElementById("housing");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/housing.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/housing.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/housing-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/housing-active.svg");
                     el.checked = false;
                 }
             });
@@ -781,18 +781,18 @@
                 });
                 var el = document.getElementById("environment");
                 if (el.checked === false) {
-                    e.target.setAttribute('src', "image/environment.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/environment.svg");
                     el.checked = true;
                 }
                 else {
-                    e.target.setAttribute('src', "image/environment-active.svg");
+                    e.target.setAttribute('src', "../documents/mapIcons/environment-active.svg");
                     el.checked = false;
                 }
             });
             sliderListenersAdded = true;
         } else if (props !== undefined) {
             if (props.hasOwnProperty("LSOA11CD"))
-                //document.getElementById("idm").innerHTML = ": " + calculateIMD(props["LSOA11CD"]).toFixed(1) + "%";
+            //document.getElementById("idm").innerHTML = ": " + calculateIMD(props["LSOA11CD"]).toFixed(1) + "%";
                 document.getElementById("idm").innerHTML = ": " +
                     parseInt(calculateIMD(props["LSOA11CD"]).toPrecision(1) / 10);
             else {
@@ -940,17 +940,17 @@
             .attr("class", "y axis")
             .call(yAxis);
         /* Label for y-axis
-        .append("text")
-        .attr("transform", "rotate(-90)")
-        .attr("y", -10)
-        .attr("dy", "-1em")
-        .style("text-anchor", "end")
-        .text("Performance");*/
+         .append("text")
+         .attr("transform", "rotate(-90)")
+         .attr("y", -10)
+         .attr("dy", "-1em")
+         .style("text-anchor", "end")
+         .text("Performance");*/
 
         svg.selectAll('.bar')
             .data(deciles)
             .enter().append('rect')
-              .attr('class', function(d) { return 'bar'; })
+            .attr('class', function(d) { return 'bar'; })
             .attr('style', function(d) { return 'fill:' + colorsOfIndicators[d.indicator];})
             .attr('x', function(d) { return x(d.indicator); })
             .attr('width', x.rangeBand())
