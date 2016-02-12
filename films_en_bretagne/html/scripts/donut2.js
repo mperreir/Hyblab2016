@@ -3,17 +3,17 @@ var d= [];
 var pourc;
 
 function donut_animee(a){
- 
+
    var data= $.getJSON("./JSON/hyblab.json",function(donnees){
-       
-            jQuery.each(donnees, function(){ 
+
+            jQuery.each(donnees, function(){
             if(this.Code==a){
               var txt={
                  title: "DOC",
                  value: this.Moy_sp_DOC_region,
                  color: "#DBA774"
                }
-               
+
               var txt1={
                  title: "Autres",
                  value: this.Moy_sp_TGC-this.Moy_sp_DOC_region,
@@ -23,7 +23,7 @@ function donut_animee(a){
               d.push(txt1);
               pourc=Math.round(((this.Moy_sp_DOC_region)/(this.Moy_sp_TGC)*100))+"%";
             }
-             
+
             });
             $("#doughnutChart").drawDoughnutChart(d);
     });
@@ -32,7 +32,7 @@ function init_var(){
   d=[];
 }
 (function($, undefined) {
-  
+
   $.fn.drawDoughnutChart = function(data, options) {
     var $this = this,
       W = $this.width(),
@@ -58,13 +58,8 @@ function init_var(){
         tipOffsetY: -45,
         tipClass: "doughnutTip",
         summaryClass: "doughnutSummary",
-<<<<<<< HEAD
         /*summaryTitle: "",
         summaryTitleClass: "doughnutSummaryTitle",*/
-=======
-        summaryTitle: "",
-        summaryTitleClass: "doughnutSummaryTitle",
->>>>>>> master
         summaryNumberClass: "doughnutSummaryNumber",
         beforeDraw: function() {  },
         afterDrawed : function() {  },
@@ -123,17 +118,13 @@ function init_var(){
     var summarySize = (cutoutRadius - (doughnutRadius - cutoutRadius)) * 2,
         $summary = $('<div class="' + settings.summaryClass + '" />')
                    .appendTo($this)
-                   .css({ 
+                   .css({
                      width: summarySize + "px",
                      height: summarySize + "px",
                      "margin-left": -(summarySize / 2) + "px",
                      "margin-top": -(summarySize / 2) + "px"
                    });
-<<<<<<< HEAD
    /* var $summaryTitle = $('<p class="' + settings.summaryTitleClass + '">' + settings.summaryTitle + '</p>').appendTo($summary);*/
-=======
-    var $summaryTitle = $('<p class="' + settings.summaryTitleClass + '">' + settings.summaryTitle + '</p>').appendTo($summary);
->>>>>>> master
     var $summaryNumber = $('<p class="' + settings.summaryNumberClass + '"></p>').appendTo($summary).css({opacity: 0});
 
     for (var i = 0, len = data.length; i < len; i++) {

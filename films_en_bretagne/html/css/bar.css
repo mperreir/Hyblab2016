@@ -5,18 +5,13 @@
 #Province2.bar,#Province3.bar,#Province4.bar{
   background: #9393CC;
   margin-top: 0em;
-<<<<<<< HEAD
   margin-bottom:0em;
-=======
-  margin-bottom:3em;
->>>>>>> master
 }
 #IDF2.bar,#IDF3.bar,#IDF4.bar{
    background: #5D5DA5;
   margin: 0em;
 }
 #Deux,#Trois,#Quatre{
-<<<<<<< HEAD
   display:inline-block;
   max-height:0%;
   max-width:0%;
@@ -80,16 +75,8 @@
     font-family: 'Lato_Regular', sans-serif;
     font-size:1.7em;
     vertical-align:50%;
-=======
-  max-height:100px;
-  max-width:100px;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Montserrat", sans-serif;
-  padding: 12px;
->>>>>>> master
 }
-.bar 
+.bar
 {
   width: 0;
   position: relative;
@@ -114,14 +101,3 @@
   font-size: 1em;
   font-family: "Montserrat", sans-serif;
 }
-
-<<<<<<< HEAD
-=======
-#histogramme{
-  position:relative;
-  width:0px;
-  height:200px;
-  left: 5vw;
-  top: -8vh;
-}
->>>>>>> master

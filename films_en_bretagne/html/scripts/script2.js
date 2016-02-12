@@ -1,6 +1,6 @@
 "use srict";
 
-// For one page full screen scrolling 
+// For one page full screen scrolling
 $(document).ready(function() {
     $('#fullpage').fullpage({
         sectionsColor: ['#19182D', '#373763', 'white', 'white', 'white', 'black', 'white'],
@@ -65,42 +65,42 @@ function change($section){
  * classLabel : ".label1"
  * classNom : "nom"
  * classSvg : "svg"
- * classNb : "nombre" 
+ * classNb : "nombre"
  * data : "Moy_sp_DOC_region **/
 
 function mapClickData(idMap,idRegAv,idRegAp,idSvg,classRegAv,classRegAp,idLabel,classLabel,classNom,classSvg,classNb,data){
     $(idMap).vectorMap({map: 'fr_regions_mill',
           onRegionClick: function(event,code){
-            // Supression des noeuds fils 
+            // Supression des noeuds fils
             var div1 = document.getElementsByClassName(idRegAv)[0];
             div1.innerHTML="";
             var div2= document.getElementsByClassName(idRegAp)[0];
             div2.innerHTML="";
-            
+
             //Ajout de la flèche de gauche ainsi que l'événement
             d3.select(classRegAp).append("img").attr("id","flechegauche").attr("src","Logos/fleche-data-gauche-fin.svg").attr("onclick",'clickFleche("gauche",1);').attr("onmouseover",'epaissir("gauche");').attr("onmouseout",'desepaissir("gauche");');
-            
-            // ajout du texte dans le div 
+
+            // ajout du texte dans le div
             d3.select(classRegAv).append("p").attr("class",idLabel);
             $(classLabel).html("Sociétés de production </br> de documentaires en");
             // ajout du nom de la région
             d3.select(classRegAv).append("p").attr("class",classNom);
-            var nom = document.getElementsByClassName(classNom)[0]; 
-            
-            // ajout de la balise contenant la carte de la région dans le second div 
+            var nom = document.getElementsByClassName(classNom)[0];
+
+            // ajout de la balise contenant la carte de la région dans le second div
             d3.select(classRegAp).append("svg")
                 .attr("class",classSvg)
                 .attr("width",250)
                 .attr("height",220)
                 .attr("id",code);
-            
+
             // ajout de la balise contenant le nombre
             d3.select(classRegAp).append("p").attr("class",classNb);
             var nb = document.getElementsByClassName(classNb)[0];
-            
+
             //Ajout de la flèche de droite ainsi que l'événement
             d3.select(classRegAp).append("img").attr("id","flechedroite").attr("src","Logos/fleche-data-droite-fin.svg").attr("onclick",'clickFleche("droite",1);').attr("onmouseover",'epaissir("droite");').attr("onmouseout",'desepaissir("droite");');
-            
+
             // Parcours du fichier JSON pour récupérer le chemin de la région et son nom
             var j = jQuery.getJSON("./JSON/regions.json",function(donnees){
               jQuery.each(donnees, function(){
@@ -122,28 +122,28 @@ function mapClickData(idMap,idRegAv,idRegAp,idSvg,classRegAv,classRegAp,idLabel,
       })
 }
 
-// Fonction permettant d'afficher les données suite à un clic sur une région pour la dataviz3 
+// Fonction permettant d'afficher les données suite à un clic sur une région pour la dataviz3
 
 function mapClickData3(idMap,idRegAv,idRegAp,idSvg,classRegAv,classRegAp,idLabel,classLabel,classNom,classSvg,classNb,data){
     $(idMap).vectorMap({map: 'fr_regions_mill',
           onRegionClick: function(event,code){
-            // Supression des noeuds fils 
+            // Supression des noeuds fils
             var div1 = document.getElementsByClassName(idRegAv)[0];
             div1.innerHTML="";
             var div2= document.getElementsByClassName(idRegAp)[0];
             div2.innerHTML="";
-            
+
             //Ajout de la flèche de gauche ainsi que l'événement
             d3.select(classRegAp).append("img").attr("id","flechegauche").attr("src","Logos/fleche-data-gauche-fin.svg").attr("onclick",'clickFleche("gauche",3);').attr("onmouseover",'epaissir("gauche",3);').attr("onmouseout",'desepaissir("gauche");');
-            
-            // ajout du texte dans le div 
+
+            // ajout du texte dans le div
             d3.select(classRegAv).append("p").attr("class",idLabel);
             $(classLabel).html("Financement pour </br> le documentaires en");
             // ajout du nom de la région
             d3.select(classRegAv).append("p").attr("class",classNom);
-            var nom = document.getElementsByClassName(classNom)[0]; 
-            
-            // ajout de la balise de la région dans le second div 
+            var nom = document.getElementsByClassName(classNom)[0];
+
+            // ajout de la balise de la région dans le second div
             d3.select(classRegAp).append("svg")
                 .attr("class",classSvg)
                 .attr("width",250)
@@ -152,10 +152,10 @@ function mapClickData3(idMap,idRegAv,idRegAp,idSvg,classRegAv,classRegAp,idLabel
             // ajout de la balise contenant le nombre
             d3.select(classRegAp).append("p").attr("class",classNb);
             var nb = document.getElementsByClassName(classNb)[0];
-            
+
             //Ajout de la flèche de droite ainsi que l'événement
             d3.select(classRegAp).append("img").attr("id","flechedroite").attr("src","Logos/fleche-data-droite-fin.svg").attr("onclick",'clickFleche("droite",3);').attr("onmouseover",'epaissir("droite",3);').attr("onmouseout",'desepaissir("droite");');
-            
+
             // Parcours du fichier JSON pour récupérer le chemin de la région et son nom
             var j = jQuery.getJSON("./JSON/regions.json",function(donnees){
               jQuery.each(donnees, function(){
@@ -165,7 +165,7 @@ function mapClickData3(idMap,idRegAv,idRegAp,idSvg,classRegAv,classRegAp,idLabel
                 }
               });
             });
-            
+
             // Parcours du second fichier JSON permettant de récupéré le nombre associé à la donnée
             var json = jQuery.getJSON("./JSON/hyblab.json", function(data1){
                 jQuery.each(data1,function(){
@@ -204,7 +204,7 @@ function mapClickData2(id){
                     }
                 });
             });
-              
+
           }
       })
 }
@@ -219,20 +219,20 @@ function clickFleche(sens,i){
         var dat1 = "Sociétés de production  de documentaires en";
         var dat2 = "Sociétés de production  tous genres confondus en";
         var dat3 = "Production documentaire sur  la production régionale en";
-        
+
         var dat1br = "Sociétés de production </br> de documentaires en";
         var dat2br = "Sociétés de production </br> tous genres confondus en";
         var dat3br = "Production documentaire sur </br> la production régionale en";
-        
+
         // Récupération des différentes balises
         var nombre = document.getElementsByClassName("nombre")[0];
         var label = document.getElementsByClassName("label1")[0];
-    
+
         var svg = document.getElementsByClassName("svg")[0];
-        
+
         // Récupération du code de la région sur laquelle l'utilisateur a cliqué
         var code = svg.getAttribute("id");
-        
+
         // Parcours du fichier JSON pour récupérer les données
         var json = jQuery.getJSON("./JSON/hyblab.json", function(data){
             if(sens == "droite"){   // Dans le cas du clique sur une fléche droite
@@ -252,7 +252,7 @@ function clickFleche(sens,i){
                     // Suppression de la carte de la région et du nombre
                     svg.innerHTML="";
                     nombre.innerHTML="";
-                    // Ajout du donut 
+                    // Ajout du donut
                     d3.select(".apresRegion1").append("div").attr("id","doughnutChart").attr("class","chart");
                     init_var();
                     donut_animee(code);
@@ -318,24 +318,24 @@ function clickFleche(sens,i){
                        }
                     });
                 }
-            }        
+            }
         });
     }
     else if(i == 3){ // Dans le cas de la dataviz 3
         var dat1 = "Financement pour  le documentaires en";
         var dat2 = "Financement de la  production global en";
         var dat3 = "Financement du documentaire sur  la production global en";
-        
+
         var dat1br = "Financement pour </br> le documentaires en";
         var dat2br = "Financement de la </br> production global en";
         var dat3br = "Financement du documentaire sur </br> la production global en";
-        
+
         var nombre = document.getElementsByClassName("nombre3")[0];
         var label = document.getElementsByClassName("label3")[0];
-    
+
         var svg = document.getElementsByClassName("svg3")[0];
         var code = svg.getAttribute("id");
-        
+
         var json = jQuery.getJSON("./JSON/hyblab.json", function(data){
             if(sens == "droite"){   // Dans le cas du clique sur une fléche droite
                 if(label.textContent == dat1){  // On va à la data 2
@@ -370,7 +370,7 @@ function clickFleche(sens,i){
                                     }
                                 });
                            });
-                           
+
                        }
                     });
                 }
@@ -411,7 +411,7 @@ function clickFleche(sens,i){
                        }
                     });
                 }
-            }        
+            }
         });
     }
 }
