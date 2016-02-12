@@ -315,9 +315,7 @@ $(document).ready(function () {
                 $('#disable').on('click', function () {
                     $('.buttonEmp').disable();
                 });
-                $('#enable').on('click', function () {
-                    $('.buttonex').enable();
-                });
+                
             }
         });
 
