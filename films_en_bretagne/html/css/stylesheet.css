@@ -2,7 +2,7 @@
 	Définition des polices
 */
 
-@font-face { 
+@font-face {
     font-family: 'Lato_Black';
     src:  url('./Lato/Lato-Black.ttf') format('truetype');
 }
@@ -22,11 +22,11 @@
     font-family: 'Lato_Regular';
     src:  url('./Lato/Lato-Regular.ttf') format('truetype');
 }
-@font-face { 
+@font-face {
     font-family: 'Lato_Hairline';
     src:  url('./Lato/Lato-Hairline.ttf') format('truetype');
 }
-@font-face { 
+@font-face {
     font-family: 'Lato_Hairline_Italic';
     src:  url('./Lato/Lato-HairlineItalic.ttf') format('truetype');
 }
@@ -40,7 +40,7 @@
 }
 
 /*
-	Pour l'animation de la flèche en page de garde et d'intro 
+	Pour l'animation de la flèche en page de garde et d'intro
 */
 
 @keyframes bounce {
@@ -70,7 +70,7 @@
   animation: 2s ease 3s normal none infinite running bounce;
 }
 /*
-	Pour l'animation de la flèche droite /gauche 
+	Pour l'animation de la flèche droite /gauche
 */
 
 @keyframes bounce2 {
@@ -259,7 +259,6 @@ body {
 }
 
 .definition: mouseover{
-	
 }
 
 
@@ -333,6 +332,7 @@ body {
 	color: #939393;
 	line-height: 3vh;
 }
+
 /*FOOOTER*/
 #conclu{
 	margin-top: 2vh;
@@ -423,7 +423,7 @@ body {
 
 .estelle-robin{
 	font-family: 'Lato_Thin';
-}	
+}
 
 /*
 	Lien vers le footer
@@ -764,4 +764,3 @@ a{
 	width:100%;
 	height:100%;
 }
-

@@ -1,0 +1,16 @@
+
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1000px" height="800px" viewBox="0 0 1000 800" enable-background="new 0 0 1280 800" xml:space="preserve">
+	 
+	 <g transform="translate(10,10)">
+
+	 <animateMotion path="M0,0 40,-10  0,-20  40,-30 0,-40  40,-30   0,-20 40,-10 0,0" begin="0s" dur="20s" repeatCount="indefinite"/>
+
+	  <animate attributeName="opacity" from="1" to="0"  begin="0s" dur="20s" repeatCount="indefinite" />
+
+<path  opacity="0.1" fill="e2e2e2" d="M647.406,366.911c-1.98,0.626-3.885,1.546-5.672,2.691
+	c-2.547-13.38-14.942-20.231-29.859-15.518c-16.76,5.295-30.347,23.173-30.347,39.934c0,2.101,0.214,4.084,0.62,5.936
+	c-0.983,0.058-2.008-0.104-3.071,0.232c-6.024,1.903-11.028,7.639-12.092,13.529l18.962-5.99l5.222-1.65l38.301-12.099l8.333-2.632
+	l27.539-8.699c0.252-1.468,0.386-2.25,0.386-3.536C665.727,368.989,657.524,363.714,647.406,366.911z"/>
+	</g>
+</svg>

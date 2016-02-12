@@ -3,14 +3,14 @@ extends layout
 include utils/mixins
 
 append stylesheets
-  link(rel='stylesheet', href='/stylesheets/main.css')
+  link(rel='stylesheet', href='stylesheets/main.css')
 
 append js
-  script(src="/js/main.js")
-  script(src="/js/map.js")
-  script(src="/js/MapObject.js")
-  script(src="/js/circle.js")
-  script(src="/js/histogram.js")
+  script(src="js/main.js")
+  script(src="js/map.js")
+  script(src="js/MapObject.js")
+  script(src="js/circle.js")
+  script(src="js/histogram.js")
 
 block content
   ul#menu
@@ -31,4 +31,3 @@ block content
     include pages/secondairesMap
     include pages/interview
     include pages/credit
-

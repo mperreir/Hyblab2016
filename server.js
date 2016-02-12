@@ -7,10 +7,15 @@ var app = express()
 //app.use(basicAuth('ddj2016', 'iloveddj'));
 
 // declare the list of sub apps
-var app_names = ['centre_national_du_cinema', 'films_en_bretagne', 'france_3_bretagne',
+var app_names = [];
+
+var ddj2016_names = ['centre_national_du_cinema', 'films_en_bretagne', 'france_3_bretagne',
  								'la_frap', 'le_journal_des_entreprises', 'le_telegramme', 'loire_atlantique_fr',
 								'map_et_dipp', 'ouest_france', 'pays_de_la_loire_fr', 'presse_ocean',
 								'the_city_talking', 'trinity_mirror'];
+
+app_names.push.apply(app_names, ddj2016_names);
+
 var sub_apps = [];
 
 // create sub apps
