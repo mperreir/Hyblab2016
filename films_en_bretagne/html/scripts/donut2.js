@@ -58,8 +58,13 @@ function init_var(){
         tipOffsetY: -45,
         tipClass: "doughnutTip",
         summaryClass: "doughnutSummary",
+<<<<<<< HEAD
+        /*summaryTitle: "",
+        summaryTitleClass: "doughnutSummaryTitle",*/
+=======
         summaryTitle: "",
         summaryTitleClass: "doughnutSummaryTitle",
+>>>>>>> master
         summaryNumberClass: "doughnutSummaryNumber",
         beforeDraw: function() {  },
         afterDrawed : function() {  },
@@ -124,7 +129,11 @@ function init_var(){
                      "margin-left": -(summarySize / 2) + "px",
                      "margin-top": -(summarySize / 2) + "px"
                    });
+<<<<<<< HEAD
+   /* var $summaryTitle = $('<p class="' + settings.summaryTitleClass + '">' + settings.summaryTitle + '</p>').appendTo($summary);*/
+=======
     var $summaryTitle = $('<p class="' + settings.summaryTitleClass + '">' + settings.summaryTitle + '</p>').appendTo($summary);
+>>>>>>> master
     var $summaryNumber = $('<p class="' + settings.summaryNumberClass + '"></p>').appendTo($summary).css({opacity: 0});
 
     for (var i = 0, len = data.length; i < len; i++) {

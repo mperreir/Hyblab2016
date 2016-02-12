@@ -2,7 +2,11 @@
 	Définition des polices
 */
 
+<<<<<<< HEAD
+@font-face { 
+=======
 @font-face {
+>>>>>>> master
     font-family: 'Lato_Black';
     src:  url('./Lato/Lato-Black.ttf') format('truetype');
 }
@@ -22,11 +26,19 @@
     font-family: 'Lato_Regular';
     src:  url('./Lato/Lato-Regular.ttf') format('truetype');
 }
+<<<<<<< HEAD
+@font-face { 
+    font-family: 'Lato_Hairline';
+    src:  url('./Lato/Lato-Hairline.ttf') format('truetype');
+}
+@font-face { 
+=======
 @font-face {
     font-family: 'Lato_Hairline';
     src:  url('./Lato/Lato-Hairline.ttf') format('truetype');
 }
 @font-face {
+>>>>>>> master
     font-family: 'Lato_Hairline_Italic';
     src:  url('./Lato/Lato-HairlineItalic.ttf') format('truetype');
 }
@@ -40,7 +52,11 @@
 }
 
 /*
+<<<<<<< HEAD
+	Pour l'animation de la flèche en page de garde et d'intro 
+=======
 	Pour l'animation de la flèche en page de garde et d'intro
+>>>>>>> master
 */
 
 @keyframes bounce {
@@ -70,7 +86,11 @@
   animation: 2s ease 3s normal none infinite running bounce;
 }
 /*
+<<<<<<< HEAD
+	Pour l'animation de la flèche droite /gauche 
+=======
 	Pour l'animation de la flèche droite /gauche
+>>>>>>> master
 */
 
 @keyframes bounce2 {
@@ -187,7 +207,11 @@ body {
 	left: 8.5%;
 	width: 10.5vh;
 	height: 10vh;
+<<<<<<< HEAD
+	top: 90%;
+=======
 	top: 86.5vh;
+>>>>>>> master
 	background-image: url(../Logos/fleche-orange.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -258,14 +282,24 @@ body {
 }
 
 .definition: mouseover{
+<<<<<<< HEAD
+	
+=======
 
+>>>>>>> master
 }
 
 
 #arrow2{
+<<<<<<< HEAD
+	width: 10%;
+	height: 10%;
+	margin-top: 0%;
+=======
 	width: 10.5vh;
 	height: 10vh;
 	margin-top: 8.5vh;
+>>>>>>> master
 	background-image: url(../Logos/fleche-beigeclair.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -281,7 +315,11 @@ body {
   	background: -o-linear-gradient(left, #373763,#5D5DA5); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(left, #373763,#5D5DA5);
 	background: linear-gradient(left, #373763,#5D5DA5); /* Standard syntax (must be last) */
+<<<<<<< HEAD
+	width: 100%;
+=======
 	width: 100vw;
+>>>>>>> master
 	height: 1.1vh;
 }
 
@@ -294,6 +332,21 @@ body {
 
 .map{
 	position: relative;
+<<<<<<< HEAD
+	top: 2%;
+	background-color: rgba(255, 0, 0, 0.5);
+	width:0%;
+	max-width:50%;
+}
+
+.texteDataviz{
+	margin-left: 15%;
+	margin-right: 15%;
+	padding-top: 1%;
+	width: 70%;
+	height: 25%;
+	max-height:25%;
+=======
 	top: 2vh;
 	background-color: rgba(255, 0, 0, 0.5);
 	width: 50vw;
@@ -305,10 +358,13 @@ body {
 	padding-top: 7vh;
 	width: 60vw;
 	height: 22vh;
+>>>>>>> master
 	text-align: center;
 	position : relative;
 }
 
+<<<<<<< HEAD
+=======
 #texteDataviz1{
 	padding-top: 4vh;
 	height: 21vh;
@@ -334,6 +390,7 @@ h1{
 	font-weight: lighter;
 }*/
 
+>>>>>>> master
 .titre{
 	font-family: 'Lato_Black';
 	font-size: 3vh;
@@ -354,7 +411,11 @@ h1{
 	color: #939393;
 	line-height: 3vh;
 }
+<<<<<<< HEAD
+/*FOOOTER*/
+=======
 
+>>>>>>> master
 #conclu{
 	margin-top: 2vh;
 	margin-bottom: 0vh;
@@ -394,20 +455,36 @@ h1{
 .nav {
 	position: absolute;
 	font-family: 'Lato_Bold';
+<<<<<<< HEAD
+	width: 10%;
+	margin-left: 5%;
+	max-height:30%;
+}
+
+.logoNav{
+	width: 35%;
+=======
 	width: 16vh;
 	margin-left: 5vw;
 }
 
 .logoNav{
 	width: 7vh;
+>>>>>>> master
 }
 
 .nav-dataviz p{
 	font-size: 2vh;
 	color: #7e7e7e;
+<<<<<<< HEAD
+	margin-top: 0.5%;
+	margin-bottom: 0.7%;
+	margin-left: 13%;
+=======
 	margin-top: 0.5vh;
 	margin-bottom: 0.7vh;
 	margin-left: 1.2vw;
+>>>>>>> master
 }
 
 .nav-dataviz p :hover{
@@ -421,9 +498,15 @@ h1{
 
 .nav-en-cours p{
 	font-size: 2vh;
+<<<<<<< HEAD
+	margin-top: 0.5%;
+	margin-bottom: 0.7%;
+	margin-left: 13%;
+=======
 	margin-top: 0.5vh;
 	margin-bottom: 0.7vh;
 	margin-left: 1.2vw;
+>>>>>>> master
 }
 
 
@@ -443,7 +526,11 @@ h1{
 
 .estelle-robin{
 	font-family: 'Lato_Thin';
+<<<<<<< HEAD
+}	
+=======
 }
+>>>>>>> master
 
 /*
 	Lien vers le footer
@@ -455,7 +542,12 @@ a{
 
 .lienFooter{
 	position: absolute;
+<<<<<<< HEAD
+	right:2%;
+	max-width:15%;
+=======
 	right: 10.5vh;
+>>>>>>> master
 	font-family: 'Lato_Thin';
 	font-size: 1.9vh;
 	color: #5D5DA5;
@@ -490,7 +582,11 @@ a{
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 20vh;
+<<<<<<< HEAD
+	width: 1.5%;
+=======
 	width: 1.5vw;
+>>>>>>> master
 	position: fixed;
 	right: 10.5vh;
 }
@@ -529,6 +625,16 @@ a{
 	Interview
 */
 
+<<<<<<< HEAD
+video{
+	position: relative;
+	right: 5%;
+	left:5%;
+	top: 5%;
+	margin-bottom:10px;
+	width: 90%;
+	max-height: 90%;
+=======
 #video{
 	position: absolute;
 	right: 20vw;
@@ -536,6 +642,7 @@ a{
 	width: 60vw;
 	height: 33.75vw;
 	border: 1px solid black;
+>>>>>>> master
 }
 
 /*
@@ -543,7 +650,11 @@ a{
 */
 
 #navFooter{
+<<<<<<< HEAD
+	max-height: 50%;
+=======
 	height: 32.5vh;
+>>>>>>> master
 }
 
 .reseauxSociaux{
@@ -679,9 +790,15 @@ a{
 	color: #DBA774;
 	font-family: 'Lato_Regular';
 	font-size: 2vh;
+<<<<<<< HEAD
+	position: relative;
+	margin-bottom:-5%;
+	margin-top: 5%;
+=======
 	position: absolute;
 	top: 683.5vh;
 	left: 5vw;
+>>>>>>> master
 }
 
 #ateliersHyblab a{
@@ -690,6 +807,18 @@ a{
 }
 
 #barreFooter{
+<<<<<<< HEAD
+	width: 100%;
+	height: 1%;
+	position:relative;
+	margin-top: 5%;
+}
+
+#autres_logos{
+	margin-top: 0%;
+	width: 100%;
+	height: 10%;
+=======
 	width: 90vw;
 	height: 1vh;
 	display: block;
@@ -702,6 +831,7 @@ a{
 	margin-top: 0.7vh;
 	width: 100%;
 	height: 23%;
+>>>>>>> master
 }
 
 
@@ -765,6 +895,31 @@ a{
 
 .echelle1{
 	position: relative;
+<<<<<<< HEAD
+	top: 2%;
+	left: 2%;
+	width: 50%;
+}
+#im_ech1{
+	width:100%;
+	height:100%;
+}
+#im_ech3{
+	width:100%;
+	height:100%;
+}
+.echelle2{
+	position: relative;
+	top: 0%;
+	left: 15%;
+	width: 70%;
+	height:8%;
+}
+#im_ech2{
+	width:100%;
+	height:100%;
+}
+=======
 	top: 4.2vh;
 	left: 22vw;
 	width: 51vw;
@@ -783,3 +938,4 @@ a{
 	left: 22vw;
 	width: 51vw;
 }
+>>>>>>> master
