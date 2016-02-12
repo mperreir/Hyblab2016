@@ -82,7 +82,7 @@ function mapClickData(idMap,idRegAv,idRegAp,idSvg,classRegAv,classRegAp,idLabel,
             
             // ajout du texte dans le div 
             d3.select(classRegAv).append("p").attr("class",idLabel);
-            $(classLabel).html("Sociétés de production </br> de documentaires en");
+            $(classLabel).html("Nombre de sociétés de production </br> de documentaires en");
             // ajout du nom de la région
             d3.select(classRegAv).append("p").attr("class",classNom);
             var nom = document.getElementsByClassName(classNom)[0]; 
@@ -138,7 +138,7 @@ function mapClickData3(idMap,idRegAv,idRegAp,idSvg,classRegAv,classRegAp,idLabel
             
             // ajout du texte dans le div 
             d3.select(classRegAv).append("p").attr("class",idLabel);
-            $(classLabel).html("Financement pour </br> le documentaires en");
+            $(classLabel).html("Montant attribué par la Région </br> à la production de documentaires");
             // ajout du nom de la région
             d3.select(classRegAv).append("p").attr("class",classNom);
             var nom = document.getElementsByClassName(classNom)[0]; 
@@ -216,13 +216,13 @@ function mapClickData2(id){
 function clickFleche(sens,i){
     if(i == 1){ // Dans le cas de la dataviz1
         // Chaines de caractères pour les labels
-        var dat1 = "Sociétés de production  de documentaires en";
-        var dat2 = "Sociétés de production  tous genres confondus en";
-        var dat3 = "Production documentaire sur  la production régionale en";
+        var dat1 = "Nombre de sociétés de production  de documentaires en";
+        var dat2 = "Nombre de sociétés de production audiovisuelle  et cinématographique tous genres confondus en";
+        var dat3 = "Part de la production documentaire par rapport  à la production tous genres confondus";
         
-        var dat1br = "Sociétés de production </br> de documentaires en";
-        var dat2br = "Sociétés de production </br> tous genres confondus en";
-        var dat3br = "Production documentaire sur </br> la production régionale en";
+        var dat1br = "Nombre de sociétés de production </br> de documentaires en";
+        var dat2br = "Nombre de sociétés de production audiovisuelle </br> et cinématographique tous genres confondus en";
+        var dat3br = "Part de la production documentaire par rapport </br> à la production tous genres confondus";
         
         // Récupération des différentes balises
         var nombre = document.getElementsByClassName("nombre")[0];
@@ -322,13 +322,13 @@ function clickFleche(sens,i){
         });
     }
     else if(i == 3){ // Dans le cas de la dataviz 3
-        var dat1 = "Financement pour  le documentaires en";
-        var dat2 = "Financement de la  production global en";
-        var dat3 = "Financement du documentaire sur  la production global en";
+        var dat1 = "Montant attribué par la Région  à la production de documentaires";
+        var dat2 = "Montant attribué par la Région à la production audiovisuelle  et cinématographique (tous genres confondus)";
+        var dat3 = "Part des financements attribués à la production documentaire  par rapport à la production tous genres confondus";
         
-        var dat1br = "Financement pour </br> le documentaires en";
-        var dat2br = "Financement de la </br> production global en";
-        var dat3br = "Financement du documentaire sur </br> la production global en";
+        var dat1br = "Montant attribué par la Région </br> à la production de documentaires";
+        var dat2br = "Montant attribué par la Région à la production audiovisuelle </br> et cinématographique (tous genres confondus)";
+        var dat3br = "Part des financements attribués à la production documentaire </br> par rapport à la production tous genres confondu";
         
         var nombre = document.getElementsByClassName("nombre3")[0];
         var label = document.getElementsByClassName("label3")[0];

@@ -229,27 +229,28 @@ body {
 	height: 0.8vh;
 	background-color: #EBD5B8;
 }
+.pageIntro{
+	height:80%;
+}
 
 .texteIntro{
+	position:relative;
 	color: white;
 	font-family: 'Lato_Regular';
 	text-align: center;
-	margin-top: 6vh;
-	font-size: 2.5vh;
-	margin-left: 27vw;
-	margin-right: 27vw;
-	line-height: 3.5vh;
+	font-size: 1.4vw;
+	width:60%;
+	left:20%;
 }
 
 .texteIntroSuite{
+	position:relative;
 	color: white;
 	font-family: 'Lato_Regular';
 	text-align: center;
-	margin-top: 1vh;
-	font-size: 2.5vh;
-	margin-left: 27vw;
-	margin-right: 27vw;
-	line-height: 3.5vh;
+	width:60%;
+	left:20%;
+	font-size: 1.4vw;
 }
 
 .definition{
@@ -263,6 +264,7 @@ body {
 
 
 #arrow2{
+	position:relative;
 	width: 10%;
 	height: 10%;
 	margin-top: 0%;
@@ -508,14 +510,10 @@ a{
 	Interview
 */
 
-video{
+.video{
 	position: relative;
-	right: 5%;
-	left:5%;
-	top: 5%;
-	margin-bottom:10px;
-	width: 90%;
-	max-height: 90%;
+	left: 2.5%;
+	top: 2%;
 }
 
 /*
@@ -766,3 +764,4 @@ video{
 	width:100%;
 	height:100%;
 }
+
