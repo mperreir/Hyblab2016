@@ -1,10 +1,18 @@
 .chart {
   position: relative;
+<<<<<<< HEAD
   width: 50%;
   height: 50%;
   top: -35%;
  display:inline-block;
  left:0%;
+=======
+  width: 250px;
+  height: 250px;
+  left: 30vw;
+  top: -4.5vh;
+ margin: -225px 0 0 -225px;
+>>>>>>> master
   /*border: 1px solid black;*/
 }
 
@@ -40,6 +48,7 @@
 
 .doughnutSummary {
   position: absolute;
+<<<<<<< HEAD
   top: 50%;
   left: 45%;
   color: #d5d5d5;
@@ -60,6 +69,33 @@
   font-size: 40px;
   font-family: 'Lato_Regular',sans-serif;
   color:#373763
+=======
+  top: 250px;
+  left: 50%;
+  color: #d5d5d5;
+  text-align: center;
+  text-shadow: 0 -1px 0 #111;
+  cursor: default;
+}
+
+.doughnutSummaryTitle {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  margin-top: -27%;
+  font-size: 15px;
+  letter-spacing: .06em;
+}
+
+.doughnutSummaryNumber {
+  position: relative;
+  top:-18vh;
+  left:-2vw;
+  margin-top: 0%;
+  font-size: 55px;
+  font-family: 'Lato_Regular',sans-serif;
+  color:#373763;
+>>>>>>> master
 }
 
 .chart path:hover {

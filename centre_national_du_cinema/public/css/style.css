@@ -1,0 +1,626 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'brannboll_fetregular';
+    src: url('brannbollfet-webfont.eot');
+    src: url('brannbollfet-webfont.eot?#iefix') format('embedded-opentype'),
+         url('brannbollfet-webfont.woff2') format('woff2'),
+         url('brannbollfet-webfont.woff') format('woff'),
+         url('brannbollfet-webfont.ttf') format('truetype'),
+         url('brannbollfet-webfont.svg#brannboll_fetregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'brush';
+    src: url('Brush.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'geosanslightregular';
+    src: url('geosanslight-webfont.eot');
+    src: url('geosanslight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('geosanslight-webfont.woff2') format('woff2'),
+         url('geosanslight-webfont.woff') format('woff'),
+         url('geosanslight-webfont.ttf') format('truetype'),
+         url('geosanslight-webfont.svg#geosanslightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: disc;
+    list-style-position: inside;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+body{
+	font-family: arial,helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+.chiffre{
+  font-family: 'brush';
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+h1{
+	font-size: 6em;
+}
+.intro p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+.section{
+	text-align:center;
+}
+
+/* SLIDE 1 */
+
+#fond_slide1 {
+    width:100%;
+    height:100%;
+}
+
+.cloud {
+   position: absolute;
+   /* Firefox */
+   -moz-animation: cloudDrift linear infinite;
+   /* WebKit - Chrome and Safari */
+   -webkit-animation: cloudDrift linear infinite;
+   /* Opera */
+   -o-animation: cloudDrift linear infinite;
+   /* general syntax */
+   animation: cloudDrift linear infinite;
+}
+
+.lrg {
+   /*width 130px*/
+   top: 35%;
+   left: -140px;
+   /* Firefox */
+   -moz-animation-duration: 40s;
+   /* WebKit - Chrome and Safari */
+   -webkit-animation-duration: 40s;
+   /* Opera */
+   -o-animation-duration: 40s;
+   /* general syntax */
+   animation-duration: 40s;
+}
+.sml {
+   /*width 70px*/
+   top: 24%;
+   left: -80px;
+   /* Firefox */
+   -moz-animation-duration: 27s;
+   /* WebKit - Chrome and Safari */
+   -webkit-animation-duration: 27s;
+   /* Opera */
+   -o-animation-duration: 27s;
+   /* general syntax */
+   animation-duration: 27s;
+}
+.med {
+   /*width 100px*/
+   top: 45%;
+   left: -110px;
+   /* Firefox */
+   -moz-animation-duration: 30s;
+   /* WebKit - Chrome and Safari */
+   -webkit-animation-duration: 30s;
+   /* Opera */
+   -o-animation-duration: 30s;
+   /* general syntax */
+   animation-duration: 30s;
+}
+
+.med2 {
+   /*width 110px*/
+   top: 31%;
+   left: -150px;
+   /* Firefox */
+   -moz-animation-duration: 35s;
+   /* WebKit - Chrome and Safari */
+   -webkit-animation-duration: 35s;
+   /* Opera */
+   -o-animation-duration: 35s;
+   /* general syntax */
+   animation-duration: 35s;
+}
+
+@-moz-keyframes cloudDrift {
+    0% {
+        margin-left: -20px;
+    }
+    100% {
+        margin-left: 110%;
+    }    
+}
+
+@-webkit-keyframes cloudDrift {
+    0% {
+        margin-left: -20px;
+    }
+    100% {
+        margin-left: 110%;
+    }    
+}    
+
+@-o-keyframes cloudDrift {
+    0% {
+        margin-left: -20px;
+    }
+    100% {
+        margin-left: 110%;
+    }    
+}    
+
+@keyframes cloudDrift {
+    0% {
+        margin-left: -20px;
+    }
+    100% {
+        margin-left: 110%;
+    }    
+}
+
+/* SLIDE 2 */
+
+.textPresentation {
+    width:50%;
+    margin:auto;
+    position: absolute;
+    z-index:8;
+    top:10%;
+    left:25%;
+    color:#fffcdc;
+}
+
+.textPresentation p, .textPresentation li {
+    font-size:1.5em;
+    font-family:geosanslightregular;
+}
+
+#section2 .textPresentation p {
+    font-size:2.2em;
+}
+
+#section2 .textPresentation #entrez {
+    font-size:4em;   
+}
+
+#section2 .textPresentation {
+    margin-top:10%;   
+}
+
+.section3_title{
+  font-family:geosanslightregular;
+  color:#3D4452;
+}
+
+
+/* DATAVIZ SECTION3 */
+
+#section3_select{
+  width: 170%;
+}
+
+.btns_section3{
+  position: absolute;
+  bottom: 15px;
+}
+
+.section3_dataviz{
+  height: 215px;
+  margin-top: 15px;
+}
+
+.title_dataviz1, .title_dataviz1_graph3 {
+    font-size:27px;   
+    font-family:geosanslightregular;
+    color:#3D4452;
+}
+
+div.round{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+div.round input{
+  position: absolute;
+  top: 75px;
+  left: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  width: 112px;
+  border: none; background:none;
+  outline: none;
+}
+div.round canvas{
+  position: absolute;
+  right: 0;
+    left: 0;
+  top:0;
+  bottom: 0;
+}
+
+.circle-prix, .circle-prix-moyen, .circle-indice, .circle-indice-moyen {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+.leg_red{
+  color :#F2705B;
+  font-weight: bold;
+}
+.leg_blanc{
+  color : #FFF;
+  font-weight: bold;
+
+}
+.circle-prix:after, .circle-indice:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    background: #F2705B; 
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px #aaa;
+}
+.circle-prix-moyen:after, .circle-indice-moyen:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    background: #FFF; 
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px #aaa;
+}
+.circle-prix div, .circle-indice div{
+    float: left;
+    width: 100%;
+    padding-top: 25%;
+    line-height: 1em;
+    margin-top: -0.5em;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size:1.1em;
+}
+.circle-prix-moyen div, .circle-indice-moyen div  {
+    float: left;
+    width: 100%;
+    padding-top: 55%;
+    line-height: 1em;
+    margin-top: -0.5em;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size:1.1em;
+}
+
+.name_of_region {
+    font-size:19px;
+    font-family: geosanslightregular;
+    line-height: 30px;
+}
+
+/*  dataviz2 */
+
+.text_video{
+  display: none;
+}
+
+#ecran_section4{
+  background-color: #000;
+}
+
+#videoPlayer{
+    width: 100%;
+    height: 100%;
+}
+
+#ecran_section5_2_back{
+  position:absolute;
+  left: 0;
+  width:100%;
+  height:100%;
+
+  display: none;
+  opacity : 0.6;
+}
+
+/* MAP */
+
+
+/* FOOTER */
+@font-face {
+  font-family: 'Aldrich';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Aldrich'), url(http://fonts.gstatic.com/s/aldrich/v6/Y0zWA9-hxl3_xvcxN-VXfA.woff) format('woff');
+}
+
+#team {
+    height:70%;  
+    margin:auto;
+    padding-top:50px;
+}
+
+#team h1 {
+    font-family: brannboll_fetregular;
+    color:#F2705B;
+}
+
+#team ul{
+    width: 100%;
+	display: block;
+	margin: 30px auto;
+	padding: 0;
+	color: #fff;
+}
+
+#team li{
+    list-style-type: none;
+	width: 220px;
+	display: inline-block;
+	vertical-align:top;
+}
+
+#team li p{
+    list-style-type: none;
+	width: 180px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+#team li img{
+    width: 70px;
+	display: block;
+	margin: 0 auto;
+}
+
+#team li img:hover {
+    -webkit-animation: pulse 1s;
+    animation: pulse 1s;   
+}
+
+#team h5{
+    text-align: center;
+	width: 110px;
+	display: block;
+	margin: 20px auto;
+    font-weight: bold;
+}
+
+#team a{
+    font-weight: 500;
+	font-size: 12px;
+	text-decoration: none;
+    color:#fff;
+}
+
+#team a:hover{
+    color: #F2705B;
+}
+
+#bottompage2 {
+    height:30%;
+    padding:0 15%;
+}
+
+#partenaires, #partenaires2 {
+    height:50%;
+}
+
+#partenaires2 p {
+    font-family: 'Aldrich';
+    font-size:1.8em;
+}
+#cliquezTitre {
+    margin-top:14%;
+    line-height:1.6em;
+}
+#titreDataviz2 {
+    margin-top:14%;
+    font-family:geosanslightregular;
+    line-height:1.6em;
+}
+
+.section3_col_select {
+    margin-top:20%;
+}
+
+#section3_select2 {
+    width:30%;
+    margin:auto;
+}
+
+.popcorn_row {
+    height:84px;
+    margin-top:5px;
+}
+
+.popcorn_img {
+    height:80px;
+    width:auto;
+    margin-top:8px;
+}
+
+.donneesPopcorn {
+    margin-top:20%;
+    font-family:geosanslightregular;
+    font-size:1.3em;
+    font-weight:bold;
+}
+
+#ecran_section6, #ecran_section5 {
+    -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari */
+    transform: rotate(-3.5deg); /* Standard syntax */   
+}
+
+.map_viz {
+    margin-top:50%;   
+}
+
+#containerStars1{
+    height:50%;
+    width:100%;
+    overflow:hidden;
+    position:relative;
+}
+#containerStars2{
+    height:50%;
+    width:100%;
+    overflow:hidden;
+    position:relative;
+}
+
+
+/*simple reset*/
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	       -box-sizing: border-box;
+}
+
+.star {
+	display: block;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 24px;
+	height: 24px;
+	background: #F6F6F6;
+	overflow: hidden;
+	z-index: 2;
+	animation: glitter 4.5s linear 0s infinite normal;
+	-webkit-animation: glitter 4.5s linear 0s infinite normal;
+	-moz-animation: glitter 4.5s linear 0s infinite normal;
+	-ms-animation: glitter 4.5s linear 0s infinite normal;
+	-o-animation: glitter 4.5s linear 0s infinite normal;
+}
+.star-top,.star-bottom{
+	position: relative;
+	display: block;
+}
+.star-top:before , 
+.star-top:after ,
+.star-bottom:before ,
+.star-bottom:after{
+	content: "";
+	width: 24px;
+	height: 24px;
+	background: #223550;
+	border-radius: 25%;
+	position: absolute;
+}
+/*CSS3 pseudo class for positioning curves*/
+.star-top:before {
+	top: -12px;
+	left: -12px;
+}
+.star-top:after {
+	bottom: -12px;
+	left: 12px;
+}
+.star-bottom:before {
+	top: 12px;
+	left: -12px;
+}
+.star-bottom:after {
+	top: 12px;
+	left: 12px;
+}
+/*css3 keyframes for glittering effect*/
+@-webkit-keyframes glitter {
+	0%   { -webkit-transform: scale(1.0); opacity: 1; }
+	25%  { -webkit-transform: scale(0.5); opacity: 0; }
+	50%  { -webkit-transform: scale(1.0); opacity: 1; }
+	75%  { -webkit-transform: scale(0.5); opacity: 0; }
+	100% { -webkit-transform: scale(1.0); opacity: 1; }
+}
+@-moz-keyframes glitter {
+	0%   { -moz-transform: scale(1.0); opacity: 1; }
+	25%  { -moz-transform: scale(0.5); opacity: 0; }
+	50%  { -moz-transform: scale(1.0); opacity: 1; }
+	75%  { -moz-transform: scale(0.5); opacity: 0; }
+	100% { -moz-transform: scale(1.0); opacity: 1; }
+}
+
+.moon {
+    width:10%;
+    position: absolute;
+    z-index:8;
+    top:10%;
+    left:10%;
+}

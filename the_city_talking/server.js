@@ -1,20 +1,20 @@
 'use strict';
 
-const fs = require('fs');
-const moment = require('moment');
-const webpack = require('webpack');
-const npm = require('npm');
+var fs = require('fs');
+var moment = require('moment');
+var webpack = require('webpack');
+var npm = require('npm');
 
 // BUILDING CLIENT SIDE JAVASCRIPT
-npm.load({loglevel:"silent",progress:false},() => {
+npm.load({loglevel:"silent",progress:false}, function() {
 	console.info("the_city_talking : Building client .js");
 	console.info("the_city_talking : Installing npm dependencies");
-	npm.commands.install([],(err,data) => {
+	npm.commands.install([],function(err,data) {
 		if (err) {
 			console.error(err);
 		}
 		console.info("the_city_talking : Done installing npm dependencies, running webpack");
-		webpack(require(path.resolve(__dirname,"webpack.config.js")),(err,stats) => {
+		webpack(require(path.resolve(__dirname,"webpack.config.js")),function(err,stats) {
 			if (err){
 				console.error(err);
 			}
@@ -36,8 +36,8 @@ function truncate(value){
 function averageADay(oneDay){
 	var averageOneDay = {"NO":0,"NO2":0,"PM25":0} ;
 	var countParticles = {"NO":0,"NO2":0,"PM25":0} ;
-	oneDay.forEach((v,hour) => {
-		for ( let particle in v){
+	oneDay.forEach(function(v,hour) {
+		for ( var particle in v){
 			if (!isNaN(v[particle])){
 				countParticles[particle] += 1 ;
 				averageOneDay[particle] += v[particle] ;
@@ -58,9 +58,9 @@ function makeAnAverageDay(multipleDays){
 		array_data_oneDay.push({"NO":0,"NO2":0,"PM25":0});
 		countParticles.push({"NO":0,"NO2":0,"PM25":0});
 	}
-	multipleDays.forEach( (dataOneHour) => {
-		dataOneHour.hours.forEach((particlesOneHour,hour) => {
-			for ( let particle in particlesOneHour){
+	multipleDays.forEach( function(dataOneHour) {
+		dataOneHour.hours.forEach(function(particlesOneHour,hour) {
+			for ( var particle in particlesOneHour){
 				if (!isNaN(particlesOneHour[particle])){
 					array_data_oneDay[hour][particle] += particlesOneHour[particle];
 					countParticles[hour][particle] += 1 ;
@@ -68,7 +68,7 @@ function makeAnAverageDay(multipleDays){
 			}
 		});
 	});
-	array_data_oneDay.map((hourData,hour) => {
+	array_data_oneDay.map( function(hourData,hour) {
 		hourData["NO2"] = truncate( hourData["NO2"] / countParticles[hour]["NO2"] ) ;
 		hourData["NO"] = truncate( hourData["NO"] / countParticles[hour]["NO"] ) ;
 		hourData["PM25"] = truncate( hourData["PM25"] / countParticles[hour]["PM25"] ) ;
@@ -77,12 +77,12 @@ function makeAnAverageDay(multipleDays){
 }
 
 function processData(err,data,f,b,filterDay){
-	data = data.split('\n').map((line) => {
+	data = data.split('\n').map(function(line) {
 		line = line.split(',');
 		return line ;
 	});
 	var data_filtered = {};
-	data.forEach((line) => {
+	data.forEach(function(line) {
 		var date = line[0];
 		data_filtered[date] = data_filtered[date] || {hours:[]};
 		data_filtered[date].hours.push({"NO":parseInt(line[8]),"NO2":parseInt(line[11]),"PM25":parseInt(line[20])});
@@ -100,12 +100,12 @@ function processData(err,data,f,b,filterDay){
 	// b = TRUE if you want an average day (1 pt = 1 hour)
 	// b = FALSE if you want every day on a span (1pt = 1 day)
 	if (b){
-		f(makeAnAverageDay(array_data_filtered).map((value,index) => {
+		f(makeAnAverageDay(array_data_filtered).map(function(value,index) {
 				value["Hour"] = (index+1)+":00" ;
 				return value ;
 		}))
 	}else{
-		f(array_data_filtered.map((value) => {
+		f(array_data_filtered.map(function(value) {
 			var tmp = averageADay(value.hours) ;
 			tmp['Date'] = value.date.format("DD-MM-YYYY") ;
 			return tmp ;
@@ -120,41 +120,41 @@ var path = require('path');
 var app = express();
 
 // Minimum routing: serve static content from the html directory
-app.get('/json_centre/:json',(req,res) => {
+app.get('/json_centre/:json',function(req,res) {
 	var result = /^(\d{2}\-\d{4})\.json$/.exec(req.params.json);
 	if (result == null){
 		res.status(404);
 		res.send("requete invalide");
 	}else{
-		let month = result[1] ;
-		fs.readFile(path.join(__dirname,'data/Centre_all_years.csv'),'utf8',(err,data) => {
-			processData(err,data,(e) => res.json(e),true,(obj) => obj.date.format("MM-YYYY") == result[1]);
+		var month = result[1] ;
+		fs.readFile(path.join(__dirname,'data/Centre_all_years.csv'),'utf8',function(err,data) {
+			processData(err,data,function(e) {return res.json(e)},true,function(obj) {return obj.date.format("MM-YYYY") == result[1]});
 		});
 	}
 })
 
-app.get('/json_kerbside/:json',(req,res) => {
+app.get('/json_kerbside/:json',function(req,res) {
 	var result = /^(\d{2}\-\d{4})\.json$/.exec(req.params.json);
 	if (result == null){
 		res.status(404);
 		res.send("requete invalide");
 	}else{
-		let month = result[1] ;
-		fs.readFile(path.join(__dirname,'data/HeadingleyKerbside_all_years.csv'),'utf8',(err,data) => {
-			processData(err,data,(e) => res.json(e),true,(obj) => obj.date.format("MM-YYYY") == result[1]);
+		var month = result[1] ;
+		fs.readFile(path.join(__dirname,'data/HeadingleyKerbside_all_years.csv'),'utf8',function(err,data) {
+			processData(err,data,function(e) {return res.json(e)},true,function(obj) { return obj.date.format("MM-YYYY") == result[1]});
 		});
 	}
 })
 
-app.get('/per_month_centre.csv',(req,res) => {
+app.get('/per_month_centre.csv',function(req,res) {
 	res.sendFile(path.join(__dirname,'data/per_month_centre.csv'));
 })
 
-app.get('/per_month_kerbside.csv',(req,res) => {
+app.get('/per_month_kerbside.csv',function(req,res) {
 	res.sendFile(path.join(__dirname,'data/per_month_kerbside.csv'));
 })
 
-app.get('/prescriptions.csv',(req,res) => {
+app.get('/prescriptions.csv',function(req,res) {
 	res.sendFile(path.join(__dirname,'data/prescriptions.csv'));
 })
 

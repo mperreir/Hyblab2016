@@ -87,14 +87,14 @@ $(document).ready(function () {
                              .attr("class","menuTrigger")
                              .attr("id","hamburger-one")
                              .on("click",hide);
-                             
+
 
     var menu_button_span2 = menu_button_span1.append("span")
                                              .attr("class","mainLine")
 
 
-    	
-    	d3.selectAll('.menuTrigger').on("click",function(){	
+
+    	d3.selectAll('.menuTrigger').on("click",function(){
     		this.toggleClass('menuToggle');});
 
     */
@@ -108,7 +108,7 @@ $(document).ready(function () {
 
         var menu_button = button.append("image")
             .attr("class", "menu")
-            .attr("xlink:href", "/profilDatas/icone/menu.gif")
+            .attr("xlink:href", "profilDatas/icone/menu.gif")
             .attr("x", -15)
             .attr("y", 180)
             .attr("height", 30)
@@ -405,9 +405,9 @@ $(document).ready(function () {
             var pathToDelete = pathData.exit();
 
 
-            pathToDelete.transition().duration(750).attr("d", arcTween).remove(); //slowly delete arcs 
+            pathToDelete.transition().duration(750).attr("d", arcTween).remove(); //slowly delete arcs
 
-            pathData.transition().duration(1000).attrTween("d", arcTween); // redraw the arcs   
+            pathData.transition().duration(1000).attrTween("d", arcTween); // redraw the arcs
 
             pathData.on("mouseenter", function (d) {
                     d3.select(this)
