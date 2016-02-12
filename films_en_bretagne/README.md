@@ -1,16 +1,18 @@
 # Descriptif du projet
 
-Média :
+Média : Films en bretagne
 
-Sujet :
+Sujet : La production documentaire d'une région à l'autre
 
-Equipe :
+Equipe : 
 
 Patricipants :
-- AGR :
-- Polytech :  
-- SciencesCom :
+- AGR : Manon Moreau et Vincent Moulinec
+- Polytech :  Pierre Michel, Laura Jacquel et Valentin Prezelin
+- SciencesCom : Sixtine Coudert et Marine Guillemot
 
 # Installation
+
+npm install d3
 
 # Informations complémentaires
