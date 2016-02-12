@@ -1,0 +1,643 @@
+#menu {
+  list-style: none;
+  position: fixed;
+  left: 10px;
+  top: 50%;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  transform: translate(10px, -50%);
+}
+#menu li {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  opacity: 0.7;
+}
+#menu li a {
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #006079;
+}
+#menu li a:hover {
+  text-decoration: none;
+}
+#menu li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 16px;
+  height: 1px;
+  background: #006079;
+}
+#menu li.active {
+  opacity: 1;
+}
+#menu li.active a {
+  font-size: 24px;
+}
+#menu li.active a::after {
+  width: 28px;
+}
+.header {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  padding-left: 75px;
+  text-transform: uppercase;
+  z-index: 10;
+}
+.header .title,
+.header .subtitle {
+  position: relative;
+  margin: 0 0 5px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+.header .description {
+  position: relative;
+  margin: 0;
+  font-weight: lighter;
+  font-size: 12px;
+}
+.header .description::after {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 85px;
+  height: 2px;
+  content: '';
+  background: #006079;
+}
+.header::after {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 65px;
+  height: 65px;
+  content: '';
+}
+.header.logements::after {
+  background: url('../media/pic/picto-logements.svg');
+  background-size: contain;
+}
+.header.locataires::after {
+  background: url('../media/pic/picto-locataires.svg');
+  background-size: contain;
+}
+.header.secondaires::after {
+  background: url('../media/pic/picto-residencesecondaire.svg');
+  background-size: contain;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  background: #f1f1f1;
+  color: #006079;
+  font-family: 'Montserrat', sans-serif;
+}
+body .sidebar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 25%;
+  background: #dfdfdf;
+  overflow: hidden;
+  padding: 3%;
+  z-index: 100;
+}
+body .sidebar .placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #dfdfdf;
+  z-index: 10;
+}
+body .sidebar .placeholder .icon {
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  margin-top: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+body .sidebar .placeholder .icon::after {
+  content: '';
+  background: url('../media/pic/clic.svg') no-repeat top;
+  background-size: contain;
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  width: 75px;
+  height: 75px;
+}
+body .sidebar fieldset {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-bottom: 25%;
+}
+body .sidebar fieldset label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: normal;
+}
+body .sidebar fieldset label input[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+body .sidebar fieldset label [type="radio"] + span {
+  display: block;
+}
+body .sidebar fieldset label span {
+  line-height: 10px;
+  padding: 10px 20px;
+  border: 2px solid #006079;
+  transition: 0.5s ease all;
+}
+body .sidebar fieldset label [type="radio"]:checked + span {
+  background: #006079;
+  color: white;
+}
+body .sidebar .graph {
+  position: relative;
+  height: 20%;
+  width: 100%;
+  text-align: center;
+  padding-left: 20%;
+  padding-top: 20%;
+}
+body .sidebar p {
+  font-size: 10px;
+  text-align: justify;
+  text-wrap: normal;
+}
+body .sidebar h1,
+body .sidebar h2 {
+  text-transform: uppercase;
+}
+body .sidebar h1 {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 0 auto 25px;
+  width: 100%;
+  height: 60px;
+}
+body .sidebar h2 {
+  position: relative;
+  font-size: 10px;
+  margin-bottom: 15px;
+}
+body .sidebar h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 1px;
+  width: 50px;
+  background: #006079;
+}
+body .legend {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  right: 28%;
+  bottom: 0px;
+}
+body .legend ul {
+  position: relative;
+  list-style: none;
+  text-align: right;
+}
+body .legend li {
+  position: relative;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+body .legend li::before {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 3px;
+  width: 10px;
+  height: 10px;
+}
+body .legend.logements li:nth-child(1)::before {
+  background: #FAC8CE;
+}
+body .legend.logements li:nth-child(2)::before {
+  background: #F8ABB3;
+}
+body .legend.logements li:nth-child(3)::before {
+  background: #F47B8A;
+}
+body .legend.logements li:nth-child(4)::before {
+  background: #EB324C;
+}
+body .legend.locataires li:nth-child(1)::before {
+  background: #FEE1C4;
+}
+body .legend.locataires li:nth-child(2)::before {
+  background: #FDD0A6;
+}
+body .legend.locataires li:nth-child(3)::before {
+  background: #FCB878;
+}
+body .legend.locataires li:nth-child(4)::before {
+  background: #FB923B;
+}
+body .legend.secondaires li:nth-child(1)::before {
+  background: #C3BEF8;
+}
+body .legend.secondaires li:nth-child(2)::before {
+  background: #A8A2F5;
+}
+body .legend.secondaires li:nth-child(3)::before {
+  background: #837AF3;
+}
+body .legend.secondaires li:nth-child(4)::before {
+  background: #4E41EF;
+}
+body .section {
+  overflow: hidden;
+}
+body .section.restrained {
+  padding: 150px;
+}
+body .svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-right: 100%;
+  /* aspect ratio */
+  vertical-align: top;
+  overflow: hidden;
+}
+body .svg-content-responsive {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  max-width: 90%;
+  height: 100%;
+}
+body #intro {
+  z-index: 1;
+  background: url('../media/pic/Fond1.svg') no-repeat bottom;
+  background-size: cover;
+  padding-top: 20vh;
+  overflow: hidden;
+  /*
+  h1::after, h2::after {
+    content: '';
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  h2::after {
+    width: 200px;
+    max-width: 100%;
+  }
+  */
+}
+body #intro .title-area {
+  position: relative;
+  margin-bottom: 22px;
+}
+body #intro .text-area {
+  text-align: justify;
+  position: relative;
+  padding: 10px;
+  font-size: 13px;
+  background: rgba(241, 241, 241, 0.6);
+  display: inline-block;
+}
+body #intro .text-area:nth-child(1)::before {
+  content: '';
+  background: #23d1f9;
+  position: absolute;
+  top: -5px;
+  height: 2px;
+  width: 41px;
+}
+body #intro h1,
+body #intro h2 {
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  padding: 10px;
+  color: white;
+  margin: 0;
+  background: #23d1f9;
+}
+body #intro h1 {
+  font-size: 22px;
+}
+body #intro h2 {
+  padding-top: 0;
+  font-size: 15px;
+  border: 1px solid #23d1f9;
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body #intro #page1 {
+    background-position: 33% bottom;
+  }
+}
+@media screen and (max-width: 768px) {
+  body #intro #page1 {
+    background-position: bottom;
+  }
+}
+body #intro .next-page {
+  position: absolute;
+  bottom: 50px;
+  background: url('../media/pic/fleche.svg') no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  width: 50px;
+  height: 50px;
+  right: 50%;
+}
+body #map1-intro,
+body #map2-intro {
+  z-index: 1;
+  background: url('../media/pic/fondintercalaire.svg') no-repeat bottom;
+  background-size: cover;
+  padding-top: 20vh;
+  overflow: hidden;
+  padding-right: 40%;
+}
+body #map1-intro h1,
+body #map2-intro h1 {
+  display: inline-block;
+  font-size: 22px;
+  padding: 2px 7px;
+  color: white;
+  background: #80cdeb;
+  margin: 0;
+  text-transform: uppercase;
+}
+body #map1-intro h2,
+body #map2-intro h2 {
+  position: relative;
+  font-size: 15.399999999999999px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+body #map1-intro h2::after,
+body #map2-intro h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  height: 2px;
+  width: 100px;
+  background: #006079;
+}
+body #map1-intro p,
+body #map2-intro p {
+  text-align: justify;
+  font-size: 12px;
+  margin: 0 0 1px;
+}
+body #map1-intro .next-page,
+body #map2-intro .next-page {
+  position: absolute;
+  bottom: 50px;
+  background: url('../media/pic/fleche.svg') no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  width: 50px;
+  height: 50px;
+  right: 50%;
+}
+body #map1-intro .next-page::after,
+body #map2-intro .next-page::after {
+  content: 'Voir la carte';
+  position: absolute;
+  left: -30%;
+  top: -50%;
+  width: 200%;
+  font-weight: bold;
+}
+body .map {
+  position: absolute;
+  top: -5px;
+  overflow: hidden;
+  text-align: center;
+  /*
+  &.svg-container {
+    padding-right: auto;
+    padding-bottom: 100%;
+  }
+
+  .svg-content-responsive {
+    width: 100%;
+  }
+  */
+}
+body .map svg {
+  fill: transparent;
+}
+body .map path {
+  fill: lightgrey;
+}
+body .map path.active {
+  stroke: #7fccea;
+  stroke-width: 5px;
+}
+body .map path.hover {
+  stroke: #7fccea;
+  stroke-width: 2px;
+}
+body #interview-page {
+  position: relative;
+  width: 100%;
+}
+body #interview-page #interview {
+  /*
+        position: absolute;
+        top: 0;
+        left: 0;
+        */
+  width: 80%;
+  height: 100%;
+}
+body #interview-page #interview .text-area {
+  position: relative;
+  font-weight: normal;
+  font-size: 11px;
+}
+@media all and (min-height: 769px) {
+  body #interview-page #interview .text-area {
+    font-size: 12px;
+  }
+}
+body #interview-page #interview .right-area {
+  display: inline-block;
+  padding: 10px;
+  float: right;
+  width: 30%;
+}
+body #interview-page #interview .content-area {
+  display: inline-block;
+  float: left;
+  padding: 1%;
+  width: 48%;
+  text-align: justify;
+}
+body #interview-page #interview .left-area {
+  padding: 10px;
+  float: left;
+  width: 30%;
+}
+body #interview-page #interview .left-area h5 {
+  font-weight: 900;
+}
+body #interview-page #interview .left-area ul {
+  list-style-type: none;
+}
+body #interview-page #interview .left-area ul li {
+  margin: 20px 0;
+}
+body #interview-page #interview .sidebar h1 {
+  font-size: 14px;
+}
+body #interview-page #interview .sidebar .content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-weight: normal;
+}
+body #interview-page #interview .sidebar .content .item {
+  text-align: justify;
+  position: relative;
+  padding-left: 50%;
+  padding-bottom: 10%;
+  padding-top: 10%;
+  font-size: 10px;
+}
+body #interview-page #interview .sidebar .content .item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+body #interview-page #interview .sidebar .content .item:nth-child(1)::before {
+  background: url('../media/pic/infographie1.svg') no-repeat top;
+}
+body #interview-page #interview .sidebar .content .item:nth-child(2)::before {
+  background: url('../media/pic/infographie2.svg') no-repeat top;
+}
+body #interview-page #interview .sidebar .content .item:nth-child(3)::before {
+  background: url('../media/pic/infographie3.svg') no-repeat top;
+  top: 10%;
+}
+body #interview-page #interview .sidebar .content .item:nth-child(4)::before {
+  background: url('../media/pic/infographie4.svg') no-repeat top;
+}
+body #interview-page #interview .sidebar .content .item:nth-child(5)::before {
+  background: url('../media/pic/infographie5.svg') no-repeat top;
+}
+body #credit {
+  background: url('../media/pic/Fond2.svg') no-repeat bottom right;
+  background-size: 100%;
+  overflow: hidden;
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  height: 100%;
+}
+body #credit #top {
+  position: relative;
+  margin-bottom: 8%;
+}
+body #credit #top span {
+  font-weight: 600;
+}
+body #credit #top #big {
+  font-weight: 900;
+}
+body #credit #top::after {
+  position: absolute;
+  bottom: -100%;
+  left: 42%;
+  width: 10%;
+  height: 2px;
+  content: '';
+  background: #006079;
+}
+body #credit #middle {
+  padding-top: 1%;
+  padding-left: 10%;
+  text-align: center;
+}
+body #credit #middle div {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+body #credit #middle div h1.credit {
+  font-weight: 900;
+  font-size: 14px;
+}
+body #credit #middle div h2.credit {
+  font-weight: bold;
+  font-size: 12px;
+}
+body #credit #middle div p.credit {
+  font-size: 10px;
+}
+body #credit #middle .ico {
+  max-width: 50px;
+  max-height: 50px;
+}
+body #credit::after {
+  content: '';
+  position: absolute;
+  bottom: 3%;
+  left: 3%;
+  width: 60%;
+  height: 20%;
+  background: url("../media/pic/logos.svg") no-repeat bottom left;
+  background-size: contain;
+}

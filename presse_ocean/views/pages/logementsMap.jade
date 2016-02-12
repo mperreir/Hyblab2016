@@ -1,0 +1,24 @@
+#map1-map.section
+    +header("logements","Deux quartiers concentrent","la croissance des logements","(entre 2006 et 2011)")
+    #map1.map
+    .legend.logements
+        ul
+            li < -4%
+            li Entre 4% et 8%
+            li Entre 8% et 12%
+            li > 12%
+    .sidebar
+        +placeholder()
+        h1 Hauts Paves Saint Felix
+        fieldset
+            label(for="map1-2006")
+                input#map1-2006(type="radio" value="2006" name="map1" checked)
+                span 2006
+            label(for="map1-2011")
+                input#map1-2011(type="radio" value="2011" name="map1")
+                span 2011
+        h2 pourcentage de logements par rapport à la totalité des logements nantais
+        .graph
+        h2 évolution
+        .graph
+

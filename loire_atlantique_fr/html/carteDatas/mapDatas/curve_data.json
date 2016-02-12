@@ -1,0 +1,207 @@
+[{
+        "id": "cc_vallet",
+        "nom": "C.C. de Vallet",
+        "a2010": 124,
+        "a2011": 119,
+        "a2012": 123,
+        "a2013": 146,
+        "a2014": 159
+    },
+    {
+        "id": "cc_castelbriantais",
+        "nom": "C.C. du Castelbriantais",
+        "a2010": 533,
+        "a2011": 519,
+        "a2012": 573,
+        "a2013": 664,
+        "a2014": 686
+    },
+    {
+        "id": "cc_guerande_atlantique",
+        "nom": "Cap Atlantique",
+        "a2010": 732,
+        "a2011": 755,
+        "a2012": 865,
+        "a2013": 961,
+        "a2014": 1007
+    },
+    {
+        "id": "cc_carene",
+        "nom": "Carene",
+        "a2010": 2990,
+        "a2011": 2951,
+        "a2012": 3146,
+        "a2013": 3440,
+        "a2014": 3678
+    },
+    {
+        "id": "cc_coeur_estuaire",
+        "nom": "Cœur d'Estuaire",
+        "a2010": 63,
+        "a2011": 59,
+        "a2012": 63,
+        "a2013": 70,
+        "a2014": 70
+    },
+    {
+        "id": "cc_pays_retz",
+        "nom": "Cœur Pays de Retz",
+        "a2010": 113,
+        "a2011": 110,
+        "a2012": 110,
+        "a2013": 117,
+        "a2014": 135
+    },
+    {
+        "id": "cc_erdre_gesvres",
+        "nom": "Erdre et Gesvres",
+        "a2010": 336,
+        "a2011": 327,
+        "a2012": 340,
+        "a2013": 403,
+        "a2014": 449
+    },
+    {
+        "id": "cc_grandlieu",
+        "nom": "Grand Lieu",
+        "a2010": 200,
+        "a2011": 214,
+        "a2012": 222,
+        "a2013": 259,
+        "a2014": 273
+    },
+    {
+        "id": "cc_loire-atlantique_meridionale",
+        "nom": "Loire Atlantique Méridionale",
+        "a2010": 76,
+        "a2011": 72,
+        "a2012": 80,
+        "a2013": 102,
+        "a2014": 123
+    },
+    {
+        "id": "cc_loire_divatte",
+        "nom": "Loire Divatte",
+        "a2010": 127,
+        "a2011": 156,
+        "a2012": 173,
+        "a2013": 198,
+        "a2014": 211
+    },
+    {
+        "id": "cc_loire_sillon",
+        "nom": "Loire et Sillon",
+        "a2010": 143,
+        "a2011": 169,
+        "a2012": 160,
+        "a2013": 181,
+        "a2014": 195
+    },
+    {
+        "id": "cc_nantes_metropole",
+        "nom": "Nantes Métropole",
+        "a2010": 13783,
+        "a2011": 13934,
+        "a2012": 14862,
+        "a2013": 16300,
+        "a2014": 18013
+    },
+    {
+        "id": "cc_pays_ancenis",
+        "nom": "Pays d'Ancenis",
+        "a2010": 522,
+        "a2011": 525,
+        "a2012": 548,
+        "a2013": 616,
+        "a2014": 679
+    },
+    {
+        "id": "cc_pays_pontchateau",
+        "nom": "Pays de Ponchateau - Saint Gildas des Bois",
+        "a2010": 275,
+        "a2011": 293,
+        "a2012": 320,
+        "a2013": 357,
+        "a2014": 379
+    },
+    {
+        "id": "cc_pays_redon",
+        "nom": "Pays de Redon",
+        "a2010": 321,
+        "a2011": 326,
+        "a2012": 352,
+        "a2013": 368,
+        "a2014": 387
+    },
+    {
+        "id": "cc_pornic",
+        "nom": "Pornic",
+        "a2010": 387,
+        "a2011": 357,
+        "a2012": 406,
+        "a2013": 469,
+        "a2014": 475
+    },
+    {
+        "id": "cc_blain",
+        "nom": "Région de Blain",
+        "a2010": 161,
+        "a2011": 153,
+        "a2012": 172,
+        "a2013": 196,
+        "a2014": 199
+    },
+    {
+        "id": "cc_region_machecoul",
+        "nom": "Région de Machecoul",
+        "a2010": 179,
+        "a2011": 171,
+        "a2012": 187,
+        "a2013": 201,
+        "a2014": 261
+    },
+    {
+        "id": "cc_region_nozay",
+        "nom": "Région de Nozay",
+        "a2010": 168,
+        "a2011": 170,
+        "a2012": 171,
+        "a2013": 183,
+        "a2014": 192
+    },
+    {
+        "id": "cc_secteur_derval",
+        "nom": "Secteur de Derval",
+        "a2010": 113,
+        "a2011": 159,
+        "a2012": 158,
+        "a2013": 177,
+        "a2014": 199
+    },
+    {
+        "id": "cc_sevre_maine_goulaine",
+        "nom": "Sèvre, Maine et Goulaine",
+        "a2010": 55,
+        "a2011": 59,
+        "a2012": 73,
+        "a2013": 66,
+        "a2014": 84
+    },
+    {
+        "id": "cc_sud_estuaire",
+        "nom": "Sud Estuaire",
+        "a2010": 307,
+        "a2011": 318,
+        "a2012": 348,
+        "a2013": 357,
+        "a2014": 372
+    },
+    {
+        "id": "cc_vallee_clisson",
+        "nom": "Vallée de Clisson",
+        "a2010": 205,
+        "a2011": 209,
+        "a2012": 257,
+        "a2013": 294,
+        "a2014": 290
+    }]

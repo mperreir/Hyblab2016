@@ -1,0 +1,1957 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="600"
+   height="600"
+   viewBox="0 0 2000 2000.0031"
+   version="1.2"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="map.svg"
+   style="enable-background:new">
+  <metadata
+     id="metadata504">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview502"
+     showgrid="false"
+     inkscape:zoom="0.56929788"
+     inkscape:cx="136.1195"
+     inkscape:cy="232.41252"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="epci"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:showpageshadow="false" />
+  <desc
+     id="desc4">Generated with Qt</desc>
+  <defs
+     id="defs6" />
+  <g
+     inkscape:groupmode="layer"
+     id="communes"
+     inkscape:label="communes"
+     style="display:block;opacity:1;FFFF66"
+     transform="translate(-827.05541,-172.18638)">
+    <g
+       inkscape:groupmode="layer"
+       id="cc_erdre_gesvres.communes"
+       inkscape:label="cc_erdre_gesvres"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 2022.5111,1270.6592 83.9689,-46.4804 53.5729,-55.4727 77.1044,3.8755 -16.8951,-34.6008 -120.8999,-54.3581 -22.721,-52.5597 -54.5101,-19.5547 -16.9965,9.3214 -7.7003,16.4138 -29.1294,84.7035 -34.5248,8.3335 17.3257,87.9203 55.5993,43.8969 15.8059,8.5615"
+         id="casson"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="casson"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1171.2468,1380.2114 32.8275,-38.7549 14.1088,-9.904 29.3828,-25.254 26.9512,-70.62 92.6316,-122.6224 20.796,-73.4822 8.5108,-17.503 -70.1387,-66.74448 -3.0902,-56.3845 -32.3465,-20.568 -96.0006,-5.4712 -97.6217,-61.08326 -78.8268,74.00156 -11.8544,55.3459 73.6089,15.0967 -4.0276,55.77658 -229.59073,136.5032 -19.20009,-2.4063 4.71128,31.4091 148.68698,-31.4091 0.65862,94.5567 126.62444,146.3313 9.98,16.6925 16.5152,8.1056 36.7032,-31.6118"
+         id="fay-de-bretagne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="fay-de-bretagne"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1880.5619,1460.6847 89.5922,-87.591 11.2972,-13.9062 1.5958,-34.8794 35.6898,-36.5511 3.7742,-17.0978 -15.8059,-8.5615 -55.5993,-43.8969 -17.3257,-87.9203 -10.8665,15.7806 -27.5084,25.5579 -92.809,-5.5219 -152.7904,79.1055 -15.0207,11.0439 -71.6838,58.9429 0,1.0132 238.9124,142.9877 58.7148,3.1661 19.8333,-1.6717"
+         id="grandchamps-des-fontaines"
+         inkscape:label="grandchamps-des-fontaines"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1649.8059,1245.2026 152.7904,-79.1055 92.809,5.5219 27.5084,-25.5579 10.8665,-15.7806 34.5248,-8.3335 29.1294,-84.7035 7.7003,-16.4138 -24.5194,-26.90048 11.044,-35.8925 47.1643,-25.4566 -2.6343,-56.3845 -15.7552,-33.59264 -48.7096,-28.1796 -97.3938,-53.32213 -37.6656,-4.09333 -94.7087,44.93538 -55.0674,-12.00134 -62.7931,-42.7342 -12.057,-55.11295 -15.6285,-10.93242 -19.2761,0.88908 -23.3796,113.02741 -0.7346,132.63784 -99.4454,50.0267 13.9567,36.19658 71.8612,27.0777 14.3368,36.0699 48.1522,32.3463 29.4081,129.9935 18.5162,5.7752"
+         id="heric"
+         inkscape:label="heric"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2276.1401,1184.36 9.0936,-76.6231 78.4721,-129.84148 9.1188,-17.0471 -4.7113,-136.71596 57.4231,-101.84676 -19.0989,-2.44687 -38.223,0.4838 -9.8279,-35.92803 49.4188,-56.65302 -8.1563,-56.87592 -31.9665,-19.28118 -96.0259,-6.06146 -12.0317,15.38543 -203.0957,182.71016 -52.965,22.86789 -31.8398,47.93698 48.7096,28.1796 15.7552,33.59264 2.6343,56.3845 -47.1643,25.4566 -11.044,35.8925 24.5194,26.90048 16.9965,-9.3214 54.5101,19.5547 22.721,52.5597 120.8999,54.3581 16.8951,34.6008 38.9828,11.7784"
+         id="nort-sur-erdre"
+         inkscape:label="nort-sur-erdre"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1563.1014,1315.1894 71.6838,-58.9429 15.0207,-11.0439 -18.5162,-5.7752 -29.4081,-129.9935 -48.1522,-32.3463 -14.3368,-36.0699 -71.8612,-27.0777 -13.9567,-36.19658 -17.3257,6.2819 -39.7935,38.04558 -8.5108,17.503 -20.796,73.4822 -92.6316,122.6224 -26.9512,70.62 -29.3828,25.254 192.2545,28.6482 53.7503,-21.6064 54.3074,14.0327 29.8134,-24.5954 14.7927,-12.8422"
+         id="notre-dame-des-landes"
+         inkscape:label="notre-dame-des-landes"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2526.3243,1245.3799 9.0428,-16.8951 39.0081,-86.0713 -5.218,-56.4858 -29.3827,-23.6075 6.991,-95.08868 -18.6935,-1.2412 -86.1471,-29.3321 -69.1003,24.1901 -9.1188,17.0471 -78.4721,129.84148 -9.0936,76.6231 8.511,29.788 51.8504,-2.4316 17.3511,-2.5837 73.2542,-6.3324 80.9799,39.616 18.2376,2.9636"
+         id="petit-mars"
+         inkscape:label="petit-mars"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2323.4059,1555.4187 103.0677,-31.8397 22.0371,-29.8893 10.4359,-15.35 43.2889,-31.3078 92.2518,-0.4307 18.3389,-2.3557 49.7227,-82.1198 13.8049,-13.4501 -13.8049,-12.3104 -136.2246,-90.9853 -18.2376,-2.9636 -80.9799,-39.616 -73.2542,6.3324 -5.826,17.9843 -38.2736,126.3965 29.4334,109.3242 -15.7805,92.581"
+         id="saint-mars-du-desert"
+         inkscape:label="saint-mars-du-desert"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2123.0964,1605.2935 37.539,-84.4755 162.7705,34.6007 15.7805,-92.581 -29.4334,-109.3242 38.2736,-126.3965 5.826,-17.9843 -17.3511,2.5837 -51.8504,2.4316 -8.511,-29.788 -38.9828,-11.7784 -77.1044,-3.8755 -53.5729,55.4727 -83.9689,46.4804 -3.7742,17.0978 -35.6898,36.5511 -1.5958,34.8794 87.8189,118.1136 18.8202,53.7249 -6.0538,36.2979 30.8772,21.8597 10.1826,16.1099"
+         id="suce-sur-erdre"
+         inkscape:label="suce-sur-erdre"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2826.6871,923.23332 -5.9525,-31.6118 -24.798,-17.4777 -1.8238,-16.657 -11.4745,-14.98009 -56.2326,-2.50007 -62.7929,-41.04216 -9.7521,-36.37637 12.2851,-54.76595 -17.9337,-5.57512 -145.5207,-30.56314 -77.155,50.60168 -57.4231,101.84676 4.7113,136.71596 69.1003,-24.1901 86.1471,29.3321 18.6935,1.2412 91.4413,14.59 54.8141,-15.2739 50.1026,-77.3071 17.6044,-7.219 18.8455,1.7224 11.2465,35.5126 35.8672,3.9768"
+         id="les_touches"
+         inkscape:label="les_touches"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1912.1484,1798.7385 2.1278,-131.7159 28.0403,-48.8108 -50.9386,-141.8732 -10.816,-15.6539 -19.8333,1.6717 -58.7148,-3.1661 -238.9124,-142.9877 1.0639,19.6053 11.3225,96.6845 85.0074,106.8925 7.4976,38.5015 -12.817,14.8941 16.8698,9.524 36.3739,-11.7784 93.8475,67.859 65.2247,117.3031 9.1188,17.0471 18.8455,-3.2423 16.6924,9.2455"
+         id="treillieres"
+         inkscape:label="treillieres"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1409.7538,1743.6204 -0.76,-37.1084 108.3617,-14.9446 71.4305,-63.6289 33.6383,14.1088 22.7209,-38.0203 10.0306,-11.2465 12.817,-14.8941 -7.4976,-38.5015 -85.0074,-106.8925 -11.3225,-96.6845 -1.0639,-19.6053 0,-1.0132 -14.7927,12.8422 -29.8134,24.5954 -54.3074,-14.0327 -53.7503,21.6064 -192.2545,-28.6482 -14.1088,9.904 -32.8275,38.7549 -3.5462,50.356 22.2143,44.9354 -2.6597,17.123 25.5073,39.1855 12.9184,9.1694 168.0643,191.064 16.0086,11.5757"
+         id="vigneux-de-bretagne"
+         inkscape:label="vigneux-de-bretagne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_coeur_estuaire.communes"
+       inkscape:label="cc_coeur_estuaire"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 1353.9004,1692.8105 55.7005,-17.2315 -169.8981,-229.1507 18.8946,-107.8491 837.0199,-398.2932 149.568,-176.70026 31.7425,-48.89831 -38.5447,-27.35904 -76.1065,-116.91831 -30.3066,-42.32333 -41.2653,31.5913 -100.1401,-27.28344 -41.4162,-149.41683 -44.8932,-37.86427 -116.5403,-6.72618 -104.448,53.50854 -260.3645,234.51705 -270.3405,105.05272 -56.6073,-15.26666 -18.9701,50.03225 -54.5669,151.23037 -194.61197,255.5274 468.95807,509.2406 57.1367,10.5809"
+         id="cordemais"
+         inkscape:label="cordemais"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffe6d5;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2809.2952,1377.8039 16.8538,-58.4972 -47.7651,-34.5388 -501.4561,-570.08047 -31.7425,48.89831 -149.568,176.70026 -837.0199,398.2932 -18.8946,107.8491 169.8981,229.1507 -55.7005,17.2315 27.5103,85.6293 166.2702,31.6669 262.2536,232.8539 342.7436,66.2061 126.9704,-120.4706 229.1508,-49.5787 282.2061,-505.4619 18.2898,-55.8516"
+         id="saint-etienne-de-montluc"
+         inkscape:label="saint-etienne-de-montluc"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffe6d5;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2162.2766,570.41008 7.9357,-51.0906 -66.2813,-134.07419 10.5808,-150.24794 -109.5117,94.3207 -49.2767,-24.18476 39.6026,79.20485 -46.1776,-1.36036 41.4162,149.41683 100.1401,27.28344 41.2653,-31.5913 30.3066,42.32333"
+         id="le_temple-de-bretagne"
+         inkscape:label="le_temple-de-bretagne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffe6d5;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_nantes_metropole.communes"
+       inkscape:label="cc_nantes_metropole"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 2491.5346,1428.469 -9.8586,-122.1784 33.1887,-56.5906 -0.5504,-17.4199 -63.6015,-103.2749 -13.6632,8.71 -55.9207,58.0741 -11.5574,8.4467 -11.4138,50.6086 27.2306,157.2335 17.7069,2.632 88.4394,13.7589"
+         id="basse-goulaine"
+         inkscape:label="basse-goulaine"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1699.6963,1694.0741 58.3134,-109.4484 54.0782,-5.8146 -11.0788,-14.046 -34.1698,-1.9382 -27.4219,-22.8755 -32.6144,-76.6188 -32.2555,-13.2323 -9.2124,15.362 -11.366,9.6432 -26.5844,30.9632 -44.6025,25.1728 -35.2945,95.8331 4.6901,16.6542 20.6502,6.5085 81.0454,-2.0579 31.8727,55.7532 13.9502,-9.8585"
+         id="bouaye"
+         inkscape:label="bouaye"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1812.0879,1578.8111 87.53,-4.3071 44.9615,-28.3791 45.8469,22.3491 17.3719,3.7088 57.1649,-7.0109 12.8018,-7.9442 -0.024,-17.8027 -9.4995,-52.6186 -39.4101,-58.9835 -6.5325,-52.9057 -69.0334,-4.7138 -13.1367,12.9213 -33.0451,13.4238 -119.953,-43.454 -11.5334,0.3829 -16.391,3.3979 -47.3065,-16.5824 -18.4487,22.6123 -2.1536,18.4249 -41.3004,61.6634 15.3381,22.4688 9.2124,-15.362 32.2555,13.2323 32.6144,76.6188 27.4219,22.8755 34.1698,1.9382 11.0788,14.046"
+         id="bouguenais"
+         inkscape:label="bouguenais"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1522.3151,1530.3561 57.5239,-30.8437 31.6333,2.4168 15.9124,4.1395 26.5844,-30.9632 11.366,-9.6432 -15.3381,-22.4688 -13.5674,-6.8435 -43.6454,-12.2035 -18.0898,-1.7467 -78.8441,-45.0094 -89.564,-10.7438 -51.0392,3.1107 -1.8425,16.0799 -37.0412,51.8049 65.4681,29.0251 50.3693,51.3983 90.1143,12.4906"
+         id="brains"
+         inkscape:label="brains"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2333.3679,1013.5028 104.7585,-65.68339 15.3142,-8.80568 75.9726,-48.86173 119.6659,-34.43303 16.2952,-7.87236 -7.1067,-16.5585 -27.8287,-83.77321 -92.9379,-109.78351 -9.8585,14.50062 -20.8177,28.23548 -97.3647,30.07805 -153.7638,-32.68618 -35.4619,79.80119 -13.1126,79.84894 86.3335,13.97419 -6.6042,71.01953 27.6133,44.05209 -21.9901,48.6465 25.4358,7.3938 15.4578,-9.0928"
+         id="carquefou"
+         inkscape:label="carquefou"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2207.1218,837.50949 13.1126,-79.84894 -9.6192,-15.21854 -29.1687,-20.65019 5.7189,-34.28931 -17.7788,-50.75219 -82.9597,-111.57806 -10.6721,13.13668 -84.6347,82.7444 10.2175,14.78771 48.12,134.02291 -26.4888,46.11 -2.01,124.4276 85.7594,26.53664 30.4369,63.9366 35.2705,6.3411 54.3892,-130.67294 -19.693,-69.03347"
+         id="la_chapelle-sur-erdre"
+         inkscape:label="la_chapelle-sur-erdre"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1603.6716,1271.403 47.8329,-12.4906 16.6541,5.9582 20.8178,-27.2305 -0.5744,-51.9964 74.8959,-116.5313 11.2225,-13.5913 -14.5964,-10.4328 -116.8424,-39.6493 -57.7391,-42.3294 -44.3154,-56.25561 -5.7906,17.68305 -89.3486,160.03306 -72.5509,15.6971 -40.1998,38.1418 -108.5152,-20.9612 -83.0315,-73.7234 -52.6424,-10.026 3.2303,18.1377 31.1787,66.2339 55.7053,48.1917 48.9095,5.3839 66.7363,59.0552 54.9397,0.3589 68.3394,27.087 185.6843,13.2563"
+         id="coueron"
+         inkscape:label="coueron"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1693.451,1362.9052 18.4487,-22.6123 47.3065,16.5824 16.391,-3.3979 2.8235,-16.726 -33.7151,-36.1078 -76.547,-35.773 -16.6541,-5.9582 -47.8329,12.4906 10.2414,22.9953 -9.5714,8.7577 72.0005,53.121 17.1089,6.6282"
+         id="indre"
+         inkscape:label="indre"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2694.6627,917.69362 115.3109,-80.47122 16.8456,-5.45572 -31.3223,-41.03712 -72.6706,-9.76282 -12.1076,-13.92632 -18.5925,-51.85281 -9.2602,-109.66384 -17.3241,2.22542 -87.1473,0.40676 -40.8936,29.57544 92.9379,109.78351 27.8287,83.77321 7.1067,16.5585 20.2674,56.61454 9.021,13.23247"
+         id="mauves-sur-loire"
+         inkscape:label="mauves-sur-loire"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1649.997,1442.9935 41.3004,-61.6634 2.1536,-18.4249 -17.1089,-6.6282 -72.0005,-53.121 -1.4596,17.6831 6.0299,52.4749 -16.1277,50.6325 43.6454,12.2035 13.5674,6.8435"
+         id="la_montagne"
+         inkscape:label="la_montagne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2226.4558,1436.174 21.7509,-44.2676 -43.8368,-27.9723 -3.1585,-52.8817 66.9755,-63.4342 85.8791,-33.3801 15.5055,-10.0021 11.5574,-8.4467 -55.2746,-148.5235 7.5136,-33.763 -15.4578,9.0928 -25.4358,-7.3938 21.9901,-48.6465 -27.6133,-44.05209 6.6042,-71.01953 -86.3335,-13.97419 19.693,69.03347 -54.3892,130.67294 -35.2705,-6.3411 -30.4369,-63.9366 -85.7594,-26.53664 -15.7688,-8.73388 -17.8027,3.06288 8.1357,15.96024 46.0621,96.7426 -10.72,34.0261 -41.6593,32.2555 12.9214,30.7957 -58.9835,41.3005 -69.0334,148.667 -68.6745,16.6543 -18.3052,1.962 119.953,43.454 33.0451,-13.4238 13.1367,-12.9213 61.4481,-33.3563 90.6646,1.5315 44.9616,29.9584 26.2733,47.2585 32.1837,16.1517 17.6591,4.4268"
+         id="nantes"
+         inkscape:label="nantes"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1989.2058,1113.715 41.6593,-32.2555 10.72,-34.0261 -46.0621,-96.7426 -8.1357,-15.96024 -8.6142,-16.10374 -61.6156,-110.81244 -88.6548,-64.10409 -34.3611,11.12661 -15.9363,-8.99705 -9.4756,10.62422 -21.4638,35.91649 14.9552,50.96747 -10.9831,50.8478 22.9712,84.37157 13.9025,24.1438 67.1191,23.9283 120.2881,75.6137 13.6869,11.4618"
+         id="orvault"
+         inkscape:label="orvault"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1355.2471,1369.5573 51.0392,-3.1107 11.701,-108.2999 -68.3394,-27.087 -54.9397,-0.3589 -66.7363,-59.0552 -48.9095,-5.3839 -55.7053,-48.1917 -31.1787,-66.2339 -3.2303,-18.1377 -8.7099,-27.1108 -18.09,-3.3501 -148.47566,-161.22943 -15.55338,-8.59028 -64.1042,-29.43195 -6.67601,17.30023 10.19352,32.01625 167.76193,195.66238 6.1017,36.5386 1.4118,27.5177 89.1571,65.827 61.6875,66.9038 -31.083,63.9127 48.2396,22.2534 29.1209,-17.731 27.039,23.1388 118.2781,32.2316"
+         id="le_pellerin"
+         inkscape:label="le_pellerin"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2111.791,1595.6088 45.8229,-18.1139 45.2485,-46.2295 9.2842,-13.6153 5.0011,-66.5449 9.3081,-14.9312 -17.6591,-4.4268 -32.1837,-16.1517 -26.2733,-47.2585 -44.9616,-29.9584 -90.6646,-1.5315 -61.4481,33.3563 69.0334,4.7138 6.5325,52.9057 39.4101,58.9835 9.4995,52.6186 0.024,17.8027 22.8994,24.8855 11.1267,13.4956"
+         id="reze"
+         inkscape:label="reze"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1761.934,1818.9803 104.1363,-64.6067 17.707,1.6511 7.1786,-35.7012 69.9905,-106.3377 46.3015,-23.5934 0.5503,-18.2096 -17.3719,-3.7088 -45.8469,-22.3491 -44.9615,28.3791 -87.53,4.3071 -54.0782,5.8146 -58.3134,109.4484 22.7558,24.7898 67.7892,13.6153 -39.1707,55.9924 10.8634,30.5087"
+         id="saint-aignan-grandlieu"
+         inkscape:label="saint-aignan-grandlieu"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1775.5972,1353.4774 11.5334,-0.3829 18.3052,-1.962 68.6745,-16.6543 69.0334,-148.667 58.9835,-41.3005 -12.9214,-30.7957 -13.6869,-11.4618 -120.2881,-75.6137 -67.1191,-23.9283 -4.2833,17.707 -9.308,35.1029 -11.2225,13.5913 -74.8959,116.5313 0.5744,51.9964 -20.8178,27.2305 76.547,35.773 33.7151,36.1078 -2.8235,16.726"
+         id="saint-herblain"
+         inkscape:label="saint-herblain"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1592.7842,1423.9465 16.1277,-50.6325 -6.0299,-52.4749 1.4596,-17.6831 9.5714,-8.7577 -10.2414,-22.9953 -185.6843,-13.2563 -11.701,108.2999 89.564,10.7438 78.8441,45.0094 18.0898,1.7467"
+         id="saint-jean-de-boiseau"
+         inkscape:label="saint-jean-de-boiseau"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1471.0365,1675.9842 63.3625,-31.3222 17.7788,-0.9332 -4.6901,-16.6542 35.2945,-95.8331 44.6025,-25.1728 -15.9124,-4.1395 -31.6333,-2.4168 -57.5239,30.8437 -12.1078,12.6581 -69.3445,53.0014 -17.5394,29.6712 47.7131,50.2974"
+         id="saint-leger-les-vignes"
+         inkscape:label="saint-leger-les-vignes"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2381.1289,1195.7893 55.9207,-58.0741 13.6632,-8.71 51.6852,-46.804 9.9542,-14.3091 -13.4478,-10.3132 -34.0261,-37.6872 -11.4377,-80.87796 -15.3142,8.80568 -104.7585,65.68338 -7.5136,33.763 55.2746,148.5235"
+         id="sainte-luce-sur-loire"
+         inkscape:label="sainte-luce-sur-loire"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2385.3883,1412.0781 -27.2306,-157.2335 11.4138,-50.6086 -15.5055,10.0021 -85.8791,33.3801 -66.9755,63.4342 3.1585,52.8817 43.8368,27.9723 17.2045,2.2493 119.9771,17.9224"
+         id="saint-sebastien-sur-loire"
+         inkscape:label="saint-sebastien-sur-loire"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1774.5204,1055.5211 9.308,-35.1029 4.2833,-17.707 -13.9025,-24.1438 -22.9712,-84.37157 10.9831,-50.8478 -14.9552,-50.96747 -31.7769,-13.32809 -67.4781,60.10813 -102.3656,14.11778 0.7179,35.05509 -5.3361,18.52052 44.3154,56.25561 57.7391,42.3294 116.8424,39.6493 14.5964,10.4328"
+         id="sautron"
+         inkscape:label="sautron"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2168.2619,1763.7536 79.9448,-65.7552 51.6136,-3.9721 14.381,-10.7439 -0.2154,-53.6953 -60.9935,-64.5588 -22.9712,-48.5508 -17.8746,1.1726 -9.2842,13.6153 -45.2485,46.2295 -45.8229,18.1139 -7.5135,15.5534 29.0251,62.2857 -2.8475,34.2176 32.6862,39.5775 5.1206,16.5106"
+         id="les_sorinieres"
+         inkscape:label="les_sorinieres"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2512.3522,1067.8921 88.9897,-52.1878 38.094,-57.835 12.2034,-12.29912 13.4479,-10.62422 29.5755,-17.25234 -9.021,-13.23247 -20.2674,-56.61454 -16.2952,7.87236 -119.6659,34.43303 -75.9726,48.86173 11.4377,80.87797 34.0261,37.6872 13.4478,10.3132"
+         id="thouare-sur-loire"
+         inkscape:label="thouare-sur-loire"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2355.6452,1769.5203 70.7323,-10.0738 64.511,-83.5579 4.0918,-36.2277 -25.4599,-20.8656 23.3302,-21.7508 16.1516,-5.0011 44.5787,-71.8329 49.2446,-46.5407 -4.2832,-16.5825 -17.2523,-6.7717 -89.7554,-21.8466 -88.4394,-13.7589 -17.7069,-2.632 -119.9771,-17.9224 -17.2045,-2.2493 -21.7509,44.2676 -9.3081,14.9312 -5.0011,66.5449 17.8746,-1.1726 22.9712,48.5508 60.9935,64.5588 0.2154,53.6953 -14.381,10.7439 46.756,62.4291 9.0689,13.0649"
+         id="vertou"
+         inkscape:label="vertou"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_pays_retz.communes"
+       inkscape:label="cc_pays_retz"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 2236.0677,882.97522 74.2815,-103.88852 3.6948,-32.24633 -237.1921,-64.63643 -54.2236,-46.40197 -58.3983,35.55744 -96.7387,-44.62655 -60.3656,87.42943 5.4702,35.02947 260.5611,99.42597 129.4649,25.33619 33.4458,9.0213"
+         id="cheix-en-retz"
+         inkscape:label="cheix-en-retz"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1773.6827,1262.783 -25.0484,-26.2481 -53.3599,-48.3694 -38.7723,-173.1794 -119.3398,-122.93868 -179.6574,-116.98866 -32.1503,8.49338 -177.0183,76.105 -70.0589,82.53488 2.5434,36.1332 11.8522,34.30948 116.5087,135.9428 -83.9264,68.3313 -89.9728,195.7327 24.0887,67.8515 107.8713,14.4436 133.1597,-54.7513 5.1823,-35.9892 63.2449,-28.1675 281.4347,59.3581 105.6159,-140.9813 17.8027,-31.6224"
+         id="chemere"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="chemere"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2288.0388,1572.0492 96.1148,-36.3729 146.0678,-146.1158 11.4206,-32.8221 -95.6831,-100.8653 35.1734,-59.5019 139.0617,-106.2879 24.2807,-25.3844 -180.7131,-25.0484 -101.0096,-103.07268 -131.288,-58.2063 -33.446,-9.0213 -129.4646,-25.3364 -52.7362,46.0182 -32.1021,99.7137 20.2018,134.74308 -81.9111,108.831 -40.164,94.7234 -23.081,28.3115 248.5646,-41.5555 60.7016,124.8101 120.0118,132.4399"
+         id="port-saint-pere"
+         inkscape:label="port-saint-pere"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1773.6827,1262.783 148.3231,-29.4632 81.9111,-108.831 -20.2018,-134.74308 32.1021,-99.7137 52.7362,-46.0182 -260.5611,-99.42573 -5.4703,-35.02947 60.3656,-87.42943 62.333,-128.16915 -123.7063,-134.16739 -178.794,-132.00797 -34.5014,12.28421 -0.048,178.45794 63.3407,169.05262 -204.5138,39.25228 -78.4563,75.86494 -11.0366,72.36209 179.6574,116.98866 119.3398,122.93868 38.7723,173.1794 53.3599,48.3694 25.0484,26.2481"
+         id="rouans"
+         inkscape:label="rouans"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1480.5876,1929.5409 55.567,-49.5211 126.9215,-226.6354 136.8545,-125.29 50.2408,-135.5108 8.5894,-36.2289 23.081,-28.3115 40.164,-94.7234 -148.3231,29.4632 -17.8027,31.6224 -105.6159,140.9813 -281.4347,-59.3581 -63.2449,28.1675 -5.1823,35.9892 -133.1597,54.7513 -107.8713,-14.4436 -31.5744,-2.1594 -7.1019,36.1812 -10.8928,257.4897 109.551,9.3573 79.2718,75.913 245.4937,68.2833 36.469,3.9828"
+         id="saint-hilaire-de-chaleons"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="saint-hilaire-de-chaleons"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1819.125,2171.3876 31.7184,-65.2602 155.5687,-92.3242 10.9408,-34.5975 34.8854,-61.7573 -17.7067,-67.5153 50.6725,-164.6383 170.8283,-49.9048 32.0064,-63.3408 -120.0118,-132.4399 -60.7016,-124.8101 -248.5646,41.5555 -8.5894,36.2289 -50.2408,135.5108 -136.8545,125.29 -126.9215,226.6354 -55.567,49.5211 -68.3793,150.7222 14.5876,29.9429 25.2402,25.2884 173.9474,-38.7723 193.1415,74.6655"
+         id="sainte-pazanne"
+         inkscape:label="sainte-pazanne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1148.3363,859.65714 177.0183,-76.105 32.1503,-8.49338 11.0366,-72.36209 78.4563,-75.86494 204.5138,-39.25228 -63.3407,-169.05262 0.048,-178.45794 34.5014,-12.28421 -2.8311,-55.18334 -25.0004,26.10411 -64.7804,32.00635 1.4877,105.47189 -54.4636,87.66942 -170.2044,-54.89536 -71.3063,70.25069 -36.229,1.15169 -102.257,98.17822 -42.6111,178.79393 91.2202,105.32822 2.5914,36.99664"
+         id="vue"
+         inkscape:label="vue"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_region_machecoul.communes"
+       inkscape:label="cc_region_machecoul"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 1272.8767,1369.7407 67.3451,-76.6567 20.1204,19.7461 0.2908,-64.2271 149.032,-119.5997 39.5338,-122.26 20.5777,-125.25333 -12.6376,-25.94028 59.2386,-130.57441 -31.5939,-3.45042 -212.6768,-59.15542 -68.6753,-65.76518 -94.9064,-8.10628 -1.8708,29.30754 -127.9554,61.52493 -27.9771,13.67671 -72.74919,55.87154 -61.48356,-4.73923 -25.64921,88.92035 0.29107,62.19003 65.34937,63.7699 -1.0807,61.27555 41.86197,47.3078 81.18785,212.5522 63.4373,70.9616 130.99,18.6238"
+         id="bourgneuf-en-retz"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff5555;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="bourgneuf-en-retz"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1824.5233,1101.3171 16.8776,-22.4068 62.315,-89.29437 5.9447,-55.12311 -167.3231,-64.68428 -150.6946,33.58916 -21.8664,-21.90773 -20.5777,125.25333 -39.5338,122.26 -149.032,119.5997 -0.2908,64.2271 27.1041,15.0902 361.9583,-69.0908 64.6011,-98.939 10.5176,-58.5734"
+         id="fresnay-en-retz"
+         inkscape:label="fresnay-en-retz"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff5555;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1819.5764,1810.5174 93.6591,-84.7217 56.9107,-145.706 126.0015,-137.475 122.0108,-25.9403 13.0118,-28.9335 -35.3354,-37.871 110.9113,-52.5041 334.4797,43.2337 30.3884,-7.275 -18.1249,-23.7369 -96.1952,-148.2005 31.3029,-69.9223 -142.422,-41.4462 -72.0009,52.4209 -27.021,-12.8039 -28.7672,10.5592 -71.6683,51.8805 -57.2017,-16.3375 -9.6444,29.5986 -68.8829,130.4911 -58.2411,16.7115 -79.525,-45.8527 -34.8782,-114.9852 -113.8211,-50.384 -10.5176,58.5734 -64.6011,98.939 -361.9583,69.0908 -27.1041,-15.0902 -20.1204,-19.7461 -67.3451,76.6567 2.6606,152.9811 147.0365,162.8748 113.1146,57.8252 158.0942,0.1248 117.7289,36.0836 8.0649,30.8872"
+         id="machecoul"
+         inkscape:label="machecoul"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff5555;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2666.8337,1668.3032 19.663,-179.1291 64.0607,-100.7681 12.7624,-27.3537 -19.4137,-16.4204 -72.2918,-11.3074 -30.3884,7.275 -334.4797,-43.2337 -110.9113,52.5041 35.3354,37.871 108.417,49.2615 58.1992,106.5465 58.1161,68.5505 179.5865,51.2984 31.3446,4.9054"
+         id="la_marne"
+         inkscape:label="la_marne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff5555;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2277.6881,1994.4273 54.8736,-144.1266 -61.4418,-101.3082 66.5966,-62.9385 37.7465,-120.14 22.3235,-22.3651 -58.1992,-106.5465 -108.417,-49.2615 -13.0118,28.9335 -122.0108,25.9403 -126.0015,137.475 -56.9107,145.706 -93.6591,84.7217 -29.1414,115.9414 -20.2034,22.573 211.4713,50.2593 61.6083,-9.3119 48.5131,40.1159 154.6855,-30.3052 31.1783,-5.3626"
+         id="paulx"
+         inkscape:label="paulx"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff5555;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2354.2617,2171.5194 122.0939,-19.9956 37.2059,-47.2661 61.4836,-11.5567 85.5945,-117.9784 58.8645,-21.0765 1.2055,-31.2197 -39.243,-46.3101 2.8685,-62.1485 45.3537,-77.904 4.6561,-30.8456 -42.0699,-29.931 -25.4413,-6.984 -31.3446,-4.9054 -179.5865,-51.2984 -58.1161,-68.5505 -22.3235,22.3651 -37.7465,120.14 -66.5966,62.9385 61.4418,101.3082 -54.8736,144.1266 44.2315,89.1697 -20.5778,17.6261 44.2317,47.3492 8.6882,22.9471"
+         id="saint-etienne-de-mer-morte"
+         inkscape:label="saint-etienne-de-mer-morte"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff5555;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2347.1532,1089.6356 -54.957,-110.82814 264.5161,-386.69294 -25.7742,-17.37662 -26.5222,-52.6704 48.1809,-37.82942 159.8402,-300.22547 -35.8758,-11.3072 -30.8872,1.62126 -110.0798,54.4164 -9.8938,28.43453 -126.5421,126.58344 -83.2665,31.51072 -27.7279,54.87359 -147.9924,43.23394 -43.899,142.62987 15.3397,58.49033 -30.2221,53.50182 44.8966,40.90581 27.6031,86.67538 48.9705,35.2522 -20.1618,56.78591 11.9308,89.25289 -5.1133,58.8643 57.2017,16.3375 71.6683,-51.8805 28.7672,-10.5592"
+         id="saint-mars-de-coutais"
+         inkscape:label="saint-mars-de-coutais"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff5555;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2189.516,1135.7378 5.1133,-58.8643 -11.9308,-89.25289 20.1618,-56.78591 -48.9705,-35.2522 -27.6031,-86.67538 -44.8966,-40.90581 -9.4783,29.97263 -134.7728,79.98245 -27.4784,56.53643 -5.9447,55.12311 -62.315,89.29437 -16.8776,22.4068 113.8211,50.384 34.8782,114.9852 79.525,45.8527 58.2411,-16.7115 68.8829,-130.4911 9.6444,-29.5986"
+         id="saint-meme-le-tenu"
+         inkscape:label="saint-meme-le-tenu"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff5555;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_loire_divatte.communes"
+       inkscape:label="cc_loire_divatte"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 2139.092,942.35303 1.0904,-158.58432 6.9693,-32.38062 -21.9506,-51.4392 -15.4555,-30.86361 -82.0657,-62.15379 -133.0781,-23.94154 -62.4855,267.95776 56.4644,126.15652 119.7563,58.50307 108.9941,-67.98497 21.7609,-25.2693"
+         id="barbechat"
+         inkscape:label="barbechat"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1888.5807,977.10423 -56.4644,-126.15652 62.4855,-267.95776 -36.5999,-4.59891 -143.9824,15.31326 -102.9258,-38.63856 -38.3543,16.45113 -33.3762,10.80918 -228.4659,159.43791 -58.5979,34.18215 -26.6441,21.0498 71.3986,5.49943 44.0906,56.46465 264.3549,107.95104 24.8425,25.7907 -14.0807,68.41177 131.9879,17.3519 140.3316,-101.36117"
+         id="la_chapelle-basse-mer"
+         inkscape:label="la_chapelle-basse-mer"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1638.7334,1789.0849 107.9512,-7.3484 47.9782,-54.758 142.2283,30.1523 177.9274,-35.8414 120.7991,-173.6133 136.065,-49.4006 32.2857,-17.4465 -31.053,-15.3606 -191.6763,-70.1661 -47.3145,-50.3962 -32.9497,-13.7012 -102.3567,1.5645 -121.3682,72.4415 -29.7729,64.619 -134.1686,113.6404 -126.2988,55.9905 -70.2606,-11.1886 -54.1415,45.6553 161.5711,81.7337 14.5548,33.4237"
+         id="le_landreau"
+         inkscape:label="le_landreau"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1462.6075,1673.9275 54.1415,-45.6553 70.2606,11.1886 126.2988,-55.9905 134.1686,-113.6404 29.7729,-64.619 121.3682,-72.4415 102.3567,-1.5645 32.9497,13.7012 61.2054,-132.6987 55.0899,-48.8318 35.32,-10.6197 -100.4132,-123.1695 -46.0346,-87.23337 -21.7609,25.2693 -108.9941,67.98497 -119.7563,-58.50307 -140.3316,101.36117 -131.9879,-17.3519 -33.376,15.3606 -205.8043,198.8824 -128.6691,66.6576 6.5425,146.6373 160.2438,161.0497 27.8766,19.8645 19.5328,4.3619"
+         id="le_loroux-bottereau"
+         inkscape:label="le_loroux-bottereau"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2778.3604,1621.8246 41.2462,-41.5308 6.8742,-28.4456 -21.097,-19.6748 -74.3853,-43.5694 -101.8828,16.5934 -89.6512,-57.5551 -51.3918,-49.5426 -47.8836,-128.0529 -28.825,-17.3045 -125.8243,-99.9864 -35.32,10.6197 -55.0899,48.8318 -61.2054,132.6987 47.3145,50.3962 191.6763,70.1661 31.053,15.3606 130.7552,102.4516 27.1655,19.5326 182.2892,5.4048 34.1822,13.6066"
+         id="la_remaudiere"
+         inkscape:label="la_remaudiere"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1254.9543,1488.6514 -6.5425,-146.6373 128.6691,-66.6576 205.8043,-198.8824 33.376,-15.3606 14.0807,-68.41177 -24.8425,-25.7907 -264.3549,-107.95104 -44.0906,-56.46465 -71.3986,-5.49943 -24.1789,24.36833 -75.4758,114.58859 -176.31532,103.39977 -19.72248,28.351 -102.40419,92.7326 126.01426,204.6189 1.09021,34.5141 267.00982,78.6521 33.2814,10.4301"
+         id="saint-julien-de-concelles"
+         inkscape:label="saint-julien-de-concelles"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_vallet.communes"
+       inkscape:label="cc_vallet"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 2610.1714,677.79066 5.9277,-40.70793 74.7618,-231.48375 -34.2959,-23.34811 -90.4282,-132.58763 -80.7501,-15.72661 -42.0386,14.51687 -44.3974,75.36686 -159.8069,75.1249 61.092,163.37563 65.5679,63.20896 114.3811,73.4311 129.9866,-21.17029"
+         id="la_boissiere-du-dore"
+         inkscape:label="la_boissiere-du-dore"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1314.9624,1465.5736 85.5893,-205.4745 -183.9412,-198.9418 -18.5696,-42.6434 -206.1397,-104.27956 -24.92052,-5.56468 -12.70241,41.43365 -9.73842,85.77049 -38.04644,20.4446 -3.32671,171.6623 24.6183,85.2263 -61.5155,62.4829 81.96007,-2.0565 98.04943,90.0048 268.6834,1.9354"
+         id="la_chapelle-heulin"
+         inkscape:label="la_chapelle-heulin"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2137.7677,2110.1237 50.9301,-68.774 -36.7157,-170.15 13.0651,-43.1877 -37.6834,-17.7833 -24.9206,-33.2677 -21.5333,-40.7079 -170.4525,38.5304 -88.8555,-23.8926 -92.7267,-147.4672 -183.8804,-7.8029 -117.4661,58.128 -41.2521,16.0896 -35.5057,26.4327 8.6497,87.4643 92.4844,93.1502 50.9906,68.6527 207.4707,-23.8923 69.2577,48.5106 14.7586,40.2844 337.8806,57.3415 5.5045,42.3412"
+         id="mouzillon"
+         inkscape:label="mouzillon"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1328.1486,1889.5273 82.3228,-7.44 41.4336,-5.2017 -92.4844,-93.1502 -8.6497,-87.4643 35.5057,-26.4327 41.2521,-16.0896 -90.7909,-148.7375 -21.7754,-39.4377 -268.6834,-1.9354 -98.04943,-90.0048 -81.96007,2.0565 -11.73439,40.9496 -26.73527,160.291 65.02372,28.0052 16.51284,31.514 30.84851,33.2677 179.88849,13.6096 71.5561,109.4816 87.0408,26.0697 49.4783,70.649"
+         id="le_pallet"
+         inkscape:label="le_pallet"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2567.8305,1493.0349 153.6369,-119.6435 24.1948,-33.4492 18.7511,-39.0747 61.9388,-159.3834 -30.788,-31.0297 -99.0777,-66.1124 22.9246,-75.66938 -48.8131,-120.91342 -43.6111,-17.35986 -232.5728,-6.89543 -24.1343,38.40915 -86.1335,99.07791 10.1014,226.40273 59.3377,165.1901 214.2452,140.4511"
+         id="la_regrippiere"
+         inkscape:label="la_regrippiere"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2102.4432,1776.961 181.0377,-114.9256 88.069,1.8148 169.9686,-135.0071 26.312,-35.8082 -214.2452,-140.4511 -59.3377,-165.1901 -10.1014,-226.40273 86.1335,-99.07791 24.1343,-38.40915 -34.659,-24.92081 -166.8233,-130.71237 -41.1917,22.25933 -173.5977,63.02746 -154.1209,221.50329 -227.0079,45.72839 -181.4612,-38.46995 -61.2127,69.86265 -137.7291,9.3754 183.9412,198.9418 -85.5893,205.4745 21.7754,39.4377 90.7909,148.7375 117.4661,-58.128 183.8804,7.8029 92.7267,147.4672 88.8555,23.8926 170.4525,-38.5304 21.5333,40.7079"
+         id="vallet"
+         inkscape:label="vallet"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_sevre_maine_goulaine.communes"
+       inkscape:label="cc_sevre_maine_goulaine"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 2258.6586,1342.8537 30.8821,-185.1548 13.5549,-47.3021 71.0574,-72.1752 -28.437,-98.44662 -44.5769,-20.96086 -357.1739,-140.22855 12.5067,48.41956 -143.7921,135.89655 -130.1673,209.74922 292.824,65.8172 149.9407,118.3595 89.6429,8.0349 43.7385,-22.0088"
+         id="la_haie-fouassiere"
+         inkscape:label="la_haie-fouassiere"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff6600;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2345.716,939.77498 3.8431,-198.29043 43.9478,-23.61591 11.249,-99.07515 14.6728,-47.86081 -41.0835,-29.27537 -236.1595,-237.34756 -49.0488,-15.37132 -393.5062,-115.91406 -96.9094,165.24215 28.7862,356.75462 262.0817,63.79123 50.376,19.7732 357.1739,140.22855 44.5769,20.96086"
+         id="haute-goulaine"
+         inkscape:label="haute-goulaine"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff6600;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2125.2772,1356.8276 -149.9407,-118.3595 -292.824,-65.8172 -47.1619,14.6025 -68.1232,63.5117 74.3414,60.9266 101.1714,3.8427 163.1459,192.0719 7.6855,50.7954 102.0101,1.3275 127.3026,-154.4122 -17.6071,-48.4894"
+         id="saint-fiacre-sur-maine"
+         inkscape:label="saint-fiacre-sur-maine"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff6600;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1865.4316,1985.7947 -23.127,-47.1619 49.8173,-92.0183 -33.3977,-202.3429 37.9389,-36.1924 16.9085,-49.6775 -7.6855,-50.7954 -163.1459,-192.0719 -101.1714,-3.8427 -11.9476,105.7825 -188.3689,243.9855 -206.535,29.4151 7.7558,90.551 219.6703,227.8454 80.6997,57.782 40.8039,28.3672 127.7918,76.0183 127.5122,-143.7222 26.4806,-41.9218"
+         id="chateau-thebaud"
+         inkscape:label="chateau-thebaud"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff6600;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_grandlieu.communes"
+       inkscape:label="cc_grandlieu"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 1816.5727,1612.6805 8.4479,-57.5193 -43.7761,-168.718 118.5553,-87.4312 72.5965,-95.313 18.9575,-23.3634 32.1753,-69.4033 20.9382,-18.3511 -54.0835,-28.0929 -33.4688,51.6989 -54.7304,27.8905 -150.7709,-16.4513 -226.3182,-99.4362 -26.7992,-53.43675 79.1041,-39.57229 10.1863,-29.22452 -16.0068,-90.38181 -16.0069,-26.51623 -18.3511,-51.53711 66.1693,-94.58548 -114.513,-22.99972 -38.4406,-41.87626 -23.5656,16.65343 -53.841,-94.18137 -136.9065,3.47628 -155.4196,291.92172 -46.8481,36.78334 25.7887,51.21364 25.0611,16.89602 31.7711,116.41301 126.2354,168.9202 -107.1969,177.1659 -19.8065,23.0401 -30.4371,67.9884 93.5345,144.1017 17.6238,23.0803 70.2923,10.9947 18.8768,15.9663 53.8006,-25.4654 55.1345,20.6149 85.5311,-25.425 112.9773,39.8553 86.178,-25.5865 58.4086,15.8046 49.5968,-28.3757 29.3458,-7.2354"
+         id="saint-philbert-de-grand-lieu"
+         inkscape:label="saint-philbert-de-grand-lieu"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2297.221,1081.142 40.2999,-81.48917 83.308,6.79087 127.7714,-79.83194 60.2276,1.05101 51.7391,-30.80093 29.5075,-7.15452 -127.0843,-131.81354 -4.4867,-52.38576 -15.3196,-22.07 -78.983,-105.45885 -87.1886,6.70976 -135.0471,111.07759 0.6063,54.6493 -160.8359,112.04751 -11.1966,27.97155 66.8567,129.50932 6.2652,89.3309 89.2095,19.0789 50.0818,-20.4128 14.2688,-26.7992"
+         id="le_bignon"
+         inkscape:label="le_bignon"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2044.4673,1092.5812 47.3332,16.5321 51.8604,0.1618 -6.2652,-89.3309 -66.8567,-129.50932 11.1966,-27.97155 -75.5472,-98.0213 -158.4915,-90.42227 -86.2991,8.6907 -29.9117,-2.78915 -175.9131,109.13729 16.0069,26.51623 16.0068,90.38181 -10.1863,29.22452 -79.1041,39.57229 26.7992,53.43675 226.3182,99.4362 150.7709,16.4513 54.7304,-27.8905 33.4688,-51.6989 54.0835,28.0929"
+         id="la_chevroliere"
+         inkscape:label="la_chevroliere"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1848.5862,1876.3479 -21.4232,-18.9979 -24.5357,-81.0042 13.9454,-163.6653 -29.3458,7.2354 -49.5968,28.3757 -58.4086,-15.8046 -86.178,25.5865 -112.9773,-39.8553 -85.5311,25.425 -55.1345,-20.6149 -53.8006,25.4654 -12.4094,26.5971 -62.289,97.9809 -19.1191,174.175 24.7377,6.7908 40.9063,29.1032 300.8952,14.2686 26.5162,-15.3196 -0.7679,-60.1063 109.9861,-50.8093 77.6894,36.4599 56.1047,-8.8118 20.736,-22.4743"
+         id="la_limouziniere"
+         inkscape:label="la_limouziniere"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2494.1529,1434.3019 170.2136,-49.4351 44.9889,-73.2837 27.4459,-11.5605 12.2072,-28.2543 77.5684,-130.9243 -66.21,-201.29748 -23.606,-16.41084 -46.6864,-33.42836 -29.5075,7.15452 -51.7391,30.80093 -60.2276,-1.05101 -127.7714,79.83194 -83.308,-6.79087 -40.2999,81.48917 90.1393,151.9837 9.4585,113.8663 8.8522,28.5778 76.9619,32.3369 11.52,26.3952"
+         id="montbert"
+         inkscape:label="montbert"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2081.7356,862.46333 160.8359,-112.04751 -0.6063,-54.6493 -8.6502,-27.89069 -55.2154,-66.85671 4.8103,-57.80214 -49.0309,-105.21646 12.6921,-26.27365 -18.7958,-22.79756 -38.683,-42.03819 -21.6253,13.41994 -96.5662,11.84332 -0.9297,30.7605 -78.2151,39.85531 -118.2319,179.6318 -12.1263,60.30847 86.2991,-8.6907 158.4915,90.42227 75.5472,98.0213"
+         id="pont-saint-martin"
+         inkscape:label="pont-saint-martin"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2048.2668,1798.133 50.0416,-106.3886 -59.2979,-102.6699 125.3459,-67.463 87.5927,-14.7537 101.2957,-112.9366 27.7289,-12.5711 -22.4743,-21.5444 -80.8018,-45.8782 -78.1342,-92.4836 -208.2096,-41.1083 -18.9575,23.3634 -72.5965,95.313 -118.5553,87.4312 43.7761,168.718 -8.4479,57.5193 -13.9454,163.6653 24.5357,81.0042 21.4232,18.9979 38.4406,73.3241 27.4055,-12.2477 44.5441,-141.4742 89.2904,2.1829"
+         id="saint-colomban"
+         inkscape:label="saint-colomban"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2380.9737,1381.3501 24.6973,-5.7803 -8.8522,-28.5778 -9.4585,-113.8663 -90.1393,-151.9837 -14.2688,26.7992 -50.0818,20.4128 -89.2095,-19.0789 -51.8604,-0.1618 -47.3332,-16.5321 -20.9382,18.3511 -32.1753,69.4033 208.2096,41.1083 78.1342,92.4836 80.8018,45.8782 22.4743,21.5444"
+         id="geneston"
+         inkscape:label="geneston"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1115.7097,1386.3623 19.8065,-23.0401 107.1969,-177.1659 -126.2354,-168.9202 -31.7711,-116.41301 -257.19995,375.99781 53.43677,107.7629 26.27384,12.4498 70.00954,-50.9711 138.4829,40.2998"
+         id="saint-lumine-de-coutais"
+         inkscape:label="saint-lumine-de-coutais"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_vallee_clisson.communes"
+       inkscape:label="cc_vallee_clisson"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 1085.5035,1085.5486 128.6853,-34.754 24.1672,-46.2172 139.053,-74.87471 -19.7865,-19.23894 -57.8627,-93.60247 -29.6431,-105.79573 -2.1175,-22.34185 -52.9707,-40.5222 -13.836,21.90384 -66.6244,75.09384 -66.7701,-39.71905 59.7975,181.80209 -70.0558,118.24438 -11.025,25.518 25.6641,36.6159 13.3247,17.8881"
+         id="aigrefeuille-sur-maine"
+         inkscape:label="aigrefeuille-sur-maine"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2632.9753,1298.0528 25.4084,-9.6378 146.0623,-67.0989 -10.2583,-106.7813 32.4541,-71.078 -24.3131,-12.7409 -152.4144,-51.839 -68.5592,-83.08875 -24.2768,13.28837 -107.0004,10.76935 -178.845,167.85663 39.208,32.9654 64.3243,82.1394 258.2101,95.2455"
+         id="boussay"
+         inkscape:label="boussay"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1878.6061,931.30901 22.1228,-46.69187 66.3688,-27.41623 13.1058,-22.30552 1.1681,-37.78408 130.2916,-70.56701 17.4866,-21.42932 81.9569,-71.04153 -3.322,-25.55448 -203.925,-34.60815 -110.9066,118.71895 -60.9293,142.84987 24.9704,78.56172 21.6119,17.26765"
+         id="clisson"
+         inkscape:label="clisson"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2271.2329,1087.7025 178.845,-167.85663 107.0004,-10.76935 24.2768,-13.28837 -28.3289,-88.96608 -13.1058,-20.07862 -24.3499,-6.27903 -22.5609,-14.89469 -263.2845,-49.83129 -71.7717,37.60169 -46.2902,-26.79583 -130.2916,70.56701 -1.1681,37.78408 26.5402,-7.30128 98.6038,130.83918 99.0785,43.69811 66.8069,85.5711"
+         id="getigne"
+         inkscape:label="getigne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1832.0238,835.47964 60.9293,-142.84987 110.9066,-118.71895 -8.9076,-24.31332 -41.7999,-29.27816 -125.217,14.42017 -30.775,-41.43491 -25.0069,3.13961 -49.6852,4.49031 -8.2505,25.26236 -83.3442,134.27073 -51.4011,-11.82811 -43.2236,30.5195 151.7573,105.94162 2.4823,26.97822 141.5355,23.4008"
+         id="gorges"
+         inkscape:label="gorges"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1470.3544,616.18541 54.6868,-119.9603 -3.6872,-26.43067 -65.4926,-44.39176 13.8359,-77.21118 -9.9662,-19.01985 -39.2445,-16.90249 -22.8529,11.49965 -46.8377,-4.19837 9.1995,25.33557 -66.5147,80.67925 -53.2995,-0.69361 -8.8346,25.95597 -19.8228,18.9103 17.45,105.72271 -26.0292,48.07909 12.0838,24.64178 52.9707,40.5222 2.1175,22.34185 53.7739,-13.98198 102.9482,38.87937 24.9339,-12.74064 18.5817,-107.03689"
+         id="maisdon-sur-sevre"
+         inkscape:label="maisdon-sur-sevre"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1536.2487,679.159 43.2236,-30.5195 51.4011,11.82811 83.3442,-134.27073 8.2505,-25.26236 -29.8624,-42.63955 -52.5328,-15.73436 -43.1871,-66.07651 -108.5701,-8.21399 -18.6184,-20.07861 -13.8359,77.21118 65.4926,44.39176 3.6872,26.43067 -54.6868,119.9603 45.8157,50.59793 20.0786,12.37566"
+         id="monnieres"
+         inkscape:label="monnieres"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 906.58534,1467.6251 270.73186,-6.6807 50.744,-21.2833 28.1466,-47.3123 23.4371,-45.4505 -15.7709,-22.5244 -178.3705,-238.8253 -13.3247,-17.8881 -25.6641,-36.6159 -24.788,10.4409 -40.6316,66.186 -153.72858,44.6474 38.95222,36.6159 -14.38347,75.1669 40.92369,180.3053 13.72638,23.2181"
+         id="la_planche"
+         inkscape:label="la_planche"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1442.3176,1412.7924 -4.0523,-81.5554 -41.8729,-100.9403 76.116,-76.7 98.2752,-15.0042 -4.3442,-27.2338 -13.6899,-21.0642 -8.36,-49.0646 -19.5309,17.4865 -67.61,-39.2443 -53.993,-85.46168 -25.8466,-4.30773 -139.053,74.87471 -24.1672,46.2172 -128.6853,34.754 178.3705,238.8253 15.7709,22.5244 54.7961,62.4261 80.168,4.6727 27.7086,-1.2047"
+         id="remouille"
+         inkscape:label="remouille"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1817.4578,1213.1751 -1.2777,-73.0128 73.816,-111.5272 -15.4058,-71.95419 4.0158,-25.3719 -21.6119,-17.26765 -24.9704,-78.56172 -141.5355,-23.4008 -58.0818,48.77271 -21.3198,104.91954 -66.6972,75.45881 8.36,49.0646 13.6899,21.0642 49.6489,16.1358 96.4864,83.2348 78.5984,3.6507 26.2847,-1.2049"
+         id="saint-hilaire-de-clisson"
+         inkscape:label="saint-hilaire-de-clisson"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1544.3895,1041.2299 66.6972,-75.45881 21.3198,-104.91954 58.0818,-48.77271 -2.4823,-26.97822 -151.7573,-105.94162 -20.0786,-12.37566 -45.8157,-50.59793 -18.5817,107.03689 -24.9339,12.74064 -102.9482,-38.87937 -53.7739,13.98198 29.6431,105.79573 57.8627,93.60247 19.7865,19.23894 25.8466,4.30773 53.993,85.46168 67.61,39.2443 19.5309,-17.4865"
+         id="saint-lumine-de-clisson"
+         inkscape:label="saint-lumine-de-clisson"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 899.83179,2031.9053 241.89171,-134.2707 137.9579,-21.685 71.516,-41.9094 23.3641,14.8217 41.3254,-34.5351 -0.8397,-76.262 38.8429,-36.6525 11.4995,-79.6205 -86.0091,-66.6607 68.6686,-115.1779 -5.7315,-27.1608 -27.7086,1.2047 -80.168,-4.6727 -54.7961,-62.4261 -23.4371,45.4505 -28.1466,47.3123 -50.744,21.2833 -270.73186,6.6807 -1.64266,51.8392 -53.44541,17.8881 -21.72145,48.8821 13.54398,83.4173 68.88765,120.1792 -72.72087,155.7729 -9.82031,23.6563 47.2029,54.7961 22.96262,7.849"
+         id="vieillevigne"
+         inkscape:label="vieillevigne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ffaaaa;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_loire-atlantique_meridionale.communes"
+       inkscape:label="cc_loire-atlantique_meridionale"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 2403.1711,1986.9328 28.4284,-159.1649 82.1643,-23.0947 83.4695,22.6974 229.1296,-105.7696 -25.3076,-119.5581 -182.4298,-169.6625 -127.0482,-215.6247 -19.8602,-37.8479 -40.5149,-13.7319 -159.8458,-135.9003 -81.8805,-8.7384 -99.0739,-80.85923 -82.0508,-18.04433 -217.2704,125.57306 -79.7811,99.8114 -29.4498,123.133 49.2533,118.6503 -92.2646,194.5161 -2.9508,130.226 224.5333,78.93 32.2303,26.3287 75.2984,-17.193 189.0687,108.9471 246.1526,76.3765"
+         id="lege"
+         inkscape:label="lege"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ddff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2522.7292,732.62164 -83.753,-216.022 37.7344,-156.27111 -125.346,-3.06405 -62.5314,198.60167 -38.4719,17.19325 -53.9627,-102.93248 -29.1095,31.5492 -78.7598,12.37029 -109.0606,-51.18274 -154.3987,71.32652 1.0781,84.37734 -37.2235,21.50568 -422.3972,-20.03055 -6.3554,42.10381 -61.9068,106.3368 -3.9154,84.83142 53.5657,63.21191 118.5935,-27.35028 87.3847,225.44118 126.3108,3.0644 31.0952,29.3362 79.7811,-99.8114 217.2704,-125.57306 82.0508,18.04433 99.0739,80.85923 81.8805,8.7384 159.8458,135.9003 40.5149,13.7319 163.5908,12.2565 62.5879,-109.2308 -9.0222,-83.80982 -98.4495,-76.5468 -80.1784,-147.98658 12.4835,-40.96866"
+         id="corcoue-sur-logne"
+         inkscape:label="corcoue-sur-logne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ddff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1432.0658,1748.6675 161.6049,-45.2811 42.2171,10.1571 2.9508,-130.226 92.2646,-194.5161 -49.2533,-118.6503 29.4498,-123.133 -31.0952,-29.3362 -126.3108,-3.0644 -87.3847,-225.44118 -118.5935,27.35028 -1.6454,42.61438 -80.3487,28.7689 -116.8344,161.03742 -83.9236,15.7746 -50.7851,64.5173 -166.65521,27.2935 -19.97352,74.9011 38.01785,190.0334 21.39217,33.1948 118.82061,44.2033 210.2341,-53.7927 180.6707,178.0039 35.1808,25.591"
+         id="touvois"
+         inkscape:label="touvois"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ddff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_blain.communes"
+       inkscape:label="cc_blain"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 2163.0155,1939.1303 73.1481,-69.9353 31.8481,-11.5474 182.8004,-91.959 1.3504,-243.8146 42.9762,-207.7668 35.4333,-1.6343 76.1747,-217.3816 -18.9971,-64.0407 -23.3739,-24.7149 -58.3417,-31.68497 -189.4587,58.58367 -91.8193,-39.92187 -23.4204,-17.7632 -112.027,12.5436 -24.1188,-26.284 -100.8987,-16.5618 -125.9956,64.22697 -244.2615,-15.71927 -84.1832,111.51947 -106.4396,-10.2017 -29.3804,20.5336 -145.7375,152.3866 -97.9653,39.0139 24.6309,66.555 285.3755,213.098 27.7971,102.0163 144.8994,-136.0295 179.448,112.2831 176.4683,10.0572 59.459,37.808 5.6805,103.6459 128.9288,122.6896"
+         id="blain"
+         inkscape:label="blain"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;c67;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1468.1315,1688.676 -27.7971,-102.0163 -285.3755,-213.098 -24.6309,-66.555 -67.1419,17.7585 -66.44328,-24.3377 3.11967,34.3484 -37.80778,168.3664 -94.05438,41.9705 58.94688,125.0318 -38.97191,131.3033 39.06505,167.9009 -47.25982,129.5806 1.25701,34.7815 62.43892,34.828 138.61364,-9.6849 34.8281,8.3345 35.2936,4.4233 422.0335,-250.9198 7.4033,-102.5286 -135.3077,-27.7505 21.7906,-101.7369"
+         id="bouvron"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;c67;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="bouvron"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2089.3086,988.09293 10.5696,-105.8994 66.3035,-81.37092 -5.5873,-314.9746 -37.2026,-120.287 54.7096,-41.01136 21.884,-67.63991 9.5449,-34.33911 -1.8158,-1.84383 -32.9188,-6.3091 -160.2648,-41.66788 -119.896,53.20583 -30.5442,63.17464 3.3523,105.28022 -34.0363,56.46516 -198.4918,63.63559 -87.0234,189.29115 -241.7938,137.96638 -44.2801,54.91934 18.578,29.7155 123.0156,168.66897 106.4396,10.2017 84.1832,-111.51947 244.2615,15.71927 125.9956,-64.22697 100.8987,16.5618 24.1188,26.284"
+         id="le_gavre"
+         inkscape:label="le_gavre"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;c67;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2696.8897,1512.4313 13.7823,-31.0983 72.6825,-66.583 2.7005,-234.7305 -17.2278,-28.2349 -16.5293,-96.0517 -24.2585,-21.707 -88.7928,-31.1077 -51.497,28.1324 18.9971,64.0407 -76.1747,217.3816 28.7284,20.0961 22.1634,101.3084 115.4259,78.5539"
+         id="la_chevallerais"
+         inkscape:label="la_chevallerais"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;c67;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_loire_sillon.communes"
+       inkscape:label="cc_loire_sillon"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 1990.6255,2171.4284 111.8394,-146.8462 31.3583,-86.9088 10.9018,-28.7527 6.3844,-157.5741 -116.6167,-40.1319 -30.2293,-0.4775 -116.7038,-28.883 -38.1774,-42.9982 -11.5097,30.4895 -37.6997,124.6522 -82.5221,47.8196 -55.898,78.7867 -92.9461,11.5099 -6.8623,97.5499 251.8665,67.451 32.227,5.2988 116.3564,53.4225 28.2313,15.5923"
+         id="bouee"
+         inkscape:label="bouee"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1920.3948,1199.7944 -1.1728,-32.4445 44.0843,-120.8735 -36.4401,-156.61832 36.3532,-122.48044 -54.9859,-116.6299 -91.035,-16.96037 -82.8263,-132.74355 -156.6185,-48.91398 2.4758,66.35657 -54.7688,75.79034 -178.4217,86.05302 -329.1335,-21.29039 -25.49492,21.39031 90.77442,80.38971 111.2747,46.99421 25.9728,15.7661 187.6729,206.65319 17.0257,26.3637 114.3584,57.8955 70.5782,-66.4517 61.8917,-10.7714 26.8849,19.2407 18.2418,160.3972 125.2166,36.5269 55.3767,-29.9253 22.7154,-23.7141"
+         id="campbon"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="campbon"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1385.8244,1954.3948 8.6866,-99.8085 177.8572,-354.1507 23.9314,-23.2796 46.7336,-85.2589 14.2459,-157.3565 59.807,-17.6337 -18.2418,-160.3972 -26.8849,-19.2407 -61.8917,10.7714 -70.5782,66.4517 -114.3584,-57.8955 -7.2533,66.0177 -36.8309,127.6055 59.6765,114.7058 -49.7304,154.0126 -98.245,18.0678 33.8776,88.9937 -17.6337,159.7459 -31.9231,0.8684 -10.7279,162.5255 90.1231,-6.9493 29.3604,12.2046"
+         id="la_chapelle-launay"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="la_chapelle-launay"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1561.9443,2029.6638 6.8623,-97.5499 92.9461,-11.5099 55.898,-78.7867 82.5221,-47.8196 37.6997,-124.6522 11.5097,-30.4895 -21.5861,-92.4684 -61.8916,-4.4303 -53.9435,31.9232 -115.6614,-96.7245 -23.9314,23.2796 -177.8572,354.1507 -8.6866,99.8085 144.6746,68.1026 31.4453,7.1664"
+         id="lavau-sur-loire"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="lavau-sur-loire"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2635.0371,1717.4258 26.5375,0.7816 -22.7588,-45.5176 -17.1124,-28.6219 -217.1203,-250.9109 -1.1293,-162.1345 -254.9503,53.8566 -17.1125,28.7957 22.6285,94.0318 -113.1857,204.5684 -6.3411,98.9397 116.6167,40.1319 -6.3844,157.5741 32.5309,8.7734 155.359,-60.3713 149.6259,-134.7719 60.0238,-30.7503 66.9735,3.8652 25.799,21.76"
+         id="malville"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="malville"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1292.748,1537.006 98.245,-18.0678 49.7304,-154.0126 -59.6765,-114.7058 36.8309,-127.6055 7.2533,-66.0177 -17.0257,-26.3637 -187.6729,-206.65319 -73.5316,142.633 43.1721,43.99749 -3.518,31.9666 -71.6207,104.5426 49.0357,38.6987 -58.5908,110.2758 -110.7101,57.8955 4.38671,31.2286 289.00149,120.9164 4.6907,31.2716"
+         id="prinquiau"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="prinquiau"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1908.2335,650.74774 87.7343,-39.15004 35.2674,-157.05283 -2.91,-32.0405 -22.0639,-24.33969 -244.2223,-225.48991 -56.6363,27.54105 -50.9902,114.91865 -96.8549,-4.8861 14.2024,113.74568 5.9937,28.13579 156.6185,48.91398 82.8263,132.74355 91.035,16.96037"
+         id="quilly"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="quilly"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2034.4927,1711.2147 6.3411,-98.9397 113.1857,-204.5684 -22.6285,-94.0318 17.1125,-28.7957 -8.0786,-53.8566 -32.4875,-7.7746 -129.2994,9.0341 -58.2432,-32.4876 -22.7154,23.7141 -55.3767,29.9253 -125.2166,-36.5269 -59.807,17.6337 -14.2459,157.3565 -46.7336,85.2589 115.6614,96.7245 53.9435,-31.9232 61.8916,4.4303 21.5861,92.4684 38.1774,42.9982 116.7038,28.883 30.2293,0.4775"
+         id="savenay"
+         inkscape:label="savenay"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_castelbriantais.communes"
+       inkscape:label="cc_castelbriantais"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 2585.2935,1882.0005 83.4858,-160.9219 135.5736,-24.1019 20.085,-11.6063 2.1174,-21.2677 -69.5715,-79.4718 -13.6421,-16.4612 -1.2099,-21.059 8.6813,-41.3103 -23.6845,-100.676 -7.5319,21.4008 -80.9752,6.1162 -7.2596,44.5923 -31.6701,25.9018 -44.9795,-3.2215 -39.081,23.5212 -53.4491,70.0222 -111.8891,14.0081 -7.4411,177.0623 1.6637,22.3688 240.7778,75.1039"
+         id="la_chapelle-glain"
+         inkscape:label="la_chapelle-glain"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1976.3918,1050.8543 -23.6241,-62.62333 32.0634,-80.06468 -56.9276,-91.73456 -37.6896,-23.73295 -22.4141,-6.07087 -92.2881,-7.11746 -178.8592,45.92625 -50.6964,75.33687 -63.8848,-1.71207 -5.2027,91.70126 156.0518,37.30544 49.1235,100.9452 17.4837,8.4665 43.8905,3.2729 45.0702,-51.123 84.726,-27.9647 66.0021,15.581 37.1754,-26.3918"
+         id="chateaubriant"
+         inkscape:label="chateaubriant"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2236.3471,1544.101 59.4988,-96.9645 -19.4498,-66.9278 35.058,-110.4855 -11.1617,-41.7701 -131.7321,-22.6017 2.9644,-22.0935 -21.053,-6.4157 -94.7684,-88.0593 -79.3115,-37.9286 -37.1754,26.3918 -66.0021,-15.581 -84.726,27.9647 -45.0702,51.123 -43.8905,-3.2729 17.4533,103.9549 5.4447,37.1482 46.1895,3.291 35.4814,29.5437 20.8715,65.99 152.543,170.5802 41.8336,18.4183 22.7469,-4.5705 64.0057,17.7074 130.2499,-35.4421"
+         id="erbray"
+         inkscape:label="erbray"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1869.9777,578.18571 84.4235,-5.73209 26.4371,-78.08945 5.6262,-21.062 -107.2005,-35.42096 -2.4502,-42.29644 -40.2607,-20.72322 -23.866,-84.62615 -45.1307,-49.71941 -61.5859,20.00937 -15.215,-16.77278 -12.0389,-8.24271 -13.2186,6.25236 -4.6885,22.37782 -24.4105,38.68779 -4.0533,67.98646 1.2704,114.76572 17.2719,40.39381 196.1916,54.2839 22.8981,-2.07202"
+         id="ferce"
+         inkscape:label="ferce"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2192.3054,2096.9915 -6.5035,-20.8654 101.5442,-159.4034 9.74,-19.5435 -21.053,-7.8404 -83.1228,-33.6212 -31.7609,-56.9216 -109.8019,-10.5295 -12.0691,-42.1966 -46.1592,-49.0721 -22.2024,-2.8583 -85.0889,65.1853 16.9391,86.7677 -20.0547,9.9427 -100.7274,144.8478 26.8909,21.5037 21.5974,6.5397 55.0219,33.0313 197.8553,44.8434 86.2989,-10.6505 22.6561,0.8409"
+         id="grand-auverne"
+         inkscape:label="grand-auverne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1476.2333,1829.8219 58.3796,-34.6043 19.601,-12.3262 -9.1048,-109.1757 35.2697,-175.4109 82.9716,-69.7772 -5.6867,-43.7483 -39.7465,18.4637 -74.1693,-49.541 -22.1116,5.8259 -32.7591,30.0548 -12.6741,43.6577 -111.6773,59.7346 -86.9644,14.5102 -65.9114,-10.348 -22.2326,-0.242 -12.6741,65.2399 33.2733,132.446 -22.9586,65.751 -10.0728,20.9652 44.9795,-3.4967 97.0976,49.0721 134.5754,4.8458 22.5956,-1.8966"
+         id="isse"
+         inkscape:label="isse"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2638.6215,1432.6414 80.9752,-6.1162 7.5319,-21.4008 -44.8283,-1.5578 -34.4832,-56.3499 30.7022,-82.7537 -8.5604,-44.5439 15.6385,-42.5626 -22.7771,-15.941 -62.5841,-104.1485 2.4199,-64.01479 -88.991,14.43159 -19.601,12.0872 -31.3374,29.5921 -22.5956,64.3264 -86.6921,73.4947 -181.9143,-3.9263 -2.9644,22.0935 131.7321,22.6017 11.1617,41.7701 67.4541,-13.4787 74.1995,53.9995 136.1483,27.4566 21.0227,9.861 12.7044,67.9471 15.6384,17.1327"
+         id="juigne-des-moutiers"
+         inkscape:label="juigne-des-moutiers"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1476.2031,1433.2404 12.6741,-43.6577 32.7591,-30.0548 22.1116,-5.8259 74.1693,49.541 39.7465,-18.4637 53.57,-88.3316 11.1919,-17.8647 -5.4447,-37.1482 -17.4533,-103.9549 -17.4837,-8.4665 -34.211,30.4602 -116.5776,6.5397 -156.7173,47.5929 7.8646,21.3494 44.6165,151.6265 49.184,46.6583"
+         id="louisfert"
+         inkscape:label="louisfert"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1741.9359,2165.8431 85.6637,-54.3565 -6.2615,-63.2526 9.1351,-19.3076 -21.5974,-6.5397 -26.8909,-21.5037 100.7274,-144.8478 -22.4444,2.0176 -89.6564,2.1204 -40.412,-18.4667 -62.2514,20.5992 -13.8538,-42.7441 -99.8804,-36.6702 -19.601,12.3262 -58.3796,34.6043 78.9788,158.7409 -19.843,10.6596 -8.4393,66.8794 -53.2373,40.173 6.6546,21.8182 106.9889,39.0447 134.0612,-11.2706 20.5387,9.976"
+         id="la_meilleraye-de-bretagne"
+         inkscape:label="la_meilleraye-de-bretagne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1882.7123,1856.0352 20.0547,-9.9427 -16.9391,-86.7677 85.0889,-65.1853 22.2024,2.8583 66.5466,-75.2036 -12.8858,-38.8723 -4.6885,-21.0862 -22.7469,4.5705 -41.8336,-18.4183 -152.543,-170.5802 -20.8715,-65.99 -35.4814,-29.5437 -46.1895,-3.291 -11.1919,17.8647 -53.57,88.3316 5.6867,43.7483 -82.9716,69.7772 -35.2697,175.4109 9.1048,109.1757 99.8804,36.6702 13.8538,42.7441 62.2514,-20.5992 40.412,18.4667 89.6564,-2.1204 22.4444,-2.0176"
+         id="moisdon-la-riviere"
+         inkscape:label="moisdon-la-riviere"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2038.0987,704.71808 22.0209,-83.8911 -8.6209,-20.52662 -41.2286,-13.47569 -6.9572,-87.16399 -4.386,-21.79705 -12.4624,-4.56146 -5.6262,21.062 -26.4371,78.08945 -84.4235,5.73209 -0.363,20.80792 -3.2971,61.15333 35.0277,46.12892 82.6691,23.62708 33.4548,-18.9295 20.6295,-6.25538"
+         id="noyal-sur-brutz"
+         inkscape:label="noyal-sur-brutz"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2297.0861,1897.1792 3.2063,-57.7655 26.0742,-23.9871 18.1491,-8.53 -1.6637,-22.3688 7.4411,-177.0623 -18.754,-11.57 -95.192,-51.7945 -130.2499,35.4421 -64.0057,-17.7074 4.6885,21.0862 12.8858,38.8723 -66.5466,75.2036 46.1592,49.0721 12.0691,42.1966 109.8019,10.5295 31.7609,56.9216 83.1228,33.6212 21.053,7.8404"
+         id="petit-auverne"
+         inkscape:label="petit-auverne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1890.2139,792.69878 0.484,-66.82794 10.6474,-19.59496 -35.0277,-46.12892 3.2971,-61.15333 0.363,-20.80792 -22.8981,2.07202 -196.1916,-54.2839 -17.2719,-40.39381 -1.2704,-114.76572 -21.9604,3.62679 -59.8617,-23.08563 -131.3389,19.50119 -13.0371,18.02809 -107.8357,24.0929 -38.9601,-19.28642 -37.9316,23.41231 58.8031,100.37048 24.0475,135.82167 198.7627,37.53533 5.1422,45.70846 -107.987,80.92978 -12.1599,19.87929 6.4429,19.55567 87.5996,42.15729 63.8848,1.71207 50.6964,-75.33687 178.8592,-45.92625 92.2881,7.11746 22.4141,6.07087"
+         id="rouge"
+         inkscape:label="rouge"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1388.0288,837.34854 12.1599,-19.87929 107.987,-80.92978 -5.1422,-45.70846 -198.7627,-37.53533 -24.0475,-135.82167 -58.8031,-100.37048 -85.7846,77.48751 -116.1239,0.30248 -86.48028,31.34044 -43.83003,-6.95715 -40.3817,16.67599 -4.47678,17.68023 -16.81815,43.98127 39.6255,53.53979 87.44832,-3.98372 116.72872,61.95491 66.6979,1.79374 13.3396,18.06741 214.5826,105.44616 22.0814,2.91595"
+         id="ruffigne"
+         inkscape:label="ruffigne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1374.538,1213.6062 156.7173,-47.5929 116.5776,-6.5397 34.211,-30.4602 -49.1235,-100.9452 -156.0518,-37.30544 5.2027,-91.70126 -87.5996,-42.15729 -6.4429,-19.55567 -22.0814,-2.91595 -214.5826,-105.44616 -1.2402,22.81944 6.0194,91.02067 29.2201,34.96121 6.7151,43.87541 -84.7562,74.88008 -19.2683,132.66976 0,1.1918 87.3576,93.4073 112.5546,12.3928 66.0021,-13.1339 20.569,-9.4648"
+         id="saint-aubin-des-chateaux"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="saint-aubin-des-chateaux"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2350.2931,1607.4655 111.8891,-14.0081 53.4491,-70.0222 39.081,-23.5212 44.9795,3.2215 31.6701,-25.9018 7.2596,-44.5923 -15.6384,-17.1327 -12.7044,-67.9471 -21.0227,-9.861 -136.1483,-27.4566 -74.1995,-53.9995 -67.4541,13.4787 -35.058,110.4855 19.4498,66.9278 -59.4988,96.9645 95.192,51.7945 18.754,11.57"
+         id="saint-julien-de-vouvantes"
+         inkscape:label="saint-julien-de-vouvantes"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2513.6651,1007.6838 -81.6709,-34.44095 -87.0853,-66.35304 -1.6637,-43.30069 -0.6654,-22.2992 -63.4916,-93.75211 -80.3399,-42.21778 -160.6496,-0.60195 -20.6295,6.25538 -33.4548,18.9295 -82.6691,-23.62708 -10.6474,19.59496 -0.484,66.82794 37.6896,23.73295 56.9276,91.73456 -32.0634,80.06468 23.6241,62.62333 79.3115,37.9286 94.7684,88.0593 21.053,6.4157 181.9143,3.9263 86.6921,-73.4947 22.5956,-64.3264 31.3374,-29.5921 19.601,-12.0872"
+         id="soudan"
+         inkscape:label="soudan"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1632.3457,370.8143 4.0533,-67.98646 24.4105,-38.68779 4.6885,-22.37782 -19.1473,-11.3341 -35.0277,-22.64098 -129.7659,-4.51005 -36.7217,-22.6561 -64.6107,-3.38178 -11.0407,19.29247 4.1138,20.78373 26.5582,32.62297 19.3287,120.91826 131.3389,-19.50119 59.8617,23.08563 21.9604,-3.62679"
+         id="soulvache"
+         inkscape:label="soulvache"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2405.0126,842.69042 27.7379,-84.02419 -45.4937,-50.4363 11.2826,-90.04667 -22.4746,-7.19914 -377.1379,-133.12049 4.386,21.79705 6.9572,87.16399 41.2286,13.47569 8.6209,20.52662 -22.0209,83.8911 160.6496,0.60195 80.3399,42.21778 63.4916,93.75211 62.4328,1.4005"
+         id="villepot"
+         inkscape:label="villepot"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;decd87;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_sud_estuaire.communes"
+       inkscape:label="cc_sud_estuaire"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 1731.7592,760.52862 -25.5116,-23.79645 -13.8062,30.48537 -94.8003,31.34268 -431.1673,42.06196 9.9473,92.78518 -67.2735,65.2153 -7.8464,92.95654 30.8284,55.3109 22.8103,21.9098 95.9151,-22.0385 107.3201,70.4892 192.3447,-33.358 32.2431,-256.53084 129.659,-140.07811 19.3373,-26.75503"
+         id="corsept"
+         inkscape:label="corsept"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2450.8002,1569.5679 32.3718,-1.0291 63.7147,-62.7714 152.0835,49.0509 48.6649,-78.3356 -1.3291,-94.243 57.8835,-28.5985 22.3387,-23.3249 -10.9337,-65.4726 -300.6078,-350.60224 -18.2655,-57.36907 11.9625,-30.9998 -31.8144,-5.23075 -248.6415,-66.58749 -31.0427,-7.07469 -142.8223,-67.23057 -28.9845,-12.04833 -88.9691,6.86025 -2.9154,30.31382 -5.8312,91.15569 25.8975,-20.53788 207.6084,99.68813 130.4308,96.30087 -70.918,107.92056 -53.5527,189.772 -160.5302,248.2984 -18.6942,27.2268 95.229,-0.1286 86.3535,44.1628 121.984,-41.3758 129.7017,8.7038 29.6278,13.5063"
+         id="frossay"
+         inkscape:label="frossay"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1879.5121,832.13263 28.2557,-12.51987 19.8948,-23.58224 -27.5268,-13.97783 -170.8635,-65.8584 -23.0247,20.53788 25.5116,23.79645 115.8098,62.72849 31.9431,8.87552"
+         id="paimboeuf"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="paimboeuf"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1091.311,1585.0463 0.3431,-31.8573 -58.7411,-146.5524 1.8009,-63.6718 56.3398,-28.9416 63.8862,-145.2233 -22.8103,-21.9098 -30.8284,-55.3109 7.8464,-92.95654 67.2735,-65.2153 -9.9473,-92.78518 -32.7578,2.8728 -91.3701,35.93056 -130.13062,8.53243 -25.76884,225.57393 -58.90391,74.005 106.0682,235.0068 0.77178,130.8597 124.94249,27.0979 31.986,4.545"
+         id="saint-brevin-les-pins"
+         inkscape:label="saint-brevin-les-pins"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1959.5199,1618.2327 -52.6525,-17.4508 6.7745,-64.4864 -84.4241,-93.1708 43.2625,-255.4162 -42.1048,-118.6825 33.7438,-55.0964 -10.8049,-162.28796 26.1977,-19.50901 -31.9431,-8.87552 -115.8098,-62.72849 -19.3373,26.75503 -129.659,140.07811 -32.2431,256.53084 -192.3447,33.358 -107.3201,-70.4892 -95.9151,22.0385 -63.8862,145.2233 -56.3398,28.9416 -1.8009,63.6718 58.7411,146.5524 -0.3431,31.8573 86.0963,35.759 250.3994,-15.1782 25.5544,18.1797 139.6921,27.9126 26.0262,12.1769 2.0153,-29.3705 84.8527,41.0331 188.1857,1.1146 51.5805,-29.5847 13.8063,-28.8561"
+         id="saint-pere-en-retz"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="saint-pere-en-retz"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1959.5199,1618.2327 1.2433,-1.2433 14.0636,-49.8655 13.0774,-22.4245 18.6942,-27.2268 160.5302,-248.2984 53.5527,-189.772 70.918,-107.92056 -130.4308,-96.30087 -207.6084,-99.68813 -25.8975,20.53788 -19.8948,23.58224 -28.2557,12.51987 -26.1977,19.50901 10.8049,162.28796 -33.7438,55.0964 42.1048,118.6825 -43.2625,255.4162 84.4241,93.1708 -6.7745,64.4864 52.6525,17.4508"
+         id="saint-viaud"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="saint-viaud"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_pornic.communes"
+       inkscape:label="cc_pornic.communes"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 2673.0323,1288.1394 26.7445,1.8291 -20.4039,-57.4723 76.2098,-165.7917 71.0884,-57.8787 -98.6865,-115.14787 -10.0394,-29.0612 -2.1541,-30.6059 59.3419,-69.90962 -2.1948,-31.3375 -77.2666,-89.21601 36.093,-151.44402 86.6148,-83.15998 -28.0859,-12.80316 -122.9515,-8.25099 -115.6355,39.22258 -81.8594,-41.86457 -90.273,0.12197 -12.3967,21.25743 -13.3316,47.2703 29.8334,7.88509 8.5356,61.04921 53.8955,29.99609 30.362,52.02576 -18.575,89.46015 18.7781,120.71607 -14.551,213.91567 -84.4605,83.038 12.9658,26.7038 161.5238,60.6833 62.2685,94.6626 58.6103,-5.8936"
+         id="arthon-en-retz"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="arthon-en-retz"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2143.3038,1585.4183 56.4968,-87.2652 8.3321,-24.8749 -159.8168,-182.3342 -51.9851,11.5026 -42.3929,43.3683 12.7219,28.6142 99.9872,157.7033 76.6568,53.2859"
+         id="la_bernerie-en-retz"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="la_bernerie-en-retz"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2377.6639,1111.9833 84.4605,-83.038 14.551,-213.91567 -18.7781,-120.71607 18.575,-89.46015 -30.362,-52.02576 -53.8955,-29.99609 -8.5356,-61.04921 -29.8334,-7.88509 -1.1788,1.1788 -13.0878,27.3541 -48.8961,28.04524 -178.3916,-1.05683 -80.4369,-38.89736 -1.9102,27.84196 -41.1736,309.10646 80.7619,165.2227 6.4219,92.87417 271.9976,56.2936 29.7117,-9.8768"
+         id="chauve"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="chauve"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2410.3019,1959.0693 1.0567,-59.9111 -63.8941,-62.3496 -0.2846,-60.8052 25.078,-86.94 60.1144,4.6335 71.129,-54.6271 27.3541,-13.3721 -26.1755,-14.9575 -296.5472,-137.462 -8.3321,24.8749 -56.4968,87.2652 23.7368,20.6478 71.251,60.3987 122.545,286.5889 24.7124,2.9266 24.7529,3.089"
+         id="les_moutiers-en-retz"
+         inkscape:label="les_moutiers-en-retz"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1251.2073,1014.1504 10.3767,-28.45167 236.8435,-112.1807 -26.6225,-11.8683 -192.898,-159.2478 -19.2901,23.93987 -233.1083,8.73885 -81.05869,35.52378 -21.8793,57.513 154.41099,139.6161 173.2257,46.41687"
+         id="la_plaine-sur-mer"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="plaine-sur-mer"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2530.8554,1625.6977 125.1059,-60.155 1.8291,-28.6549 9.2263,-218.1018 6.0156,-30.6466 -58.6103,5.8936 -62.2685,-94.6626 -161.5238,-60.6833 -12.9658,-26.7038 -29.7117,9.8768 -271.9976,-56.2936 -6.4219,-92.87417 -80.7619,-165.2227 41.1736,-309.10646 -24.6716,-11.54326 -132.4221,-26.46009 -10.3644,29.30515 -6.178,61.86211 -48.8963,77.67275 -139.8599,122.66719 -148.6394,-24.1838 -20.4852,145.83481 -236.8435,112.1807 -10.3767,28.45167 -13.2626,19.591 -15.8028,17.7212 21.2289,22.5174 165.3528,79.624 152.7039,24.9154 91.8174,-10.8522 18.1278,51.9038 282.5652,126.2439 42.3929,-43.3683 51.9851,-11.5026 159.8168,182.3342 296.5472,137.462 26.1755,14.9575"
+         id="pornic"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="pornic"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1222.1419,1051.4626 15.8028,-17.7212 13.2626,-19.591 -173.2257,-46.41687 -154.41099,-139.6161 -22.94013,21.3792 -73.25885,58.6918 179.78167,104.74257 214.9886,38.5316"
+         id="prefailles"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="prefailles"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1498.4275,873.51803 20.4852,-145.83481 148.6394,24.1838 139.8599,-122.66719 48.8963,-77.67275 6.178,-61.86211 10.3644,-29.30515 -24.2244,-17.23357 -237.3678,14.38851 -81.6155,-33.89818 -30.3213,-4.30824 -118.4401,-25.68782 -14.6729,26.17548 -53.1232,233.58784 -34.1785,49.01809 192.898,159.2478 26.6225,11.8683"
+         id="saint-michel-chef-chef"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="saint-michel-chef-chef"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_pays_redon.communes"
+       inkscape:label="cc_pays_redon"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 1508.6097,1219.5995 168.2219,-23.2022 15.8174,-45.8241 37.9685,-27.7186 42.5113,23.421 22.4826,9.5038 22.947,-10.5052 73.3504,-183.99281 -20.2278,-70.56165 -66.7847,-74.78293 -108.8318,-129.62001 -74.08,-4.77507 -24.2068,-6.12801 -24.5719,0.25533 -37.3384,-26.30932 7.3947,-98.10453 -16.7789,-46.21872 -1.6249,-0.99149 -19.3656,16.85534 -183.2434,171.49806 15.3531,19.94255 -25.9976,69.79232 -87.2114,42.24282 -56.2396,79.45521 -46.4576,18.5896 42.1135,143.48101 4.6424,24.8038 97.6238,79.4685 99.945,0.3582 119.012,39.8154 23.5768,9.2517"
+         id="avessac"
+         inkscape:label="avessac"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2664.5753,1181.7637 84.1605,-7.1361 3.2497,-24.8071 -30.8389,-62.3048 -26.9593,-172.55915 35.9788,-142.32037 -24.3064,-7.10955 -122.494,-24.72427 -48.6129,14.01019 -43.1082,-26.62102 -2.6528,-49.88293 -38.93,-32.25826 -48.3146,-12.51798 -46.0264,16.44415 -87.3109,84.80395 13.0984,47.75404 97.3585,115.25167 98.6847,77.39262 36.3768,146.62791 73.483,11.8747 52.1279,51.395 25.0361,-3.3127"
+         id="conquereuil"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="conquereuil"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1496.0088,1606.6689 61.2801,-73.8047 -111.4846,-163.8613 5.9689,-74.7763 45.5952,-6.3435 14.8227,-43.5494 -3.5814,-24.7342 -23.5768,-9.2517 -119.012,-39.8154 -99.945,-0.3582 -97.6238,-79.4685 -24.7375,3.5814 -74.5442,3.8896 -38.698,29.9935 -92.88168,-25.3278 -7.26207,23.3415 -82.1711,52.4528 2.35446,119.5592 -23.07962,8.0911 7.92528,17.7275 30.54071,20.3901 63.8334,-35.0702 236.96292,78.0592 39.8254,30.1791 102.6309,74.4215 40.0576,91.7113 125.213,9.4904 21.5872,13.473"
+         id="fegreac"
+         inkscape:label="fegreac"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2383.5754,1429.7657 85.3876,-37.8922 114.1375,29.6751 23.4443,4.4932 17.2765,-139.7371 44.4015,-81.047 -3.6475,-23.494 -25.0361,3.3127 -52.1279,-51.395 -73.483,-11.8747 -36.3768,-146.62791 -98.6847,-77.39262 -97.3585,-115.25167 -13.0984,-47.75404 87.3109,-84.80395 -17.7075,-17.09411 -120.7364,-8.21709 -41.8814,-88.92246 -79.4851,-52.4031 20.692,-43.24094 -23.4441,-2.99437 -103.261,88.3919 -23.6101,0.0696 68.0448,67.23235 -30.8391,64.73539 30.7727,117.90119 -171.1399,-4.71538 -41.4503,26.83989 -16.7791,18.37739 66.7847,74.78294 20.2278,70.56168 -73.3504,183.99281 -22.947,10.5052 -9.9812,23.2519 20.692,46.0562 139.903,106.9285 96.6952,-20.2012 125.6773,10.346 68.0116,-21.9356 127.5011,113.4776 19.465,16.0628"
+         id="guemene-penfao"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="guemene-penfao"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1804.8963,815.93681 16.7791,-18.3774 41.4503,-26.83989 171.1399,4.71538 -30.7727,-117.90118 30.8391,-64.73539 -68.0448,-67.23235 -24.4059,-5.08679 -240.0138,50.05869 -104.0898,104.87584 24.2068,6.12801 74.08,4.77507 108.8318,129.62001"
+         id="masserac"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="masserac"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2704.2017,520.82406 -16.2818,-17.7971 -67.8126,-22.91038 -107.8371,52.04828 -71.0623,-13.02864 -162.4187,-51.4481 -39.1291,-30.95507 -46.9218,17.34942 -18.835,7.92861 -57.3009,-21.91227 -20.692,43.24094 79.4851,52.4031 41.8814,88.92246 120.7364,8.21709 17.7075,17.09411 46.0264,-16.44415 48.3146,12.51798 38.93,32.25826 2.6528,49.88293 43.1082,26.62102 48.6129,-14.01019 122.494,24.72427 24.3064,7.10955 24.6712,2.1554 71.8582,-127.88571 -88.3388,-31.02802 -50.4698,-76.41443 16.3148,-18.63936"
+         id="pierric"
+         inkscape:label="pierric"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1932.8948,1907.4487 31.5354,-39.1125 172.201,-98.2571 61.9765,-134.8095 141.3621,-45.3201 24.2401,-40.2134 -2.3876,-74.9786 21.7531,-44.9918 -19.465,-16.0628 -127.5011,-113.4776 -68.0116,21.9355 -125.6773,-10.346 -96.6952,20.2012 -139.903,-106.9284 -20.692,-46.0563 9.9812,-23.2519 -22.4826,-9.5038 -42.5113,-23.421 -37.9685,27.7186 -15.8174,45.8241 -168.2219,23.2022 3.5814,24.7342 -14.8227,43.5494 -45.5952,6.3435 -5.9689,74.7763 111.4846,163.8613 -61.2801,73.8047 13.9936,124.3475 66.9506,31.2469 13.7946,96.1879 119.8742,25.288 193.6557,-18.2382 28.6173,41.9477"
+         id="plesse"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="plesse"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1168.4521,1090.7057 -4.6424,-24.8038 -42.1135,-143.48101 46.4576,-18.5896 56.2396,-79.45521 87.2114,-42.24282 25.9976,-69.79232 -15.3531,-19.94255 -22.5158,-4.22462 -89.1015,-17.60476 -39.2285,17.67108 -22.0184,12.46493 -28.6173,95.38871 -147.26458,-2.56993 -81.67356,126.11496 47.71751,58.39853 5.30563,100.42241 -7.26208,24.3827 92.88168,25.3278 38.698,-29.9935 74.5442,-3.8896 24.7375,-3.5814"
+         id="saint-nicolas-de-redon"
+         inkscape:label="saint-nicolas-de-redon"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_carene.communes"
+       inkscape:label="cc_carene"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 2546.5485,1182.1219 -3.7503,-26.6976 94.6486,-49.4966 50.0907,-94.2772 -41.9217,-33.08442 -56.6258,6.46085 -43.8525,-34.68086 -14.9641,-80.68717 -102.0378,-132.85711 -55.0293,-12.84756 -64.869,91.26964 -14.8526,83.8434 3.5276,15.3353 78.4591,78.31068 7.5006,166.53555 135.7163,21.2393 27.9602,1.6338"
+         id="besne"
+         inkscape:label="besne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1720.547,572.52755 5.1093,-27.18411 -5.9782,-54.42389 -72.2284,-39.56008 -8.7632,-26.27438 45.3304,-27.65566 25.8213,-79.05334 -23.7791,-37.49185 -54.9696,-7.81621 -133.5256,31.2463 -24.7112,-12.6062 2.1945,26.36348 -52.9312,1.97912 -60.1088,49.87155 19.2343,103.14066 49.7118,70.68757 139.0953,100.89047 82.6959,-18.36533 67.8025,-53.7481"
+         id="la_chapelle-des-marais"
+         inkscape:label="la_chapelle-des-marais"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2784.2283,1525.6269 27.2917,-0.7426 15.0755,-136.5701 -28.9627,-76.0828 -4.0103,-26.735 -247.074,-103.3745 -27.9602,-1.6338 -135.7163,-21.2393 -7.5006,-166.53555 -78.4591,-78.31068 -14.9269,22.57611 -46.7861,64.57192 -79.0533,-70.03034 -42.5901,94.16594 -29.7796,26.4005 42.9615,102.4464 97.1365,134.8622 36.5004,250.8616 -19.0858,21.0909 199.1001,16.932 159.9633,-57.7399 27.626,4.8272 26.8091,76.6398 101.518,-82.8408 27.9229,6.4608"
+         id="donges"
+         inkscape:label="donges"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2241.2889,1561.3478 19.0858,-21.0909 -36.5004,-250.8616 -97.1365,-134.8622 -42.9615,-102.4464 -21.6477,66.2431 -61.3786,127.8814 -74.3006,41.9217 -110.8342,6.6465 -94.6078,-60.6361 -0.1634,20.3482 22.3495,33.8271 67.3569,46.1917 76.3168,111.6921 -66.8074,82.8779 14.6003,42.8127 -2.3765,23.6902 64.3491,74.5604 151.9801,-72.3325 164.5675,-35.0895 28.1086,-1.3738"
+         id="montoir-de-bretagne"
+         inkscape:label="montoir-de-bretagne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1130.521,2047.5128 19.6464,-19.6056 27.2101,-133.1543 40.013,-38.0599 9.4278,-136.6816 -114.0908,-42.6643 -50.8295,66.5028 -76.87747,39.211 -135.90563,-44.001 58.0925,63.0868 44.78822,102.2605 178.52538,143.1056"
+         id="pornichet"
+         inkscape:label="pornichet"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1199.4373,1514.9331 113.8086,-83.9919 82.5809,4.6415 32.3083,-41.7732 -10.9539,-26.1778 -44.7437,-71.4413 -72.8634,-41.9589 -37.4956,-74.0404 -76.7326,74.9316 -27.7336,0 -46.9828,-101.3323 15.5471,-54.3979 -22.1008,16.1894 -91.0691,61.0816 -46.31065,67.6912 -75.49982,30.7077 -63.73282,119.3412 117.38437,68.7308 177.87552,61.453 50.733,-19.0115 25.981,9.3572"
+         id="saint-andre-des-eaux"
+         inkscape:label="saint-andre-des-eaux"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1527.9598,1459.1986 83.513,-109.9099 97.6525,35.7578 21.1612,-17.4148 -2.1091,-54.4722 15.0161,-24.8409 -22.3495,-33.8271 0.1634,-20.3482 -7.6678,-53.0612 63.8592,-89.5985 159.7218,-31.3392 -13.3674,-53.8781 40.4736,-102.81752 12.4019,-24.84115 -16.5978,-22.05613 -36.8346,-40.585 -54.3608,8.31752 1.6338,-76.60265 -77.2377,-113.2516 -14.8786,-19.32333 -57.606,-42.57889 -67.8025,53.7481 -82.6959,18.36533 -139.0953,-100.89047 -49.7118,-70.68757 10.0255,140.5805 -71.3856,90.29683 -28.8253,-0.25993 -26.7126,8.54029 21.6998,51.3531 -63.8071,154.72771 -108.703,75.52585 23.5936,78.27351 -10.9391,25.8436 -0.011,1.4481 -15.5471,54.3979 46.9828,101.3323 27.7336,0 76.7326,-74.9316 37.4956,74.0404 72.8634,41.9589 44.7437,71.4413 10.9539,26.1778 50.0795,7.4635 30.6151,40.9934 19.1301,16.9322"
+         id="saint-joachim"
+         inkscape:label="saint-joachim"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2083.7763,1052.0867 29.7796,-26.4005 -17.4518,-19.0486 -119.6754,-128.02997 -12.4019,24.84115 -40.4736,102.81752 13.3674,53.8781 -159.7218,31.3392 -63.8592,89.5985 7.6678,53.0612 94.6078,60.6361 110.8342,-6.6465 74.3006,-41.9217 61.3786,-127.8814 21.6477,-66.2431"
+         id="saint-malo-de-guersac"
+         inkscape:label="saint-malo-de-guersac"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1832.2836,1595.5832 2.3765,-23.6902 -14.6003,-42.8127 -21.102,19.457 -128.4976,113.103 -83.0302,-75.1173 -59.4702,-127.3244 -19.1301,-16.9322 -30.6151,-40.9934 -50.0795,-7.4635 -32.3083,41.7732 -82.5809,-4.6415 -113.8086,83.9919 -13.3265,23.0959 -73.3833,139.3181 114.0908,42.6643 -9.4278,136.6816 -40.013,38.0599 -27.2101,133.1543 -19.6464,19.6056 44.8365,23.8014 137.532,-30.4851 125.2637,-110.4296 112.2306,-15.4469 43.0429,-69.4363 132.8311,-45.0406 29.5939,-48.7911 50.1947,-24.6183 16.7574,-104.5257 9.4798,-26.9574"
+         id="saint-nazaire"
+         inkscape:label="saint-nazaire"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1820.0598,1529.0803 66.8074,-82.8779 -76.3168,-111.6921 -67.3569,-46.1917 -15.0161,24.8409 2.1091,54.4722 -21.1612,17.4148 -97.6525,-35.7578 -83.513,109.9099 59.4702,127.3244 83.0302,75.1173 128.4976,-113.103 21.102,-19.457"
+         id="trignac"
+         inkscape:label="trignac"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_guerande_atlantique.communes"
+       inkscape:label="cc_guerande_atlantique"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 2013.5833,1174.1257 70.9225,-82.9648 137.8504,-10.6816 55.628,-58.7119 130.5051,44.1162 28.3975,0.2561 70.3262,-88.95669 -9.8767,-138.49416 -18.9489,-101.60995 59.2168,-49.13141 52.1457,-1.94976 -2.1619,-25.97222 31.6495,-99.18467 -15.5468,-103.95477 81.5419,-71.45655 19.7827,-18.89389 -22.7421,-15.06756 -67.5754,-45.92329 35.6478,-68.80812 -18.0964,-20.42295 -108.3555,-0.30728 -94.5608,-43.33339 -3.5227,-0.0293 0.9109,56.09271 -35.0956,106.92145 -66.017,89.91879 -25.7015,162.94101 -218.7447,37.48049 -57.1645,-61.5798 -56.2976,-0.3841 -42.1371,70.98468 85.8619,69.7958 -9.3098,110.22467 -29.3961,104.95344 -78.1179,74.86223 75.9413,60.38369 -20.7594,94.9997 38.9437,21.2535 24.8565,2.6337"
+         id="herbignac"
+         inkscape:label="herbignac"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1894.6012,994.85511 78.1179,-74.8622 29.3961,-104.95344 9.3098,-110.22467 -85.8619,-69.7958 42.1371,-70.98468 -99.3565,42.76639 -80.3421,-23.59083 -47.84,-67.97774 -10.3304,-82.55513 -25.5955,8.85252 -74.3098,74.82197 -70.3811,34.0163 -37.4842,100.28574 55.4233,90.32851 -47.5657,93.59149 112.2512,78.42149 -7.049,26.54656 -2.996,15.07851 103.9621,18.67431 46.1464,-24.57475 86.2132,52.81874 26.1551,-6.68329"
+         id="asserac"
+         inkscape:label="asserac"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1467.6762,2125.2946 14.7896,-24.0334 69.43,-120.5331 -227.0485,-161.6863 -141.3475,-10.4255 -26.3014,-10.8278 -4.0056,-2.1949 -13.8202,28.2768 13.6117,23.8506 37.4365,38.4097 -6.5479,80.4772 62.5858,49.3839 182.3543,69.5763 38.8632,39.7265"
+         id="batz-sur-mer"
+         inkscape:label="batz-sur-mer"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1183.8729,1966.6079 6.5479,-80.4772 -37.4365,-38.4097 -13.6117,-23.8506 -22.5153,-16.6442 -135.597,7.6089 -22.9653,47.9936 225.5779,103.7792"
+         id="le_croisic"
+         inkscape:label="le_croisic"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2232.8073,2025.1004 72.2941,-137.2505 13.1288,-22.7532 -25.5954,-9.2182 -49.9801,18.7292 -175.2357,-60.5408 -115.6423,-67.7108 -25.1528,-10.4987 -42.6969,33.7274 -67.4217,85.5987 -13.6482,51.7248 -145.9238,66.3939 -58.5838,33.4712 16.2491,44.226 155.6322,-48.7253 179.7754,68.1863 23.1006,15.437 133.8888,43.348 75.7365,-38.6292 50.0752,-65.5158"
+         id="la_baule-escoublac"
+         inkscape:label="la_baule-escoublac"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1551.8958,1980.7281 95.1681,-31.7154 9.8694,24.2895 145.9238,-66.3939 13.6482,-51.7248 67.4217,-85.5987 42.6969,-33.7274 25.1528,10.4987 62.7869,-117.57 74.3793,-30.2522 45.6234,-66.6864 89.7176,-60.1751 21.7729,-15.9491 0.018,-1.4267 0.7316,-28.0573 -40.6448,-23.8141 -74.7268,37.8611 -162.0083,-33.8371 -64.3379,51.3226 -55.5403,3.658 -26.9746,-7.5722 -11.9472,-25.1675 24.3516,-49.9326 80.8249,-18.6926 122.706,-111.388 -24.9187,-74.5512 -24.8565,-2.6337 -38.9437,-21.2535 -20.3535,18.5464 -182.6871,121.7402 -48.2353,95.9144 -72.1077,-36.3978 -29.8315,-72.0636 -106.4495,-13.5349 3.9398,54.9075 -32.6117,75.8682 -107.3567,125.0325 -106.4313,188.0975 -51.1982,18.3635 -39.262,71.0761 26.3014,10.8278 141.3475,10.4255 227.0485,161.6863"
+         id="guerande"
+         inkscape:label="guerande"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1389.8949,1210.4137 16.6771,-17.2661 46.3623,10.4621 22.6434,-7.938 49.6582,-23.4847 78.6958,-110.5833 20.3535,-80.44429 7.8392,-26.53931 2.996,-15.07851 -158.3977,-8.97689 -38.2487,-35.90386 -156.0712,93.79277 -43.8748,125.89929 6.109,53.554 37.828,34.2396 80.3749,10.3523 27.055,-2.0851"
+         id="mesquer"
+         inkscape:label="mesquer"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1109.4095,1307.023 93.1671,-33.1786 71.8845,28.7524 52.0616,-9.1453 48.8827,-60.7969 14.4895,-22.2409 -27.055,2.0851 -80.3749,-10.3523 -37.828,-34.2396 -6.109,-53.554 43.8748,-125.89929 -26.1039,8.9877 -173.9408,134.21429 -126.37498,49.6399 -6.7601,26.7039 160.18648,99.0236"
+         id="piriac-sur-mer"
+         inkscape:label="piriac-sur-mer"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1614.5986,2050.9994 -16.2491,-44.226 58.5838,-33.4712 -9.8694,-24.2895 -95.1681,31.7154 -69.43,120.5331 -14.7896,24.0334 152.2705,46.4574 -5.3481,-120.7526"
+         id="le_pouliguen"
+         inkscape:label="le_pouliguen"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2246.0678,1454.2966 10.7766,-25.4602 -23.2433,-77.1119 107.0897,-74.405 62.86,-152.4313 -21.3777,-50.591 26.3162,-8.4136 -130.5051,-44.1162 -55.628,58.7119 -137.8504,10.6816 -70.9225,82.9648 24.9187,74.5512 -122.706,111.388 -80.8249,18.6926 -24.3516,49.9326 11.9472,25.1675 26.9745,7.5722 55.5404,-3.658 64.3379,-51.3226 162.0083,33.8371 74.7268,-37.8611 40.6448,23.8141 -0.7316,28.0573"
+         id="saint-lyphard"
+         inkscape:label="saint-lyphard"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1949.7831,1150.2385 20.7594,-94.9997 -75.9413,-60.38369 -26.1551,6.68329 -86.2132,-52.81874 -46.1464,24.57475 -103.9621,-18.67431 -7.8392,26.53931 -20.3535,80.44429 -78.6958,110.5833 -49.6582,23.4847 5.2274,46.8963 9.3133,21.8752 106.4496,13.5349 29.8315,72.0636 72.1077,36.3978 48.2352,-95.9144 182.6872,-121.7402 20.3535,-18.5464"
+         id="saint-molf"
+         inkscape:label="saint-molf"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1157.1984,1797.7885 39.2619,-71.0761 51.1983,-18.3635 106.4312,-188.0975 107.3568,-125.0325 32.6116,-75.8682 -3.9398,-54.9075 -9.3133,-21.8752 -5.2274,-46.8963 -22.6434,7.938 -46.3623,-10.4621 -16.6771,17.2661 -14.4895,22.2409 -48.8827,60.7969 -52.0616,9.1453 -71.8845,-28.7524 -93.1671,33.1786 16.2052,23.0459 73.8526,149.9439 23.1775,138.8964 -5.5603,55.749 -63.8917,120.9354 4.0056,2.1949"
+         id="la_turballe"
+         inkscape:label="la_turballe"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff0000;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_pays_ancenis.communes"
+       inkscape:label="cc_pays_ancenis"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 1912.2728,1730.4154 48.1693,-51.1007 88.3181,-12.4996 106.3992,10.5063 12.7341,-22.5369 -114.0444,-16.5567 -15.8766,7.8093 -34.4032,7.8328 -31.0966,-15.0559 22.0677,-189.8394 -8.7707,-26.5704 -101.0055,23.4749 -47.0905,53.352 -83.9795,28.4466 11.7492,12.9217 9.0522,14.9151 30.4634,16.8381 28.986,-4.057 73.0747,94.3217 -62.6623,56.9635 -17.3071,2.0637 -58.8397,16.1112 -14.3992,5.8864 78.9376,9.3571 64.7963,-14.8683 14.7275,-7.7155"
+         id="ancenis"
+         inkscape:label="ancenis"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2198.2397,1681.5894 82.1739,-17.0725 50.444,5.7222 1.0084,-17.0493 -3.377,-117.1166 -14.8681,-9.1459 -151.1915,34.9895 -43.5494,53.0706 -65.0309,23.2404 114.0444,16.5567 -12.7341,22.5369 7.786,6.0505 17.7527,1.2193 17.5416,-3.0018"
+         id="anetz"
+         inkscape:label="anetz"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2520.6033,1266.5928 -4.6434,-35.1069 34.075,-39.1803 122.4634,-4.6645 17.7058,-1.2382 22.0912,-55.9645 12.1011,-9.9036 -6.0037,-13.4166 -13.8128,-41.8303 -17.87,-3.4662 -142.5614,5.2391 -46.6684,-54.9608 -63.2719,-30.85038 -16.8148,0.27672 -81.9393,15.27861 -25.7262,60.35935 0.1642,49.37 30.651,11.4067 20.7779,63.6003 37.8272,52.0318 1.6417,28.5873 68.7596,19.4178 34.7785,-6.9415 16.2753,-8.0439"
+         id="belligne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="belligne"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2047.8456,964.25669 17.19,-0.32129 17.1429,-0.78092 -16.0174,-7.59828 -50.3032,-16.45353 -70.8,-0.30487 -76.311,-40.54285 -19.1598,-29.8443 -33.6997,-10.64696 -15.8767,-67.80048 -74.2237,-44.30681 -7.6452,6.16069 -13.2736,11.09254 -47.8878,48.61016 10.2248,31.56798 -15.8062,43.47663 88.5057,51.1992 51.9215,-2.66175 101.0991,26.45559 137.6366,0.15946 17.2837,2.53979"
+         id="bonnoeuvre"
+         inkscape:label="bonnoeuvre"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1284.3838,1962.444 18.9723,-8.1377 62.6153,-64.9136 51.5697,-14.5868 46.3636,-54.8528 13.7425,-11.7258 -7.6217,-33.0196 -56.2366,-62.8734 -4.831,-16.2283 -6.1442,-15.267 -43.5963,-48.521 -12.8046,11.5147 -27.0863,21.2001 -16.2752,-5.6518 -60.9739,-58.4879 -39.9612,51.3352 -12.7811,12.4526 -46.0351,76.0297 9.0756,107.478 18.2218,50.8193 11.8665,13.6487 71.222,9.5682 30.6979,40.2192"
+         id="le_cellier"
+         inkscape:label="le_cellier"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2746.3703,1421.724 2.5796,-17.87 -14.7978,-49.8108 0.3283,-89.3735 -44.2763,-78.2668 -17.7058,1.2382 -122.4634,4.6645 -34.075,39.1803 4.6434,35.1069 14.4929,31.7062 31.1904,13.2032 10.9754,49.975 -10.1779,32.7853 17.2133,3.0955 40.9697,17.9873 62.6622,-0.516 15.5953,4.4792 29.7129,-4.9248 13.1328,7.3403"
+         id="la_chapelle-saint-sauveur"
+         inkscape:label="la_chapelle-saint-sauveur"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1408.9579,1696.106 144.3437,-72.0663 196.3119,14.5164 18.1984,0.5629 -1.1961,-68.3376 7.8798,-15.2669 -9.0522,-14.9151 -11.7492,-12.9217 -12.8983,-12.9217 -134.5175,-94.017 -80.9309,-36.4435 -17.4479,2.908 -86.6296,-14.8213 -25.0462,24.413 18.3859,28.4466 -35.4585,36.5373 -19.9338,170.5389 43.5963,48.521 6.1442,15.267"
+         id="couffe"
+         inkscape:label="couffe"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2746.0186,1604.9502 34.8254,-2.1576 32.4333,-42.4236 13.4142,-11.6788 -6.2849,-16.5568 -57.1747,-88.365 -16.8616,-22.0444 -13.1328,-7.3403 -29.7129,4.9248 32.2456,101.8028 -3.4942,71.9256 13.7426,11.9133"
+         id="le_fresne-sur-loire"
+         inkscape:label="le_fresne-sur-loire"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 969.89987,1072.2928 71.43313,-46.8489 134.7286,28.2965 16.6037,5.1616 32.5036,-6.6485 27.1333,-64.63683 27.5555,-15.40056 1.501,-70.33088 30.2991,-43.35938 16.8383,-5.48763 34.497,-37.88581 -17.401,-30.61117 -44.206,-28.06669 -15.9235,-7.73428 -103.9367,8.738 -82.9478,-30.27112 -5.1593,-16.91553 -16.5802,31.44135 -154.77953,49.85543 -57.43271,43.92221 -16.72082,-7.14331 -3.86951,16.19557 -16.60369,64.07637 88.90453,5.61194 29.5957,17.85123 7.5514,52.65788 -45.7538,52.45151 9.0992,33.2635 35.3881,-0.4479 17.6824,2.2654"
+         id="joue-sur-erdre"
+         inkscape:label="joue-sur-erdre"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1359.2174,1632.318 19.9338,-170.5389 35.4585,-36.5373 -18.3859,-28.4466 25.0462,-24.413 -17.6825,-2.5796 -99.5514,-33.7467 37.2644,-77.7181 -33.2072,-3.6818 -10.4125,-32.8789 -17.4478,-1.5948 -16.2988,6.6837 -46.387,71.5738 -50.7489,14.1412 -84.6597,-13.508 -6.4726,88.0367 27.2037,21.8567 4.8309,52.2967 -36.1152,79.6881 -8.3721,15.6421 126.1218,84.2376 12.7811,11.3974 39.9612,-51.3352 60.9739,58.4879 16.2752,5.6518 27.0863,-21.2001 12.8046,-11.5147"
+         id="ligne"
+         inkscape:label="ligne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2168.9958,1254.4918 105.3204,-144.9746 35.5759,-2.9829 -0.1642,-49.37 25.7262,-60.35935 -14.7275,-10.03253 -106.4461,6.45853 -121.2909,-27.45226 -10.8111,-2.62421 -17.1429,0.78092 -17.19,0.32129 -6.2616,87.99221 16.463,5.2062 6.1207,119.8064 -5.5345,16.4114 80.6731,21.6784 29.6895,39.1405"
+         id="maumusson"
+         inkscape:label="maumusson"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1753.6942,1527.6777 83.9795,-28.4466 47.0905,-53.352 101.0055,-23.4749 -12.8046,-85.7385 24.4364,-66.5084 -10.9986,-14.1647 -40.9697,-58.3589 -101.7558,-30.7049 -20.1449,-29.5747 -4.6433,17.4785 -25.351,22.7948 -68.6893,22.5321 14.2585,32.5694 -14.7041,10.1544 -66.4145,26.4767 -104.101,9.146 4.3855,31.8941 -32.9258,73.8954 80.9309,36.4435 134.5175,94.017 12.8983,12.9217"
+         id="mesanger"
+         inkscape:label="mesanger"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2671.8416,1655.9806 14.8449,-9.8966 15.7358,-8.3018 30.4868,-20.0745 13.1095,-12.7575 -13.7426,-11.9133 3.4942,-71.9256 -32.2456,-101.8028 -15.5953,-4.4792 -62.6622,0.516 -40.9697,-17.9873 -12.2886,50.4441 11.5382,69.299 54.7825,89.2796 -10.8346,32.6445 44.3467,16.9554"
+         id="montrelais"
+         inkscape:label="montrelais"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1525.3475,1384.2955 32.9258,-73.8954 -4.3855,-31.8941 -62.8733,-17.2836 -22.8886,-47.5361 -31.3076,-16.1581 -1.4775,-52.5171 -16.6974,-4.423 -31.9643,-13.0765 -33.9343,5.3939 -8.2783,56.0302 -33.3246,8.5315 1.6886,15.4217 22.9589,16.1815 5.5111,29.2674 -37.2644,77.7181 99.5514,33.7467 17.6825,2.5796 86.6296,14.8213 17.4479,-2.908"
+         id="mouzeil"
+         inkscape:label="mouzeil"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1477.6472,1808.2273 66.8131,-27.532 18.2218,-1.0554 91.062,3.3771 70.0964,-20.4965 15.8296,-9.0758 14.1413,-9.8026 14.3992,-5.8864 58.8397,-16.1112 -16.7444,-3.6349 -29.7363,-14.7041 -16.3223,-30.1117 3.5646,-34.0748 -18.1984,-0.5629 -196.3119,-14.5164 -144.3437,72.0663 4.831,16.2283 56.2366,62.8734 7.6217,33.0196"
+         id="oudon"
+         inkscape:label="oudon"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1724.8489,1200.1595 68.6893,-22.5321 25.351,-22.7948 4.6433,-17.4785 8.4894,-23.3012 51.3821,8.4894 51.2884,-13.133 49.8343,-17.9379 40.1019,-34.1993 16.9554,-5.0232 6.2616,-87.99221 -17.2837,-2.53979 -137.6366,-0.15946 -101.0991,-26.45559 -51.9215,2.66175 -9.7089,15.18012 -80.4151,36.54204 -20.4965,29.65674 22.8183,47.2499 75.7715,45.1042 -3.0251,88.6629"
+         id="pannece"
+         inkscape:label="pannece"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2257.9706,663.12139 -1.97,-17.80903 -14.9854,-29.4855 -52.3906,-8.12828 25.4683,-158.13308 -24.155,-64.50319 -49.295,-1.09519 -15.5717,8.99832 -105.1094,18.68611 -64.7259,124.76168 -5.5346,16.27297 43.0568,51.14993 14.1647,9.75112 170.3044,25.87163 63.4362,25.13525 17.3072,-1.47274"
+         id="le_pin"
+         inkscape:label="le_pin"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1997.4015,1270.1573 50.8427,-63.6706 10.389,-12.8138 5.5345,-16.4114 -6.1207,-119.8064 -16.463,-5.2062 -16.9554,5.0232 -40.1019,34.1993 -49.8343,17.9379 -51.2884,13.133 -51.3821,-8.4894 -8.4894,23.3012 20.1449,29.5747 101.7558,30.7049 40.9697,58.3589 10.9986,14.1647"
+         id="pouille-les-coteaux"
+         inkscape:label="pouille-les-coteaux"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1447.5121,1010.9696 86.5827,-1.8268 32.2926,12.8044 47.583,-11.2285 15.3138,8.4238 20.4965,-29.65674 80.4151,-36.54204 9.7089,-15.18012 -88.5057,-51.1992 15.8062,-43.47663 -10.2248,-31.56798 47.8878,-48.61016 13.2736,-11.09254 -14.3523,-9.33602 -53.2347,-39.38669 -17.5653,-0.65195 -66.9069,8.25725 -153.3959,-34.76676 -42.6582,-25.60899 -7.0823,14.96906 4.8544,49.03931 -66.4145,42.14225 44.206,28.06669 17.401,30.61117 -34.497,37.88581 23.9204,45.87806 -9.4744,51.87225 26.4063,23.35763 -1.712,52.58284 32.2693,6.0247 47.6064,-21.7841"
+         id="riaille"
+         inkscape:label="riaille"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2392.1362,1392.316 22.3728,-81.7753 -13.9772,-31.2372 0.2581,-17.1431 -1.6417,-28.5873 -37.8272,-52.0318 -20.7779,-63.6003 -30.651,-11.4067 -35.5759,2.9829 -105.3204,144.9746 15.6656,41.4856 -10.2484,29.7833 33.1604,-7.1996 64.7259,21.6926 69.604,48.2397 34.0514,-1.9465 16.1815,5.7691"
+         id="la_rouxiere"
+         inkscape:label="la_rouxiere"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1827.0503,1721.6445 17.3071,-2.0637 62.6623,-56.9635 -73.0747,-94.3217 -28.986,4.057 -30.4634,-16.8381 -7.8798,15.2669 1.1961,68.3376 -3.5646,34.0748 16.3223,30.1117 29.7363,14.7041 16.7444,3.6349"
+         id="saint-gereon"
+         inkscape:label="saint-gereon"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2053.8491,1638.2278 65.0309,-23.2404 43.5494,-53.0706 151.1915,-34.9895 14.8681,9.1459 63.6472,-143.7572 -16.1815,-5.7691 -34.0514,1.9465 -69.604,-48.2397 -64.7259,-21.6926 -33.1604,7.1996 -15.9235,6.9182 -163.9491,116.2957 -22.0677,189.8394 31.0966,15.0559 34.4032,-7.8328 15.8766,-7.8093"
+         id="saint-herblon"
+         inkscape:label="saint-herblon"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2092.9896,965.77869 -13.9066,-11.17696 -31.1201,-17.31185 -35.7869,-99.21602 49.5763,-47.35082 1.1491,-17.78323 -81.4469,-33.48631 -70.2605,-9.93404 -49.2245,15.8696 -86.8877,-18.18191 -49.2948,18.44925 74.2237,44.30681 15.8767,67.80048 33.6997,10.64696 19.1598,29.8443 76.311,40.54285 70.8,0.30487 50.3032,16.45353 16.0174,7.59828 10.8111,2.62421"
+         id="saint-mars-la-jaille"
+         inkscape:label="saint-mars-la-jaille"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1718.1418,751.81709 7.6452,-6.16069 49.2948,-18.44925 86.8877,18.18191 49.2245,-15.8696 70.2605,9.93404 25.4683,-125.86625 -14.1647,-9.75112 -43.0568,-51.14993 5.5346,-16.27297 -186.6736,-58.22759 -14.0708,6.61331 -20.2151,18.597 -2.4859,44.78522 -7.5514,15.15197 -78.7265,123.58442 5.0422,16.17682 53.2347,39.38669 14.3523,9.33602"
+         id="saint-sulpice-des-landes"
+         inkscape:label="saint-sulpice-des-landes"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1553.8878,1278.506 104.101,-9.146 66.4145,-26.4767 14.7041,-10.1544 -14.2585,-32.5694 3.0251,-88.6629 -75.7715,-45.1042 -22.8183,-47.2499 -15.3138,-8.4238 -47.583,11.2285 -32.2926,-12.8044 -86.5827,1.8268 33.0431,80.157 -45.2144,53.8845 1.4775,52.5171 31.3076,16.1581 22.8886,47.5361 62.8733,17.2836"
+         id="teille"
+         inkscape:label="teille"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1311.1419,1197.4672 33.3246,-8.5315 8.2783,-56.0302 33.9343,-5.3939 31.9643,13.0765 16.6974,4.423 45.2144,-53.8845 -33.0431,-80.157 -47.6064,21.7841 -32.2693,-6.0247 1.712,-52.58284 -26.4063,-23.35763 9.4744,-51.87225 -23.9204,-45.87806 -16.8383,5.48763 -30.2991,43.35938 -1.501,70.33088 -27.5555,15.40056 -27.1333,64.63683 -32.5036,6.6485 -11.374,50.7044 9.0288,33.6786 58.1361,37.9985 52.0622,2.3146 10.6235,13.8691"
+         id="trans-sur-erdre"
+         inkscape:label="trans-sur-erdre"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2440.2821,1702.4847 67.7277,-0.1875 78.75,-31.4954 32.1988,10.647 17.1899,0.047 24.8351,-15.5718 10.858,-9.9433 -44.3467,-16.9554 10.8346,-32.6445 -54.7825,-89.2796 -11.5382,-69.299 12.2886,-50.4441 -17.2133,-3.0955 10.1779,-32.7853 -10.9754,-49.975 -31.1904,-13.2032 -14.4929,-31.7062 -16.2753,8.0439 -34.7785,6.9415 -68.7596,-19.4178 -0.2581,17.1431 13.9772,31.2372 -22.3728,81.7753 -63.6472,143.7572 3.377,117.1166 -1.0084,17.0493 92.7974,32.9727 16.6271,-0.7271"
+         id="varades"
+         inkscape:label="varades"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2491.3828,643.13841 45.7302,-24.2394 44.3702,-52.18885 -2.8142,-17.12425 -41.3214,-31.17635 -12.1244,-12.36125 -17.8935,-2.72975 -152.5516,-42.55265 -93.5478,-78.99149 -71.2924,3.28789 24.155,64.50319 -25.4683,158.13308 52.3906,8.12828 14.9854,29.4855 1.97,17.80903 136.4874,5.77375 16.6974,4.46984 46.0352,12.87016 19.6053,-36.25593 14.5869,-6.8408"
+         id="vritz"
+         inkscape:label="vritz"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1994.5404,1448.9746 163.9491,-116.2957 15.9235,-6.9182 10.2484,-29.7833 -15.6656,-41.4856 -29.6895,-39.1405 -80.6731,-21.6784 -10.389,12.8138 -50.8427,63.6706 -24.4364,66.5084 12.8046,85.7385 8.7707,26.5704"
+         id="la_roche-blanche"
+         inkscape:label="la_roche-blanche"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_secteur_derval.communes"
+       inkscape:label="cc_secteur_derval"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 1412.1053,1663.0863 19.8902,-94.6122 129.7312,-185.8769 161.8752,-31.1408 -7.0148,-166.5683 -88.2634,-178.8397 -26.1059,-21.24887 -315.8922,-171.35874 -92.3925,37.38317 -97.0097,-25.92402 -29.6578,7.61425 -91.59335,-4.41315 -17.31511,-25.27583 -21.84395,24.95615 67.57381,102.31087 118.2766,41.5433 -96.2106,171.22547 -33.03218,-2.8859 -48.1719,190.5521 36.0955,231.0385 41.29028,83.4196 -4.351,33.2141 67.6627,5.35 105.9781,81.5903 111.0839,-159.3225 109.3969,57.2691"
+         id="derval"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="derval"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2037.0523,1813.9289 75.299,-201.8514 -16.6048,-61.922 24.419,-20.7471 -1.5541,-32.0422 -26.772,-4.3199 -64.5546,-33.0766 -29.1697,15.0333 -93.4579,-14.7269 -23.0425,-87.1091 -28.1927,-16.8135 -129.8201,-4.8971 -161.8752,31.1408 -129.7312,185.877 -19.8902,94.6122 10.6999,135.7914 198.8589,11.659 124.1812,-50.3874 54.3433,41.4589 202.766,9.2481 34.0977,3.0725"
+         id="jans"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="jans"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2027.2848,1459.9696 38.2711,-90.2745 60.7809,-27.256 14.8733,-132.0087 91.5931,-176.8463 23.7531,-23.3667 0,-1.7493 -19.1356,-28.42807 -62.4681,-79.1439 -98.4303,-28.90319 -142.651,-93.93297 -175.0616,139.51206 -169.8227,-21.0225 13.2308,88.25 26.1059,21.24887 88.2634,178.8397 7.0148,166.5683 129.8201,4.8971 28.1927,16.8135 23.0425,87.109 93.4579,14.7269 29.1697,-15.0333"
+         id="lusanger"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="lusanger"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1281.4861,2056.4842 107.8873,-64.6612 31.2118,-93.8221 2.22,-99.1232 -10.6999,-135.7914 -109.3969,-57.2691 -111.0839,159.3225 -105.9781,-81.5903 -67.6627,-5.35 -112.68235,9.5545 4.88389,31.456 -59.44914,108.5133 -23.13139,187.0935 1.73152,1.7582 204.85277,99.5005 97.8089,-6.269 116.6781,-54.6408 32.8101,1.3186"
+         id="marsac-sur-don"
+         inkscape:label="marsac-sur-don"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1602.2178,984.79953 -13.2308,-88.25 -30.6789,-6.4466 30.4127,-56.21683 -1.1544,-191.74191 -41.0238,-1.20762 -29.9686,15.55264 -86.443,93.10717 -163.8734,-33.0144 -130.9743,27.64223 -38.3599,80.67573 97.0097,25.92402 92.3925,-37.38317 315.8922,171.35874"
+         id="mouais"
+         inkscape:label="mouais"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2826.2723,1454.7129 -72.1912,-68.484 -65.4873,-222.5541 -11.5435,-31.3362 -30.1906,13.8922 -96.8766,19.2776 -165.2052,-18.1898 -128.2216,-137.1012 -23.7531,23.3667 -91.5931,176.8463 -14.8733,132.0087 -60.7809,27.256 -38.2711,90.2745 64.5546,33.0766 26.772,4.3199 163.962,3.4365 91.5934,36.4419 31.1674,10.8997 32.6325,0.3552 96.7435,15.1886 127.6443,-21.2979 163.9178,-87.6772"
+         id="saint-vincent-des-landes"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="saint-vincent-des-landes"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2256.5563,1008.4681 28.2815,-194.72984 124.4033,-109.90741 -9.8564,-64.39937 -42.8883,-51.31528 -8.8354,-133.59819 1.8203,-33.4939 -19.5795,-26.51895 -97.8977,-2.63282 -171.3321,-90.9361 -128.3548,5.84724 -58.1613,-78.58457 -25.1293,17.86134 -117.1222,2.61948 -51.0578,33.3607 4.8839,31.97993 -78.3625,139.25451 -19.8016,188.86932 1.1544,191.74191 -30.4127,56.21683 30.6789,6.4466 169.8227,21.0225 175.0616,-139.51206 142.651,93.93297 98.4303,28.90319 62.4681,79.1439 19.1356,28.42807"
+         id="sion-les-mines"
+         inkscape:label="sion-les-mines"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_region_nozay.communes"
+       inkscape:label="cc_region_nozay"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 2719.2311,1216.2349 70.1257,-52.9169 11.1165,-88.0955 26.1377,-14.0411 -104.0331,-209.09816 -29.7634,2.49816 -177.2669,-6.38304 -127.8997,-64.63915 -59.2483,4.60599 -28.6878,-1.56588 -142.0842,1.73722 -11.0768,121.38128 -106.6229,146.76198 -50.6818,28.7994 -19.6431,88.179 -58.4514,68.6795 13.9852,12.252 55.3037,67.4921 256.9949,43.5297 44.7052,29.8911 19.9619,21.5438 28.4088,12.1364 97.5785,-74.624 262.9715,-84.7047 28.1698,-53.4192"
+         id="abbaretz"
+         inkscape:label="abbaretz"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff66;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1911.1516,1242.1377 58.4514,-68.6795 19.6431,-88.179 50.6818,-28.7994 106.6229,-146.76198 11.0768,-121.38128 -30.0824,-4.16372 -51.917,-30.8872 -61.3599,-101.22012 -30.6004,-2.75722 -181.9684,-8.29954 -48.7692,-37.20648 -111.444,45.21915 -178.462,-10.46308 -1.9923,88.95608 -28.0105,84.19868 -96.8213,58.029 50.4826,31.58063 11.4353,87.9679 74.2695,94.90078 12.7501,57.3557 12.3518,40.1191 14.6226,15.316 258.7481,20.4361 76.4211,-36.9674 43.5896,40.139 20.2807,21.5478"
+         id="nozay"
+         inkscape:label="nozay"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff66;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1423.7777,1653.2457 211.8116,-125.9274 74.8671,-96.1918 188.0246,-160.9744 26.6558,-15.7624 -13.9852,-12.252 -20.2807,-21.5478 -43.5896,-40.139 -76.4211,36.9674 -258.7481,-20.4361 -69.9662,165.0705 11.5946,116.552 -58.8498,68.285 14.1446,82.1944 14.7424,24.1616"
+         id="puceul"
+         inkscape:label="puceul"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff66;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1795.5237,1976.2107 50.0841,-75.4052 83.3142,-35.9713 319.4705,-287.4039 18.9259,-24.2014 28.2098,-108.8662 6.5743,-27.5163 -19.9619,-21.5438 -44.7052,-29.8911 -256.9949,-43.5297 -55.3037,-67.4921 -26.6558,15.7624 -188.0246,160.9744 -74.8671,96.1918 -211.8116,125.9274 -2.3109,200.8664 -62.1969,56.9772 -11.7938,26.612 86.6213,18.878 148.9773,-70.6836 59.2483,6.4389 153.2007,83.8761"
+         id="saffre"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff66;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="saffre"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2157.6276,788.33654 142.0842,-1.73722 28.6878,1.56588 13.2682,-27.61599 30.2417,-86.60927 -43.8287,-174.46166 16.6949,-85.93591 -27.9706,-9.78174 -82.1987,-32.70409 -147.1445,-3.08395 1.3945,28.75554 -21.9142,18.61917 14.9017,55.57068 -67.5756,181.14752 61.3599,101.22012 51.917,30.8872 30.0824,4.16372"
+         id="treffieux"
+         inkscape:label="treffieux"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff66;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 943.45623,1493.4746 -1.15557,-61.0173 172.84404,-118.0264 46.9366,-77.1542 88.1353,-23.5598 70.6435,-55.4193 86.5017,30.2298 53.8296,-27.9905 23.9463,-18.9898 -12.7501,-57.3557 -74.2695,-94.90078 -11.4353,-87.9679 -50.4826,-31.58063 -29.4448,-1.18337 -104.7105,49.0363 -87.7768,5.626 -183.84097,-89.29479 -8.16809,29.3851 -18.72664,57.88159 -46.817,35.0947 31.83565,102.93348 4.78129,269.5338 -56.73807,69.6317 -9.04469,90.6214 95.86503,-10.7339 20.04162,15.2005"
+         id="vay"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff66;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:label="vay"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1394.8907,1546.8897 58.8498,-68.285 -11.5946,-116.552 69.9662,-165.0705 -14.6226,-15.316 -12.3518,-40.1191 -23.9463,18.9898 -53.8296,27.9905 -86.5017,-30.2298 -70.6435,55.4193 -88.1353,23.5598 -46.9366,77.1542 -172.84404,118.0264 1.15557,61.0173 78.57277,34.1624 162.1258,-50.1319 49.9249,27.1139 20.0017,21.1494 44.0677,-24.0739 75.9828,26.6198 20.7588,18.5754"
+         id="la_grigonnais"
+         inkscape:label="la_grigonnais"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff66;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="cc_pays_pontchateau.communes"
+       inkscape:label="cc_pays_pontchateau"
+       style="display:none"
+       sodipodi:insensitive="true">
+      <path
+         vector-effect="none"
+         d="m 1389.7673,1899.6759 37.38,-82.6466 69.3826,61.4636 41.0625,-56.6729 13.1009,-19.8143 -3.0959,-13.4594 -24.3769,3.1938 -80.3,-222.031 -48.2973,-8.0821 -65.9933,-102.8486 -16.4902,-17.6862 -39.1724,-28.3136 -46.4397,0.7137 -56.7706,104.0805 -61.3038,38.7096 67.789,99.3973 -1.4339,67.2317 47.7108,-7.3 32.3285,35.6202 14.5674,19.358 105.0354,112.368 15.3169,16.7183"
+         id="crossac"
+         inkscape:label="crossac"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1775.1033,1383.6177 135.8649,-46.8733 56.5423,-68.7863 -27.4401,-39.0418 0.9125,-48.1018 0.9126,-24.0119 -21.2809,-7.3488 -143.7514,-61.1278 -17.0768,17.5395 -123.9046,76.0537 14.1763,43.2265 41.9424,18.918 45.0712,56.6728 4.1061,48.141 33.9255,34.7402"
+         id="dreffeac"
+         inkscape:label="dreffeac"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 2635.5915,1319.5178 68.5679,-27.3067 102.0045,-106.6582 20.5639,-14.3719 -86.1011,-118.0547 -13.0031,-20.7986 -28.1245,-41.22535 -190.3216,17.92405 -117.8103,-24.85255 -13.5573,-94.5318 -65.7977,-30.70888 -13.7527,-122.20665 -21.2157,-13.24103 -123.0573,-9.32707 -39.3677,-90.13225 -100.8639,-73.14018 -43.7023,137.55947 12.0906,46.99053 81.6036,206.73676 -108.7504,193.53165 -13.1009,21.0982 166.8246,20.9582 60.1925,39.5634 19.9446,13.3585 72.6741,3.6662 38.2599,-86.228 42.4965,-20.6649 183.2497,169.1939 16.5552,18.263 46.505,17.0345 46.9939,-12.4296"
+         id="guenrouet"
+         inkscape:label="guenrouet"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1012.7742,1348.2746 49.2197,-2.9331 117.2465,-90.9046 73.7496,-1.1308 28.646,-39.6123 69.285,8.571 16.979,18.3967 97.3768,-58.6543 58.3023,-71.2728 23.1383,-2.4996 7.3978,-96.989 113.0197,-81.58735 1.5969,-94.98476 27.1468,-68.57769 -22.4539,-5.11651 -22.617,-4.21706 -221.0533,46.24422 -23.5295,8.45693 -33.3062,32.33511 2.5745,74.77616 -12.7099,73.8832 -13.6875,20.89945 -42.3986,24.8298 -95.9755,-23.008 -10.2656,-44.60175 21.4437,-67.7922 -60.9094,-18.68672 -23.3991,2.94933 -66.9743,20.14349 -138.56003,86.8276 -17.62427,16.83235 -72.64483,63.6599 13.85045,92.6124 -28.19626,88.3625 21.68819,11.0642 117.19112,-27.4239 48.24523,6.86 20.8702,32.9055 -22.6626,69.3826"
+         id="missillac"
+         inkscape:label="missillac"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1856.7396,1858.32 53.7398,-78.4425 2.6397,-23.9856 -32.3938,-33.0131 55.1737,-107.0232 -19.4885,-11.8299 -83.4937,-35.2616 -68.1117,-60.3196 -71.892,-56.3143 6.746,-22.8125 46.8634,-7.753 28.5808,-37.947 -33.9255,-34.7402 -4.1061,-48.141 -45.0712,-56.6728 -41.9424,-18.918 -14.1763,-43.2265 123.9046,-76.0537 17.0768,-17.5395 -13.1009,-19.5797 -42.692,-15.1443 -60.4859,34.9944 -113.867,19.6384 -23.1383,2.4996 -58.3023,71.2728 -97.3768,58.6543 65.1785,72.0809 0.1956,48.6853 -85.0255,82.8387 -19.6187,14.512 65.9933,102.8486 48.2973,8.0821 80.3,222.031 24.3769,-3.1938 13.0357,-73.5867 56.9335,-80.1044 48.2973,11.2759 89.5554,116.6044 13.1335,70.8166 38.4881,30.4385 49.6987,-5.6706"
+         id="pontchateau"
+         inkscape:label="pontchateau"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1764.8051,1508.4445 19.1299,-16.0503 246.9619,15.9753 133.8768,-64.5691 41.0951,-56.8683 -1.8576,-49.79 -4.4973,-21.1114 -10.6567,-85.348 -19.9446,-13.3585 -60.1925,-39.5634 -166.8246,-20.9582 -0.9126,24.0119 -0.9125,48.1018 27.4401,39.0418 -56.5423,68.7863 -135.8649,46.8733 -28.5808,37.947 -46.8634,7.753 -6.746,22.8125 71.892,56.3143"
+         id="sainte-anne-sur-brivet"
+         inkscape:label="sainte-anne-sur-brivet"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1941.8955,1156.8026 13.1009,-21.0982 108.7504,-193.53165 -81.6036,-206.73676 -24.7353,0.82124 -47.1567,56.18071 -75.3465,-51.60191 -120.8737,8.68832 -18.1524,16.57165 -27.1468,68.57769 -1.5969,94.98476 -113.0197,81.58735 -7.3978,96.989 113.867,-19.6384 60.4859,-34.9944 42.692,15.1443 13.1009,19.5797 143.7514,61.1278 21.2809,7.3488"
+         id="saint-gildas-des-bois"
+         inkscape:label="saint-gildas-des-bois"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1108.4532,1556.2824 61.3038,-38.7096 56.7706,-104.0805 46.4397,-0.7137 39.1724,28.3136 16.4902,17.6862 19.6187,-14.512 85.0255,-82.8387 -0.1956,-48.6853 -65.1785,-72.0809 -16.979,-18.3967 -69.285,-8.571 -28.646,39.6123 -73.7496,1.1308 -117.2465,90.9046 -49.2197,2.9331 -39.78503,24.2725 7.6911,23.0601 63.39273,34.7207 5.2469,47.7661 -4.4843,23.8587 50.559,37.3702 13.0586,16.9595"
+         id="sainte-reine-de-bretagne"
+         inkscape:label="sainte-reine-de-bretagne"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         vector-effect="none"
+         d="m 1982.1432,735.43599 -12.0906,-46.99053 43.7023,-137.55947 -39.1398,-29.65953 -232.8833,-76.71523 -62.7344,34.46646 -5.3121,23.91402 -39.9871,140.98787 28.3202,65.25032 -11.2107,47.63253 22.617,4.21706 22.4539,5.11651 18.1524,-16.57165 120.8737,-8.68832 75.3465,51.60191 47.1567,-56.18071 24.7353,-0.82124"
+         id="severac"
+         inkscape:label="severac"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';display:block;ff00ff;fill-opacity:1;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="epci"
+     inkscape:label="epci"
+     style="display:block;opacity:1"
+     transform="translate(-827.05541,-172.18638)">
+    <g
+       id="epci2"
+       style="opacity:1;fill:none;fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:bevel"
+       transform="matrix(0.95892836,0,0,0.97391658,267.27719,-5.1307829)"
+       inkscape:label="epci">
+      <g
+         id="g36-2"
+         font-style="normal"
+         font-weight="400"
+         font-size="34.375"
+         transform="matrix(0.999751,0,0,0.999751,47.2323,53.1364)"
+         style="font-style:normal;font-weight:400;font-size:34.375px;font-family:'MS Shell Dlg 2';cb346;fill-opacity:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1">
+        <path
+           inkscape:label="guerande_atlantique"
+           id="cc_guerande_atlantique"
+           d="m 574.128,1044.44 -29.108,-13.1 -7.903,-10.26 4.078,-10.05 28.601,-5.79 40.498,-32.304 6.245,-2.319 36.707,-22.068 9.003,8.445 37.249,2.115 1.641,-6.245 -26.4,-18.429 11.203,-22.018 -13.031,-21.239 13.065,-28.177 12.168,-3.656 23.625,-19.445 2.42,19.428 11.271,15.976 18.887,5.551 23.371,-10.053 13.234,0.085 13.454,14.503 51.448,-8.834 6.041,-38.314 18.362,-27.163 5.213,-32.323 1.371,-0.61 21.865,10.696 25.385,0 4.265,4.756 -8.242,16.28 21.019,14.469 -23.828,21.256 3.655,24.438 -7.446,23.337 0.508,6.127 -12.27,0.44 -13.911,11.558 4.434,23.896 2.335,32.578 -16.551,20.918 -6.668,-0.051 -6.228,1.997 4.384,11.629 -14.081,36.26 -22.982,11.22 4.18,17.77 -3.486,12.46 0,0.34 -57.117,44.68 -12.1,23.67 62.651,28.57 23.54,-0.63 -20.088,37.62 -6.549,11.48 -23.152,12.96 -31.393,-10.14 -41.191,-19.24 -25.927,2.13 -17.194,8.91 -2.065,6.05 7.599,17.57 -4.265,4.79 -35.827,-10.93 -9.139,-9.34 -42.884,-16.37 -14.723,-11.62 -53.056,-24.43 5.416,-11.27 12.777,-3.13 13.048,-1.18 11.356,6.43 3.672,-4.27 0.474,-1.62 -3.08,-4.3 17.313,-24.52 1.083,-13.22 -5.534,-33.29 -16.704,-33.64 -5.991,-7.8"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="carene"
+           id="cc_carene"
+           d="m 1114.44,1037.67 -0.81,-3.56 6.45,-25.26 12.03,-15.335 6.59,0.524 29.71,33.241 7.86,23.74 18.97,1.51 9.71,7.66 -11.61,21.85 -21.93,11.49 0.88,6.16 57.25,23.98 0.93,6.18 6.72,24.01 -3.5,25.27 -6.33,0.15 -11.05,-3.62 -7.28,16.06 -14.84,11.82 1.45,-26.91 -10.2,1.22 -36.64,13.6 -39.13,-4.38 -51.41,8.63 -42.16,20.82 -9.32,-21.02 -2.46,6.11 0.49,21.88 -14.431,2.64 -8.175,16.85 -30.766,10.43 -9.968,16.08 -26.012,3.58 -29.024,25.61 -31.866,7.06 -10.391,-5.52 -41.361,-33.17 -10.375,-23.69 -13.471,-14.63 31.393,10.14 23.152,-12.96 6.549,-11.48 20.088,-37.62 -23.54,0.63 -62.651,-28.57 12.1,-23.67 57.117,-44.68 0,-0.34 3.486,-12.46 -4.18,-17.77 22.982,-11.22 14.081,-36.26 -4.384,-11.629 6.228,-1.997 6.668,0.051 16.551,-20.918 -2.335,-32.578 -4.434,-23.896 13.911,-11.558 12.27,-0.44 -0.508,-6.127 5.737,2.928 30.919,-7.243 18.768,4.095 -6.498,24.726 -10.51,6.414 2.031,6.075 16.737,9.156 0.203,18.92 16.788,14.351 18.141,26.418 -3.86,12.272 3.27,5.55 12.62,-2.47 12.32,14.81 21.89,28.43 9.88,5.63 9.87,-21.79 18.31,16.21 14.31,-20.19"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="coeur_estuaire"
+           id="cc_coeur_estuaire"
+           d="m 1594.28,1278.84 -29.54,59.05 -30.9,10.41 -14.6,13.54 -6.6,1.06 -32.06,-8.56 -29.87,-26.45 -18.98,-3.44 -2.03,-11 -6.66,-0.03 -14.97,-13.22 -39.37,-44.68 22.16,-29.09 8.37,-22.91 6.45,1.76 30.84,-11.93 41.46,-32.9 18.38,5.14 5.5,-0.15 -4.83,-9.49 11.71,3.31 6.44,-10.51 -1.46,17.01 7.24,9.39 -0.33,11.78 11.89,15.12 48.13,58.99 15.54,11.14 -1.91,6.66"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="pays_retz"
+           id="cc_pays_retz"
+           d="m 1523.64,1593.99 -5.74,11.36 -30.65,8.95 -3.64,5.28 -5.43,24.24 3.18,12.1 -6.26,11.08 -1.81,6.25 -27.86,16.58 -5.87,11.63 -34.62,-13.39 -31.19,6.94 -4.54,-4.52 -2.61,-5.36 12.26,-27.03 -44.53,-10.36 -20.32,-16.09 -19.55,-1.81 3.06,-52.36 5.82,0.1 -4.33,-12.15 16.13,-35.12 15.06,-12.23 -20.9,-24.39 -2.11,-6.14 -0.46,-6.5 12.56,-14.79 -16.69,-25.75 7.28,-32.01 18.56,-17.42 6.52,-0.22 6.5,-11.27 6.38,-1.29 30.61,9.72 9.63,-15.98 0.02,-18.95 15.97,-10.7 -1.32,9.12 35.76,26.37 20.82,22.42 -9.87,23.21 10.55,6.92 16.19,-4.88 9.14,8.86 42.12,10.81 -13.98,24.4 23.54,10.43 18.11,18.5 32.41,4.48 -35.59,34.29 17.14,18.07 -28.22,32.09 -17.23,6.51"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="secteur_derval"
+           id="cc_secteur_derval"
+           d="m 1652.14,478.99 1.71,-12.947 5.87,-2.893 25.4,-5.23 31.75,6.6 22.41,-21.171 7.93,0.237 3.85,-36.589 14.23,-33.203 9.9,-6.465 17.36,2.183 10.21,-6.143 11.27,15.214 37.26,1.929 20.82,14.571 18.97,0.508 3.79,5.145 1.41,32.442 8.29,9.985 1.78,12.489 -24.09,21.409 -5.68,37.79 25.23,26.739 38.89,3.249 18.29,-6.668 14.29,49.518 13.98,13.353 -31.75,16.991 -24.76,4.13 -25.06,-3.013 -23.78,-9.172 -31.78,-0.677 -4.44,10.238 3.23,11.982 -14.6,39.127 -45.95,-2.318 -10.46,-8.14 -24.06,9.866 -38.57,-2.318 -3.35,31.748 -24.03,18.159 -47.98,11.542 -39.55,-19.615 -0.63,-0.084 4.71,-36.183 10.83,-14.875 -0.27,-12.236 21.83,-1.845 1.28,-12.895 -8.44,-9.698 -6.99,-44.779 9.33,-36.927 6.34,0.423 18.16,-32.865 -31.8,-16.924 -4.13,-4.823 4.69,-11.153 3.37,4.908 23.49,-0.626"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="grandlieu"
+           id="cc_grandlieu"
+           d="m 1849.38,1732.88 -27.45,26.71 -18.63,3.13 -26.76,14.39 12.66,21.83 -10.63,22.64 -18.93,-0.95 -8.99,29.92 -5.75,2.75 -5.78,-2.73 -3.04,-12.34 -10.02,8.13 -22.9,-9.23 -23.4,10.82 0.15,12.79 -5.64,3.28 -64.03,-3.06 -13.97,-7.63 4.06,-37.06 15.9,-26.54 -18.98,-5.74 -23.65,-35.57 -1.73,-5.94 8.21,-8.55 -29.48,-8.56 -14.9,10.85 -5.6,-2.66 -11.37,-22.93 54.75,-80.03 -10.29,-14.62 9.36,-8.35 33.15,-61.5 29.55,-0.93 6.34,16.88 4.95,3.58 4.79,-3.77 8.17,8.92 24.39,4.89 -14.1,20.14 3.91,10.96 31.46,-20.95 12.35,-1.69 2.25,-12.89 25.37,-38.07 16.81,-7.97 1.25,-6.43 24.08,-6.11 12.22,13.81 -2.74,5.57 10.54,22.32 -0.89,12.32 13.4,20.24 28.75,-23.64 18.55,-1.42 20.07,27.13 -2.89,5.87 30.9,33.34 14.96,10.61 14.1,42.85 -19.13,33.88 -10.88,6.26 -4.53,11.8 -36.22,10.53 -7.16,-9.55 -11.68,-2.96 -5.26,1.23"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="blain"
+           id="cc_blain"
+           d="m 1463.29,980.822 -4.05,18.802 25.02,5.106 -5,24.48 -74.36,40.85 -6.51,-0.81 -32.06,0.23 -11.54,-6.43 8.48,-30.37 -7.19,-31.03 7.19,-24.247 -10.88,-23.117 17.31,-7.802 6.48,-37.401 12.27,4.485 12.41,-3.266 18.11,-7.21 32.35,-31.951 -26.16,-36.656 8.17,-10.154 44.7,-25.487 16.08,-34.981 41.86,-15.739 0.5,-25.91 5.63,-11.677 22.07,-9.833 35.57,8.784 0.63,0.084 -5.94,19.242 -12.34,11.119 9.09,16.873 1.27,59.317 -12.24,15.4 -2.15,19.851 25.03,0.965 23.24,7.023 28.75,-10.475 15.1,10.424 9.51,-5.195 20.88,9.748 6.25,22.965 -0.51,43.375 -15.98,18.057 -21.49,-14.503 -3.86,-18.785 -5.38,-3.656 -6.51,0.525 -2.29,6.143 -6.43,76.968 -3.25,5.667 -30.04,11.43 -19.39,15.06 -23.8,-22.75 -1.05,-19.155 -11.03,-6.871 -32.78,-1.421 -32.9,-21.104 -6.55,1.032 -13.91,22.204 -6.38,1.777"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="region_machecoul"
+           id="cc_region_machecoul"
+           d="m 1421.1,1882.51 -6.75,-10.75 -52.18,-3.03 -28.96,-15.6 -22,-23.43 -5.43,-25.36 3.22,-12.32 -22.97,-7.35 -5.38,3.01 -13.13,-14.69 -16.79,-43.98 -8.67,-9.8 0.22,-12.68 -13.52,-13.2 2.37,-25.52 2.88,-5.75 12.73,0.98 20.85,-14.4 26.48,-12.73 0.39,-6.07 19.55,1.81 20.32,16.09 44.53,10.36 -12.26,27.03 2.61,5.36 4.54,4.52 31.19,-6.94 34.62,13.39 5.87,-11.63 27.86,-16.58 1.81,-6.25 6.26,-11.08 -3.18,-12.1 5.43,-24.24 3.64,-5.28 30.65,-8.95 5.74,-11.36 17.23,-6.51 28.22,-32.09 29.2,-11.59 7.41,2.33 -33.15,61.5 -9.36,8.35 10.29,14.62 -54.75,80.03 11.37,22.93 5.6,2.66 14.9,-10.85 29.48,8.56 -8.21,8.55 1.73,5.94 23.65,35.57 18.98,5.74 -15.9,26.54 -4.06,37.06 13.97,7.63 -10.35,22.51 -0.6,12.86 8.14,9.6 -0.28,6.46 -12.16,4.35 -8.48,9.77 -3.86,11.06 -18.07,6 -7.74,9.76 -25.27,4.15 -10.94,-14.56 3.28,-5.33 -8.43,-16.57 -38.43,7.38 -9.75,-8.51 -12.76,1.61 -43.83,-10.07 7.39,-10.19 3,-18.73"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="region_nozay"
+           id="cc_region_nozay"
+           d="m 1986.55,792.481 -6.3,11.457 -56.68,18.294 -20.98,16.179 -6.13,-2.623 -7.5,29.447 -73.07,67.287 -22.95,12.202 -5.85,11.847 -33.09,-18.108 -12.79,-1.388 -32.19,15.265 -18.69,-4.079 15.98,-18.057 0.51,-43.375 -6.25,-22.965 -20.88,-9.748 -9.51,5.195 -15.1,-10.424 -28.75,10.475 -23.24,-7.023 -25.03,-0.965 2.15,-19.851 12.24,-15.4 -1.27,-59.317 -9.09,-16.873 12.34,-11.119 5.94,-19.242 39.55,19.615 47.98,-11.542 24.03,-18.159 3.35,-31.748 38.57,2.318 24.06,-9.866 10.46,8.14 45.95,2.318 14.6,-39.127 -3.23,-11.982 4.44,-10.238 31.78,0.677 23.78,9.172 -3.61,18.565 10.26,31.089 -10.19,31.24 12.79,-1.015 27.6,13.979 44.73,0.829 22.46,45.135 -5.63,3.029 -2.46,19.005 -15.09,11.475"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="vallee_clisson"
+           id="cc_vallee_clisson"
+           d="m 1925.11,1715.57 19.13,-33.88 -14.1,-42.85 15.74,9.36 18.95,-22.86 -2.84,-5.81 6.14,-11.32 -5.02,-18.51 7.66,-17 17.81,-3.36 10.44,-15.47 -2.18,-5.98 5.31,2.86 11.1,-4.58 11.61,8.46 4.4,4.74 25.59,1.94 10.15,15.57 12.39,3.71 7.04,10.05 17.6,-1.81 7.26,9.77 29.5,-3.39 11.96,12.63 47.53,8.24 1.3,5.94 -23.42,21.8 11.61,5.9 17.9,-8.24 64.14,14.62 7.28,1.9 9.76,25.71 16.16,19.58 41.64,15.21 -7.64,16.75 2.42,25.17 -40.43,18.07 -60.84,-22.44 -15.16,-19.36 -9.24,-7.77 -15.74,-20.17 -23.35,-10.3 -23.24,-30.82 -6.26,1.72 -6.99,9.9 -11.74,1.83 -5.22,10.99 2.69,22.93 -16.72,24.08 -2.13,5.63 5.38,2.63 -3.62,11.15 -24.72,-0.58 -22.73,-19.63 -11.71,-3.77 -2.9,11.63 -19.48,-1.76 -18.07,18.15 10.31,23.71 0.89,19.3 1.34,6.39 -16.15,27.15 20.25,15.72 -2.73,18.75 -9.14,8.65 0.2,17.97 -9.74,8.14 -5.52,-3.48 -16.86,9.86 -32.51,5.11 -56.99,31.65 -16.54,-14.77 19.45,-42.28 -13.8,-21.81 -5.09,-25.79 4.43,-12.12 12.59,-4.03 0.55,-12.2 -7.26,-10.37 -5.62,-37.57 3.38,-17.72 -9.17,-8.63 36.22,-10.53 4.53,-11.8 10.88,-6.26"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="pornic"
+           id="cc_pornic"
+           d="m 1242.06,1719.21 -10.47,-1.27 -25.94,-60.65 -20.09,-17.18 -16.23,-11.27 -20.31,-27.77 -3.55,-11.68 -67.83,-30.39 7.21,-11.53 -12.98,8.41 -57.44,-10.34 -23.882,-18.46 -45.491,-8.14 -35.556,-16.55 -2.504,-5.64 20.358,-16.94 4.621,-12.39 36.3,-10.68 25.318,5.81 8.966,-9.36 7.25,-10.37 11.1,-49.42 3.25,-5.55 31.49,6.33 17.26,7.17 50.27,-3.04 5.12,3.65 33.24,8.06 0.04,-6.16 17.09,8.58 44.34,-0.64 6.85,-10.95 0.26,-0.26 5.45,-14.5 18.88,-0.04 17.69,7.84 24.66,-7.38 31.64,4.57 -18.56,17.42 -7.28,32.01 16.69,25.75 -12.56,14.79 0.46,6.5 2.11,6.14 20.9,24.39 -15.06,12.23 -16.13,35.12 4.33,12.15 -5.82,-0.1 -3.06,52.36 -0.39,6.07 -26.48,12.73 -20.85,14.4 -12.73,-0.98 -2.88,5.75 -2.37,25.52 13.52,13.2 -0.22,12.68"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="erdre_gesvres"
+           id="cc_erdre_gesvres"
+           d="m 1790.39,1141.61 -34.27,34.48 20.96,53.51 -9.52,16.57 -0.72,44.74 -12.08,-2.05 -25.42,-45.59 -31.9,-23.2 -12.17,4.15 -5.72,-3.27 -11.12,16.74 -11.16,-4.71 -24.66,21.34 -18.62,6.18 -12.28,-3.79 -5.89,2.82 0.37,12.65 -15.54,-11.14 -48.13,-58.99 -11.89,-15.12 0.33,-11.78 -7.24,-9.39 1.46,-17.01 -6.44,10.51 -11.71,-3.31 -43.46,-49.37 -3.33,-38.04 -50.26,11.37 -1.59,-10.66 6.51,0.81 74.36,-40.85 5,-24.48 -25.02,-5.106 4.05,-18.802 6.38,-1.777 13.91,-22.204 6.55,-1.032 32.9,21.104 32.78,1.421 11.03,6.871 1.05,19.155 23.8,22.75 19.39,-15.06 30.04,-11.43 3.25,-5.667 6.43,-76.968 2.29,-6.143 6.51,-0.525 5.38,3.656 3.86,18.785 21.49,14.503 18.69,4.079 32.19,-15.265 12.79,1.388 33.09,18.108 5.85,-11.847 22.95,-12.202 73.07,-67.287 32.5,2.047 10.86,6.414 3.02,19.225 -13.48,13.59 -3.62,12.016 3.57,5.449 19.41,1.303 26.2,-17.228 55.53,12.32 -4.18,18.582 3.33,12.338 15.47,11.304 25.01,3.487 3.84,5.127 11.06,22.323 -12.63,-0.271 -1.91,-12.761 -6.38,-1.15 -6.15,2.064 -18.22,26.456 -18.58,5.68 -31.21,-5.07 -2.39,32.3 9.99,8.01 2.66,12.74 -17.2,41.43 50.96,35.08 -21.58,32.46 -37.59,0.97 -14.69,10.62 -10.95,15.52 -35.2,9.17 -55.24,-10.12 -13.79,28.32 -12.64,-13.85 1.68,-12.15 -6.59,-17.92 -29.44,-39.45"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="vallet"
+           id="cc_vallet"
+           d="m 2236.1,1439.01 39.28,3.45 6.95,17.21 -3.26,10.75 18.46,13.82 -11.47,28.23 -25.3,21.78 -27.91,24.29 -12.52,-0.25 -25.76,16.34 8.9,7.26 -1.86,12.75 6.72,11.1 -8.75,16.28 -1.3,-5.94 -47.53,-8.24 -11.96,-12.63 -29.5,3.39 -7.26,-9.77 -17.6,1.81 -7.04,-10.05 -12.39,-3.71 -10.15,-15.57 -25.59,-1.94 -4.4,-4.74 -11.61,-8.46 5.48,-28.62 8.75,-8.88 -3.5,-12.12 0.47,-24.42 5.42,-2.91 3.2,-18.09 3.54,0.79 23.86,11.1 8.1,9.78 19.65,-1.2 8.72,-10.08 25.62,5.62 32.37,-6.5 10.02,-8.47 11.9,-23.13 30.6,-12.17 28.65,22.14"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           id="cc_castelbriantais"
+           d="m 2302.71,728.679 -68.49,-21.357 -10.66,3.892 -2.81,21.797 -31.66,50.889 1.84,5.94 -30.99,2.793 -56.27,-12.76 -15.65,-9.393 -0.81,23.845 -24.37,15.096 -12.14,-4.485 -38.19,3.537 -24.07,-9.782 -1.89,-6.21 15.09,-11.475 2.46,-19.005 5.63,-3.029 -22.46,-45.135 -44.73,-0.829 -27.6,-13.979 -12.79,1.015 10.19,-31.24 -10.26,-31.089 3.61,-18.565 25.06,3.013 24.76,-4.13 31.75,-16.991 -13.98,-13.353 -14.29,-49.518 -18.29,6.668 -38.89,-3.249 -25.23,-26.739 5.68,-37.79 24.09,-21.409 -1.78,-12.489 -8.29,-9.985 -1.41,-32.442 -3.79,-5.145 -18.97,-0.508 -20.82,-14.571 -37.26,-1.929 -11.27,-15.214 6.06,-17.55 11.49,-4.739 12.47,1.98 24.59,-8.918 33.02,-0.085 24.4,-22.034 10.75,-6.617 11.1,5.398 18.61,-3.147 15.79,-8.784 -0.42,-17.279 -13.79,-32.307 3.15,-5.483 18.36,0.948 10.46,6.448 43.07,2.674 9.24,8.275 7.19,0.576 4.48,4.755 17.89,-5.229 31.84,53.783 29.9,11.981 3.54,1.287 113.65,39.922 -3.19,25.605 12.93,14.352 -7.89,23.895 -17.75,-0.406 0.59,18.65 24.79,18.904 23.27,9.781 25.32,-4.112 -0.7,18.21 17.81,29.633 6.46,4.535 -10.71,48.3 9.8,15.975 12.73,0.508 6.73,28.635 -2.11,17.736 23.65,27.297 -0.59,6.042 -44.57,9.714 -23.46,46.201"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"
+           inkscape:label="#castelbriantais" />
+        <path
+           inkscape:label="pays_ancenis"
+           id="cc_pays_ancenis"
+           d="m 2287.19,1166.54 -29.67,7.6 -28.7,-2.56 -5.19,3.59 -31.43,10.82 -33.07,-0.44 -31.65,9.73 -22.05,24.4 -18.92,5.38 -22.96,23.8 -6.96,2.99 -11.07,-14.86 -19.64,-1.76 -10.72,-6.9 -7.14,-18.52 -3.18,-39.31 21.58,-32.46 -50.96,-35.08 17.2,-41.43 -2.66,-12.74 -9.99,-8.01 2.39,-32.3 31.21,5.07 18.58,-5.68 18.22,-26.456 6.15,-2.064 6.38,1.15 1.91,12.761 12.63,0.271 -11.06,-22.323 -3.84,-5.127 -25.01,-3.487 -15.47,-11.304 -3.33,-12.338 4.18,-18.582 -55.53,-12.32 -26.2,17.228 -19.41,-1.303 -3.57,-5.449 3.62,-12.016 13.48,-13.59 -3.02,-19.225 -10.86,-6.414 -32.5,-2.047 7.5,-29.447 6.13,2.623 20.98,-16.179 56.68,-18.294 6.3,-11.457 1.89,6.21 24.07,9.782 38.19,-3.537 12.14,4.485 24.37,-15.096 0.81,-23.845 15.65,9.393 56.27,12.76 30.99,-2.793 -1.84,-5.94 31.66,-50.889 2.81,-21.797 10.66,-3.892 68.49,21.357 23.46,-46.201 44.57,-9.714 18.09,0.406 26.2,-1.083 34.15,28.905 62.65,16.551 19.6,15.993 1.03,6.262 -16.28,19.157 -16.77,8.885 -10.9,4.417 -1.59,11.322 -16.94,-4.654 -24.6,-5.585 -31.6,1.828 -92.1,-18.176 -9.34,46.184 29.97,11.644 0.85,6.43 -19.9,15.942 1.52,12.896 14.38,27.365 16.91,9.613 43.19,9.392 37.81,-2.555 5.12,3.689 36.25,-5.703 23.26,11.339 17.16,20.19 58.77,-0.694 7.26,20.257 -11.4,12.743 -1.14,11.424 16.25,28.719 4.35,57.603 6.19,8.09 23.27,38.5 -16.84,19.89 -12.74,0.74 -15.99,12.05 -13.36,6.3 -10.96,9.75 -18.09,-3.88 -28.82,11.48 -24.95,0.1 -40.14,-11.83 -18.5,-2.1 -30.16,6.26 -12.94,0.64 -2.69,-3.18 -39.03,-2.87 -32.36,4.48 -17.65,18.65"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="pays_pontchateau"
+           id="cc_pays_pontchateau"
+           d="m 1071.95,1063.44 -9.88,-5.63 -21.89,-28.43 -12.32,-14.81 -12.62,2.47 -3.27,-5.55 3.86,-12.272 -18.141,-26.418 -16.788,-14.351 -0.203,-18.92 -16.737,-9.156 -2.031,-6.075 10.51,-6.414 6.498,-24.726 -18.768,-4.095 -30.919,7.243 -5.737,-2.928 7.446,-23.337 -3.655,-24.438 23.828,-21.256 36.572,-22.914 23.865,-6.092 13.18,-0.999 2.86,5.957 -6.8,24.387 3.94,5.297 25.4,6.143 14.78,-12.202 5.24,-45.27 12.36,-4.722 58.35,-12.201 2.96,-12.575 -7.46,-17.228 11.95,-43.544 16.56,-9.105 61.49,20.258 10.32,7.835 26.64,19.327 10.39,23.794 38.08,5.941 3.7,32.205 17.35,8.208 3.49,24.894 31.07,6.38 45.06,-8.427 12.68,14.791 26.16,36.656 -32.35,31.951 -18.11,7.21 -12.41,3.266 -12.27,-4.485 -4.96,-11.541 -12.38,-3.267 -35.44,-34.659 -11.19,5.5 -10.12,22.695 -19.16,-0.965 4,28.093 -0.7,19.851 -26.94,19.496 -25.7,6.583 -59.52,-5.009 -2.76,5.957 44.83,26.705 -14.57,28.258 8.56,8.7 -0.69,6.35 -14.2,20.7 -18.97,-1.51 -7.86,-23.74 -29.71,-33.241 -6.59,-0.524 -12.03,15.335 -6.45,25.26 0.81,3.56 -14.31,20.19 -18.31,-16.21 -9.87,21.79"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="pays_redon"
+           id="cc_pays_redon"
+           d="m 1625.28,474.708 -4.69,11.153 4.13,4.823 31.8,16.924 -18.16,32.865 -6.34,-0.423 -9.33,36.927 6.99,44.779 8.44,9.698 -1.28,12.895 -21.83,1.845 0.27,12.236 -10.83,14.875 -4.71,36.183 -35.57,-8.784 -22.07,9.833 -5.63,11.677 -0.5,25.91 -41.86,15.739 -16.08,34.981 -44.7,25.487 -8.17,10.154 -12.68,-14.791 -45.06,8.427 -31.07,-6.38 -3.49,-24.894 -17.35,-8.208 -3.7,-32.205 -38.08,-5.941 -10.39,-23.794 -26.64,-19.327 -10.32,-7.835 -61.49,-20.258 -16.56,9.105 -9.99,-9.883 6.01,-2.099 -0.63,-31.02 21.33,-13.607 1.89,-6.058 2.32,-26.046 -14.2,-21.493 21.19,-32.662 38.25,0.559 7.39,-24.692 5.71,-3.232 10.17,-4.586 28.97,5.652 52.56,-48.858 0.43,0.254 4.35,11.999 -1.92,25.452 3.47,5.365 12.59,1.388 28.49,-27.636 64.9,-13.302 2.86,1.845 20.42,-11.119 6.08,-10.239 11.86,-0.592 19.75,3.622 12.2,-4.587 10.13,8.14 42.13,13.336 18.43,3.385 28,-13.522 21.81,10.56"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="sud_estuaire"
+           id="cc_sud_estuaire"
+           d="m 1071.43,1244.59 85.27,-8.12 19.72,-6.26 2.62,-6.25 4.62,-4.11 17.86,4.59 21.96,11.42 1.75,-24.37 9.49,-5.53 15.16,6.16 33.9,15.33 56.29,14.4 -3.32,12.81 19.77,17.69 44.86,57.01 2.69,13.03 -15.97,10.7 -0.02,18.95 -9.63,15.98 -30.61,-9.72 -6.38,1.29 -6.5,11.27 -6.52,0.22 -31.64,-4.57 -24.66,7.38 -17.69,-7.84 -18.88,0.04 -5.45,14.5 -0.26,0.26 -6.85,10.95 -44.34,0.64 -17.09,-8.58 -0.04,6.16 -33.24,-8.06 -5.12,-3.65 -50.27,3.04 -17.26,-7.17 -31.49,-6.33 -0.21,-26.38 -24.67,-47.14 15.38,-9.85 2.2,-45.03 3.34,-5.7 25.47,-1.19 16.35,-6.48 9.41,-1.49"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="loire-atlantique_meridionale"
+           id="cc_loire-atlantique_meridionale"
+           d="m 1785.55,1878.04 -1.9,6.21 12.17,22.44 14.91,11.61 1.39,12.71 -9.5,16.55 -24.81,-1.86 18.85,33.61 32.28,30.26 2.38,18.43 -34.76,16.12 -12.55,-3.58 -12.36,3.65 -4.23,24.03 -37.33,-11.59 -28.65,-16.5 -11.43,2.61 -38.94,-15.96 -19.55,-1.15 -11.35,6.46 -32.63,-30.92 -38.52,7.87 -11.47,-6.36 -7.4,-16.16 1.42,-29.04 25.27,-4.15 7.74,-9.76 18.07,-6 3.86,-11.06 8.48,-9.77 12.16,-4.35 0.28,-6.46 -8.14,-9.6 0.6,-12.86 10.35,-22.51 64.03,3.06 5.64,-3.28 -0.15,-12.79 23.4,-10.82 22.9,9.23 10.02,-8.13 3.04,12.34 5.78,2.73 5.75,-2.75 8.99,-29.92 18.93,0.95 -5.72,23.71 12.7,32.75"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="loire_divatte"
+           id="cc_loire_divatte"
+           d="m 2275.38,1442.46 -39.28,-3.45 -28.65,-22.14 -30.6,12.17 -11.9,23.13 -10.02,8.47 -32.37,6.5 -25.62,-5.62 -8.72,10.08 -19.65,1.2 -8.1,-9.78 -23.86,-11.1 -3.54,-0.79 -34.15,-32.84 -54.5,-16.17 -11.84,-28.86 -11.99,-14.74 23.26,-21.09 31.75,-20.54 24.11,-29.28 8.43,-5.7 48.45,-30.06 6.96,-2.99 18.68,7.02 32.78,-1.95 23.95,-1.71 0.18,6.06 17.71,16.88 3.99,9.34 -1.47,34.66 26.57,38.18 28.07,21.29 8.52,23.33 9.46,8.87 16.31,10.46 18.48,-3 17.33,11.46 -8.73,12.71"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="loire_sillon"
+           id="cc_loire_sillon"
+           d="m 1286.93,914.939 -4,-28.093 19.16,0.965 10.12,-22.695 11.19,-5.5 35.44,34.659 12.38,3.267 4.96,11.541 -6.48,37.401 -17.31,7.802 10.88,23.117 -7.19,24.247 7.19,31.03 -8.48,30.37 11.54,6.43 32.06,-0.23 1.59,10.66 50.26,-11.37 3.33,38.04 43.46,49.37 4.83,9.49 -5.5,0.15 -18.38,-5.14 -41.46,32.9 -30.84,11.93 -6.45,-1.76 -8.37,22.91 -22.16,29.09 -28.63,-13.67 -56.29,-14.4 -33.9,-15.33 -15.16,-6.16 -9.49,5.53 2.13,-32.21 6.33,-0.15 3.5,-25.27 -6.72,-24.01 -0.93,-6.18 -57.25,-23.98 -0.88,-6.16 21.93,-11.49 11.61,-21.85 -9.71,-7.66 14.2,-20.7 0.69,-6.35 -8.56,-8.7 14.57,-28.258 -44.83,-26.705 2.76,-5.957 59.52,5.009 25.7,-6.583 26.94,-19.496 0.7,-19.851"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="sevre_maine_goulaine"
+           id="cc_sevre_maine_goulaine"
+           d="m 2013.25,1546.17 -11.1,4.58 -5.31,-2.86 2.18,5.98 -10.44,15.47 -17.81,3.36 -7.66,17 5.02,18.51 -6.14,11.32 2.84,5.81 -18.95,22.86 -15.74,-9.36 -14.96,-10.61 -30.9,-33.34 2.89,-5.87 30.46,-7.82 3.69,-12.51 14.47,-13.32 1.49,-13.03 -9.17,-7.49 14.21,-9.63 33.41,-42.53 -1.22,-6.01 -40.11,-10.85 -1.77,-43.59 11.79,-20.12 54.5,16.17 34.15,32.84 -3.2,18.09 -5.42,2.91 -0.47,24.42 3.5,12.12 -8.75,8.88 -5.48,28.62"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+        <path
+           inkscape:label="nantes_metropole"
+           id="cc_nantes_metropole"
+           d="m 1867.1,1561.89 -18.55,1.42 -28.75,23.64 -13.4,-20.24 0.89,-12.32 -10.54,-22.32 2.74,-5.57 -12.22,-13.81 -24.08,6.11 -1.25,6.43 -16.81,7.97 -25.37,38.07 -2.25,12.89 -12.35,1.69 -31.46,20.95 -3.91,-10.96 14.1,-20.14 -24.39,-4.89 -8.17,-8.92 -4.79,3.77 -4.95,-3.58 -6.34,-16.88 -29.55,0.93 -7.41,-2.33 -29.2,11.59 -17.14,-18.07 35.59,-34.29 -32.41,-4.48 -18.11,-18.5 -23.54,-10.43 13.98,-24.4 -42.12,-10.81 -9.14,-8.86 -16.19,4.88 -10.55,-6.92 9.87,-23.21 -20.82,-22.42 -35.76,-26.37 1.32,-9.12 -2.69,-13.03 -44.86,-57.01 -19.77,-17.69 3.32,-12.81 28.63,13.67 39.37,44.68 14.97,13.22 6.66,0.03 2.03,11 18.98,3.44 29.87,26.45 32.06,8.56 6.6,-1.06 14.6,-13.54 30.9,-10.41 29.54,-59.05 1.91,-6.66 -0.37,-12.65 5.89,-2.82 12.28,3.79 18.62,-6.18 24.66,-21.34 11.16,4.71 11.12,-16.74 5.72,3.27 12.17,-4.15 31.9,23.2 25.42,45.59 12.08,2.05 0.72,-44.74 9.52,-16.57 -20.96,-53.51 34.27,-34.48 29.44,39.45 6.59,17.92 -1.68,12.15 12.64,13.85 13.79,-28.32 55.24,10.12 35.2,-9.17 10.95,-15.52 14.69,-10.62 37.59,-0.97 3.18,39.31 7.14,18.52 10.72,6.9 19.64,1.76 11.07,14.86 -48.45,30.06 -8.43,5.7 -24.11,29.28 -31.75,20.54 -23.26,21.09 11.99,14.74 11.84,28.86 -11.79,20.12 1.77,43.59 40.11,10.85 1.22,6.01 -33.41,42.53 -14.21,9.63 9.17,7.49 -1.49,13.03 -14.47,13.32 -3.69,12.51 -30.46,7.82 -20.07,-27.13"
+           vector-effect="none"
+           inkscape:connector-curvature="0"
+           style="fill-rule:evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>
