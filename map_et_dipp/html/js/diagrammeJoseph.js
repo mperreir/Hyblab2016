@@ -125,6 +125,13 @@ var jauges = {};
 var saisonActuelle = getSaisonActuelle();
 var donneesActuelles = donneesJardinJoseph[saisonActuelle];
 
+// création de la balise contenant le total 
+var total = [ calculerPoidsTotal(donneesActuelles) ];
+d3.select("#totalJoseph").selectAll("p").data(total).enter().append("p").text(function(d) {
+    return d;
+});
+
+
 // pour chaque produit, on crée une balise
 donneesActuelles.forEach(function(element, index, tableau) {
     
