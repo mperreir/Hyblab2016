@@ -1,0 +1,171 @@
+#section2 div#dataVizMap {
+    
+   
+    width: 960px;
+    height: 600px;
+    display: block;
+    stroke: white;
+    color: #696969;
+}
+#section2 div#svgCarte {
+    stroke-width: 3;
+    fill: #FFFFFF;
+    width: 600px;
+    height: 600px;
+    display: block;
+    float: right;
+    margin-left: 20px;
+}
+#section2 div#title {
+    font-family: "Open", sans-serif;
+    font-size: 20pt;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    width: 340px;
+    height: 170px;
+}
+#section2 div#title span {
+    font-family: "Arial", sans-serif;
+    display: inline-block;
+}
+#section2 div#svgArrow {
+    display: none;
+    width: 340px;
+    height: 120px;
+    float: left;
+}
+#section2 div#titreCourbe {
+    width: 340px;
+    height: 30px;
+    text-align: center;
+    display: none;
+    font-family: "Arial", sans-serif;
+    font-size: normal;
+    margin-top: 5px;
+}
+#section2 div#legend {
+    fill: #FFFF66;
+    width: 340px;
+    height: 80px;
+    display: block;
+    float: right;
+}
+#section2 div#legendeLabels {
+    text-align: left;
+    display: block;
+    width: 340px;
+    height: 35px;
+}
+#section2 div#legendeLabels table {
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#section2 div#legendeLabels td {
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    display: inline-block;
+    font-size: 6.5pt;
+    width: 62px;
+}
+#section2 div#svgLegende {
+    stroke-width: 1;
+    display: block;
+    line-height: 150px;
+    width: 340px;
+    height: 35px;
+}
+#section2 div#svgLegende svg {
+    display: block;
+    width: 340px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+#section2 div#classement {
+    cursor : default;
+    color: black;
+    display: block;
+    width: 340px;
+    height: 350px;
+    float: right;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+#section2 div#classement table {
+    border-spacing: 20px 0;
+    padding: 2;
+    margin-top: 20px;
+}
+#section2 td#titreTable {
+    cursor : default;
+    font-family: "Open", sans-serif;
+    font-size: 15pt;
+    font-weight: 500;
+    text-align: left;
+}
+#section2 tr#titreCol {
+    cursor : default;
+    font-family: "Arial", sans-serif;
+    font-size: 13pt;
+}
+#section2 td#titre_percent {
+    text-align: center;
+}
+#section2 td#titre_epci {
+    text-align: left;
+}
+#section2 td.pourcent {
+    font-family: "Arial", sans-serif;
+    width: 70px;
+    text-align: right;
+    font-size: 15pt;
+}
+#section2 td.nomepci {
+    cursor : pointer;
+    font-family: "Arial", sans-serif;
+    text-align: left;
+    font-size: 11pt;
+}
+#section2 div#courbe {
+    display: none;
+    width: 340px;
+    height: 340px;
+    float: right;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    text-align: center;
+}
+#section2 .axis path,
+#section2 .axis line {
+    fill: none;
+    stroke: #ababab;
+}
+#section2 g.tick text {
+    stroke: #ababab;
+    font-family: "Arial", sans-serif;
+    font-size: 9pt;
+}
+#section2 .line {
+    fill: none;
+    stroke-width: 1.5px;
+}
+#section2 .dot {
+    stroke-width: 1.5px;
+}
+#section2 .dot-selected {
+    fill: #B0C4DE;
+    stroke: #B0C4DE;
+    stroke-width: 1.5px;
+}
+#section2 svg#svgCourbe {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    height: 300px;
+    float: none;
+}

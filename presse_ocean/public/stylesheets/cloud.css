@@ -1,0 +1,50 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+body .background {
+  width: 100%;
+  min-height: 100%;
+}
+body .svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding-right: 100%;
+  /* aspect ratio */
+  vertical-align: top;
+  overflow: hidden;
+}
+body .svg-content-responsive {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+}
+.bee {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+}
+.bee::after {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  content: '';
+  background: url('../media/pic/cloud.svg') no-repeat;
+  background-size: contain;
+}
+.bee.long::after {
+  width: 250px;
+  height: 150px;
+  background: url('../media/pic/cloud2.svg') no-repeat;
+  background-size: contain;
+}
+.bee.big::after {
+  width: 350px;
+  height: 250px;
+  background: url('../media/pic/cloud3.svg') no-repeat;
+  background-size: contain;
+}
