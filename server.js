@@ -9,10 +9,14 @@ var app = express()
 // declare the list of sub apps
 var app_names = [];
 
+// var ddj2016_names = ['centre_national_du_cinema', 'films_en_bretagne', 'france_3_bretagne',
+//  								'la_frap', 'le_journal_des_entreprises', 'le_telegramme', 'loire_atlantique_fr',
+// 								'map_et_dipp', 'ouest_france', 'pays_de_la_loire_fr', 'presse_ocean',
+// 								'the_city_talking', 'trinity_mirror'];
+
 var ddj2016_names = ['centre_national_du_cinema', 'films_en_bretagne', 'france_3_bretagne',
  								'la_frap', 'le_journal_des_entreprises', 'le_telegramme', 'loire_atlantique_fr',
-								'map_et_dipp', 'ouest_france', 'pays_de_la_loire_fr', 'presse_ocean',
-								'the_city_talking', 'trinity_mirror'];
+								'map_et_dipp', 'ouest_france', 'pays_de_la_loire_fr'];								
 
 app_names.push.apply(app_names, ddj2016_names);
 

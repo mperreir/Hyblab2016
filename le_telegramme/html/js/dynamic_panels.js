@@ -26,6 +26,8 @@ $(document).ready(function() {
     console.log('clic menu1');
     $("#right iframe").attr("src", "map.html");
 
+    $("#submenu li").css("border-right", "2px solid #F7931E");
+
     switch(currentNav){
       case 0:
         $("#menu1").removeClass("active");

@@ -52,8 +52,6 @@ iframe {
 }
 
 
-
-
 /* Left panel */
 #navbar_left {
   padding: 0;
@@ -155,29 +153,12 @@ iframe {
   text-align: center;
   font-family: SantEliaScriptBoldDEMO;
   font-size: 14px;
-/*  border-right: 2px solid #F7931E;*/
   padding: 0;
 }
-
-/*#submenu img {
-  width: 10%;
-}*/
 
 #submenu li a:hover{
   background-color: transparent;
 }
-
-/*.submenu_j_hover{
-  background-color: #F7931E;
-}
-
-.submenu_r_hover{
-  background-color: #FF605E;
-}
-
-.submenu_b_hover{
-  background-color: #42B69E;
-}*/
 
 #submenu li a {
   color: white;
@@ -238,17 +219,12 @@ iframe {
   width: 100%;
 }
 
-.mp_sondage img {
-
-}
-
 #brestmem {
   display: block;
   width: 50%;
   height: 50%;
   margin: auto;
 }
-
 
 .mp_photos img{
   width: 100%;

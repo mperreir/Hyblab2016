@@ -1,0 +1,1970 @@
+[
+  {
+    "FIELD1":"Commentaires",
+    "FIELD2":"Equipement choisi",
+    "FIELD3":"Sexe",
+    "FIELD4":"Age",
+    "FIELD5":"Catégorie",
+    "FIELD6":"Type d'avis"
+  },
+  {
+    "FIELD1":"Centre-ville beaucoup plus agréable avec l'arrivée du tram ",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"37",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Amélioration du centre-ville, modernisation des bâtiments avec couleur, animations de la ville",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"28",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Un tramway, un téléphérique et une Arena inutile... Une politique répressive qui fait fermer un à un les bars-concerts\n",
+    "FIELD2":"Tramway, Téléphérique, Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"30",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Agressions gratuites en hyper-centre de nuit empêchant de sortir sereinement. ",
+    "FIELD2":"Carène, Port, Polder, Aéroport",
+    "FIELD3":"Un homme",
+    "FIELD4":"23",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"L'architecture a changé. Mais le style de vie aussi, on s'amuse moins !",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"27",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Tram, port du château mais aussi insécurité le soir",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"23",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Beaucoup plus dynamique dans les événements, et beaucoup plus belle avec l'arrivée du tramway qui a embelli les rues principales.",
+    "FIELD2":"Tramway, Carène, Port, Brest Arena, Polder, Le multiplexe Liberté",
+    "FIELD3":"Un homme",
+    "FIELD4":"20",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"La ville a pris des \"couleurs\" (Kerigonan...) et elle s'est ouverte avec le tramway et le futur téléphérique.",
+    "FIELD2":"Tramway, Carène, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"38",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Circulation des voitures autos plus compliquée  !!!\n",
+    "FIELD2":"Tramway, Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"45",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Oui autant positivement (Tram/Arena/Froutven/Bas de siam) que négativement (Haut Jean-Jaures)",
+    "FIELD2":"Tramway, Carène, Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"27",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Je trouve qu'il y a moins d'arbres, les routes sont bien plus étroites et les places de parking gratuit se font tellement rares désormais...",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"20",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Le centre-ville avec son bassin et ses petits bateaux a fait place à un lieu de rassemblements en tout genre.\n",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"52",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Son visage a complètement évolué grâce notamment au tram.",
+    "FIELD2":"Téléphérique",
+    "FIELD3":"Une femme",
+    "FIELD4":"33",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"C'est triste, les gens font la gueule. Rien ne bouge.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"47",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Le port et la marina, c'est positif. Le tramway a fait du centre-ville un désert sans âme. Téléphérique inutile.",
+    "FIELD2":"Carène, Port, Brest Arena, Aéroport",
+    "FIELD3":"Un homme",
+    "FIELD4":"46",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Brest évolue vers de nouvelles réalisations, des couleurs. Mais des quartiers sont devenus glauques et sans aucun avenir. Je n'ai pas compris le téléphérique.",
+    "FIELD2":"Tramway, Zone du Froutven",
+    "FIELD3":"Un homme",
+    "FIELD4":"44",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Oui, dans le mauvais sens ! D'ailleurs la population brestoise quitte la \"métropole\". Insécurité, déclin industriel sont maître mots.\n\n",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Un homme",
+    "FIELD4":"43",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Trop de commerces fermés mais beaux changements rue de Siam.",
+    "FIELD2":"Brest Arena",
+    "FIELD3":"Une femme",
+    "FIELD4":"24",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"De nouveaux équipements. Un bas Siam épuré, un Recouvrance retrouvé et tant de choses à venir...",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"29",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"On perçoit l'émergence de nombreux projets visant à transformer et embellir l'image de notre ville ainsi que sa vie au quotidien. ",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"23",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Mise en place du tram et \"mort\" du haut de Jean-Jaurès, augmentation des agressions",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"31",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Le bas de Recouvrance est devenu plus présentable.",
+    "FIELD2":"Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"24",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Des évolutions dans l'urbanisme mais aussi un sentiment grandissant d'insécurité.",
+    "FIELD2":"Carène",
+    "FIELD3":"Une femme",
+    "FIELD4":"44",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Le tram est raté, trop gris pas assez vert. ",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Un homme",
+    "FIELD4":"38",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Le centre ville est beaucoup plus agréable depuis qu'il est piétonnier. Les coulées vertes apparues grâce au tramway aèrent les espaces.\n",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"62",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Plein d'évolutions positives. Brest poursuit sa mue. Saint Pierre est enfin rattaché à la ville et l'extension se poursuit jusqu'à Plouzané.",
+    "FIELD2":"Tramway, Carène, Port, Brest Arena, Polder, Aéroport, Zone du Froutven, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"38",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Insécurité. Aucune remise en question de la mairie. Perte des commerces régionaux. Depenses inutiles. Circulation moins facile.",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Un homme",
+    "FIELD4":"24",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"La ville grise est devenue la ville blanche !!",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"34",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Beaucoup de neuf, la modification du transport en commun, et de la couleur !",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"33",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Plus d'agressions. Evolution du paysage lié au tram. De nouveaux services culturels.",
+    "FIELD2":"Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Une femme",
+    "FIELD4":"24",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Bonnes tentatives pour moderniser la ville, mais tout cela manque d'audace, on est encore loin du dynamisme de Nantes. ",
+    "FIELD2":"Tramway, Brest Arena, Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"33",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"On ne peut plus monter en voiture la rue Jean-Jaurès, la rue de Siam est désertique sauf pour Noël et les manifs ...",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"30",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Le tram y est pour beaucoup. Le centre ville s'est éclairci, surtout lorsque l'on regarde la rue de Siam de la place de la Liberté.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"28",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Brest a changé parce que cette ville s'est ouverte vers la mer. Comme au port de commerce.",
+    "FIELD2":"Tramway, Téléphérique, Brest Arena, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Une femme",
+    "FIELD4":"45",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Pas en bien. Plus de délinquance moins rassuré dans les rues. La pauvreté et la saleté ressortent beaucoup plus.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"38",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Le désenclavement des quartiers et des communes périphériques a modifié la ville.",
+    "FIELD2":"Tramway, Aéroport",
+    "FIELD3":"Un homme",
+    "FIELD4":"35",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Un certain renouveau artistique de la ville qu'il faut encourager, ce qui n'est pas le cas.",
+    "FIELD2":"Tramway, Carène",
+    "FIELD3":"Une femme",
+    "FIELD4":"30",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Brest s'apprête enfin à entrer dans le XXIeme siècle.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"37",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Tram. Salle de spectacle. Nouvelle zone commerciale. C'est bien. Dommage que les commerces de centre-ville ferment.",
+    "FIELD2":"Tramway, Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"29",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Brest a su prendre en main son destin et investir pour l'avenir. ",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"54",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Brest s'est modernisé, embelli et ouvert sur la mer, mais les rues restent dans un piteux état, comme le boulevard Montaigne par exemple.",
+    "FIELD2":"Port, Brest Arena, Polder, Aéroport, Zone du Froutven",
+    "FIELD3":"Un homme",
+    "FIELD4":"36",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Mutation complète du centre ville, du port de commerce, bientôt des capucins tout neufs... Brest tout beau tout neuf !",
+    "FIELD2":"Polder",
+    "FIELD3":"Un homme",
+    "FIELD4":"43",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Tramway, désertification haut de Jaurès, place de la liberté froide et grise. Délinquance et beuverie basée à Liberté.\n",
+    "FIELD2":"Tramway, Port, Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"39",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Les travaux du tramway et la désertification du centre-ville ont changé notre vision de la ville.",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"32",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Des nouvelles zones commerciales se sont agrandies, laissant un centre ville se vider.",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"42",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Rue Jean-Jaurès déserte alors qu'avant on venait y faire les magasins. Beaucoup plus de délinquance. ",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"31",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Réaménagement, modernisation, ville vivante et étudiante !",
+    "FIELD2":"Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"22",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Plus moderne, plus de magasins ",
+    "FIELD2":"Tramway, Brest Arena, Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"25",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les territoires traversés par le tramway ont pris un caractère nettement plus moderne.",
+    "FIELD2":"Tramway, Port, Téléphérique, Brest Arena, Polder, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"53",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"La ville est modernisée et ne se résume plus à cette image de port militaire où les ouvriers s'alcoolisent. Brest est culturelle, branchée.",
+    "FIELD2":"Tramway, Carène",
+    "FIELD3":"Un homme",
+    "FIELD4":"40",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"La ville s'est modernisée et est de plus en plus colorée.",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"22",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Cest compliqué à résumer comme ça. J'y habite depuis 1992 et c'est une ville que j'aime chaque jour un peu plus.",
+    "FIELD2":"Tramway, Carène",
+    "FIELD3":"Un homme",
+    "FIELD4":"33",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les gros efforts d'aménagement se font sentir (tram, port du château). Brest est plus esthétique, a une meilleure image.",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"29",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Violence, tramway complètement inutile causant la fermetures d'innombrables commerces. Téléphérique superflu.",
+    "FIELD2":"Carène, Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"30",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Voir une ville provinciale devenir moderne, presque branchée, et faire de ses handicaps architecturaux des atouts d'avenir.",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"37",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Scène musicale et culturelle meilleure. Les couleurs ! Les graff ! C'est positif. Problèmes : peu d'expos d'art, architecture récente ratée, quartier des 4 moulins et Recou à revaloriser.\n",
+    "FIELD2":"Carène",
+    "FIELD3":"Une femme",
+    "FIELD4":"34",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Jaurès est un quartier éteint alors que c'était le coeur de la ville avant",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"31",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Beaucoup changé avec le tram mais je déplore l'absence de boutiques en haut de la rue Jean Jaurès. ",
+    "FIELD2":"Tramway, Zone du Froutven",
+    "FIELD3":"Une femme",
+    "FIELD4":"34",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Moins de festivités, trop de contrainte. Trop de dangers la nuit.",
+    "FIELD2":"Tramway, Port, Aéroport, Le multiplexe Liberté",
+    "FIELD3":"Un homme",
+    "FIELD4":"27",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Ravalement ou fresques des 4 moul, quartiers plus attrayants et dynamiques comme Pontanezen ou le port de commerce",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"39",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"#innovation\n#Developpement\n#Metropole\n#amenagmenttropcool",
+    "FIELD2":"Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"19",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"La ville s'est ouverte, plus aérée, plus rock'n'roll car plus de salles, plus conviviale.",
+    "FIELD2":"Tramway, Carène, Port, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Une femme",
+    "FIELD4":"52",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Beaucoup commerces ont disparu à cause de tram : BREST MEURT !",
+    "FIELD2":"Brest Arena",
+    "FIELD3":"Une femme",
+    "FIELD4":"34",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Réalisation tramway, la Carène !!!!!! Que d'efforts réalisés, il reste encore du travail, courage pour la suite......",
+    "FIELD2":"Tramway, Carène, Port, Téléphérique, Brest Arena",
+    "FIELD3":"Une femme",
+    "FIELD4":"58",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Ses activités se sont diversifiés. Il y a de la modernité dans sa rénovation.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"28",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"La ville s'est embellie, le tramway a considérablement transformé la ville.",
+    "FIELD2":"Tramway, Téléphérique, Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"46",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Brest se meurt, tous les commerces ferment, rue Jean Jaurès et rue de Siam on se croirait dans une ville fantôme",
+    "FIELD2":"Aéroport, Zone du Froutven",
+    "FIELD3":"Une femme",
+    "FIELD4":"57",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"La ville s'embellie mais s'appauvrit en même temps.",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"40",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Suite au travaux du tramway puis la rénovation de place Strasbourg la ville de Brest est bien plus vivant ",
+    "FIELD2":"Tramway, Brest Arena, Le multiplexe Liberté",
+    "FIELD3":"Un homme",
+    "FIELD4":"23",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Ville sans chaleur aucun lien entre la rue Jean-Jaurès et la rue de Siam. Trop de béton.",
+    "FIELD2":"Tramway, Port, Le multiplexe Liberté",
+    "FIELD3":"Une femme",
+    "FIELD4":"50",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Une ville plus ouverte, où  l'on circule mieux, grâce au tram. Une ville plus fière de sa façade maritime, mise en valeur par la marina.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"30",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Rénovation profonde du centre ville, affirmation de son rôle de métropole, développement de ses activités.",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"32",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Le tram. La crise a totalement transformé le haut de Jaurès . Et froutven à changé le paysage commercial de Brest",
+    "FIELD2":"Tramway, Port, Rèhabilitation du quartier de Pontanézen, Le multiplexe Liberté",
+    "FIELD3":"Une femme",
+    "FIELD4":"31",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"La construction de la ligne de tramway a apporté un nouveau souffle à la ville et a permis de relancer certains quartiers.",
+    "FIELD2":"Tramway, Brest Arena",
+    "FIELD3":"Une femme",
+    "FIELD4":"25",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Départ des classes aisées et moyennes inquiétante. ",
+    "FIELD2":"Carène, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"35",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Brest a retrouvé un dynamisme important depuis une douzaine d'année avec les équipes municipales Cuillandre.",
+    "FIELD2":"Tramway, Téléphérique, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"66",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Violence trop présente en centre-ville à la nuit tombée. Ville de plus en plus isolée des \"voisines\" Rennes-Quimper (transports).\n",
+    "FIELD2":"Polder",
+    "FIELD3":"Une femme",
+    "FIELD4":"29",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Sécurité en berne, entreprises qui quittent le secteur, perte de population et d'attractivité... Bref, pas de points positifs",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Un homme",
+    "FIELD4":"42",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Grands travaux et en parallèle une dégradation de plusieurs quartiers.",
+    "FIELD2":"Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Une femme",
+    "FIELD4":"37",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Montée en gamme du centre-ville. Réappropriation du port de co.",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"42",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"+ de délinquance - sécurité\nune expansion urbaine délirante tandis que certains quartiers sont abandonnés (St-Martin par ex)",
+    "FIELD2":"Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"38",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Incapacité de la municipalité à avoir une politique d'urbanisme = tout pour les promoteurs immobiliers.",
+    "FIELD2":"Le multiplexe Liberté",
+    "FIELD3":"Un homme",
+    "FIELD4":"50",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Méconnaissable à force de transformations incessantes. Précarisation de l'emploi. Politique de la démesure.",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"36",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Ouverture de la ville sur la rade et aménagement de lieux invitant à rester dehors.",
+    "FIELD2":"Carène",
+    "FIELD3":"Un homme",
+    "FIELD4":"37",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Ville de plus en plus aseptisée, travaux pour les promoteurs, pas pour les Brestois. ",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"25",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Gentrification sans respect du patrimoine brestois, ni des espaces verts. Disparition d'un jardin publique d'une salle de quartier",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"38",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Promesses non tenues, salle de l'avenir détruite, immeuble proudhon vendu, privatisation du patrimoine... ",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"39",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Modernisation de la ville et plus grande attractivité ",
+    "FIELD2":"Tramway, Carène, Port, Brest Arena, Aéroport, Le multiplexe Liberté",
+    "FIELD3":"Un homme",
+    "FIELD4":"40",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Le politique souhaite laisser une trace. Sans vision, heureusement qu'il y a l'impôt local.",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Un homme",
+    "FIELD4":"40",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"La ville ne s'améliore pas mais devient \"nécropole\". Les nouveaux projets pour attirer de nouveaux contribuables sont tristes et inutiles. ",
+    "FIELD2":"Carène",
+    "FIELD3":"Une femme",
+    "FIELD4":"26",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Plus dynamique, plus de culture et d'événements.",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"26",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Avec le tram la ville a complètement changé. L'arrivée de l'Arena et tout. Ca donne un nouvel envol à Brest.",
+    "FIELD2":"Zone du Froutven",
+    "FIELD3":"Une femme",
+    "FIELD4":"22",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Dynamisme culturel, réhabilitation du Port de Commerce, diminution des activités et de l'emprise de la Marine Nationale",
+    "FIELD2":"Tramway, Port, Téléphérique, Brest Arena, Polder, Aéroport, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"51",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Le quartier Saint Martin a été rénové. On peut regretter que les nouveaux aménagements au détriment du caractère convivial et vivant.",
+    "FIELD2":"Carène",
+    "FIELD3":"Un homme",
+    "FIELD4":"30",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"A cause du départ définitif de la marine, Brest périclite.",
+    "FIELD2":"Tramway, Carène, Port, Brest Arena, Aéroport, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"63",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Tram = plus de vie ! ",
+    "FIELD2":"Polder",
+    "FIELD3":"Un homme",
+    "FIELD4":"24",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Pauvreté / population de la rue Jean-Jaurès ... Tramway efficace. Stade Brestois sans évolution.",
+    "FIELD2":"Tramway, Carène, Port, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"27",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Avec l'arrivée du tramay, le centre de Brest a complètement changé.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"33",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Disparition des boutiques rue Jean Jaurès. Augmentation de la petite délinquance. ",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"33",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"L'ambiance familiale de certains quartiers a disparu au profit de l'individualisme. Le centre a perdu son âme à l'arrivée du tram.",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"37",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Une rue Jean-Jaurès piétonne c'est super mais la disposition actuelle la rend froide. Le vent y a son avenue.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"34",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Dégradation de la sécurité et de l'ambiance du centre ville de Brest. ",
+    "FIELD2":"Port, Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"21",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Suppression de la sale de l'Avenir à Saint-Martin et gentrification de ce quartier.",
+    "FIELD2":"Carène",
+    "FIELD3":"Un homme",
+    "FIELD4":"45",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Accentuation de l'insécurité. Baisse du bien-être de vie (centre-ville) surtout étudiante\n",
+    "FIELD2":"Aéroport, Zone du Froutven, Le multiplexe Liberté",
+    "FIELD3":"Une femme",
+    "FIELD4":"24",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Reconstruction rapide apres guerre mais aujourd'hui les bâtiments récents remplacent les moches et les anciens bâtiments restent ",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"23",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"En bien pour place de la mairie et le port. En négatif pour place de Strasbourg : pas gaie, pas jolie, compliquée. Et pour la rue Jean-Jaurès : triste, ancienne.",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"44",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"L'arrivée du tram a bouleversé le paysage du centre-ville. Beaucoup de commerces ont fermé en haut de la rue Jean Jaurès sans vie.",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"21",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Modernisation de la ville et plus grande attractivité ",
+    "FIELD2":"Tramway, Carène, Port, Brest Arena, Aéroport, Le multiplexe Liberté",
+    "FIELD3":"Un homme",
+    "FIELD4":"40",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Désertification du centre ville par la décentralisation des zones d'activités marchandes malgré l'investissement du Tram\n",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"60",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Il y a eu de nombreux nouveaux aménagements et de nouveaux équipements et les Brestois sont devenus fiers de leur ville ",
+    "FIELD2":"Tramway, Port, Téléphérique, Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"32",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Bassin de l'emploi sinistré ",
+    "FIELD2":"Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Une femme",
+    "FIELD4":"36",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Insécurité, plus sale",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"37",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Le tramway est une belle réalisation très utile. Il faudrait une autre ligne qui aille sur les fac et l'hôpital de la Cavale Blanche.\n",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"78",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Montée de l'insécurité. Lieux de convivialité vivants aux ports et en bas de Siam.",
+    "FIELD2":"Tramway, Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"47",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Fermeture de boutiques rue Jean-Jaurès et modernisation de l'architecture urbaine.",
+    "FIELD2":"Brest Arena",
+    "FIELD3":"Une femme",
+    "FIELD4":"24",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Le Tramway met un peu plus de vie à Brest.",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"20",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Brest d'antan : ville grise, froide. Aujourd'hui : ville dynamique,qui bouge,modernisée,remplie d'histoires, pleine d'activités, vivante !",
+    "FIELD2":"Tramway, Carène, Port, Téléphérique, Brest Arena, Polder, Aéroport, Zone du Froutven, Rèhabilitation du quartier de Pontanézen, Le multiplexe Liberté",
+    "FIELD3":"Un homme",
+    "FIELD4":"42",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"La ville est moins triste, les immeubles sont moins gris,  il y a plus de couleurs. il y a moins d'ambiance, plus de bateaux dans le port.",
+    "FIELD2":"Tramway, Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"66",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"La réalisation du tramway qui offre aux brestois une perspective de déplacement plus grande et plus rapide.",
+    "FIELD2":"Tramway, Aéroport, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"64",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"De nombreux équipements ont vu le jour, cela a donné une modernité à Brest, notamment grâce au Tram qui a embelli la ville.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"34",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Siam semble plus large, plus lumineuse, plus moderne. Le haut de la rue Jean-jaurès a des allures de ville fantôme.",
+    "FIELD2":"Tramway, Port, Brest Arena, Zone du Froutven",
+    "FIELD3":"Une femme",
+    "FIELD4":"44",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Ville plus vivante, moins grise, moins triste... Le tram a aéré l'espace.",
+    "FIELD2":"Tramway, Port, Zone du Froutven, Le multiplexe Liberté",
+    "FIELD3":"Une femme",
+    "FIELD4":"34",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"L'effet tramway et l'aménagement des espaces publics en général, les ports du château et du Moulin-Blanc : sites très agréables.",
+    "FIELD2":"Tramway, Brest Arena",
+    "FIELD3":"Une femme",
+    "FIELD4":"42",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"La ville est beaucoup plus tournée vers la mer avec la revalorisation du port de commerce. Brest est en train de retrouver la Penfeld.",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"21",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Brest est devenue sale.",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"67",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Plus propre et plus pratique.\n",
+    "FIELD2":"Tramway, Téléphérique, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Une femme",
+    "FIELD4":"65",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Positif : ville dynamisé \nNégatif : violence et insécurité",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Un homme",
+    "FIELD4":"23",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Beaucoup plus animée ! ",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"43",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Nombreux équipements collectifs, une transformation radicale  grâce au tramway, avec un bémol pour la désertification de Jean Jaurès.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"59",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Le visage de la ville a changé grâce au tramway, à la mise en place de la zone du Froutven et à l'aménagement du port.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"27",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Dynamisme culturel , dynamisme architectural et environnemental",
+    "FIELD2":"Tramway, Carène, Polder",
+    "FIELD3":"Une femme",
+    "FIELD4":"44",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Une ville c'est toujours en mouvement, surtout une ville de la taille de Brest. Il y eu des évolutions mais pas de métamorphose.",
+    "FIELD2":"Tramway, Aéroport",
+    "FIELD3":"Un homme",
+    "FIELD4":"32",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Ambiance nocturne dégradée dans le centre-ville de Brest ",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Une femme, Un homme",
+    "FIELD4":"24",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Constructions de nouveauxx logements au détriment d'équipements de quartier pour le vivre ensemble. Exemple :  AVENIR ST MARTIN : urbanisme et solidarités ?",
+    "FIELD2":"Carène",
+    "FIELD3":"Une femme",
+    "FIELD4":"39",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"DES métamorphoses qu'il est impossible de résumer en 2 Lignes. Nécessité de créer des dialogues constructifs entre habitants et décideurs.",
+    "FIELD2":"Carène",
+    "FIELD3":"Une femme",
+    "FIELD4":"39",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Transformation urbaine au détriment de la vie de quartier",
+    "FIELD2":"Port, Brest Arena, Aéroport",
+    "FIELD3":"Un homme",
+    "FIELD4":"38",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Embellissement de certains quartiers grâce au tram. A contrario d autres quartiers se dégradent comme Piller Rouge ",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"37",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Plus sale, plus grise, plus triste.",
+    "FIELD2":"Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"38",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Un certain nombre de \"grands projets\" voit le jour, plus ou moins utiles. Celui du téléphérique étant le summum de l'inutilité.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"27",
+    "FIELD5":"Avis",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Plus vert, conviviale, plus culturelle",
+    "FIELD2":"Tramway, Carène, Port, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"20",
+    "FIELD5":"Avis",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"La mairie souhaite une nouvelle image de la ville plus moderne, laissant de côté son histoire, son patrimoine et l'avis de ses habitants. ",
+    "FIELD2":"Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Une femme",
+    "FIELD4":"25",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Délaissement du haut de Jaurès/Saint Martin au profit du centre. Des problèmes (violences) ont lieu rien n'est fait pour les contrer.",
+    "FIELD2":"Tramway, Carène, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"27",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"La Penfeld rasée, moins de végétations (arbres, herbes etc...)",
+    "FIELD2":"Le multiplexe Liberté",
+    "FIELD3":"Un homme",
+    "FIELD4":"16",
+    "FIELD5":"Avis",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Que de bon souvenir sur Recouvrance au beau dimanche rue Saint-Malo qui maintenant ne bouge quasiment plus.... Brest se meurt.",
+    "FIELD2":"Tramway, Téléphérique, Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"30",
+    "FIELD5":"souvenir",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Les bonnes soirées entre amis au bar l'arena ",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"23",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Toute ma jeunesse : les après-midi graff sur le port, les jeudis du ports avant qu'ils ne soient ultra sécurisés.",
+    "FIELD2":"Tramway, Carène, Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"27",
+    "FIELD5":"souvenir",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Le trajet pour aller au lycée avec mes amis.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"20",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Économiser 40 minutes (minimum) de trajet par jour comparé au bus.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"20",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Match du BBH , divers bons concerts",
+    "FIELD2":"Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"31",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Jeudis du port, fêtes maritimes, concerts, soirées, boite de nuit, bars, ambiance...",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"31",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"A mon enfance. À des vacances à ma nouvelle vie depuis que j'ai quitté notre belle capitale Paris pour venir m'y installer...",
+    "FIELD2":"Tramway, Zone du Froutven",
+    "FIELD3":"Un homme",
+    "FIELD4":"44",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"La sensation d'un souffle nouveau dans les rues brestoises. Un pas vers le progrès et le futur. Je revenais de deux ans d’études en Colombie et j'ai été complétement ébahi devant ce Tram !!",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"29",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les \"Tonnerres de Brest\" en 2012 avec le tramway au coeur de la fête quelques mois après son inauguration.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"23",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les bons concerts et spectacle. ",
+    "FIELD2":"Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"24",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"La 1ère fois qu'on a pris le tram avec nos filles on a trouvé ça génial. ",
+    "FIELD2":"Tramway, Carène",
+    "FIELD3":"Une femme",
+    "FIELD4":"35",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Première sortie à Brest ",
+    "FIELD2":"Carène, Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"29",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"L'enfance, les magasins qui ferment laissant place à de nouvelles enseignes",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"27",
+    "FIELD5":"souvenir",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"La Carène c'est 2 superbes salles de concert où passent des groupes très intéressants et pas forcément ceux dont on parle le plus dans les médias à grande diffusion",
+    "FIELD2":"Carène",
+    "FIELD3":"Une femme",
+    "FIELD4":"44",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les samedis chez Ikea",
+    "FIELD2":"Zone du Froutven",
+    "FIELD3":"Une femme",
+    "FIELD4":"35",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"La vie nocturne ! ",
+    "FIELD2":"Tramway, Carène, Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"37",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Le tramway reliait mes enfants, l'un habitant à Saint-Pierre et l'autre près de la place de Strasbourg. Les visites étaient facilitées.\nAujourd'hui, nous habitons à Plougonvelin et utilisons le parking de Montbarey pour nous rendre au centre ville où nous rejoint notre fille.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"62",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"J'aime ma ville car elle a eu plein de blessures, elle a plein d'atouts. Le travail entrepris ces dernières années est en train de payer. Brest s'inscrit désormais dans le futur.\n",
+    "FIELD2":"Tramway, Carène, Port, Brest Arena, Polder, Aéroport, Zone du Froutven, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"38",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les descentes de Jaurès à pied, le samedi matin. Avec un peu de soleil",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"38",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Pontanézen. La crainte de traverser ce quartier dont les faits divers en ont fait sa renommée et dont les tours étaient oppressantes.",
+    "FIELD2":"Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Une femme",
+    "FIELD4":"24",
+    "FIELD5":"souvenir",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"De belles soirées au port",
+    "FIELD2":"Tramway, Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"25",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Tramway. Le bonheur de ma fille lorsque l'on monte dedans ! Un grand manège pour elle...",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"28",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Le bus 25 de Plougastel et son arrêt place de la Lib'",
+    "FIELD2":"Tramway, Aéroport",
+    "FIELD3":"Un homme",
+    "FIELD4":"35",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Beaucoup de bons souvenirs à la Carène, notamment les Movie Star Junkies et Le Mamøøth en 2015.",
+    "FIELD2":"Tramway, Carène",
+    "FIELD3":"Une femme",
+    "FIELD4":"30",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Spectacle de Noël. Match de hand.",
+    "FIELD2":"Tramway, Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"29",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Mauvais : J'habitais rue Jean Jaurès pendant les travaux je me souviens d'être à deux doigts de faire tomber ma voiture dans un trou lors de mon aménagement . \nBon : inauguration avec tous les événements qu'il y a eu ",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"27",
+    "FIELD5":"souvenir",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Balades familiales depuis... 40 ans ?",
+    "FIELD2":"Polder",
+    "FIELD3":"Un homme",
+    "FIELD4":"43",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Le port est symbole de la convivialité inexistante en ville, notamment grâce aux pubs le Tara Inn et le Mc Guigan's et les 4 vents. Il est agréable de s'y rendre après un concert à la Carène.",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"32",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Aéroport. Les grèves trop nombreuses ",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"42",
+    "FIELD5":"souvenir",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Multiplexe. Plein de bons films",
+    "FIELD2":"Le multiplexe Liberté",
+    "FIELD3":"Une femme",
+    "FIELD4":"41",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Flânerie en ville avec les copines ( on venait en car de Lesneven)",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"31",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"L'Open de tennis la première fois où j'y suis allé. L'Arena est très belle et manquait à Brest, Il était temps d'avoir une salle équipée pour accueillir des événements sportifs, ou concerts ... Au lieu du vieux parc des expositions de Penfeld. ",
+    "FIELD2":"Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"22",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les nombreux artistes que j'ai pu voir en concert grâce à l'Arena",
+    "FIELD2":"Tramway, Brest Arena, Polder, Aéroport, Zone du Froutven, Le multiplexe Liberté",
+    "FIELD3":"Une femme",
+    "FIELD4":"17",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les festivités (Brest 2008, Brest 2012 et jeudis du port), les grands rassemblements populaires.",
+    "FIELD2":"Tramway, Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"23",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"L'inauguration du tramway fut une belle fête qui a donné une image positive de Brest, rassemblant les gens après des années de travaux. La Carène permet de découvrir des artistes nouveaux, hors des circuits médiatiques classiques, le son y est parfait !",
+    "FIELD2":"Tramway, Carène",
+    "FIELD3":"Un homme",
+    "FIELD4":"40",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Très bon souvenir : Astropolis. \nMais à quand une réhabilitation de la terrasse, ce lieu unique et magique qui donne sur le port ?",
+    "FIELD2":"Carène",
+    "FIELD3":"Une femme",
+    "FIELD4":"34",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les tonnerres de Brest!",
+    "FIELD2":"Tramway, Carène, Port, Téléphérique, Brest Arena, Aéroport, Le multiplexe Liberté",
+    "FIELD3":"Un homme",
+    "FIELD4":"27",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les sorties après l'école ou les exams au lycée. \nLes ballades rapide lorsque le soleil pointe le bout de son nez. \nLes mojitos l'été...",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"26",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Mon arrivee à Brest",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"33",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Brest est une ville tournée vers la mer, le port est un lieu de vie culturelle et d activités (commerces, criée...). Mon souvenir est les jeudis du port, fête enracinée et attendue chaque année.",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"39",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Renouveau du tournoi challenger de tennis a Brest",
+    "FIELD2":"Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"19",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Port. Souvenirs de lycéenne en 1980 ..  Et lieu de vie pendant 3 ans en 1996 - 1999",
+    "FIELD2":"Tramway, Carène, Port, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Une femme",
+    "FIELD4":"52",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Mauvais souvenir : toutes les fermetures de magasins provoquées par les travaux ",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"21",
+    "FIELD5":"souvenir",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Tramway. Ma fille le prend depuis sa naissance",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"36",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Bellevue ? Mon achat d'appartement ",
+    "FIELD2":"Tramway, Brest Arena, Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"34",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Ouverture de Ikea",
+    "FIELD2":"Zone du Froutven",
+    "FIELD3":"Une femme",
+    "FIELD4":"62",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Mes années d'études, à Segalen.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"30",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les matchs de Handball et le tournoi de tennis sont les bons souvenirs que je garderais de l'arena. ",
+    "FIELD2":"Tramway, Brest Arena",
+    "FIELD3":"Une femme, Un homme",
+    "FIELD4":"23",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les fêtes maritimes de 2008 et 2012, l'appareil photo à la main, avec des amis.",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"32",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les jeudis du port ",
+    "FIELD2":"Tramway, Port, Rèhabilitation du quartier de Pontanézen, Le multiplexe Liberté",
+    "FIELD3":"Une femme",
+    "FIELD4":"31",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Toute mon enfance et mon adolescence ! ",
+    "FIELD2":"Tramway, Brest Arena",
+    "FIELD3":"Une femme",
+    "FIELD4":"25",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les violences du quartier de Pontanezen ",
+    "FIELD2":"Tramway, Téléphérique, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"66",
+    "FIELD5":"souvenir",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Brest by night (fois plein...)",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"42",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Bon souvenir: premier apéro terrasse pour astropolis.\nAmener la population brestoise à vivre sa ville différemment: en l'occurrence sur le port, dehors et autour d'un fil directeur solide: la culture !",
+    "FIELD2":"Carène",
+    "FIELD3":"Un homme",
+    "FIELD4":"37",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"De nombreux bons souvenirs à la Carène, normal c'est un lieu culturel !\nA quand la réouverture de la salle de l'Avenir à Saint-Martin, à ce propos ? Un équipement de quartier, à vocation notamment culturelle, serait le bienvenue ! A moins que Saint-martin n'ait définitivement disparu de la carte ? ",
+    "FIELD2":"Carène",
+    "FIELD3":"Un homme",
+    "FIELD4":"37",
+    "FIELD5":"souvenir",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Ballade dans les magasins en famille",
+    "FIELD2":"Zone du Froutven",
+    "FIELD3":"Une femme",
+    "FIELD4":"27",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Je ne souhaite pas que ce cinéma ne devienne qu'un souvenir. J'aimerais pouvoir continuer à aller au multiplexe Liberté.",
+    "FIELD2":"Le multiplexe Liberté",
+    "FIELD3":"Une femme",
+    "FIELD4":"39",
+    "FIELD5":"souvenir",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Quand j'étais plus jeune, j'avais un groupe de musique, nous répétions à la Carène. Ce qui fait le charme de cette ville, mais qui est en train de se perdre, c'est le rock'n'roll.",
+    "FIELD2":"Carène",
+    "FIELD3":"Une femme",
+    "FIELD4":"26",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Le bien vivre ensemble à Brest",
+    "FIELD2":"Tramway, Port, Téléphérique, Brest Arena, Polder, Aéroport, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"51",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Une ville conviviale, et agréable à vivre",
+    "FIELD2":"Tramway, Carène, Port, Brest Arena, Aéroport, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"63",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Balade ",
+    "FIELD2":"Polder",
+    "FIELD3":"Un homme",
+    "FIELD4":"24",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Colocation \nVacances\nLoisirs",
+    "FIELD2":"Aéroport, Le multiplexe Liberté",
+    "FIELD3":"Une femme",
+    "FIELD4":"23",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les manifestations artistiques ",
+    "FIELD2":"Tramway, Carène, Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"30",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Tramway : des années de travaux et de gène pour une utilisation quasi nulle ( de ma part)\n\n",
+    "FIELD2":"Carène, Aéroport, Rèhabilitation du quartier de Pontanézen, Le multiplexe Liberté",
+    "FIELD3":"Un homme",
+    "FIELD4":"23",
+    "FIELD5":"souvenir",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Les travaux :-o",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"33",
+    "FIELD5":"souvenir",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Toute mon enfance!",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Un homme",
+    "FIELD4":"22",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Lorsque j'étais enfant, le dimanche nous allions en famille nous promener le long des cales (inaccessibles maintenant...)\nLoisirs gratuits mais riches d'enseignement !",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"37",
+    "FIELD5":"souvenir",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Le port. Etre proche de la mer et de la terre à la fois, le tout en ayant accès à des bars et restaurants. Pour moi le coin le plus sur et ou on peut s'y amuser.",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"21",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Le paysage, la mer. L'inauguration de la Brest Arena. ",
+    "FIELD2":"Port, Brest Arena",
+    "FIELD3":"Un homme",
+    "FIELD4":"21",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Excellents concerts à la Carène lors du festival invisible 2012",
+    "FIELD2":"Carène",
+    "FIELD3":"Un homme",
+    "FIELD4":"45",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Soirées, ballades, océan ",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"23",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Déposer mes enfants à la crèche ",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"31",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Concert , ballade etc",
+    "FIELD2":"Tramway, Carène, Port, Brest Arena, Aéroport, Le multiplexe Liberté",
+    "FIELD3":"Un homme",
+    "FIELD4":"40",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Je garde un super souvenir de l'inauguration du tram et du flash mob place de la liberté. On sentait vraiment une fierté des Brestois ce jour-là, réunis tous ensemble !\nLe Port et le téléphérique, ce sera notre vitrine pour l'extérieur !\n",
+    "FIELD2":"Tramway, Port, Téléphérique, Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"32",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les inconvénients des travaux.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"78",
+    "FIELD5":"souvenir",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Les structures conviviales des ports étaient vétustes ",
+    "FIELD2":"Tramway, Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"47",
+    "FIELD5":"souvenir",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"La convivialité et les moments entre amis",
+    "FIELD2":"Brest Arena",
+    "FIELD3":"Une femme",
+    "FIELD4":"24",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Le port. Beau lieu calme et reposant. Bel endroit.",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"20",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Partir en soirée à bord du tram.",
+    "FIELD2":"Tramway",
+    "FIELD3":"Un homme",
+    "FIELD4":"26",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Mauvais : équipement inexistants ou délaissés ! ( avant suite à l'après-guerre ), pas facile .\nBon : les choses bougent, et Brest, revient petit à petit sur le devant de la scène, en France ou à l'international...\n",
+    "FIELD2":"Tramway, Carène, Port, Téléphérique, Brest Arena, Polder, Aéroport, Zone du Froutven, Rèhabilitation du quartier de Pontanézen, Le multiplexe Liberté",
+    "FIELD3":"Un homme",
+    "FIELD4":"42",
+    "FIELD5":"souvenir",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"Brest 2012, jeudi du port...\n",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"21",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Arrêt le coq hardi, ligne 4 et 24 premières lignes utilisées en autonomie. Repères et lieux de rendez vous entre amis.\nCasto au Géant où on jouait avec les escalators.\nLes 3 magasins Decathlon à Kergardec, où il fallait changer de magasins selon les articles souhaités",
+    "FIELD2":"Tramway, Zone du Froutven",
+    "FIELD3":"Une femme",
+    "FIELD4":"21",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"A Pontanézen, le fait de ne pas pouvoir sortir le soir en toute liberté...",
+    "FIELD2":"Tramway, Aéroport, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"64",
+    "FIELD5":"souvenir",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Les longs travaux partout en ville ont été pénibles, mais le résultat en valait la peine. ",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"34",
+    "FIELD5":"souvenir",
+    "FIELD6":"mitigé"
+  },
+  {
+    "FIELD1":"J'aime aller me promener en tram dans ma ville, faudrait juste une autre ligne pour bien faire le tour de Brest",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"19",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Des zones vivantes",
+    "FIELD2":"Tramway, Port, Zone du Froutven, Le multiplexe Liberté",
+    "FIELD3":"Une femme",
+    "FIELD4":"34",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Mauvais souvenirs, les travaux du tramway",
+    "FIELD2":"Tramway, Aéroport, Le multiplexe Liberté",
+    "FIELD3":"Un homme",
+    "FIELD4":"48",
+    "FIELD5":"souvenir",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"J'habite à 35 kms de Brest. Pour moi se rendre en tramway à l'Arena est très agréable et très facile. Très bons moments passés dans cette salle pour assister à des concerts ou des matchs de hand-ball et récemment match de basket (Etendard : à renouveler absolument).",
+    "FIELD2":"Tramway, Brest Arena",
+    "FIELD3":"Une femme",
+    "FIELD4":"42",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les bons souvenirs des Jeudis du port, des restaurants entre amis, des soirées Astropolis ",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"21",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les magasins de vêtements et autres magasins, la propreté des rues.",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Une femme",
+    "FIELD4":"67",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"J'habite place Strasbourg et ça me laisse tous les jours de bons souvenirs. Endroit très pratique et hyper bien desservi ",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"49",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les fêtes maritimes",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"43",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Le plaisir de se promener hors circulation rue de Siam, avec des boutiques rénovées et une très belle ouverture sur Recouvrance, le château. J'attends avec impatience la mise en service du téléphérique vers le nouveau quartier et ses équipements (médiathèque....)",
+    "FIELD2":"Tramway",
+    "FIELD3":"Une femme",
+    "FIELD4":"59",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Les fêtes maritimes, la construction de la recouvrance, les sorties au resto, des balades à pied face à la mer",
+    "FIELD2":"Port",
+    "FIELD3":"Un homme",
+    "FIELD4":"44",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Aéroport. Le voyage, le départ mais aussi le retour, sous le crachin ou par ciel clair et d'admirer la beauté de notre région. ",
+    "FIELD2":"Aéroport",
+    "FIELD3":"Une femme, Un homme",
+    "FIELD4":"24",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Dans le ciné-café, exposition de portraits sonores et objets par Motia une artiste amie : dans le cadre du festival de l'Europe Centrale en 2008. Moments d'échanges avec le public très intéressants. Ouverture sur le monde via les arts. ",
+    "FIELD2":"Le multiplexe Liberté",
+    "FIELD3":"Une femme",
+    "FIELD4":"39",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Concerts à la Carène. Keziah Jones, Brigitte Fontaine, Arthur H...Espace Rencontre-Information et Studios d'enregistrement 1er étage. Bar convivial. ",
+    "FIELD2":"Carène",
+    "FIELD3":"Une femme",
+    "FIELD4":"39",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Le mauvais souvenir indirect (à proximité) c'est la destruction sur la falaise du bois du Poullic + bâtis très anciens.  Patrimoines sacrifiés pour immobilier ",
+    "FIELD2":"Carène",
+    "FIELD3":"Une femme",
+    "FIELD4":"39",
+    "FIELD5":"souvenir",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"Balades, Fourneau proche avec spectacles d'arts de rue, ambiance du/des ports, ...à suivre !",
+    "FIELD2":"Port",
+    "FIELD3":"Une femme",
+    "FIELD4":"39",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  },
+  {
+    "FIELD1":"Pontanézen. Des entrées d'immeubles sales, pas entretenues et des boîtes aux lettres défoncées.",
+    "FIELD2":"Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"38",
+    "FIELD5":"souvenir",
+    "FIELD6":"négatif"
+  },
+  {
+    "FIELD1":"La Carène et ses nuits électro enfiévrées qui apportent enfin une alternative / renouveau d'espoir à la jeunesse brestoise.",
+    "FIELD2":"Tramway, Carène, Rèhabilitation du quartier de Pontanézen",
+    "FIELD3":"Un homme",
+    "FIELD4":"27",
+    "FIELD5":"souvenir",
+    "FIELD6":"positif"
+  }
+]
