@@ -1,0 +1,134 @@
+@font-face {
+    font-family: AeroMaticsDisplay;
+    src: url(fonts/AeroMaticsDisplayRegular.ttf);
+}
+
+@font-face {
+    font-family: SourceSansProBold;
+    src: url(fonts/SourceSansPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: SourceSansProLight;
+    src: url(fonts/SourceSansPro-Light.ttf);
+}
+
+@font-face {
+    font-family: SourceSansProRegular;
+    src: url(fonts/SourceSansPro-Regular.ttf);
+}
+
+@font-face{
+    font-family: SantEliaScriptBoldDEMO;
+    src: url(fonts/SantEliaScriptBoldDEMO.otf);
+}
+
+@font-face{
+    font-family: DINPro-Bold;
+    src: url(fonts/DINPro-Bold.otf);
+}
+
+html, body {
+  height: 100%;
+}
+
+.container-fluid {
+  height: 100%;
+}
+
+#page1 {
+  height: 100%;
+  background-color: #1F475C;
+  color: white;
+  overflow: hidden;
+}
+
+#p1_titre {
+  font-family: SourceSansProBold;
+  text-align: center;
+  font-size: 2.1em;
+}
+
+#page1 section {
+  position: relative;
+  top: 15%;
+}
+
+#p1_contenu {
+  text-align: justify;
+  font-family: SourceSansProRegular;
+  font-size: medium;
+}
+
+#demarrer {
+  border: solid 1px #F7D133;
+  width: 60%;
+  position: relative;
+  left: 25%;
+  text-align: center;
+  margin-top: 10%;
+  height: 5em;
+}
+
+#btn_demarrer {
+  vertical-align: middle;
+  background: none;
+  position: relative;
+  color: white;
+  text-transform: uppercase;
+  font-size: large;
+  top: 8%;
+}
+
+#btn_demarrer:hover {
+  text-decoration: none;
+}
+
+#page2 {
+  height: 100vh;
+  width: inherit;
+  color: white;
+}
+
+#credit {
+  background-color: #68ac8a;
+}
+
+#p2_titre {
+  text-align: center;
+}
+
+#img_accueil {
+  position: relative;
+  left: calc(100% - 124px);
+  top: 100px;
+}
+
+#barre_progression {
+  position: absolute;
+  top: 120%;
+  left: -100%;
+  border-left: none;
+  border-right: none;
+  width: 300%;
+  height: 0.6em;
+  background: none;
+}
+
+@supports (-ms-accelerator:true) {
+  #barre_progression {
+    position: absolute;
+    top: 110%;
+    left: -100%;
+    border-left: none;
+    border-right: none;
+    width: 300%;
+    height: 0.6em;
+    background: none;
+  }
+}
+
+progress[value] {color:#f9cf4d} /* IE10 */
+progress::-webkit-progress-bar-value {background:#f9cf4d}
+progress::-webkit-progress-value {background:#f9cf4d}
+progress::-moz-progress-bar {background:#f9cf4d}
