@@ -56,12 +56,16 @@
     margin-right: 1%;
     padding: 0;
     
-    /height: 150px;
-    /width: 100px;        
+    width: 100px;
+    height: 150px;
 }
 
 .baliseJauge svg {
-        
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    
 }
 
 .baliseJauge svg g {

@@ -1,27 +1,27 @@
 @font-face {
     font-family: libelSuit;
-    src: url("./fonts/LIBELSUIT.ttf");
+    src: url("../fonts/LIBELSUIT.ttf");
 }
 @font-face {
     font-family: museoReg;
-    src: url("./fonts/Museo300-Regular.otf");
+    src: url("../fonts/Museo300-Regular.otf");
 }
 @font-face {
     font-family: museoBold;
-    src: url("./fonts/Museo500-Regular.otf");
+    src: url("../fonts/Museo500-Regular.otf");
 }
 @font-face {
     font-family: arialSansSerif;
-    src: url("./fonts/ARIAL.TTF");
+    src: url("../fonts/ARIAL.TTF");
 }
 @font-face {
     font-family: arialSansSerifBold;
-    src: url("./fonts/ARIALBD.TTF");
+    src: url("../fonts/ARIALBD.TTF");
 }
 
 @font-face {
     font-family: FuturaPT;
-    src: url("./fonts/FuturaStd-Book.otf");
+    src: url("../fonts/FuturaStd-Book.otf");
 }
 
 *
@@ -70,7 +70,7 @@ nav ul li:not(:first-child)
 
 #slide1
 {
-	background: url("./img/villeSlide1.png") no-repeat bottom center, url("./img/vaguesSlide1.png") repeat-x bottom center;
+	background: url("../img/villeSlide1.png") no-repeat bottom center, url("../img/vaguesSlide1.png") repeat-x bottom center;
 }
 
 #slide1 h1
@@ -169,7 +169,7 @@ nav ul li:not(:first-child)
 #slide9
 {
     text-align: center;    
-    background: url("./img/derniereslide.png") no-repeat center bottom, #90D7DF;
+    background: url("../img/derniereslide.png") no-repeat center bottom, #90D7DF;
 }
 #slide9 h2
 {
@@ -190,10 +190,10 @@ nav ul li:not(:first-child)
 
 
 #slide8 {
-    background: url(./img/planteshaut.png) top center no-repeat,
-                url(./img/plantesbas.png) bottom center no-repeat,
-                url(./img/plantesgauche.png) left center no-repeat,
-                url(./img/plantedroite.png) right center no-repeat, 
+    background: url(../img/planteshaut.png) top center no-repeat,
+                url(../img/plantesbas.png) bottom center no-repeat,
+                url(../img/plantesgauche.png) left center no-repeat,
+                url(../img/plantedroite.png) right center no-repeat, 
                 #e7ffe0;
 
     height: 100vh;
@@ -382,69 +382,69 @@ nav ul li:not(:first-child)
 
 /* radio printemps */
 #labelJoseph_printemps {
-    background: url(./img/joseph/printemps.png) left top no-repeat;
+    background: url(../img/joseph/printemps.png) left top no-repeat;
 }
 
 #labelJoseph_printemps:hover {  
-    background: url(./img/joseph/printemps_hover.png) left top no-repeat;
+    background: url(../img/joseph/printemps_hover.png) left top no-repeat;
 }
 
 #radioJoseph_printemps:checked + .labelRadioJoseph {
-    background: url(./img/joseph/printemps_checked.png) left top no-repeat;
+    background: url(../img/joseph/printemps_checked.png) left top no-repeat;
 }
 
 /* radio été */
 #labelJoseph_ete {
-    background: url(./img/joseph/ete.png) left top no-repeat;
+    background: url(../img/joseph/ete.png) left top no-repeat;
 }
 
 #labelJoseph_ete:hover {  
-    background: url(./img/joseph/ete_hover.png) top no-repeat;
+    background: url(../img/joseph/ete_hover.png) top no-repeat;
 }
 
 #radioJoseph_ete:checked + .labelRadioJoseph {
-    background: url(./img/joseph/ete_checked.png) left top no-repeat;
+    background: url(../img/joseph/ete_checked.png) left top no-repeat;
 }
 
 /* radio automne */
 #labelJoseph_automne {
-    background: url(./img/joseph/automne.png) left top no-repeat;
+    background: url(../img/joseph/automne.png) left top no-repeat;
 }
 
 #labelJoseph_automne:hover {  
-    background: url(./img/joseph/automne_hover.png) left top no-repeat;
+    background: url(../img/joseph/automne_hover.png) left top no-repeat;
 }
 
 #radioJoseph_automne:checked + .labelRadioJoseph {
-    background: url(./img/joseph/automne_checked.png) left top no-repeat;
+    background: url(../img/joseph/automne_checked.png) left top no-repeat;
 }
 
 /* radio hiver */
 #labelJoseph_hiver {
-    background: url(./img/joseph/hiver.png) left top no-repeat;
+    background: url(../img/joseph/hiver.png) left top no-repeat;
 }
 
 #labelJoseph_hiver:hover {  
-    background: url(./img/joseph/hiver_hover.png) left top no-repeat;
+    background: url(../img/joseph/hiver_hover.png) left top no-repeat;
 }
 
 #radioJoseph_hiver:checked + .labelRadioJoseph {
-    background: url(./img/joseph/hiver_checked.png) left top no-repeat;
+    background: url(../img/joseph/hiver_checked.png) left top no-repeat;
 }
 
 /* radio total */
 #labelJoseph_total {
-    background: url(./img/joseph/total.png) left top no-repeat;
+    background: url(../img/joseph/total.png) left top no-repeat;
     width: 75px;
     height: 75px;
 }
 
 #labelJoseph_total:hover {  
-    background: url(./img/joseph/total_hover.png) left top no-repeat;
+    background: url(../img/joseph/total_hover.png) left top no-repeat;
 }
 
 #radioJoseph_total:checked + .labelRadioJoseph {
-    background: url(./img/joseph/total_checked.png) left top no-repeat;
+    background: url(../img/joseph/total_checked.png) left top no-repeat;
 }
 
 
@@ -468,13 +468,13 @@ nav ul li:not(:first-child)
 
 #slide10 .container {
     height: 78%;
-    background: url(./img/illu_ville_gauche.png) bottom left no-repeat,
-                url(./img/illu_ville_droite.png) bottom right no-repeat;
+    background: url(../img/illu_ville_gauche.png) bottom left no-repeat,
+                url(../img/illu_ville_droite.png) bottom right no-repeat;
 }
 
 #slide10 .bandeauBas {
-    background: url(./img/plantes_gauche.png) bottom left no-repeat,
-                url(./img/plantes_droite.png) bottom right no-repeat;
+    background: url(../img/plantes_gauche.png) bottom left no-repeat,
+                url(../img/plantes_droite.png) bottom right no-repeat;
     /height: 15%;
     background-color: white;
     
@@ -581,7 +581,7 @@ nav ul li:not(:first-child)
 }
 #slide7 #boutonIci
 {
-    background: url('./img/boutonICIInactif.png');
+    background: url('../img/boutonICIInactif.png');
     width: 52px;
     height: 52px;
     margin: auto;
@@ -589,5 +589,5 @@ nav ul li:not(:first-child)
 }
 #slide7 #boutonIci:hover
 {
-    background: url('./img/boutonICISurvol.png');
+    background: url('../img/boutonICISurvol.png');
 }
