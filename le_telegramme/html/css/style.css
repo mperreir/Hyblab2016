@@ -70,7 +70,7 @@ iframe {
   /*padding-top: 30%;*/
   height: 33%;
   border-bottom: 2px solid #666666;
-  font-size: 20px;
+  /*font-size: 1em;*/
 }
 
 #left > li:hover, #left > li > a:hover {
@@ -107,7 +107,7 @@ iframe {
 /*Middle panel */
 
 #middle {
-  /*width: 35%; never ever put this !!!! */ 
+  /*width: 35%; never ever put this !!!! */
   height : 100%;
   background-color : #F7931E;
   overflow-y: scroll;
@@ -152,7 +152,7 @@ iframe {
 #submenu li {
   text-align: center;
   font-family: SantEliaScriptBoldDEMO;
-  font-size: 14px;
+  font-size: 1.2em;
   padding: 0;
 }
 
@@ -162,7 +162,7 @@ iframe {
 
 #submenu li a {
   color: white;
-  font-size: 16pt;
+  font-size: 1em;
 }
 
 .mp_content {
@@ -176,17 +176,17 @@ iframe {
 
 .mp_header {
   font-family: DINPro-Bold;
-  font-size : 58pt;
+  font-size : 3.5em;
 }
 
 #header_eclosions {
   font-family: DINPro-Bold;
-  font-size : 51pt; 
+  font-size : 3.5em;
 }
 
 #header_quartiers {
   font-family: DINPro-Bold;
-  font-size: 64pt;
+  font-size: 4em;
 }
 
 .header_sondage {
@@ -269,3 +269,11 @@ iframe {
     background-color:#fff; /* change if the mask should have another color then white */
     z-index:99; /* makes sure it stays on top */
 }
+
+/*@media only screen
+and (min-device-width: 15.5cm)
+and (max-device-width: 15.5cm)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+*/
