@@ -115,7 +115,7 @@ html, body {
   background: none;
 }
 
-@supports (-ms-accelerator:true) {
+@supports (-ms-accelerator:true) { /*Microsoft edge*/
   #barre_progression {
     position: absolute;
     top: 110%;
