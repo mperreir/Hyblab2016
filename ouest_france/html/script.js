@@ -88,9 +88,10 @@ var carPos = {
 	}
 };
 
-var allPlaces = null;
+var allPlaces = {};
+var nbMaxPlaces = null;
 
-function requestData(callback, type){
+function requestData(type, callback){
 	$.ajax({
 		url : "data/"+type+"/years",
 		type : "GET",
@@ -105,14 +106,34 @@ function requestData(callback, type){
 	});
 }
 
-function requestGeneratePhrase(type, annee){
-	if(!data[type]){
-		requestData(function(){
-			generatePhrase(type,annee);
-		}, "carburant");
-	}else{
-		generatePhrase(type,annee);
-	}
+function testRequestedData(type, callback){
+	if(!data[type]) requestData(type, callback);
+	else callback();
+}
+
+function requestGeneratePhrase(categorie, annee){ 
+	if(!data[categorie]) requestData(categorie, function(){ generatePhrase(categorie, annee); });
+	else generatePhrase(categorie, annee);
+}
+function requestChartCarburant(year){ 
+	if(!data["carburant"]) requestData("carburant", function(){ generateBarChart(data.carburant.data[year]); });
+	else generateBarChart(data.carburant.data[year]);
+}
+function requestGenerateParcDonutCars(type, year){ 
+	if(!data["parc"]) requestData("parc", function(){ generateParcDonutCars(data.parc.data[year][type].pourcentage, type); });
+	else generateParcDonutCars(data.parc.data[year][type].pourcentage, type);
+}
+function requestGenerateInfo(categorie, year, slideId){
+	if(!data[categorie]) requestData(categorie, function(){ generateInfo(data[categorie].yearsComments[year], slideId); });
+	else generateInfo(data[categorie].yearsComments[year], slideId);
+}
+function requestGenerateMenageDonut(type, year){ 
+	if(!data["menage"]) requestData("menage", function(){ generateDonut(data.menage.data[year][type].pourcentage, type); });
+	else generateDonut(data.menage.data[year][type].pourcentage, type);
+}
+function requestGenerateChartDefilement(categorie){ 
+	if(!data[categorie]) requestData(categorie, function(){ generateChart(data[categorie]); });
+	else generateChart(data[categorie]);
 }
 
 function generatePhrase(type, annee){
@@ -131,39 +152,8 @@ function generatePhrase(type, annee){
 			cleanEnergies.forEach(function(carburant){
 				value += data.carburant.data[annee][carburant].pourcentage;
 			});
-			$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % de voitures vendues utilisaient des énergies propres.");		
+			$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % des voitures vendues utilisaient des énergies propres.");		
 			break;
-	}
-}
-
-function requestChartCarburant(year){
-	if(!data.carburant){
-		requestData(function(){
-			generateBarChart(data.carburant.data[year]);
-		}, "carburant");
-	}else{
-		generateBarChart(data.carburant.data[year]);
-	}
-}
-
-function requestGenerateParcDonutCars(type, year){
-	if(!data[type]){
-		requestData(function(){
-			generateParcDonutCars(data.parc.data[year][type].pourcentage, type);	
-		}, type);
-	}else{
-		generateParcDonutCars(data.parc.data[year][type].pourcentage, type);
-	}
-}
-
-function requestGenerateInfo(type, year, slideId){
-	if(!data[type]){
-		requestData(function(){
-			generateInfo(data[type].yearsComments[year], slideId);
-
-		}, type);
-	}else{
-		generateInfo(data[type].yearsComments[year], slideId);
 	}
 }
 
@@ -171,40 +161,10 @@ function generateInfo(text, slideId){
 	$('#'+slideId+" .info p").html(text);
 }
 
-function requestGenerateMenageDonut(type, year){
-	if(!data[type]){
-		requestData(function(){
-			generateDonut(data.menage.data[year][type].pourcentage, type);
-		},type);
-	}else generateDonut(data.menage.data[year][type].pourcentage, type);
-}
-
-
-function requestGenerateChartDefilement(type){
-	if(!data[type]) requestData(function(){
-		generateChart(data[type], "200");
-	},type);
-	else generateChart(data[type], "200");
-	
-}
-
-function generateChart(res, statut){
-	var donnees = res;
-
+function generateChart(donnees){
 	var dataChart = generateChartData(donnees);
-	var chartId;
+	var chartId = "#chart"+donnees.categorie;
 	var chartLabel;
-	switch(donnees.categorie){
-		case "menage":
-			chartId = '#chartMotorisation';
-			break;
-		case "carburant":
-			chartId = '#chartCarburant';
-			break;
-		case "parc":
-			chartId = '#chartParc';
-			break;	
-	}
 	var options = fillOptions(chartLabel);
 	var chart = new Chartist.Line(chartId, dataChart, options);
 	
@@ -222,10 +182,9 @@ function generateChart(res, statut){
 		if(param.type === 'line'){
 			setLineAnimation(param, seq, delays, durations);
 		}else if(param.type === 'label'){
-
 			if(jQuery.inArray(param.text, donnees.yearsToScreen == -1)){
 				setLabelAnimation(param, donnees.categorie);
-		}
+			}
 		}else if(param.type === 'point'){
 			setPointAnimation(param,donnees.categorie,seq,delays,durations);
 		}
@@ -235,35 +194,17 @@ function generateChart(res, statut){
 
 function fillOptions(){
 	var retour = {
-		axisY : {
-			showLabel: false,
-			showGrid : false
-		},
-		axisX : {
-			showGrid : false,
-			labelOffset : {
-				x:-16,
-				y:0
-			}
-		}, 
-		lineSmooth: Chartist.Interpolation.cardinal({
-			fillHoles: true
-		}),
-		chartPadding: {
-			top: 5,
-			right: 30,
-			bottom: 5,
-			left: 0
-		}
-	};
+		axisY : { showLabel:false , showGrid:false },
+		axisX : { showGrid:false , labelOffset:{ x:-16, y:0 } }, 
+		lineSmooth: Chartist.Interpolation.cardinal({ fillHoles:true }),
+		chartPadding: { top:5, right:30 , bottom:5 , left:0 } };
 	return retour;
 }
 
 function generateChartData(donnees){
-	var dataChart = {
-			labels : [],
-			series : [[]]
-		}; 
+	
+	var dataChart = { labels:[], series:[[]] }; 
+	
 	for(var i=0; i<donnees.years.length; i++){
 		if(i==0){
 			if(jQuery.inArray(donnees.years[0], donnees.yearsToScreen) != -1) dataChart.labels.push(donnees.years[0]);
@@ -277,7 +218,7 @@ function generateChartData(donnees){
 			}
 			if(jQuery.inArray(donnees.years[i], donnees.yearsToScreen) != -1) dataChart.labels.push(donnees.years[i]);
 			else(dataChart.labels.push(null));
-			dataChart.series[0].push(dataToAdd(donnees, i));
+			dataChart.series[0].push({value : dataToAdd(donnees, i), meta : dataToAdd(donnees, i)});
 		}
 	}
 	return dataChart;
@@ -319,23 +260,24 @@ function setLineAnimation(param, seq, delay, duration){
 }
 
 function setLabelAnimation(param, categorie){
+	var id = "label"+categorie+param.text;
 	
-	var chaine = 'foreignobject[x="'+param.x+'"]'+
-				'[y="'+param.y+'"]'+
-				'[width="'+param.width+'"]'+
-				'[height="'+param.height+'"]';
-	var label = $(chaine+" span");
-	var labelParent = $(chaine);	
+	param.element.attr({id : id});
+	
+	var labelParent = $("#"+id);
+	var label = labelParent.children();
 
 	var labelParentOriginPos = {
-		x : parseInt(labelParent.css("x").replace("px","")),
-		y : parseInt(labelParent.css("y").replace("px",""))
+		x : parseInt(labelParent.attr("x").replace("px",""), 10),
+		y : parseInt(labelParent.attr("y").replace("px",""), 10)
 	};
 	
 	//var labelParentOriginPos = labelParent.position();
 	label.mouseenter(function(node){
 		//Grossissement et changement de couleur du point
-		var point = label.parent().parent().parent().find('.ct-point[year="'+param.text+'"][categorie="'+categorie+'"]');
+		//var point = label.parent().parent().parent().find('.ct-point[year="'+param.text+'"][categorie="'+categorie+'"]');
+		
+		var point = $("#"+"point"+categorie+param.text);
 		point.stop().animate({
 			"stroke-width" : 20,
 			opacity : 0
@@ -351,9 +293,11 @@ function setLabelAnimation(param, categorie){
 		y : labelParentOriginPos.y-5+"px"
 		}, 300 );
 	});
+	
 	label.mouseleave(function(node){
 		//Retrecissement du point et retour à la vouleur d'origine
-		var point = label.parent().parent().parent().find('.ct-point[year="'+param.text+'"]');
+		//var point = label.parent().parent().parent().find('.ct-point[year="'+param.text+'"]');
+		var point = $("#"+"point"+categorie+param.text);
 		point.stop().animate({
 			"stroke-width" : 10,
 			opacity : 1
@@ -379,7 +323,7 @@ function setLabelAnimation(param, categorie){
 				requestGenerateMenageDonut("biPlus", annee);
 				requestGenerateMenageDonut("none", annee);
 				requestGenerateInfo(categorie, annee, "s2");
-				requestGeneratePhrase("menage", annee)			
+				requestGeneratePhrase("menage", annee);			
 				break;
 			case "parc":
 				requestGenerateParcDonutCars("neuf", annee);
@@ -390,43 +334,47 @@ function setLabelAnimation(param, categorie){
 			case "carburant":
 				requestGenerateInfo(categorie, annee, "s4");
 				requestChartCarburant(annee);
-				requestGeneratePhrase("carburant", annee)					
+				requestGeneratePhrase("carburant", annee);					
 				break;
 		}
 	});
 }
 
 function setPointAnimation(param, categorie, seq, delay, duration){
+	
 	var annee = param.axisX.ticks[param.index];
-
-	var chaine = 'line[class="ct-point"]'+
-					'[x1="'+param.x+'"]'+
-					'[y1="'+param.y+'"]';
-
-	$(chaine).attr("year", annee).attr("categorie", categorie);
-	param.element.animate({
-	      x1: {
-	        begin: seq * delay,
-	        dur: duration,
-	        from: param.x - 10,
-	        to: param.x,
-	        easing: 'easeOutQuart'
-	      },
-	      x2: {
-	        begin: seq * delay,
-	        dur: duration,
-	        from: param.x - 10,
-	        to: param.x,
-	        easing: 'easeOutQuart'
-	      },
-	      opacity: {
-	        begin: seq * delay,
-	        dur: duration,
-	        from: 0,
-	        to: 1,
-	        easing: 'easeOutQuart'
-	      }
-	});
+	var id = "point"+categorie+annee;
+	
+	
+	if(!annee) param.element.attr({ opacity : "0"});
+	else{
+		param.element.attr({ id : id });
+	
+		param.element.animate({
+		      x1: {
+		        begin: seq * delay,
+		        dur: duration,
+		        from: param.x - 10,
+		        to: param.x,
+		        easing: 'easeOutQuart'
+		      },
+		      x2: {
+		        begin: seq * delay,
+		        dur: duration,
+		        from: param.x - 10,
+		        to: param.x,
+		        easing: 'easeOutQuart'
+		      },
+		      opacity: {
+		        begin: seq * delay,
+		        dur: duration,
+		        from: 0,
+		        to: 1,
+		        easing: 'easeOutQuart'
+		      }
+		});
+	}
+	
 }
 
 function relaunchAnimation(index, nextIndex, direction){
@@ -450,11 +398,12 @@ function relaunchAnimation(index, nextIndex, direction){
 			requestGenerateParcDonutCars("occasion", "1990");
 			requestGenerateInfo("parc", "1990", "s3");
 			requestGeneratePhrase("parc", "1990");
+			break;
 		case 4:
 			requestGenerateChartDefilement("carburant");
 			requestGenerateInfo("carburant", "2009", "s4");
 			requestChartCarburant("2009");
-			requestGeneratePhrase("carburant", "2009")
+			requestGeneratePhrase("carburant", "2009");
 			break;
 	}
 	switch(index){
@@ -475,14 +424,11 @@ function relaunchAnimation(index, nextIndex, direction){
 
 function generateDonut(donnee,id){
 
-
 	var label = '<h3>'+donnee+'%</h3>';
 	var idStr = '#'+id;
 	var options = fillOptionsDonut(label);
 
-	var chart = new Chartist.Pie(idStr, {
-		series: [donnee]
-	}, options);
+	var chart = new Chartist.Pie(idStr, { series:[donnee] }, options);
 
 	chart.on('draw', function(data) {
 		if(data.type === 'slice') {
@@ -520,6 +466,7 @@ function setSliceAnimation(data){
 	var animationDefinition = {
 		'stroke-dashoffset': {
 		id: 'anim' + data.index,
+		begin : 500,
 		dur: 3000,
 		from: -pathLength + 'px',
 		to:  '0px',
@@ -542,10 +489,12 @@ function generateParcDonutCars(donnee, type){
 
 	var places = getRandomPlace(type, newNbCar);
 
+	var parkzone = $("#cars"+type);
+	
 	for(var i=0; i<places.length; i++){
 		var place = places[i.toString()];
-		$('.cars[id='+type+']').append('<div class="car" id="'+place.colonne+place.place+'"><img src="images/voitures.svg" alt="voiture"/></div>');
-		var car = $('#'+place.colonne+place.place);
+		parkzone.append('<div class="car" id="car'+place.colonne+place.place+'"><img src="images/voitures.svg" alt="voiture"/></div>');
+		var car = $('#car'+place.colonne+place.place);
 		var hauteurApparition =((Math.random() * 10)+5);
 		car.css('top', (place.top-hauteurApparition).toString()+"vh").css('left',(place.left).toString()+"vw");
 		car.css("z-index",30+place.place).css("opacity", 0);
@@ -554,20 +503,31 @@ function generateParcDonutCars(donnee, type){
 	}
 	generateDonut(donnee, type);
 }
+
 function getRandomPlace(type, nb){
-	var nbMaxPlaces = 0;
+	console.log(carPos);
 	var nbCol = carPos[type].col.length;
 	var retour = [];
 
-	for(var i=0; i<nbCol; i++){
-		nbMaxPlaces += carPos[type].col[i].nbPlace;
+	if(!nbMaxPlaces){
+		nbMaxPlaces = 0;
+		for(var i=0; i<nbCol; i++){
+			nbMaxPlaces += carPos[type].col[i].nbPlace;
+		}
 	}
-
-	if(!allPlaces){
-		var allPlaces = [];
+	
+		console.log("########"+type);
+		console.log("Nb col : "+carPos[type].col.length);
+		for(var z=0; z<carPos[type].col.length; z++){
+			
+			console.log("Col "+z+" "+carPos[type].col[z].nbPlace+" places");
+		}
+		
+	if(!allPlaces[type]){
+		allPlaces[type] = [];
 		for(i=0; i<nbCol; i++){
 			for(var j=0; j<carPos[type].col[i].nbPlace; j++){
-				allPlaces.push({
+				allPlaces[type].push({
 					colonne : i,
 					place : j
 				});
@@ -575,7 +535,7 @@ function getRandomPlace(type, nb){
 		}
 	}
 	
-	var copieAllPlaces = allPlaces;
+	var copieAllPlaces = allPlaces[type].slice();
 	if(nbMaxPlaces > nb){
 		for(i=0; i<nb; i++){
 			var randPlaceIndex = Math.round((Math.random() * (copieAllPlaces.length-1)));
@@ -589,30 +549,28 @@ function getRandomPlace(type, nb){
 }
 
 function removeAllCars(){
-	$(".cars .car").remove();
-}
-
-function removeACar(car){
-	car.remove();
+	$("#carsoccasion, #carsneuf").children().remove();
 }
 
 function carDestroyAnimation(type){
-	var car = $('.cars[id='+type+'] .car');
+	var car = $("#cars"+type).children();
 	car.stop().animate({
 		opacity : 0
-	}, 800, removeACar.bind(undefined, car));
+	}, 800, car.remove);
 }
 
 function carSpawnAnimation(car,place){
+	var duration = Math.random()*500+1250;
+	
 	car.stop().animate({
 		top : (place.top).toString()+"vh"
 	},{
-		duration : Math.random()*500+1250,
+		duration : duration,
 		easing : "easeOutBounce",
 		queue : false
 	}).animate({
 		opacity : 1
-	}, 3000);
+	}, duration);
 }
 
 
@@ -641,7 +599,6 @@ function generateBarChart(serie){
 		    bottom: 5,
 		    left: 10
   		}
-		
 	});
 	
 	chart.on('draw', function(param){
@@ -670,7 +627,6 @@ function generateBarChart(serie){
 					from: param.x1,
 					to: param.x2,
 					easing: 'easeOutQuart'
-					
 				}
 			});
 		}
@@ -707,22 +663,20 @@ function animateSize(obj, duration_factor, random_factor){
 		var duration = getPartiallyRandomDuration(duration_factor);
 
 		$(this).animate({
-			width : seed[0]+"vw",
-			height : seed[0]+"vh"
+			width : seed[0]+"vw"
 		},{
 			queue : "size",
 			duration : duration,
 			easing : "easeInOutSine"
 		}).animate({
-			width : seed[1]+"vw",
-			height : seed[1]+"vh"
+			width : seed[1]+"vw"
 		},{
 			queue : "size",
 			duration : duration,
 			easing : "easeInOutSine",
 			done: animateSize.bind(undefined, obj, duration_factor, random_factor)
 		});
-	})
+	});
 }
 
 function animateTop(obj, duration_factor, random_factor){
@@ -746,7 +700,7 @@ function animateTop(obj, duration_factor, random_factor){
 			easing : "easeInOutSine",
 			done: animateTop.bind(undefined, obj, duration_factor, random_factor)
 		});
-	})
+	});
 }
 
 function animateLeft(obj, duration_factor, random_factor){
@@ -770,7 +724,7 @@ function animateLeft(obj, duration_factor, random_factor){
 			easing : "easeInOutSine",
 			done: animateLeft.bind(undefined, obj, duration_factor, random_factor)
 		});
-	})
+	});
 }
 
 function getPartiallyRandomDuration(duration){
@@ -780,12 +734,12 @@ function getPartiallyRandomDuration(duration){
 function getPartiallyRandomSeed(random){
 	var retour = [];
 
-	var seed = (Math.random()-0.5)*random*2;
+	var seed = Math.abs((Math.random()-0.5)*random*2);
+
 	if(seed > 0){
 		retour[0] = "+="+seed;
 		retour[1] = "-="+seed;
 	}else{
-		var absSeed = Math.abs(seed);
 		retour[0] = "-="+seed;
 		retour[1] = "+="+seed;
 	}
@@ -828,17 +782,16 @@ function animateMethodo(){
 
 			$(this).attr("statut", "big");
 			$(this).animate({
-				left : "20vw"
-			},1000).animate({
 				height : "80vh",
-				width : "60vw"
+				width : "60vw",
+				left : "20vw"
 			},1000).animate({
 				opacity : 1
 			}, 500, function(){
 				$("#textMethodo").css("display", "block");
 			});
 
-			$("#textMethodo").delay(2500).animate({
+			$("#textMethodo").delay(1500).animate({
 				opacity : 1
 			},1000);
 		}
@@ -855,10 +808,9 @@ function animateMethodo(){
 				opacity : 0.6
 			},500).animate({
 				height : "5ch",
-				width : "10vw"
-			},1000).animate({
+				width : "10vw",
 				left: "75vw"
-			}, 1000);
+			},1000);
 
 			
 		}
