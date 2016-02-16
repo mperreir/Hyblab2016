@@ -9,8 +9,53 @@
   <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="lib/simplelightbox-master/dist/simplelightbox.css">
+  <link rel="stylesheet" href="css/accueilstyle.css">
 </head>
   <body>
+      <!-- Preloader -->
+      <div id="preloader">
+          <div class="container-fluid" id="status">
+            <div class="row js-scrollTo" id="page1">
+              <section class="col-md-4"><img src="img/accueil.png" alt="Image accueil" id="img_accueil"/></section>
+              <section class="col-md-4">
+                <h4 id="p1_titre">BREST RENAÎT DE SES CENDRES</h4>
+                <p id="p1_contenu">
+                  Rasé, terne ou encore grise : de multiples adjectifs sont utilisés pour
+                  qualifier Brest depuis 60 ans. Cependant, les Brestois sont unanimes
+                  pour affirmer qu’aujourd’hui et depuis 15 ans, Brest se métamorphose !
+                  La création de nouveaux aménagements urbains, économiques et de
+                  loisirs offrent un nouveau souffle à la ville, lui redonnent des couleurs
+                  et lui confèrent une nouvelle image. Meilleure ? Pour certains oui pour
+                  d’autres non. Aujourd’hui,  à travers les données récoltées et de vos
+                  témoignages, nous vous donnons les clés pour vous faire un avis sur
+                  cette question.
+                </p>
+                <p id="demarrer">
+                  <a class="js-scrollTo" href="#page2" id="btn_demarrer">Vivez avec nous la renaissance de Brest</a>
+                </p>
+                <p>
+                    <progress value="0" max="100" id="barre_progression"></progress>
+                </p>
+              </section>
+              <section class="col-md-4"></section>
+            </div>
+
+            <!-- <div class="row js-scrollTo" id="page2">
+              <div class="row">
+                <section class="col-md-4" id="credit">
+                  <h2 id="p2_titre">Y'A DU MONDE AU BALCON</h2>
+                  <img src="img/page_crédit.png"/>
+                </section>
+                <section class="col-md-4">
+                </section>
+                <section class="col-md-4"></section>
+              </div>
+            </div> -->
+          </div>
+      </div>
+      <!-- Waiting screen -->
+
+
       <!-- Container -->
       <div class="container-fluid">
         <div id="container" class="row">
@@ -26,6 +71,9 @@
                 </li>
                 <li id="menu3" class="text-center text-uppercase">
                   <a href="#">Top / Flop</a>
+                </li>
+                <li id="menu4" class="text-center text-uppercase">
+                  <a href="#"><img src="img/ico/info-icone-5376-48.png"></a>
                 </li>
               </ul>
           </div>
@@ -80,7 +128,6 @@
                 <img class="header_sondage" src="img/question_ca_pousse.png">
                 <img class="sondage" src="img/ca_pousse_sondage.gif">
                 <div id="comments_1" class="commentaire">
-                    <img class="commentaire_sondage" src="img/commentaire_ca_pousse.png">
                     <p id="comment1">Centre-ville beaucoup plus agréable avec l'arrivée du tram </p>
                     <p id="sexe1">Un homme, 37</p>
                 </div>
@@ -139,7 +186,7 @@
               <div id="eclosions_sondage" class="mp_sondage">
                 <img class="header_sondage" src="img/question_eclosions.png">
                 <img class="sondage" src="img/eclosions_sondage.gif">
-                <img class="commentaire_sondage" src="img/commentaire_eclosions.png">
+                <!-- <img class="commentaire_sondage" src="img/commentaire_eclosions.png"> -->
 
                 <div id="comments_2" class="commentaire">
                     <p id="comment2">Centre-ville beaucoup plus agréable avec l'arrivée du tram </p>
@@ -240,6 +287,19 @@
       <script type="text/javascript" src="js/dynamic_panels.js"></script>
       <script type="text/javascript" src="js/comment_random.js"></script>
       <script type="text/javascript" src="lib/simplelightbox-master/dist/simple-lightbox.js"></script>
+      <script type="text/javascript" src="js/accueilscript.js" ></script>
+
+      <!-- Preloader -->
+      <script type="text/javascript">
+          //<![CDATA[
+              $(window).load(function() { // makes sure the whole site is loaded
+                  setInterval(function() {
+                    $('#status').fadeOut('slow'); // will first fade out the loading animation
+                    $('#preloader').fadeOut('slow'); // will fade out the white DIV that covers the website.
+                  }, 300);
+              });
+          //]]>
+      </script>
       <script type="text/javascript">
         $(function(){
           var $gallery = $('.gallery a').simpleLightbox();

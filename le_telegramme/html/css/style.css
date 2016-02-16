@@ -230,10 +230,42 @@ iframe {
   width: 100%;
 }
 
+.commentaire {
+  background-image: url(../img/commentaire_ca_pousse.png);
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center center;
+  min-height: 200px;
+}
+.commentaire p{
+  color: black;
+  width: 50%;
+  margin: auto;
+  padding-top: 10%;
+  font-size: 13pt;
+}
+
+#comment1{
+
+}
+
 /*Right panel (mainly containing the iframe) */
 
 #right {
   height : 100%;
   padding : 0;
   border : 0px;
+}
+
+
+/* Preloader */
+
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
 }
