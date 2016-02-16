@@ -1,0 +1,67 @@
+.legend {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  right: 28%;
+  bottom: 0px;
+  ul {
+    position: relative;
+    list-style: none;
+    text-align: right;
+  }
+  li {
+    position: relative;
+    font-size: 10px;
+    margin-bottom: 5px;
+    &::before {
+      content: '';
+      position: absolute;
+      right: -20px;
+      top: 3px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  &.logements {
+    li:nth-child(1)::before {
+      background: #FAC8CE;
+    }
+    li:nth-child(2)::before {
+      background: #F8ABB3;
+    }
+    li:nth-child(3)::before {
+      background: #F47B8A;
+    }
+    li:nth-child(4)::before {
+      background: #EB324C;
+    }
+  }
+  &.locataires {
+    li:nth-child(1)::before {
+      background: #FEE1C4;
+    }
+    li:nth-child(2)::before {
+      background: #FDD0A6;
+    }
+    li:nth-child(3)::before {
+      background: #FCB878;
+    }
+    li:nth-child(4)::before {
+      background: #FB923B;
+    }
+  }
+  &.secondaires {
+    li:nth-child(1)::before {
+      background: #C3BEF8;
+    }
+    li:nth-child(2)::before {
+      background: #A8A2F5;
+    }
+    li:nth-child(3)::before {
+      background: #837AF3;
+    }
+    li:nth-child(4)::before {
+      background: #4E41EF;
+    }
+  }
+}

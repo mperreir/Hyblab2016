@@ -1,0 +1,72 @@
+@import "vars";
+
+#credit {
+    background: url('/media/pic/Fond2.svg') no-repeat bottom right;
+    background-size: 100%;
+    overflow: hidden;
+    padding-top: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    height: 100%;
+
+    #top {
+        span {
+            font-weight: 600;
+        }
+        #big {
+            font-weight: 900;
+        }
+        position: relative;
+        margin-bottom: 8%;
+    }
+    #top::after{
+        position: absolute;
+        bottom: -100%;
+        left: 42%;
+        width: 10%;
+        height: 2px;
+        content: '';
+        background: @font-color;
+    }
+
+    #middle {
+        padding-top: 1%;
+        padding-left: 10%;
+        text-align: center;
+        div {
+            display: inline-block;
+            float: left;
+            width: 30%;
+            padding: 10px;
+
+            h1.credit {
+                font-weight: 900;
+                font-size: 14px;
+            }
+            h2.credit {
+                font-weight: bold;
+                font-size: 12px;
+            }
+            p.credit {
+                font-size: 10px;
+            }
+        }
+        .ico {
+            max-width: 50px;
+            max-height: 50px;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 3%;
+        left: 3%;
+        width: 60%;
+        height: 20%;
+        background: url("/media/pic/logos.svg") no-repeat bottom left;
+        background-size: contain;
+    }
+
+}

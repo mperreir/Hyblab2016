@@ -7,7 +7,7 @@ var app = express();
 
 var donnees;
 
-fs.readFile('./ouest_france/data/data.json', 'utf-8', function(err, data){
+fs.readFile(path.join(__dirname, 'data/data.json'), 'utf-8', function(err, data){
 	if(err) throw err;
 	else donnees = JSON.parse(data);
 });
@@ -127,7 +127,7 @@ function getCategorieType(req,res){
 };
 
 function getCategoriePerYear(req,res){
-	
+
 	resHeader(res);
 	var categorie = req.params.categorie;
 	var year = req.params.year;
@@ -155,7 +155,7 @@ function getCategoriePerYear(req,res){
 };
 
 function getCategorieAllYears(req,res){
-	
+
 	resHeader(res);
 	var categorie = req.params.categorie;
 	var retour = {};

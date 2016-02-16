@@ -1,0 +1,17 @@
+doctype html
+meta(charset="utf8")
+html
+  head
+    title= title
+    block stylesheets
+      link(rel='stylesheet', href='stylesheets/jquery.fullPage.css')
+      link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+  body
+    block content
+    block js
+      script(src='js/jquery-2.2.0.min.js')
+      script(src='js/bootstrap.min.js')
+      script(src='js/jquery.fullPage.min.js')
+      script(src="js/d3.v3.min.js")
+      script(src="js/topojson.v1.min.js")
+      script(src="js/queue.v1.min.js")

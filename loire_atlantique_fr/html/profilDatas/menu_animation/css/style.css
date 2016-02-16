@@ -1,0 +1,468 @@
+/** RESET **/
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+img {
+    border: 0;
+    display: block;
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+body {
+    font-size: 100%;
+    line-height: 110%;
+    width: 100%;
+    font-family: 'PTSansRegular', Helvetica, Arial, sans-serif;
+    color: #B6D1D6;
+    background: #444F51;
+}
+/** TYPOGRAPHY **/
+
+p {
+    font-size: 0.9375em;
+    padding: 0 0 10px;
+    line-height: 170%;
+    color: #1C4C54;
+}
+
+h1 {
+    font-size: 2.9375em;
+    font-weight: normal;
+    line-height: 100%;
+    font-family: 'Museo500Regular', Helvetica, Arial, sans-serif;
+}
+
+h2 {
+    font-size: 1.875em;
+    font-weight: normal;
+    line-height: 100%;
+    font-family: 'Museo500Regular', Helvetica, Arial, sans-serif;
+    color: #1C4C54;
+}
+
+/** LAYOUT CONTAINERS AND THEIR RELATED ELEMENTS **/
+#pageWrapper {
+    position: relative;
+}
+
+.centerLayout {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+}
+
+.topSectionBar {
+    width: 100%;
+    background: #282828;
+    margin: 0 0 20px;
+}
+
+.innerTopSectionBar {
+    padding: 10px;
+    overflow: hidden;
+}
+
+.back-tutorial {
+    float: right;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    
+}
+
+.back-tutorial:hover {
+    color: #B6D1D6;
+}
+
+.introTtl h1 {
+    margin: 41px 0 60px;
+    text-align: center;
+}
+
+#contentArea {
+    text-align: center;
+    padding: 0 0 30px;
+}
+
+/***************** HAMBURGER 1, 2 & 3 STYLES  ********************/
+.menuTrigger {
+    display: inline-block;
+    width: 50px;
+    height: 32px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 3%;
+    vertical-align: middle;
+}
+
+.mainLine {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 6px;
+    margin-top: -3px;
+    background: #fff;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+}
+
+.mainLine:after, .mainLine:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 6px;
+    background: #fff;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+}
+
+.mainLine:before {
+    top: -13px;
+}
+
+.mainLine:after {
+    top: 13px;
+}
+
+/****** Hover Effects ******/
+#hamburger-one:hover .mainLine:before {
+    top: -16px;
+}
+
+#hamburger-one:hover .mainLine:after {
+    top: 16px;
+}
+
+#hamburger-two:hover .mainLine:before {
+    top: -10px;
+}
+
+#hamburger-two:hover .mainLine:after {
+    top: 10px;
+}
+
+#hamburger-three:hover .mainLine:before {
+    top: -10px;
+}
+
+#hamburger-three:hover .mainLine:after {
+    top: 10px;
+}
+
+/******  Click Effects ******/
+/* Hamburger One */
+#hamburger-one.menuToggle .mainLine {
+    background: transparent;
+     -webkit-transition: all 0.3s linear ; 
+     -moz-transition: all 0.3s linear ; 
+     -ms-transition: all 0.3s linear ; 
+     transition: all 0.3s linear ; 
+}
+
+#hamburger-one.menuToggle .mainLine:before {
+    visibility: visible;
+    top: 0 !important;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#hamburger-one.menuToggle .mainLine:after {
+    visibility: visible;
+    top: 0 !important;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* Hamburger Two */
+#hamburger-two.menuToggle .mainLine:before, #hamburger-two.menuToggle .mainLine:after {
+    -ms-transform: scale(0.8,1);
+    transform: scale(0.8,1);
+    -webkit-transform: scale(0.8,1);
+    -moz-transform: scale(0.8,1);
+}
+
+#hamburger-two.menuToggle .mainLine:before {
+    top: -10px;
+}
+
+#hamburger-two.menuToggle .mainLine:after {
+    top: 10px;
+}
+
+/* Hamburger Three */
+
+
+#hamburger-three .mainLine {
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+}
+
+#hamburger-three.menuToggle .mainLine:before, #hamburger-three.menuToggle .mainLine:after {
+    top: 0 !important;
+    transition: all  linear  0.5s;
+    -webkit-transition: all linear  0.5s;
+    -moz-transition: all linear  0.5s;
+    -ms-transition: all linear  0.5s;
+}
+
+#hamburger-three.menuToggle .mainLine {
+    background: rgba(255, 255, 255, 0);
+    -ms-transform: scale(0.6);
+    transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transition: all 0.7s linear 0.6s;
+    -webkit-transition: all 0.7s linear 0.6s;
+    -moz-transition: all 0.7s linear 0.6s;
+    -ms-transition: all 0.7s linear 0.6s;
+}
+
+
+
+/***************** HAMBURGER 4 STYLES  ********************/
+.smallboxes {
+    display: block;
+    height: 6px;
+    width: 6px;
+    background: #fff;
+    position: absolute;
+    transform: translate(0px,0px);
+    -webkit-transform: translate(0px,0px);
+    -moz-transform: translate(0px,0px);
+    -ms-transform: translate(0px,0px);
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+}
+
+.smallbox1 {
+    left: 0;
+    top: 0;
+}
+
+.smallbox2 {
+    left: 15px;
+    top: 0;
+}
+
+.smallbox3 {
+    left: 30px;
+    top: 0;
+}
+
+.smallbox4 {
+    left: 0px;
+    top: 15px;
+}
+
+.smallbox5 {
+    left: 15px;
+    top: 15px;
+}
+
+.smallbox6 {
+    left: 30px;
+    top: 15px;
+}
+
+.smallbox7 {
+    left: 0px;
+    top: 30px;
+}
+
+.smallbox8 {
+    left: 15px;
+    top: 30px;
+}
+
+.smallbox9 {
+    left: 30px;
+    top: 30px;
+}
+
+/******  Click Effects ******/
+#hamburger-four.menuToggle .smallbox1 {
+    transform: translate(5px,5px);
+    -webkit-transform: translate(5px,5px);
+    -moz-transform: translate(5px,5px);
+    -ms-transform: translate(5px,5px);
+}
+
+#hamburger-four.menuToggle .smallbox2 {
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    -moz-transform: translate(0px,5px);
+    -ms-transform: translate(0px,5px);
+}
+
+#hamburger-four.menuToggle .smallbox3 {
+    transform: translate(-5px,5px);
+    -webkit-transform: translate(-5px,5px);
+    -moz-transform: translate(-5px,5px);
+    -ms-transform: translate(-5px,5px);
+
+}
+
+#hamburger-four.menuToggle .smallbox4 {
+    transform: translate(5px,0px);
+    -webkit-transform: translate(5px,0px);
+    -moz-transform: translate(5px,0px);
+    -ms-transform: translate(5px,0px);
+}
+
+#hamburger-four.menuToggle .smallbox5 {
+    transform: translate(0px,0px);
+    -webkit-transform: translate(0px,0px);
+    -moz-transform: translate(0px,0px);
+    -ms-transform: translate(0px,0px);
+}
+
+#hamburger-four.menuToggle .smallbox6 {
+    transform: translate(-5px, 0px);
+    -webkit-transform: translate(-5px, 0px);
+    -moz-transform: translate(-5px, 0px);
+    -ms-transform: translate(-5px, 0px);
+}
+
+#hamburger-four.menuToggle .smallbox7 {
+    transform: translate(5px, -5px);
+    -webkit-transform: translate(5px, -5px);
+    -moz-transform: translate(5px, -5px);
+    -ms-transform: translate(5px, -5px);
+}
+
+#hamburger-four.menuToggle .smallbox8 {
+    transform: translate(0px, -5px);
+    -webkit-transform: translate(0px, -5px);
+    -moz-transform: translate(0px, -5px);
+    -ms-transform: translate(0px, -5px);
+}
+
+#hamburger-four.menuToggle .smallbox9 {
+    transform: translate(-5px, -5px);
+    -webkit-transform: translate(-5px, -5px);
+    -moz-transform: translate(-5px, -5px);
+    -ms-transform: translate(-5px, -5px);
+}
+
+/***************** HAMBURGER 5 STYLES  ********************/
+#hamburger-five {
+    background: #fff;
+    height: 55px;
+}
+
+#hamburger-five:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background: #000;
+    transition: all  linear  0.3s;
+    -webkit-transition: all linear  0.3s;
+    -moz-transition: all linear  0.3s;
+    -ms-transition: all linear  0.3s;
+}
+
+#hamburger-five .mainLine {
+    background: #000;
+    width: 58%;
+    height: 4px;
+    left: 50%;
+    margin-left: -29%;
+    z-index: 9;
+}
+
+#hamburger-five .mainLine:after, #hamburger-five .mainLine:before {
+    background: #000;
+    height: 4px;
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+}
+
+#hamburger-five .mainLine:after {
+    top: -9px;
+}
+
+#hamburger-five .mainLine:before {
+    top: 9px;
+}
+
+/****** Hover Effects ******/
+#hamburger-five:hover:after {
+    height: 100%;
+}
+
+#hamburger-five:hover .mainLine {
+    background: #fff;
+}
+
+#hamburger-five:hover .mainLine:before {
+    background: #fff;
+    top: 13px;
+}
+
+#hamburger-five:hover .mainLine:after {
+    background: #fff;
+    top: -13px;
+}
+
+@media only screen and (max-width: 480px) {
+  .centerLayout {width:98%;}  
+  .menuTrigger {margin:0 1%;}
+}

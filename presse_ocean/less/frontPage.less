@@ -1,0 +1,91 @@
+@import "vars";
+
+#intro {
+  z-index: 1;
+  background: url('/media/pic/Fond1.svg') no-repeat bottom;
+  background-size: cover;
+  padding-top: 20vh;
+  overflow: hidden;
+
+  .title-area {
+    position: relative;
+    margin-bottom: @title-font-size;
+  }
+
+  .text-area {
+    text-align: justify;
+    position: relative;
+    padding: 10px;
+    //padding-top: 15px;
+    font-size: 13px;
+    background: rgba(241, 241, 241, .6);
+    display: inline-block;
+  }
+  .text-area:nth-child(1)::before {
+    content: '';
+    background: @title-background-color;
+    position: absolute;
+    top: -5px;
+    height: 2px;
+    width: @title-border-length;
+  }
+
+  h1, h2 {
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px;
+    color: white;
+    margin: 0;
+    background: @title-background-color;
+  }
+  h1 {
+    font-size: @title-font-size;
+
+  }
+  h2 {
+    padding-top: 0;
+    font-size: round(@title-font-size*0.7);
+    border: 1px solid @title-background-color;
+  }
+  /*
+  h1::after, h2::after {
+    content: '';
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  h2::after {
+    width: 200px;
+    max-width: 100%;
+  }
+  */
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    #page1 {
+      background-position: 33% bottom;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #page1 {
+      background-position: bottom;
+    }
+  }
+
+  .next-page {
+    position: absolute;
+    bottom: 50px;
+    background: url(/media/pic/fleche.svg) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+    width: @next-page-button-size;
+    height: @next-page-button-size;
+    right: 50%;
+  }
+}
