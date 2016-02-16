@@ -1,0 +1,45 @@
+@import "vars";
+
+.map {
+  position: absolute;
+  top: -5px;
+  //right: 0;
+  overflow: hidden;
+  text-align: center;
+
+  /*
+  &.svg-container {
+    padding-right: auto;
+    padding-bottom: 100%;
+  }
+
+  .svg-content-responsive {
+    width: 100%;
+  }
+  */
+
+  svg {
+    fill: transparent;
+  }
+
+  path {
+    fill: lightgrey;
+  }
+
+  path.active {
+    stroke: @map-color-selection;
+    stroke-width: 5px;
+  }
+
+  path.hover {
+    stroke: @map-color-selection;
+    stroke-width: 2px;
+  }
+
+  .legend {
+
+  }
+}
+
+#page2 {
+}

@@ -1,0 +1,124 @@
+#section3 {
+    font: 12px Arial;
+}
+#section3 .d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    display: inline-block;
+}
+#section3 path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+#section3 .line0 {
+    stroke: #e2000a;
+}
+#section3 .datapoint0 {
+    stroke: #e2000a;
+}
+#section3 .line1 {
+    stroke: #004460;
+}
+#section3 .datapoint2 {
+    stroke: #004460;
+}
+#section3 .line2 {
+    stroke: #aec900;
+}
+#section3 .datapoint2 {
+    stroke: #aec900;
+}
+#section3 .line3 {
+    stroke: #f7a400;
+}
+#section3 .datapoint3 {
+    stroke: #f7a400;
+}
+#section3 #graph1 {
+    display: inline-block;
+    height: 400px;
+    width: 700px;
+    float: left;
+}
+#section3 .buttonex {
+    margin-top: 30px;
+    float: left;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-left-color: #aec900;
+    cursor: pointer;
+}
+#section3 #legend {
+    margin-top: 66px;
+    float: left;
+    height: 300px;
+    width: 260px;
+}
+#section3 .buttonEmp {
+    margin-top: 5px;
+    float: left;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-left-color: #f7a400;
+    cursor: pointer;
+}
+#section3 .button1 {
+    float: left;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-left-color: #004460;
+    cursor: default;
+}
+#section3 .button2 {
+    margin-top: 5px;
+    float: left;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-left-color: #e2000a;
+    cursor: default;
+}
+#section3 .axis path, #section3 
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+#section3 .xlabel, #section3 
+.ylabel {
+    font-weight: bold;
+    font-size: 20px;
+}

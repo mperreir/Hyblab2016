@@ -1,0 +1,59 @@
+@import "vars";
+
+#map1-intro, #map2-intro {
+  z-index: 1;
+  background: url('/media/pic/fondintercalaire.svg') no-repeat bottom;
+  background-size: cover;
+  padding-top: 20vh;
+  overflow: hidden;
+  padding-right: 40%;
+
+  h1 {
+    display: inline-block;
+    font-size: @title-font-size;
+    padding: 2px 7px;
+    color: white;
+    background: @intromap-background-color;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  h2 {
+    position: relative;
+    font-size: @title-font-size*.7;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -25px;
+      height: 2px;
+      width: 100px;
+      background: @font-color;
+    }
+  }
+  p {
+    text-align: justify;
+    font-size: 12px;
+    margin: 0 0 1px;
+  }
+  .next-page {
+    position: absolute;
+    bottom: 50px;
+    background: url(/media/pic/fleche.svg) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+    width: @next-page-button-size;
+    height: @next-page-button-size;
+    right: 50%;
+    &::after {
+      content: 'Voir la carte';
+      position: absolute;
+      left: -30%;
+      top: -50%;
+      width: 200%;
+      font-weight: bold;
+    }
+  }
+}

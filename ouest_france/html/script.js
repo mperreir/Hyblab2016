@@ -140,10 +140,10 @@ function generatePhrase(type, annee){
 	switch(type){
 		case "menage":
 			var pourcentage = Math.round(data.menage.data[annee].biPlus.pourcentage + data.menage.data[annee].mono.pourcentage);
-				$("#phraseMenage p").html("En "+annee+", il y avait "+pourcentage+"% de ménages motorisés.");	
+				$("#phraseMenage p").html("En "+annee+", il y avait "+pourcentage+"% de ménages motorisés.");
 			break;
 		case "parc":
-			$("#phraseDetention p").html("En "+annee+",les français gardaient leur voiture "+data.menage.data[annee].detention.val+" ans en moyenne.");			
+			$("#phraseDetention p").html("En "+annee+",les français gardaient leur voiture "+data.menage.data[annee].detention.val+" ans en moyenne.");
 			break;
 
 		case "carburant":
@@ -152,22 +152,97 @@ function generatePhrase(type, annee){
 			cleanEnergies.forEach(function(carburant){
 				value += data.carburant.data[annee][carburant].pourcentage;
 			});
+<<<<<<< HEAD:ouest_france/html/script.js
 			$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % des voitures vendues utilisaient des énergies propres.");		
+=======
+			$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % de voitures vendues utilisaient des énergies propres.");
+>>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 			break;
 	}
 }
 
+<<<<<<< HEAD:ouest_france/html/script.js
+=======
+function requestChartCarburant(year){
+	if(!data.carburant){
+		requestData(function(){
+			generateBarChart(data.carburant.data[year]);
+		}, "carburant");
+	}else{
+		generateBarChart(data.carburant.data[year]);
+	}
+}
+
+function requestGenerateParcDonutCars(type, year){
+	if(!data[type]){
+		requestData(function(){
+			generateParcDonutCars(data.parc.data[year][type].pourcentage, type);
+		}, type);
+	}else{
+		generateParcDonutCars(data.parc.data[year][type].pourcentage, type);
+	}
+}
+
+function requestGenerateInfo(type, year, slideId){
+	if(!data[type]){
+		requestData(function(){
+			generateInfo(data[type].yearsComments[year], slideId);
+
+		}, type);
+	}else{
+		generateInfo(data[type].yearsComments[year], slideId);
+	}
+}
+
+>>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 function generateInfo(text, slideId){
 	$('#'+slideId+" .info p").html(text);
 }
 
+<<<<<<< HEAD:ouest_france/html/script.js
 function generateChart(donnees){
+=======
+function requestGenerateMenageDonut(type, year){
+	if(!data[type]){
+		requestData(function(){
+			generateDonut(data.menage.data[year][type].pourcentage, type);
+		},type);
+	}else generateDonut(data.menage.data[year][type].pourcentage, type);
+}
+
+
+function requestGenerateChartDefilement(type){
+	if(!data[type]) requestData(function(){
+		generateChart(data[type], "200");
+	},type);
+	else generateChart(data[type], "200");
+
+}
+
+function generateChart(res, statut){
+	var donnees = res;
+
+>>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 	var dataChart = generateChartData(donnees);
 	var chartId = "#chart"+donnees.categorie;
 	var chartLabel;
+<<<<<<< HEAD:ouest_france/html/script.js
+=======
+	switch(donnees.categorie){
+		case "menage":
+			chartId = '#chartMotorisation';
+			break;
+		case "carburant":
+			chartId = '#chartCarburant';
+			break;
+		case "parc":
+			chartId = '#chartParc';
+			break;
+	}
+>>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 	var options = fillOptions(chartLabel);
 	var chart = new Chartist.Line(chartId, dataChart, options);
-	
+
 	var seq = 0;
 	var delays = 80;
 	var durations = 500;
@@ -194,17 +269,48 @@ function generateChart(donnees){
 
 function fillOptions(){
 	var retour = {
+<<<<<<< HEAD:ouest_france/html/script.js
 		axisY : { showLabel:false , showGrid:false },
 		axisX : { showGrid:false , labelOffset:{ x:-16, y:0 } }, 
 		lineSmooth: Chartist.Interpolation.cardinal({ fillHoles:true }),
 		chartPadding: { top:5, right:30 , bottom:5 , left:0 } };
+=======
+		axisY : {
+			showLabel: false,
+			showGrid : false
+		},
+		axisX : {
+			showGrid : false,
+			labelOffset : {
+				x:-16,
+				y:0
+			}
+		},
+		lineSmooth: Chartist.Interpolation.cardinal({
+			fillHoles: true
+		}),
+		chartPadding: {
+			top: 5,
+			right: 30,
+			bottom: 5,
+			left: 0
+		}
+	};
+>>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 	return retour;
 }
 
 function generateChartData(donnees){
+<<<<<<< HEAD:ouest_france/html/script.js
 	
 	var dataChart = { labels:[], series:[[]] }; 
 	
+=======
+	var dataChart = {
+			labels : [],
+			series : [[]]
+		};
+>>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 	for(var i=0; i<donnees.years.length; i++){
 		if(i==0){
 			if(jQuery.inArray(donnees.years[0], donnees.yearsToScreen) != -1) dataChart.labels.push(donnees.years[0]);
@@ -225,7 +331,7 @@ function generateChartData(donnees){
 }
 
 function dataToAdd(donnees, index){
-	
+
 	var retour = null;
 	switch(donnees.categorie){
 		case "menage":
@@ -242,7 +348,7 @@ function dataToAdd(donnees, index){
 
 		case "parc":
 			retour = data.menage.data[donnees.years[index]].detention.val;
-			
+
 			break;
 	}
 	return retour;
@@ -260,18 +366,28 @@ function setLineAnimation(param, seq, delay, duration){
 }
 
 function setLabelAnimation(param, categorie){
+<<<<<<< HEAD:ouest_france/html/script.js
 	var id = "label"+categorie+param.text;
 	
 	param.element.attr({id : id});
 	
 	var labelParent = $("#"+id);
 	var label = labelParent.children();
+=======
+
+	var chaine = 'foreignObject[x="'+param.x+'"]'+
+				'[y="'+param.y+'"]'+
+				'[width="'+param.width+'"]'+
+				'[height="'+param.height+'"]';
+	var label = $(chaine+" span");
+	var labelParent = $(chaine);
+>>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 
 	var labelParentOriginPos = {
 		x : parseInt(labelParent.attr("x").replace("px",""), 10),
 		y : parseInt(labelParent.attr("y").replace("px",""), 10)
 	};
-	
+
 	//var labelParentOriginPos = labelParent.position();
 	label.mouseenter(function(node){
 		//Grossissement et changement de couleur du point
@@ -283,12 +399,12 @@ function setLabelAnimation(param, categorie){
 			opacity : 0
 		}, 300);
 		//Grossissement du label
-		$(this).stop().animate({ 
+		$(this).stop().animate({
 			fontSize: "3vmin",
 			}, 300 );
 
 		//Décalage à gauche au fur et à mesure du grossissement du label
-		$(this).parent().stop().animate({ 
+		$(this).parent().stop().animate({
 		x : labelParentOriginPos.x-10+"px",
 		y : labelParentOriginPos.y-5+"px"
 		}, 300 );
@@ -304,12 +420,12 @@ function setLabelAnimation(param, categorie){
 		}, 300);
 
 		//Retrecissement du label
-		$(this).stop().animate({ 
+		$(this).stop().animate({
 			fontSize: "2vmin"
 			}, 300 );
 
 		//Retrecissement du label et retour à la position d'origine
-		$(this).parent().stop().animate({ 
+		$(this).parent().stop().animate({
 		x : labelParentOriginPos.x+"px",
 		y : labelParentOriginPos.y+"px"
 		}, 300 );
@@ -323,18 +439,26 @@ function setLabelAnimation(param, categorie){
 				requestGenerateMenageDonut("biPlus", annee);
 				requestGenerateMenageDonut("none", annee);
 				requestGenerateInfo(categorie, annee, "s2");
+<<<<<<< HEAD:ouest_france/html/script.js
 				requestGeneratePhrase("menage", annee);			
+=======
+				requestGeneratePhrase("menage", annee)
+>>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 				break;
 			case "parc":
 				requestGenerateParcDonutCars("neuf", annee);
 				requestGenerateParcDonutCars("occasion", annee);
 				requestGenerateInfo(categorie, annee, "s3");
-				requestGeneratePhrase("parc", annee);				
+				requestGeneratePhrase("parc", annee);
 				break;
 			case "carburant":
 				requestGenerateInfo(categorie, annee, "s4");
 				requestChartCarburant(annee);
+<<<<<<< HEAD:ouest_france/html/script.js
 				requestGeneratePhrase("carburant", annee);					
+=======
+				requestGeneratePhrase("carburant", annee)
+>>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 				break;
 		}
 	});
@@ -534,8 +658,13 @@ function getRandomPlace(type, nb){
 			}
 		}
 	}
+<<<<<<< HEAD:ouest_france/html/script.js
 	
 	var copieAllPlaces = allPlaces[type].slice();
+=======
+
+	var copieAllPlaces = allPlaces;
+>>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 	if(nbMaxPlaces > nb){
 		for(i=0; i<nb; i++){
 			var randPlaceIndex = Math.round((Math.random() * (copieAllPlaces.length-1)));
@@ -578,7 +707,7 @@ function generateBarChart(serie){
 	var donnees ={
 		labels : ["Diesel", "Essence", "Bicarburant", "Electrique", "Hybride", "Gaz", "Superéthanol"],
 		series :[[serie.diesel.pourcentage,serie.essence.pourcentage,serie.bicarburant.pourcentage,serie.electricite.pourcentage, serie.hybride.pourcentage, serie.gaz.pourcentage, serie.superethanol.pourcentage]]
-	
+
 	};
 	var chart = new Chartist.Bar('#barchart',
 	donnees,
@@ -599,11 +728,15 @@ function generateBarChart(serie){
 		    bottom: 5,
 		    left: 10
   		}
+<<<<<<< HEAD:ouest_france/html/script.js
+=======
+
+>>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 	});
-	
+
 	chart.on('draw', function(param){
 		if(param.type === 'bar'){
-						
+
 			var valeur = $("#barchart svg");
 
 			valeur.appendSvg('text', {
@@ -615,11 +748,11 @@ function generateBarChart(serie){
 			}, Math.round(param.value.x * 10)/10+'%');
 
 			var label = $('#'+param.axisY.ticks[param.index]);
-			
+
 			label.delay(1000).animate({
 				opacity : 1,
 			},500);
-			
+
 			param.element.animate({
 				x2: {
 					begin: 0,
@@ -627,6 +760,10 @@ function generateBarChart(serie){
 					from: param.x1,
 					to: param.x2,
 					easing: 'easeOutQuart'
+<<<<<<< HEAD:ouest_france/html/script.js
+=======
+
+>>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 				}
 			});
 		}
@@ -656,7 +793,7 @@ function animateCloud(className){
 	obj.dequeue("left");
 }
 function animateSize(obj, duration_factor, random_factor){
-	
+
 	obj.each(function(){
 
 		var seed = getPartiallyRandomSeed(random_factor);
@@ -772,7 +909,7 @@ function counterSoldCars(){
 		counter++;
 		if(counter > 1) $("#carCounter").html("Depuis votre arrivée sur cette page, "+counter+" voitures ont été vendues.");
 		else if(counter == 1) $("#carCounter").html("Depuis votre arrivée sur cette page, une voiture a été vendue.");
-		
+
 	},4200);
 }
 
@@ -812,7 +949,7 @@ function animateMethodo(){
 				left: "75vw"
 			},1000);
 
-			
+
 		}
 	});
 }
