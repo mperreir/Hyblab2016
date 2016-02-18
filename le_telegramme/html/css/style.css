@@ -73,8 +73,24 @@ iframe {
   font-size: 1em;
 }
 
-#left > li:hover, #left > li > a:hover {
+#menu1:hover, #menu1 > a:hover {
   background-color: #666666;
+}
+
+#menu2:hover, #menu2 > a:hover {
+  background-color: #666666;
+}
+
+#menu3:hover, #menu3 > a:hover {
+  background-color: #666666;
+}
+
+#menu4:hover, #menu4 > a:hover {
+  background-color: #313232;
+}
+
+a:focus {
+  background-color: transparent !important;
 }
 
 #left li a {
@@ -84,20 +100,24 @@ iframe {
 
 #menu1 {
   color: white;
-  font-family: AeroMaticsDisplay;
+  font-family: SourceSansProRegular;
   border-top: 2px solid #666666;
 }
 
 #menu2 {
   background-color : #313232;
-  font-family: AeroMaticsDisplay;
+  font-family: SourceSansProRegular;
   color : white;
 }
 
 #menu3 {
   background-color : #313232;
-  font-family: AeroMaticsDisplay;
+  font-family: SourceSansProRegular;
   color: white;
+}
+
+#menu4:hover {
+  background-color: #313232;
 }
 
 #left .active {
@@ -107,7 +127,6 @@ iframe {
 /*Middle panel */
 
 #middle {
-  /*width: 35%; never ever put this !!!! */
   height : 100%;
   background-color : #F7931E;
   overflow-y: scroll;
@@ -317,3 +336,8 @@ and (-webkit-min-device-pixel-ratio: 1) {
     font-size: 0.8em;
   }
 }
+<<<<<<< HEAD
+=======
+*/
+
+>>>>>>> a2fe9be51a3430c6c142283d13a9961cad6d50a8
