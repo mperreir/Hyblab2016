@@ -70,7 +70,7 @@ iframe {
   /*padding-top: 30%;*/
   height: 33%;
   border-bottom: 2px solid #666666;
-  /*font-size: 1em;*/
+  font-size: 1em;
 }
 
 #left > li:hover, #left > li > a:hover {
@@ -152,7 +152,7 @@ iframe {
 #submenu li {
   text-align: center;
   font-family: SantEliaScriptBoldDEMO;
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 0;
 }
 
@@ -162,7 +162,7 @@ iframe {
 
 #submenu li a {
   color: white;
-  font-size: 1em;
+  /*font-size: 1em;*/
 }
 
 .mp_content {
@@ -270,10 +270,50 @@ iframe {
     z-index:99; /* makes sure it stays on top */
 }
 
-/*@media only screen
-and (min-device-width: 15.5cm)
-and (max-device-width: 15.5cm)
+@media only screen
+and (min-device-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 1) {
+  #submenu li {
+    font-size: 0.7em;
+  }
 
+  #header_quartiers {
+    font-size: 4em;
+    text-align: center;
+  }
+
+  #header_eclosions {
+    font-size: 3.3em;
+    text-align: center;
+  }
+
+  #header_sondage {
+    font: 3.5em;
+    text-align: center;
+  }
+
+  #left li {
+    font-size: 0.8em;
+  }
 }
-*/
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1199px)
+and (-webkit-min-device-pixel-ratio: 1) {
+  #submenu li {
+    font-size: 0.7em;
+  }
+
+  #submenu img {
+    display: none;
+  }
+
+  #header_quartiers {
+    font-size: 4.5em;
+  }
+
+  #left li {
+    font-size: 0.8em;
+  }
+}
