@@ -73,24 +73,8 @@ iframe {
   font-size: 1em;
 }
 
-#menu1:hover, #menu1 > a:hover {
+#left > li:hover, #left > li > a:hover {
   background-color: #666666;
-}
-
-#menu2:hover, #menu2 > a:hover {
-  background-color: #666666;
-}
-
-#menu3:hover, #menu3 > a:hover {
-  background-color: #666666;
-}
-
-#menu4:hover, #menu4 > a:hover {
-  background-color: #313232;
-}
-
-a:focus {
-  background-color: transparent !important;
 }
 
 #left li a {
@@ -116,10 +100,6 @@ a:focus {
   color: white;
 }
 
-#menu4:hover {
-  background-color: #313232;
-}
-
 #left .active {
   background-color: #666666;
 }
@@ -127,6 +107,7 @@ a:focus {
 /*Middle panel */
 
 #middle {
+  /*width: 35%; never ever put this !!!! */
   height : 100%;
   background-color : #F7931E;
   overflow-y: scroll;
@@ -315,6 +296,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     font-size: 0.8em;
   }
 }
+<<<<<<< HEAD
 
 @media only screen
 and (min-device-width: 768px)
@@ -336,3 +318,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
     font-size: 0.8em;
   }
 }
+=======
+*/
+>>>>>>> parent of a2fe9be... fix menu bar for credit page
