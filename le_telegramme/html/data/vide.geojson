@@ -1,9 +1,0 @@
-{
-  "type": "FeatureCollection",
-  "features": [{
-    "type": "Feature",
-    "properties": {
-      "minHeight": 0, "color": "#FF605E", "roofColor": "#FF605E", "height": 400
-      
-    }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -99.87468, 16.85539 ], [ -99.87353, 16.85539 ], [ -99.87353 , 16.85439], [ -99.87468 , 16.85439] ] ] } }]
-}
