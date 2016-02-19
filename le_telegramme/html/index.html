@@ -6,18 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
   <!-- bootstrap -->
-  <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/accueilstyle.css">
   <link rel="stylesheet" type="text/css" href="lib/simplelightbox-master/dist/simplelightbox.css">
-  <link rel="stylesheet" href="css/accueilstyle.css">
 </head>
   <body>
       <!-- Preloader -->
       <div id="preloader">
           <div class="container-fluid" id="status">
             <div class="row js-scrollTo" id="page1">
-              <section class="col-md-4 col-sm-4 col-xs-4"><img src="img/accueil.png" alt="Image accueil" id="img_accueil"/></section>
-              <section class="col-md-4 col-sm-4 col-xs-4">
+              <section class="col-md-4 col-sm-4"><img src="img/accueil.png" alt="Image accueil" id="img_accueil"/></section>
+              <section class="col-md-4 col-sm-4">
                 <h4 id="p1_titre">BREST RENAÎT DE SES CENDRES</h4>
                 <p id="p1_contenu">
                   Rasé, terne ou encore grise : de multiples adjectifs sont utilisés pour
@@ -37,23 +37,11 @@
                     <progress value="0" max="100" id="barre_progression"></progress>
                 </p>
               </section>
-              <section class="col-md-4 col-sm-4 col-xs-4"></section>
+              <section class="col-md-4 col-sm-4"></section>
             </div>
-
-            <!-- <div class="row js-scrollTo" id="page2">
-              <div class="row">
-                <section class="col-md-4" id="credit">
-                  <h2 id="p2_titre">Y'A DU MONDE AU BALCON</h2>
-                  <img src="img/page_crédit.png"/>
-                </section>
-                <section class="col-md-4">
-                </section>
-                <section class="col-md-4"></section>
-              </div>
-            </div> -->
           </div>
       </div>
-      <!-- Waiting screen -->
+      <!-- End Preloader -->
 
 
       <!-- Container -->
@@ -61,7 +49,7 @@
         <div id="container" class="row">
 
           <!-- Navigation -->
-          <div class="col-md-1 col-sm-1 col-xs-1 sidebar" id="navbar_left">
+          <div class="col-md-1 col-sm-1 sidebar" id="navbar_left">
               <ul class="nav nav-sidebar vertical-center" id="left">
                 <li id="menu1" class="text-center text-uppercase active">
                   <a href="#">ça pousse</a>
@@ -73,32 +61,24 @@
                   <a href="#">Top / Flop</a>
                 </li>
                 <li id="menu4" class="text-center text-uppercase">
-                  <a href="#"><img src="img/ico/info-icone-5376-48.png"></a>
+                  <a id="chieur" href="#"><img src="img/ico/bouton_info.png"></a>
                 </li>
               </ul>
           </div>
 
-          <!-- Middle -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div class="col-md-4 col-sm-4" id="middle">
           <!-- Panel Middle -->
-=======
->>>>>>> parent of a2fe9be... fix menu bar for credit page
-=======
->>>>>>> parent of a2fe9be... fix menu bar for credit page
           <div class="col-md-4 col-sm-4" id="middle">
 
               <!-- Middle panel navbar -->
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" id="submenu">
-                  <li class="col-md-4 col-sm-4 col-xs-4 active_j" id="submenu1">
+                  <li class="col-md-4 col-sm-4 active_j" id="submenu1">
                     <a href="#"><img src="img/pictos/edito.png"> Gazette</a>
                   </li>
-                  <li class="col-md-4 col-sm-4 col-xs-4 noactive_j" id="submenu2">
+                  <li class="col-md-4 col-sm-4 noactive_j" id="submenu2">
                     <a href="#"><img src="img/pictos/sondage.png"> Votre avis</a>
                   </li>
-                  <li class="col-md-4 col-sm-4 col-xs-4 noactive_j" id="submenu3">
+                  <li class="col-md-4 col-sm-4 noactive_j" id="submenu3">
                     <a href="#"><img src="img/pictos/photo.png"> Photos</a>
                   </li>
                 </ul>
@@ -124,15 +104,6 @@
               </div>
 
               <div id="ca_pousse_sondage" class="mp_sondage">
-                <!-- <div class="mp_intro">
-                  <p class="text-center text-uppercase">
-                    Avez-vous ressenti une metamorphose de Brest ces 15
-                    dernières années ?
-                  </p>
-                </div> -->
-
-                <!-- <img src="img/ca_pousse_sondage.png"> -->
-
                 <img class="header_sondage" src="img/question_ca_pousse.png">
                 <img class="sondage" src="img/ca_pousse_sondage.gif">
                 <div id="comments_1" class="commentaire">
@@ -281,10 +252,18 @@
               </div>
               <!-- FIN QUARTIERS -->
 
+              <!-- PAGE DE REMERCIEMENTS -->
+              <div id="credits" class="mp_content">
+                <div class="mp_header">
+                  <p class="text-center text-uppercase">y'a du monde au balcon</p>
+                </div>
+
+                <img src="img/page_credit.png">
+              </div>
           </div>
 
           <!-- Map -->
-          <div class="col-md-7 col-sm-7 col-xs-7" id="right">
+          <div class="col-md-7 col-sm-7" id="right">
             <iframe src="map.html"></iframe>
           </div>
 
