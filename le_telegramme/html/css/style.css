@@ -70,7 +70,11 @@ iframe {
   /*padding-top: 30%;*/
   height: 33%;
   border-bottom: 2px solid #666666;
+<<<<<<< HEAD
   font-size: 1em;
+=======
+  /*font-size: 1em;*/
+>>>>>>> parent of a2fe9be... fix menu bar for credit page
 }
 
 #left > li:hover, #left > li > a:hover {
@@ -320,4 +324,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 }
 =======
 */
+<<<<<<< HEAD
+>>>>>>> parent of a2fe9be... fix menu bar for credit page
+=======
 >>>>>>> parent of a2fe9be... fix menu bar for credit page
