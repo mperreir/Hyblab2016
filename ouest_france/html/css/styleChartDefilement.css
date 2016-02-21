@@ -10,6 +10,7 @@
 	color: #80BC4E;
 	font-weight: bold;
 	font-size : 2vmin;
+	max-width : 2vw;
 }
 
 .barreDefilement .ct-line{
@@ -80,9 +81,6 @@
 	font-weight: bold;
 	background-color: rgba(254, 231, 201, 0.5);
 	border-radius: 2vmin;
-}
-
-.labelDonut p{
 }
 
 #labelDonutMono{

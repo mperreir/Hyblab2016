@@ -1,8 +1,0 @@
-<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="500px" height="500px" >
-	<defs><style>.cls-1{fill:#e2e2e2;opacity:0.4;isolation:isolate;}</style></defs>
-<title>nuages</title>
-<g>
-  <animateMotion path="M0,0 40,-10  0,-20  40,-30 0,-40  40,-30   0,-20 40,-10 0,0" begin="0s" dur="20s" repeatCount="indefinite"/>
- <path class="cls-1" d="M9.9,2.6l-0.6.3A2.38,2.38,0,0,0,6,1.2,4.91,4.91,0,0,0,2.6,5.6a2,2,0,0,0,.1.7H2.4A2,2,0,0,0,1,7.8l2.1-.7,0.6-.2L7.9,5.6l0.9-.3,3-1V3.9A1.28,1.28,0,0,0,9.9,2.6Z"/>
-</g>
-</svg>

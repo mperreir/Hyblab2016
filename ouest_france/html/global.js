@@ -3,7 +3,9 @@
 /*global requestGenerateChartDefilement*/
 /*global relaunchAnimation*/
 /*global animateImage*/
-/*gloabel animatecCloud*/
+/*global animateCloud*/
+/*global animateMethodo*/
+/*global counterSoldCars*/
 
 $(document).ready(function() {
     $('#fullpage').fullpage({
