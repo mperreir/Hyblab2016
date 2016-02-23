@@ -38,17 +38,17 @@ function resHeader(res){
 	res.writeHead(200, {
 		'Content-Type' : 'text/json'
 	});
-};
+}
 
 function stringifyPerso(obj){
 	return JSON.stringify(obj,null,4);
-};
+}
 
 function getAtt(obj){
 	var retour = [];
-	for(elem in obj) retour.push(elem);
+	for(var elem in obj) retour.push(elem);
 	return retour;
-};
+}
 function getData(req, res){
 	var retour = {};
 	resHeader(res);
@@ -58,10 +58,10 @@ function getData(req, res){
 	retour.dataType.forEach(function(dataType){
 		retour.data[dataType] = donnees[dataType];
 		retour.data[dataType].dataType = getAtt(retour.data[dataType].data);
-	})
+	});
 	res.write(stringifyPerso(retour));
 	res.end();
-};
+}
 
 function getCategorie(req,res){
 	resHeader(res);
@@ -75,10 +75,10 @@ function getCategorie(req,res){
 		retour.yearsToScreen = donnees[categorie].yearsToScreen;
 		retour.yearsComments = donnees[categorie].yearsComments;
 		retour.data = donnees[categorie].data;
-	};
+	}
 	res.write(stringifyPerso(retour));
 	res.end();
-};
+}
 
 function getCategorieAvailableYears(req,res){
 	resHeader(res);
@@ -89,10 +89,10 @@ function getCategorieAvailableYears(req,res){
 		retour.categorie = categorie;
 		retour.years = donnees[categorie].years;
 		retour.yearsToScreen = donnees[categorie].yearsToScreen;
-	};
+	}
 	res.write(stringifyPerso(retour));
 	res.end();
-};
+}
 
 function getCategorieYearsComments(req, res){
 	resHeader;
@@ -107,7 +107,7 @@ function getCategorieYearsComments(req, res){
 	}
 	res.write(stringifyPerso(retour));
 	res.end();
-};
+}
 function getCategorieType(req,res){
 	resHeader(res);
 	var categorie = req.params.categorie;
@@ -121,10 +121,10 @@ function getCategorieType(req,res){
 		retour.yearsToScreen = donnees[categorie].yearsToScreen;
 		retour.data = {};
 		retour.data[type] = donnees[categorie].data[type];
-	};
+	}
 	res.write(stringifyPerso(retour));
 	res.end();
-};
+}
 
 function getCategoriePerYear(req,res){
 
@@ -146,13 +146,13 @@ function getCategoriePerYear(req,res){
 		retour.yearsComments[year] = donnees[categorie].yearsComments[year];
 		retour.data = {};
 		retour.data[year] = {};
-		for(type in donnees[categorie].data){
+		for(var type in donnees[categorie].data){
 			retour.data[year][type] = donnees[categorie].data[type][year];
-		};
+		}
 		res.write(stringifyPerso(retour));
-	};
+	}
 	res.end();
-};
+}
 
 function getCategorieAllYears(req,res){
 
@@ -168,10 +168,10 @@ function getCategorieAllYears(req,res){
 		retour.yearsToScreen = donnees[categorie].yearsToScreen;
 		retour.data = {};
 		donnees[categorie].years.forEach(function(year){
-			retour.data[year] = {}
-			for(type in donnees[categorie].data){
+			retour.data[year] = {};
+			for(var type in donnees[categorie].data){
 				retour.data[year][type] = donnees[categorie].data[type][year];
-			};
+			}
 		});
 		res.write(stringifyPerso(retour));
 	}
@@ -198,10 +198,10 @@ function getCategorieTypeYear(req,res){
 		retour.data = {};
 		retour.data[type] = {};
 		retour.data[type][year] = donnees[categorie].data[type][year];
-	};
+	}
 	res.write(stringifyPerso(retour));
 	res.end();
-};
+}
 
 // This module is exported and served by the main server.js located
 // at the root of this set of projects. You can access it by lanching the main

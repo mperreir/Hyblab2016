@@ -111,15 +111,15 @@ function testRequestedData(type, callback){
 	else callback();
 }
 
-function requestGeneratePhrase(categorie, annee){ 
+function requestGeneratePhrase(categorie, annee){
 	if(!data[categorie]) requestData(categorie, function(){ generatePhrase(categorie, annee); });
 	else generatePhrase(categorie, annee);
 }
-function requestChartCarburant(year){ 
+function requestChartCarburant(year){
 	if(!data["carburant"]) requestData("carburant", function(){ generateBarChart(data.carburant.data[year]); });
 	else generateBarChart(data.carburant.data[year]);
 }
-function requestGenerateParcDonutCars(type, year){ 
+function requestGenerateParcDonutCars(type, year){
 	if(!data["parc"]) requestData("parc", function(){ generateParcDonutCars(data.parc.data[year][type].pourcentage, type); });
 	else generateParcDonutCars(data.parc.data[year][type].pourcentage, type);
 }
@@ -127,11 +127,11 @@ function requestGenerateInfo(categorie, year, slideId){
 	if(!data[categorie]) requestData(categorie, function(){ generateInfo(data[categorie].yearsComments[year], slideId); });
 	else generateInfo(data[categorie].yearsComments[year], slideId);
 }
-function requestGenerateMenageDonut(type, year){ 
+function requestGenerateMenageDonut(type, year){
 	if(!data["menage"]) requestData("menage", function(){ generateDonut(data.menage.data[year][type].pourcentage, type); });
 	else generateDonut(data.menage.data[year][type].pourcentage, type);
 }
-function requestGenerateChartDefilement(categorie){ 
+function requestGenerateChartDefilement(categorie){
 	if(!data[categorie]) requestData(categorie, function(){ generateChart(data[categorie]); });
 	else generateChart(data[categorie]);
 }
@@ -152,94 +152,21 @@ function generatePhrase(type, annee){
 			cleanEnergies.forEach(function(carburant){
 				value += data.carburant.data[annee][carburant].pourcentage;
 			});
-<<<<<<< HEAD:ouest_france/html/script.js
-			$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % des voitures vendues utilisaient des énergies propres.");		
-=======
-			$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % de voitures vendues utilisaient des énergies propres.");
->>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
+			$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % des voitures vendues utilisaient des énergies propres.");
 			break;
 	}
 }
 
-<<<<<<< HEAD:ouest_france/html/script.js
-=======
-function requestChartCarburant(year){
-	if(!data.carburant){
-		requestData(function(){
-			generateBarChart(data.carburant.data[year]);
-		}, "carburant");
-	}else{
-		generateBarChart(data.carburant.data[year]);
-	}
-}
-
-function requestGenerateParcDonutCars(type, year){
-	if(!data[type]){
-		requestData(function(){
-			generateParcDonutCars(data.parc.data[year][type].pourcentage, type);
-		}, type);
-	}else{
-		generateParcDonutCars(data.parc.data[year][type].pourcentage, type);
-	}
-}
-
-function requestGenerateInfo(type, year, slideId){
-	if(!data[type]){
-		requestData(function(){
-			generateInfo(data[type].yearsComments[year], slideId);
-
-		}, type);
-	}else{
-		generateInfo(data[type].yearsComments[year], slideId);
-	}
-}
-
->>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 function generateInfo(text, slideId){
 	$('#'+slideId+" .info p").html(text);
 }
 
-<<<<<<< HEAD:ouest_france/html/script.js
 function generateChart(donnees){
-=======
-function requestGenerateMenageDonut(type, year){
-	if(!data[type]){
-		requestData(function(){
-			generateDonut(data.menage.data[year][type].pourcentage, type);
-		},type);
-	}else generateDonut(data.menage.data[year][type].pourcentage, type);
-}
 
-
-function requestGenerateChartDefilement(type){
-	if(!data[type]) requestData(function(){
-		generateChart(data[type], "200");
-	},type);
-	else generateChart(data[type], "200");
-
-}
-
-function generateChart(res, statut){
-	var donnees = res;
-
->>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 	var dataChart = generateChartData(donnees);
 	var chartId = "#chart"+donnees.categorie;
 	var chartLabel;
-<<<<<<< HEAD:ouest_france/html/script.js
-=======
-	switch(donnees.categorie){
-		case "menage":
-			chartId = '#chartMotorisation';
-			break;
-		case "carburant":
-			chartId = '#chartCarburant';
-			break;
-		case "parc":
-			chartId = '#chartParc';
-			break;
-	}
->>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
+
 	var options = fillOptions(chartLabel);
 	var chart = new Chartist.Line(chartId, dataChart, options);
 
@@ -269,48 +196,18 @@ function generateChart(res, statut){
 
 function fillOptions(){
 	var retour = {
-<<<<<<< HEAD:ouest_france/html/script.js
 		axisY : { showLabel:false , showGrid:false },
-		axisX : { showGrid:false , labelOffset:{ x:-16, y:0 } }, 
+		axisX : { showGrid:false , labelOffset:{ x:-16, y:0 } },
 		lineSmooth: Chartist.Interpolation.cardinal({ fillHoles:true }),
 		chartPadding: { top:5, right:30 , bottom:5 , left:0 } };
-=======
-		axisY : {
-			showLabel: false,
-			showGrid : false
-		},
-		axisX : {
-			showGrid : false,
-			labelOffset : {
-				x:-16,
-				y:0
-			}
-		},
-		lineSmooth: Chartist.Interpolation.cardinal({
-			fillHoles: true
-		}),
-		chartPadding: {
-			top: 5,
-			right: 30,
-			bottom: 5,
-			left: 0
-		}
-	};
->>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
+
 	return retour;
 }
 
 function generateChartData(donnees){
-<<<<<<< HEAD:ouest_france/html/script.js
-	
-	var dataChart = { labels:[], series:[[]] }; 
-	
-=======
-	var dataChart = {
-			labels : [],
-			series : [[]]
-		};
->>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
+
+	var dataChart = { labels:[], series:[[]] };
+
 	for(var i=0; i<donnees.years.length; i++){
 		if(i==0){
 			if(jQuery.inArray(donnees.years[0], donnees.yearsToScreen) != -1) dataChart.labels.push(donnees.years[0]);
@@ -366,22 +263,13 @@ function setLineAnimation(param, seq, delay, duration){
 }
 
 function setLabelAnimation(param, categorie){
-<<<<<<< HEAD:ouest_france/html/script.js
+
 	var id = "label"+categorie+param.text;
-	
+
 	param.element.attr({id : id});
-	
+
 	var labelParent = $("#"+id);
 	var label = labelParent.children();
-=======
-
-	var chaine = 'foreignObject[x="'+param.x+'"]'+
-				'[y="'+param.y+'"]'+
-				'[width="'+param.width+'"]'+
-				'[height="'+param.height+'"]';
-	var label = $(chaine+" span");
-	var labelParent = $(chaine);
->>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 
 	var labelParentOriginPos = {
 		x : parseInt(labelParent.attr("x").replace("px",""), 10),
@@ -392,7 +280,7 @@ function setLabelAnimation(param, categorie){
 	label.mouseenter(function(node){
 		//Grossissement et changement de couleur du point
 		//var point = label.parent().parent().parent().find('.ct-point[year="'+param.text+'"][categorie="'+categorie+'"]');
-		
+
 		var point = $("#"+"point"+categorie+param.text);
 		point.stop().animate({
 			"stroke-width" : 20,
@@ -409,7 +297,7 @@ function setLabelAnimation(param, categorie){
 		y : labelParentOriginPos.y-5+"px"
 		}, 300 );
 	});
-	
+
 	label.mouseleave(function(node){
 		//Retrecissement du point et retour à la vouleur d'origine
 		//var point = label.parent().parent().parent().find('.ct-point[year="'+param.text+'"]');
@@ -439,11 +327,7 @@ function setLabelAnimation(param, categorie){
 				requestGenerateMenageDonut("biPlus", annee);
 				requestGenerateMenageDonut("none", annee);
 				requestGenerateInfo(categorie, annee, "s2");
-<<<<<<< HEAD:ouest_france/html/script.js
-				requestGeneratePhrase("menage", annee);			
-=======
 				requestGeneratePhrase("menage", annee)
->>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 				break;
 			case "parc":
 				requestGenerateParcDonutCars("neuf", annee);
@@ -454,26 +338,22 @@ function setLabelAnimation(param, categorie){
 			case "carburant":
 				requestGenerateInfo(categorie, annee, "s4");
 				requestChartCarburant(annee);
-<<<<<<< HEAD:ouest_france/html/script.js
-				requestGeneratePhrase("carburant", annee);					
-=======
 				requestGeneratePhrase("carburant", annee)
->>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 				break;
 		}
 	});
 }
 
 function setPointAnimation(param, categorie, seq, delay, duration){
-	
+
 	var annee = param.axisX.ticks[param.index];
 	var id = "point"+categorie+annee;
-	
-	
+
+
 	if(!annee) param.element.attr({ opacity : "0"});
 	else{
 		param.element.attr({ id : id });
-	
+
 		param.element.animate({
 		      x1: {
 		        begin: seq * delay,
@@ -498,7 +378,7 @@ function setPointAnimation(param, categorie, seq, delay, duration){
 		      }
 		});
 	}
-	
+
 }
 
 function relaunchAnimation(index, nextIndex, direction){
@@ -614,7 +494,7 @@ function generateParcDonutCars(donnee, type){
 	var places = getRandomPlace(type, newNbCar);
 
 	var parkzone = $("#cars"+type);
-	
+
 	for(var i=0; i<places.length; i++){
 		var place = places[i.toString()];
 		parkzone.append('<div class="car" id="car'+place.colonne+place.place+'"><img src="images/voitures.svg" alt="voiture"/></div>');
@@ -639,14 +519,14 @@ function getRandomPlace(type, nb){
 			nbMaxPlaces += carPos[type].col[i].nbPlace;
 		}
 	}
-	
+
 		console.log("########"+type);
 		console.log("Nb col : "+carPos[type].col.length);
 		for(var z=0; z<carPos[type].col.length; z++){
-			
+
 			console.log("Col "+z+" "+carPos[type].col[z].nbPlace+" places");
 		}
-		
+
 	if(!allPlaces[type]){
 		allPlaces[type] = [];
 		for(i=0; i<nbCol; i++){
@@ -658,13 +538,8 @@ function getRandomPlace(type, nb){
 			}
 		}
 	}
-<<<<<<< HEAD:ouest_france/html/script.js
-	
-	var copieAllPlaces = allPlaces[type].slice();
-=======
 
-	var copieAllPlaces = allPlaces;
->>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
+	var copieAllPlaces = allPlaces[type].slice();
 	if(nbMaxPlaces > nb){
 		for(i=0; i<nb; i++){
 			var randPlaceIndex = Math.round((Math.random() * (copieAllPlaces.length-1)));
@@ -690,7 +565,7 @@ function carDestroyAnimation(type){
 
 function carSpawnAnimation(car,place){
 	var duration = Math.random()*500+1250;
-	
+
 	car.stop().animate({
 		top : (place.top).toString()+"vh"
 	},{
@@ -728,10 +603,7 @@ function generateBarChart(serie){
 		    bottom: 5,
 		    left: 10
   		}
-<<<<<<< HEAD:ouest_france/html/script.js
-=======
 
->>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 	});
 
 	chart.on('draw', function(param){
@@ -760,10 +632,6 @@ function generateBarChart(serie){
 					from: param.x1,
 					to: param.x2,
 					easing: 'easeOutQuart'
-<<<<<<< HEAD:ouest_france/html/script.js
-=======
-
->>>>>>> 0a4aa24dad7098f7598dbee3797a50b0b208f93c:ouest_france/html/chart.js
 				}
 			});
 		}
@@ -948,7 +816,6 @@ function animateMethodo(){
 				width : "10vw",
 				left: "75vw"
 			},1000);
-
 
 		}
 	});
