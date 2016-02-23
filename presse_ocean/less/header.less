@@ -1,0 +1,56 @@
+@import "vars";
+
+.header {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  padding-left: 75px;
+  text-transform: uppercase;
+  z-index: 10;
+
+  .title, .subtitle {
+    position: relative;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .description {
+    position: relative;
+    margin: 0;
+    font-weight: lighter;
+    font-size: 12px;
+  }
+  .description::after {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 85px;
+    height: 2px;
+    content: '';
+    background: @font-color;
+  }
+}
+
+.header::after {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 65px;
+  height: 65px;
+  content: '';
+}
+
+.header.logements::after {
+  background: url('/media/pic/picto-logements.svg');
+  background-size: contain;
+}
+
+.header.locataires::after {
+  background: url('/media/pic/picto-locataires.svg');
+  background-size: contain;
+}
+
+.header.secondaires::after {
+  background: url('/media/pic/picto-residencesecondaire.svg');
+  background-size: contain;
+}

@@ -1,0 +1,135 @@
+@import "vars";
+
+.sidebar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 25%;
+  //background: rgba(0, 96, 121, .07);
+  background: darken(@background-color, 7%);
+  overflow: hidden;
+  padding: 3%;
+  z-index: 100;
+
+  .placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: darken(@background-color, 7%);
+    z-index: 10;
+
+    .icon {
+      font-weight: bold;
+      position: relative;
+      text-align: center;
+      margin-top: 100%;
+      font-size: 14px;
+      text-transform: uppercase;
+
+      &::after {
+        content: '';
+        background: url('/media/pic/clic.svg') no-repeat top;
+        background-size: contain;
+        position: absolute;
+        top: 100%;
+        left: 40%;
+        width: 75px;
+        height: 75px;
+      }
+    }
+  }
+
+  fieldset {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin-bottom: 25%;
+    label {
+      position: relative;
+      //margin: 0 2%;
+      display: inline-block;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: normal;
+
+      // hide old radio buttons
+      input[type="radio"] {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+
+      [type="radio"] + span {
+        display: block;
+      }
+
+      span {
+        line-height: 10px;
+        padding: 10px 20px;
+        //border-radius: 1em;
+        border: 2px solid @font-color;
+        //box-shadow: 0 0 0 0.15em #000;
+        //margin-right: 0.75em;
+        transition: 0.5s ease all;
+      }
+
+      [type="radio"]:checked + span {
+        background: @font-color;
+        color: white;
+        //box-shadow: 0 0 0 0.25em #000;
+      }
+
+    }
+  }
+
+  .graph {
+    position: relative;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    padding-left: 20%;
+    padding-top: 20%;
+  }
+  p {
+    font-size: 10px;
+    text-align: justify;
+    text-wrap: normal;
+  }
+
+  h1, h2 {
+    text-transform: uppercase;
+  }
+  h1 {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: @panel-font-size;
+    font-weight: bolder;
+    margin: 0 auto 25px;
+    width: 100%;
+    height: 3*@panel-font-size;
+  }
+  h2 {
+    position: relative;
+    font-size: 10px;
+    margin-bottom: 15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      height: 1px;
+      width: 50px;
+      background: @font-color;
+    }
+  }
+}

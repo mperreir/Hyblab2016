@@ -1,0 +1,18 @@
+extends layout
+
+append stylesheets
+    link(rel="stylesheet" href="stylesheets/cloud.css")
+
+append js
+    script(src="js/cloud.js")
+
+block content
+    .bee.long(style="left:-200px;top:100px;")
+    .bee.long(style="left:-200px;top:300px;")
+    .bee(style="left:-100px;top:500px;")
+
+    .bee(style="left:-100px;top:-100px;")
+
+    .bee.big(style="left:0px;top:-300px;")
+    .bee(style="left:300px;top:-100px;")
+    .bee(style="left:500px;top:-100px;")

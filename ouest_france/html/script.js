@@ -111,15 +111,15 @@ function testRequestedData(type, callback){
 	else callback();
 }
 
-function requestGeneratePhrase(categorie, annee){ 
+function requestGeneratePhrase(categorie, annee){
 	if(!data[categorie]) requestData(categorie, function(){ generatePhrase(categorie, annee); });
 	else generatePhrase(categorie, annee);
 }
-function requestChartCarburant(year){ 
+function requestChartCarburant(year){
 	if(!data["carburant"]) requestData("carburant", function(){ generateBarChart(data.carburant.data[year]); });
 	else generateBarChart(data.carburant.data[year]);
 }
-function requestGenerateParcDonutCars(type, year){ 
+function requestGenerateParcDonutCars(type, year){
 	if(!data["parc"]) requestData("parc", function(){ generateParcDonutCars(data.parc.data[year][type].pourcentage, type); });
 	else generateParcDonutCars(data.parc.data[year][type].pourcentage, type);
 }
@@ -127,11 +127,11 @@ function requestGenerateInfo(categorie, year, slideId){
 	if(!data[categorie]) requestData(categorie, function(){ generateInfo(data[categorie].yearsComments[year], slideId); });
 	else generateInfo(data[categorie].yearsComments[year], slideId);
 }
-function requestGenerateMenageDonut(type, year){ 
+function requestGenerateMenageDonut(type, year){
 	if(!data["menage"]) requestData("menage", function(){ generateDonut(data.menage.data[year][type].pourcentage, type); });
 	else generateDonut(data.menage.data[year][type].pourcentage, type);
 }
-function requestGenerateChartDefilement(categorie){ 
+function requestGenerateChartDefilement(categorie){
 	if(!data[categorie]) requestData(categorie, function(){ generateChart(data[categorie]); });
 	else generateChart(data[categorie]);
 }
@@ -152,8 +152,7 @@ function generatePhrase(type, annee){
 			cleanEnergies.forEach(function(carburant){
 				value += data.carburant.data[annee][carburant].pourcentage;
 			});
-			$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % des voitures vendues utilisaient des énergies propres.");		
-
+			$("#phraseCarburant p").html("En "+annee+", "+Math.round(value*10)/10+" % des voitures vendues utilisaient des énergies propres.");
 			break;
 	}
 }
@@ -161,7 +160,6 @@ function generatePhrase(type, annee){
 function generateInfo(text, slideId){
 	$('#'+slideId+" .info p").html(text);
 }
-
 
 function generateChart(donnees){
 
@@ -199,7 +197,7 @@ function generateChart(donnees){
 function fillOptions(){
 	var retour = {
 		axisY : { showLabel:false , showGrid:false },
-		axisX : { showGrid:false , labelOffset:{ x:-16, y:0 } }, 
+		axisX : { showGrid:false , labelOffset:{ x:-16, y:0 } },
 		lineSmooth: Chartist.Interpolation.cardinal({ fillHoles:true }),
 		chartPadding: { top:5, right:30 , bottom:5 , left:0 } };
 
@@ -207,9 +205,9 @@ function fillOptions(){
 }
 
 function generateChartData(donnees){
-	
-	var dataChart = { labels:[], series:[[]] }; 
-	
+
+	var dataChart = { labels:[], series:[[]] };
+
 	for(var i=0; i<donnees.years.length; i++){
 		if(i==0){
 			if(jQuery.inArray(donnees.years[0], donnees.yearsToScreen) != -1) dataChart.labels.push(donnees.years[0]);
@@ -267,9 +265,9 @@ function setLineAnimation(param, seq, delay, duration){
 function setLabelAnimation(param, categorie){
 
 	var id = "label"+categorie+param.text;
-	
+
 	param.element.attr({id : id});
-	
+
 	var labelParent = $("#"+id);
 	var label = labelParent.children();
 
@@ -282,7 +280,7 @@ function setLabelAnimation(param, categorie){
 	label.mouseenter(function(node){
 		//Grossissement et changement de couleur du point
 		//var point = label.parent().parent().parent().find('.ct-point[year="'+param.text+'"][categorie="'+categorie+'"]');
-		
+
 		var point = $("#"+"point"+categorie+param.text);
 		point.stop().animate({
 			"stroke-width" : 20,
@@ -299,7 +297,7 @@ function setLabelAnimation(param, categorie){
 		y : labelParentOriginPos.y-5+"px"
 		}, 300 );
 	});
-	
+
 	label.mouseleave(function(node){
 		//Retrecissement du point et retour à la vouleur d'origine
 		//var point = label.parent().parent().parent().find('.ct-point[year="'+param.text+'"]');
@@ -347,15 +345,15 @@ function setLabelAnimation(param, categorie){
 }
 
 function setPointAnimation(param, categorie, seq, delay, duration){
-	
+
 	var annee = param.axisX.ticks[param.index];
 	var id = "point"+categorie+annee;
-	
-	
+
+
 	if(!annee) param.element.attr({ opacity : "0"});
 	else{
 		param.element.attr({ id : id });
-	
+
 		param.element.animate({
 		      x1: {
 		        begin: seq * delay,
@@ -380,7 +378,7 @@ function setPointAnimation(param, categorie, seq, delay, duration){
 		      }
 		});
 	}
-	
+
 }
 
 function relaunchAnimation(index, nextIndex, direction){
@@ -496,7 +494,7 @@ function generateParcDonutCars(donnee, type){
 	var places = getRandomPlace(type, newNbCar);
 
 	var parkzone = $("#cars"+type);
-	
+
 	for(var i=0; i<places.length; i++){
 		var place = places[i.toString()];
 		parkzone.append('<div class="car" id="car'+place.colonne+place.place+'"><img src="images/voitures.svg" alt="voiture"/></div>');
@@ -521,14 +519,14 @@ function getRandomPlace(type, nb){
 			nbMaxPlaces += carPos[type].col[i].nbPlace;
 		}
 	}
-	
+
 		console.log("########"+type);
 		console.log("Nb col : "+carPos[type].col.length);
 		for(var z=0; z<carPos[type].col.length; z++){
-			
+
 			console.log("Col "+z+" "+carPos[type].col[z].nbPlace+" places");
 		}
-		
+
 	if(!allPlaces[type]){
 		allPlaces[type] = [];
 		for(i=0; i<nbCol; i++){
@@ -540,7 +538,7 @@ function getRandomPlace(type, nb){
 			}
 		}
 	}
-	
+
 	var copieAllPlaces = allPlaces[type].slice();
 	if(nbMaxPlaces > nb){
 		for(i=0; i<nb; i++){
@@ -567,7 +565,7 @@ function carDestroyAnimation(type){
 
 function carSpawnAnimation(car,place){
 	var duration = Math.random()*500+1250;
-	
+
 	car.stop().animate({
 		top : (place.top).toString()+"vh"
 	},{
@@ -818,7 +816,6 @@ function animateMethodo(){
 				width : "10vw",
 				left: "75vw"
 			},1000);
-
 
 		}
 	});

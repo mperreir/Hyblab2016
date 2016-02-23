@@ -1,0 +1,272 @@
+{
+  "colors":{
+    "logements":{
+      "domain":[0.04,0.08,0.12],
+      "range": [
+        "#FAC8CE",
+        "#F8ABB3",
+        "#F47B8A",
+        "#EB324C"
+      ],
+      "label": "#661724"
+    },
+    "locataires":{
+      "domain":[0.04,0.08,0.12],
+      "range": [
+        "#FEE1C4",
+        "#FDD0A6",
+        "#FCB878",
+        "#FB923B"
+      ],
+      "label": "#77441E"
+    },
+    "secondaires":{
+      "domain":[0,0.6,1.2],
+      "range": [
+        "#C3BEF8",
+        "#A8A2F5",
+        "#837AF3",
+        "#4E41EF"
+      ],
+      "label": "#29277A"
+    }
+  },
+  "logements": [
+    {
+      "id": 4410901,
+      "name": "Centre ville",
+      "evol": 0.04,
+      "value2006": 12.46,
+      "value2011": 12.21
+    },
+    {
+      "id": 4410902,
+      "name": "Bellevue Chantenay Sainte Anne",
+      "evol": 0.03,
+      "value2006": 7.8,
+      "value2011": 7.53
+    },
+    {
+      "id": 4410903,
+      "name": "Dervalliere Zola",
+      "evol": 0.02,
+      "value2006": 12.14,
+      "value2011": 11.66
+    },
+    {
+      "id": 4410904,
+      "name": "Hauts Paves Saint Felix",
+      "evol": 0.06,
+      "value2006": 13.38,
+      "value2011": 13.33
+    },
+    {
+      "id": 4410905,
+      "name": "Malakoff Saint Donatien",
+      "evol": 0.06,
+      "value2006": 11.63,
+      "value2011": 11.57
+    },
+    {
+      "id": 4410906,
+      "name": "Ile de Nantes",
+      "evol": 0.15,
+      "value2006": 5.93,
+      "value2011": 6.42
+    },
+    {
+      "id": 4410907,
+      "name": "Breil Barberie",
+      "evol": 0.04,
+      "value2006": 8.23,
+      "value2011": 8.05
+    },
+    {
+      "id": 4410908,
+      "name": "Nantes Nord",
+      "evol": 0.09,
+      "value2006": 7.67,
+      "value2011": 7.82
+    },
+    {
+      "id": 4410909,
+      "name": "Nantes Erdre",
+      "evol": 0.09,
+      "value2006": 8.29,
+      "value2011": 8.45
+    },
+    {
+      "id": 4410910,
+      "name": "Doulon Bottiere",
+      "evol": 0.13,
+      "value2006": 8.92,
+      "value2011": 9.48
+    },
+    {
+      "id": 4410911,
+      "name": "Nantes Sud",
+      "evol": 0.04,
+      "value2006": 3.56,
+      "value2011": 3.47
+    }
+  ],
+  "locataires": [
+    {
+      "id": 4410901,
+      "name": "Centre ville",
+      "evol": 0.01,
+      "value2006": 14.49,
+      "value2011": 13.79
+    },
+    {
+      "id": 4410902,
+      "name": "Bellevue Chantenay Sainte Anne",
+      "evol": -0.04,
+      "value2006": 7.85,
+      "value2011": 7.14
+    },
+    {
+      "id": 4410903,
+      "name": "Dervalliere Zola",
+      "evol": -0.01,
+      "value2006": 11.71,
+      "value2011": 10.99
+    },
+    {
+      "id": 4410904,
+      "name": "Hauts Paves Saint Felix",
+      "evol": 0.05,
+      "value2006": 12.15,
+      "value2011": 12.03
+    },
+    {
+      "id": 4410905,
+      "name": "Malakoff Saint Donatien",
+      "evol": 0.05,
+      "value2006": 11.72,
+      "value2011": 11.6
+    },
+    {
+      "id": 4410906,
+      "name": "Ile de Nantes",
+      "evol": 0.2,
+      "value2006": 6.9,
+      "value2011": 7.79
+    },
+    {
+      "id": 4410907,
+      "name": "Breil Barberie",
+      "evol": 0.15,
+      "value2006": 6.37,
+      "value2011": 6.91
+    },
+    {
+      "id": 4410908,
+      "name": "Nantes Nord",
+      "evol": 0.15,
+      "value2006": 9.07,
+      "value2011": 9.81
+    },
+    {
+      "id": 4410909,
+      "name": "Nantes Erdre",
+      "evol": 0.09,
+      "value2006": 8.33,
+      "value2011": 8.57
+    },
+    {
+      "id": 4410910,
+      "name": "Doulon Bottiere",
+      "evol": 0.06,
+      "value2006": 8,
+      "value2011": 8
+    },
+    {
+      "id": 4410911,
+      "name": "Nantes Sud",
+      "evol": 0.06,
+      "value2006": 3.39,
+      "value2011": 3.39
+    }
+  ],
+  "secondaires": [
+    {
+      "id": 4410901,
+      "name": "Centre ville",
+      "evol": 0.74,
+      "value2006": 21.84,
+      "value2011": 22.93
+
+    },
+    {
+      "id": 4410902,
+      "name": "Bellevue Chantenay Sainte Anne",
+      "evol": 0.37,
+      "value2006": 6.27,
+      "value2011": 5.21
+    },
+    {
+      "id": 4410903,
+      "name": "Dervalliere Zola",
+      "evol": 0.41,
+      "value2006": 11.53,
+      "value2011": 9.83
+    },
+    {
+      "id": 4410904,
+      "name": "Hauts Paves Saint Felix",
+      "evol": 0.3,
+      "value2006": 22.12,
+      "value2011": 17.34
+    },
+    {
+      "id": 4410905,
+      "name": "Malakoff Saint Donatien",
+      "evol": 0.84,
+      "value2006": 12.16,
+      "value2011": 13.5
+    },
+    {
+      "id": 4410906,
+      "name": "Ile de Nantes",
+      "evol": -0.01,
+      "value2006": 6.55,
+      "value2011": 3.92
+    },
+    {
+      "id": 4410907,
+      "name": "Breil Barberie",
+      "evol": 0.72,
+      "value2006": 5.71,
+      "value2011": 5.93
+    },
+    {
+      "id": 4410908,
+      "name": "Nantes Nord",
+      "evol": -0.25,
+      "value2006": 5.26,
+      "value2011": 2.37
+    },
+    {
+      "id": 4410909,
+      "name": "Nantes Erdre",
+      "evol": 1.8,
+      "value2006": 3.36,
+      "value2011": 5.7
+    },
+    {
+      "id": 4410910,
+      "name": "Doulon Bottiere",
+      "evol": 4.38,
+      "value2006": 3.61,
+      "value2011": 11.74
+    },
+    {
+      "id": 4410911,
+      "name": "Nantes Sud",
+      "evol": 0.58,
+      "value2006": 1.58,
+      "value2011": 1.5
+    }
+  ]
+}
