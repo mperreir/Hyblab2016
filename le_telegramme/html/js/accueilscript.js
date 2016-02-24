@@ -1,24 +1,26 @@
 $(document).ready( function () {
-  var time = 10;
-  var inter = 1;
-  var progress = $("#barre_progression");
+  if ($(document).width() < 768) {
+    $('#container').hide();
+    $('#p1_contenu').hide();
+    $('#barre_progression').hide();
+    $('#demarrer').hide();
 
-  var animate = function () {
-    progress.val(progress.val() + progress.attr("max")/time);
-    if (progress.val() < 100) {
-      setTimeout(animate, 1500)
-    }
-    else {
-      progress.val(progress.attr("max"));
-    }
   }
-  setTimeout(animate, 1000);
+  else {
+    $("iframe").load("pageAccueil.html");
+    var time = 10;
+    var inter = 1;
+    var progress = $("#barre_progression");
 
-/************************************************************************************/
-  $('.js-scrollTo').on('click', function() {
-			var page = $(this).attr('href');
-			var speed = 1500;
-			$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-			return false;
-		});
+    var animate = function () {
+      progress.val(progress.val() + progress.attr("max")/time);
+      if (progress.val() < 100) {
+        setTimeout(animate, 1500)
+      }
+      else {
+        progress.val(progress.attr("max"));
+      }
+    }
+    setTimeout(animate, 1000);
+  }
 });
