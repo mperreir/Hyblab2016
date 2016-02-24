@@ -304,45 +304,6 @@ html, body {
     top: 130px;
     left: calc(100% - 124px);
   }
-  /*#p1_contenu {
-    font-size: 0.8em;
-    text-align: justify;
-    margin-bottom: 1.5em;
-  }
-
-
-
-
-#demarrer {
-  text-align: center;
-  border: solid #F7D133 0.5px;
-  width: 60%;
-  margin: 0 auto;
-  padding: 5px;
-}
-
-  #btn_demarrer {
-    color: white;
-  }
-
-  #btn_demarrer:hover {
-    text-decoration: none;
-  }
-
-  #p1_middle {
-    margin-top: 5%;
-  }
-
-#barre_progression {
-  width: 200%;
-  position: relative;
-  left: -50%;
-  height: 0.5em;
-  border-left: none;
-  border-right: none;
-  margin-top: 13%;
-  background: none;
-}*/
 }
 
 #page2 {
