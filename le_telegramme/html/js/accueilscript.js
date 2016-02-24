@@ -6,7 +6,7 @@ $(document).ready( function () {
   var animate = function () {
     progress.val(progress.val() + progress.attr("max")/time);
     if (progress.val() < 100) {
-      setTimeout(animate, 1500)
+      setTimeout(animate, 1700)
     }
     else {
       progress.val(progress.attr("max"));
