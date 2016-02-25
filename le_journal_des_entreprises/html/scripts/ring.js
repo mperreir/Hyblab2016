@@ -126,7 +126,7 @@ function drawAnimatedRingChart(config) {
 		'text-anchor': 'middle',
 		'transform': 'translate(' + (maxWidth/2) + ',' + 50 + ')'
 	})
-	.text(config.selected)
+	.text(config.selected.replace('_',' '))
 		
     // Add the groups that will hold the arcs
     var groups = svg.selectAll('g.arc')

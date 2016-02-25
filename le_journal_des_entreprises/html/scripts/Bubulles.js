@@ -141,7 +141,15 @@ var nodes = svg.selectAll(".node")
    .enter()
      .append("g")
      .attr("class","node")
-     .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")"; });
+     .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")"; }) 
+	 .on("mouseover", function() {
+	 	d3.select(this).style("opacity", 0.8);
+	 })
+	 //Réinitialisation de l'opacité quand la souris s'éloigne
+	 .on("mouseleave", function() {
+	 	d3.select(this).style("opacity", 1);
+	 });
+;
 
 //Déclaration des bulles au dessus de chaque point
 nodes.append("circle")
@@ -153,14 +161,7 @@ nodes.append("circle")
 	 .attr("ugo_id", function(d){return d.ugo_id;})
 	 .on("click", growCircle)
 	 //Légère réduction de l'opacité au passage de la souris
-	 .on("mouseover", function() {
-	 	d3.select(this).style("opacity", 0.8);
-	 })
-	 //Réinitialisation de l'opacité quand la souris s'éloigne
-	 .on("mouseleave", function() {
-	 	d3.select(this).style("opacity", 1);
-	 });
-
+	
 //Déclaration du texte des bulles
 nodes.append("text")
       .attr("dy", ".3em")
