@@ -1,4 +1,5 @@
 "use strict";
+var testeuh;
 var plateforme = [
 	{name: 'Wiseed', Immobilier:16040000, Santé: 4010000, Cleantech: 6015000, Service_web: 3208000, 
 			Economie_collaborative: 401000, Mode: 401000, Objets_connectés: 1203000, Services_numériques: 2005000,
