@@ -56,11 +56,13 @@ function zoomBoard(event) {
 	{
 		document.getElementById("filterSelector").style.display = "none";
 		document.getElementById("notifier").innerHTML = "Cliquez sur le tableau plour plus d'infos";
+		document.getElementById("Guy").style.display = "inline-block";
 	}
 	else
 	{
 		document.getElementById("filterSelector").style.display = "inline-block";
 		document.getElementById("notifier").innerHTML = "Cliquez sur le nom d'une plateforme pour plus d'infos";
+		document.getElementById("Guy").style.display = "none";
 	}
 	
 	function zoomer(target, delta) {
