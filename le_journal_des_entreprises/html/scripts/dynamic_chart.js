@@ -258,3 +258,8 @@ $("#colAB_Funding").colorbox({inline:true, width:"50%"});
 $("#colRaizers").colorbox({inline:true, width:"50%"});
 $("#colHappy_Capital").colorbox({inline:true, width:"50%"});
 $("#colProximéa").colorbox({inline:true, width:"50%"});
+
+$("#bulleInfo2").colorbox({inline:true, width:"50%"});
+$("#bulleInfo1").colorbox({inline:true, width:"50%"});
+
+

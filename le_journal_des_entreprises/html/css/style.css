@@ -67,30 +67,6 @@
 	margin-top: 2%;
 }
 
-#defCrowdFunding {
-	width: 40%;
-	height: 30%;
-	
-	padding-left: 90%;
-	
-	background-image: url(../img/info2.svg);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-}
-
-#defCrowdEquity {
-	width: 40%;
-	height: 30%;
-	
-	padding-left: 90%;
-	margin-bottom: 0%;
-	
-	
-	background-image: url(../img/info1.svg);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-}
-
 #retour {
 	margin-left: 80%;
 	margin-right: 20%;
