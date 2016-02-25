@@ -1,9 +1,9 @@
 #whiteboard{
 	background-image:url(../img/video_proj.svg);
 	background-repeat:no-repeat;
-	background-size:100%;
+	background-size:100% auto;
 	height:80%;
-	width:75%;
+	width:85%;
 	transform:translate(15%,15%)
 }
 
