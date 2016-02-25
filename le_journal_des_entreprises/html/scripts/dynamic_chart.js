@@ -53,9 +53,16 @@ function zoomBoard(event) {
 	var boardZone = document.getElementById("boardZone");
 	
 	if (!boardZoomed) 
-		{document.getElementById("filterSelector").style.display = "none";}
+	{
+		document.getElementById("filterSelector").style.display = "none";
+		document.getElementById("notifier").innerHTML = "Cliquez sur le tableau plour plus d'infos";
+	}
 	else
-		{document.getElementById("filterSelector").style.display = "inline-block";}
+	{
+		document.getElementById("filterSelector").style.display = "inline-block";
+		document.getElementById("notifier").innerHTML = "Cliquez sur le nom d'une plateforme pour plus d'infos";
+	}
+	
 	function zoomer(target, delta) {
 		if (Math.abs(coef-target) < 0.1) {
 			clearInterval(timer);
@@ -109,28 +116,6 @@ function updateData(data, rank) {
 			return (rank[i]+first) * (barHeight + heightMargin) + barHeight/2; })
 		.text(function(d, i) { return plateform[i]; });
 };
-
-function jump() {
-	function jumper() {
-		if (t >= pi) {
-			clearInterval(timer);
-			jumped = false;
-			boardZone.style.marginTop = "0";
-		}
-		
-		boardZone.style.marginTop = 50*Math.sin(t)*Math.sin(t)*Math.sin(t)+"px";
-		t += 0.1;
-	}
-		
-	if (!jumped && !boardZoomed)
-	{
-		jumped = true;
-		var boardZone = document.getElementById("boardZone");
-		var timer = setInterval(jumper, 16);
-		var t = 0;
-		var pi = 3.14159;
-	}
-}
 
 function changeData(event, newData, newUnit) {
 	unit = newUnit;
@@ -218,6 +203,8 @@ bar.append("rect")
 	.attr("height", barHeight - 1)
 	.attr("x", 0)
 	.attr("y", function(d, i) { return rank[i] * (barHeight+heightMargin); })
+	.attr("id", function(d, i) {return "col"+plateformId[i]})
+	.attr("href", function(d, i) {return "#infos_"+plateformId[i]})
 	.style('boxShadow', '0px 5px 30px');
 
 bar.append("text")
@@ -263,3 +250,11 @@ $("#colBoxAB_Funding").colorbox({inline:true, width:"50%"});
 $("#colBoxRaizers").colorbox({inline:true, width:"50%"});
 $("#colBoxHappy_Capital").colorbox({inline:true, width:"50%"});
 $("#colBoxProximéa").colorbox({inline:true, width:"50%"});
+$("#colAnaxago").colorbox({inline:true, width:"50%"});
+$("#colSmart_Angels").colorbox({inline:true, width:"50%"});
+$("#colWiseed").colorbox({inline:true, width:"50%"});
+$("#colBulb_in_Town").colorbox({inline:true, width:"50%"});
+$("#colAB_Funding").colorbox({inline:true, width:"50%"});
+$("#colRaizers").colorbox({inline:true, width:"50%"});
+$("#colHappy_Capital").colorbox({inline:true, width:"50%"});
+$("#colProximéa").colorbox({inline:true, width:"50%"});

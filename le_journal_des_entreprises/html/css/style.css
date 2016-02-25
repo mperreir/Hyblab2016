@@ -32,6 +32,11 @@
 	height: 100%;
 }
 
+#CIP {
+	width: 100px;
+	height: 100px;
+}
+
 .bulleInfo {
 	width: 25%;
 	height: 7%;
@@ -54,7 +59,7 @@
 
 #bulleInfo1 {
 	margin-left: 45%;
-	margin-top: 15%;
+	margin-top: 0;
 }
 
 #bulleInfo2 {
