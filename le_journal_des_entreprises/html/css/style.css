@@ -1,3 +1,7 @@
+* {
+	font-family: arial;
+}
+
 #firstPage {
 	background-image: url(../img/slide1_background.png);
 	background-size: 100% auto;
@@ -32,6 +36,14 @@
 	height: 100%;
 }
 
+#CIP {
+	width: 100px;
+	height: 100px;
+
+	margin-left: 20%;
+	margin-top: 5%;
+}
+
 .bulleInfo {
 	width: 25%;
 	height: 7%;
@@ -54,36 +66,12 @@
 
 #bulleInfo1 {
 	margin-left: 45%;
-	margin-top: 15%;
+	margin-top: -4%;
 }
 
 #bulleInfo2 {
 	margin-left: 64%;
 	margin-top: 2%;
-}
-
-#defCrowdFunding {
-	width: 40%;
-	height: 30%;
-
-	padding-left: 90%;
-
-	background-image: url(../img/info2.svg);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-}
-
-#defCrowdEquity {
-	width: 40%;
-	height: 30%;
-
-	padding-left: 90%;
-	margin-bottom: 0%;
-
-
-	background-image: url(../img/info1.svg);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
 }
 
 #retour {
@@ -177,4 +165,25 @@
 	background-size: auto 100%;
 	background-repeat: no-repeat;
 	background-position: center 0%;
+}
+
+#CIP_Definition {
+	font-family: arial;
+}
+
+#CIP_Definition strong{
+	font-size: 24px;
+}
+
+#RedInCIP {
+	color: red;
+}
+
+#Guy {
+	position: absolute;
+	width: 400px;
+	height: 600px;
+
+	margin-left: 200px;
+	margin-top: 100px;
 }

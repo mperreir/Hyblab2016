@@ -1,9 +1,9 @@
 #whiteboard{
 	background-image:url(../img/video_proj.svg);
 	background-repeat:no-repeat;
-	background-size:100%;
+	background-size:100% auto;
 	height:80%;
-	width:75%;
+	width:85%;
 	transform:translate(15%,15%)
 }
 
@@ -12,7 +12,16 @@ span{
 	width:5%;
 }
 
+#selPlat{
+    width: 14%;
+}
+
+#selPlat2{
+    width: 30%;
+}
+
 .selection{
+	padding-left:1%;
 	padding-top:5%;
 	height:5%;
 	width:80%;

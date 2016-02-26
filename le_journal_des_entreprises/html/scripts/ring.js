@@ -1,4 +1,5 @@
 "use strict";
+
 var plateforme = [
 	{name: 'Wiseed', Immobilier:16040000, Santé: 4010000, Cleantech: 6015000, Service_web: 3208000, 
 			Economie_collaborative: 401000, Mode: 401000, Objets_connectés: 1203000, Services_numériques: 2005000,
@@ -125,7 +126,7 @@ function drawAnimatedRingChart(config) {
 		'text-anchor': 'middle',
 		'transform': 'translate(' + (maxWidth/2) + ',' + 50 + ')'
 	})
-	.text(config.selected)
+	.text(config.selected.replace('_',' '))
 		
     // Add the groups that will hold the arcs
     var groups = svg.selectAll('g.arc')
@@ -160,13 +161,13 @@ function drawAnimatedRingChart(config) {
 	})
 	.on("mouseover", function(){
 		d3.select(config.el).selectAll('path').attr('opacity',0.25);
-		d3.select(config.el).selectAll('text').attr('opacity',0.25);
+		d3.select(config.el).selectAll('.arc').selectAll('text').attr('opacity',0.25);
 		d3.select(this).select('path').attr('opacity',1);
 		d3.select(this).select('text').attr('opacity',1);
 	})
 	.on("mouseout", function(){
-		d3.selectAll('arc').selectAll('path').attr('opacity',1) 	
-		d3.selectAll('arc').selectAll('text').attr('opacity',1) 	
+		d3.select(config.el).selectAll('path').attr('opacity',1) 	
+		d3.select(config.el).selectAll('text').attr('opacity',1) 	
 	})
 
     // Create the actual slices of the pie
