@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="85.04px" height="85.04px" viewBox="0 0 85.04 85.04" enable-background="new 0 0 85.04 85.04" xml:space="preserve">
+<pattern  width="49" height="49" patternUnits="userSpaceOnUse" id="Nouvelle_nuance_de_motif_1" viewBox="0 -49 49 49" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,-49 49,-49 49,0 0,0 		"/>
+		<polygon fill="#EB6A5B" points="49,0 0,0 0,-49 49,-49 		"/>
+	</g>
+</pattern>
+<g>
+	<path fill="#2B3D49" d="M51.387,15.974c-0.013-3.881-3.161-7.023-7.045-7.023s-7.031,3.142-7.043,7.023h-0.002v22.874h14.091
+		L51.387,15.974L51.387,15.974z"/>
+	<path fill="#F2EDEB" d="M44.437,29.75c0,0-4.058,0.487-4.058-3.571S40.34,16.075,40.34,16.075s0.08-2.68,4.179-2.599
+		c4.1,0.083,4.18,2.557,4.18,2.557v10.146C48.698,26.179,49.023,29.913,44.437,29.75z"/>
+	<circle fill="#2B3D49" cx="43.974" cy="19.681" r="0.339"/>
+	<circle fill="#2B3D49" cx="45.532" cy="19.681" r="0.34"/>
+	<path fill="#2B3D49" d="M41.381,13.247c0,0,2.912,5.611,7.858,4.872S41.383,9.156,41.381,13.247z"/>
+	<rect x="44.301" y="29.486" fill="#F2EDEB" width="0.379" height="1.349"/>
+	<polygon fill="#AECD58" points="41.074,30.92 48.159,30.92 49.487,43.212 40.127,43.212 	"/>
+	<rect x="42.887" y="47.576" fill="#183356" width="1.433" height="25.372"/>
+	<rect x="45.424" y="47.579" fill="#183356" width="1.435" height="25.426"/>
+	
+		<pattern  id="SVGID_1_" xlink:href="#Nouvelle_nuance_de_motif_1" patternTransform="matrix(0.0286 0.0739 0.0739 -0.0286 -7295.1943 -7676.2803)">
+	</pattern>
+	<path fill="url(#SVGID_1_)" d="M40.989,46.027c0.457-0.176,0.685-0.69,0.508-1.145l-0.414-1.071
+		c-0.176-0.458-0.689-0.684-1.146-0.506l0,0c-0.457,0.177-0.684,0.689-0.508,1.146l0.414,1.068
+		C40.02,45.979,40.534,46.205,40.989,46.027L40.989,46.027z"/>
+	
+		<pattern  id="SVGID_2_" xlink:href="#Nouvelle_nuance_de_motif_1" patternTransform="matrix(0.0104 0.0785 -0.0785 0.0104 -8704.2529 -7332.0161)">
+	</pattern>
+	<path fill="url(#SVGID_2_)" d="M49.762,46.957c-0.484,0.062-0.931-0.277-0.993-0.764l-0.15-1.137
+		c-0.064-0.485,0.277-0.93,0.763-0.994l0,0c0.485-0.063,0.931,0.276,0.995,0.763l0.149,1.138
+		C50.589,46.447,50.248,46.892,49.762,46.957L49.762,46.957z"/>
+	<path fill="#183356" d="M44.324,74.512h-3.111c-0.434,0-0.784-0.352-0.784-0.784l0,0c0-0.434,0.351-0.785,0.784-0.785h3.111"/>
+	<path fill="#183356" d="M45.422,74.49h3.11c0.434,0,0.784-0.352,0.784-0.784l0,0c0-0.433-0.351-0.784-0.784-0.784h-3.11"/>
+</g>
+</svg>

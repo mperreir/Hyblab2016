@@ -1,30 +1,215 @@
 <!DOCTYPE html>
+
 <html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+	<head>
+		<title>En voiture Simone !</title>
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-      <h1>Hyblab 2016</h1>
-    </header>
+		<!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+		<meta charset="utf-8">
 
-    <!-- Le contenu du site -->
-    <p>replace this content by your web app !</p>
+		<!-- Déclaration de la feuille de style du document-->
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+		<link rel="stylesheet" href="script/chartist/dist/chartist.min.css"/>
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2016</p>
-    </footer>
-    </div>
-  </body>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/styleChartDefilement.css">
+		<link rel="stylesheet" href="css/nuage.css">
+
+		<link rel="stylesheet" href="css/style.css"/>
+
+
+
+		<!-- Déclaration des scripts js et librairies -->
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="script/jquery.fullPage.min.js"></script>
+		<script type="text/javascript" src="script/chartist/dist/chartist.min.js"></script>
+		<script type="text/javascript" src="script/chartist-plugin-fill-donut.min.js"></script>
+		<script type="text/javascript" src="script/jquery.easing.1.3.js"></script>
+		
+		<script type='text/javascript' src="script.js"></script>
+
+	</head>
+	<body>
+		<!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
+		<!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
+		<!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+		<div id="container">
+
+			<!-- l'entête de la page: titre, barre de recherche -->
+
+			<!-- Le contenu du site -->
+			<div id="fullpage">
+
+			<!--First page-->
+
+				<div class="section" id="s1">
+					
+					<h2>LES FRANÇAIS ET L’AUTOMOBILE : QUELLES HABITUDES DE CONSOMMATION ?</h2>
+					<img class="nuage" id="nuage1"src="images/nuages.svg" alt="nuage">
+					<img class="nuage" id="nuage2"src="images/nuages.svg" alt="nuage">
+					<img class="nuage" id="nuage3"src="images/nuages.svg" alt="nuage">
+					<img class="svg isles accueil" src="images/accueil.svg" alt="En voiture Simone !"/>
+					
+					<a href="#2" ><img id="scroll" src="images/scroll_bas.svg" alt="Slide suivante"/></a>
+
+					<div></div>
+
+				</div>
+
+				<!--second page-->
+
+				<div class="section" id="s2">
+
+	                <h1>COMBIEN DE VOITURES PAR MÉNAGE ?</h1>
+					<img class="nuage2" id="nuage4"src="images/nuages.svg" alt="nuage">
+					<img class="nuage2" id="nuage5"src="images/nuages.svg" alt="nuage">
+					<img class="nuage2" id="nuage6"src="images/nuages.svg" alt="nuage">
+	                <img class="svg isles"  src="images/motor.svg" alt="Ménages motorisés"/>
+	                
+	                <div class="ct-chart donut" id="mono"></div>
+	                <div class="labelDonut" id='labelDonutMono'><p>Ménages mono-motorisés</p></div>
+	                <div class="ct-chart donut" id="none"></div>
+	                <div class="labelDonut" id='labelDonutNone'><p>Ménages non motorisés</p></div>
+	                <div class="ct-chart donut" id="biPlus"></div>
+	                <div class="labelDonut" id='labelDonutBiPlus'><p>Ménages bi-motorisés ou plus</p></div>
+	                
+	                <div class="ct-chart barreDefilement" id="chartmenage"></div>
+	                <div class="labelDefilement" id='labelChartMotorisation'><p>Evolution du pourcentage de ménages motorisés.</p></div>
+	                <div class="info"><p></p></div>
+	                <div class="phrase" id="phraseMenage"><p></p></div>
+	                <img class="panneauAnnees" src="images/cliquer_annees.svg" alt="cliquez sur les années"/>
+        		</div>
+					
+
+
+		        <div class="section" id="s3">
+					<h1>PLUTÔT NEUF OU OCCASION ?</h1>
+		          	<img class="svg isles" src="images/neuf_occaz.svg" alt="Neuf ou occasion ?"/>
+		          	<div class="ct-chart donut" id="occasion"></div>
+	              	<div class="labelDonut" id='labelDonutOccasion'><p>Véhicules d'occasion</p></div>
+		          	<div class="ct-chart donut" id="neuf"></div>
+	              	<div class="labelDonut" id='labelDonutNeuf'><p>Véhicules neufs</p></div>
+		          	<div class="ct-chart barreDefilement" id="chartparc"></div>
+	              	<div class="labelDefilement" id='labelparc'><p>Evolution de la durée de détention d'un véhicule au sein d'un ménage.</p></div>
+		          	<div class="cars" id="carsoccasion"></div>
+		          	<div class="cars" id="carsneuf"></div>
+		          	<div class="info"><p></p></div>
+		
+		          	<img class="panneauAnnees" src="images/cliquer_annees.svg" alt="cliquez sur les années"/>
+		          	<div class="phrase" id="phraseDetention"><p></p></div>
+		        </div>
+
+
+
+				<div class="section" id="s4">
+          			<h1>À QUOI TU CARBURES ?</h1>
+          			<img class="svg" id="pompe" src="images/pompe.svg" alt="Pompe"/>
+	          		<div class="ct-chart barreDefilement" id="chartcarburant"></div>
+	              	<div class="labelDefilement" id='labelChartCarburant'><p>Evolution du pourcentage de véhicules propres vendus.</p></div>
+          			<div class="info" id="info_carbu"><p></p></div>
+          			<div id="barchart"></div>
+          			<img class="panneauAnnees" src="images/cliquer_annees.svg" alt="cliquez sur les années"/>
+          			<div class="phrase" id="phraseCarburant"><p></p></div>
+          			<div id="values"></div>
+        		</div>
+
+
+				<div class="section" id="s5">
+					<div class="info" id="blocCarCounter">
+						<h4>Le saviez-vous?</h4>
+						<p>Il se vend, en France, une voiture toutes les 4,2 secondes en moyenne.</p><p id="carCounter"></p>
+					</div>
+					<div class="info" id="methodo" statut="small">
+							<h4>Méthodo</h4>
+						<div id='textMethodo'>
+							<h3>D’où viennent les données ?</h3>
+							<p>Elles proviennent d’études Ademe, CCFA, Insee, SOeS, TNS-Sofres et Euro-Stat. Nous avons utilisé le fichier « Immatriculations de voitures particulières par type d'énergie » fournit par le Comité des constructeurs français d’automobile (www.ccfa.fr/) et le fichier « Équipement des ménages2014 » fournit par l’Insee. (http://www.insee.fr/fr/themes/tableau.asp?reg_id=0&ref_id=NATTEF05160)</br>
+							Les chiffres utilisés sont :
+							<ul>
+								<li>
+									 	Les pourcentages de ménages motorisés, non motorisés, bimotorisés, trimotorisés ou plus sur les années 1990, 2000, et 2006 à 2014 (provisoire).
+								</li>
+								<li>
+										La part en pourcentage des voitures particulières d’occasion sur le parc automobile français et la durée moyenne de détention (en années) sur cette même période.
+								</li>
+								<li>
+									Les immatriculations des voitures selon leur carburant sur les années 2009 à 2014 et le total des énergies et des « nouvelles énergies » sur cette période.
+								</li>   
+							</ul>   
+							</p>
+							<h3>Comment ont-elles été analysées ?</h3>
+							<p>Elles ont été comparées, croisées et mises en perspectives à l’aide de graphiques. Les pourcentages ont été réalisés à l’aide des chiffres en volumes des voitures. Une étude du contexte économique, politique et écologique a complété les fichiers de données.
+							Certaines données ont été cumulées :
+							<ul>
+								<li>
+									Les pourcentages de voitures bimotorisées et trimotorisées et plus
+								</li>
+								<li>
+									Le nombre d’immatriculations roulant avec les bicarburants essence + GNV et essence +GPL ; les immatriculations hybrides électricité + essence et électricité + gazole, les immatriculations roulant au GPL + GNV.
+								</li>
+							</ul>
+
+							</p>
+							<h3>Par qui ?</h3>
+							<p>Elles ont été étudiées par les étudiants des écoles AGR, Polytech et SciencesCom de Nantes et particulièrement analysées par ces derniers.</p>
+							<h3>Et la mise en forme ?</h3>
+							<p>Deux étudiants de l’école de graphisme AGR de Nantes ont réalisé tout le design de la datavisualisation et trois étudiants de l’école d'ingénieur Polytech ont construit le site internet.</p>
+						</div>
+					</div>
+					<h2>Cette datavisuation a été réalisée dans le cadre du HybLab 2016 par l’équipe K2000 composée de :</h2>
+
+					<img id="foooter" src="images/footer.svg" alt="TEAM K2000"/>
+
+					<div id="logo">
+						<div>
+							<a href="http://www.ouest-france.fr/" title="Ouest France">
+								<img class="logo" id="ouest_france" src="logos/ouest_france.svg" alt="Ouest France" />
+							</a>
+							<a href="http://www.agrnantes.fr" title="A.G.R.">
+								<img class="logo" src="logos/agr.png" alt="A.G.R." />
+							</a>
+
+							<a href="http://web.polytech.univ-nantes.fr" title="Polytech">
+								<img class="logo" src="logos/polytech.png" alt="Polytech" />
+							</a>
+
+							<a href="http://www.sciencescom.org" title="Science Com">
+								<img class="logo" src="logos/SciencesCom.png" alt="Science Com" />
+							</a>
+
+							<a href="https://www.uclan.ac.uk" title="UCLAN">
+								<img class="logo" src="logos/uclan.png" alt="UCLAN" />
+							</a>
+
+
+							<a href="http://www.univ-nantes.fr" title="Université de Nantes">
+								<img class="logo" src="logos/univ-nantes.png" alt="Université de Nantes" />
+							</a>
+
+							<a href="http://www.nantesmetropole.fr" title="Nantes Métropole">
+								<img class="logo" src="logos/nantes_metro.png" alt="Nantes Métropole" />
+							</a>
+
+							<a href="http://www.paysdelaloire.fr" title="Pays de la Loire">
+								<img class="logo" src="logos/pdl.png" alt="Pays de la Loire" />
+							</a>
+						</div>
+						<div class="lets_text">
+							<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/fr/" title="Creative Commons">
+								<img class="small_logo" src="logos/cc.png" alt="Creative Commons" />
+							</a>
+							<a href="http://opensource.org" title="Open Source Initiative">
+								<img class="small_logo" src="logos/osi.png" alt="Open Source Initiative" />
+							</a>
+							un projet issu des ateliers du
+							<a href="http://www.hyblab.fr"><img class="logo" src="logos/hyblab.png" alt="Hyblab - Data Journalisme"></a>
+							<a href="http://www.ouestmedialab.fr" title="MediaLab"><img class="logo" src="logos/medialab.png" alt="MediaLab" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type='text/javascript' src="global.js"></script>
+	</body>
 </html>

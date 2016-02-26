@@ -82,26 +82,26 @@
   content: '';
 }
 .header.logements::after {
-  background: url('/media/pic/picto-logements.svg');
+  background: url('../media/pic/picto-logements.svg');
   background-size: contain;
 }
 .header.locataires::after {
-  background: url('/media/pic/picto-locataires.svg');
+  background: url('../media/pic/picto-locataires.svg');
   background-size: contain;
 }
 .header.secondaires::after {
-  background: url('/media/pic/picto-residencesecondaire.svg');
+  background: url('../media/pic/picto-residencesecondaire.svg');
   background-size: contain;
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+  src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -140,7 +140,7 @@ body .sidebar .placeholder .icon {
 }
 body .sidebar .placeholder .icon::after {
   content: '';
-  background: url('/media/pic/clic.svg') no-repeat top;
+  background: url('../media/pic/clic.svg') no-repeat top;
   background-size: contain;
   position: absolute;
   top: 100%;
@@ -311,7 +311,7 @@ body .svg-content-responsive {
 }
 body #intro {
   z-index: 1;
-  background: url('/media/pic/Fond1.svg') no-repeat bottom;
+  background: url('../media/pic/Fond1.svg') no-repeat bottom;
   background-size: cover;
   padding-top: 20vh;
   overflow: hidden;
@@ -383,7 +383,7 @@ body #intro h2 {
 body #intro .next-page {
   position: absolute;
   bottom: 50px;
-  background: url(/media/pic/fleche.svg) no-repeat;
+  background: url('../media/pic/fleche.svg') no-repeat;
   background-size: contain;
   cursor: pointer;
   border: none;
@@ -394,7 +394,7 @@ body #intro .next-page {
 body #map1-intro,
 body #map2-intro {
   z-index: 1;
-  background: url('/media/pic/fondintercalaire.svg') no-repeat bottom;
+  background: url('../media/pic/fondintercalaire.svg') no-repeat bottom;
   background-size: cover;
   padding-top: 20vh;
   overflow: hidden;
@@ -437,7 +437,7 @@ body #map1-intro .next-page,
 body #map2-intro .next-page {
   position: absolute;
   bottom: 50px;
-  background: url(/media/pic/fleche.svg) no-repeat;
+  background: url('../media/pic/fleche.svg') no-repeat;
   background-size: contain;
   cursor: pointer;
   border: none;
@@ -561,23 +561,23 @@ body #interview-page #interview .sidebar .content .item::before {
   height: 100%;
 }
 body #interview-page #interview .sidebar .content .item:nth-child(1)::before {
-  background: url('/media/pic/infographie1.svg') no-repeat top;
+  background: url('../media/pic/infographie1.svg') no-repeat top;
 }
 body #interview-page #interview .sidebar .content .item:nth-child(2)::before {
-  background: url('/media/pic/infographie2.svg') no-repeat top;
+  background: url('../media/pic/infographie2.svg') no-repeat top;
 }
 body #interview-page #interview .sidebar .content .item:nth-child(3)::before {
-  background: url('/media/pic/infographie3.svg') no-repeat top;
+  background: url('../media/pic/infographie3.svg') no-repeat top;
   top: 10%;
 }
 body #interview-page #interview .sidebar .content .item:nth-child(4)::before {
-  background: url('/media/pic/infographie4.svg') no-repeat top;
+  background: url('../media/pic/infographie4.svg') no-repeat top;
 }
 body #interview-page #interview .sidebar .content .item:nth-child(5)::before {
-  background: url('/media/pic/infographie5.svg') no-repeat top;
+  background: url('../media/pic/infographie5.svg') no-repeat top;
 }
 body #credit {
-  background: url('/media/pic/Fond2.svg') no-repeat bottom right;
+  background: url('../media/pic/Fond2.svg') no-repeat bottom right;
   background-size: 100%;
   overflow: hidden;
   padding-top: 100px;
@@ -638,6 +638,6 @@ body #credit::after {
   left: 3%;
   width: 60%;
   height: 20%;
-  background: url("/media/pic/logos.svg") no-repeat bottom left;
+  background: url("../media/pic/logos.svg") no-repeat bottom left;
   background-size: contain;
 }
