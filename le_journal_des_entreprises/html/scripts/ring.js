@@ -1,5 +1,6 @@
 "use strict";
 
+// données contenant les secteurs d'activités de chaucne des plateformes
 var plateforme = [
 	{name: 'Wiseed', Immobilier:16040000, Santé: 4010000, Cleantech: 6015000, Service_web: 3208000, 
 			Economie_collaborative: 401000, Mode: 401000, Objets_connectés: 1203000, Services_numériques: 2005000,
@@ -29,6 +30,7 @@ var plateforme = [
 	{name: 'Raizers', Immobilier:565276, Cleantech: 150255, Mode: 89000, Foodtech: 255000},
 ]
 
+// données contenant les plateformes pour chaque secteurs d'activités
 var secteur = [ 
 	{name: 'Immobilier', Wiseed: 16040000, Anaxago: 15385704, HappyCapital: 67757, Raizers: 565276 },
 	
@@ -60,11 +62,13 @@ var secteur = [
 	{name: 'Autre', Wiseed:4812000, SmartAngels: 500775} 
 ]
 
-var maxWidth = 600;
+// défintion des variables utiles pour la suite
+var maxWidth = 600; // taille du svg
 var maxHeight = 800;
-var outerRadius = 150;
-var ringWidth = 100;
-var label = 230;
+var outerRadius = 150; // rayon extérieur de l'anneau
+var ringWidth = 100; // rayon de l'anneau
+var innerRadius = outerRadius - ringWidth;
+var label = 230; // distance au centre des textes 
 
 // This function helps you figure out when all
 // the elements have finished transitioning
@@ -78,8 +82,15 @@ function checkEndAll(transition, callback) {
     });
 }    
 
+/* fonction pour créer et afficher les anneaux
+	config contient différents éléments :
+	- el: contient l'anneau ciblé
+	- selected: élément sur lequel pointe le curseur
+	- data: données à utiliser pour créer l'anneau
+*/
 function drawAnimatedRingChart(config) {
-
+	
+	// définition de chaque partie de l'anneau avec un angle de début et un angle de fin (fonction pie())
     var pie = d3.layout.pie().value(function (d) { 	
 		if (d[config.selected]==undefined)
 			return null;
@@ -88,9 +99,11 @@ function drawAnimatedRingChart(config) {
     })
 	.sort(null);
 	
+	// définition des couleurs selon la charte graphique
     var color = d3.scale.ordinal()
 	.range(["#D0AA71","#879BA8","#E6D9C2","#0B2D43","#D8D3CB","#0D2131","#CC9E53","#99A9B4","#DDB580","#113D56","#B17E49","#D8D3CB","#0D2131"]);
 
+	// création des arcs de l'anneau
     var arc = d3.svg.arc();
 
     // This function helps transition between
@@ -104,86 +117,87 @@ function drawAnimatedRingChart(config) {
         var i = d3.interpolate(start, finish);
         return function(d) { return arc(i(d)); };
     }
-    arc.outerRadius(config.outerRadius || outerRadius)
-        .innerRadius(config.innerRadius || innerRadius);
+    
+	// définition de la taille de l'anneau selon le rayon prédéfini
+	arc.outerRadius(outerRadius)
+        .innerRadius(innerRadius);
 
-    // Remove the previous ring
+    // Suppression des anciens anneaux et textes
     d3.select(config.el).selectAll('g').remove();
     d3.select(config.el).selectAll('text').remove();
 
+	// définition du svg et de la viewBox
     var svg = d3.select(config.el)
         .attr({
-            width: maxWidth,
-            height: maxHeight,
-			preserveAspectRatio: "xMidYMid meet",
-            viewBox: "0 0 " + maxWidth + " " + maxHeight
+            'width': maxWidth,
+            'height': maxHeight,
+			'preserveAspectRatio': "xMidYMid meet",
+            'viewBox': "0 0 " + maxWidth + " " + maxHeight
         })
 		
+	// création du titre de chaque anneau
 	svg.append('text')
-	.attr({
-		'font-size': 48,
-		'color':'black',
-		'text-anchor': 'middle',
-		'transform': 'translate(' + (maxWidth/2) + ',' + 50 + ')'
-	})
-	.text(config.selected.replace('_',' '))
-		
-    // Add the groups that will hold the arcs
+		.attr({
+			'font-size': 48,
+			'color':'black',
+			'text-anchor': 'middle',
+			'transform': 'translate(' + (maxWidth/2) + ',' + 50 + ')'
+		})
+		.text(config.selected.replace('_',' '))
+			
+    // création des groups qui contiendront les arcs et leur texte correspondant
+	// Ajout aussi d'event listener pour l'interaction entre les deux anneaux
     var groups = svg.selectAll('g.arc')
-    .data(pie(config.data))
-    .enter()
-    .append('g')
-    .attr({
-        'class': 'arc',
-        'transform': 'translate(' + (10+maxWidth/2) + ', ' + (maxHeight/2) + ')'
-    })
-	.on("mouseenter", function(d){
-		if(config.el=='#animated-ring'){
-			drawAnimatedRingChart({
-				el: '#animated-ring2',
-				selected: d.data.name,
-				outerRadius: outerRadius,
-				innerRadius: outerRadius - ringWidth,
-				data: plateforme
-			});
-			adjustSelect("selPlat2",d.data.name);
-		}
-		else{
-			drawAnimatedRingChart({
-				el: '#animated-ring',
-				selected: d.data.name,
-				outerRadius: outerRadius,
-				innerRadius: outerRadius - ringWidth,
-				data: secteur
-			});
-			adjustSelect("selPlat",d.data.name);
-		}
-	})
-	.on("mouseover", function(){
-		d3.select(config.el).selectAll('path').attr('opacity',0.25);
-		d3.select(config.el).selectAll('.arc').selectAll('text').attr('opacity',0.25);
-		d3.select(this).select('path').attr('opacity',1);
-		d3.select(this).select('text').attr('opacity',1);
-	})
-	.on("mouseout", function(){
-		d3.select(config.el).selectAll('path').attr('opacity',1) 	
-		d3.select(config.el).selectAll('text').attr('opacity',1) 	
-	})
+		.data(pie(config.data))
+		.enter()
+		.append('g')
+		.attr({
+			'class': 'arc',
+			'transform': 'translate(' + (10+maxWidth/2) + ', ' + (maxHeight/2) + ')'
+		})
+		// si la souris est sur un group : réajustement de l'autre anneau et changement d'opacité des tous les groups sauf celui selectionné
+		.on("mouseover", function(d){
+			if(config.el=='#animated-ring'){
+				drawAnimatedRingChart({
+					el: '#animated-ring2',
+					selected: d.data.name,
+					data: plateforme
+				});
+				adjustSelect("selPlat2",d.data.name);
+			}
+			else{
+				drawAnimatedRingChart({
+					el: '#animated-ring',
+					selected: d.data.name,
+					data: secteur
+				});
+				adjustSelect("selPlat",d.data.name);
+			}
+			d3.select(config.el).selectAll('path').attr('opacity',0.25);
+			d3.select(config.el).selectAll('.arc').selectAll('text').attr('opacity',0.25);
+			d3.select(this).select('path').attr('opacity',1);
+			d3.select(this).select('text').attr('opacity',1);
+		})
+		// réatblissement de l'opacité lorsque la souris sort du group
+		.on("mouseout", function(){
+			d3.select(config.el).selectAll('path').attr('opacity',1) 	
+			d3.select(config.el).selectAll('text').attr('opacity',1) 	
+		})
 
-    // Create the actual slices of the pie
+    // Création de l'affichage des arcs avec la couleur correspondante 
     groups.append('path')
-    .attr({
-        'fill': function (d, i) {
-            return color(i);
-        }
-    })
-    .transition()
-    .duration(config.duration || 500)
-    .attrTween('d', tweenPie)
-    .call(checkEndAll, function () {
+		.attr({
+			'fill': function (d, i) {
+				return color(i);
+			}
+		})
+		.transition()
+		.duration(config.duration || 500)
+		.attrTween('d', tweenPie)
+		.call(checkEndAll, function () {
         
-        // Finally append the title of the text to the node
-        groups.append('text')
+	// Affichage du titre de chaque arcs
+	groups.append('text')
 		.attr({
 			'text-anchor': 'middle',
 			"transform" : function(d) {	
@@ -197,7 +211,6 @@ function drawAnimatedRingChart(config) {
 			}	
 		})
         .text(function (d) {
-            // Notice the usage of d.data to access the raw data item
 			if (d.data[config.selected]!=undefined)
 				if((d.endAngle-d.startAngle)>0.2){
 					return d.data.name.replace('_',' ');;
@@ -211,32 +224,25 @@ function drawAnimatedRingChart(config) {
     });
 }
 
-// Render the initial ring
+// Affichage des deux anneaux initiaux
 drawAnimatedRingChart({
     el: '#animated-ring',
 	selected: "Wiseed",
-    outerRadius: outerRadius,
-    innerRadius: outerRadius - ringWidth,
     data: secteur
 });
 
-// Render the initial ring
 drawAnimatedRingChart({
     el: '#animated-ring2',
 	selected: "Immobilier",
-    outerRadius: outerRadius,
-    innerRadius: outerRadius - ringWidth,
     data: plateforme
 });
 
-//Listen to changes on the select element
+// Mise à jour de l'anneau lors de changement de selection dans le selector
 document.querySelector('#selPlat')
 	.addEventListener('change', function (e) {
 		drawAnimatedRingChart({
 			el: '#animated-ring',
 			selected: this.value,
-			outerRadius: outerRadius,
-			innerRadius: outerRadius - ringWidth,
 			data: secteur
 		});
 		document.getElementById('title1').innerHTML = this.value;
@@ -247,13 +253,12 @@ document.querySelector('#selPlat2')
 		drawAnimatedRingChart({
 			el: '#animated-ring2',
 			selected: this.value,
-			outerRadius: outerRadius,
-			innerRadius: outerRadius - ringWidth,
 			data: plateforme
 		});
 		document.getElementById('title2').innerHTML = this.value;
 	});	
 
+// fonction permettant d'ajuster les selectors
 function adjustSelect(sel,optionSel){
 	var opt = document.getElementById(sel).getElementsByTagName('option');
 	for(var i=0; i<opt.length; i++){
