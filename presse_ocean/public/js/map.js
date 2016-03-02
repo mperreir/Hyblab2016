@@ -58,7 +58,7 @@ var loadMap = function(selector, type, options) {
 
   var active = d3.select(null);
 
-  queue().defer(d3.json, "/media/data/data.json").await(ready);
+  queue().defer(d3.json, "media/data/data.json").await(ready);
 
   function ready(error, data)
   {

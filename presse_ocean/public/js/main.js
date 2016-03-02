@@ -34,17 +34,17 @@ $(document)
           switch (nextIndex) {
             case 3: // logements Map
               if (!visited[nextIndex]) {
-                $.getScript("/js/map1.js");
+                $.getScript("js/map1.js");
               }
               break;
             case 5: // locataires Map
               if (!visited[nextIndex]) {
-                $.getScript("/js/map2.js");
+                $.getScript("js/map2.js");
               }
               break;
             case 6: // secondaires Map
               if (!visited[nextIndex]) {
-                $.getScript("/js/map3.js");
+                $.getScript("js/map3.js");
               }
               break;
             default:

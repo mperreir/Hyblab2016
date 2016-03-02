@@ -75,18 +75,18 @@
   height: 100%;
 }
 #interview-page #interview .sidebar .content .item:nth-child(1)::before {
-  background: url('/media/pic/infographie1.svg') no-repeat top;
+  background: url('../media/pic/infographie1.svg') no-repeat top;
 }
 #interview-page #interview .sidebar .content .item:nth-child(2)::before {
-  background: url('/media/pic/infographie2.svg') no-repeat top;
+  background: url('../media/pic/infographie2.svg') no-repeat top;
 }
 #interview-page #interview .sidebar .content .item:nth-child(3)::before {
-  background: url('/media/pic/infographie3.svg') no-repeat top;
+  background: url('../media/pic/infographie3.svg') no-repeat top;
   top: 10%;
 }
 #interview-page #interview .sidebar .content .item:nth-child(4)::before {
-  background: url('/media/pic/infographie4.svg') no-repeat top;
+  background: url('../media/pic/infographie4.svg') no-repeat top;
 }
 #interview-page #interview .sidebar .content .item:nth-child(5)::before {
-  background: url('/media/pic/infographie5.svg') no-repeat top;
+  background: url('../media/pic/infographie5.svg') no-repeat top;
 }

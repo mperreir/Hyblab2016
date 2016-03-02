@@ -2,61 +2,33 @@
 	font-family: arial;
 }
 
-#fullpage {
-	width: 972px;
-	margin: auto;
-	/*min-width: 972px;*/
-}
-
 #firstPage {
 	background-image: url(../img/slide1_background.png);
-	background-repeat: repeat;
-	background-attachment: fixed;	
-	
-	height: 100%;
-}
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 
-
-#titleText {
-	position: absolute;
-	padding-top: 205px;
-	padding-left: 300px;
-	
-	color: #D0AA6D;
-	font-family: "Arial";
-	font-size: 26px;
-}
-
-#titleZone {
 	text-align: center;
-	width: 100%;
-}
-
-#jde {
-	position: absolute left-side;
-	margin-left: 50px;
-	width: 150px;
 }
 
 #introduction {
 	background-image: url(../img/slide_2.svg);
 	background-size: auto 100%;
 	background-repeat: no-repeat;
-	background-position: center center;
 }
 
 #sectors{
 	background-image: url(../img/fond_slide_5.svg);
 	background-size: auto 100%;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center auto;
 }
 
 #definition {
 	background-image: url(../img/slide_3.svg);
 	background-size: auto 100%;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center auto;
 }
 
 #infosContainer {
@@ -67,28 +39,28 @@
 #CIP {
 	width: 100px;
 	height: 100px;
-	
-	margin-left: 15%;
+
+	margin-left: 20%;
 	margin-top: 5%;
 }
 
 .bulleInfo {
 	width: 25%;
 	height: 7%;
-	
+
 	background-color: white;
-	
+
 	border-style: solid;
     border-width: 4px;
 	border-color: #002846;
-	
+
 	text-align: center;
-	
+
 	padding-top: 1%;
-	
+
 	font-family: arial;
 	font-weight: bold;
-	
+
 	font-size: 1.5vw;
 }
 
@@ -107,9 +79,19 @@
 	margin-right: 20%;
 	margin-bottom: 15%;
 	padding-top: 0%;
-	
+
 	width: 7%;
 	height: 5%;
+}
+
+#titleText {
+	position: absolute;
+	padding-top: 205px;
+	padding-left: 37%;
+
+	color: #D0AA6D;
+	font-family: "Arial";
+	font-size: 1.75vw;
 }
 
 #titleText p {
@@ -120,8 +102,7 @@
 	background-image: url(../img/slide_4.svg);
 	background-size: auto 100%;
 	background-repeat: no-repeat;
-	background-position: center center;
-	
+
 	width: 100%;
 	height: 100%;
 }
@@ -129,12 +110,12 @@
 #boardZone {
 	width: 276px;
 	height: 660px;
-	
+
 	background-image: url(../img/board.svg);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: 0% 0%;
-	
+
 	margin-top: 0%;
 	margin-left: 10%;
 }
@@ -142,32 +123,28 @@
 #filterSelector {
 	height: 2%;
 	display: none;
-	
+
 	padding-top: 30px;
 	padding-left: 43px;
-	
+
 	color: white;
 	font-family: arial;
 	font-size: 14px;
 }
 
 #chartZone {
-	width: 100%;
+	width: 0%;
 	height: 100%;
-	
+
 	margin: 0%;
 	margin-left: 1.5%;
 }
 
-.chart {
-	display: none;
-}
-
-#platform {	
-	width: 90%;
+#platform {
+	width: 100%;
 	height: 100%;
 	padding-top: 30px;
-	padding-left: 5%;
+	padding-left: 40px;
 	padding-bottom: 0px;
 }
 
@@ -190,6 +167,10 @@
 	background-position: center 0%;
 }
 
+#CIP_Definition {
+	font-family: arial;
+}
+
 #CIP_Definition strong{
 	font-size: 24px;
 }
@@ -202,7 +183,7 @@
 	position: absolute;
 	width: 400px;
 	height: 600px;
-	
+
 	margin-left: 200px;
 	margin-top: 100px;
 }

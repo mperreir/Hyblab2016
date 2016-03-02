@@ -6,25 +6,355 @@
     <title>Hyblab 2016</title>
     <!-- Déclaration de la feuille de style du document-->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="lib/fancybox/lib/jquery-1.10.1.min.js"></script>
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="lib/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="lib/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+    
+    <!-- Add Thumbnail helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="lib/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <script type="text/javascript" src="lib/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    
+    <!--Scripts pour la data2 -->
+    <script src="d3.min.js"></script>
+    <script src="d3.tip.v0.6.3.js"></script>
+
+    <!--script de la lightbox -->
+    <script src="data3.js"></script>
+   
+    
   </head>
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
     <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
     <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
     <div id="container">
+      <header>
+        <h1>Airbnb</h1>
+        <h2 id="st_intro">À L’ABORDAGE DE LA CITÉ CORSAIRE</h2>
+      </header>
+      
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-      <h1>Hyblab 2016</h1>
-    </header>
+      
+      
+      <section id="intro">
+        Le chiffre des annonces de la plateforme de réservation de logement Airbnb a explosé à Saint-Malo depuis la route du Rhum 2010. De l'avis même de la start-up, toutes sortes d'hébergements saisonniers l'ont investit. <br/> <br/>
 
-    <!-- Le contenu du site -->
-    <p>replace this content by your web app !</p>
+        Jusqu'à quel point ? Est-ce une concurrence déloyale pour les professionnels du tourisme ? Nous avons interrogé, épluché les annonces pour essayer de le savoir.<br/> <br/>
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2016</p>
-    </footer>
+        La côte d'Emeraude voit une multiplication des courts séjours. Et la ville de Saint-Malo y contribue en communiquant sur des manifestations culturelles réputées (Festival Quai des Bulles, Les Étonnants Voyageurs) ou des évènements naturels ponctuels tels que les grandes marées. Le dernier décompte de visiteurs à l’office de tourisme de Saint-Malo fait état de 3,5 millions de passages.<br/><br/>
+        
+        3,5 millions, c’est justement le nombre de nuitées disponibles dans l'année, selon la plateforme Airbnb. Des logements qui se situent dans la logique des hébergements touristiques : sur le bord de mer, sur des spots comme le sillon, à Rotheneuf, Dinard, Cancale, mais aussi dans la ville intra-muros.<br/>
+
+        
+        
+        <script src="intro.js"></script>
+        
+      </section>
+
+      <section id="data1">
+        <h3 id="titre_data1">Airbnb à l’assaut de la côte d’Emeraude</h3>
+        <h4 id="st_data1"></h4>
+    
+        <!-- Data1 -->
+        <div id='art_carte'>
+          <canvas id="canvasCarte" height="850" width="750">
+            Sorry, your browser does not support canvas.
+          </canvas>
+          
+          <canvas id="canvasLegende" height="850" width="750">
+            Sorry, your browser does not support canvas.
+          </canvas>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute" width="850" height="750">
+            
+            <!-- Nombre de logements -->
+            <circle class="lgt" cx="416px" cy="682px" r="20px" id="lgt_dinan" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_lgt_dinan');"/>
+            <circle class="lgt" cx="385px" cy="301px" r="28px" id="lgt_dinard" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_lgt_dinard');"/>
+            <circle class="lgt" cx="269" cy="327" r="14px" id="lgt_stbriac" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_lgt_stbriac');"/>
+            <circle class="lgt" cx="687" cy="190" r="20px" id="lgt_cancale" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_lgt_cancale');"/>
+            <circle class="lgt" cx="442" cy="267" r="56px" id="lgt_stmalo" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_lgt_stmalo');"/>
+            
+            <!-- Prix moyens -->
+            <circle class="prix" cx="416px" cy="682px" r="28" id="pxmoyen_dinan" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_prix_dinan');"/>
+            <circle class="prix" cx="385px" cy="301px" r="35" id="pxmoyen_dinard" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_prix_dinard');"/>
+            <circle class="prix" cx="269" cy="327" r="50" id="pxmoyen_stbriac" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_prix_stbriac');"/>
+            <circle class="prix" cx="687" cy="190" r="29" id="pxmoyen_cancale" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_prix_cancale');"/>
+            <circle class="prix" cx="442" cy="267" r="25" id="pxmoyen_stmalo" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_prix_stmalo');"/>
+            
+            <!-- Capacité d'accueil -->
+            <circle class="capa" cx="416px" cy="682px" r="28" id="capa_dinan" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_capa_dinan');"/>
+            <circle class="capa" cx="385px" cy="301px" r="32" id="capa_dinard" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_capa_dinard');"/>
+            <circle class="capa" cx="269" cy="327" r="39" id="capa_stbriac" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_capa_stbriac');"/>
+            <circle class="capa" cx="687" cy="190" r="34" id="capa_cancale" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_capa_cancale');"/>
+            <circle class="capa" cx="442" cy="267" r="30" id="capa_stmalo" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_capa_stmalo');"/>
+            
+            <!-- Boutons switch -->
+            <circle id="capa_ext" class="bouton_capa" cx="677" cy="508" r="20" onclick="showCircles('capa');selectButton(this);" onmouseover="initDrawCircle(this);"onmouseout="clearCanvas();"/>
+            
+            
+            <circle id="prx_ext" class="bouton_prx" cx="677" cy="558" r="20" onclick="showCircles('prix');selectButton(this);" onmouseover="initDrawCircle(this);"onmouseout="clearCanvas();"/>
+            
+            <circle id="lgt_ext" class="bouton_lgt" cx="677" cy="608" r="20" onclick="showCircles('lgt');selectButton(this);" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();"/>
+            
+            <!-- carte + images -->
+            
+            <img src="images/fondcarte.png" id="carte" alt="carte" >
+            
+            <img id="text_capa" class="bouton_capa" src="images/typo-lien-capacite.png" alt="Bouton capacité" onclick="showCircles('capa');selectButton(document.getElementById('capa_ext'));" onmouseover="initDrawCircle(document.getElementById('capa_ext'));"onmouseout="clearCanvas();">
+            <img id="text_prx" class="bouton_prx" src="images/typo-lien-pxmoyen.png" alt="Bouton prix" onclick="showCircles('prix');selectButton(document.getElementById('prx_ext'));" onmouseover="initDrawCircle(document.getElementById('prx_ext'));"onmouseout="clearCanvas();">
+            <img id="text_lgt" class="bouton_lgt" src="images/typo-lien-lgt.png" alt="Bouton nb logements" onclick="showCircles('lgt');selectButton(document.getElementById('lgt_ext'));" onmouseover="initDrawCircle(document.getElementById('lgt_ext'));"onmouseout="clearCanvas();">
+            
+            <!-- chiffres logements -->
+            <img id="img_lgt_dinan" class="chiffres" src="images/nbre-lgt-dinan.png">
+            <img id="img_lgt_dinard" class="chiffres" src="images/nbre-lgt-dinard.png">
+            <img id="img_lgt_stbriac" class="chiffres" src="images/nbre-lgt-stbriac.png">
+            <img id="img_lgt_cancale" class="chiffres" src="images/nbre-lgt-cancale.png">
+            <img id="img_lgt_stmalo" class="chiffres" src="images/nbre-lgt-stmalo.png">
+            
+            <img id="img_prix_dinan" class="chiffres" src="images/nbre-px-dinan.png">
+            <img id="img_prix_dinard" class="chiffres" src="images/nbre-px-dinard.png">
+            <img id="img_prix_stbriac" class="chiffres" src="images/nbre-px-stbriac.png">
+            <img id="img_prix_cancale" class="chiffres" src="images/nbre-px-cancale.png">
+            <img id="img_prix_stmalo" class="chiffres" src="images/nbre-px-stmalo.png">
+            
+            <img id="img_capa_dinan" class="chiffres" src="images/nbre-capacite-dinan.png">
+            <img id="img_capa_dinard" class="chiffres" src="images/nbre-capacite-dinard.png">
+            <img id="img_capa_stbriac" class="chiffres" src="images/nbre-capacite-stbriac.png">
+            <img id="img_capa_cancale" class="chiffres" src="images/nbre-capacite-cancale.png">
+            <img id="img_capa_stmalo" class="chiffres" src="images/nbre-capacite-stmalo.png">
+            
+            
+            
+            
+          </svg>
+          
+        
+        </div>
+    
+        <div id="jauges">
+          
+          <!-- Jauges -->
+          
+          
+          
+          <img src="images/DATA1-JAUGES-PRIX.png" id="jauge_prix" class="jauges1"/> 
+          <img src="images/DATA1-JAUGES-CAPACITE.png" id="jauge_capa" class="jauges1"/> <br/> 
+          
+          <button id="prix_moyen" class="button button--naira1 button--border-thick button--text-thick button--size-s" onclick="showJauge('prix_moyen');"><span>Prix moyen</span></button>
+          <button id="capa_moyenne" class="button button--naira1 button--border-thick button--text-thick button--size-s" onclick="showJauge('capa_moyenne');"><span id="text_button_capa">Capacité<br/> d'accueil moyenne</span></button>
+          
+        </div>
+        
+        <div id="explications">
+          <p> 
+            Le pays de Saint-Malo est une vraie aubaine pour la société Airbnb. On compte d'ailleurs presque 1000 logements répartis sur les villes principales de la Côte d'Emeraude (Saint-Briac-sur-Mer, Dinard, Dinan, Saint-Malo, Cancale). Plus de la moitié des annonces se situent sur Saint-Malo, suivie par Dinard avec 147 offres. <br/>
+            La large variété d'habitations fait que les prix sont très contrastés, allant de 14 euros pour une simple chambre à 5848 euros pour un manoir. Saint-Malo reste la ville la plus accessible, en terme de prix, dû au nombre conséquent de chambres "privées" ou "partagées" proposées. Il est d'ailleurs possible de passer une nuit dans la cité corsaire pour seulement 14 euros. <br/>
+            A l'inverse, les logements sont plus chers à Saint-Briac-sur-Mer (139,8 euros) car la capacité d'accueil atteint 7 personnes en moyenne. En général, les hébergements Airbnb peuvent accueillir entre 4 et 5 personnes dans le pays de Saint-Malo. Pour résumer, des logements en tous genres (voire même insolites) à des prix variés sont disponibles. On peut dire qu'Airbnb met tout en œuvre pour que ses clients trouvent leur bonheur sur la Côte d'Emeraude. <br/>
+          </p>
+          
+        </div>
+        
+        <!-- Script de la data 1 -->
+        <script src="data1.js"></script>
+    
+      </section>
+      
+      <!-- DATA 2 -->
+      <section id="data2">
+        <h3 id="head_data2">Les deux saisons d'Airbnb </h3>
+        <h4 id="st_data2">Une marée haute (été) et une marée basse (hiver) pour les offres de location</h4>
+        
+        <h4 id="saison">ETE</h4>
+        
+        
+        <div id='bigorneau' >
+      	  <img id ="gif" src="images/Data2-jauge-ete.gif"> <br/>
+      		<button id = "myButton1" class="button button--naira button--border-thick button--text-thick button--text-upper button--size-s" onclick="deleteDiagram();createBigorneau('asterplot_hiver_data.csv');createGif('images/Data2-jauge-hiver.gif');supprTxtEte();afficheTxtHiver()"><span>Hiver</span></button>
+      		<button id = "myButton2" class="button button--naira button--border-thick button--text-thick button--text-upper button--size-s" onclick="deleteDiagram();createBigorneau('asterplot_data.csv');createGif('images/Data2-jauge-ete.gif');supprTxtHiver();afficheTxtEte()"><span>Ete</span></button>
+         
+      		<script src="asterplot_js.js" ></script>	
+      	</div>
+      	
+      	<div id="images">
+      		<figure>
+      			<img class="align" src="images/homme.png"><br /><figcaption id ="id1" class="center"> Capacité maximale :<br />32 personnes </figcaption><div id="hiver1" style="display:none;"> Capacité maximale :<br />32 personnes</div>
+      		</figure>
+      		<figure>
+      			<img class="align" src="images/couronne.png"><br /><figcaption id="id2" class="center"> Plus gros annonceur :<br/> 39 annonces</figcaption><div id="hiver2" style="display:none;" > Plus gros annonceur :<br/> 21 annonces </div>
+      		</figure>
+      		<figure>
+      			<img class="align" id="img_euros" src="images/euros.png"><br /><figcaption id="id3" class="center"> Location la plus chère :<br/> 5848€  </figcaption><div id="hiver3" style="display:none;" > Location la plus chère :<br/> 2051€ </div>
+      		</figure>
+      	</div>
+      	
+        <div id="text_data2">
+      		
+      		<p id="article_data2"> 
+        		Premier constat que nous délivrent les données : il existe un grand nombre de multi-annonceurs (soit 2 annonces minimum sur le site). Une multiplicité d’annonces mises en évidence dans cette dataviz. La palme revient à un annonceur malouin proposant 39 biens à la location.<br/>
+
+            La comparaison des volumes des annonces d’été et d’hiver, l'enquête téléphonique auprès de l’office de tourisme, des syndicats d’hotellerie et des annonceurs, permet de détacher une particularité à Saint-Malo. Les marées ne sont pas qu'un événement climatique dans la cité corsaire, elles se manifestent aussi dans les offres Airbnb avec une marée haute l'été et une basse l'hiver.
+            Lors de la saison basse, de nombreux malouins récupèrent leur logement pour le louer à des étudiants. 
+            Difficile pour autant de conclure à la suite de notre enquête à un effet négatif des locations Airbnb sur l'hôtellerie locale, même si certains s’en plaignent.
+          </p>
+      	</div>
+        
+      </section>
+        
+      <!-- DATA 3 -->
+        
+      <section id="data3">
+        <h3 id="titre_data3">Des annonces insolites</h3>
+        <h4 id="st_data3">... pour des nuits inoubliables</h4>
+	
+        <table >
+        <tr>
+          
+          <td align="center" width="270" height="270">
+	    
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" style="position:absolute" title="Lorem ipsum dolor sit amet">
+              <circle style="fill:white;opacity:0; z-index:4;" cx="124" cy="129px" r="170px" id="cache1"/>
+              <a class="fancybox-thumbs" data-fancybox-group="historique" href="images/historique1.png">
+                <circle style="opacity:0; z-index:5;" cx="124" cy="129px" r="120px" id="cercle1"/>		
+              
+              </a>
+            </svg>
+            <img src="images/MAQUETTE-05.png" alt="Médiéval" style="z-index:3;" id="insolite1"/>
+		        <p class="ctitre" id="ctitre1" style="position:absolute; z-index:2; top: 405px; left: 165px;" >Batiments historiques</p>
+          </td>
+          <td align="center" width="270" height="270">
+            <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" style="position:absolute">
+              <circle style="fill:white;opacity:0; z-index:4;" cx="124" cy="129px" r="170px" id="cache2"/>
+              <a class="fancybox-thumbs" data-fancybox-group="fort" href="images/fortpetitbe1.png"> 			
+                <circle style="opacity:0; z-index:5;" cx="123" cy="124px" r="120px" id="cercle2"/>
+              </a>
+            </svg>
+            <img src="images/MAQUETTE-06.png" alt="Chateau" style="z-index:3;" id="insolite2"/>
+		        <p class="ctitre" id="ctitre2" style="position:absolute; z-index:2; top: 405px; left: 495px;" >Fort du Petit Bé</p>
+          </td>
+          <td align="center" width="270" height="270">
+            <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" style="position:absolute">
+              <circle style="fill:white;opacity:0; z-index:4;" cx="124" cy="129px" r="170px" id="cache3"/>
+              <a class="fancybox-thumbs" data-fancybox-group="yourt" href="images/yourt1.png"> 			
+                <circle style="opacity:0; z-index:5;" cx="122" cy="129px" r="120px" id="cercle3"/>
+              </a>
+            </svg>
+            <img src="images/MAQUETTE-07.png" alt="Yourt" style="z-index:3;" id="insolite3"/>
+		        <p class="ctitre" id="ctitre3" style="position:absolute; z-index:2; top: 405px; left: 825px;" >Tentes et yourtes</p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" width="270" height="280">
+            <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" style="position:absolute">
+              <circle style="fill:white;opacity:0; z-index:4;" cx="124" cy="129px" r="170px" id="cache4"/>
+              <a class="fancybox-thumbs" data-fancybox-group="chateau" href="images/chateaumanoir1.png"> 			
+                <circle style="opacity:0; z-index:5;" cx="124" cy="123px" r="120px" id="cercle4"/>
+              </a>
+            </svg>
+            <img src="images/MAQUETTE-10.png" alt="Manoir" style="z-index:3;" id="insolite4"/>
+		        <p class="ctitre" id="ctitre4" style="position:absolute; z-index:2; top: 735px; left: 165px;" >Châteaux et manoirs</p>
+          </td>
+          <td align="center" width="270" height="280">
+            <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" style="position:absolute">
+              <circle style="fill:white;opacity:0; z-index:4;" cx="124" cy="129px" r="170px" id="cache5"/>
+              <a class="fancybox-thumbs" data-fancybox-group="moulin" href="images/moulin1.png"> 			
+                <circle style="opacity:0; z-index:5;" cx="124" cy="124px" r="120px" id="cercle5"/>
+              </a>
+            </svg>
+            <img src="images/MAQUETTE-09.png" alt="Rural" style="z-index:3;" id="insolite5"/>
+		        <p class="ctitre" id="ctitre5" style="position:absolute; z-index:2; top: 735px; left: 535px;" >Moulins</p>
+          </td>
+          <td align="center" width="270" height="300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" style="position:absolute">
+              <circle style="fill:white;opacity:0; z-index:4;" cx="124" cy="149px" r="170px" id="cache6"/>
+              <a class="fancybox-thumbs" data-fancybox-group="bateau" href="images/bateau1.png"> 			
+                <circle style="opacity:0; z-index:5;" cx="124" cy="149px" r="120px" id="cercle6"/>
+              </a>
+            </svg>
+            <img src="images/MAQUETTE-08.png" alt="Bateau" style="z-index:3;" id="insolite6"/>
+		        <p class="ctitre" id="ctitre6" style="position:absolute; z-index:2; top: 750px; left: 850px;" >Bateaux</p>
+          </td>
+        </tr>
+        </table>
+        
+        <p>
+          Airbnb, c'est aussi la part belle des hébergements qui sortent des sentiers battus. Là, on ne parle pas de concurrence, déloyale ou non, c'est simplement l'air du temps. Qui eut pensé que l'on puisse un jour séjourner une nuit (dans un confort sommaire) dans le fort du Petit-Bé. C'est aujourd'hui possible, pour la modique somme de 600 euros.<br/> <br/>
+          Bateaux, yourtes, belles malouinières bien sûr, font le régal de la start-up américaine, qui les affiche à la une. Ces hébergemements, dont certains sont hors normes comme les cabines offertes dans le port des Sablons, sont plébiscités par une clientèle plus jeune, plus spontanée, plus internationale.
+        </p>
+
+        <span class="fancybox-thumbs" data-fancybox-group="historique" href="images/historique2.png"></span>
+        <span class="fancybox-thumbs" data-fancybox-group="fort" href="images/fortpetitbe2.png"></span>
+        <span class="fancybox-thumbs" data-fancybox-group="yourt" href="images/yourt2.png"></span>
+        <span class="fancybox-thumbs" data-fancybox-group="chateau" href="images/chateaumanoir2.png"></span>
+        <span class="fancybox-thumbs" data-fancybox-group="moulin" href="images/moulin2.png"></span>
+        <span class="fancybox-thumbs" data-fancybox-group="bateau" href="images/bateau2.png"></span>
+      <section/>
+      
+      <!-- Notre pied de page -->
+      <footer>
+        <div id="lets_partenaires">
+          <div id="lets_partenaires_hyb">
+              <div class="lets_first_row">
+                  <div>
+                      <a href="http://www.agrnantes.fr" title="A.G.R.">
+                          <img src="logos/agr.png" alt="A.G.R." />
+                      </a>
+                  </div>
+                  <div>
+                      <a href="http://web.polytech.univ-nantes.fr" title="Polytech">
+                          <img src="logos/polytech.jpg" alt="Polytech" />
+                      </a>
+                  </div>
+                  <div>
+                      <a href="http://www.sciencescom.org" title="Science Com">
+                          <img src="logos/sciences_com.jpg" alt="Science Com" />
+                      </a>
+                  </div>
+                  <div>
+                      <a href="http://www.univ-nantes.fr" title="Université de Nantes">
+                          <img src="logos/universite_nantes.jpg" alt="Université de Nantes" />
+                      </a>
+                  </div>
+                  
+                  <div>
+                      <a href="http://www.nantesmetropole.fr" title="Nantes Métropole">
+                          <img src="logos/nantes-metro.png" alt="Nantes Métropole" />
+                      </a>
+                  </div>
+                  
+                  <div>
+                      <a href="http://www.paysdelaloire.fr" title="Pays de la Loire">
+                          <img src="logos/pdl.png" alt="Pays de la Loire" />
+                      </a>
+                  </div>
+              </div><!-- .lets_first_row -->
+              <div class="lets_second_row">
+                  <div>
+                      <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/fr/" title="Creative Commons">
+                          <img src="logos/cc.jpg" alt="Creative Commons" />
+                      </a>
+                  </div>
+                  <div>
+                      <a href="http://opensource.org" title="Open Source Initiative">
+                          <img src="logos/osi.jpg" alt="Open Source Initiative" />
+                      </a>
+                  </div>
+                  <div class="lets_text"><p>un projet issu des ateliers du </p>
+                      <div>
+                          <a href="http://www.hyblab.fr"><img src="logos/hyblab.jpg" alt="Hyblab - Data Journalisme"></a>
+                      </div>
+                      <div>
+                          <a href="http://www.ouestmedialab.fr" title="MediaLab"><img src="logos/medialab.png" alt="MediaLab" /></a>
+                      </div>
+                  </div>
+              </div><!-- .lets_second_row -->
+          </div><!-- #lets_partenaires_hyb-->
+        </div><!-- #lets_partenaires -->
+      </footer>
     </div>
   </body>
 </html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Notre page est en français -->
+  <head>
+    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+    <meta charset="utf-8">
+    <title>Hyblab 2016</title>
+    <!-- Déclaration de la feuille de style du document-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="lib/fancybox/lib/jquery-1.10.1.min.js"></script>
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="lib/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="lib/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+    <!-- Add Thumbnail helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="lib/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <script type="text/javascript" src="lib/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+    <!--Scripts pour la data2 -->
+    <script src="d3.min.js"></script>
+    <script src="d3.tip.v0.6.3.js"></script>
+
+    <!--script de la lightbox -->
+    <script src="data3.js"></script>
+
+
+  </head>
+  <body>
+    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
+    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
+    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+    <div id="container">
+      <!-- DATA 3 -->
+
+      <section id="data3">
+        <h3 id="titre_data3">Des annonces insolites</h3>
+        <h4 id="st_data3">... pour des nuits inoubliables</h4>
+
+        <table >
+        <tr>
+
+          <td align="center" width="270" height="270">
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" style="position:absolute" title="Lorem ipsum dolor sit amet">
+              <circle style="fill:white;opacity:0; z-index:4;" cx="124" cy="129px" r="170px" id="cache1"/>
+              <a class="fancybox-thumbs" data-fancybox-group="historique" href="images/historique1.png">
+                <circle style="opacity:0; z-index:5;" cx="124" cy="129px" r="120px" id="cercle1"/>
+
+              </a>
+            </svg>
+            <img src="images/MAQUETTE-05.png" alt="Médiéval" style="z-index:3;" id="insolite1"/>
+		        <p class="ctitre" id="ctitre1" style="position:absolute; z-index:2; top: 405px; left: 165px;" >Batiments historiques</p>
+          </td>
+          <td align="center" width="270" height="270">
+            <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" style="position:absolute">
+              <circle style="fill:white;opacity:0; z-index:4;" cx="124" cy="129px" r="170px" id="cache2"/>
+              <a class="fancybox-thumbs" data-fancybox-group="fort" href="images/fortpetitbe1.png">
+                <circle style="opacity:0; z-index:5;" cx="123" cy="124px" r="120px" id="cercle2"/>
+              </a>
+            </svg>
+            <img src="images/MAQUETTE-06.png" alt="Chateau" style="z-index:3;" id="insolite2"/>
+		        <p class="ctitre" id="ctitre2" style="position:absolute; z-index:2; top: 405px; left: 495px;" >Fort du Petit Bé</p>
+          </td>
+          <td align="center" width="270" height="270">
+            <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" style="position:absolute">
+              <circle style="fill:white;opacity:0; z-index:4;" cx="124" cy="129px" r="170px" id="cache3"/>
+              <a class="fancybox-thumbs" data-fancybox-group="yourt" href="images/yourt1.png">
+                <circle style="opacity:0; z-index:5;" cx="122" cy="129px" r="120px" id="cercle3"/>
+              </a>
+            </svg>
+            <img src="images/MAQUETTE-07.png" alt="Yourt" style="z-index:3;" id="insolite3"/>
+		        <p class="ctitre" id="ctitre3" style="position:absolute; z-index:2; top: 405px; left: 825px;" >Tentes et yourtes</p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" width="270" height="280">
+            <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" style="position:absolute">
+              <circle style="fill:white;opacity:0; z-index:4;" cx="124" cy="129px" r="170px" id="cache4"/>
+              <a class="fancybox-thumbs" data-fancybox-group="chateau" href="images/chateaumanoir1.png">
+                <circle style="opacity:0; z-index:5;" cx="124" cy="123px" r="120px" id="cercle4"/>
+              </a>
+            </svg>
+            <img src="images/MAQUETTE-10.png" alt="Manoir" style="z-index:3;" id="insolite4"/>
+		        <p class="ctitre" id="ctitre4" style="position:absolute; z-index:2; top: 735px; left: 165px;" >Châteaux et manoirs</p>
+          </td>
+          <td align="center" width="270" height="280">
+            <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" style="position:absolute">
+              <circle style="fill:white;opacity:0; z-index:4;" cx="124" cy="129px" r="170px" id="cache5"/>
+              <a class="fancybox-thumbs" data-fancybox-group="moulin" href="images/moulin1.png">
+                <circle style="opacity:0; z-index:5;" cx="124" cy="124px" r="120px" id="cercle5"/>
+              </a>
+            </svg>
+            <img src="images/MAQUETTE-09.png" alt="Rural" style="z-index:3;" id="insolite5"/>
+		        <p class="ctitre" id="ctitre5" style="position:absolute; z-index:2; top: 735px; left: 535px;" >Moulins</p>
+          </td>
+          <td align="center" width="270" height="300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" style="position:absolute">
+              <circle style="fill:white;opacity:0; z-index:4;" cx="124" cy="149px" r="170px" id="cache6"/>
+              <a class="fancybox-thumbs" data-fancybox-group="bateau" href="images/bateau1.png">
+                <circle style="opacity:0; z-index:5;" cx="124" cy="149px" r="120px" id="cercle6"/>
+              </a>
+            </svg>
+            <img src="images/MAQUETTE-08.png" alt="Bateau" style="z-index:3;" id="insolite6"/>
+		        <p class="ctitre" id="ctitre6" style="position:absolute; z-index:2; top: 750px; left: 850px;" >Bateaux</p>
+          </td>
+        </tr>
+        </table>
+
+        <p>
+          Airbnb, c'est aussi la part belle des hébergements qui sortent des sentiers battus. Là, on ne parle pas de concurrence, déloyale ou non, c'est simplement l'air du temps. Qui eut pensé que l'on puisse un jour séjourner une nuit (dans un confort sommaire) dans le fort du Petit-Bé. C'est aujourd'hui possible, pour la modique somme de 600 euros.<br/> <br/>
+          Bateaux, yourtes, belles malouinières bien sûr, font le régal de la start-up américaine, qui les affiche à la une. Ces hébergemements, dont certains sont hors normes comme les cabines offertes dans le port des Sablons, sont plébiscités par une clientèle plus jeune, plus spontanée, plus internationale.
+        </p>
+
+        <span class="fancybox-thumbs" data-fancybox-group="historique" href="images/historique2.png"></span>
+        <span class="fancybox-thumbs" data-fancybox-group="fort" href="images/fortpetitbe2.png"></span>
+        <span class="fancybox-thumbs" data-fancybox-group="yourt" href="images/yourt2.png"></span>
+        <span class="fancybox-thumbs" data-fancybox-group="chateau" href="images/chateaumanoir2.png"></span>
+        <span class="fancybox-thumbs" data-fancybox-group="moulin" href="images/moulin2.png"></span>
+        <span class="fancybox-thumbs" data-fancybox-group="bateau" href="images/bateau2.png"></span>
+      <section/>
+    </div>
+  </body>
+</html>

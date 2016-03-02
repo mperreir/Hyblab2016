@@ -14,14 +14,14 @@ $(document)
                 .classed("svg-content-responsive", true);
 
     svg.append("svg:image")
-      .attr("xlink:href", "/media/pic/Fond1.svg")
+      .attr("xlink:href", "media/pic/Fond1.svg")
       .attr("width", 1280)
       .attr("height", 720)
       .attr("x", 0)
       .attr("y", 0);
 
     svg.append("svg:image")
-      .attr("xlink:href", "/media/pic/cloud.svg")
+      .attr("xlink:href", "media/pic/cloud.svg")
       .classed("cloud", true)
       .attr("width", 110)
       .attr("height", 110)
@@ -29,7 +29,7 @@ $(document)
       .attr("y", 100);
 
     svg.append("svg:image")
-      .attr("xlink:href", "/media/pic/cloud2.svg")
+      .attr("xlink:href", "media/pic/cloud2.svg")
       .classed("cloud", true)
       .attr("width", 215)
       .attr("height", 165)
@@ -37,7 +37,7 @@ $(document)
       .attr("y", -17);
 
     svg.append("svg:image")
-      .attr("xlink:href", "/media/pic/cloud.svg")
+      .attr("xlink:href", "media/pic/cloud.svg")
       .classed("cloud", true)
       .attr("width", 110)
       .attr("height", 110)

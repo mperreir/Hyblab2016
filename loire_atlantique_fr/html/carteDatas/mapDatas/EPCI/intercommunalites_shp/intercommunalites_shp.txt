@@ -1,0 +1,50 @@
+
+================================================
+TITRE DU JEU DE DONNEES
+================================================
+
+Intercommunalités de Loire-Atlantique (SHP)
+
+================================================
+DESCRIPTION
+================================================
+
+Périmètres des Établissements Publics de Coopération Intercommunale à Fiscalité Propre (EPCI).
+Ce sont des regroupements de communes qui permettent de gérer en commun des équipements, des services publics, 
+d'élaborer des projets de développement économique, d'urbanisme ou d'aménagement du territoire à l'échelle plus 
+vaste que celle d'une commune. Pour l'exercice de ces compétences, les communes transfèrent à l'EPCI une partie 
+de leur fiscalité.
+
+================================================
+INFORMATIONS TECHNIQUES
+================================================
+
+Date de dernière mise à jour    : le 13/05/2009
+
+Emprise 			: Loire-Atlantique
+Type d'entité 			: polygone
+Système de projection 		: Lambert 93
+
+================================================
+ATTRIBUTS
+================================================
+
+FID : identifiant par défaut
+Shape : type d'entité
+EPCI : nom de l'établissement public de coopération intercommunale (EPCI)
+NUM_INTERC : numéro de l'établissement public de coopération intercommunale (EPCI)
+
+================================================
+CONTACT
+================================================
+
+Pour toute demande d'information ou remarque, 
+merci de passer par le forum du site http://data.loire-atlantique.fr
+
+================================================
+INFORMATIONS LEGALES
+================================================
+
+Propriétaire 	: Département de Loire-Atlantique
+Gestionnaire 	: Département de Loire-Atlantique
+Licence      	: Open Database License (ODbL 1.0)
