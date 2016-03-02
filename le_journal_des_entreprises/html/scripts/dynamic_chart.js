@@ -12,8 +12,8 @@ var acceptRate = [5, 3, 5, 4.5, 2, 1, 2, 1, 1.5, 5];
 var unit = " ";
 
 var boardZoomed = false;
-var jumped = false;
 
+//renvoie le nombre de valeurs dans array qui sont inférieures à array[rank]
 function inferiorValues(rank, array) {
 	var n = 0;
 	for (var i=0; i<array.length; i++) {
@@ -28,13 +28,16 @@ function inferiorValues(rank, array) {
 	return n;
 }
 
+//met à jour le tableau de rang en fonction des données
 function stat(data, rank) {
 	for (var i=0; i<10; i++) {
 		rank[i] = inferiorValues(i, data);
 	}
 }
 
+//fonction gérant l'agrandissement du tableau de la slide 4
 function zoomBoard(event) {
+	//on ajuste les paramètres en fonction de la situation initiale
 	var coef = 0;
 	var target = 1.5;
 	var delta = 0.1;
@@ -44,27 +47,35 @@ function zoomBoard(event) {
 		delta = -0.1;
 	}
 	
+	//on change l'état du tableau
 	boardZoomed = !boardZoomed;
 	
+	//on crée un timer pour rappeler la fonction régulièrement
 	var timer = setInterval(zoomer, 16, target, delta);
 	var targetWidth = 400;
 	
+	//selection des éléments importants
 	var chartDiv = document.getElementById("chartZone");
 	var boardZone = document.getElementById("boardZone");
+	var graph = document.getElementById("graph");
 	
+	//mise à jour des éléments
 	if (!boardZoomed) 
 	{
 		document.getElementById("filterSelector").style.display = "none";
 		document.getElementById("notifier").innerHTML = "Cliquez sur le tableau plour plus d'infos";
 		document.getElementById("Guy").style.display = "inline-block";
+		graph.style.display = "none";
 	}
 	else
 	{
 		document.getElementById("filterSelector").style.display = "inline-block";
 		document.getElementById("notifier").innerHTML = "Cliquez sur le nom d'une plateforme pour plus d'infos";
 		document.getElementById("Guy").style.display = "none";
+		graph.style.display = "inline-block";
 	}
 	
+	//scaling fluide du tableau
 	function zoomer(target, delta) {
 		if (Math.abs(coef-target) < 0.1) {
 			clearInterval(timer);
@@ -73,7 +84,6 @@ function zoomBoard(event) {
 			
 			boardZone.style.marginTop = target*10+"px";
 			boardZone.style.marginLeft = 10+target*5+"%";
-			chartDiv.style.width = target*670+"px";
 			boardZone.style.boxShadow = "0px 100px "+(target*100)+"px black";
 		} else {
 			coef += (target-coef)/4.0;
@@ -84,12 +94,12 @@ function zoomBoard(event) {
 			boardZone.style.marginTop = coef*10+"px";
 			boardZone.style.marginLeft = 10+coef*5+"%";
 
-			chartDiv.style.width = coef*670+"px";
 			boardZone.style.boxShadow = "0px 100px "+(coef*100)+"px black";
 		}
 	}
 }
 
+//change les données de la visualisation
 function updateData(data, rank) {	
 	x = d3.scale.linear()
 		.domain([0, d3.max(data)])
@@ -119,6 +129,7 @@ function updateData(data, rank) {
 		.text(function(d, i) { return plateform[i]; });
 };
 
+//interface de changement des données appelable depuis le html
 function changeData(event, newData, newUnit) {
 	unit = newUnit;
 	data = newData;
@@ -130,6 +141,7 @@ function changeData(event, newData, newUnit) {
 	}
 }
 
+//réorganise les rectangles par taille décroissante
 function changeHeight(rect, indice) {
 	d3.selectAll('rect')
 		.transition()
@@ -166,6 +178,7 @@ function changeHeight(rect, indice) {
 		
 }
 
+//initialisation des variables
 var space = " . . . . . . . ";
 
 var rank = [];
@@ -237,6 +250,7 @@ var circle2 = d3.select("#rotatingCircle2");
 
 console.log(x+" "+y);
 
+//rotation des cercles de la première slide
 setInterval(function() {
 	circle1.attr("transform", "rotate("+ i +", "+222+", "+222+")");
 	circle2.attr("transform", "rotate("+ -2*i +", "+230+", "+230+")");

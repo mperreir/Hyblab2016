@@ -6,12 +6,12 @@
 	<script src="lib/jquery.js"></script>
 	<script src="lib/fullpage.js"></script>
 	<script src="lib/d3.js"type="text/javascript"></script>
-	<link href="css/ring.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/Hyblab.css" rel="stylesheet">
 	<link href="lib/fullpage.css" rel="stylesheet">
 	<link rel="stylesheet" href="lib/colorbox.css" />
 	<script src="lib/jquery.colorbox.js"></script>
+	<link href="css/ring.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/Hyblab.css" rel="stylesheet">
 
 	<script type="text/javascript">
 		"use strict";
@@ -30,7 +30,9 @@
   <body>
 	  <div id="fullpage">
 		<div class="section" id="firstPage">
-			<div id="image">
+			<img id="jde" src="img/jde.svg">
+			<div id="titleZone">
+				<div id="image">
 				<div id="titleText">
 					LE <strong>CROWDFUNDING</strong> EQUITY </br>EN FRANCE
 				</div>
@@ -140,12 +142,13 @@
 				</g>
 				</svg>
 			</div>
+			</div>
+		
 		</div>
 		<div class="section" id="introduction">
 		</div>
 		<div class="section" id="definition">
 			<div class="slide">
-				
 				<div id="infosContainer">
 					<img src = "img/CIP.svg" id="CIP" href="#CIP_Definition">
 					<div class="bulleInfo" id="bulleInfo1" href="#crowdfunding">
@@ -175,7 +178,7 @@
 						
 						<div id="platform">
 							<div id="notifier">Cliquez sur le tableau plour plus d'infos</div>
-							<svg class="chart"></svg>
+							<svg id="graph" class="chart"></svg>
 							<script src="scripts/dynamic_chart.js"></script>
 						</div>
 					</div>
