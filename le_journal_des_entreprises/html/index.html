@@ -168,11 +168,11 @@
 				<div id="boardZone" onclick="zoomBoard(event);">
 					<div id="chartZone">
 						<div id="filterSelector">
-							<input type="radio" name="filter" onclick="changeData(event, subscribersCount, '')" checked> Adhérents
-							<input type="radio" name="filter" onclick="changeData(event, totalFunds, '€')"> Fonds totaux
-							<input type="radio" name="filter" onclick="changeData(event,  meanTicket, '€')"> Ticket moyen
-							<input type="radio" name="filter" onclick="changeData(event,  successRate, '%')"> Taux réussite
-							<input type="radio" name="filter" onclick="changeData(event,  acceptRate, '%')"> Taux acceptation
+							<input type="radio" id="radio1" name="filter" onclick="changeData(event, subscribersCount, '')" checked> <label for="radio1">Adhérents</label>
+							<input type="radio" id="radio2" name="filter" onclick="changeData(event, totalFunds, '€')"> <label for="radio2">Fonds totaux</label>
+							<input type="radio" id="radio3" name="filter" onclick="changeData(event,  meanTicket, '€')"> <label for="radio3">Ticket moyen</label>
+							<input type="radio" id="radio4" name="filter" onclick="changeData(event,  successRate, '%')"> <label for="radio4">Taux réussite</label>
+							<input type="radio" id="radio5" name="filter" onclick="changeData(event,  acceptRate, '%')"> <label for="radio5">Taux acceptation</label>
 						</div>
 						
 						
