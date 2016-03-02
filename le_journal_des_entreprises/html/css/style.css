@@ -206,3 +206,8 @@
 	margin-left: 200px;
 	margin-top: 100px;
 }
+
+div#notifier{
+	text-align: center;
+	padding: 65% 20%;
+}
