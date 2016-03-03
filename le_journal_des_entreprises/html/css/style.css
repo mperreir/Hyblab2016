@@ -5,15 +5,12 @@
 #fullpage {
 	width: 972px;
 	margin: auto;
-	/*min-width: 972px;*/
 }
 
 #firstPage {
 	background-image: url(../img/slide1_background.png);
 	background-repeat: repeat;
-	background-attachment: fixed;	
-	
-	height: 100%;
+	background-attachment: fixed;
 }
 
 
@@ -56,7 +53,7 @@
 	background-image: url(../img/slide_3.svg);
 	background-size: auto 100%;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: -500px center;
 }
 
 #infosContainer {
@@ -68,7 +65,7 @@
 	width: 100px;
 	height: 100px;
 	
-	margin-left: 15%;
+	margin-left: 8%;
 	margin-top: 5%;
 }
 
@@ -124,6 +121,7 @@
 	
 	width: 100%;
 	height: 100%;
+	
 }
 
 #boardZone {
@@ -137,6 +135,7 @@
 	
 	margin-top: 0%;
 	margin-left: 10%;
+	
 }
 
 #filterSelector {
@@ -185,9 +184,10 @@
 
 #ending {
 	background-image: url(../img/slide_7.svg);
-	background-size: auto 100%;
+	background-size:  auto 600px;
 	background-repeat: no-repeat;
-	background-position: center 0%;
+	background-position: center center;
+	background-color: rgb(0, 25, 40);
 }
 
 #CIP_Definition strong{
@@ -196,6 +196,11 @@
 
 #RedInCIP {
 	color: red;
+}
+
+#top10 {
+	background-size: auto 762px;
+	background-position: center center;
 }
 
 #Guy {
