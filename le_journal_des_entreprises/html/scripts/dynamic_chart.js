@@ -28,6 +28,7 @@ function inferiorValues(rank, array) {
 	return n;
 }
 
+
 //met à jour le tableau de rang en fonction des données
 function stat(data, rank) {
 	for (var i=0; i<10; i++) {
@@ -111,7 +112,7 @@ function updateData(data, rank) {
 		.duration(500)
 		.attr('opacity', 1)
 		.attr("width", x)
-		.attr("y", function(d, i) { return rank[i] * (barHeight + heightMargin); })
+		.attr("y", function(d, i) { return rank[i] * (barHeight + heightMargin); });
 		
 	chart.selectAll("text")
 		.data(data)
@@ -183,6 +184,8 @@ var space = " . . . . . . . ";
 
 var rank = [];
 var color = [];
+
+var colorChart = d3.scale.ordinal().range(["#D0AA71","#879BA8","#E6D9C2","#0B2D43","#D8D3CB","#0D2131","#CC9E53","#99A9B4","#DDB580","#113D56","#B17E49","#D8D3CB","#0D2131"]);
 var data = subscribersCount;
 stat(data, rank);
 
@@ -210,7 +213,8 @@ var bar = chart.selectAll("g")
 	.on("mouseover", function(d, i) {changeHeight(d3.select(this), i);})
 	.on("mouseleave", function(d, i) {changeData(null, data, unit);});
 
-
+alert(color);
+	
 bar.append("rect")
 	.attr("class", "chartRect")
 	.attr("width", x)
@@ -220,7 +224,11 @@ bar.append("rect")
 	.attr("y", function(d, i) { return rank[i] * (barHeight+heightMargin); })
 	.attr("id", function(d, i) {return "col"+plateformId[i]})
 	.attr("href", function(d, i) {return "#infos_"+plateformId[i]})
-	.style('boxShadow', '0px 5px 30px');
+	.attr({
+			'fill': function (d, i) {
+				return colorChart(i);
+			}
+		});
 
 bar.append("text")
 	.attr("x", 10)
