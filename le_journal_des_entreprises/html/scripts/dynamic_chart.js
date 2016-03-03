@@ -212,8 +212,6 @@ var bar = chart.selectAll("g")
 	.attr("transform", "translate(" + (margin.left) + "," + margin.top + ")")
 	.on("mouseover", function(d, i) {changeHeight(d3.select(this), i);})
 	.on("mouseleave", function(d, i) {changeData(null, data, unit);});
-
-alert(color);
 	
 bar.append("rect")
 	.attr("class", "chartRect")
@@ -255,8 +253,6 @@ var y = heightScreen/2;
 
 var circle1 = d3.select("#rotatingCircle1");
 var circle2 = d3.select("#rotatingCircle2");
-
-console.log(x+" "+y);
 
 //rotation des cercles de la première slide
 setInterval(function() {
