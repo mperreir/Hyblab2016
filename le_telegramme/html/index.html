@@ -17,7 +17,7 @@
           <div class="container-fluid" id="status">
             <div class="row js-scrollTo" id="page1">
               <section class="col-md-3 col-sm-3 col-xs-3"><img src="img/accueil.png" alt="Image accueil" id="img_accueil"/></section>
-              <section class="col-md-6 col-sm-7 col-xs-6" id="p1_middle">
+              <section class="col-md-6 col-sm-7 col-xs-8" id="p1_middle">
                 <h4 id="p1_titre">BREST RENAÎT DE SES CENDRES</h4>
                 <p id="p1_contenu">
                   Rasé, terne ou encore grise : de multiples adjectifs sont utilisés pour
@@ -30,6 +30,13 @@
                   témoignages, nous vous donnons les clés pour vous faire un avis sur
                   cette question.
                 </p>
+                <p id="screen_msg">
+                  Bonjour, afin de l'expérience plus agréable, le contenu du site n'est accessible qu'à partir d'appareils de types
+                  tablette ou ordinateurs disposant d'écran plus larges.
+                  Nous vous invitons donc à vous reconnectez, depuis un des appareils cités plus haut pour profiter de l'expérience
+                  au maximum.
+                  Merci et à très bientôt.
+                </p>
                 <p id="demarrer">
                   <a class="js-scrollTo" href="#page2" id="btn_demarrer">Vivez avec nous la renaissance de Brest</a>
                 </p>
@@ -37,7 +44,7 @@
                     <progress value="0" max="100" id="barre_progression"></progress>
                 </p>
               </section>
-              <section class="col-md-3 col-sm-3 col-xs-3"></section>
+              <section class="col-md-3 col-sm-3 col-xs-1"></section>
             </div>
           </div>
       </div>
@@ -279,12 +286,14 @@
       <!-- Preloader -->
       <script type="text/javascript">
           //<![CDATA[
-              $(window).load(function() { // makes sure the whole site is loaded
-                  setInterval(function() {
-                    $('#status').fadeOut('slow'); // will first fade out the loading animation
-                    $('#preloader').fadeOut('slow'); // will fade out the white DIV that covers the website.
-                  }, 14000);
-              });
+          if ($(document).width() > 767) {
+            $(window).load(function() { // makes sure the whole site is loaded
+                setInterval(function() {
+                  $('#status').fadeOut('slow'); // will first fade out the loading animation
+                  $('#preloader').fadeOut('slow'); // will fade out the white DIV that covers the website.
+                }, 15000);
+            });
+          }
           //]]>
       </script>
       <script type="text/javascript">
