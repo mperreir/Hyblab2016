@@ -22,19 +22,20 @@ var ugo_description = ["La société Huso, par le biais de la plateforme Wiseed 
 
 //Tableau de définition des tailles, positions et couleurs des bulles
 var ugo_data = [
-    {"x":800,"y":100,"r":12 + "%","color":"#CC9E53","name":ugo_nom_projet[0],"ugo_id":0,"funds":ugo_fonds[0],"descr":ugo_description[0]},
-    {"x":150,"y":120,"r":ugo_fonds[1]/160000 + "%","color":"#879BA8","name":ugo_nom_projet[1],"ugo_id":1,"funds":ugo_fonds[1],"descr":ugo_description[1]},
-    {"x":400,"y":300,"r":ugo_fonds[2]/160000 + "%","color":"#0B2D4F","name":ugo_nom_projet[2],"ugo_id":2,"funds":ugo_fonds[2],"descr":ugo_description[2]},
-    {"x":150,"y":400,"r":ugo_fonds[3]/160000 + "%","color":"#879BA8","name":ugo_nom_projet[3],"ugo_id":3,"funds":ugo_fonds[3],"descr":ugo_description[3]},
-    {"x":320,"y":110,"r":ugo_fonds[4]/160000 + "%","color":"#879BA8","name":ugo_nom_projet[4],"ugo_id":4,"funds":ugo_fonds[4],"descr":ugo_description[4]},
-    {"x":70,"y":250,"r":ugo_fonds[5]/160000 + "%","color":"#0B2D4F","name":ugo_nom_projet[5],"ugo_id":5,"funds":ugo_fonds[5],"descr":ugo_description[5]},
-    {"x":280,"y":450,"r":ugo_fonds[6]/160000 + "%","color":"#0D2131","name":ugo_nom_projet[6],"ugo_id":6,"funds":ugo_fonds[6],"descr":ugo_description[6]},
-    {"x":200,"y":280,"r":ugo_fonds[7]/160000 + "%","color":"#0B2D4F","name":ugo_nom_projet[7],"ugo_id":7,"funds":ugo_fonds[7],"descr":ugo_description[7]},
-    {"x":480,"y":150,"r":ugo_fonds[8]/160000 + "%","color":"#113D6F","name":ugo_nom_projet[8],"ugo_id":8,"funds":ugo_fonds[8],"descr":ugo_description[8]},
-    {"x":50,"y":480,"r":ugo_fonds[9]/160000 + "%","color":"#0D2131","name":ugo_nom_projet[9],"ugo_id":9,"funds":ugo_fonds[9],"descr":ugo_description[9]}
+    {"x":660,"y":75,"r":12 + "%","color":"#CC9E53","name":ugo_nom_projet[0],"ugo_id":0,"funds":ugo_fonds[0],"descr":ugo_description[0]},
+    {"x":100,"y":85,"r":ugo_fonds[1]/160000 + "%","color":"#879BA8","name":ugo_nom_projet[1],"ugo_id":1,"funds":ugo_fonds[1],"descr":ugo_description[1]},
+    {"x":350,"y":220,"r":ugo_fonds[2]/160000 + "%","color":"#0B2D4F","name":ugo_nom_projet[2],"ugo_id":2,"funds":ugo_fonds[2],"descr":ugo_description[2]},
+    {"x":100,"y":320,"r":ugo_fonds[3]/160000 + "%","color":"#879BA8","name":ugo_nom_projet[3],"ugo_id":3,"funds":ugo_fonds[3],"descr":ugo_description[3]},
+    {"x":270,"y":60,"r":ugo_fonds[4]/160000 + "%","color":"#879BA8","name":ugo_nom_projet[4],"ugo_id":4,"funds":ugo_fonds[4],"descr":ugo_description[4]},
+    {"x":50,"y":200,"r":ugo_fonds[5]/160000 + "%","color":"#0B2D4F","name":ugo_nom_projet[5],"ugo_id":5,"funds":ugo_fonds[5],"descr":ugo_description[5]},
+    {"x":230,"y":300,"r":ugo_fonds[6]/160000 + "%","color":"#0D2131","name":ugo_nom_projet[6],"ugo_id":6,"funds":ugo_fonds[6],"descr":ugo_description[6]},
+    {"x":200,"y":180,"r":ugo_fonds[7]/160000 + "%","color":"#0B2D4F","name":ugo_nom_projet[7],"ugo_id":7,"funds":ugo_fonds[7],"descr":ugo_description[7]},
+    {"x":430,"y":100,"r":ugo_fonds[8]/160000 + "%","color":"#113D6F","name":ugo_nom_projet[8],"ugo_id":8,"funds":ugo_fonds[8],"descr":ugo_description[8]},
+    {"x":320,"y":350,"r":ugo_fonds[9]/160000 + "%","color":"#0D2131","name":ugo_nom_projet[9],"ugo_id":9,"funds":ugo_fonds[9],"descr":ugo_description[9]}
 ];
 
-//Fonction d'affichage des infos sur la bulle sélectionnée
+/*Fonction d'affichage des infos sur la bulle sélectionnée
+ - ugo_id : id de la bulle sélectionnée */
 function display(ugo_id) {
 	d3.select("#titre").text(function() {return ugo_nom_projet[ugo_id]});
 	d3.select("#fonds_leves").text(function() {return ugo_fonds[ugo_id] + " €"});
@@ -114,7 +115,7 @@ function growCircle() {
 			.attr("r", 30 + "%")
 			//Mouvement vers la position d'affichage
 			.attr("transform", function(d) {
-				return "translate (" + (0 - d.x + 250) + "," + (0 - d.y + 290) + ")";
+				return "translate (" + (0 - d.x + 200) + "," + (0 - d.y + 200) + ")";
 			})
 			.style("opacity",1) //Au cas où on aurait cliqué sur une bulle rendue transparente, on la rend de nouveau opaque
 			
@@ -141,15 +142,7 @@ var nodes = svg.selectAll(".node")
    .enter()
      .append("g")
      .attr("class","node")
-     .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")"; }) 
-	 .on("mouseover", function() {
-	 	d3.select(this).style("opacity", 0.8);
-	 })
-	 //Réinitialisation de l'opacité quand la souris s'éloigne
-	 .on("mouseleave", function() {
-	 	d3.select(this).style("opacity", 1);
-	 });
-;
+     .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")"; });
 
 //Déclaration des bulles au dessus de chaque point
 nodes.append("circle")
@@ -161,7 +154,14 @@ nodes.append("circle")
 	 .attr("ugo_id", function(d){return d.ugo_id;})
 	 .on("click", growCircle)
 	 //Légère réduction de l'opacité au passage de la souris
-	
+	 .on("mouseover", function() {
+	 	d3.select(this).style("opacity", 0.8);
+	 })
+	 //Réinitialisation de l'opacité quand la souris s'éloigne
+	 .on("mouseleave", function() {
+	 	d3.select(this).style("opacity", 1);
+	 });
+
 //Déclaration du texte des bulles
 nodes.append("text")
       .attr("dy", ".3em")

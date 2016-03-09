@@ -1,16 +1,26 @@
-#ecran_bulles {
+#podcasts {
+	position:absolute;
+	height:30px;
+	width:10%;
+	margin-left:46%;
+	margin-top:2.5%;
+}
+
+#img_podcasts {
+	width:30%;
 	height:100%;
-	width:57.5%;
-	margin-left:21.5%;
-	margin-top:0%;
+}
+
+#ecran_bulles {
+	height:800px;
 	background-image:url(../img/screenData.svg);
 	background-repeat:no-repeat;
-	background-size:100% auto;
+	background-position-x: center;
+    background-position-y: center;
 }
 
 #ecran_video {
 	height:100%;
-	margin-top:0%;
 	background-image:url(../img/screenYoutube.svg);
 	background-repeat:no-repeat;
 	background-position-x: center;
@@ -18,13 +28,12 @@
 }
 
 #bubulles {
-	position:relative;
-	width:88.5%;
-	height:52%;
-	margin-top:8%;
-	margin-left:4.2%;
-	display:inline-block;
-}
+	position:absolute;
+	width:760px;
+	height:420px;
+	margin-top:97px;
+	margin-left:93px;
+}*
 
 #video {
     position: relative;
@@ -43,16 +52,15 @@
 	margin-left:55%;
 	margin-top:20%;
 	border:solid #D0AA6D 1px;
-	font-size:0.73vw;
+	font-size:68%;
 	font-family:futura;
 }
 
 #contenu {
 	position:absolute;
 	width:31%;
-	margin-top:20%;
+	margin-top:15%;
 	margin-left:10%;
-	font-size:1.2vw;
 	text-align:center;
 }
 
