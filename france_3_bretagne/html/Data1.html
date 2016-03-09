@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Notre page est en français -->
+  <head>
+    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+    <meta charset="utf-8">
+    <title>Hyblab 2016</title>
+    <!-- Déclaration de la feuille de style du document-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="lib/fancybox/lib/jquery-1.10.1.min.js"></script>
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="lib/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="lib/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+    <!-- Add Thumbnail helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="lib/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <script type="text/javascript" src="lib/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+    <!--Scripts pour la data2 -->
+    <script src="d3.min.js"></script>
+    <script src="d3.tip.v0.6.3.js"></script>
+
+    <!--script de la lightbox -->
+    <script src="data3.js"></script>
+
+
+  </head>
+  <body>
+    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
+    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
+    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+    <div id="container">
+      <section id="data1">
+        <h3 id="titre_data1">Airbnb à l’assaut de la côte d’Emeraude</h3>
+        <h4 id="st_data1"></h4>
+
+        <!-- Data1 -->
+        <div id='art_carte'>
+          <canvas id="canvasCarte" height="850" width="750">
+            Sorry, your browser does not support canvas.
+          </canvas>
+
+          <canvas id="canvasLegende" height="850" width="750">
+            Sorry, your browser does not support canvas.
+          </canvas>
+
+          <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute" width="850" height="750">
+
+            <!-- Nombre de logements -->
+            <circle class="lgt" cx="416px" cy="682px" r="20px" id="lgt_dinan" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_lgt_dinan');"/>
+            <circle class="lgt" cx="385px" cy="301px" r="28px" id="lgt_dinard" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_lgt_dinard');"/>
+            <circle class="lgt" cx="269" cy="327" r="14px" id="lgt_stbriac" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_lgt_stbriac');"/>
+            <circle class="lgt" cx="687" cy="190" r="20px" id="lgt_cancale" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_lgt_cancale');"/>
+            <circle class="lgt" cx="442" cy="267" r="56px" id="lgt_stmalo" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_lgt_stmalo');"/>
+
+            <!-- Prix moyens -->
+            <circle class="prix" cx="416px" cy="682px" r="28" id="pxmoyen_dinan" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_prix_dinan');"/>
+            <circle class="prix" cx="385px" cy="301px" r="35" id="pxmoyen_dinard" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_prix_dinard');"/>
+            <circle class="prix" cx="269" cy="327" r="50" id="pxmoyen_stbriac" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_prix_stbriac');"/>
+            <circle class="prix" cx="687" cy="190" r="29" id="pxmoyen_cancale" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_prix_cancale');"/>
+            <circle class="prix" cx="442" cy="267" r="25" id="pxmoyen_stmalo" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_prix_stmalo');"/>
+
+            <!-- Capacité d'accueil -->
+            <circle class="capa" cx="416px" cy="682px" r="28" id="capa_dinan" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_capa_dinan');"/>
+            <circle class="capa" cx="385px" cy="301px" r="32" id="capa_dinard" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_capa_dinard');"/>
+            <circle class="capa" cx="269" cy="327" r="39" id="capa_stbriac" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_capa_stbriac');"/>
+            <circle class="capa" cx="687" cy="190" r="34" id="capa_cancale" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_capa_cancale');"/>
+            <circle class="capa" cx="442" cy="267" r="30" id="capa_stmalo" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();" onclick="showNumbers('img_capa_stmalo');"/>
+
+            <!-- Boutons switch -->
+            <circle id="capa_ext" class="bouton_capa" cx="677" cy="508" r="20" onclick="showCircles('capa');selectButton(this);" onmouseover="initDrawCircle(this);"onmouseout="clearCanvas();"/>
+
+
+            <circle id="prx_ext" class="bouton_prx" cx="677" cy="558" r="20" onclick="showCircles('prix');selectButton(this);" onmouseover="initDrawCircle(this);"onmouseout="clearCanvas();"/>
+
+            <circle id="lgt_ext" class="bouton_lgt" cx="677" cy="608" r="20" onclick="showCircles('lgt');selectButton(this);" onmouseover="initDrawCircle(this);" onmouseout="clearCanvas();"/>
+
+            <!-- carte + images -->
+
+            <img src="images/fondcarte.png" id="carte" alt="carte" >
+
+            <img id="text_capa" class="bouton_capa" src="images/typo-lien-capacite.png" alt="Bouton capacité" onclick="showCircles('capa');selectButton(document.getElementById('capa_ext'));" onmouseover="initDrawCircle(document.getElementById('capa_ext'));"onmouseout="clearCanvas();">
+            <img id="text_prx" class="bouton_prx" src="images/typo-lien-pxmoyen.png" alt="Bouton prix" onclick="showCircles('prix');selectButton(document.getElementById('prx_ext'));" onmouseover="initDrawCircle(document.getElementById('prx_ext'));"onmouseout="clearCanvas();">
+            <img id="text_lgt" class="bouton_lgt" src="images/typo-lien-lgt.png" alt="Bouton nb logements" onclick="showCircles('lgt');selectButton(document.getElementById('lgt_ext'));" onmouseover="initDrawCircle(document.getElementById('lgt_ext'));"onmouseout="clearCanvas();">
+
+            <!-- chiffres logements -->
+            <img id="img_lgt_dinan" class="chiffres" src="images/nbre-lgt-dinan.png">
+            <img id="img_lgt_dinard" class="chiffres" src="images/nbre-lgt-dinard.png">
+            <img id="img_lgt_stbriac" class="chiffres" src="images/nbre-lgt-stbriac.png">
+            <img id="img_lgt_cancale" class="chiffres" src="images/nbre-lgt-cancale.png">
+            <img id="img_lgt_stmalo" class="chiffres" src="images/nbre-lgt-stmalo.png">
+
+            <img id="img_prix_dinan" class="chiffres" src="images/nbre-px-dinan.png">
+            <img id="img_prix_dinard" class="chiffres" src="images/nbre-px-dinard.png">
+            <img id="img_prix_stbriac" class="chiffres" src="images/nbre-px-stbriac.png">
+            <img id="img_prix_cancale" class="chiffres" src="images/nbre-px-cancale.png">
+            <img id="img_prix_stmalo" class="chiffres" src="images/nbre-px-stmalo.png">
+
+            <img id="img_capa_dinan" class="chiffres" src="images/nbre-capacite-dinan.png">
+            <img id="img_capa_dinard" class="chiffres" src="images/nbre-capacite-dinard.png">
+            <img id="img_capa_stbriac" class="chiffres" src="images/nbre-capacite-stbriac.png">
+            <img id="img_capa_cancale" class="chiffres" src="images/nbre-capacite-cancale.png">
+            <img id="img_capa_stmalo" class="chiffres" src="images/nbre-capacite-stmalo.png">
+
+
+
+
+          </svg>
+
+
+        </div>
+
+        <div id="jauges">
+
+          <!-- Jauges -->
+
+
+
+          <img src="images/DATA1-JAUGES-PRIX.png" id="jauge_prix" class="jauges1"/>
+          <img src="images/DATA1-JAUGES-CAPACITE.png" id="jauge_capa" class="jauges1"/> <br/>
+
+          <button id="prix_moyen" class="button button--naira1 button--border-thick button--text-thick button--size-s" onclick="showJauge('prix_moyen');"><span>Prix moyen</span></button>
+          <button id="capa_moyenne" class="button button--naira1 button--border-thick button--text-thick button--size-s" onclick="showJauge('capa_moyenne');"><span id="text_button_capa">Capacité<br/> d'accueil moyenne</span></button>
+
+        </div>
+
+        <div id="explications">
+          <p>
+            Le pays de Saint-Malo est une vraie aubaine pour la société Airbnb. On compte d'ailleurs presque 1000 logements répartis sur les villes principales de la Côte d'Emeraude (Saint-Briac-sur-Mer, Dinard, Dinan, Saint-Malo, Cancale). Plus de la moitié des annonces se situent sur Saint-Malo, suivie par Dinard avec 147 offres. <br/>
+            La large variété d'habitations fait que les prix sont très contrastés, allant de 14 euros pour une simple chambre à 5848 euros pour un manoir. Saint-Malo reste la ville la plus accessible, en terme de prix, dû au nombre conséquent de chambres "privées" ou "partagées" proposées. Il est d'ailleurs possible de passer une nuit dans la cité corsaire pour seulement 14 euros. <br/>
+            A l'inverse, les logements sont plus chers à Saint-Briac-sur-Mer (139,8 euros) car la capacité d'accueil atteint 7 personnes en moyenne. En général, les hébergements Airbnb peuvent accueillir entre 4 et 5 personnes dans le pays de Saint-Malo. Pour résumer, des logements en tous genres (voire même insolites) à des prix variés sont disponibles. On peut dire qu'Airbnb met tout en œuvre pour que ses clients trouvent leur bonheur sur la Côte d'Emeraude. <br/>
+          </p>
+
+        </div>
+
+        <!-- Script de la data 1 -->
+        <script src="data1.js"></script>
+
+      </section>
+    </div>
+  </body>
+</html>

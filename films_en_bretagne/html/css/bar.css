@@ -1,0 +1,103 @@
+#Region4.bar,#Region2.bar,#Region3.bar{
+  background:#A77548;
+  margin-top: 0em;
+}
+#Province2.bar,#Province3.bar,#Province4.bar{
+  background: #9393CC;
+  margin-top: 0em;
+  margin-bottom:0em;
+}
+#IDF2.bar,#IDF3.bar,#IDF4.bar{
+   background: #5D5DA5;
+  margin: 0em;
+}
+#Deux,#Trois,#Quatre{
+  display:inline-block;
+  max-height:0%;
+  max-width:0%;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Montserrat", sans-serif;
+  padding: 2px;
+  margin-left:3%;
+  margin-top:0%;
+}
+#bar2{
+  max-height:30%;
+  display:inline-block;
+}
+#bar3{
+  top:0%;
+  max-height:30%;
+  display:inline-block;
+}
+#bar4{
+  top:0%;
+  max-height:30%;
+  display:inline-block;
+}
+#histogramme{
+  position:relative;
+  width:85%;
+  height:70%;
+  max-height:80%;
+  left: 0%;
+  top: 0%;
+}
+#titre2{
+    position:relative;
+    display:inline-block;
+    width:15%;
+    height:12%;
+    font-family: 'Lato_Regular', sans-serif;
+    font-size:1.7em;
+    vertical-align:50%;
+}
+
+#titre3{
+    position: relative;
+    display:inline-block;
+    width:15%;
+    height:12%;
+    top: 0%;
+    left: 0%;
+    font-family: 'Lato_Regular', sans-serif;
+    font-size:1.7em;
+    vertical-align:50%;
+}
+#titre4{
+    position: relative;
+    display:inline-block;
+    width:15%;
+    max-height:12%;
+    top:0%;
+    left: 0%;
+    font-family: 'Lato_Regular', sans-serif;
+    font-size:1.7em;
+    vertical-align:50%;
+}
+.bar
+{
+  width: 0;
+  position: relative;
+  transition: width 2s, background .2s;
+  -webkit-transform: translate3d(0, 0, 0);
+  clear: both;
+  font-size: .75em;
+  padding: 0.75em;
+  width: 5em;/* Taille*/
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+}
+
+.count {
+  position: absolute;
+  right: .25em;
+  top: .1em;
+  padding: .15em;
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+}

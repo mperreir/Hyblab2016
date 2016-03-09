@@ -1,30 +1,346 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-  </head>
+<html>
+<head>
+  <title>Métagramme</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/accueilstyle.css">
+  <link rel="stylesheet" type="text/css" href="lib/simplelightbox-master/dist/simplelightbox.css">
+</head>
   <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+      <!-- Preloader -->
+      <div id="preloader">
+          <div class="container-fluid" id="status">
+            <div class="row js-scrollTo" id="page1">
+              <section class="col-md-3 col-sm-3 col-xs-3"><img src="img/accueil.png" alt="Image accueil" id="img_accueil"/></section>
+              <section class="col-md-6 col-sm-7 col-xs-8" id="p1_middle">
+                <h4 id="p1_titre">BREST RENAÎT DE SES CENDRES</h4>
+                <p id="p1_contenu">
+                  Rasé, terne ou encore grise : de multiples adjectifs sont utilisés pour
+                  qualifier Brest depuis 60 ans. Cependant, les Brestois sont unanimes
+                  pour affirmer qu’aujourd’hui et depuis 15 ans, Brest se métamorphose !
+                  La création de nouveaux aménagements urbains, économiques et de
+                  loisirs offrent un nouveau souffle à la ville, lui redonnent des couleurs
+                  et lui confèrent une nouvelle image. Meilleure ? Pour certains oui pour
+                  d’autres non. Aujourd’hui,  à travers les données récoltées et de vos
+                  témoignages, nous vous donnons les clés pour vous faire un avis sur
+                  cette question.
+                </p>
+                <p id="screen_msg">
+                  Bonjour, afin de l'expérience plus agréable, le contenu du site n'est accessible qu'à partir d'appareils de types
+                  tablette ou ordinateurs disposant d'écran plus larges.
+                  Nous vous invitons donc à vous reconnectez, depuis un des appareils cités plus haut pour profiter de l'expérience
+                  au maximum.
+                  Merci et à très bientôt.
+                </p>
+                <p id="demarrer">
+                  <a class="js-scrollTo" href="#page2" id="btn_demarrer">Vivez avec nous la renaissance de Brest</a>
+                </p>
+                <p>
+                    <progress value="0" max="100" id="barre_progression"></progress>
+                </p>
+              </section>
+              <section class="col-md-3 col-sm-3 col-xs-1"></section>
+            </div>
+          </div>
+      </div>
+      <!-- End Preloader -->
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-      <h1>Hyblab 2016</h1>
-    </header>
 
-    <!-- Le contenu du site -->
-    <p>replace this content by your web app !</p>
+      <!-- Container -->
+      <div class="container-fluid">
+        <div id="container" class="row">
 
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2016</p>
-    </footer>
-    </div>
+          <!-- Navigation -->
+          <div class="col-md-1 col-sm-1 sidebar" id="navbar_left">
+              <ul class="nav nav-sidebar vertical-center" id="left">
+                <li id="menu1" class="text-center text-uppercase active">
+                  <a href="#">ça pousse</a>
+                </li>
+                <li id="menu2" class="text-center text-uppercase">
+                  <a href="#">10 éclosions</a>
+                </li>
+                <li id="menu3" class="text-center text-uppercase">
+                  <a href="#">Top / Flop</a>
+                </li>
+                <li id="menu4" class="text-center text-uppercase">
+                  <a id="chieur" href="#"><img src="img/ico/bouton_info.png"></a>
+                </li>
+              </ul>
+          </div>
+
+          <!-- Panel Middle -->
+          <div class="col-md-4 col-sm-4" id="middle">
+
+              <!-- Middle panel navbar -->
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" id="submenu">
+                  <li class="col-md-4 col-sm-4 active_j" id="submenu1">
+                    <a href="#"><img src="img/pictos/edito.png"> Gazette</a>
+                  </li>
+                  <li class="col-md-4 col-sm-4 noactive_j" id="submenu2">
+                    <a href="#"><img src="img/pictos/sondage.png"> Votre avis</a>
+                  </li>
+                  <li class="col-md-4 col-sm-4 noactive_j" id="submenu3">
+                    <a href="#"><img src="img/pictos/photo.png"> Photos</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Middle panel content -->
+
+              <!-- DEBUT CA POUSSE -->
+              <div id="ca_pousse_edito" class="mp_content">
+                <div class="mp_header">
+                  <p class="text-center text-uppercase">ça pousse !</p>
+                </div>
+
+                <p class="mp_intro">
+                  Des zones industrielles, des ports, des lotissements, des
+                  quartiers, un stade, des ensembles immobiliers… des
+                  milliers de nouveaux bâtiments ont vu le jour entre 2000
+                  et 2015. Métamorphosant en profondeur Brest et les
+                  sept communes de la métropole.
+                </p>
+
+                <img src="img/ca_pousse_edito.png">
+              </div>
+
+              <div id="ca_pousse_sondage" class="mp_sondage">
+                <img class="header_sondage" src="img/question_ca_pousse.png">
+                <img class="sondage" src="img/ca_pousse_sondage.gif">
+                <div id="comments_1" class="commentaire">
+                    <p id="comment1">Centre-ville beaucoup plus agréable avec l'arrivée du tram </p>
+                    <p id="sexe1">Un homme, 37</p>
+                </div>
+              </div>
+
+              <div id="ca_pousse_photos" class="mp_content">
+                <div class="gallery">
+                  <a href="img/brest/ca_pousse/fullsize/bellevue.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/bellevue.jpg" alt="" title="Bellevue" /></a>
+                  <a href="img/brest/ca_pousse/fullsize/capucins.jpg"><img src="img/brest/ca_pousse/miniatures/capucins.jpg" alt="" title="Capucins"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/gouesnou.jpg"><img src="img/brest/ca_pousse/miniatures/gouesnou.jpg" alt="" title="Gouesnou"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/guipavas.jpg"><img src="img/brest/ca_pousse/miniatures/guipavas.jpg" alt="" title="Guipavas"/></a>
+                  <div class="clear"></div>
+
+                  <a href="img/brest/ca_pousse/fullsize/lambezellec.jpg"><img src="img/brest/ca_pousse/miniatures/lambezellec.jpg" alt="" title="Lambezellec"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/plougastel.jpg"><img src="img/brest/ca_pousse/miniatures/plougastel.jpg" alt="" title="Plougastel"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/plouzan+.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/plouzan+.jpg" alt="" title="Plouzan"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/pontanezen.jpg"><img src="img/brest/ca_pousse/miniatures/pontanezen.jpg" alt="" title="Pontanezen"/></a>
+                  <div class="clear"></div>
+
+                  <a href="img/brest/ca_pousse/fullsize/pontrecou.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/pontrecou.jpg" alt="" title="Pontrecou"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/relecq.jpg"><img src="img/brest/ca_pousse/miniatures/relecq.jpg" alt="" title="Relecq"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/saintmarc.jpg"><img src="img/brest/ca_pousse/miniatures/saintmarc.jpg" alt="" title="Saintmarc"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/technopole.jpg"><img src="img/brest/ca_pousse/miniatures/technopole.jpg" alt="" title="Technopole"/></a>
+                  <div class="clear"></div>
+                </div>
+              </div>
+
+              <!--  FIN  CA POUSSE  -->
+
+              <!-- DEBUT ECLOSIONS -->
+              <div id="eclosions_edito" class="mp_content">
+                <div id="header_eclosions">
+                  <p class="text-center text-uppercase">10 éclosions</p>
+                </div>
+
+                <p class="mp_intro">
+                  Brest renaît et avec elle, de grands projets fleurissent.
+                  Précurseurs de la métamorphose, le multiplex
+                  Liberté fut le premier projet à sortir de terre
+                  en 2005. Par la suite, d’autres équipements loisir
+                  se développent, comme la Carène ou le Brest
+                  Arena. L’inauguration du tramway, plébiscité par
+                  les Brestois, est le plus grand projet érigé par la
+                  ville. Celui-ci a d’ailleurs engendré la réhabilitation
+                  de Pontanezen. L’aéroport et le téléphérique ont
+                  accompagné cette révolution des transports. <br> <br>
+                  Les projets comme celui du port, de la zone Froutven
+                  et du Polder ont renforcé l’attractivité du territoire.
+                  Ces projets font de Brest une ville qui tend vers
+                  une métropole d’envergure.
+                </p>
+
+                <img src="img/eclosions_edito.png">
+              </div>
+
+              <div id="eclosions_sondage" class="mp_sondage">
+                <img class="header_sondage" src="img/question_eclosions.png">
+                <img class="sondage" src="img/eclosions_sondage.gif">
+                <!-- <img class="commentaire_sondage" src="img/commentaire_eclosions.png"> -->
+
+                <div id="comments_2" class="commentaire">
+                    <p id="comment2">Centre-ville beaucoup plus agréable avec l'arrivée du tram </p>
+                    <p id="sexe2">Un homme, 37</p>
+                </div>
+              </div>
+
+              <div id="eclosions_photos" class="mp_content">
+                <div class="gallery">
+                  <a href="img/brest/ca_pousse/fullsize/bellevue.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/bellevue.jpg" alt="" title="Bellevue" /></a>
+                  <a href="img/brest/ca_pousse/fullsize/capucins.jpg"><img src="img/brest/ca_pousse/miniatures/capucins.jpg" alt="" title="Capucins"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/gouesnou.jpg"><img src="img/brest/ca_pousse/miniatures/gouesnou.jpg" alt="" title="Gouesnou"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/guipavas.jpg"><img src="img/brest/ca_pousse/miniatures/guipavas.jpg" alt="" title="Guipavas"/></a>
+                  <div class="clear"></div>
+
+                  <a href="img/brest/ca_pousse/fullsize/lambezellec.jpg"><img src="img/brest/ca_pousse/miniatures/lambezellec.jpg" alt="" title="Lambezellec"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/plougastel.jpg"><img src="img/brest/ca_pousse/miniatures/plougastel.jpg" alt="" title="Plougastel"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/plouzan+.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/plouzan+.jpg" alt="" title="Plouzan"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/pontanezen.jpg"><img src="img/brest/ca_pousse/miniatures/pontanezen.jpg" alt="" title="Pontanezen"/></a>
+                  <div class="clear"></div>
+
+                  <a href="img/brest/ca_pousse/fullsize/pontrecou.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/pontrecou.jpg" alt="" title="Pontrecou"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/relecq.jpg"><img src="img/brest/ca_pousse/miniatures/relecq.jpg" alt="" title="Relecq"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/saintmarc.jpg"><img src="img/brest/ca_pousse/miniatures/saintmarc.jpg" alt="" title="Saintmarc"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/technopole.jpg"><img src="img/brest/ca_pousse/miniatures/technopole.jpg" alt="" title="Technopole"/></a>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <!-- FIN ECLOSIONS -->
+
+
+              <!-- DEBUT QUARTIERS -->
+              <div id="quartiers_edito" class="mp_content">
+                <div id="header_quartiers">
+                  <p class="text-center text-uppercase">Top / Flop</p>
+                </div>
+
+                <p class="mp_intro">
+                  Deux tiers des bâtiments construits entre 2000 et
+                  2015 sur le territoire de Brest Métropole l’ont été
+                  dans les communes de la première couronne. Le
+                  Relecq-Kerhuon et Plougastel-Daoulas caracolent
+                  en tête des territoires les plus fertiles du
+                  siècle. Ce qui démontre bien, si cela était encore
+                  nécessaire, une lourde tendance à l’étalement
+                  urbain. <br> <br>
+                  Et à Brest mêm’, comme on dit dans le coin ? Le
+                  changement se concentre toujours sur les exté-
+                  rieurs avec comme principales métamorphoses :
+                  La Cavale-Blanche, Saint-Pierre, Kergaradec et
+                  Bellevue. A noter que les trois quartiers qui ont le
+                  moins évolué sur la période sont le Bouguen, Kerinou
+                  et le Centre-Siam.
+                </p>
+
+                <img src="img/quartiers_edito.png" id="brestmem">
+              </div>
+
+              <div id="quartiers_sondage" class="mp_sondage">
+                <img class="header_sondage" src="img/question_quartiers.png">
+                <img class="sondage" src="img/quartiers_sondage.gif">
+              </div>
+
+              <div id="quartiers_photos" class="mp_content">
+                <div class="gallery">
+                  <a href="img/brest/ca_pousse/fullsize/bellevue.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/bellevue.jpg" alt="" title="Bellevue" /></a>
+                  <a href="img/brest/ca_pousse/fullsize/capucins.jpg"><img src="img/brest/ca_pousse/miniatures/capucins.jpg" alt="" title="Capucins"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/gouesnou.jpg"><img src="img/brest/ca_pousse/miniatures/gouesnou.jpg" alt="" title="Gouesnou"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/guipavas.jpg"><img src="img/brest/ca_pousse/miniatures/guipavas.jpg" alt="" title="Guipavas"/></a>
+                  <div class="clear"></div>
+
+                  <a href="img/brest/ca_pousse/fullsize/lambezellec.jpg"><img src="img/brest/ca_pousse/miniatures/lambezellec.jpg" alt="" title="Lambezellec"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/plougastel.jpg"><img src="img/brest/ca_pousse/miniatures/plougastel.jpg" alt="" title="Plougastel"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/plouzan+.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/plouzan+.jpg" alt="" title="Plouzan"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/pontanezen.jpg"><img src="img/brest/ca_pousse/miniatures/pontanezen.jpg" alt="" title="Pontanezen"/></a>
+                  <div class="clear"></div>
+
+                  <a href="img/brest/ca_pousse/fullsize/pontrecou.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/pontrecou.jpg" alt="" title="Pontrecou"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/relecq.jpg"><img src="img/brest/ca_pousse/miniatures/relecq.jpg" alt="" title="Relecq"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/saintmarc.jpg"><img src="img/brest/ca_pousse/miniatures/saintmarc.jpg" alt="" title="Saintmarc"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/technopole.jpg"><img src="img/brest/ca_pousse/miniatures/technopole.jpg" alt="" title="Technopole"/></a>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <!-- FIN QUARTIERS -->
+
+              <!-- PAGE DE REMERCIEMENTS -->
+              <div id="credits" class="mp_content">
+                <div class="mp_header">
+                  <p class="text-center text-uppercase">y'a du monde au balcon</p>
+                </div>
+
+                <img src="img/page_credit.png">
+              </div>
+          </div>
+
+          <!-- Map -->
+          <div class="col-md-7 col-sm-7" id="right">
+            <iframe src="map.html"></iframe>
+          </div>
+
+        </div>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script type="text/javascript" src="js/dynamic_panels.js"></script>
+      <script type="text/javascript" src="js/comment_random.js"></script>
+      <script type="text/javascript" src="lib/simplelightbox-master/dist/simple-lightbox.js"></script>
+      <script type="text/javascript" src="js/accueilscript.js" ></script>
+
+      <!-- Preloader -->
+      <script type="text/javascript">
+          //<![CDATA[
+          if ($(document).width() > 767) {
+            $(window).load(function() { // makes sure the whole site is loaded
+                setInterval(function() {
+                  $('#status').fadeOut('slow'); // will first fade out the loading animation
+                  $('#preloader').fadeOut('slow'); // will fade out the white DIV that covers the website.
+                }, 15000);
+            });
+          }
+          //]]>
+      </script>
+      <script type="text/javascript">
+        $(function(){
+          var $gallery = $('.gallery a').simpleLightbox();
+
+          $gallery.on('show.simplelightbox', function(){
+            console.log('Requested for showing');
+          })
+          .on('shown.simplelightbox', function(){
+            console.log('Shown');
+          })
+          .on('close.simplelightbox', function(){
+            console.log('Requested for closing');
+          })
+          .on('closed.simplelightbox', function(){
+            console.log('Closed');
+          })
+          .on('change.simplelightbox', function(){
+            console.log('Requested for change');
+          })
+          .on('next.simplelightbox', function(){
+            console.log('Requested for next');
+          })
+          .on('prev.simplelightbox', function(){
+            console.log('Requested for prev');
+          })
+          .on('nextImageLoaded.simplelightbox', function(){
+            console.log('Next image loaded');
+          })
+          .on('prevImageLoaded.simplelightbox', function(){
+            console.log('Prev image loaded');
+          })
+          .on('changed.simplelightbox', function(){
+            console.log('Image changed');
+          })
+          .on('nextDone.simplelightbox', function(){
+            console.log('Image changed to next');
+          })
+          .on('prevDone.simplelightbox', function(){
+            console.log('Image changed to prev');
+          })
+          .on('error.simplelightbox', function(e){
+            console.log('No image found, go to the next/prev');
+            console.log(e);
+          });
+        });
+      </script>
   </body>
 </html>

@@ -1,5 +1,350 @@
-/* just a sample css rule to show that everything works */
-footer p
-{
-  font-size: small;
+
+/* FONTS */
+@font-face {
+    font-family: AeroMaticsDisplay;
+    src: url(../fonts/AeroMaticsDisplayRegular.ttf);
+}
+
+@font-face {
+    font-family: SourceSansProBold;
+    src: url(../fonts/SourceSansPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: SourceSansProLight;
+    src: url(../fonts/SourceSansPro-Light.ttf);
+}
+
+@font-face {
+    font-family: SourceSansProRegular;
+    src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+
+@font-face{
+    font-family: SantEliaScriptBoldDEMO;
+    src: url(../fonts/SantEliaScriptBoldDEMO.otf);
+}
+
+@font-face{
+    font-family: DINPro-Bold;
+    src: url(../fonts/DINPro-Bold.otf);
+}
+
+
+
+/*General properties*/
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: SourceSansProRegular;
+}
+
+#container {
+  height : 100vh;
+}
+
+iframe {
+  width : 100%;
+  height : 100vh;
+  margin : 0;
+  padding : 0;
+  border : 0px;
+}
+
+
+/* Left panel */
+#navbar_left {
+  padding: 0;
+  height: 100vh;
+  background-color: #313232;
+}
+
+#left {
+  height: 33%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#left li {
+  /*padding-top: 30%;*/
+  height: 33%;
+  border-bottom: 2px solid #666666;
+  font-size: 1em;
+}
+
+#menu1:hover, #menu1 > a:hover {
+  background-color: #666666;
+}
+
+#menu2:hover, #menu2 > a:hover {
+  background-color: #666666;
+}
+
+#menu3:hover, #menu3 > a:hover {
+  background-color: #666666;
+}
+
+#menu4:hover, #menu4 > a:hover {
+  background-color: #313232;
+}
+
+a:focus {
+  background-color: transparent !important;
+}
+
+#left li a {
+  text-decoration: none;
+  color: white;
+}
+
+#menu1 {
+  color: white;
+  font-family: SourceSansProRegular;
+  border-top: 2px solid #666666;
+}
+
+#menu2 {
+  background-color : #313232;
+  font-family: SourceSansProRegular;
+  color : white;
+}
+
+#menu3 {
+  background-color : #313232;
+  font-family: SourceSansProRegular;
+  color: white;
+}
+
+#menu4:hover {
+  background-color: #313232;
+}
+
+#left .active {
+  background-color: #666666;
+}
+
+/*Middle panel */
+
+#middle {
+  height : 100%;
+  background-color : #F7931E;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+#navbar {
+  padding: 0;
+}
+
+#submenu {
+  width: 100%;
+  padding: 0;
+  background-color: #F77915;
+}
+
+#submenu .active_j, #submenu li.active_j a {
+  background-color: #F7931E;
+}
+
+#submenu .active_r, #submenu li.active_r a {
+  background-color: #FF605E;
+}
+
+#submenu .active_b, #submenu li.active_b a {
+  background-color: #42B69E;
+}
+
+#submenu .noactive_j {
+  background-color : #F77915;
+}
+
+#submenu .noactive_r {
+  background-color : #F05455;
+}
+
+#submenu .noactive_b {
+  background-color : #3AA793;
+}
+
+#submenu li {
+  text-align: center;
+  font-family: SantEliaScriptBoldDEMO;
+  font-size: 0.7em;
+  padding: 0;
+}
+
+#submenu li a:hover{
+  background-color: transparent;
+}
+
+#submenu li a {
+  color: white;
+  /*font-size: 1em;*/
+}
+
+.mp_content {
+  margin: 5% 13%;
+  color: white;
+}
+
+.mp_sondage {
+  color: white;
+}
+
+.mp_header {
+  font-family: DINPro-Bold;
+  font-size : 3.5em;
+}
+
+#header_eclosions {
+  font-family: DINPro-Bold;
+  font-size : 3.5em;
+}
+
+#header_quartiers {
+  font-family: DINPro-Bold;
+  font-size: 4em;
+}
+
+.header_sondage {
+  margin-top : 10%;
+  height: 80%;
+  width: 80%;
+}
+
+.commentaire_sondage {
+  height: 70%;
+  width: 70%;
+  margin: 5% 15%;
+}
+
+.sondage {
+  height: 100%;
+  width: 100%;
+  margin-top: 10%;
+}
+
+.mp_intro{
+  font-family: SourceSansProRegular;
+  font-size: 15pt;
+  text-align: justify;
+  padding: 0 2%;
+}
+
+.mp_content img {
+  padding-top: 5%;
+  width: 100%;
+}
+
+#brestmem {
+  display: block;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+}
+
+.mp_photos img{
+  width: 100%;
+}
+
+.commentaire {
+  background-image: url(../img/commentaire_ca_pousse.png);
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center center;
+  min-height: 200px;
+}
+.commentaire p{
+  color: black;
+  width: 50%;
+  margin: auto;
+  padding-top: 10%;
+  font-size: 13pt;
+}
+
+#comment1{
+
+}
+
+/*Right panel (mainly containing the iframe) */
+
+#right {
+  height : 100%;
+  padding : 0;
+  border : 0px;
+}
+
+
+/* Preloader */
+
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+}
+
+@media screen and (min-width: 1200px) {
+  #submenu li {
+    font-size: 0.9em;
+  }
+
+  #header_quartiers {
+    font-size: 4em;
+    text-align: center;
+  }
+
+  #header_eclosions {
+    font-size: 3.3em;
+    text-align: center;
+  }
+
+  #header_sondage {
+    font: 3.5em;
+    text-align: center;
+  }
+
+  #left li {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  #submenu li {
+    font-size: 0.75em;
+  }
+
+  #submenu img {
+    display: none;
+  }
+
+  #header_quartiers {
+    font-size: 4.5em;
+  }
+
+  .mp_header p {
+    font-size: 0.65em;
+  }
+
+  .mp_intro {
+    font-size: 1em;
+  }
+
+  #left>li {
+    font-size: 0.7em;
+    width: 100%;
+  }
+
+  #header_eclosions {
+    font-size: 2.5em;
+  }
+
+  #header_quartiers {
+    font-size: 2.5em;
+  }
 }

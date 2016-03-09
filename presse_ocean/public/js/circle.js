@@ -45,7 +45,7 @@ function Circle(selector, w, h, maximum, init, type)
   var formatRand = d3.format("%");
 
   if (type != undefined) {
-    queue().defer(d3.json, "/media/data/data.json").await(ready.bind(this));
+    queue().defer(d3.json, "media/data/data.json").await(ready.bind(this));
   } else {
     ready().bind(this);
   }

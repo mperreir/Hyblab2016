@@ -1,0 +1,138 @@
+[{
+        "id": "cc_vallet",
+        "nom": "C.C. de Vallet",
+        "population": 159,
+        "pourcentage": 0.56
+    },
+    {
+        "id": "cc_castelbriantais",
+        "nom": "C.C. du Castelbriantais",
+        "population": 686,
+        "pourcentage": 2.41
+    },
+    {
+        "id": "cc_guerande_atlantique",
+        "nom": "Cap Atlantique",
+        "population": 1007,
+        "pourcentage": 3.53
+    },
+    {
+        "id": "cc_carene",
+        "nom": "Carene",
+        "population": 3678,
+        "pourcentage": 12.90
+    },
+    {
+        "id": "cc_coeur_estuaire",
+        "nom": "Cœur d'Estuaire",
+        "population": 70,
+        "pourcentage": 0.25
+    },
+    {
+        "id": "cc_pays_retz",
+        "nom": "Cœur Pays de Retz",
+        "population": 135,
+        "pourcentage": 0.47
+    },
+    {
+        "id": "cc_erdre_gesvres",
+        "nom": "Erdre et Gesvres",
+        "population": 449,
+        "pourcentage": 1.57
+    },
+    {
+        "id": "cc_grandlieu",
+        "nom": "Grand Lieu",
+        "population": 273,
+        "pourcentage": 0.96
+    },
+    {
+        "id": "cc_loire-atlantique_meridionale",
+        "nom": "Loire Atlantique Méridionale",
+        "population": 123,
+        "pourcentage": 0.43
+    },
+    {
+        "id": "cc_loire_divatte",
+        "nom": "Loire Divatte",
+        "population": 211,
+        "pourcentage": 0.74
+    },
+    {
+        "id": "cc_loire_sillon",
+        "nom": "Loire et Sillon",
+        "population": 195,
+        "pourcentage": 0.68
+    },
+    {
+        "id": "cc_nantes_metropole",
+        "nom": "Nantes Métropole",
+        "population": 18013,
+        "pourcentage": 63.17
+    },
+    {
+        "id": "cc_pays_ancenis",
+        "nom": "Pays d'Ancenis",
+        "population": 679,
+        "pourcentage": 2.38
+    },
+    {
+        "id": "cc_pays_pontchateau",
+        "nom": "Pays de Ponchateau - Saint Gildas des Bois",
+        "population": 379,
+        "pourcentage": 1.33
+    },
+    {
+        "id": "cc_pays_redon",
+        "nom": "Pays de Redon",
+        "population": 387,
+        "pourcentage": 1.36
+    },
+    {
+        "id": "cc_pornic",
+        "nom": "Pornic",
+        "population": 475,
+        "pourcentage": 1.67
+    },
+    {
+        "id": "cc_blain",
+        "nom": "Région de Blain",
+        "population": 199,
+        "pourcentage": 0.70
+    },
+    {
+        "id": "cc_region_machecoul",
+        "nom": "Région de Machecoul",
+        "population": 261,
+        "pourcentage": 0.92
+    },
+    {
+        "id": "cc_region_nozay",
+        "nom": "Région de Nozay",
+        "population": 192,
+        "pourcentage": 0.67
+    },
+    {
+        "id": "cc_secteur_derval",
+        "nom": "Secteur de Derval",
+        "population": 199,
+        "pourcentage": 0.70
+    },
+    {
+        "id": "cc_sevre_maine_goulaine",
+        "nom": "Sèvre, Maine et Goulaine",
+        "population": 84,
+        "pourcentage": 0.29
+    },
+    {
+        "id": "cc_sud_estuaire",
+        "nom": "Sud Estuaire",
+        "population": 372,
+        "pourcentage": 1.30
+    },
+    {
+        "id": "cc_vallee_clisson",
+        "nom": "Vallée de Clisson",
+        "population": 290,
+        "pourcentage": 1.02
+    }]

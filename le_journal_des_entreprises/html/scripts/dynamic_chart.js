@@ -24,7 +24,7 @@ function inferiorValues(rank, array) {
 			n++;
 		}
 	}
-	
+
 	return n;
 }
 
@@ -47,24 +47,24 @@ function zoomBoard(event) {
 		target = 0;
 		delta = -0.1;
 	}
-	
+
 	//on change l'état du tableau
 	boardZoomed = !boardZoomed;
-	
+
 	//on crée un timer pour rappeler la fonction régulièrement
 	var timer = setInterval(zoomer, 16, target, delta);
 	var targetWidth = 400;
-	
+
 	//selection des éléments importants
 	var chartDiv = document.getElementById("chartZone");
 	var boardZone = document.getElementById("boardZone");
 	var graph = document.getElementById("graph");
-	
+
 	//mise à jour des éléments
-	if (!boardZoomed) 
+	if (!boardZoomed)
 	{
 		document.getElementById("filterSelector").style.display = "none";
-		document.getElementById("notifier").innerHTML = "Cliquez sur le tableau plour plus d'infos";
+		document.getElementById("notifier").innerHTML = "Cliquez sur le tableau pour plus d'infos";
 		document.getElementById("Guy").style.display = "inline-block";
 		graph.style.display = "none";
 	}
@@ -75,23 +75,23 @@ function zoomBoard(event) {
 		document.getElementById("Guy").style.display = "none";
 		graph.style.display = "inline-block";
 	}
-	
+
 	//scaling fluide du tableau
 	function zoomer(target, delta) {
 		if (Math.abs(coef-target) < 0.1) {
 			clearInterval(timer);
 			boardZone.style.width = (1+target)*276+"px";
 			boardZone.style.height = (1+target)*660+"px";
-			
+
 			boardZone.style.marginTop = target*10+"px";
 			boardZone.style.marginLeft = 10+target*5+"%";
 			boardZone.style.boxShadow = "0px 100px "+(target*100)+"px black";
 		} else {
 			coef += (target-coef)/4.0;
-			
+
 			boardZone.style.width = (1+coef)*276+"px";
 			boardZone.style.height = (1+coef)*660+"px";
-			
+
 			boardZone.style.marginTop = coef*10+"px";
 			boardZone.style.marginLeft = 10+coef*5+"%";
 
@@ -101,11 +101,11 @@ function zoomBoard(event) {
 }
 
 //change les données de la visualisation
-function updateData(data, rank) {	
+function updateData(data, rank) {
 	x = d3.scale.linear()
 		.domain([0, d3.max(data)])
 		.range([0, width]);
-			
+
 	chart.selectAll("rect")
 		.data(data)
 		.transition()
@@ -113,7 +113,7 @@ function updateData(data, rank) {
 		.attr('opacity', 1)
 		.attr("width", x)
 		.attr("y", function(d, i) { return rank[i] * (barHeight + heightMargin); });
-		
+
 	chart.selectAll("text")
 		.data(data)
 		.transition()
@@ -136,7 +136,7 @@ function changeData(event, newData, newUnit) {
 	data = newData;
 	stat(data, rank);
 	updateData(data, rank);
-	
+
 	if (event) {
 		event.cancelBubble = true;
 	}
@@ -152,7 +152,7 @@ function changeHeight(rect, indice) {
 				if (rank[i] > rank[indice]) {
 					return currentHeight + barHeight;
 				}
-				
+
 				return currentHeight;
 			}
 		)
@@ -161,7 +161,7 @@ function changeHeight(rect, indice) {
 				return 1;
 			}
 		);
-		
+
 	d3.select("#platform").selectAll('text')
 		.transition()
 		.attr("opacity", function(d, i) {
@@ -176,7 +176,7 @@ function changeHeight(rect, indice) {
 		)
 		.text(function(d, i) { return plateform[i]+space+d+" "+unit; })
 		.style('fill', 'black');
-		
+
 }
 
 //initialisation des variables
@@ -200,11 +200,11 @@ height = 100;
 var x = d3.scale.linear()
 	.domain([0, d3.max(data)])
 	.range([0, width]);
-		
+
 var chart = d3.select("#presentation").selectAll(".chart")
 	.attr("width", "100%")
 	.attr("height", "100%");
-	
+
 var bar = chart.selectAll("g")
 	.data(data)
 	.enter()
@@ -212,7 +212,7 @@ var bar = chart.selectAll("g")
 	.attr("transform", "translate(" + (margin.left) + "," + margin.top + ")")
 	.on("mouseover", function(d, i) {changeHeight(d3.select(this), i);})
 	.on("mouseleave", function(d, i) {changeData(null, data, unit);});
-	
+
 bar.append("rect")
 	.attr("class", "chartRect")
 	.attr("width", x)
@@ -258,7 +258,7 @@ var circle2 = d3.select("#rotatingCircle2");
 setInterval(function() {
 	circle1.attr("transform", "rotate("+ i +", "+222+", "+222+")");
 	circle2.attr("transform", "rotate("+ -2*i +", "+230+", "+230+")");
-	
+
 	i++;
 }, 16);
 

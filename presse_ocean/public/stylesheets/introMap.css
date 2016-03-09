@@ -1,7 +1,7 @@
 #map1-intro,
 #map2-intro {
   z-index: 1;
-  background: url('/media/pic/fondintercalaire.svg') no-repeat bottom;
+  background: url('../media/pic/fondintercalaire.svg') no-repeat bottom;
   background-size: cover;
   padding-top: 20vh;
   overflow: hidden;
@@ -44,7 +44,7 @@
 #map2-intro .next-page {
   position: absolute;
   bottom: 50px;
-  background: url(/media/pic/fleche.svg) no-repeat;
+  background: url('../media/pic/fleche.svg') no-repeat;
   background-size: contain;
   cursor: pointer;
   border: none;

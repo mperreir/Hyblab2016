@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OSM Buildings</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="lib/OSMBuildings/dist/OSMBuildings/OSMBuildings.css">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/style_map.css">
+</head>
+
+<body>  
+    <!-- Container -->
+    <div id="map"></div>
+
+    <!-- Control buttons --> 
+    <div class="control tilt">
+      <button class="dec">&#8601;</button>
+      <button class="inc">&#8599;</button>
+    </div>
+
+    <div class="control rotation">
+      <button class="inc">&#8630;</button>
+      <button class="dec">&#8631;</button>
+    </div>
+
+    <div class="control zoom">
+      <button class="dec">-</button>
+      <button class="inc">+</button>
+    </div>
+   
+    <div class='control legende my-legend'>
+      <!-- <div class='legend-title'>Légende :</div> -->
+      <div class='legend-scale'>
+        <ul class='legend-labels'>
+          <li><span style='background:#42B69E;'></span>Nombre de constructions par quartier entre 2000 et 2015</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="lib/OSMBuildings/dist/OSMBuildings/OSMBuildings.js"></script>
+    <script src="lib/tween.js/src/Tween.js"></script>
+    <script src="js/main_map.js"></script>
+    <script>
+      $(document).ready(function()
+      {
+        doMap('data/quart.geojson');
+      })
+    </script>
+  </body>
+</html>

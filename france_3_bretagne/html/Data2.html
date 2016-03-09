@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Notre page est en français -->
+  <head>
+    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+    <meta charset="utf-8">
+    <title>Hyblab 2016</title>
+    <!-- Déclaration de la feuille de style du document-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="lib/fancybox/lib/jquery-1.10.1.min.js"></script>
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="lib/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="lib/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+    <!-- Add Thumbnail helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="lib/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <script type="text/javascript" src="lib/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+    <!--Scripts pour la data2 -->
+    <script src="d3.min.js"></script>
+    <script src="d3.tip.v0.6.3.js"></script>
+
+    <!--script de la lightbox -->
+    <script src="data3.js"></script>
+
+
+  </head>
+  <body>
+    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
+    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
+    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+    <div id="container">
+      <!-- DATA 2 -->
+      <section id="data2">
+        <h3 id="head_data2">Les deux saisons d'Airbnb </h3>
+        <h4 id="st_data2">Une marée haute (été) et une marée basse (hiver) pour les offres de location</h4>
+
+        <h4 id="saison">ETE</h4>
+
+
+        <div id='bigorneau' >
+      	  <img id ="gif" src="images/Data2-jauge-ete.gif"> <br/>
+      		<button id = "myButton1" class="button button--naira button--border-thick button--text-thick button--text-upper button--size-s" onclick="deleteDiagram();createBigorneau('asterplot_hiver_data.csv');createGif('images/Data2-jauge-hiver.gif');supprTxtEte();afficheTxtHiver()"><span>Hiver</span></button>
+      		<button id = "myButton2" class="button button--naira button--border-thick button--text-thick button--text-upper button--size-s" onclick="deleteDiagram();createBigorneau('asterplot_data.csv');createGif('images/Data2-jauge-ete.gif');supprTxtHiver();afficheTxtEte()"><span>Ete</span></button>
+
+      		<script src="asterplot_js.js" ></script>
+      	</div>
+
+      	<div id="images">
+      		<figure>
+      			<img class="align" src="images/homme.png"><br /><figcaption id ="id1" class="center"> Capacité maximale :<br />32 personnes </figcaption><div id="hiver1" style="display:none;"> Capacité maximale :<br />32 personnes</div>
+      		</figure>
+      		<figure>
+      			<img class="align" src="images/couronne.png"><br /><figcaption id="id2" class="center"> Plus gros annonceur :<br/> 39 annonces</figcaption><div id="hiver2" style="display:none;" > Plus gros annonceur :<br/> 21 annonces </div>
+      		</figure>
+      		<figure>
+      			<img class="align" id="img_euros" src="images/euros.png"><br /><figcaption id="id3" class="center"> Location la plus chère :<br/> 5848€  </figcaption><div id="hiver3" style="display:none;" > Location la plus chère :<br/> 2051€ </div>
+      		</figure>
+      	</div>
+
+        <div id="text_data2">
+
+      		<p id="article_data2">
+        		Premier constat que nous délivrent les données : il existe un grand nombre de multi-annonceurs (soit 2 annonces minimum sur le site). Une multiplicité d’annonces mises en évidence dans cette dataviz. La palme revient à un annonceur malouin proposant 39 biens à la location.<br/>
+
+            La comparaison des volumes des annonces d’été et d’hiver, l'enquête téléphonique auprès de l’office de tourisme, des syndicats d’hotellerie et des annonceurs, permet de détacher une particularité à Saint-Malo. Les marées ne sont pas qu'un événement climatique dans la cité corsaire, elles se manifestent aussi dans les offres Airbnb avec une marée haute l'été et une basse l'hiver.
+            Lors de la saison basse, de nombreux malouins récupèrent leur logement pour le louer à des étudiants.
+            Difficile pour autant de conclure à la suite de notre enquête à un effet négatif des locations Airbnb sur l'hôtellerie locale, même si certains s’en plaignent.
+          </p>
+      	</div>
+
+      </section>
+    </div>
+  </body>
+</html>

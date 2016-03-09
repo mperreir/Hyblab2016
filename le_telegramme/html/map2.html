@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OSM Buildings</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="lib/OSMBuildings/dist/OSMBuildings/OSMBuildings.css">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="css/style_map.css">
+</head>
+
+<body>  
+    <!-- Container -->
+    <div id="map"></div>
+
+    <!-- Control buttons --> 
+    <div class="control tilt">
+      <button class="dec">&#8601;</button>
+      <button class="inc">&#8599;</button>
+    </div>
+
+    <div class="control rotation">
+      <button class="inc">&#8630;</button>
+      <button class="dec">&#8631;</button>
+    </div>
+
+    <div class="control zoom">
+      <button class="dec">-</button>
+      <button class="inc">+</button>
+    </div>
+   
+    <div class='control legende my-legend'>
+      <!-- <div class='legend-title'>Légende :</div> -->
+      <div class='legend-scale'>
+        <ul class='legend-labels'>
+          <li><span style='background:#20D73B;'></span>Transports</li>
+          <li><span style='background:#FC5B45;'></span>Loisirs</li>
+          <li><span style='background:#184AFC;'></span>Economie</li>
+          <li><span style='background:#F4F74A;'></span>Logement</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <div class="control legende">
+      <div class="legende-line">  
+        <div class="legende-item">
+          <p>Transports</p>
+        </div>
+        <div class="legende-img">
+          <img src="img/circle-orange.png" alt="orange">
+        </div>
+      </div>
+
+      <div class="legende-line">  
+        <div class="legende-item">
+          <p>Loisirs</p>
+        </div>
+        <div class="legende-img">
+          <img src="img/circle-orange.png" alt="orange">
+        </div>
+      </div>
+
+      <div class="legende-line">  
+        <div class="legende-item">
+          <p>Economie</p>
+        </div>
+        <div class="legende-img">
+          <img src="img/circle-orange.png" alt="orange">
+        </div>
+      </div>
+
+      <div class="legende-line">  
+        <div class="legende-item">
+          <p>Logements</p>
+        </div>
+        <div class="legende-img">
+          <img src="img/circle-orange.png" alt="orange">
+        </div>
+      </div>              
+    </div> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="lib/OSMBuildings/dist/OSMBuildings/OSMBuildings.js"></script>
+    <script src="lib/tween.js/src/Tween.js"></script>
+    <script src="js/main_map.js"></script>
+    <script>
+      $(document).ready(function()
+      {
+        doMap('data/projets.geojson');
+      })
+    </script>
+  </body>
+</html>

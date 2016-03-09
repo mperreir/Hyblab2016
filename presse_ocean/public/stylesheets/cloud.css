@@ -33,18 +33,18 @@ body .svg-content-responsive {
   width: 100px;
   height: 100px;
   content: '';
-  background: url('/media/pic/cloud.svg') no-repeat;
+  background: url('../media/pic/cloud.svg') no-repeat;
   background-size: contain;
 }
 .bee.long::after {
   width: 250px;
   height: 150px;
-  background: url('/media/pic/cloud2.svg') no-repeat;
+  background: url('../media/pic/cloud2.svg') no-repeat;
   background-size: contain;
 }
 .bee.big::after {
   width: 350px;
   height: 250px;
-  background: url('/media/pic/cloud3.svg') no-repeat;
+  background: url('../media/pic/cloud3.svg') no-repeat;
   background-size: contain;
 }
