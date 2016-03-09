@@ -6,17 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
   <!-- bootstrap -->
-  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.3.0/ekko-lightbox.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/accueilstyle.css">
+  <link rel="stylesheet" type="text/css" href="lib/simplelightbox-master/dist/simplelightbox.css">
 </head>
   <body>
+      <!-- Preloader -->
+      <div id="preloader">
+          <div class="container-fluid" id="status">
+            <div class="row js-scrollTo" id="page1">
+              <section class="col-md-3 col-sm-3 col-xs-3"><img src="img/accueil.png" alt="Image accueil" id="img_accueil"/></section>
+              <section class="col-md-6 col-sm-7 col-xs-8" id="p1_middle">
+                <h4 id="p1_titre">BREST RENAÎT DE SES CENDRES</h4>
+                <p id="p1_contenu">
+                  Rasé, terne ou encore grise : de multiples adjectifs sont utilisés pour
+                  qualifier Brest depuis 60 ans. Cependant, les Brestois sont unanimes
+                  pour affirmer qu’aujourd’hui et depuis 15 ans, Brest se métamorphose !
+                  La création de nouveaux aménagements urbains, économiques et de
+                  loisirs offrent un nouveau souffle à la ville, lui redonnent des couleurs
+                  et lui confèrent une nouvelle image. Meilleure ? Pour certains oui pour
+                  d’autres non. Aujourd’hui,  à travers les données récoltées et de vos
+                  témoignages, nous vous donnons les clés pour vous faire un avis sur
+                  cette question.
+                </p>
+                <p id="screen_msg">
+                  Bonjour, afin de l'expérience plus agréable, le contenu du site n'est accessible qu'à partir d'appareils de types
+                  tablette ou ordinateurs disposant d'écran plus larges.
+                  Nous vous invitons donc à vous reconnectez, depuis un des appareils cités plus haut pour profiter de l'expérience
+                  au maximum.
+                  Merci et à très bientôt.
+                </p>
+                <p id="demarrer">
+                  <a class="js-scrollTo" href="#page2" id="btn_demarrer">Vivez avec nous la renaissance de Brest</a>
+                </p>
+                <p>
+                    <progress value="0" max="100" id="barre_progression"></progress>
+                </p>
+              </section>
+              <section class="col-md-3 col-sm-3 col-xs-1"></section>
+            </div>
+          </div>
+      </div>
+      <!-- End Preloader -->
+
+
       <!-- Container -->
       <div class="container-fluid">
         <div id="container" class="row">
 
           <!-- Navigation -->
-          <div class="col-md-1 sidebar" id="navbar_left">
+          <div class="col-md-1 col-sm-1 sidebar" id="navbar_left">
               <ul class="nav nav-sidebar vertical-center" id="left">
                 <li id="menu1" class="text-center text-uppercase active">
                   <a href="#">ça pousse</a>
@@ -27,22 +67,25 @@
                 <li id="menu3" class="text-center text-uppercase">
                   <a href="#">Top / Flop</a>
                 </li>
+                <li id="menu4" class="text-center text-uppercase">
+                  <a id="chieur" href="#"><img src="img/ico/bouton_info.png"></a>
+                </li>
               </ul>
           </div>
 
-          <!-- Middle -->
-          <div class="col-md-4" id="middle">
+          <!-- Panel Middle -->
+          <div class="col-md-4 col-sm-4" id="middle">
 
               <!-- Middle panel navbar -->
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" id="submenu">
-                  <li class="col-md-4 active_j" id="submenu1">
+                  <li class="col-md-4 col-sm-4 active_j" id="submenu1">
                     <a href="#"><img src="img/pictos/edito.png"> Gazette</a>
                   </li>
-                  <li class="col-md-4 noactive_j" id="submenu2">
+                  <li class="col-md-4 col-sm-4 noactive_j" id="submenu2">
                     <a href="#"><img src="img/pictos/sondage.png"> Votre avis</a>
                   </li>
-                  <li class="col-md-4 noactive_j" id="submenu3">
+                  <li class="col-md-4 col-sm-4 noactive_j" id="submenu3">
                     <a href="#"><img src="img/pictos/photo.png"> Photos</a>
                   </li>
                 </ul>
@@ -68,55 +111,36 @@
               </div>
 
               <div id="ca_pousse_sondage" class="mp_sondage">
-                <!-- <div class="mp_intro">
-                  <p class="text-center text-uppercase">
-                    Avez-vous ressenti une metamorphose de Brest ces 15
-                    dernières années ?
-                  </p>
-                </div> -->
-
-                <!-- <img src="img/ca_pousse_sondage.png"> -->
-
                 <img class="header_sondage" src="img/question_ca_pousse.png">
                 <img class="sondage" src="img/ca_pousse_sondage.gif">
-                <img class="commentaire_sondage" src="img/commentaire_ca_pousse.png">
-              </div>
-
-              <div id="ca_pousse_photos" class="row">
-                <div class="col-md-10">
-                  <div class="row">
-                    <a href="img/brest/ca_pousse/fullsize/bellevue.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="" class="col-sm-4">
-                      <img src="img/brest/ca_pousse/miniatures/bellevue.jpg" class="img-responsive hoverZoomLink"> 
-                    </a>
-
-                    <a href="img/brest/ca_pousse/fullsize/capucins.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="" class="col-sm-4">
-                      <img src="img/brest/ca_pousse/miniatures/capucins.jpg" class="img-responsive hoverZoomLink"> 
-                    </a>
-
-                    <a href="img/brest/ca_pousse/fullsize/capucins.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="" class="col-sm-4">
-                      <img src="img/brest/ca_pousse/miniatures/capucins.jpg" class="img-responsive hoverZoomLink"> 
-                    </a>
-                  </div>
-                  <div class="row"></div>
-                  <div class="row"></div>
-                  <div class="row"></div>
+                <div id="comments_1" class="commentaire">
+                    <p id="comment1">Centre-ville beaucoup plus agréable avec l'arrivée du tram </p>
+                    <p id="sexe1">Un homme, 37</p>
                 </div>
-
-                <!-- <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/bellevue.jpg" alt="Bellevue"></div>
-                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/capucins.jpg" alt="Tigre"></div>
-                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/gouesnou.jpg" alt="Tigre"></div>
-                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/guipavas.jpg" alt="Tigre"></div>
-                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/lambezellec.jpg" alt="Tigre"></div>
-                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/plougastel.jpg" alt="Tigre"></div>
-                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/plouzan.jpg" alt="Tigre"></div>
-                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/pontanezen.jpg" alt="Tigre"></div>
-                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/pontrecou.jpg" alt="Tigre"></div>
-                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/relecq.jpg" alt="Tigre"></div>
-                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/saintmarc.jpg" alt="Tigre"></div>
-                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/stadeFrancisleble.jpg" alt="Tigre"></div>
-                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/strasbourg.jpg" alt="Tigre"></div>
-                <div class="col-xs-4 col-sm-3 col-md-6"><img src="img/brest/ca_pousse/technopole.jpg" alt="Tigre"></div> -->
               </div>
+
+              <div id="ca_pousse_photos" class="mp_content">
+                <div class="gallery">
+                  <a href="img/brest/ca_pousse/fullsize/bellevue.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/bellevue.jpg" alt="" title="Bellevue" /></a>
+                  <a href="img/brest/ca_pousse/fullsize/capucins.jpg"><img src="img/brest/ca_pousse/miniatures/capucins.jpg" alt="" title="Capucins"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/gouesnou.jpg"><img src="img/brest/ca_pousse/miniatures/gouesnou.jpg" alt="" title="Gouesnou"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/guipavas.jpg"><img src="img/brest/ca_pousse/miniatures/guipavas.jpg" alt="" title="Guipavas"/></a>
+                  <div class="clear"></div>
+
+                  <a href="img/brest/ca_pousse/fullsize/lambezellec.jpg"><img src="img/brest/ca_pousse/miniatures/lambezellec.jpg" alt="" title="Lambezellec"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/plougastel.jpg"><img src="img/brest/ca_pousse/miniatures/plougastel.jpg" alt="" title="Plougastel"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/plouzan+.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/plouzan+.jpg" alt="" title="Plouzan"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/pontanezen.jpg"><img src="img/brest/ca_pousse/miniatures/pontanezen.jpg" alt="" title="Pontanezen"/></a>
+                  <div class="clear"></div>
+
+                  <a href="img/brest/ca_pousse/fullsize/pontrecou.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/pontrecou.jpg" alt="" title="Pontrecou"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/relecq.jpg"><img src="img/brest/ca_pousse/miniatures/relecq.jpg" alt="" title="Relecq"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/saintmarc.jpg"><img src="img/brest/ca_pousse/miniatures/saintmarc.jpg" alt="" title="Saintmarc"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/technopole.jpg"><img src="img/brest/ca_pousse/miniatures/technopole.jpg" alt="" title="Technopole"/></a>
+                  <div class="clear"></div>
+                </div>
+              </div>
+
               <!--  FIN  CA POUSSE  -->
 
               <!-- DEBUT ECLOSIONS -->
@@ -148,11 +172,34 @@
               <div id="eclosions_sondage" class="mp_sondage">
                 <img class="header_sondage" src="img/question_eclosions.png">
                 <img class="sondage" src="img/eclosions_sondage.gif">
-                <img class="commentaire_sondage" src="img/commentaire_eclosions.png">
+                <!-- <img class="commentaire_sondage" src="img/commentaire_eclosions.png"> -->
+
+                <div id="comments_2" class="commentaire">
+                    <p id="comment2">Centre-ville beaucoup plus agréable avec l'arrivée du tram </p>
+                    <p id="sexe2">Un homme, 37</p>
+                </div>
               </div>
 
               <div id="eclosions_photos" class="mp_content">
-                <img src="img/eclosions_sondage.png">
+                <div class="gallery">
+                  <a href="img/brest/ca_pousse/fullsize/bellevue.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/bellevue.jpg" alt="" title="Bellevue" /></a>
+                  <a href="img/brest/ca_pousse/fullsize/capucins.jpg"><img src="img/brest/ca_pousse/miniatures/capucins.jpg" alt="" title="Capucins"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/gouesnou.jpg"><img src="img/brest/ca_pousse/miniatures/gouesnou.jpg" alt="" title="Gouesnou"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/guipavas.jpg"><img src="img/brest/ca_pousse/miniatures/guipavas.jpg" alt="" title="Guipavas"/></a>
+                  <div class="clear"></div>
+
+                  <a href="img/brest/ca_pousse/fullsize/lambezellec.jpg"><img src="img/brest/ca_pousse/miniatures/lambezellec.jpg" alt="" title="Lambezellec"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/plougastel.jpg"><img src="img/brest/ca_pousse/miniatures/plougastel.jpg" alt="" title="Plougastel"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/plouzan+.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/plouzan+.jpg" alt="" title="Plouzan"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/pontanezen.jpg"><img src="img/brest/ca_pousse/miniatures/pontanezen.jpg" alt="" title="Pontanezen"/></a>
+                  <div class="clear"></div>
+
+                  <a href="img/brest/ca_pousse/fullsize/pontrecou.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/pontrecou.jpg" alt="" title="Pontrecou"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/relecq.jpg"><img src="img/brest/ca_pousse/miniatures/relecq.jpg" alt="" title="Relecq"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/saintmarc.jpg"><img src="img/brest/ca_pousse/miniatures/saintmarc.jpg" alt="" title="Saintmarc"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/technopole.jpg"><img src="img/brest/ca_pousse/miniatures/technopole.jpg" alt="" title="Technopole"/></a>
+                  <div class="clear"></div>
+                </div>
               </div>
               <!-- FIN ECLOSIONS -->
 
@@ -190,14 +237,40 @@
               </div>
 
               <div id="quartiers_photos" class="mp_content">
-                <img src="img/quartiers_sondage.png">
+                <div class="gallery">
+                  <a href="img/brest/ca_pousse/fullsize/bellevue.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/bellevue.jpg" alt="" title="Bellevue" /></a>
+                  <a href="img/brest/ca_pousse/fullsize/capucins.jpg"><img src="img/brest/ca_pousse/miniatures/capucins.jpg" alt="" title="Capucins"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/gouesnou.jpg"><img src="img/brest/ca_pousse/miniatures/gouesnou.jpg" alt="" title="Gouesnou"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/guipavas.jpg"><img src="img/brest/ca_pousse/miniatures/guipavas.jpg" alt="" title="Guipavas"/></a>
+                  <div class="clear"></div>
+
+                  <a href="img/brest/ca_pousse/fullsize/lambezellec.jpg"><img src="img/brest/ca_pousse/miniatures/lambezellec.jpg" alt="" title="Lambezellec"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/plougastel.jpg"><img src="img/brest/ca_pousse/miniatures/plougastel.jpg" alt="" title="Plougastel"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/plouzan+.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/plouzan+.jpg" alt="" title="Plouzan"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/pontanezen.jpg"><img src="img/brest/ca_pousse/miniatures/pontanezen.jpg" alt="" title="Pontanezen"/></a>
+                  <div class="clear"></div>
+
+                  <a href="img/brest/ca_pousse/fullsize/pontrecou.jpg" class="big"><img src="img/brest/ca_pousse/miniatures/pontrecou.jpg" alt="" title="Pontrecou"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/relecq.jpg"><img src="img/brest/ca_pousse/miniatures/relecq.jpg" alt="" title="Relecq"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/saintmarc.jpg"><img src="img/brest/ca_pousse/miniatures/saintmarc.jpg" alt="" title="Saintmarc"/></a>
+                  <a href="img/brest/ca_pousse/fullsize/technopole.jpg"><img src="img/brest/ca_pousse/miniatures/technopole.jpg" alt="" title="Technopole"/></a>
+                  <div class="clear"></div>
+                </div>
               </div>
               <!-- FIN QUARTIERS -->
 
+              <!-- PAGE DE REMERCIEMENTS -->
+              <div id="credits" class="mp_content">
+                <div class="mp_header">
+                  <p class="text-center text-uppercase">y'a du monde au balcon</p>
+                </div>
+
+                <img src="img/page_credit.png">
+              </div>
           </div>
 
           <!-- Map -->
-          <div class="col-md-7" id="right">
+          <div class="col-md-7 col-sm-7" id="right">
             <iframe src="map.html"></iframe>
           </div>
 
@@ -206,6 +279,68 @@
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
       <script type="text/javascript" src="js/dynamic_panels.js"></script>
-      <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/3.3.0/ekko-lightbox.min.js"></script> -->
+      <script type="text/javascript" src="js/comment_random.js"></script>
+      <script type="text/javascript" src="lib/simplelightbox-master/dist/simple-lightbox.js"></script>
+      <script type="text/javascript" src="js/accueilscript.js" ></script>
+
+      <!-- Preloader -->
+      <script type="text/javascript">
+          //<![CDATA[
+          if ($(document).width() > 767) {
+            $(window).load(function() { // makes sure the whole site is loaded
+                setInterval(function() {
+                  $('#status').fadeOut('slow'); // will first fade out the loading animation
+                  $('#preloader').fadeOut('slow'); // will fade out the white DIV that covers the website.
+                }, 15000);
+            });
+          }
+          //]]>
+      </script>
+      <script type="text/javascript">
+        $(function(){
+          var $gallery = $('.gallery a').simpleLightbox();
+
+          $gallery.on('show.simplelightbox', function(){
+            console.log('Requested for showing');
+          })
+          .on('shown.simplelightbox', function(){
+            console.log('Shown');
+          })
+          .on('close.simplelightbox', function(){
+            console.log('Requested for closing');
+          })
+          .on('closed.simplelightbox', function(){
+            console.log('Closed');
+          })
+          .on('change.simplelightbox', function(){
+            console.log('Requested for change');
+          })
+          .on('next.simplelightbox', function(){
+            console.log('Requested for next');
+          })
+          .on('prev.simplelightbox', function(){
+            console.log('Requested for prev');
+          })
+          .on('nextImageLoaded.simplelightbox', function(){
+            console.log('Next image loaded');
+          })
+          .on('prevImageLoaded.simplelightbox', function(){
+            console.log('Prev image loaded');
+          })
+          .on('changed.simplelightbox', function(){
+            console.log('Image changed');
+          })
+          .on('nextDone.simplelightbox', function(){
+            console.log('Image changed to next');
+          })
+          .on('prevDone.simplelightbox', function(){
+            console.log('Image changed to prev');
+          })
+          .on('error.simplelightbox', function(e){
+            console.log('No image found, go to the next/prev');
+            console.log(e);
+          });
+        });
+      </script>
   </body>
 </html>

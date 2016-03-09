@@ -40,10 +40,16 @@ osmb.addMapTiles(
 
       var constrBats = JSON.parse(data); // parse json string answer to get a javascript object
       osmb.addGeoJSON(constrBats);
+
+      // Ajout des batiments d'OSM Buildings (en gris et chargement au streaming de ces batiments)
+      // via l'API OSM Buildings qui fournis un accès gratuit
       // osmb.addGeoJSONTiles('http://{s}.data.osmbuildings.org/0.2/anonymous/tile/{z}/{x}/{y}.json');
   });
 
 /* ANIMATIONS */
+// Exemple d'animation, uniquement pour la première carte, plus d'infos dans la doc OSM Building pour configurer
+// (voir la page github et le readme associé d'OSM Building)
+
   /*var valuesFrom = {latitude: 48.3714, longitude: -4.4849, rotation: 0, zoom: 12, tilt: 10},
     valuesTo = {latitude: 48.39074, longitude: -4.48574, rotation: 40, zoom: 16, tilt: 30},
     animationTime = 15000;

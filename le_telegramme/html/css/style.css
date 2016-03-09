@@ -52,8 +52,6 @@ iframe {
 }
 
 
-
-
 /* Left panel */
 #navbar_left {
   padding: 0;
@@ -72,11 +70,27 @@ iframe {
   /*padding-top: 30%;*/
   height: 33%;
   border-bottom: 2px solid #666666;
-  font-size: 20px;
+  font-size: 1em;
 }
 
-#left > li:hover, #left > li > a:hover {
+#menu1:hover, #menu1 > a:hover {
   background-color: #666666;
+}
+
+#menu2:hover, #menu2 > a:hover {
+  background-color: #666666;
+}
+
+#menu3:hover, #menu3 > a:hover {
+  background-color: #666666;
+}
+
+#menu4:hover, #menu4 > a:hover {
+  background-color: #313232;
+}
+
+a:focus {
+  background-color: transparent !important;
 }
 
 #left li a {
@@ -86,20 +100,24 @@ iframe {
 
 #menu1 {
   color: white;
-  font-family: AeroMaticsDisplay;
+  font-family: SourceSansProRegular;
   border-top: 2px solid #666666;
 }
 
 #menu2 {
   background-color : #313232;
-  font-family: AeroMaticsDisplay;
+  font-family: SourceSansProRegular;
   color : white;
 }
 
 #menu3 {
   background-color : #313232;
-  font-family: AeroMaticsDisplay;
+  font-family: SourceSansProRegular;
   color: white;
+}
+
+#menu4:hover {
+  background-color: #313232;
 }
 
 #left .active {
@@ -109,7 +127,6 @@ iframe {
 /*Middle panel */
 
 #middle {
-  /*width: 35%; never ever put this !!!! */ 
   height : 100%;
   background-color : #F7931E;
   overflow-y: scroll;
@@ -154,34 +171,17 @@ iframe {
 #submenu li {
   text-align: center;
   font-family: SantEliaScriptBoldDEMO;
-  font-size: 14px;
-/*  border-right: 2px solid #F7931E;*/
+  font-size: 0.7em;
   padding: 0;
 }
-
-/*#submenu img {
-  width: 10%;
-}*/
 
 #submenu li a:hover{
   background-color: transparent;
 }
 
-/*.submenu_j_hover{
-  background-color: #F7931E;
-}
-
-.submenu_r_hover{
-  background-color: #FF605E;
-}
-
-.submenu_b_hover{
-  background-color: #42B69E;
-}*/
-
 #submenu li a {
   color: white;
-  font-size: 16pt;
+  /*font-size: 1em;*/
 }
 
 .mp_content {
@@ -195,17 +195,17 @@ iframe {
 
 .mp_header {
   font-family: DINPro-Bold;
-  font-size : 58pt;
+  font-size : 3.5em;
 }
 
 #header_eclosions {
   font-family: DINPro-Bold;
-  font-size : 51pt; 
+  font-size : 3.5em;
 }
 
 #header_quartiers {
   font-family: DINPro-Bold;
-  font-size: 64pt;
+  font-size: 4em;
 }
 
 .header_sondage {
@@ -238,10 +238,6 @@ iframe {
   width: 100%;
 }
 
-.mp_sondage img {
-
-}
-
 #brestmem {
   display: block;
   width: 50%;
@@ -249,9 +245,27 @@ iframe {
   margin: auto;
 }
 
-
 .mp_photos img{
   width: 100%;
+}
+
+.commentaire {
+  background-image: url(../img/commentaire_ca_pousse.png);
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center center;
+  min-height: 200px;
+}
+.commentaire p{
+  color: black;
+  width: 50%;
+  margin: auto;
+  padding-top: 10%;
+  font-size: 13pt;
+}
+
+#comment1{
+
 }
 
 /*Right panel (mainly containing the iframe) */
@@ -260,4 +274,77 @@ iframe {
   height : 100%;
   padding : 0;
   border : 0px;
+}
+
+
+/* Preloader */
+
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+}
+
+@media screen and (min-width: 1200px) {
+  #submenu li {
+    font-size: 0.9em;
+  }
+
+  #header_quartiers {
+    font-size: 4em;
+    text-align: center;
+  }
+
+  #header_eclosions {
+    font-size: 3.3em;
+    text-align: center;
+  }
+
+  #header_sondage {
+    font: 3.5em;
+    text-align: center;
+  }
+
+  #left li {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  #submenu li {
+    font-size: 0.75em;
+  }
+
+  #submenu img {
+    display: none;
+  }
+
+  #header_quartiers {
+    font-size: 4.5em;
+  }
+
+  .mp_header p {
+    font-size: 0.65em;
+  }
+
+  .mp_intro {
+    font-size: 1em;
+  }
+
+  #left>li {
+    font-size: 0.7em;
+    width: 100%;
+  }
+
+  #header_eclosions {
+    font-size: 2.5em;
+  }
+
+  #header_quartiers {
+    font-size: 2.5em;
+  }
 }

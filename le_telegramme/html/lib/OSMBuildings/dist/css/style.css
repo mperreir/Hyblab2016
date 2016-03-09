@@ -28,6 +28,10 @@ html, body {
       top: 90px;
     }
 
+    .control.legende{
+      top: 120px;
+    }
+
     .control.zoom button{
       font-weight: normal;
     }

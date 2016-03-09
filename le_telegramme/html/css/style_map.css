@@ -5,6 +5,10 @@ html, body {
   height: 100%;
 }
 
+p {
+  margin: 0;
+}
+
 #map {
   width: 100%;
   height: 100%;
@@ -32,6 +36,59 @@ html, body {
 .control.zoom {
   top: 90px;
 }
+
+.control.legende{
+  margin: 0 0 15px 15px;
+  bottom: 0;
+  border: 1px solid #999999;
+  background: #ffffff;
+  opacity: 0.8;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #666666;
+  font-weight: bold;
+}
+
+.my-legend .legend-title {
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 90%;
+  }
+.my-legend .legend-scale ul {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  float: left;
+  list-style: none;
+  }
+.my-legend .legend-scale ul li {
+  font-size: 80%;
+  list-style: none;
+  margin-left: 0;
+  line-height: 18px;
+  margin-bottom: 2px;
+  }
+
+.my-legend ul.legend-labels {
+  margin: 5px;
+}
+.my-legend ul.legend-labels li span {
+  display: block;
+  float: left;
+  height: 16px;
+  width: 30px;
+  margin-right: 5px;
+  border: 1px solid #999;
+  }
+.my-legend .legend-source {
+  font-size: 70%;
+  color: #999;
+  clear: both;
+  }
+.my-legend a {
+  color: #777;
+  }
+
 
 .control.zoom button{
   font-weight: normal;
