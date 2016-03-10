@@ -92,7 +92,7 @@ abbr,acronym { border: 0;
 body{
 	font-family: Open Sans;
 	color: #179fae;
-}		
+}
 
 h1{
 	font-size: 6em;
@@ -115,7 +115,7 @@ p{
 .section{
 	background-image:url("../img/Background-FRAP2.png");
 	background-repeat:no-repeat;
-	background-position: center center;	
+	background-position: center center;
 	background-size: cover;
 }
 
@@ -158,7 +158,7 @@ p{
 	margin-top: 0px;
 	margin-left: 5px;
 	border:hidden;
-	font-weight: bold;	
+	font-weight: bold;
 	display:inline-block;
 	position:absolute;
 
@@ -236,7 +236,7 @@ p{
 	top:50%;
 	visibility: hidden;
 	position:absolute;
-	width:400px;	
+	width:400px;
 }
 
 #tooltip p{
@@ -250,7 +250,7 @@ p{
 }
 
 p.titre{
-	font-weight: bold;	
+	font-weight: bold;
 	font-size:20px;
 }
 
@@ -294,8 +294,8 @@ div#pieChart svg{
 }
 
 #pieInfo {
-	padding: 10px; 
-} 
+	padding: 10px;
+}
 
 #pieText {
 	position: absolute;
@@ -328,21 +328,21 @@ svg {
 
 .titre1{
 	top:0%;
-	font-weight: bold;	
+	font-weight: bold;
 	font-size: 30px;
 }
 
 .home{
 	margin-top: 2%;
 	margin-left: 2%;
-	display: inline-block;	
+	display: inline-block;
 	height: 100px;
 }
 
 .evolution{
 	margin-top: 2%;
 	position: absolute;
-	display: inline-block;	
+	display: inline-block;
 	height: 100px;
 	right:2%;
 }
@@ -380,7 +380,7 @@ svg {
 .bouton{
 	color: #179FAE;
 	background-color: #031d2a;
-  	border-color: #179FAE;  
+  	border-color: #179FAE;
   	padding-top : 4px;
   	padding-bottom : 4px;
   	padding-left : 35px;
@@ -389,7 +389,7 @@ svg {
 }
 
 #boutonevo{
-  	margin-left: 40%;	
+  	margin-left: 40%;
 }
 
 .bouton:hover{
@@ -442,7 +442,7 @@ svg {
 	border-width: 1px;
 	border-color: #179fae;
 	display: inline-block;
-	background-color: white;	
+	background-color: white;
 	color:#179fae;
 
 }
@@ -452,7 +452,7 @@ svg {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	position: absolute;
-	display: inline-block;	
+	display: inline-block;
 	margin-top:10px;
 	margin-right: 2%;
 	right:0%;
@@ -488,12 +488,12 @@ svg {
 }
 
 #partenaire{
-	display:block;	
+	display:block;
 	margin-top: 20px;
 }
 
 #partenaire img{
-	margin:10px; 
+	margin:10px;
 }
 
 #pieExplains{
@@ -534,4 +534,12 @@ svg {
 	padding: 5px;
 	height: 100%;
 	font-size: 17px;
+}
+
+#graphCaption{
+  color: white;
+  position: absolute;
+  top: 155px;
+  text-align: center;
+  width: 100%;
 }
