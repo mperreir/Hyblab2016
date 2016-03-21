@@ -51,7 +51,7 @@ var xAxis = d3.svg.axis()
 
 //
         // chart.xAxis.tickFormat(function(d) { return d3.time.format('%m/%d/%y')(new Date(d)) });
-        chart.yAxis.tickFormat(function(d) { return euroFormatter(d) + ' €'; });
+        chart.yAxis.tickFormat(function(d) { return euroFormatter(d) /*+ ' €'*/; });
 
         chart.legend.vers('furious');
 
@@ -83,7 +83,7 @@ function rh()
         } ,
         {
             "key" : "Service civique" ,
-            "values" : [ [ 2006 , 0] , [ 2007 , 0] , [ 2008 , 0], [ 2009 , 0], [ 2010 , 3], [ 2011 ,2], [ 2012 , 6], [ 2013 , 9], [ 2014 , 12] ]
+            "values" : [ [ 2006 , 0] , [ 2007 , 0] , [ 2008 , 0], [ 2009 , 0], [ 2010 , 3/22], [ 2011 ,2/22], [ 2012 , 6/22], [ 2013 , 9/22], [ 2014 , 12/22] ]
         } ,
         {
             "key" : "Total bénévoles" ,
