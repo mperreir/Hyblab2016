@@ -28,6 +28,32 @@ function donut_animee(a){
             $("#doughnutChart").drawDoughnutChart(d);
     });
 };
+function donut_animee2(a){
+ 
+   var data= $.getJSON("./JSON/hyblab.json",function(donnees){
+       
+            jQuery.each(donnees, function(){ 
+            if(this.Code==a){
+              var txt={
+                 title: "Aides région documentaire",
+                 value: this.Moy_aides_region,
+                 color: "#DBA774"
+               }
+               
+              var txt1={
+                 title: "Aides région autres",
+                 value: this.Moy_aides_TGC-this.Moy_aides_region,
+                 color: "#19182D"
+               }
+              d.push(txt);
+              d.push(txt1);
+              pourc=Math.round(((this.Moy_aides_region)/(this.Moy_aides_TGC)*100))+"%";
+            }
+             
+            });
+            $("#doughnutChart").drawDoughnutChart(d);
+    });
+};
 function init_var(){
   d=[];
 }

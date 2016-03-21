@@ -339,7 +339,6 @@ function clickFleche(sens,i){
         var json = jQuery.getJSON("./JSON/hyblab.json", function(data){
             if(sens == "droite"){   // Dans le cas du clique sur une fléche droite
                 if(label.textContent == dat1){  // On va à la data 2
-                    //label.textContent = dat2br;
                     $(".label3").html(dat2br);
                     jQuery.each(data,function(){
                        if(this.Code == code){
@@ -348,13 +347,12 @@ function clickFleche(sens,i){
                     });
                 }
                 else if(label.textContent == dat2){   // On va à la data 3
-                    //label.textContent = dat3br;
                     $(".label3").html(dat3br);
                     svg.innerHTML="";
                     nombre.innerHTML="";
                     d3.select(".apresRegion3").append("div").attr("id","doughnutChart").attr("class","chart");
                     init_var();
-                    donut_animee(code);
+                    donut_animee2(code);
                 }
                 else{   // On va à la data 1
                     //label.textContent = dat1br;
@@ -377,16 +375,14 @@ function clickFleche(sens,i){
             }
             else{ // Dans le cas du clique sur une fléche gauche
                 if(label.textContent == dat1){ // On va à la data 3
-                    //label.textContent = dat3br;
                     $(".label3").html(dat3br);
                     svg.innerHTML="";
                     nombre.innerHTML="";
                     d3.select(".apresRegion3").append("div").attr("id","doughnutChart").attr("class","chart");
                     init_var();
-                    donut_animee(code);
+                    donut_animee2(code);
                 }
                 else if(label.textContent == dat2){  // On va à la data 1
-                    //label.textContent = dat1;
                     $(".label3").html(dat1br);
                     jQuery.each(data,function(){
                        if(this.Code == code){
@@ -395,7 +391,6 @@ function clickFleche(sens,i){
                     });
                 }
                 else{  // On va à la data 2
-                    //label.textContent = dat2br;
                     $(".label3").html(dat2br);
                     $('div').remove('#doughnutChart');
                     jQuery.each(data,function(){
